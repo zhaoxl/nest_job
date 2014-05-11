@@ -66,3 +66,5 @@ gem "better_errors"
 gem 'devise', '~> 3.2.0'
 #软删除
 gem 'soft_deletion', '0.5.6'
+#状态机
+gem 'aasm', '3.1.1'
