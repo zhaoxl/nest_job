@@ -1,0 +1,12 @@
+"zh-CN":
+  activerecord:
+    models:
+      company:
+        one: 公司
+        other: 公司
+    attributes:
+      company: 
+        name: 公司名称
+        home_page: 公司主页
+        financing_stage: 融资阶段
+        area: 地区

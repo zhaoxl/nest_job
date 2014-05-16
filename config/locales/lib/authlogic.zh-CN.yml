@@ -1,0 +1,39 @@
+zh-CN:
+  authlogic:
+    error_messages:
+      login_blank: 用户名不能为空
+      login_not_found: 用户名不正确
+      login_invalid: 用户名只能使用字母、数字、空格和 .-_@ 符号
+      consecutive_failed_logins_limit_exceeded: 超过连续登入失败的次数限制，帐户被停用
+      email_invalid: 电子邮箱地址不符合规则
+      password_blank: 密码不能为空
+      password_invalid: 密码不正确
+      not_active: 帐号停用
+      not_confirmed: 帐号尚未通过验证
+      not_approved: 帐号尚未通过批准
+      no_authentication_details: 您尚未提供任何认证资料
+    models:
+      session: 用户登录
+      admin/session: 员工登录
+    attributes:
+      session:
+        username: 用户名
+        password: 密码
+        remember_me: 自动登录
+      user:
+        username: 用户名
+        current_password: 当前密码
+        password: 密码
+        password_confirmation: 密码确认
+        email: 电子邮件
+      admin/session:
+        username: 用户名
+        password: 密码
+        remember_me: 自动登录
+      admin/staffer:
+        username: 用户名
+        current_password: 当前密码
+        password: 密码
+        password_confirmation: 密码确认
+        email: 电子邮件
+        realname: 真实姓名

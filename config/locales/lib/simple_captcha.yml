@@ -1,0 +1,6 @@
+zh-CN:
+  simple_captcha:
+    label: "请输入验证码"
+    placeholder: "请输入验证码"
+    message:
+      couponchecklog: "请输入正确的验证码"

@@ -1,0 +1,16 @@
+zh-CN:
+  errors:
+    messages:
+      username: 用户名只允许使用字母、数字、减号-、下划线_、小数点.和@符号
+      email: 不是合法的电子邮件格式
+      mobile: 手机号码格式错误
+      availability: 不能含有系统保留关键词
+      legality: 不能含有敏感词
+
+      user_not_found: 用户名不存在
+      email_not_found: 电子邮件不存在
+      current_password_error: 原密码错误
+      password_error: 密码错误
+      perishable_token_expired: 密钥已过期，请重新提交请求
+      account_unique: "该帐号已存在，请更换帐号或登录"
+      sensitive: "为保证正常使用，请输入正确信息"

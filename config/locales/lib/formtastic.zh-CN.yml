@@ -1,0 +1,114 @@
+zh-CN:
+  formtastic:
+    required: 必填
+    
+    
+    labels:
+      forum:
+        parent_id: 上级论坛
+        name: 论坛名称
+        abbrev: 缩写
+        intro: 简介
+    
+      post:
+        title: 标题
+        body: 正文
+        
+      reply:
+        body: 正文
+        
+      blogory:
+        name: 分类名称
+
+      blog:
+        blogory_id: 博客分类
+        title: 标题
+        body: 正文
+        viewable: 阅读权限
+        reviewable: 评论权限
+        
+      review:
+        body: 正文
+        
+      user:
+        username: 用户名
+        password: 密码
+        password_confirmation: 密码确认
+        email: 电子邮件
+      
+      session:
+        username: 用户名
+        password: 密码
+        remember_me: 自动登录
+
+      password:
+        current_password: 当前密码
+        password: 新密码
+        password_confirmation: 密码确认
+        
+      recovery:
+        email: 电子邮件
+
+      profile:
+        nickname: 昵称
+        realname: 真实姓名
+        gender_id: 性别
+        birthdate: 出生日期
+        mobile: 手机号码
+        telephone: 联系电话
+      
+    
+    hints:
+      forum:
+        parent_id: 请选择本论坛的上级论坛
+        name: 论坛名称
+        abbrev: 论坛缩写，只能使用英文和数字
+        intro: 论坛简介
+
+      post:
+        title: 请输入帖子标题，不少于4个字，不超过32个字
+        body: 请输入正文内容，不少于8个字，最长大约6万5千字
+      
+      reply:
+        body: 请输入回复内容，不少于8个字，最长大约8千字
+        
+      blogory:
+        name: 请输入博客分类名称，2-8个字
+
+      blog:
+        blogory_id: 请选择博客分类
+        title: 请输入博客标题，不少于4个字，不超过32个字
+        body: 请输入正文内容，不少于8个字，最长大约6万5千字
+        viewable: 请设定本篇博客的阅读权限
+        reviewable: 请设定本篇博客的评论权限
+        
+      review:
+        body: 请输入评论内容，不少于4个字，最长大约1千字
+        
+      user:
+        username: 4-16个字符，只允许使用字母、数字、减号-、下划线_、小数点.和@符号）
+        password: 4-16个字符（字母、数字），区分大小写
+        password_confirmation: 请再输入一次密码
+        email: 电子邮件是您的身份标识，并用于找回密码
+        
+      session:
+        username: 请输入用户名
+        password: 请输入密码
+        remember_me: 下次自动登录
+
+      password:
+        current_password: 请输入当前密码
+        password: 4-16个字符（字母、数字），区分大小写
+        password_confirmation: 请再输入一次密码
+        
+      recovery:
+        email: 请输入您在注册时提交的电子邮件地址
+        
+      profile:
+        nickname: 请为自己设置昵称
+        realname: 请输入真实姓名
+        gender_id: 请选择您的性别
+        birthdate: 请选择您的出生日期
+        mobile: 请输入您的手机号码
+        telephone: 请输入您的联系电话
+        

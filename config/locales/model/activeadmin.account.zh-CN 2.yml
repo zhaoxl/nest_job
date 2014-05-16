@@ -1,0 +1,16 @@
+"zh-CN":
+  activerecord:
+    models:
+      account:
+        one: 用户
+        other: 用户
+    attributes:
+      account: 
+        email: 邮箱
+        nick_name: 昵称
+        account_type: 用户类型
+        status: 状态
+        last_sign_in_at: 最后登录时间
+        last_sign_in_ip: 最后登录ip
+        
+        

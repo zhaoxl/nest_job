@@ -11,19 +11,38 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140505085423) do
+ActiveRecord::Schema.define(version: 20140513073827) do
+
+  create_table "account_resumes", force: true do |t|
+    t.integer  "account_id"
+    t.float    "price"
+    t.string   "title"
+    t.string   "area"
+    t.string   "hope_salary"
+    t.datetime "jobd_at"
+    t.string   "education"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "accounts", force: true do |t|
     t.string   "email"
     t.string   "password"
     t.string   "nick_name"
+    t.string   "logo_file_name"
+    t.string   "logo_content_type"
+    t.integer  "logo_file_size"
+    t.datetime "logo_updated_at"
+    t.integer  "account_type",           default: 0
+    t.string   "status",                 default: "prospective"
+    t.integer  "company_id"
+    t.datetime "deleted_at"
     t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "encrypted_password",     default: "", null: false
+    t.string   "encrypted_password",     default: "",            null: false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0,  null: false
+    t.integer  "sign_in_count",          default: 0,             null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
@@ -32,21 +51,6 @@ ActiveRecord::Schema.define(version: 20140505085423) do
 
   add_index "accounts", ["email"], name: "index_accounts_on_email", unique: true, using: :btree
   add_index "accounts", ["reset_password_token"], name: "index_accounts_on_reset_password_token", unique: true, using: :btree
-
-  create_table "active_admin_comments", force: true do |t|
-    t.string   "namespace"
-    t.text     "body"
-    t.string   "resource_id",   null: false
-    t.string   "resource_type", null: false
-    t.integer  "author_id"
-    t.string   "author_type"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "active_admin_comments", ["author_type", "author_id"], name: "index_active_admin_comments_on_author_type_and_author_id", using: :btree
-  add_index "active_admin_comments", ["namespace"], name: "index_active_admin_comments_on_namespace", using: :btree
-  add_index "active_admin_comments", ["resource_type", "resource_id"], name: "index_active_admin_comments_on_resource_type_and_resource_id", using: :btree
 
   create_table "admin_users", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -65,5 +69,116 @@ ActiveRecord::Schema.define(version: 20140505085423) do
 
   add_index "admin_users", ["email"], name: "index_admin_users_on_email", unique: true, using: :btree
   add_index "admin_users", ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true, using: :btree
+
+  create_table "area_cities", force: true do |t|
+    t.integer "area_province_id"
+    t.string  "city_name"
+  end
+
+  create_table "area_countries", force: true do |t|
+    t.integer "area_city_id"
+    t.string  "country_name"
+  end
+
+  create_table "area_provinces", force: true do |t|
+    t.string "province_name"
+  end
+
+  create_table "bills", force: true do |t|
+    t.integer  "account_id"
+    t.integer  "from_account_id"
+    t.string   "item_name"
+    t.string   "item_type"
+    t.integer  "item_id"
+    t.string   "description"
+    t.float    "before_alance"
+    t.float    "after_alance"
+    t.float    "money"
+    t.string   "status"
+    t.datetime "created_at"
+  end
+
+  create_table "companies", force: true do |t|
+    t.string   "name"
+    t.string   "home_page"
+    t.string   "financing_stage"
+    t.string   "area"
+    t.string   "account_ids"
+    t.string   "logo_file_name"
+    t.string   "logo_content_type"
+    t.integer  "logo_file_size"
+    t.datetime "logo_updated_at"
+    t.integer  "nature_id"
+    t.integer  "industry_id"
+    t.datetime "deleted_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "company_invites", force: true do |t|
+    t.integer  "company_id"
+    t.integer  "account_id"
+    t.string   "message",    limit: 300
+    t.string   "reply"
+    t.string   "status"
+    t.integer  "price"
+    t.datetime "deleted_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "company_members", force: true do |t|
+    t.string   "name"
+    t.string   "logo_file_name"
+    t.string   "logo_content_type"
+    t.integer  "logo_file_size"
+    t.datetime "logo_updated_at"
+    t.string   "post"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "favorites", force: true do |t|
+    t.integer  "account_id"
+    t.string   "item_type"
+    t.integer  "item_id"
+    t.datetime "created_at"
+  end
+
+  create_table "posts", force: true do |t|
+    t.string   "title"
+    t.integer  "price"
+    t.string   "description"
+    t.text     "content"
+    t.string   "area"
+    t.integer  "account_id"
+    t.integer  "company_id"
+    t.datetime "deleted_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "tries", force: true do |t|
+    t.integer  "company_id"
+    t.integer  "account_id"
+    t.string   "reply"
+    t.string   "status"
+    t.datetime "deleted_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "worker_invites", force: true do |t|
+    t.integer  "account_id"
+    t.integer  "company_id"
+    t.integer  "account_resume_id"
+    t.string   "message",           limit: 300
+    t.string   "reply"
+    t.string   "status"
+    t.integer  "price"
+    t.datetime "deleted_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end

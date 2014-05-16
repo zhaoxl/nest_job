@@ -4,7 +4,8 @@ class CreateCompanies < ActiveRecord::Migration
       t.string      :name
       t.string      :home_page
       t.string      :financing_stage  #融资阶段
-      t.string      :area             #地区 北京 or 内蒙古|呼和浩特市
+      t.string      :area             #地区: 北京 or 内蒙古|呼和浩特市
+      t.string      :account_ids      #认证用户: 1|2|3 
       t.attachment  :logo             #logo
       t.references  :nature           #性质
       t.references  :industry         #行业
