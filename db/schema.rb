@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140513073827) do
+ActiveRecord::Schema.define(version: 20140518033540) do
 
   create_table "account_resumes", force: true do |t|
     t.integer  "account_id"
@@ -145,6 +145,15 @@ ActiveRecord::Schema.define(version: 20140513073827) do
     t.datetime "created_at"
   end
 
+  create_table "hot_search_tags", force: true do |t|
+    t.string   "session_id"
+    t.integer  "user_id"
+    t.string   "name"
+    t.integer  "search_count"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "posts", force: true do |t|
     t.string   "title"
     t.integer  "price"
@@ -154,6 +163,14 @@ ActiveRecord::Schema.define(version: 20140513073827) do
     t.integer  "account_id"
     t.integer  "company_id"
     t.datetime "deleted_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "tags", force: true do |t|
+    t.integer  "parent_id"
+    t.string   "name"
+    t.string   "status"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

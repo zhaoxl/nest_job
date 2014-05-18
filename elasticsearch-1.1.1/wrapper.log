@@ -1,0 +1,13 @@
+WARN   | wrapper  | 2014/05/18 15:01:29 | Unable to write to the configured log directory: /Users/tianji/Downloads/elasticsearch-1.1.1/logs (No such file or directory)
+WARN   | wrapper  | 2014/05/18 15:01:29 |   The directory does not exist.
+WARN   | wrapper  | 2014/05/18 15:01:29 | Unable to write to the configured log file: /Users/tianji/Downloads/elasticsearch-1.1.1/logs/service.log (No such file or directory)
+WARN   | wrapper  | 2014/05/18 15:01:29 |   Falling back to the default file in the current working directory: wrapper.log
+STATUS | wrapper  | 2014/05/18 15:01:29 | --> Wrapper Started as Daemon
+STATUS | wrapper  | 2014/05/18 15:01:29 | Java Service Wrapper Community Edition 64-bit 3.5.14
+STATUS | wrapper  | 2014/05/18 15:01:29 |   Copyright (C) 1999-2011 Tanuki Software, Ltd. All Rights Reserved.
+STATUS | wrapper  | 2014/05/18 15:01:29 |     http://wrapper.tanukisoftware.com
+STATUS | wrapper  | 2014/05/18 15:01:29 | 
+STATUS | wrapper  | 2014/05/18 15:01:30 | Launching a JVM...
+INFO   | jvm 1    | 2014/05/18 15:01:32 | WrapperManager: Initializing...
+STATUS | wrapper  | 2014/05/18 16:11:13 | TERM trapped.  Shutting down.
+STATUS | wrapper  | 2014/05/18 16:11:15 | <-- Wrapper Stopped

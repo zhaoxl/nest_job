@@ -1,0 +1,58 @@
+[2014-05-18 15:01:34,422][INFO ][node                     ] [Steel Serpent] version[1.1.1], pid[3308], build[f1585f0/2014-04-16T14:27:12Z]
+[2014-05-18 15:01:34,422][INFO ][node                     ] [Steel Serpent] initializing ...
+[2014-05-18 15:01:34,483][INFO ][plugins                  ] [Steel Serpent] loaded [], sites []
+[2014-05-18 15:01:40,238][INFO ][node                     ] [Steel Serpent] initialized
+[2014-05-18 15:01:40,238][INFO ][node                     ] [Steel Serpent] starting ...
+[2014-05-18 15:01:40,491][INFO ][transport                ] [Steel Serpent] bound_address {inet[/0:0:0:0:0:0:0:0%0:9300]}, publish_address {inet[/192.168.3.53:9300]}
+[2014-05-18 15:01:43,679][INFO ][cluster.service          ] [Steel Serpent] new_master [Steel Serpent][-ZrvHEmASMGRXKEDny9zwA][MacMiniE0100015][inet[/192.168.3.53:9300]], reason: zen-disco-join (elected_as_master)
+[2014-05-18 15:01:43,752][INFO ][discovery                ] [Steel Serpent] elasticsearch/-ZrvHEmASMGRXKEDny9zwA
+[2014-05-18 15:01:43,925][INFO ][http                     ] [Steel Serpent] bound_address {inet[/0:0:0:0:0:0:0:0%0:9200]}, publish_address {inet[/192.168.3.53:9200]}
+[2014-05-18 15:01:44,019][INFO ][gateway                  ] [Steel Serpent] recovered [0] indices into cluster_state
+[2014-05-18 15:01:44,019][INFO ][node                     ] [Steel Serpent] started
+[2014-05-18 15:15:42,653][INFO ][cluster.metadata         ] [Steel Serpent] [posts] creating index, cause [api], shards [5]/[1], mappings [post]
+[2014-05-18 16:03:25,516][INFO ][cluster.metadata         ] [Steel Serpent] [posts] update_mapping [post] (dynamic)
+[2014-05-18 16:11:14,452][INFO ][node                     ] [Steel Serpent] stopping ...
+[2014-05-18 16:11:14,551][INFO ][node                     ] [Steel Serpent] stopped
+[2014-05-18 16:11:14,551][INFO ][node                     ] [Steel Serpent] closing ...
+[2014-05-18 16:11:14,556][INFO ][node                     ] [Steel Serpent] closed
+[2014-05-18 16:17:59,809][INFO ][node                     ] [Ajaxis] version[1.1.1], pid[4337], build[f1585f0/2014-04-16T14:27:12Z]
+[2014-05-18 16:17:59,810][INFO ][node                     ] [Ajaxis] initializing ...
+[2014-05-18 16:17:59,829][INFO ][plugins                  ] [Ajaxis] loaded [], sites []
+[2014-05-18 16:18:02,331][INFO ][node                     ] [Ajaxis] initialized
+[2014-05-18 16:18:02,331][INFO ][node                     ] [Ajaxis] starting ...
+[2014-05-18 16:18:02,429][INFO ][transport                ] [Ajaxis] bound_address {inet[/0:0:0:0:0:0:0:0%0:9300]}, publish_address {inet[/192.168.3.53:9300]}
+[2014-05-18 16:18:05,535][INFO ][cluster.service          ] [Ajaxis] new_master [Ajaxis][k7NC3nQkS9yPhVex-F2J5w][MacMiniE0100015][inet[/192.168.3.53:9300]], reason: zen-disco-join (elected_as_master)
+[2014-05-18 16:18:05,575][INFO ][discovery                ] [Ajaxis] elasticsearch/k7NC3nQkS9yPhVex-F2J5w
+[2014-05-18 16:18:05,592][INFO ][http                     ] [Ajaxis] bound_address {inet[/0:0:0:0:0:0:0:0%0:9200]}, publish_address {inet[/192.168.3.53:9200]}
+[2014-05-18 16:18:06,290][INFO ][gateway                  ] [Ajaxis] recovered [1] indices into cluster_state
+[2014-05-18 16:18:06,355][INFO ][node                     ] [Ajaxis] started
+[2014-05-18 16:18:17,518][INFO ][node                     ] [Ajaxis] stopping ...
+[2014-05-18 16:18:17,558][INFO ][node                     ] [Ajaxis] stopped
+[2014-05-18 16:18:17,559][INFO ][node                     ] [Ajaxis] closing ...
+[2014-05-18 16:18:17,567][INFO ][node                     ] [Ajaxis] closed
+[2014-05-18 16:18:57,834][INFO ][node                     ] [Xorn] version[1.1.1], pid[4355], build[f1585f0/2014-04-16T14:27:12Z]
+[2014-05-18 16:18:57,835][INFO ][node                     ] [Xorn] initializing ...
+[2014-05-18 16:18:57,855][INFO ][plugins                  ] [Xorn] loaded [], sites []
+[2014-05-18 16:19:00,209][INFO ][node                     ] [Xorn] initialized
+[2014-05-18 16:19:00,210][INFO ][node                     ] [Xorn] starting ...
+[2014-05-18 16:19:00,315][INFO ][transport                ] [Xorn] bound_address {inet[/0:0:0:0:0:0:0:0%0:9300]}, publish_address {inet[/192.168.3.53:9300]}
+[2014-05-18 16:19:03,369][INFO ][cluster.service          ] [Xorn] new_master [Xorn][zK3dTQnXSOCs49L3Gt848A][MacMiniE0100015][inet[/192.168.3.53:9300]], reason: zen-disco-join (elected_as_master)
+[2014-05-18 16:19:03,411][INFO ][discovery                ] [Xorn] elasticsearch/zK3dTQnXSOCs49L3Gt848A
+[2014-05-18 16:19:03,426][INFO ][http                     ] [Xorn] bound_address {inet[/0:0:0:0:0:0:0:0%0:9200]}, publish_address {inet[/192.168.3.53:9200]}
+[2014-05-18 16:19:03,994][INFO ][gateway                  ] [Xorn] recovered [1] indices into cluster_state
+[2014-05-18 16:19:04,002][INFO ][node                     ] [Xorn] started
+[2014-05-18 16:28:04,234][INFO ][node                     ] [Xorn] stopping ...
+[2014-05-18 16:28:04,265][INFO ][node                     ] [Xorn] stopped
+[2014-05-18 16:28:04,266][INFO ][node                     ] [Xorn] closing ...
+[2014-05-18 16:28:04,275][INFO ][node                     ] [Xorn] closed
+[2014-05-18 16:42:46,695][INFO ][node                     ] [Shriek] version[1.1.1], pid[1316], build[f1585f0/2014-04-16T14:27:12Z]
+[2014-05-18 16:42:46,716][INFO ][node                     ] [Shriek] initializing ...
+[2014-05-18 16:42:46,799][INFO ][plugins                  ] [Shriek] loaded [], sites []
+[2014-05-18 16:42:54,426][INFO ][node                     ] [Shriek] initialized
+[2014-05-18 16:42:54,426][INFO ][node                     ] [Shriek] starting ...
+[2014-05-18 16:42:54,750][INFO ][transport                ] [Shriek] bound_address {inet[/0:0:0:0:0:0:0:0%0:9300]}, publish_address {inet[/192.168.3.53:9300]}
+[2014-05-18 16:42:57,916][INFO ][cluster.service          ] [Shriek] new_master [Shriek][kXZQYBB_QwuEJJZf1CKRsQ][MacMiniE0100015][inet[/192.168.3.53:9300]], reason: zen-disco-join (elected_as_master)
+[2014-05-18 16:42:57,997][INFO ][discovery                ] [Shriek] elasticsearch/kXZQYBB_QwuEJJZf1CKRsQ
+[2014-05-18 16:42:58,086][INFO ][http                     ] [Shriek] bound_address {inet[/0:0:0:0:0:0:0:0%0:9200]}, publish_address {inet[/192.168.3.53:9200]}
+[2014-05-18 16:42:59,468][INFO ][gateway                  ] [Shriek] recovered [1] indices into cluster_state
+[2014-05-18 16:42:59,470][INFO ][node                     ] [Shriek] started

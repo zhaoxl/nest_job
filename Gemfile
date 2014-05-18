@@ -68,5 +68,12 @@ gem 'devise', '~> 3.2.0'
 gem 'soft_deletion', '0.5.6'
 #状态机
 gem 'aasm', '3.1.1'
-#new relic ？
+#全文检索elasticsearch-model插件 https://github.com/elasticsearch/elasticsearch-rails
+#Tire https://github.com/roundscope/tirexs 
+#Tire插件教程 http://manageyp.github.io/elasticsearch/ruby-on-rails/2013/10/10/rails-integration-with-elasticsearch-using-tire.html
+#依赖全文检索服务 http://www.elasticsearch.org
+gem 'elasticsearch-model', git: 'git://github.com/elasticsearch/elasticsearch-rails.git'
+#性能监控插件
+#new relic
+#异常邮件插件
 #exception_notification ？
