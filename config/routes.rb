@@ -1,8 +1,12 @@
 NestJob::Application.routes.draw do
+  captcha_route
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   devise_for :accounts, controllers: { registrations: "accounts/registrations", sessions: "accounts/sessions" }, :sign_out_via=>[:delete, :get]
-  
+  devise_scope :account do
+    post "/accounts/registrations/account/ajax_create" => "accounts/registrations#ajax_create"
+  end
+    
   get '/' => 'application#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -58,4 +62,5 @@ NestJob::Application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+  
 end

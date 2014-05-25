@@ -63,6 +63,7 @@ gem 'capistrano-rvm'
 #异常调试工具
 gem "better_errors"
 #用户插件
+#http://natashatherobot.com/devise-rails-sign-in/
 gem 'devise', '~> 3.2.0'
 #软删除
 gem 'soft_deletion', '0.5.6'
@@ -73,6 +74,9 @@ gem 'aasm', '3.1.1'
 #Tire插件教程 http://manageyp.github.io/elasticsearch/ruby-on-rails/2013/10/10/rails-integration-with-elasticsearch-using-tire.html
 #依赖全文检索服务 http://www.elasticsearch.org
 gem 'elasticsearch-model', git: 'git://github.com/elasticsearch/elasticsearch-rails.git'
+#验证码
+gem 'easy_captcha'
+gem 'rmagick'
 #性能监控插件
 #new relic
 #异常邮件插件
