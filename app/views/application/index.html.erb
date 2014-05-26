@@ -16,7 +16,7 @@
 </div>
 <div class="mr">
 	<div class="login_box">
-    <%= form_for(resource, as: resource_name, url: accounts_registrations_account_ajax_create_path(resource_name), html: {id: "sign_up_form"}, remote: true) do |f| %>
+    <%= form_for(resource, as: resource_name, url: accounts_registrations_ajax_create_path, html: {id: "sign_up_form"}, remote: true) do |f| %>
       <%= devise_error_messages! %>
 		<div class="form">
 			<ul>
@@ -44,7 +44,7 @@
 					<div class="frm">
 						<span>验证码</span>
 						<input type="text" class="txt" name="captcha" style="width: 60px; display: inline-block"/>
-            <%= captcha_tag %>
+            <%= captcha_tag(class: "captcha") %>
 						<em class="pwd">&nbsp;</em>
 					</div>
 				</li>

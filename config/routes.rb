@@ -4,7 +4,7 @@ NestJob::Application.routes.draw do
   ActiveAdmin.routes(self)
   devise_for :accounts, controllers: { registrations: "accounts/registrations", sessions: "accounts/sessions" }, :sign_out_via=>[:delete, :get]
   devise_scope :account do
-    post "/accounts/registrations/account/ajax_create" => "accounts/registrations#ajax_create"
+    post "/accounts/registrations/ajax_create" => "accounts/registrations#ajax_create"
   end
     
   get '/' => 'application#index'
