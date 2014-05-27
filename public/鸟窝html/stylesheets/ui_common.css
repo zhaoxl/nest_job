@@ -1,0 +1,54 @@
+/*header*/
+.headerWrap{height:81px;background:#27a695;}
+.header{width:1170px;margin:0 auto;}
+.header h1{float:left;width:170px;}
+
+.logo{overflow:hidden;display:block;width:165px;height:81px;background:url(../images/logo.png) no-repeat;font-size:0;line-height:0;}
+em{display:inline-block;width:35px;height:30px;background:url(../images/nw_icon.png) no-repeat;}
+
+
+.header .search{display:inline;float:left;width:350px;margin-top:15px;margin-left:30px;}
+.header .searchBox{float:left;width:235px;height:30px;margin-right:10px;}
+.header .searchBox input{float:left;width:235px;height:30px;border:none;}
+.searchBtn{display:inline;float:left;margin-left:-35px;}
+.searchBtn em{background-position:0 0;}
+
+.cities{position:relative;float:left;width:90px;}
+.cities p{width:90px;height:30px;line-height:30px;background:#fff;color:#464c52;font-size:15px;}
+.cities p span{float:left;padding-left:5px;}
+.cities .cityBtn{float:right;}
+.cities .cityBtn em{background-position:-35px 0;}
+.cities ul{position:absolute;top:30px;left:0;display:none;border:1px solid #000;}
+.cities ul li{width:90px;height:20px;line-height:20px;background:#fff;border-bottom:1px solid #000;text-align:center;color:#464c52;}
+
+.history{float:left;width:350px;margin-top:8px;}
+.history a{font:13px '微软雅黑';color:#fff;}
+
+.header .nav{float:left;width:580px;}
+.header .nav li{float:left;}
+.header .nav li a{display:block;width:90px;height:54px;padding-top:27px;text-align:center;font:15px '微软雅黑';color:#fff;}
+.header .nav li a:hover{background:#46515c;}
+
+
+/*footer*/
+.footerWrap{height:165px;background:#464c52;}
+.footer{overflow:hidden;zoom:1;width:1170px;margin:0 auto;padding-top:24px;color:#fff;}
+.footer a{color:#fff;font:15px '微软雅黑';}
+.footer h4{margin-bottom:15px;font:15px '微软雅黑';}
+.ftLogo,.about,.contact,.coWorker,.friendLink{float:left;width:230px;margin-right:30px;}
+.ftLogo{width:165px;}
+.ftLogo .logo{height:65px;margin-bottom:15px;background-position:0 -81px;font-size:0;line-height:0;}
+.ftLogo p{font:13px '微软雅黑';}
+.about,.contact,.coWorker.friendLink{font:15px '微软雅黑';}
+.about .more{text-align:right;}
+.contact{width:200px;line-height:1.8;}
+.coWorker{width:150px;}
+.friendLink a{margin-right:10px;}
+.coWorker a{display:block;height:27px;background:url(../images/cow_logo.png) no-repeat;}
+.coWorker .first{background-position:0 -27px;}
+
+
+/*ml subnav*/
+.mr .info{overflow:hidden;zoom:1;}
+.info .userImg{float:left;margin-right:20px;}
+.info .userInfo{float:left;color:#363837;font:14px '微软雅黑';}
