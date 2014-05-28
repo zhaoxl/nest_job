@@ -1,3 +1,4 @@
+body{font-family:'微软雅黑';}
 /*header*/
 .headerWrap{height:81px;background:#27a695;}
 .header{width:1170px;margin:0 auto;}
@@ -5,7 +6,8 @@
 
 .logo{overflow:hidden;display:block;width:165px;height:81px;background:url(../images/logo.png) no-repeat;font-size:0;line-height:0;}
 em{display:inline-block;width:35px;height:30px;background:url(../images/nw_icon.png) no-repeat;}
-
+.btn{background:#27a695;color:#fff;text-align:center;}
+.btnR{width:80px;height:26px;line-height:26px;background:#1abc9c;color:#fff;text-align:center;border-bottom:2px solid #0e876f;border-radius:5px;}
 
 .header .search{display:inline;float:left;width:350px;margin-top:15px;margin-left:30px;}
 .header .searchBox{float:left;width:235px;height:30px;margin-right:10px;}
@@ -49,6 +51,16 @@ em{display:inline-block;width:35px;height:30px;background:url(../images/nw_icon.
 
 
 /*ml subnav*/
-.mr .info{overflow:hidden;zoom:1;}
+.mr .info{overflow:hidden;zoom:1;padding-bottom:15px;border-bottom:1px dashed #e6e6e6;}
 .info .userImg{float:left;margin-right:20px;}
 .info .userInfo{float:left;color:#363837;font:14px '微软雅黑';}
+.cash{margin-top:15px;}
+.cash li{margin-bottom:10px;}
+.cash li a{display:inline-block;width:80px;height:20px;margin-left:20px;font-size:13px;}
+.subNav li{width:196px;margin:0 auto 5px;/*margin-bottom:5px;*/}
+/*.subNav li ul{}*/
+.subNav li a{display:block;width:194px;height:36px;line-height:36px;background:#fff;text-align:center;border:1px solid #339999;color:#46515c;font-size:15px;}
+.subNav .tit{width:226px;margin-left:-17px;background:#66cccc;color:#fff;}
+.subNav li .tCurrent{background:#339999;color:#fff;}
+.subNav li .current{background:#27a695;color:#fff;}
+
