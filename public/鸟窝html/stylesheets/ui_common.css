@@ -49,6 +49,24 @@ em{display:inline-block;width:35px;height:30px;background:url(../images/nw_icon.
 .coWorker a{display:block;height:27px;background:url(../images/cow_logo.png) no-repeat;}
 .coWorker .first{background-position:0 -27px;}
 
+/*main*/
+.mainWrap{background:#e1f3f1;}
+.mainContainer{overflow:hidden;zoom:1;width:1170px;margin:0 auto;padding-top:40px;}
+.main{float:left;width:910px;}
+.main .ml{float:left;width:165px;}
+.main .mm{float:left;width:716px;}
+.mainWrap .mr{float:right;width:230px;}
+
+/*mr help*/
+.mr .help{overflow:hidden;zoom:1;margin:20px 0;padding:15px;background:#fff;}
+.mr .help ul{float:left;width:125px;line-height:2.0;}
+.mr .help li a{color:#46515c;font:15px '微软雅黑';}
+.mr .help .more a:hover{text-decoration:underline;}
+.mr .help li .first{color:#27a695;}
+.mr .help .attention{float:left;width:65px;}
+.help .attention .logo{width:65px;height:56px;margin-bottom:15px;background-position:0 -150px;}
+.help .attention .focusOn{overflow:hidden;display:block;width:65px;height:22px;background:url(../images/logo.png) no-repeat -85px -171px;font-size:0;line-height:0;}
+
 
 /*ml subnav*/
 .mr .info{overflow:hidden;zoom:1;padding-bottom:15px;border-bottom:1px dashed #e6e6e6;}
@@ -57,8 +75,7 @@ em{display:inline-block;width:35px;height:30px;background:url(../images/nw_icon.
 .cash{margin-top:15px;}
 .cash li{margin-bottom:10px;}
 .cash li a{display:inline-block;width:80px;height:20px;margin-left:20px;font-size:13px;}
-.subNav li{width:196px;margin:0 auto 5px;/*margin-bottom:5px;*/}
-/*.subNav li ul{}*/
+.subNav li{width:196px;margin:0 auto 5px;}
 .subNav li a{display:block;width:194px;height:36px;line-height:36px;background:#fff;text-align:center;border:1px solid #339999;color:#46515c;font-size:15px;}
 .subNav .tit{width:226px;margin-left:-17px;background:#66cccc;color:#fff;}
 .subNav li .tCurrent{background:#339999;color:#fff;}

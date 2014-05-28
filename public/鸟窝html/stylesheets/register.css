@@ -1,10 +1,5 @@
 
 /*main*/
-.mainWrap{background:#e1f3f1;}
-.main{overflow:hidden;zoom:1;width:1170px;margin:0 auto;padding-top:40px;}
-.main .ml{float:left;width:165px;}
-.main .mm{float:left;width:716px;}
-.main .mr{float:right;width:230px;}
 .brands{margin-top:30px;}
 .brands li{margin-bottom:15px;}
 .brands li a{display:block;height:58px;padding-left:80px;background:url(../images/brand.png) no-repeat;font:15px '微软雅黑';color:#464c52;}
@@ -46,15 +41,6 @@
 .login_box li .weibo em{background-position:0 -60px;}
 .login_box li .qq em{background-position:-38px -60px;}
 .login_box li .jobs em{background-position:-74px -60px;}
-/*mr help*/
-.mr .help{overflow:hidden;zoom:1;margin:20px 0;padding:15px;background:#fff;}
-.mr .help ul{float:left;width:125px;line-height:2.0;}
-.mr .help li a{color:#46515c;font:15px '微软雅黑';}
-.mr .help .more a:hover{text-decoration:underline;}
-.mr .help li .first{color:#27a695;}
-.mr .help .attention{float:left;width:65px;}
-.help .attention .logo{width:65px;height:56px;margin-bottom:15px;background-position:0 -150px;}
-.help .attention .focusOn{overflow:hidden;display:block;width:65px;height:22px;background:url(../images/logo.png) no-repeat -85px -171px;font-size:0;line-height:0;}
 
 /*mm*/
 .mm h2{margin:30px 0;text-align:center;color:#199594;font:24px '微软雅黑';}
@@ -71,8 +57,8 @@
 .postForm .hopePost{width:580px;margin-left:90px;padding-top:120px;}
 .postForm .hopePost .frm{overflow:hidden;zoom:1;}
 .postForm .hopePost span{float:left;width:90px;font:17px '微软雅黑';}
-.postForm .hopePost .posts{overflow:hidden;zoom:1;width:480px;/*+margin-bottom:20px;*/}
-.hopePost .posts a{display:inline-block;/*float:left;*/padding:5px;margin-left:10px;margin-bottom:20px;background:#1abc9c;color:#fff;font-size:14px;text-align:center;border-radius:5px;}
+.postForm .hopePost .posts{overflow:hidden;zoom:1;width:480px;}
+.hopePost .posts a{display:inline-block;padding:5px;margin-left:10px;margin-bottom:20px;background:#1abc9c;color:#fff;font-size:14px;text-align:center;border-radius:5px;}
 .hopePost .posts a i{margin-left:5px;font-style:normal;color:#fff;font-weight:bold;vertical-align:-2px;}
 .hopePost .posts a:hover{background:#16a085;}
 .postInput{margin-left:100px;}
