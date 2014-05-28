@@ -5,7 +5,7 @@
 	<title>职位详情</title>
 	<link rel="stylesheet" href="stylesheets/ui_base.css" />
 	<link rel="stylesheet" href="stylesheets/ui_common.css" />
-<!-- 	<link rel="stylesheet" href="stylesheets/register.css" /> -->
+	<link rel="stylesheet" href="stylesheets/job_detail.css" />
 </head>
 <body>
 	<div class="headerWrap">
@@ -48,133 +48,43 @@
 		<div class="mainContainer">
 			<div class="main">
 				<div class="ml">
-					<h2 class="h2_title">公司信息</h2>
-					<!-- <ul class="brands">
-						<li><a href="#" class="baidu"><span>百度</span></a></li>
-						<li><a href="#" class="baiduyun"><span>百度云</span></a></li>
-						<li><a href="#" class="huaban"><span>花瓣</span></a></li>
-						<li><a href="#" class="oneshop"><span>1号店</span></a></li>
-						<li><a href="#" class="jd"><span>京东</span></a></li>
-						<li><a href="#" class="sina"><span>新浪</span></a></li>
-					</ul> -->
+					<h2 class="h2Title">公司信息</h2>
+					<div class="companyInfo">
+						<div class="compImg"><a href="#"><img src="images/company_demo.jpg" alt="" /></a></div>
+						<div class="compInfo">
+							<p>凤凰网</p>
+							<p class="cmpUrl"><a href="#">www.ifeng.com</a></p>
+							<p>性质：成熟型公司</p>
+							<p>行业：新闻传媒</p>
+							<div class="slide">轮播图展示</div>
+							<p>融资阶段：A轮</p>
+						</div>
+					</div>
+					<h2 class="h2Title">团队成员</h2>
+					<div class="members">
+						<ul>
+							<li>
+								<div class="memImg">
+									<a href="#"><img src="images/user_demo.jpg" alt=""></a>
+								</div>
+								<p class="name">周绍宁</p>
+								<p>创始人兼CEO</p>
+							</li>
+							<li>
+								<div class="memImg">
+									<a href="#"><img src="images/user_demo.jpg" alt=""></a>
+								</div>
+								<p class="name">周绍宁</p>
+								<p>创始人兼CEO</p>
+							</li>
+						</ul>
+					</div>
 				</div>
 				<div class="mm">
-					<!-- <ul class="mSubNav">
-						<li><a href="#" class="findTit">发现</a></li>
-						<li><a href="#" class="f_current">JS</a></li>
-						<li><a href="#">CSS</a></li>
-						<li><a href="#">UI</a></li>
-						<li><a href="#">PM</a></li>
-						<li><a href="#" class="topTit">热门</a></li>
-						<li><a href="#" class="t_current">JS</a></li>
-						<li><a href="#">CSS</a></li>
-						<li><a href="#">UI</a></li>
-						<li><a href="#">PM</a></li>
-					</ul> -->
-					<!-- <ul class="employment">
-						<li class="current">
-							<div class="employInfo">
-								<div class="userImg"><a href="#"><img src="images/user_demo.jpg" alt="" /></a></div>
-								<div class="employDetail">
-									<p><span class="b">王佳佳   （HR*@izaixing.com）</span><span>发布了  PHP开发BOSS</span></p>  
-									<p><span class="b">地点：海淀区</span><span class="b">公司：腾讯</span><span class="b">薪资：￥5000</span></p>
-									<dl>
-									 	<dt>职位要求：</dt>
-									 	<dd>1.精通PHP语言，具有4年以上web开发经验，有两个以上大型项目者优先；</dd>
-									 	<dd>2.熟练操作MySQL数据库，熟悉数据库配置和优化；</dd>
-									 	<dd>3.熟悉Yii、ThinkPHP 等开...</dd>
-									 </dl> 
-								</div>
-							</div>
-							
-							<div class="employBtns">
-								<a href="#" class="btnR">发起面试</a><a href="#" class="btnR">收    藏</a>
-							</div>
-						</li>
-						<li>
-							<div class="employInfo">
-								<div class="userImg"><a href="#"><img src="images/user_demo.jpg" alt="" /></a></div>
-								<div class="employDetail">
-									<p><span class="b">王佳佳   （HR*@izaixing.com）</span><span>发布了  PHP开发BOSS</span></p>  
-									<p><span class="b">地点：海淀区</span><span class="b">公司：腾讯</span><span class="b">薪资：￥5000</span></p>
-									<dl>
-									 	<dt>职位要求：</dt>
-									 	<dd>1.精通PHP语言，具有4年以上web开发经验，有两个以上大型项目者优先；</dd>
-									 	<dd>2.熟练操作MySQL数据库，熟悉数据库配置和优化；</dd>
-									 	<dd>3.熟悉Yii、ThinkPHP 等开...</dd>
-									 </dl> 
-								</div>
-							</div>
-							<div class="employBtns">
-								<a href="#" class="btnR">发起面试</a><a href="#" class="btnR">收    藏</a>
-							</div>
-						</li>
-						<li>
-							<div class="employInfo">
-								<div class="userImg"><a href="#"><img src="images/user_demo.jpg" alt="" /></a></div>
-								<div class="employDetail">
-									<p><span class="b">王佳佳   （HR*@izaixing.com）</span><span>发布了  PHP开发BOSS</span></p>  
-									<p><span class="b">地点：海淀区</span><span class="b">公司：腾讯</span><span class="b">薪资：￥5000</span></p>
-									<dl>
-									 	<dt>职位要求：</dt>
-									 	<dd>1.精通PHP语言，具有4年以上web开发经验，有两个以上大型项目者优先；</dd>
-									 	<dd>2.熟练操作MySQL数据库，熟悉数据库配置和优化；</dd>
-									 	<dd>3.熟悉Yii、ThinkPHP 等开...</dd>
-									 </dl> 
-								</div>
-							</div>
-							<div class="employBtns">
-								<a href="#" class="btnR">发起面试</a><a href="#" class="btnR">收    藏</a>
-							</div>
-						</li>
-						<li>
-							<div class="employInfo">
-								<div class="userImg"><a href="#"><img src="images/user_demo.jpg" alt="" /></a></div>
-								<div class="employDetail">
-									<p><span class="b">王佳佳   （HR*@izaixing.com）</span><span>发布了  PHP开发BOSS</span></p>  
-									<p><span class="b">地点：海淀区</span><span class="b">公司：腾讯</span><span class="b">薪资：￥5000</span></p>
-									<dl>
-									 	<dt>职位要求：</dt>
-									 	<dd>1.精通PHP语言，具有4年以上web开发经验，有两个以上大型项目者优先；</dd>
-									 	<dd>2.熟练操作MySQL数据库，熟悉数据库配置和优化；</dd>
-									 	<dd>3.熟悉Yii、ThinkPHP 等开...</dd>
-									 </dl> 
-								</div>
-							</div>
-							<div class="employBtns">
-								<a href="#" class="btnR">发起面试</a><a href="#" class="btnR">收    藏</a>
-							</div>
-						</li>
-						<li>
-							<div class="employInfo">
-								<div class="userImg"><a href="#"><img src="images/user_demo.jpg" alt="" /></a></div>
-								<div class="employDetail">
-									<p><span class="b">王佳佳   （HR*@izaixing.com）</span><span>发布了  PHP开发BOSS</span></p>  
-									<p><span class="b">地点：海淀区</span><span class="b">公司：腾讯</span><span class="b">薪资：￥5000</span></p>
-									<dl>
-									 	<dt>职位要求：</dt>
-									 	<dd>1.精通PHP语言，具有4年以上web开发经验，有两个以上大型项目者优先；</dd>
-									 	<dd>2.熟练操作MySQL数据库，熟悉数据库配置和优化；</dd>
-									 	<dd>3.熟悉Yii、ThinkPHP 等开...</dd>
-									 </dl> 
-								</div>
-							</div>
-							<div class="employBtns">
-								<a href="#" class="btnR">发起面试</a><a href="#" class="btnR">收    藏</a>
-							</div>
-						</li>
-					</ul>
-					<ul class="pager">
-						<li><a href="#" class="current">1</a></li>
-						<li><a href="#">2</a></li>
-						<li><a href="#">3</a></li>
-						<li><a href="#">4</a></li>
-						<li><a href="#">5</a></li>
-						<li><a href="#">6</a></li>
-						<li><a href="#">7</a></li>
-						<li class="etc"><span>...</span></li>
-						<li class="last"><a href="#"><em>&nbsp;</em></a></li>
-					</ul> -->
+					<h2 class="h2Title">职位详情</h2>
+					<div class="jobDetail">
+						
+					</div>
 				</div>
 			</div>
 			<div class="mr">

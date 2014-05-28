@@ -53,7 +53,7 @@ em{display:inline-block;width:35px;height:30px;background:url(../images/nw_icon.
 .mainWrap{background:#e1f3f1;}
 .mainContainer{overflow:hidden;zoom:1;width:1170px;margin:0 auto;padding-top:40px;}
 .main{float:left;width:910px;}
-.main .ml{float:left;width:165px;}
+.main .ml{float:left;width:165px;margin-right:28px;}
 .main .mm{float:left;width:716px;}
 .mainWrap .mr{float:right;width:230px;}
 
