@@ -5,9 +5,14 @@ body{font-family:'微软雅黑';}
 .header h1{float:left;width:170px;}
 
 .logo{overflow:hidden;display:block;width:165px;height:81px;background:url(../images/logo.png) no-repeat;font-size:0;line-height:0;}
+/*icon em*/
 em{display:inline-block;width:35px;height:30px;background:url(../images/nw_icon.png) no-repeat;}
+/*button*/
 .btn{background:#27a695;color:#fff;text-align:center;}
 .btnR{width:80px;height:26px;line-height:26px;background:#1abc9c;color:#fff;text-align:center;border-bottom:2px solid #0e876f;border-radius:5px;}
+/*h2Title*/
+.h2Title{height:30px;line-height:30px;padding-left:10px;background:#27a695;color:#fff;font-size:16px;font-weight:normal;}
+.h2Title a{color:#fff;font-size:14px;}
 
 .header .search{display:inline;float:left;width:350px;margin-top:15px;margin-left:30px;}
 .header .searchBox{float:left;width:235px;height:30px;margin-right:10px;}
@@ -22,7 +27,6 @@ em{display:inline-block;width:35px;height:30px;background:url(../images/nw_icon.
 .cities .cityBtn em{background-position:-35px 0;}
 .cities ul{position:absolute;top:30px;left:0;display:none;border:1px solid #000;}
 .cities ul li{width:90px;height:20px;line-height:20px;background:#fff;border-bottom:1px solid #000;text-align:center;color:#464c52;}
-
 .history{float:left;width:350px;margin-top:8px;}
 .history a{font:13px '微软雅黑';color:#fff;}
 
