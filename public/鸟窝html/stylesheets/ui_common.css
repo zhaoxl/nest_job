@@ -9,7 +9,7 @@ body{font-family:'微软雅黑';}
 em{display:inline-block;width:35px;height:30px;background:url(../images/nw_icon.png) no-repeat;}
 /*button*/
 .btn{display:inline-block;background:#27a695;color:#fff;text-align:center;}
-.btnR{width:80px;height:26px;line-height:26px;background:#1abc9c;color:#fff;text-align:center;border-bottom:2px solid #0e876f;border-radius:5px;}
+.btnR{display:inline-block;width:80px;height:26px;line-height:26px;background:#1abc9c;color:#fff;text-align:center;border-bottom:2px solid #0e876f;border-radius:5px;}
 /*h2Title*/
 .h2Title{height:30px;line-height:30px;padding-left:10px;background:#27a695;color:#fff;font-size:16px;font-weight:normal;}
 .h2Title a{color:#fff;font-size:14px;}
