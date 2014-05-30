@@ -77,3 +77,9 @@ gem 'elasticsearch-model', git: 'git://github.com/elasticsearch/elasticsearch-ra
 #new relic
 #异常邮件插件
 #exception_notification ？
+
+#if  @phone.keywords.present?
+#   @phone.tag_list = Util::TagTools.get_split_tags(@phone.keywords)
+#else
+#  @phone.tag_list = Util::TagTools.get_tags(URI.unescape(@phone.title, @phone.content))
+#end
