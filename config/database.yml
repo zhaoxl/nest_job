@@ -14,8 +14,8 @@ development:
   reconnect: true
   database: nest_job_development
   pool: 5
-  username: tianji
-  password: tianji
+  username: root
+  password: zhao2832
   host: localhost
 
 # Warning: The database defined as "test" will be erased and
@@ -27,7 +27,8 @@ test:
   database: nest_job_test
   pool: 5
   username: root
-  password:
+  password: zhao2832
+  host: localhost
   socket: /tmp/mysql.sock
 
 production:

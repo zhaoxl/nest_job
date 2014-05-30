@@ -1,1 +1,1 @@
-rvm use 2.0@nest_job
+rvm use 2.0@nest_job --create

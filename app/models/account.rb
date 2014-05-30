@@ -13,4 +13,6 @@ class Account < ActiveRecord::Base
                                              }, 
                                              :default_url => "/images/:style/missing.png"
   validates_attachment_content_type :logo, :content_type => /\Aimage\/.*\Z/
+  validates :email, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i, on: :create }, uniqueness: true
+  validates :password, confirmation: true
 end
