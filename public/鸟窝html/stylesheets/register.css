@@ -1,5 +1,6 @@
 
 /*main*/
+.main .ml .regH2{font-weight:normal;}
 .brands{margin-top:30px;}
 .brands li{margin-bottom:15px;}
 .brands li a{display:block;height:58px;padding-left:80px;background:url(../images/brand.png) no-repeat;font:15px '微软雅黑';color:#464c52;}
@@ -43,7 +44,7 @@
 .login_box li .jobs em{background-position:-74px -60px;}
 
 /*mm*/
-.mm h2{margin:30px 0;text-align:center;color:#199594;font:24px '微软雅黑';}
+.mm .indexH2{margin:30px 0;text-align:center;color:#199594;font:24px '微软雅黑';}
 
 .mSubNav{overflow:hidden;zoom:1;width:716px;margin:0 auto;}
 .mSubNav li{float:left;width:60px;height:60px;margin-left:10px;}
