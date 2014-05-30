@@ -8,7 +8,7 @@ body{font-family:'微软雅黑';}
 /*icon em*/
 em{display:inline-block;width:35px;height:30px;background:url(../images/nw_icon.png) no-repeat;}
 /*button*/
-.btn{background:#27a695;color:#fff;text-align:center;}
+.btn{display:inline-block;background:#27a695;color:#fff;text-align:center;}
 .btnR{width:80px;height:26px;line-height:26px;background:#1abc9c;color:#fff;text-align:center;border-bottom:2px solid #0e876f;border-radius:5px;}
 /*h2Title*/
 .h2Title{height:30px;line-height:30px;padding-left:10px;background:#27a695;color:#fff;font-size:16px;font-weight:normal;}
@@ -85,3 +85,22 @@ em{display:inline-block;width:35px;height:30px;background:url(../images/nw_icon.
 .subNav li .tCurrent{background:#339999;color:#fff;}
 .subNav li .current{background:#27a695;color:#fff;}
 
+
+/*mm form*/
+.main .form{width:700px;margin:30px auto 0;}
+.main .form .frm{overflow:hidden;zoom:1;margin-bottom:15px;}
+.main .form .frm span{float:left;width:110px;padding-top:5px;margin-right:20px;color:#3b3939;font-size:14px;text-align:right;}
+.main .form .frm input{float:left;width:330px;height:30px;padding:3px;margin-right:40px;border:1px solid #dcdcdc;color:#717171;}
+.main .form .frm .error{float:left;width:160px;color:#f41818;font-size:12px;text-align:left;}
+.main .form .frm .small{width:90px;margin-right:10px;}
+.main .form .frm .smallR{width:30px;text-align:left;}
+.main .form .frm textarea{float:left;width:330px;height:180px;padding:3px;margin-right:40px;resize:none;border:1px solid #dcdcdc;vertical-align:top;}
+
+
+/*hrInfo*/
+.hrInfo{overflow:hidden;zoom:1;font-size:14px;color:#4e5053;}
+.hrInfo .hrImg{float:left;margin-right:20px;}
+.hrInfo .hrIf{float:left;}
+.hrInfo .hrIf p{line-height:normal;}
+.hrInfo .hrIf p span{margin-right:60px;}
+.hrInfo .hrIf .hot{color:#27a695;}
