@@ -339,4 +339,23 @@ $(function($) {
             $("#captchaImg").attr("src", "/captcha?i="+new Date().getTime());
         });
     });
+
+    //收藏
+    $(".collect").each(function(){
+        $(this).click(function(){
+            $( "#dialog").html("收藏成功").dialog({
+                modal:true,
+                close:function(){}
+            }).dialog( "open");
+        });
+    });
+    //分享成功
+    $(".share").each(function(){
+        $(this).click(function(){
+            $( "#dialog").html("分享成功").dialog({
+                modal:true,
+                close:function(){}
+            }).dialog( "open");
+        });
+    });
 });
