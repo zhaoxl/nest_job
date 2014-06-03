@@ -1,0 +1,11 @@
+.interview ul{margin-top:15px;padding:20px;background:#fff;border:2px dashed #27a695;}
+.interview li{overflow:hidden;zoom:1;margin-bottom:15px;}
+.interviewRequire{float:left;width:626px;}
+.interviewRequire .hrInfo{height:95px;padding-left:30px;padding-top:10px;background:#ebfafd;}
+.interviewRequire .myNeed{height:92px;padding-left:30px;padding-top:10px;background:#d8ecf0;color:#4e5053;font-size:15px;}
+.interviewOption{float:left;width:240px;}
+.interviewOption .interviewStatus{height:85px;padding-top:20px;background:#d5f1f7;text-align:center;color:#4e5053;font-size:15px;}
+.interviewOption .interviewBtns{height:80px;padding-left:25px;padding-top:22px;background:#b9dce4;}
+.interviewOption .interviewBtns a{margin-right:10px;margin-bottom:5px;}
+
+
