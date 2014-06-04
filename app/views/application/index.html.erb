@@ -1,94 +1,97 @@
-<style type="text/css" media="screen">
-  .input_req img[alt=captcha]{display: inline-block; vertical-align: top;}
-</style>
-<div class="ml">
-	<h2>推荐公司</h2>
-	<ul class="sub_nav">
-		<li><a href="#" class="baidu"><span>百度</span></a></li>
-		<li><a href="#" class="baiduyun"><span>百度云</span></a></li>
-		<li><a href="#" class="huaban"><span>花瓣</span></a></li>
-		<li><a href="#" class="oneshop"><span>1号店</span></a></li>
-		<li><a href="#" class="jd"><span>京东</span></a></li>
-		<li><a href="#" class="sina"><span>新浪</span></a></li>
-	</ul>
-</div>
-<div class="mm">
-</div>
-<div class="mr">
-	<div class="login_box">
-    <%= form_for(resource, as: resource_name, url: accounts_registrations_ajax_create_path, html: {id: "sign_up_form"}, remote: true) do |f| %>
-      <%= devise_error_messages! %>
-		<div class="form">
-			<ul>
-				<li class="input_req">
-					<div class="frm">
-						<span>邮箱</span>
-            <%= f.email_field :email, autofocus: true, class: "txt mail" %>
-						<em class="email">&nbsp;</em>
-					</div>
-				</li>
-				<li class="input_req">
-					<div class="frm">
-						<span>密码</span><%= f.password_field :password, autocomplete: "off", class: "txt" %>
-						<em class="pwd">&nbsp;</em>
-					</div>
-				</li>
-				<li class="input_req">
-					<div class="frm">
-						<span>确认密码</span>
-            <%= f.password_field :password_confirmation, autocomplete: "off", class: "txt" %>
-						<em class="pwd">&nbsp;</em>
-					</div>
-				</li>
-				<li class="input_req">
-					<div class="frm">
-						<span>验证码</span>
-						<input type="text" class="txt" name="captcha" style="width: 60px; display: inline-block"/>
-            <%= captcha_tag(class: "captcha") %>
-						<em class="pwd">&nbsp;</em>
-					</div>
-				</li>
-				<li>
-					<div class="frm">
-						<span>类型</span>
-						<label><input type="radio" class="rad" name="user_type", checked />应聘方</label>
-						<label><input type="radio" class="rad" name="user_type" />招聘方</label>
-					</div>
-				</li>
-				<li>
-					<div class="frm">
-						<label><input type="checkbox" class="rad"/><a href="#" class="deal">已阅读并同意《鸟窝用户协议》</a></label>
-					</div>
-				</li>
-				<li><div class="frm"><%= f.submit%><a href="#" class="registerBtn">注     册</a></div></li>
-				<li><a href="#" class="loginBtn">登     录</a></li>
-				<li><a href="#" class="weibo thirdPtyBtn"><em>&nbsp;</em>使用微博登录</a></li>
-				<li><a href="#" class="qq thirdPtyBtn"><em>&nbsp;</em>使用QQ登录</a></li>
-				<li><a href="#" class="jobs thirdPtyBtn"><em>&nbsp;</em>招聘方入口</a></li>
-			</ul>
-		</div>
-    <%end%>
-	</div>
-	<div class="help">
-		<ul>
-			<li><a href="#" class="first">什么是鸟窝币？</a></li>
-			<li><a href="#">邀请面试如何玩？</a></li>
-			<li><a href="#">什么是面试币？</a></li>
-			<li class="more"><a href="#">更多教程</a></li>
+<div class="main">
+	<style type="text/css" media="screen">
+	  .input_req img[alt=captcha]{display: inline-block; vertical-align: top;}
+	</style>
+	<div class="ml">
+		<h2>推荐公司</h2>
+		<ul class="sub_nav">
+			<li><a href="#" class="baidu"><span>百度</span></a></li>
+			<li><a href="#" class="baiduyun"><span>百度云</span></a></li>
+			<li><a href="#" class="huaban"><span>花瓣</span></a></li>
+			<li><a href="#" class="oneshop"><span>1号店</span></a></li>
+			<li><a href="#" class="jd"><span>京东</span></a></li>
+			<li><a href="#" class="sina"><span>新浪</span></a></li>
 		</ul>
-		<div class="attention">
-			<a href="#" class="logo"></a>
-			<a href="#" class="focusOn">加关注</a>
+	</div>
+	<div class="mm">
+	</div>
+	<div class="mr">
+		<div class="login_box">
+	    <%= form_for(resource, as: resource_name, url: accounts_registrations_ajax_create_path, html: {id: "sign_up_form"}, remote: true) do |f| %>
+	      <%= devise_error_messages! %>
+			<div class="form">
+				<ul>
+					<li class="input_req">
+						<div class="frm">
+							<span>邮箱</span>
+	            <%= f.email_field :email, autofocus: true, class: "txt mail" %>
+							<em class="email">&nbsp;</em>
+						</div>
+					</li>
+					<li class="input_req">
+						<div class="frm">
+							<span>密码</span><%= f.password_field :password, autocomplete: "off", class: "txt" %>
+							<em class="pwd">&nbsp;</em>
+						</div>
+					</li>
+					<li class="input_req">
+						<div class="frm">
+							<span>确认密码</span>
+	            <%= f.password_field :password_confirmation, autocomplete: "off", class: "txt" %>
+							<em class="pwd">&nbsp;</em>
+						</div>
+					</li>
+					<li class="input_req">
+						<div class="frm">
+							<span>验证码</span>
+							<input type="text" class="txt" name="captcha" style="width: 60px; display: inline-block"/>
+	            <%= captcha_tag(class: "captcha") %>
+							<em class="pwd">&nbsp;</em>
+						</div>
+					</li>
+					<li>
+						<div class="frm">
+							<span>类型</span>
+							<label><input type="radio" class="rad" name="user_type", checked />应聘方</label>
+							<label><input type="radio" class="rad" name="user_type" />招聘方</label>
+						</div>
+					</li>
+					<li>
+						<div class="frm">
+							<label><input type="checkbox" class="rad"/><a href="#" class="deal">已阅读并同意《鸟窝用户协议》</a></label>
+						</div>
+					</li>
+					<li><div class="frm"><%= f.submit%><a href="#" class="registerBtn">注     册</a></div></li>
+					<li><a href="#" class="loginBtn">登     录</a></li>
+					<li><a href="#" class="weibo thirdPtyBtn"><em>&nbsp;</em>使用微博登录</a></li>
+					<li><a href="#" class="qq thirdPtyBtn"><em>&nbsp;</em>使用QQ登录</a></li>
+					<li><a href="#" class="jobs thirdPtyBtn"><em>&nbsp;</em>招聘方入口</a></li>
+				</ul>
+			</div>
+	    <%end%>
+		</div>
+		<div class="help">
+			<ul>
+				<li><a href="#" class="first">什么是鸟窝币？</a></li>
+				<li><a href="#">邀请面试如何玩？</a></li>
+				<li><a href="#">什么是面试币？</a></li>
+				<li class="more"><a href="#">更多教程</a></li>
+			</ul>
+			<div class="attention">
+				<a href="#" class="logo"></a>
+				<a href="#" class="focusOn">加关注</a>
+			</div>
 		</div>
 	</div>
+	
+	
+	
+	
+	<%if current_account%>
+	<%= current_account.id%><br />
+	<%= link_to "退出", destroy_account_session_path%>
+	<%else%>
+	<%= link_to "登陆", new_account_session_path%>
+	<%end%>
+
 </div>
-
-
-
-
-<%if current_account%>
-<%= current_account.id%><br />
-<%= link_to "退出", destroy_account_session_path%>
-<%else%>
-<%= link_to "登陆", new_account_session_path%>
-<%end%>
