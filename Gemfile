@@ -86,3 +86,6 @@ gem 'rmagick'
 #else
 #  @phone.tag_list = Util::TagTools.get_tags(URI.unescape(@phone.title, @phone.content))
 #end
+#
+gem 'execjs'  
+gem 'therubyracer' 
