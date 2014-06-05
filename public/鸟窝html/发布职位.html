@@ -6,6 +6,8 @@
 	<link rel="stylesheet" href="stylesheets/ui_base.css" />
 	<link rel="stylesheet" href="stylesheets/ui_common.css" />
 	<link rel="stylesheet" href="stylesheets/release_job.css" />
+    <script type="text/javascript" charset="utf-8" src="javascripts/ueditor1_4_3-src/ueditor.config.js"></script>
+    <script type="text/javascript" charset="utf-8" src="javascripts/ueditor1_4_3-src/_examples/editor_api.js"></script>
 </head>
 <body>
 	<div class="headerWrap">
@@ -83,8 +85,26 @@
 							<span class="error">*请填写职位所在部门</span>
 						</div>
 						<div class="frm">
-							<span class="">职位详情</span>
-							<textarea name="" id=""></textarea>
+							<span class="" >职位详情</span>
+                            <script  type="text/plain" id="myEditor">
+                                <p>这里我可以写一些输入提示</p>
+                            </script>
+                            <script type="text/javascript">
+                                UE.getEditor('myEditor',{
+                                    //这里可以选择自己需要的工具按钮名称,此处仅选择如下五个
+                                    toolbars:[[ 'Undo', 'Redo','Bold','test', 'insertimage', 'paragraph','fontsize','autotypeset']],
+                                    //focus时自动清空初始化时的内容
+                                    autoClearinitialContent:true,
+                                    //关闭字数统计
+                                    wordCount:false,
+                                    //关闭elementPath
+                                    elementPathEnabled:false,
+                                    //默认的编辑区域高度
+                                    initialFrameHeight:100,
+                                    initialFrameWidth:335
+                                    //更多其他参数，请参考ueditor.config.js中的配置项
+                                })
+                            </script>
 							<span class="error">*请填写职位详情</span>
 						</div>
 						<div class="frm">
