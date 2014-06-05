@@ -3,10 +3,15 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 	<title>鸟窝</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= stylesheet_link_tag    'register', media: 'all', 'data-turbolinks-track' => true %>
-  <%= stylesheet_link_tag "/鸟窝html/stylesheets/ui_base.css"%>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    '/鸟窝html/stylesheets/ui_base.css', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    '/鸟窝html/stylesheets/ui_common.css', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    '/鸟窝html/stylesheets/register.css', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    '/鸟窝html/stylesheets/ui-lightness/jquery-ui-1.10.4.min.css', media: 'all', 'data-turbolinks-track' => true %>
+    
+  <%= javascript_include_tag '/鸟窝html/javascripts/jquery-1.10.2.js', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag '/鸟窝html/javascripts/jquery-ui-1.10.4.min.js', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag '/鸟窝html/javascripts/index.js', 'data-turbolinks-track' => true %>
+
   <%= yield :head_include%>
   <%= csrf_meta_tags %>
 </head>
@@ -36,10 +41,14 @@
 			<ul class="nav">
 				<li><a href="#" class="current">找工作首页</a></li>
 				<li><a href="#">找人才首页</a></li>
+        <%if current_account%>
 				<li><a href="#">HR面试消息</a></li>
 				<li><a href="#">完善简历</a></li>
-				<li><a href="#">昵称：猫猫鼠</a></li>
-				<li><a href="#">退出</a></li>
+				<li><a href="#">昵称：<%= current_account.nick_name%></a></li>
+				<li><%= link_to "退出", destroy_account_session_path%></li>
+        <%else%>
+        <li><%= link_to "登陆", new_account_session_path%></li>
+        <%end%>
 			</ul>
 			<!-- <div class="login_info">
 				<a href="#">昵称：猫猫鼠</a>

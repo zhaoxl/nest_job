@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140518033540) do
+ActiveRecord::Schema.define(version: 20140605095848) do
 
   create_table "account_resumes", force: true do |t|
     t.integer  "account_id"
@@ -47,6 +47,8 @@ ActiveRecord::Schema.define(version: 20140518033540) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
+    t.string   "description"
+    t.string   "company_email"
   end
 
   add_index "accounts", ["email"], name: "index_accounts_on_email", unique: true, using: :btree
@@ -154,9 +156,13 @@ ActiveRecord::Schema.define(version: 20140518033540) do
     t.datetime "updated_at"
   end
 
+  create_table "post_tags", force: true do |t|
+    t.integer "post_id"
+    t.integer "tag_id"
+  end
+
   create_table "posts", force: true do |t|
     t.string   "title"
-    t.integer  "price"
     t.string   "description"
     t.text     "content"
     t.string   "area"
@@ -165,6 +171,11 @@ ActiveRecord::Schema.define(version: 20140518033540) do
     t.datetime "deleted_at"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.float    "price_min",   default: 0.0
+    t.float    "price_max",   default: 0.0
+    t.string   "address"
+    t.string   "department"
+    t.string   "email"
   end
 
   create_table "tags", force: true do |t|

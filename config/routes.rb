@@ -5,12 +5,16 @@ NestJob::Application.routes.draw do
   devise_for :accounts, controllers: { registrations: "accounts/registrations", sessions: "accounts/sessions" }, :sign_out_via=>[:delete, :get]
   devise_scope :account do
     post "/accounts/registrations/ajax_create" => "accounts/registrations#ajax_create"
+    post "/accounts/sessions/ajax_create" => "accounts/sessions#ajax_create"
   end
     
   get '/' => 'application#index'
 
 
   resources :posts
+  namespace :accounts do
+    resources :profile
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -10,39 +10,48 @@
 			<h2 class="h2Title">发布职位 | <a href="#">今天发布了2个职位</a></h2>
 			<div class="form">
 				<%= form_for @post, method: :post do |f|%>
+        <%if flash[:error]%>
+        <span style="color: red">错误信息:<%= flash[:error]%></span>
+        <%end%>
+        <%if flash[:notice]%>
+        <span style="color: green">提示信息:<%= flash[:notice]%></span>
+        <%end%>
 				<div class="frm">
 					<span class="">职位名称</span>
-					<%= f.text_field :name%>
+					<%= f.text_field :title%>
 					<span class="error">*请填写职位名称</span>
 				</div>
 				<div class="frm">
 					<span class="">工作城市</span>
-					<input type="text" />
+					<%= f.text_field :area%>
 					<span class="error">*请填写城市名称</span>
 				</div>
 				<div class="frm">
 					<span class="">薪资范围</span>
-					<input type="text" class="small"/><span class="smallR">k ~</span><input type="text" class="small"/><span class="smallR" style="margin-right:80px;">k</span>
+					<%= f.text_field :price_min, class: "small"%>
+          <span class="smallR">k ~</span>
+					<%= f.text_field :price_max, class: "small"%>
+          <span class="smallR" style="margin-right:80px;">k</span>
 					<span class="error">*请填写薪资范围</span>
 				</div>
 				<div class="frm">
 					<span class="">详细工作地点</span>
-					<input type="text" />
+					<%= f.text_field :address %>
 					<span class="error">*请填写详细工作地点</span>
 				</div>
 				<div class="frm">
 					<span class="">接收简历邮箱</span>
-					<input type="text" />
+					<%= f.text_field :email %>
 					<span class="error">*请填写接收简历的邮箱</span>
 				</div>
 				<div class="frm">
 					<span class="">所在部门</span>
-					<input type="text" />
+					<%= f.text_field :department %>
 					<span class="error">*请填写职位所在部门</span>
 				</div>
 				<div class="frm">
 					<span class="">职位详情</span>
-					<textarea name="" id=""></textarea>
+					<%= f.text_area :content %>
 					<span class="error">*请填写职位详情</span>
 				</div>
 				<div class="frm">
@@ -57,14 +66,14 @@
 						<a href="#">Designer<i>×</i></a>
 					</div>
 					<div class="postInput">
-						<input type="text" /><a href="#" class="addPost"><em>&nbsp;</em></a>
+					<%= f.text_field :tags %><a href="#" class="addPost"><em>&nbsp;</em></a>
 					</div>
 					<span class="error">*请填写职位关键词，方便应聘方更方便的搜索您的职位</span>
 				</div>
 			</div>
 			<div class="jobBtns">
 				<!-- <a href="#" class="btnR">发起面试</a><a href="#" class="btnR">收    藏</a> -->
-				<a href="#" class="btn">发布职位</a>
+        <%= f.submit "发布职位", class: "btn"%>
 			</div>
 			<%end%>
 		</div>

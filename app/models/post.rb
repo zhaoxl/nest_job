@@ -1,8 +1,8 @@
 class Post < ActiveRecord::Base
   include Elasticsearch::Model
   #include Elasticsearch::Model::Callbacks
-  after_save    { logger.debug ["Updating document... ", __elasticsearch__.index_document ].join }
-  after_destroy { logger.debug ["Deleting document... ", __elasticsearch__.delete_document].join }
+  after_save    { logger.debug ["Updating document... ", (__elasticsearch__.index_document rescue "Elasticsearch not connect") ].join }
+  after_destroy { logger.debug ["Deleting document... ", (__elasticsearch__.delete_document rescue "Elasticsearch not connect")].join }
   
   settings index: { number_of_shards: 1 } do
     mappings dynamic: 'false' do
@@ -13,6 +13,8 @@ class Post < ActiveRecord::Base
     end
   end
   
+  attr_accessor :tags
+  belongs_to :post_tags
 end
 
 #Post.mappings.to_hash

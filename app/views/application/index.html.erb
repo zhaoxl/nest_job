@@ -1,75 +1,158 @@
-<div class="main">
-	<style type="text/css" media="screen">
-	  .input_req img[alt=captcha]{display: inline-block; vertical-align: top;}
-	</style>
-	<div class="ml">
-		<h2>推荐公司</h2>
-		<ul class="sub_nav">
-			<li><a href="#" class="baidu"><span>百度</span></a></li>
-			<li><a href="#" class="baiduyun"><span>百度云</span></a></li>
-			<li><a href="#" class="huaban"><span>花瓣</span></a></li>
-			<li><a href="#" class="oneshop"><span>1号店</span></a></li>
-			<li><a href="#" class="jd"><span>京东</span></a></li>
-			<li><a href="#" class="sina"><span>新浪</span></a></li>
-		</ul>
-	</div>
-	<div class="mm">
+<div class="mainContainer">
+	<div class="main">
+		<div class="ml">
+			<h2 class="regH2">推荐公司</h2>
+			<ul class="brands">
+				<li><a href="#" class="baidu"><span>百度</span></a></li>
+				<li><a href="#" class="baiduyun"><span>百度云</span></a></li>
+				<li><a href="#" class="huaban"><span>花瓣</span></a></li>
+				<li><a href="#" class="oneshop"><span>1号店</span></a></li>
+				<li><a href="#" class="jd"><span>京东</span></a></li>
+				<li><a href="#" class="sina"><span>新浪</span></a></li>
+			</ul>
+		</div>
+		<div class="mm">
+<!--					<ul class="mSubNav">
+				<li><a href="#" class="findTit">发现</a></li>
+				<li><a href="#" class="f_current">JS</a></li>
+				<li><a href="#">CSS</a></li>
+				<li><a href="#">UI</a></li>
+				<li><a href="#">PM</a></li>
+				<li><a href="#" class="topTit">热门</a></li>
+				<li><a href="#" class="t_current">JS</a></li>
+				<li><a href="#">CSS</a></li>
+				<li><a href="#">UI</a></li>
+				<li><a href="#">PM</a></li>
+			</ul>-->
+                <ul class="mSubNav">
+                    <li><a href="#" class="findTit">发现</a></li>
+                    <li><a href="javascript:void(0)" class="f_current">JS</a></li>
+                    <li><a href="javascript:void(0)" class="f_btn">CSS</a></li>
+                    <li><a href="javascript:void(0)" class="f_btn">UI</a></li>
+                    <li><a href="javascript:void(0)" class="f_btn">PM</a></li>
+                    <li><a href="#" class="topTit">热门</a></li>
+                    <li><a href="#" class="t_current">JS</a></li>
+                    <li><a href="#">CSS</a></li>
+                    <li><a href="#">UI</a></li>
+                    <li><a href="#">PM</a></li>
+                </ul>
+			<h2 class="indexH2">嗨，给自己期望的工作留点印记吧，才能进行下一步哦！！！</h2>
+			<!--<div class="postForm">
+				<div class="hopePost">
+					<div class="frm">
+						<span>期望职位：</span>
+						<div class="posts">
+							<a href="#">JavaScript<i>×</i></a>
+							<a href="#">前端css<i>×</i></a>
+							<a href="#">nodeJS<i>×</i></a>
+							<a href="#">Designer<i>×</i></a>
+							<a href="#">前端css<i>×</i></a>
+							<a href="#">nodeJS<i>×</i></a>
+							<a href="#">Designer<i>×</i></a>
+						</div>
+						<div class="postInput">
+							<input type="text" /><a href="#" class="addPost"><em>&nbsp;</em></a>
+						</div>
+					</div>
+					<div class="frm">
+						<span>期望城市：</span>
+						<div class="postInput">
+							<input type="text" />
+						</div>
+					</div>
+					<a href="#" class="saveBtn">保存印记</a>
+				</div>
+			</div>-->
+                <div class="postForm">
+                    <div class="hopePost">
+                        <div class="frm">
+                            <span>期望职位：</span>
+                            <div class="posts" id="addHopePanel">
+
+                                <a href="javascript:void(0)" style="">js<i class="deleteHope" title="删除">×</i></a></div>
+                            <div class="postInput">
+                                <input type="text" id="addHopeContent"><a href="javascript:void(0)" id="addHope" class="addPost"><em>&nbsp;</em></a>
+                            </div>
+                        </div>
+                        <div class="frm">
+                            <span>期望城市：</span>
+                            <div class="postInput">
+                                <input type="text" id="cityHopes">
+                            </div>
+                        </div>
+                        <a href="javascript:void(0)" id="saveHopes" class="saveBtn">保存印记</a>
+                    </div>
+                </div>
+		</div>
 	</div>
 	<div class="mr">
-		<div class="login_box">
-	    <%= form_for(resource, as: resource_name, url: accounts_registrations_ajax_create_path, html: {id: "sign_up_form"}, remote: true) do |f| %>
-	      <%= devise_error_messages! %>
-			<div class="form">
-				<ul>
-					<li class="input_req">
-						<div class="frm">
-							<span>邮箱</span>
-	            <%= f.email_field :email, autofocus: true, class: "txt mail" %>
-							<em class="email">&nbsp;</em>
-						</div>
-					</li>
-					<li class="input_req">
-						<div class="frm">
-							<span>密码</span><%= f.password_field :password, autocomplete: "off", class: "txt" %>
-							<em class="pwd">&nbsp;</em>
-						</div>
-					</li>
-					<li class="input_req">
-						<div class="frm">
-							<span>确认密码</span>
-	            <%= f.password_field :password_confirmation, autocomplete: "off", class: "txt" %>
-							<em class="pwd">&nbsp;</em>
-						</div>
-					</li>
-					<li class="input_req">
-						<div class="frm">
-							<span>验证码</span>
-							<input type="text" class="txt" name="captcha" style="width: 60px; display: inline-block"/>
-	            <%= captcha_tag(class: "captcha") %>
-							<em class="pwd">&nbsp;</em>
-						</div>
-					</li>
-					<li>
-						<div class="frm">
-							<span>类型</span>
-							<label><input type="radio" class="rad" name="user_type", checked />应聘方</label>
-							<label><input type="radio" class="rad" name="user_type" />招聘方</label>
-						</div>
-					</li>
-					<li>
-						<div class="frm">
-							<label><input type="checkbox" class="rad"/><a href="#" class="deal">已阅读并同意《鸟窝用户协议》</a></label>
-						</div>
-					</li>
-					<li><div class="frm"><%= f.submit%><a href="#" class="registerBtn">注     册</a></div></li>
-					<li><a href="#" class="loginBtn">登     录</a></li>
-					<li><a href="#" class="weibo thirdPtyBtn"><em>&nbsp;</em>使用微博登录</a></li>
-					<li><a href="#" class="qq thirdPtyBtn"><em>&nbsp;</em>使用QQ登录</a></li>
-					<li><a href="#" class="jobs thirdPtyBtn"><em>&nbsp;</em>招聘方入口</a></li>
-				</ul>
-			</div>
-	    <%end%>
-		</div>
+            <div class="login_box">
+        	    <%= form_for(resource, as: resource_name, url: accounts_registrations_ajax_create_path, html: {id: "sign_up_form"}, remote: true) do |f| %>
+        	      <%= devise_error_messages! %>
+                <div class="form">
+                    <ul>
+                        <li class="input_req">
+                            <div class="frm">
+                                <span class="prompt tipMsg" style="display: block;">邮箱</span>
+                                <%= f.email_field :email, autofocus: true,  id: "myemail", class: "txt mail current verification", style: "border: 1px solid rgb(160, 160, 160);", "data-em" => "email", "data-type" => "email", "error-id" => "errorEmail"%>
+                                <em class="email">&nbsp;</em>
+                                <span class="error errorregister errorlogin" id="errorEmail" style="display: block;">请输入正确邮箱地址</span>
+                            </div>
+                        </li>
+                        <li class="input_req">
+                            <div class="frm">
+                                <span class="prompt tipMsg" style="display: block;">密码</span>
+                                <%= f.email_field :password,  id: "mypwd", class: "txt verification", style: "border: 1px solid rgb(160, 160, 160);", "data-em" => "pwd", "data-type" => "notnull", "error-id" => "errorpassword"%>
+                                <em class="pwd">&nbsp;</em>
+                                <span id="errorpassword" class="error errorregister errorlogin" style="display: block;">请输入密码</span>
+                            </div>
+                        </li>
+                        <li class="input_req registerPanel" style="display: list-item;">
+                            <div class="frm">
+                                <span class="prompt tipMsg" style="display: block;">重复密码</span>
+                                <%= f.email_field :password,  id: "mypwdReport", class: "txt verification", style: "border: 1px solid rgb(160, 160, 160);", "data-em" => "pwd", "data-type" => "notnull", "error-id" => "errorpasswordreport"%>
+                                <em class="pwd">&nbsp;</em>
+                                <span id="errorpasswordreport" class="error errorregister errorlogin" style="display: block;">两次密码不一样</span>
+                            </div>
+                        </li>
+                        <li class="input_req registerPanel" style="display: list-item;">
+                            <div class="frm VerifCode">
+                                <span class="prompt tipMsg">验证码</span>
+                  							<input type="text" id="mycaptcha" class="txt" name="captcha" style="width: 60px; display: inline-block" />
+                                <%= captcha_tag(class: "updateCaptcha", style: "cursor: pointer", id: "captchaImg", title: "刷新验证码") %>
+                                <em class="pwd updateCaptcha">&nbsp;</em>
+                                <span class="error errorregister" style="display: block;">请输入验证码</span>
+                            </div>
+                        </li>
+                        <li class="registerPanel" style="display: list-item;">
+                            <div class="frm">
+                                <span>类型</span>
+                                <label><input type="radio" value="1" checked="checked" id="user_type" class="rad" name="rad">应聘方</label>
+                                <label><input type="radio" value="2" class="rad" name="rad">招聘方</label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="frm">
+                                <label class="remember"><input checked="checked" id="rememberMe" type="radio" class="rad">记住我</label>
+                                <a href="#" class="forget">忘记密码?</a>
+                            </div>
+                        </li>
+                        <li class="registerPanel" style="display: list-item;">
+                            <div class="frm">
+                                <label><input type="checkbox" checked="checked" id="registerAgree" class="rad"><a href="javascript:void(0)" class="deal">已阅读并同意《鸟窝用户协议》</a></label>
+                            </div>
+                        </li>
+                        <li style="display: list-item;"><div class="frm"><a href="javascript:void(0)" id="registerBtn" class="registerBtn">注     册</a></div></li>
+                        <li style="display: none;"><div class="frm"><a href="javascript:void(0)" id="loginBtn" class="registerBtn">登     录</a></div></li>
+                        <li id="loginTip" style="display: list-item;"><a href="javascript:void(0)" class="loginBtn">登     录</a></li>
+                        <li style="display: none;" id="registerTip"><a href="javascript:void(0)" class="loginBtn">注     册</a></li>
+                        <li><a href="#" class="weibo thirdPtyBtn"><em>&nbsp;</em>使用微博登录</a></li>
+                        <li><a href="#" class="qq thirdPtyBtn"><em>&nbsp;</em>使用QQ登录</a></li>
+                        <li><a href="#" class="jobs thirdPtyBtn"><em>&nbsp;</em>招聘方入口</a></li>
+                    </ul>
+                </div>
+	              <%end%>
+            </div>
 		<div class="help">
 			<ul>
 				<li><a href="#" class="first">什么是鸟窝币？</a></li>
@@ -83,7 +166,8 @@
 			</div>
 		</div>
 	</div>
-	
+</div>
+    
 	
 	
 	
@@ -94,4 +178,3 @@
 	<%= link_to "登陆", new_account_session_path%>
 	<%end%>
 
-</div>
