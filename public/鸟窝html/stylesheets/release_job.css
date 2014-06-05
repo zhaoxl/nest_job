@@ -9,3 +9,4 @@
 .main .jobBtns{margin-left:237px;}
 .main .jobBtns .btn{width:135px;height:30px;line-height:30px;font-size:14px;border-bottom:2px solid #1b7a6d;font-family: '微软雅黑'; border: none;}
 #myEditor{position: relative;left: 130px;+left:0px;clear: both;top:-25px;+top:0px}/*编辑器*/
+.jobMore{position: relative;float: right !important;top:-150px}
