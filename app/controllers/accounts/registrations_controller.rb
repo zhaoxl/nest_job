@@ -34,7 +34,7 @@ class Accounts::RegistrationsController < Devise::RegistrationsController
       
       unless resource.valid?
         #创建失败
-        raise resource.errors.messages.values.flatten.uniq * "|"
+        raise resource.errors.messages
       end
       sign_in(resource)
     rescue Exception => ex

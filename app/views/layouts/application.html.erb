@@ -18,7 +18,7 @@
 <body>
 	<div class="headerWrap">
 		<div class="header">
-			<h1><a href="#" class="logo">鸟窝</a></h1>
+			<h1><a href="/" class="logo">鸟窝</a></h1>
 			<div class="search">
 				<div class="searchBox">
 					<input type="text" />
@@ -44,7 +44,7 @@
         <%if current_account%>
 				<li><a href="#">HR面试消息</a></li>
 				<li><a href="#">完善简历</a></li>
-				<li><a href="#">昵称：<%= current_account.nick_name%></a></li>
+				<li><%= link_to "昵称：#{current_account.nick_name}", accounts_profile_index_path%></li>
 				<li><%= link_to "退出", destroy_account_session_path%></li>
         <%else%>
         <li><%= link_to "登陆", new_account_session_path%></li>

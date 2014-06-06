@@ -1,0 +1,3 @@
+class AjaxException < Exception
+  
+end
