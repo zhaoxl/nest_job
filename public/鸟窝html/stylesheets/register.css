@@ -81,15 +81,7 @@
 .employment .employBtns .btnR{display:inline-block;margin-right:5px;}
 
 
-/*pager*/
-.pager{overflow:hidden;zoom:1;margin-top:20px;}
-.pager li{float:left;width:28px;height:28px;line-height:28px;margin-right:10px;background:#fff;border:1px solid #27a695;text-align:center;}
-.pager .last{background:none;border:none;}
-.pager .last em{background-position:-70px 0;}
-.pager li a{display:block;color:#27a695;font-size:17px;}
-.pager li .current{background:#27a695;color:#fff;}
-.pager .etc{background:none;border:none;}
-.pager li span{color:#bcbdbd;}
+
 
 
 

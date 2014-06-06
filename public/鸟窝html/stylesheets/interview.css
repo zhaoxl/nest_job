@@ -1,4 +1,4 @@
-.interview ul{margin-top:15px;padding:20px;background:#fff;border:2px dashed #27a695;}
+.interview .interviewList{margin-top:15px;padding:20px;background:#fff;border:2px dashed #27a695;}
 .interview li{overflow:hidden;zoom:1;margin-bottom:15px;}
 .interviewRequire{float:left;width:626px;}
 .interviewRequire .hrInfo{height:95px;padding-left:30px;padding-top:10px;background:#ebfafd;}
@@ -9,5 +9,22 @@
 .interviewOption .interviewBtns a{margin-right:10px;margin-bottom:5px;}
 .interviewOption .via{padding-top:40px;height:65px;}
 .interviewOption .viaBtn{padding-top:40px;height:62px;}
-.interviewOption .viaBtn .del{background:#1a9fbc;border-color:#0b7086;}
+.interviewOption .del{background:#1a9fbc;border-color:#0b7086;}
 
+.jbHunter .jobHunterInfo{height:140px;padding-left:30px;padding-top:10px;background:#ebfafd;font-size:15px;color:#454343;}
+.jbHunter .via{height:90px;padding-top:60px;}
+.jbHunter .jhInfo{height:100px;}
+.jobHunterInfo .jhImg{float:left;margin-right:20px;}
+.jhDetail{overflow:hidden;zoom:1;}
+.jhDetail ul{float:left;margin-right:30px;}
+.jhDetail li{margin:0;}
+.jobHunterInfo .interviewBtns{margin-right:30px;text-align:right;font-size:12px;}
+
+.searchTalent{overflow:hidden;zoom:1;border:1px solid #27a695;}
+.main .searchTalent .form{overflow:hidden;zoom:1;width:100%;margin-top:0;padding-top:30px;background:#fff;}
+.main .searchTalent .form .frm{float:left;width:320px;margin-right:25px;}
+.main .searchTalent .form .frm span{width:80px;margin-right:0px;}
+.main .searchTalent .form .frm input{width:185px;margin-right:10px;}
+.searchTalent .form .frm .addPost em{background-position:-105px 0px;}
+.stBtn{padding-bottom:20px;background:#fff;text-align:center;}
+.stBtn .btnR{width:185px;height:35px;line-height:35px;font-size:14px;}
