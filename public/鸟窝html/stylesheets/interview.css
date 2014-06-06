@@ -7,5 +7,7 @@
 .interviewOption .interviewStatus{height:85px;padding-top:20px;background:#d5f1f7;text-align:center;color:#4e5053;font-size:15px;}
 .interviewOption .interviewBtns{height:80px;padding-left:25px;padding-top:22px;background:#b9dce4;}
 .interviewOption .interviewBtns a{margin-right:10px;margin-bottom:5px;}
-
+.interviewOption .via{padding-top:40px;height:65px;}
+.interviewOption .viaBtn{padding-top:40px;height:62px;}
+.interviewOption .viaBtn .del{background:#1a9fbc;border-color:#0b7086;}
 
