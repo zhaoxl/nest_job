@@ -14,7 +14,7 @@ class Post < ActiveRecord::Base
   end
   
   attr_accessor :tags
-  belongs_to :post_tags
+  has_many :post_tags
 end
 
 #Post.mappings.to_hash

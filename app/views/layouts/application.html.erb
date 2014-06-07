@@ -43,7 +43,7 @@
 				<li><a href="#">找人才首页</a></li>
         <%if current_account%>
 				<li><a href="#">HR面试消息</a></li>
-				<li><a href="#">完善简历</a></li>
+				<li><%= link_to "完善简历", accounts_resumes_path%></li>
 				<li><%= link_to "昵称：#{current_account.nick_name}", accounts_profile_index_path%></li>
 				<li><%= link_to "退出", destroy_account_session_path%></li>
         <%else%>

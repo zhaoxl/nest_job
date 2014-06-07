@@ -11,7 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140605095848) do
+ActiveRecord::Schema.define(version: 20140607061412) do
+
+  create_table "account_resume_tags", force: true do |t|
+    t.integer "account_resume_id"
+    t.integer "tag_id"
+  end
 
   create_table "account_resumes", force: true do |t|
     t.integer  "account_id"
@@ -19,7 +24,6 @@ ActiveRecord::Schema.define(version: 20140605095848) do
     t.string   "title"
     t.string   "area"
     t.string   "hope_salary"
-    t.datetime "jobd_at"
     t.string   "education"
     t.datetime "created_at"
     t.datetime "updated_at"
