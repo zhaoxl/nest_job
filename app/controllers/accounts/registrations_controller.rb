@@ -34,11 +34,14 @@ class Accounts::RegistrationsController < Devise::RegistrationsController
       
       unless resource.valid?
         #创建失败
-        raise resource.errors.messages
+        raise AjaxException.new(resource.errors.messages.inject({}){|hash, item| hash[item[0]] = item[1]*','; hash})
       end
       sign_in(resource)
     rescue Exception => ex
       result = {status: "error", content: ex.message}
+      logger.error "accounts_create error log================================================"
+      logger.error ex.message
+      logger.error ex.backtrace
     end
     render json: result.to_json
   end

@@ -122,7 +122,7 @@
             'adapter/autosave.js'
 
         ],
-        baseURL = 'javascripts/ueditor1_4_3-src/_src/';
+        baseURL = '/鸟窝html/javascripts/ueditor1_4_3-src/_src/';
     for (var i=0,pi;pi = paths[i++];) {
         document.write('<script type="text/javascript" src="'+ baseURL + pi +'"></script>');
     }

@@ -34,6 +34,10 @@ $(function($) {
                         var notchinese = /[\u4E00-\u9FA5]/ig;
                         bFail = !notchinese.test(value);
                         break;
+                    case 'pas':
+                        var notpas = /^\w{6,16}$/;
+                        bFail = !notpas.test(value);
+                        break;
                     case 'email':
                         var emailReg = /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;
                         bFail = !emailReg.test(value);
@@ -98,7 +102,7 @@ $(function($) {
             }).dialog( "open");
             return;
         }
-        $( "#dialog").html("注册中···").dialog({
+        $( "#dialog").html("努力注册中···").dialog({
             modal:true,
             close:function(){}
         }).dialog( "open");
@@ -109,10 +113,12 @@ $(function($) {
             type: "post",
             url: "/accounts/registrations/ajax_create",
             data: {
-                "account[email] ": $.trim($("#myemail").val()),//邮箱
+                "account[email]": $.trim($("#myemail").val()),//邮箱
                 "account[password]": $.trim($("#mypwd").val()),//密码
-                "account[password_confirmation]": $.trim($("#mypwdReport").val()),//确认密码
+                "authenticity_token": $("meta[name='csrf-token']").attr("content"),
+              /*  "account[password_confirmation]": $.trim($("#mypwdReport").val()),//确认密码*/
                 "captcha": $("#mycaptcha").val() || "",//验证码
+                "rememberme": $("#rememberMe:checked").length != 0 ? "1" : "0",//
                 "user_type": $("#user_type:checked").length != 0 ? 1 : 2//用户类型
             },
             success: function(result) {
@@ -120,6 +126,9 @@ $(function($) {
                     $( "#dialog").html("注册成功，正在跳转").dialog({
                         modal:true
                     }).dialog("close");
+                    //cookie记录注册  时间 =  24*60*60*365
+                    Cookie.Set("registered", "1", 31536000, "/");
+                    window.location.reload();
                 } else {
 
                 }
@@ -159,7 +168,9 @@ $(function($) {
             url: "/accounts/sessions/ajax_create",
             data: {
                 "account[email] ": $.trim($("#myemail").val()),//邮箱
-                "account[password]": $.trim($("#mypwd").val())//密码
+                "account[password]": $.trim($("#mypwd").val()),//密码
+                "rememberme": $("#rememberMe:checked").length != 0 ? "1" : "0",//记住我
+                "authenticity_token": $("meta[name='csrf-token']").attr("content")
             },
             success: function(result) {
                 if (result.status == "ok") {
@@ -183,7 +194,7 @@ $(function($) {
             }).dialog( "open");
         })
     });
-    $("body").append('<div id="dialog" style="background-color: #27A695;color: #fff;text-align: center;font-size: 20px" title="Basic dialog">--->请登录后再操作</div>')
+    $("body").append('<div id="dialog" style="background-color: #27A695;color: #fff;text-align: center;font-size: 15px" title="Basic dialog">--->请登录后再操作</div>')
     $("#dialog").dialog({
         autoOpen:false,
         modal:false,
@@ -358,4 +369,111 @@ $(function($) {
             }).dialog( "open");
         });
     });
+
+    //检测用户是否注册过，如果注册过显示登录框，否则显示注册框
+    if(Cookie.Get("registered") == "1"){
+        //显示 登录
+        $("#loginTip").click();
+    }
+
+    //用户协议
+    $("body").append("<div style='display: none;background-color: #27A695;color: #fff;text-align: left;font-size: 15px' id='userAgreementPop'>"+
+        "<p>欢迎光临“鸟窝”，在使用“鸟窝”之前请您仔细阅读本用户协议。如果您对用户协议的任何条款表示异议，您可以选择不使用“鸟窝”。登录并使用“鸟窝”，则意味着您自愿遵守本协议，并在使用过程中服从“鸟窝”的统一管理。</p>"+
+        "<p>一、 协议目的：</p>"+
+        "<p>本协议作为“鸟窝”与用户签订的服务协议，用以约束用户使用本网站及鸟窝为用户提供约定服务的行为，双方均应遵守本协议条款并履行相关义务。</p>"+
+        "<p>二、用户的权利义务：</p>"+
+        "<p>1、在完成“鸟窝”注册程序后您将成为“鸟窝”合法用户，享受“鸟窝”提供的服务，同时用户需保证具有相应的民事行为能力，并在完全同意本协议的情形下完成注册。</p>"+
+        "<p>2、用户承诺在“鸟窝”发布的简历或信息均符合国家有关法律法规规定，并保证其真实性、完整性、准确性，不侵害任何第三方的权利。</p>"+
+        "<p>3、用户承诺使用“鸟窝”仅用于用户自身招聘或求职目的，不得从事任何其他活动，不得发布除招聘信息或自身简历外的其他资料。</p>"+
+        "<p>4、用户对在“鸟窝”上得到、浏览的任何信息（包括但不限于本网站发布的招聘、求职信息、简历资料等）仅可做自身招聘或求职使用，不得用于其它商业或非商业目的。</p>"+
+        "<p>5、用户在本网站注册成功后需对帐号及密码的使用及安全承担全部责任。用户不得将帐号转借他人使用，用户应对以其帐号进行的所有活动承担责任。</p>"+
+        "<p>6、用户应对使用“鸟窝”的一切行为承担责任，如因用户行为给其他第三方或“鸟窝”造成任何损失的，用户应承担赔偿责任。</p>"+
+        "<p>7、用户在“鸟窝”实施了违法行为，导致第三方投诉（包括但不限于第三方以发等形式指控“鸟窝”侵权，提起诉讼、仲裁，或使“鸟窝”面临相关主管机关的审查或质询），“鸟窝”有权先暂停用户的使用。用户应在收到通知后，以自己名义出面与第三方协商、应诉或接受相关主管机关审查或质询，承担所有费用，并赔偿因此给“鸟窝”造成的全部损失。</p>"+
+        "<p>三、“鸟窝”的权利义务：</p>"+
+        "<p>1、“鸟窝”应为用户提供优质的服务，并接受用户的监督及合理建议。</p>"+
+        "<p>2、用户在“鸟窝”发布的信息如有违反法律规定，本协议约定或“鸟窝”认为属于不适合发布的信息的，鸟窝有权进行修改、删除。</p>"+
+        "<p>3、用户同意因网络原因、“鸟窝”进行网络调整、正常的系统维护升级等造成的本网站无法正常访问，“鸟窝”不承担任何责任。</p>"+
+        "<p>4、“鸟窝”网站（包括但不限于网站上的所有工具、应用、功能等）作为“鸟窝”为用户提供信息的平台，用户同意并保证使用以上内容均出于自愿并已得到有效授权，不得侵犯任何第三方的权益。“鸟窝”对用户的使用行为不承担任何责任。</p>"+
+        "<p>5、“鸟窝”可能会提供与其他互联网网站或资源进行链接。对于前述网站或资源是否可以利用，“鸟窝”不予担保。因使用或依赖上述网站或资源所造成的损失或损害，“鸟窝”也不负担任何责任。</p>"+
+        "<p>四、信息的公开：</p>"+
+        "<p>1、用户同意招聘企业或个人有权对用户向本网站递交的简历及相关信息进行查询并使用。对于因此而引起的任何法律纠纷，“鸟窝”不承担任何法律责任。</p>"+
+        "<p>2、用户了解并同意其在本网站发布的任何信息，包括但不限于个人简历、个人资料、求职信息、联系方式等，均有可能被本网站的访问者浏览或被其他第三方抄录用于商业或非商业性目的。对于因任何第三方使用有关信息所引发的纠纷，“鸟窝”将不予承担任何责任。</p>"+
+        "<p>五、知识产权：</p>"+
+        "<p>本网站所有内容、设计、图标、图表、文字及其组合、产品、技术、程序等知识产权均归“鸟窝”所有。</p>"+
+        "<p>六、违约责任：</p>"+
+        "<p>如用户有以下行为视为违约，“鸟窝”有权随时采取停止服务，删除信息，取消会员资格，解除本协议，要求用户赔偿一切损失等行动。同时“鸟窝”已收取的服务费（如有）将不予退还。</p>"+
+        "<p>1、用户的行为违反法律规定的。</p>"+
+        "<p>2、用户的行为违反本协议承诺、约定的。</p>"+
+        "<p>3、用户的行为侵犯任何第三方权益的。</p>"+
+        "<p>4、用户的行为不利于“鸟窝”的。</p>"+
+        "<p>七、协议的变更：</p>"+
+        "<p>“鸟窝”保留随时修正、更新本服务条款的权利。一旦发生相关修订或更新，“鸟窝”会将修订和更新的内容及时在本页面发布，用户如认为变更无法接受，应该停止使用本网站相关服务。如果继续使用“鸟窝”相关服务的，则视为用户接受变更条款并愿意受其约束。</p>"+
+        "<p>八、不可抗力：</p>"+
+        "<p>如因不可抗力导致本协议无法履行的，双方互不承担责任。</p>"+
+        "<p>九、法律适用：</p>"+
+        "<p>本协议的订立、生效、解释、执行、管辖、争议的解决均适用中华人民共和国法律。</p>"+
+        "<p>十、其他：</p>"+
+        "<p>1、本协议自用户登录使用“鸟窝”起生效，长期有效。</p>"+
+        "<p>2、“鸟窝”保留在法律允许范围内对本协议的最终解释权。</p>"+
+        "</div>");
+    $("#userAgreementPop").dialog({
+        autoOpen:false,
+        modal:false,
+        height:600,
+        width:900,
+        title:"《鸟窝用户协议》",
+        show:{effect:'drop', direction:'up'},
+        hide:{effect:'drop', direction:'down'},
+        draggable:false,
+        close: function() {
+            $(".verification").first().focus();
+        },
+        resizable:false
+    });
+    $("#userAgreement").click(function(){
+        $( "#userAgreementPop").dialog({
+            modal:true,
+            close:function(){}
+        }).dialog( "open");
+    });
+
+    //找回密码弹框
+    $("body").append('<div id="forgetPasswordPop" style="background-color: #27A695;color: #fff;text-align: left;font-size: 20px" title="Basic dialog">'+
+        '<div style="position: relative;top:15%;">邮箱地址：<input type="text" id="forgetPasswordContent">'+
+        '<b style="font-size: 12px"> 请输入您注册时用的邮箱</b><br /><br />'+
+        '<input style="width: 155px;height: 46px;cursor:pointer;font-size: 16px;line-height: 46px;clear: both;float: left;background: #019875;color: #fff;border: none;text-align: center;" type="button" value="找回密码" id="actionFindPassword"></div>'
+        +'</div>')
+    $("#forgetPasswordPop").dialog({
+        autoOpen:false,
+        modal:false,
+        height:200,
+        width:500,
+        title:"找回密码",
+        show:{effect:'drop', direction:'up'},
+        hide:{effect:'drop', direction:'down'},
+        draggable:false,
+        close: function() {
+            $(".verification").first().focus();
+        },
+        resizable:false
+    });
+
+    $("#forgetPassword").click(function(){
+        $( "#forgetPasswordPop").dialog({
+            modal:true,
+            close:function(){}
+        }).dialog( "open");
+    });
+
+    $("#actionFindPassword").click(function(){
+        $( "#forgetPasswordPop").dialog({
+            modal:true,
+            close:function(){}
+        }).dialog( "close");
+        $( "#dialog").html("找回密码邮件已发送到您的邮箱<br/>请注意查收").dialog({
+            modal:true,
+            close:function(){}
+        }).dialog( "open");
+    });
+
 });

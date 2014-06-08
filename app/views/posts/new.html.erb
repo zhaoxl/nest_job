@@ -1,6 +1,8 @@
 <%= content_for :head_include do%>
 	<link rel="stylesheet" href="/鸟窝html/stylesheets/ui_common.css" />
 	<link rel="stylesheet" href="/鸟窝html/stylesheets/release_job.css" />
+  <script type="text/javascript" charset="utf-8" src="/鸟窝html/javascripts/ueditor1_4_3-src/ueditor.config.js"></script>
+  <script type="text/javascript" charset="utf-8" src="/鸟窝html/javascripts/ueditor1_4_3-src/_examples/editor_api.js"></script>
 <%end%>
 <div class="mainContainer">
 	<div class="main">
@@ -51,7 +53,26 @@
 				</div>
 				<div class="frm">
 					<span class="">职位详情</span>
-					<%= f.text_area :content %>
+          <script  type="text/plain" id="myEditor">
+              <p><%= @post.content%></p>
+          </script>
+          <script type="text/javascript">
+              UE.getEditor('myEditor',{
+                  //这里可以选择自己需要的工具按钮名称,此处仅选择如下五个
+                  toolbars:[[ 'Undo', 'Redo','Bold','test', 'insertimage', 'paragraph','fontsize','autotypeset']],
+                  //focus时自动清空初始化时的内容
+                  autoClearinitialContent:true,
+                  //关闭字数统计
+                  wordCount:false,
+                  scaleEnabled:true,
+                  //关闭elementPath
+                  elementPathEnabled:false,
+                  //默认的编辑区域高度
+                  initialFrameHeight:200,
+                  initialFrameWidth:335
+                  //更多其他参数，请参考ueditor.config.js中的配置项
+              })
+          </script>
 					<span class="error">*请填写职位详情</span>
 				</div>
 				<div class="frm">

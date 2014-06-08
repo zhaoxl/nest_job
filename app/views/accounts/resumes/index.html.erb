@@ -13,6 +13,33 @@
         <%end%>
 				<div class="form">
 					<div class="frm">
+						<span class="">姓名：</span>
+            <%= f.text_field :name%>
+						<span class="error">*请填写昵称</span>
+					</div>
+					<div class="frm">
+						<span class="">手机：</span>
+            <%= f.text_field :tel%>
+						<span class="error">*请填写昵称</span>
+					</div>
+					<div class="frm">
+						<span class="">邮箱：</span>
+            <%= f.text_field :email%>
+						<span class="error">*请填写昵称</span>
+					</div>
+					<div class="frm">
+						<span class="">出生年份：</span>
+            <%= f.text_field :birthday, value: format_to_date(@account_resume.birthday)%>
+						<span class="error">*请填写昵称</span>
+					</div>
+					<div class="frm">
+						<span class="">性别：</span>
+            <label>男<%= f.radio_button :gender, 1%></label>
+            <label>女<%= f.radio_button :gender, 0%></label>
+						<span class="error">*请填写昵称</span>
+					</div>
+          
+					<div class="frm">
 						<span class="">期望职位：</span>
             <%= f.text_field :tags%>
 						<span class="error">*请填写昵称</span>

@@ -19,13 +19,13 @@
 .login_box li .VerifCode{overflow:hidden;zoom:1;}
 .login_box li .VerifCode .txt{float:left;width:60px;}
 .login_box li .VerifCode img{float:left;width:95px;height:37px;margin-left:5px;}
-.login_box li .VerifCode em{right:6px;background-position:-175px -30px;}
+.login_box li .VerifCode em{right:6px;background-position:-175px -30px;cursor: pointer}
 .login_box li .VerifCode .error{margin-top:40px;}
 .login_box li .frm{overflow:hidden;zoom:1;width:190px;margin:0 auto 12px;}
 .login_box .input_req{position:relative;}
 .login_box .input_req .prompt{position:absolute;top:7px;left:28px;color:#8f8f8f;font-size:15px;font-family:'微软雅黑';}
 .login_box .input_req em{position:absolute;top:7px;right:22px;}
-.login_box .input_req .error{display:block;height:17px;padding-left:20px;color:#ff6a6a;background:url(../images/error.png) no-repeat;}
+.login_box .input_req .error{display:none;height:17px;padding-left:20px;color:#ff6a6a;background:url(../images/error.png) no-repeat;}
 .login_box li .current{border-color:#16a085;}
 .input_req .email{background-position:-35px -30px;}
 .input_req .curemail{background-position:0 -30px;}
@@ -66,7 +66,7 @@
 .postInput input{width:180px;height:30px;margin-bottom:30px;border:1px solid #64ad9b;border-radius:5px;}
 .saveBtn{display:block;width:75px;height:31px;line-height:31px;margin-left:100px;background:#16a085;text-align:center;border-bottom:3px solid #0e8870;border-radius:5px;font-size:15px;font-family:'微软雅黑';color:#fff;}
 .addPost{margin-left:10px;vertical-align:6px;}
-.addPost em{background-position:-140px -30px;}
+.addPost em{background-position:-106px 0px;;}
 
 
 /*employment*/
@@ -79,6 +79,7 @@
 .employment .employDetail p .b{font-size:15px;color:#454343;}
 .employment .employBtns{text-align:right;}
 .employment .employBtns .btnR{display:inline-block;margin-right:5px;}
+
 
 
 

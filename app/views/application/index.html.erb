@@ -93,26 +93,18 @@
                     <ul>
                         <li class="input_req">
                             <div class="frm">
-                                <span class="prompt tipMsg" style="display: block;">邮箱</span>
-                                <%= f.email_field :email, autofocus: true,  id: "myemail", class: "txt mail current verification", style: "border: 1px solid rgb(160, 160, 160);", "data-em" => "email", "data-type" => "email", "error-id" => "errorEmail"%>
+                                <span class="prompt tipMsg">邮箱</span>
+                                <%= f.email_field :email,  id: "myemail", class: "txt mail current verification", style: "border: 1px solid rgb(160, 160, 160);", "data-em" => "email", "data-type" => "email", "error-id" => "errorEmail"%>
                                 <em class="email">&nbsp;</em>
-                                <span class="error errorregister errorlogin" id="errorEmail" style="display: block;">请输入正确邮箱地址</span>
+                                <span class="error errorregister errorlogin" id="errorEmail" >请输入正确邮箱地址</span>
                             </div>
                         </li>
                         <li class="input_req">
                             <div class="frm">
-                                <span class="prompt tipMsg" style="display: block;">密码</span>
-                                <%= f.email_field :password,  id: "mypwd", class: "txt verification", style: "border: 1px solid rgb(160, 160, 160);", "data-em" => "pwd", "data-type" => "notnull", "error-id" => "errorpassword"%>
+                                <span class="prompt tipMsg">密码</span>
+                                <%= f.email_field :password,  type:"password", id: "mypwd", class: "txt verification", style: "border: 1px solid rgb(160, 160, 160);", "data-em" => "pwd", "data-type" => "pas", "error-id" => "errorpassword"%>
                                 <em class="pwd">&nbsp;</em>
-                                <span id="errorpassword" class="error errorregister errorlogin" style="display: block;">请输入密码</span>
-                            </div>
-                        </li>
-                        <li class="input_req registerPanel" style="display: list-item;">
-                            <div class="frm">
-                                <span class="prompt tipMsg" style="display: block;">重复密码</span>
-                                <%= f.email_field :password,  id: "mypwdReport", class: "txt verification", style: "border: 1px solid rgb(160, 160, 160);", "data-em" => "pwd", "data-type" => "notnull", "error-id" => "errorpasswordreport"%>
-                                <em class="pwd">&nbsp;</em>
-                                <span id="errorpasswordreport" class="error errorregister errorlogin" style="display: block;">两次密码不一样</span>
+                                <span id="errorpassword" class="error errorregister errorlogin" >请输入6至16个字符</span>
                             </div>
                         </li>
                         <li class="input_req registerPanel" style="display: list-item;">
@@ -121,7 +113,7 @@
                   							<input type="text" id="mycaptcha" class="txt" name="captcha" style="width: 60px; display: inline-block" />
                                 <%= captcha_tag(class: "updateCaptcha", style: "cursor: pointer", id: "captchaImg", title: "刷新验证码") %>
                                 <em class="pwd updateCaptcha">&nbsp;</em>
-                                <span class="error errorregister" style="display: block;">请输入验证码</span>
+                                <span class="error errorregister">请输入验证码</span>
                             </div>
                         </li>
                         <li class="registerPanel" style="display: list-item;">
@@ -133,13 +125,13 @@
                         </li>
                         <li>
                             <div class="frm">
-                                <label class="remember"><input checked="checked" id="rememberMe" type="radio" class="rad">记住我</label>
-                                <a href="#" class="forget">忘记密码?</a>
+                                <label class="remember"><input checked="checked" id="rememberMe" type="checkbox" class="rad">记住我</label>
+                                <a href="javascript:void(0)" id="forgetPassword" class="forget">忘记密码?</a>
                             </div>
                         </li>
                         <li class="registerPanel" style="display: list-item;">
                             <div class="frm">
-                                <label><input type="checkbox" checked="checked" id="registerAgree" class="rad"><a href="javascript:void(0)" class="deal">已阅读并同意《鸟窝用户协议》</a></label>
+                                <label><input type="checkbox" checked="checked" id="registerAgree" class="rad"><a href="javascript:void(0)" id="userAgreement" class="deal" title="点击阅读鸟窝协议">已阅读并同意《鸟窝用户协议》</a></label>
                             </div>
                         </li>
                         <li style="display: list-item;"><div class="frm"><a href="javascript:void(0)" id="registerBtn" class="registerBtn">注     册</a></div></li>
