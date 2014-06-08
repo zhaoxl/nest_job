@@ -11,17 +11,24 @@ class Accounts::SessionsController < Devise::SessionsController
   def ajax_create
     result = {status: "ok"}
     begin
+      unless captcha_valid? params[:captcha]
+        #验证码错误
+        raise AjaxException.new({captcha: "验证码错误"})
+      end
       if account = Account.by_email(params[:account][:email]).first
         if account.valid_password?(params[:account][:password])
           sign_in(:account, account)
         else
-          raise "用户名或密码错误"
+          raise AjaxException.new({password: "密码错误"})
         end
       else
-        raise "用户名或密码错误"
+        raise AjaxException.new({email: "email错误"})
       end
     rescue Exception => ex
       result = {status: "error", content: ex.message}
+      logger.error "accounts_create error log================================================"
+      logger.error ex.message
+      logger.error ex.backtrace
     end
     render json: result.to_json
   end

@@ -1,0 +1,146 @@
+<%= content_for :head_include do%>
+	<link rel="stylesheet" href="/鸟窝html/stylesheets/ui_common.css" />
+	<link rel="stylesheet" href="/鸟窝html/stylesheets/release_job.css" />
+  <script type="text/javascript" charset="utf-8" src="/鸟窝html/javascripts/ueditor1_4_3-src/ueditor.config.js"></script>
+  <script type="text/javascript" charset="utf-8" src="/鸟窝html/javascripts/ueditor1_4_3-src/_examples/editor_api.js"></script>
+<%end%>
+<div class="mainContainer">
+	<div class="main">
+		<!-- <div class="ml">
+		</div> -->
+		<!-- <div class="mm"> -->
+			<h2 class="h2Title">发布职位 | <a href="#">今天发布了2个职位</a></h2>
+			<div class="form">
+				<%= form_for @post, url: accounts_posts_path, method: :post do |f|%>
+        <%if flash[:error]%>
+        <span style="color: red">错误信息:<%= flash[:error]%></span>
+        <%end%>
+        <%if flash[:notice]%>
+        <span style="color: green">提示信息:<%= flash[:notice]%></span>
+        <%end%>
+				<div class="frm">
+					<span>职位名称</span>
+					<%= f.text_field :title,id: "jobName", class: "verification","data-noHide" => "1","error-id" => "errorjobName","data-type" => "notnull"%>
+					<span class="error" id="errorjobName">*请填写职位名称</span>
+				</div>
+				<div class="frm">
+					<span class="">工作城市</span>
+					<%= f.text_field :area,id: "jobCity", class: "verification","data-noHide" => "1","error-id" => "errorjobCity","data-type" => "notnull"%>
+					<span class="error" id="errorjobCity">*请填写城市名称</span>
+				</div>
+				<div class="frm">
+					<span class="">薪资范围</span>
+					<%= f.text_field :price_min, class: "small verification",id: "jobMoneyOne","data-noHide" => "1","error-id" => "errorjobMoney","data-type" => "money"%>
+          <span class="smallR">k ~</span>
+					<%= f.text_field :price_max, class: "small verification",id: "jobMoneyTwo","data-noHide" => "1","error-id" => "errorjobMoney","data-type" => "money"%>
+          <span class="smallR" style="margin-right:80px;">k</span>
+					<span class="error" id="errorjobMoney">*请填写薪资范围，输入 0~500 的整数</span>
+				</div>
+				<div class="frm">
+					<span class="">详细工作地点</span>
+					<%= f.text_field :address,id: "jobAddress", class: "verification","data-noHide" => "1","error-id" => "errorjobAddress","data-type" => "notnull"%>
+					<span class="error" id="errorjobAddress">*请填写详细工作地点</span>
+				</div>
+				<div class="frm">
+					<span class="">接收简历邮箱</span>
+					<%= f.text_field :email,id: "jobEmail", class: "verification","data-noHide" => "1","error-id" => "errorjobEmail","data-type" => "notnull"%>
+					<span class="error" id="errorjobEmail">*请填写接收简历的邮箱</span>
+				</div>
+				<div class="frm">
+					<span class="">所在部门</span>
+					<%= f.text_field :department,id: "jobDepartment", class: "verification","data-noHide" => "1","error-id" => "errorjobDepartment","data-type" => "notnull"%>
+					<span class="error" id="errorjobDepartment">*请填写职位所在部门</span>
+				</div>
+				<div class="frm">
+					<span class="">职位详情</span>
+          <script  type="text/plain" id="myEditor">
+              <p><%= @post.content%></p>
+          </script>
+          <script type="text/javascript">
+              var myEditor = UE.getEditor('myEditor',{
+                  //这里可以选择自己需要的工具按钮名称,此处仅选择如下五个
+                  toolbars:[[ 'Undo', 'Redo','Bold','test', 'insertimage', 'paragraph','fontsize','autotypeset']],
+                  //focus时自动清空初始化时的内容
+                  autoClearinitialContent:true,
+                  //关闭字数统计
+                  wordCount:false,
+                  scaleEnabled:true,
+                  //关闭elementPath
+                  elementPathEnabled:false,
+                  //默认的编辑区域高度
+                  initialFrameHeight:200,
+                  initialFrameWidth:335
+                  //更多其他参数，请参考ueditor.config.js中的配置项
+              })
+          </script>
+					<span class="error jobMore">*请填写职位详情</span>
+				</div>
+				<div class="frm">
+					<span class="">职位关键词</span>
+					<div class="posts" id="addHopePanel">
+
+					</div>
+					 <div style="clear:both"></div>
+					<div class="postInput">
+					<%= f.text_field :tags,id:"addHopeContent"%><a href="javascript:void(0)" data-max="1" id="addHope" class="addPost"><em>&nbsp;</em></a>
+					</div>
+					<span>请填写职位关键词，方便应聘方搜索您的职位</span>
+				</div>
+			</div>
+			<div class="jobBtns">
+				<!-- <a href="#" class="btnR">发起面试</a><a href="#" class="btnR">收    藏</a> -->
+				<input type="hidden" value="" name="addhopecontenthidden" id="addHopeContenthidden">
+                <a class="btn" href="javascript:void(0)" id="positionIssue">发布职位</a>
+			</div>
+			<%end%>
+		</div>
+	<!-- </div> -->
+	<div class="mr">
+		<div class="info">
+			<div class="userImg"><a href="#"><img src="images/user_demo.jpg" alt="" /></a></div>
+			<div class="userInfo">
+				<p>苏冉</p>
+				<p>会员：5级</p>
+			</div>
+		</div>
+		<div class="cash">
+			<ul>
+				<li><span>面试币：1000</span><a href="#" class="btn">修   改</a></li>
+				<li><span>鸟窝币：1000</span><a href="#" class="btn">提   现</a></li>
+			</ul>
+		</div>
+		<div class="help">
+			<ul>
+				<li><a href="#" class="first">什么是鸟窝币？</a></li>
+				<li><a href="#">邀请面试如何玩？</a></li>
+				<li><a href="#">什么是面试币？</a></li>
+				<li class="more"><a href="#">更多教程</a></li>
+			</ul>
+			<div class="attention">
+				<a href="#" class="logo"></a>
+				<a href="#" class="focusOn">加关注</a>
+			</div>
+		</div>
+		<ul class="subNav">
+			<li><a href="#" class="tit tCurrent">我发起的面试</a></li>
+			<li><a href="#" class="current">待HR处理</a></li>
+			<li><a href="#">HR拒绝</a></li>
+			<li><a href="#">HR同意</a></li>
+			<li><a href="#">面试通过</a></li>
+			<li><a href="#">面试未通过</a></li>
+			<li><a href="#">试用期通过</a></li>
+			<li><a href="#">试用期未通过</a></li>
+			<li><a href="#" class="tit">HR发起的面试</a></li>
+			<li><a href="#">HR面试消息（1）</a></li>
+			<li><a href="#">我拒绝</a></li>
+			<li><a href="#">我同意</a></li>
+			<li><a href="#">面试通过</a></li>
+			<li><a href="#">面试未通过</a></li>
+			<li><a href="#">试用期通过</a></li>
+			<li><a href="#">试用期未通过</a></li>
+			<li><a href="#" class="tit">基本资料</a></li>
+			<li><a href="#" class="tit">我的收藏</a></li>
+			<li><a href="#" class="tit">系统消息</a></li>
+		</ul>
+	</div>
+</div>

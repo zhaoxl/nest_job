@@ -4,14 +4,10 @@ class Account < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
          
-  has_attached_file :logo, :processors => [:watermark], :styles => { :medium => "300x300>", 
-                                             :thumb => "100x100>",
-                                             :original => {:geometry => '550x400>',  
-                                                           :watermark_path => "#{Rails.root}/public/watermark.png",#水印图片所在位置  
-                                                           :position => 'SouthEast'
-                                                         }
-                                             }, 
-                                             :default_url => "/images/:style/missing.png"
+  has_attached_file :logo, :styles => { :medium => "300x300>", 
+                                        :thumb => "100x100>",
+                                        :original => "550x400>"}, 
+                                        :default_url => "/images/:style_missing.png"
   validates_attachment_content_type :logo, :content_type => /\Aimage\/.*\Z/
   validates :email, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i, on: :create }
   

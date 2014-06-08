@@ -25,18 +25,18 @@ class Accounts::RegistrationsController < Devise::RegistrationsController
     begin
       unless captcha_valid? params[:captcha]
         #验证码错误
-        raise "验证码错误"
+        raise AjaxException.new({captcha: "验证码错误"})
       end
       resource = Account.new(
         email: params[:account][:email],
         password: params[:account][:password]
       )
-      
-      unless resource.valid?
+      unless resource.save
         #创建失败
         raise AjaxException.new(resource.errors.messages.inject({}){|hash, item| hash[item[0]] = item[1]*','; hash})
       end
-      sign_in(resource)
+      
+      sign_in(:account, resource)
     rescue Exception => ex
       result = {status: "error", content: ex.message}
       logger.error "accounts_create error log================================================"

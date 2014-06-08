@@ -2,25 +2,150 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8d10e6ed-71fc-423f-9eda-c4ce70a95b50" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="Z:/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="Z:/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="Z:/.idea/scopes/scope_settings.xml" />
-      <change type="MODIFICATION" beforePath="Z:/db/migrate/20140607061412_change_account_resumes_columns.rb" afterPath="Z:/db/migrate/20140607061412_change_account_resumes_columns.rb" />
+      <change type="DELETED" beforePath="Z:\app\views\posts\new.html.erb" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\LICENSE.txt" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\NOTICE.txt" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\README.textile" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\bin\elasticsearch" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\bin\elasticsearch-service-mgr.exe" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\bin\elasticsearch-service-x64.exe" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\bin\elasticsearch-service-x86.exe" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\bin\elasticsearch.bat" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\bin\elasticsearch.in.sh" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\bin\plugin" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\bin\plugin.bat" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\bin\service.bat" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\bin\service\elasticsearch" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\bin\service\elasticsearch.bat" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\bin\service\elasticsearch.conf" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\bin\service\elasticsearch32" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\bin\service\elasticsearch64" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\bin\service\exec\elasticsearch-freebsd-x86-32" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\bin\service\exec\elasticsearch-freebsd-x86-64" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\bin\service\exec\elasticsearch-linux-ia-64" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\bin\service\exec\elasticsearch-linux-ppc-32" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\bin\service\exec\elasticsearch-linux-ppc-64" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\bin\service\exec\elasticsearch-linux-x86-32" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\bin\service\exec\elasticsearch-linux-x86-64" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\bin\service\exec\elasticsearch-macosx-universal-32" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\bin\service\exec\elasticsearch-macosx-universal-64" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\bin\service\exec\elasticsearch-solaris-sparc-32" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\bin\service\exec\elasticsearch-solaris-sparc-64" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\bin\service\exec\elasticsearch-solaris-x86-32" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\bin\service\exec\elasticsearch-solaris-x86-64" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\bin\service\exec\elasticsearch-windows-x86-32.exe" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\bin\service\lib\libwrapper-freebsd-x86-32.so" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\bin\service\lib\libwrapper-freebsd-x86-64.so" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\bin\service\lib\libwrapper-linux-ia-64.so" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\bin\service\lib\libwrapper-linux-ppc-32.so" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\bin\service\lib\libwrapper-linux-ppc-64.so" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\bin\service\lib\libwrapper-linux-x86-32.so" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\bin\service\lib\libwrapper-linux-x86-64.so" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\bin\service\lib\libwrapper-macosx-universal-32.jnilib" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\bin\service\lib\libwrapper-macosx-universal-64.jnilib" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\bin\service\lib\libwrapper-solaris-sparc-32.so" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\bin\service\lib\libwrapper-solaris-sparc-64.so" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\bin\service\lib\libwrapper-solaris-x86-32.so" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\bin\service\lib\libwrapper-solaris-x86-64.so" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\bin\service\lib\wrapper-windows-x86-32.dll" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\bin\service\lib\wrapper.jar" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\config\elasticsearch.yml" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\config\logging.yml" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\data\elasticsearch\nodes\0\_state\global-4" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\data\elasticsearch\nodes\0\indices\posts\0\_state\state-8" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\data\elasticsearch\nodes\0\indices\posts\0\index\_checksums-1400397343149" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\data\elasticsearch\nodes\0\indices\posts\0\index\segments.gen" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\data\elasticsearch\nodes\0\indices\posts\0\index\segments_1" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\data\elasticsearch\nodes\0\indices\posts\0\index\write.lock" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\data\elasticsearch\nodes\0\indices\posts\0\translog\translog-1400397343144" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\data\elasticsearch\nodes\0\indices\posts\1\_state\state-8" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\data\elasticsearch\nodes\0\indices\posts\1\index\_checksums-1400397343149" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\data\elasticsearch\nodes\0\indices\posts\1\index\segments.gen" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\data\elasticsearch\nodes\0\indices\posts\1\index\segments_1" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\data\elasticsearch\nodes\0\indices\posts\1\index\write.lock" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\data\elasticsearch\nodes\0\indices\posts\1\translog\translog-1400397343148" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\data\elasticsearch\nodes\0\indices\posts\2\_state\state-8" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\data\elasticsearch\nodes\0\indices\posts\2\index\_2.cfe" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\data\elasticsearch\nodes\0\indices\posts\2\index\_2.cfs" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\data\elasticsearch\nodes\0\indices\posts\2\index\_2.si" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\data\elasticsearch\nodes\0\indices\posts\2\index\_checksums-1400405683211" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\data\elasticsearch\nodes\0\indices\posts\2\index\segments.gen" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\data\elasticsearch\nodes\0\indices\posts\2\index\segments_5" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\data\elasticsearch\nodes\0\indices\posts\2\index\write.lock" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\data\elasticsearch\nodes\0\indices\posts\2\translog\translog-1400397343154" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\data\elasticsearch\nodes\0\indices\posts\3\_state\state-8" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\data\elasticsearch\nodes\0\indices\posts\3\index\_1.cfe" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\data\elasticsearch\nodes\0\indices\posts\3\index\_1.cfs" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\data\elasticsearch\nodes\0\indices\posts\3\index\_1.si" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\data\elasticsearch\nodes\0\indices\posts\3\index\_checksums-1400401086477" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\data\elasticsearch\nodes\0\indices\posts\3\index\segments.gen" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\data\elasticsearch\nodes\0\indices\posts\3\index\segments_3" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\data\elasticsearch\nodes\0\indices\posts\3\index\write.lock" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\data\elasticsearch\nodes\0\indices\posts\3\translog\translog-1400397343154" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\data\elasticsearch\nodes\0\indices\posts\4\_state\state-8" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\data\elasticsearch\nodes\0\indices\posts\4\index\_0.cfe" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\data\elasticsearch\nodes\0\indices\posts\4\index\_0.cfs" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\data\elasticsearch\nodes\0\indices\posts\4\index\_0.si" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\data\elasticsearch\nodes\0\indices\posts\4\index\_checksums-1400402579917" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\data\elasticsearch\nodes\0\indices\posts\4\index\segments.gen" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\data\elasticsearch\nodes\0\indices\posts\4\index\segments_2" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\data\elasticsearch\nodes\0\indices\posts\4\index\write.lock" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\data\elasticsearch\nodes\0\indices\posts\4\translog\translog-1400397343266" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\data\elasticsearch\nodes\0\indices\posts\_state\state-2" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\data\elasticsearch\nodes\0\node.lock" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\lib\elasticsearch-1.1.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\lib\jna-3.3.0.jar" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\lib\jts-1.13.jar" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\lib\log4j-1.2.17.jar" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\lib\lucene-analyzers-common-4.7.2.jar" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\lib\lucene-codecs-4.7.2.jar" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\lib\lucene-core-4.7.2.jar" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\lib\lucene-grouping-4.7.2.jar" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\lib\lucene-highlighter-4.7.2.jar" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\lib\lucene-join-4.7.2.jar" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\lib\lucene-memory-4.7.2.jar" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\lib\lucene-misc-4.7.2.jar" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\lib\lucene-queries-4.7.2.jar" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\lib\lucene-queryparser-4.7.2.jar" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\lib\lucene-sandbox-4.7.2.jar" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\lib\lucene-spatial-4.7.2.jar" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\lib\lucene-suggest-4.7.2.jar" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\lib\sigar\libsigar-amd64-freebsd-6.so" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\lib\sigar\libsigar-amd64-linux.so" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\lib\sigar\libsigar-amd64-solaris.so" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\lib\sigar\libsigar-ia64-linux.so" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\lib\sigar\libsigar-sparc-solaris.so" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\lib\sigar\libsigar-sparc64-solaris.so" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\lib\sigar\libsigar-universal-macosx.dylib" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\lib\sigar\libsigar-universal64-macosx.dylib" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\lib\sigar\libsigar-x86-freebsd-5.so" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\lib\sigar\libsigar-x86-freebsd-6.so" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\lib\sigar\libsigar-x86-linux.so" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\lib\sigar\libsigar-x86-solaris.so" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\lib\sigar\sigar-1.6.4.jar" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\lib\sigar\sigar-amd64-winnt.dll" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\lib\sigar\sigar-x86-winnt.dll" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\lib\spatial4j-0.4.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\logs\elasticsearch.log" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\logs\elasticsearch_index_indexing_slowlog.log" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\logs\elasticsearch_index_search_slowlog.log" afterPath="" />
+      <change type="DELETED" beforePath="Z:\elasticsearch-1.1.1\wrapper.log" afterPath="" />
+      <change type="MODIFICATION" beforePath="Z:/.idea/Z.iml" afterPath="Z:/.idea/Z.iml" />
       <change type="MODIFICATION" beforePath="Z:/app/models/account.rb" afterPath="Z:/app/models/account.rb" />
-      <change type="MODIFICATION" beforePath="Z:/lib/ajax_exception.rb" afterPath="Z:/lib/ajax_exception.rb" />
       <change type="MODIFICATION" beforePath="Z:/app/views/layouts/application.html.erb" afterPath="Z:/app/views/layouts/application.html.erb" />
-      <change type="MODIFICATION" beforePath="Z:/app/helpers/application_helper.rb" afterPath="Z:/app/helpers/application_helper.rb" />
-      <change type="MODIFICATION" beforePath="Z:/config/initializers/devise.rb" afterPath="Z:/config/initializers/devise.rb" />
-      <change type="MODIFICATION" beforePath="Z:/public/鸟窝html/javascripts/ueditor1_4_3-src/_examples/editor_api.js" afterPath="Z:/public/鸟窝html/javascripts/ueditor1_4_3-src/_examples/editor_api.js" />
-      <change type="MODIFICATION" beforePath="Z:/app/views/accounts/resumes/index.html.erb" afterPath="Z:/app/views/accounts/resumes/index.html.erb" />
+      <change type="MODIFICATION" beforePath="Z:/app/views/accounts/profile/index.html.erb" afterPath="Z:/app/views/accounts/profile/index.html.erb" />
       <change type="MODIFICATION" beforePath="Z:/app/views/application/index.html.erb" afterPath="Z:/app/views/application/index.html.erb" />
-      <change type="MODIFICATION" beforePath="Z:/public/鸟窝html/javascripts/index.js" afterPath="Z:/public/鸟窝html/javascripts/index.js" />
-      <change type="MODIFICATION" beforePath="Z:/app/views/posts/new.html.erb" afterPath="Z:/app/views/posts/new.html.erb" />
-      <change type="MODIFICATION" beforePath="Z:/public/鸟窝html/stylesheets/register.css" afterPath="Z:/public/鸟窝html/stylesheets/register.css" />
+      <change type="MODIFICATION" beforePath="Z:\public\鸟窝html\javascripts\index.js" afterPath="Z:\public\鸟窝html\javascripts\index.js" />
+      <change type="MODIFICATION" beforePath="Z:/public/鸟窝html/javascripts/css/ui-lightness/jquery-ui-1.10.4.min.css" afterPath="Z:/public/鸟窝html/javascripts/css/ui-lightness/jquery-ui-1.10.4.min.css" />
+      <change type="MODIFICATION" beforePath="Z:/app/models/post.rb" afterPath="Z:/app/models/post.rb" />
+      <change type="MODIFICATION" beforePath="Z:/app/controllers/posts_controller.rb" afterPath="Z:/app/controllers/posts_controller.rb" />
+      <change type="MODIFICATION" beforePath="Z:/app/controllers/accounts/profile_controller.rb" afterPath="Z:/app/controllers/accounts/profile_controller.rb" />
       <change type="MODIFICATION" beforePath="Z:/app/controllers/accounts/registrations_controller.rb" afterPath="Z:/app/controllers/accounts/registrations_controller.rb" />
-      <change type="MODIFICATION" beforePath="Z:/app/controllers/accounts/resumes_controller.rb" afterPath="Z:/app/controllers/accounts/resumes_controller.rb" />
-      <change type="MODIFICATION" beforePath="Z:/db/schema.rb" afterPath="Z:/db/schema.rb" />
+      <change type="MODIFICATION" beforePath="Z:/public/鸟窝html/stylesheets/release_job.css" afterPath="Z:/public/鸟窝html/stylesheets/release_job.css" />
+      <change type="MODIFICATION" beforePath="Z:/config/routes.rb" afterPath="Z:/config/routes.rb" />
       <change type="MODIFICATION" beforePath="Z:/app/controllers/accounts/sessions_controller.rb" afterPath="Z:/app/controllers/accounts/sessions_controller.rb" />
+      <change type="MODIFICATION" beforePath="Z:/public/鸟窝html/stylesheets/ui_common.css" afterPath="Z:/public/鸟窝html/stylesheets/ui_common.css" />
+      <change type="MODIFICATION" beforePath="Z:/.idea/workspace.xml" afterPath="Z:/.idea/workspace.xml" />
     </list>
     <ignored path=".iws" />
     <ignored path=".idea/workspace.xml" />
@@ -43,57 +168,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://Z:/public/鸟窝html/javascripts/index.js">
+      <file leaf-file-name="index.html.erb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://Z:/app/views/accounts/profile/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="466" column="0" selection-start="16903" selection-end="16903" vertical-scroll-proportion="-44.226414" vertical-offset="6510" max-vertical-offset="9196">
-              <folding>
-                <marker date="1402204525000" expanded="true" signature="7042:7114" placeholder="..." />
-                <marker date="1402204525000" expanded="false" signature="10364:10377" placeholder="..." />
-                <marker date="1402204525000" expanded="true" signature="12584:12668" placeholder="..." />
-                <marker date="1402204525000" expanded="true" signature="15812:15882" placeholder="..." />
-                <marker date="1402204525000" expanded="true" signature="15929:15956" placeholder="..." />
-                <marker date="1402204525000" expanded="true" signature="16031:16046" placeholder="..." />
-                <marker date="1402204525000" expanded="true" signature="16102:16265" placeholder="..." />
-                <marker date="1402204525000" expanded="true" signature="16102:16232" placeholder="..." />
-                <marker date="1402204525000" expanded="true" signature="16102:16114" placeholder="..." />
-                <marker date="1402204525000" expanded="true" signature="16102:16127" placeholder="..." />
-                <marker date="1402204525000" expanded="true" signature="16102:16158" placeholder="..." />
-                <marker date="1402204525000" expanded="true" signature="16102:16176" placeholder="..." />
-                <marker date="1402204525000" expanded="true" signature="16102:16188" placeholder="..." />
-                <marker date="1402204525000" expanded="true" signature="16102:16200" placeholder="..." />
-                <marker date="1402204525000" expanded="true" signature="16102:16214" placeholder="..." />
-                <marker date="1402204525000" expanded="true" signature="16102:16245" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="register.css" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://Z:/public/鸟窝html/stylesheets/register.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="68" column="43" selection-start="4553" selection-end="4553" vertical-scroll-proportion="0.6870451" vertical-offset="820" max-vertical-offset="1843">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://Z:/app/views/application/index.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="128" column="79" selection-start="6578" selection-end="6592" vertical-scroll-proportion="-4.1568627" vertical-offset="2220" max-vertical-offset="3382">
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="application.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://Z:/app/views/layouts/application.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="59" selection-start="1123" selection-end="1123" vertical-scroll-proportion="-4.8431373" vertical-offset="0" max-vertical-offset="1843">
+            <state line="23" column="78" selection-start="1138" selection-end="1138" vertical-scroll-proportion="0.4827044" vertical-offset="130" max-vertical-offset="2584">
               <folding />
             </state>
           </provider>
@@ -120,17 +198,24 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="Z:/app/views/layouts/application.html.erb" />
-        <option value="Z:/app/views/application/index.html.erb" />
-        <option value="Z:/public/鸟窝html/javascripts/index.js" />
         <option value="Z:/public/鸟窝html/stylesheets/register.css" />
+        <option value="Z:/public/鸟窝html/招聘方发布的职位详情页.html" />
+        <option value="Z:/public/鸟窝html/stylesheets/ui_common.css" />
+        <option value="Z:/app/views/application/index.html.erb" />
+        <option value="Z:/public/鸟窝html/stylesheets/release_job.css" />
+        <option value="Z:/public/鸟窝html/javascripts/css/ui-lightness/jquery-ui-1.10.4.min.css" />
+        <option value="Z:/app/views/posts/new.html.erb" />
+        <option value="Z:/app/views/accounts/posts/new.html.erb" />
+        <option value="Z:/app/views/layouts/application.html.erb" />
+        <option value="Z:/app/views/accounts/profile/index.html.erb" />
+        <option value="Z:/public/鸟窝html/javascripts/index.js" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-17" />
-    <option name="y" value="92" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
     <option name="width" value="1456" />
     <option name="height" value="886" />
   </component>
@@ -277,6 +362,62 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="uploadify" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Z:" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="鸟窝html" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="uploadify" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="__MACOSX" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Z:" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="鸟窝html" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -343,7 +484,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
+              <option name="myItemId" value="accounts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -368,6 +509,36 @@
               <option name="myItemId" value="accounts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="profile" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Z:" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="accounts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="posts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -389,6 +560,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="FullScreen" value="false" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -416,8 +588,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-17" y="92" width="1456" height="886" extended-state="1" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1456" height="886" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -451,9 +623,82 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://Z:/public/鸟窝html/注册.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5092">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://Z:/public/鸟窝html/javascripts/css/ui-lightness/jquery-ui-1.10.4.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="586" selection-start="2487" selection-end="2487" vertical-scroll-proportion="0.17220543" vertical-offset="0" max-vertical-offset="662">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://Z:/public/鸟窝html/发布职位.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="119" column="40" selection-start="4501" selection-end="4501" vertical-scroll-proportion="-11.535714" vertical-offset="1938" max-vertical-offset="4142">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/standard_0.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="463" column="9" selection-start="13394" selection-end="13394" vertical-scroll-proportion="0.3469388" vertical-offset="8576" max-vertical-offset="24890">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://Z:/public/鸟窝html/javascripts/uploadify/uploadify.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="16" selection-start="939" selection-end="939" vertical-scroll-proportion="0.48545176" vertical-offset="253" max-vertical-offset="1843">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://Z:/public/鸟窝html/javascripts/uploadify/Change Log.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="27" selection-start="308" selection-end="308" vertical-scroll-proportion="0.28023598" vertical-offset="0" max-vertical-offset="678">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://Z:/public/鸟窝html/javascripts/uploadify/license.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="14" selection-start="710" selection-end="710" vertical-scroll-proportion="0.40797547" vertical-offset="0" max-vertical-offset="652">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://Z:/public/鸟窝html/javascripts/uploadify/jquery.uploadify.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="665">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://Z:/public/鸟窝html/javascripts/uploadify/jquery.uploadify.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="41" selection-start="3292" selection-end="3292" vertical-scroll-proportion="0.27656478" vertical-offset="114" max-vertical-offset="18772">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://Z:/public/鸟窝html/基本资料.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="57" column="80" selection-start="1731" selection-end="1743" vertical-scroll-proportion="0.33230293" vertical-offset="868" max-vertical-offset="3800">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://Z:/app/views/layouts/application.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="59" selection-start="1123" selection-end="1123" vertical-scroll-proportion="-4.8431373" vertical-offset="0" max-vertical-offset="1843">
+        <state line="34" column="23" selection-start="1882" selection-end="1882" vertical-scroll-proportion="0.5461422" vertical-offset="285" max-vertical-offset="1843">
           <folding />
         </state>
       </provider>
@@ -461,52 +706,14 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://Z:/app/views/application/index.html.erb">
+    <entry file="file://Z:/app/views/accounts/profile/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="128" column="79" selection-start="6578" selection-end="6592" vertical-scroll-proportion="-4.1568627" vertical-offset="2220" max-vertical-offset="3382">
+        <state line="23" column="78" selection-start="1138" selection-end="1138" vertical-scroll-proportion="0.4827044" vertical-offset="130" max-vertical-offset="2584">
           <folding />
         </state>
       </provider>
       <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://Z:/public/鸟窝html/javascripts/cookie.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="34" selection-start="1332" selection-end="1332" vertical-scroll-proportion="-10.52" vertical-offset="535" max-vertical-offset="1786">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://Z:/public/鸟窝html/javascripts/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="466" column="0" selection-start="16903" selection-end="16903" vertical-scroll-proportion="-44.226414" vertical-offset="6510" max-vertical-offset="9196">
-          <folding>
-            <marker date="1402204525000" expanded="true" signature="7042:7114" placeholder="..." />
-            <marker date="1402204525000" expanded="false" signature="10364:10377" placeholder="..." />
-            <marker date="1402204525000" expanded="true" signature="12584:12668" placeholder="..." />
-            <marker date="1402204525000" expanded="true" signature="15812:15882" placeholder="..." />
-            <marker date="1402204525000" expanded="true" signature="15929:15956" placeholder="..." />
-            <marker date="1402204525000" expanded="true" signature="16031:16046" placeholder="..." />
-            <marker date="1402204525000" expanded="true" signature="16102:16265" placeholder="..." />
-            <marker date="1402204525000" expanded="true" signature="16102:16232" placeholder="..." />
-            <marker date="1402204525000" expanded="true" signature="16102:16114" placeholder="..." />
-            <marker date="1402204525000" expanded="true" signature="16102:16127" placeholder="..." />
-            <marker date="1402204525000" expanded="true" signature="16102:16158" placeholder="..." />
-            <marker date="1402204525000" expanded="true" signature="16102:16176" placeholder="..." />
-            <marker date="1402204525000" expanded="true" signature="16102:16188" placeholder="..." />
-            <marker date="1402204525000" expanded="true" signature="16102:16200" placeholder="..." />
-            <marker date="1402204525000" expanded="true" signature="16102:16214" placeholder="..." />
-            <marker date="1402204525000" expanded="true" signature="16102:16245" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://Z:/public/鸟窝html/stylesheets/register.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="43" selection-start="4553" selection-end="4553" vertical-scroll-proportion="0.6870451" vertical-offset="820" max-vertical-offset="1843">
-          <folding />
-        </state>
       </provider>
     </entry>
   </component>

@@ -1,3 +1,8 @@
+<%content_for :head_include do%>
+	<link rel="stylesheet" href="/鸟窝html/stylesheets/release_job.css" />
+  <%= stylesheet_link_tag    '/鸟窝html/javascripts/uploadify/uploadify.css', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag '/鸟窝html/javascripts/uploadify/jquery.uploadify.min.js', 'data-turbolinks-track' => true %>
+<%end%>
 		<div class="mainContainer">
 			<div class="main">
 				<!-- <div class="ml">
@@ -15,30 +20,31 @@
   						<div class="frm">
   							<span class="">头       像：</span>
   							<div class="file">
-  								<span class="fImg"><img src="images/file_default.png" alt="" /></span>
-  								<a href="#">上传照片</a>
+  								<span class="fImg"><img src="<%= current_account.logo(:medium)%>" alt="" /></span>
+  								<input type="file" name="file_upload" id="file_upload" />
+  								<a  href="javascript:$('#file_upload').uploadify('upload','*')">上传照片</a>
   							</div>
   							<!-- <span class="error">*请填写职位名称</span> -->
   						</div>
   						<div class="frm">
   							<span class="">昵       称：</span>
-                <%= f.text_field :nick_name%>
-  							<span class="error">*请填写昵称</span>
+                <%= f.text_field :nick_name,id: "peopleNickName", class: "verification","data-noHide" => "1","error-id" => "errorpeopleNickName","data-type" => "notnull"%>
+  							<span class="error" id="errorpeopleNickName">*请填写昵称</span>
   						</div>
   						<div class="frm">
   							<span class="">联系邮箱：</span>
-                <%= f.text_field :email%>
-  							<span class="error">*请填写联系邮箱</span>
+                <%= f.text_field :email,id: "peopleEmail", class: "verification","data-noHide" => "1","error-id" => "errorpeopleEmail","data-type" => "notnull"%>
+  							<span class="error" id="errorpeopleEmail">*请填写联系邮箱</span>
   						</div>
   						<div class="frm">
   							<span class="">公司邮箱：</span>
-                <%= f.text_field :company_email%>
-  							<span class="error">*请填写公司邮箱</span>
+                <%= f.text_field :company_email,id: "peopleCompanyEmail", class: "verification","data-noHide" => "1","error-id" => "errorpeopleCompanyEmail","data-type" => "notnull"%>
+  							<span class="error" id="errorpeopleCompanyEmail">*请填写公司邮箱</span>
   						</div>
   						<div class="frm">
   							<span class="">简       介：</span>
-                <%= f.text_field :description%>
-  							<span class="error">*请填写相关简介</span>
+                <%= f.text_field :description,id: "peopleIntroduce", class: "verification","data-noHide" => "1","error-id" => "errorpeopleIntroduce","data-type" => "notnull"%>
+  							<span class="error" id="errorpeopleIntroduce">*请填写相关简介</span>
   						</div>
   						<!-- <div class="frm">
   							<span class="">所在部门</span>
@@ -69,8 +75,7 @@
   					</div>
           
   					<div class="jobBtns">
-  						<!-- <a href="#" class="btnR">发起面试</a><a href="#" class="btnR">收    藏</a> -->
-              <%= f.submit raw("保&nbsp;存"), class: "btn"%>
+                        <a href="javascript:void(0)" class="btn">保&nbsp;存</a>
   					</div>
           <%end%>
 				</div>

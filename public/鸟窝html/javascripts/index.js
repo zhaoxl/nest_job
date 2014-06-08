@@ -42,24 +42,31 @@ $(function($) {
                         var emailReg = /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;
                         bFail = !emailReg.test(value);
                         break;
+                    case 'money':
+                        var emailReg = /\b(?:[0-9]|[1-9][0-9]|1[0-4][0-9]|500)\b/;
+                        bFail = !emailReg.test(value);
+                        break;
                     case 'chinese':
                         var chineseReg = /^\s*([\u4E00-\u9FA5]{2,5}(?:·[\u4E00-\u9FA5]{2,5})*|[a-zA-Z]{2,20}(\s+[a-zA-Z]{2,20})+)\s*$/;
                         bFail = (chineseReg.test(value) && /^\s*([\u4E00-\u9FA5]{2,5}(?:·[\u4E00-\u9FA5]{2,5})*|[a-zA-Z][\sa-zA-Z]{3,63})\s*$/.test(value));
                 }
 
                 if(bFail){
-                    error_id.css("display","block");
+                    error_id.css("display","block").html(error_id.attr("data-msg"));
                 }else{
                     error_id.hide();
                 }
 
                 //显示提示信息
-                if(!value){
+                if(!value && $(this).attr("data-noHide") != "1"){
                     $(this).prev().css("display","block");
                 }
 
             },
             focusin:function(){
+                if($(this).attr("data-noHide") == "1"){
+                    return;
+                }
                 //隐藏提示信息
                 var dataem = $(this).attr("data-em")
                 $(this).css("border","1px solid #16a085").next().removeClass(dataem).addClass("cur"+dataem).prev().prev().hide();
@@ -130,7 +137,18 @@ $(function($) {
                     Cookie.Set("registered", "1", 31536000, "/");
                     window.location.reload();
                 } else {
+                    $( "#dialog").dialog({
+                        modal:true
+                    }).dialog("close");
+                    var _c = result.content;
+                    if(_c.email){
+                        $("#errorEmail").html(_c.email).css("display", "block")
+                    }
 
+                    if(_c.captcha){
+                        $("#captchaError").html(_c.captcha).css("display", "block");
+                        $("#captchaImg").click();
+                    }
                 }
             }
         });
@@ -154,6 +172,7 @@ $(function($) {
     });
     //登录=====================start
     $("#loginBtn").click(function(){
+        $("#mycaptcha").blur();
         $(".errorlogin").prev().prev().blur();
         if($(".errorlogin:visible").length != 0){
             return;
@@ -167,8 +186,9 @@ $(function($) {
             type: "post",
             url: "/accounts/sessions/ajax_create",
             data: {
-                "account[email] ": $.trim($("#myemail").val()),//邮箱
+                "account[email]": $.trim($("#myemail").val()),//邮箱
                 "account[password]": $.trim($("#mypwd").val()),//密码
+                "captcha": $("#mycaptcha").val() || "",//验证码
                 "rememberme": $("#rememberMe:checked").length != 0 ? "1" : "0",//记住我
                 "authenticity_token": $("meta[name='csrf-token']").attr("content")
             },
@@ -177,8 +197,24 @@ $(function($) {
                     $( "#dialog").html("登录成功，正在跳转").dialog({
                         modal:true
                     }).dialog("close");
+                    window.location.reload();
                 } else {
+                    $( "#dialog").dialog({
+                        modal:true
+                    }).dialog("close");
+                    var _c = result.content;
+                    if(_c.email){
+                        $("#errorEmail").html(_c.email).css("display", "block")
+                    }
 
+                    if(_c.captcha){
+                        $("#captchaError").html(_c.captcha).css("display", "block");
+                        $("#captchaImg").click();
+                    }
+                    if(_c.password){
+                        $("#errorpassword").html(_c.password).css("display", "block");
+                        $("#captchaImg").click();
+                    }
                 }
             }
         });
@@ -195,6 +231,7 @@ $(function($) {
         })
     });
     $("body").append('<div id="dialog" style="background-color: #27A695;color: #fff;text-align: center;font-size: 15px" title="Basic dialog">--->请登录后再操作</div>')
+    $.ui.dialog.prototype._focusTabbable = function(){};
     $("#dialog").dialog({
         autoOpen:false,
         modal:false,
@@ -251,14 +288,17 @@ $(function($) {
         });
     });
     $("#searchJobBtn").click(searchJob);
-
+    var hopeTags = "";
     //期望职位标签删除=====================start
     var deleteHope = function(){
         $(".deleteHope").unbind().each(function(){
             $(this).click(function(){
                 //ajax 删除数据
-                var _this = $(this).parent();
-                _this.hide("normal", function(){
+                var _this = $(this).parent(),
+                    text = _this.text().replace("×", "");
+                hopeTags = hopeTags.replace(","+text).replace("undefined", "");
+
+                _this.hide(0, function(){
                     _this.remove();
                 });
             });
@@ -272,9 +312,10 @@ $(function($) {
         var addHopeContent = $("#addHopeContent").val(),
             addHopePanelA = $("#addHopePanel a"),
             addHopePanelC = addHopePanelA.length,
-            isreport = false;
+            isreport = false,
+            dataMax = $(this).attr("data-max");
 
-        if(addHopePanelC >= 3){
+        if(addHopePanelC >= 3 && dataMax!= "1"){
             $( "#dialog").html("期望职位·标签不超过3个").dialog({
                 modal:true,
                 close: function() {$("#addHopeContent").focus();}
@@ -297,17 +338,22 @@ $(function($) {
             }
         });
         if(isreport) {
-            $( "#dialog").html("期望职位·标签不能重复").dialog({
+            $( "#dialog").html(dataMax!= "1" ? "期望职位·标签不能重复" : "职位关键词不能重复").dialog({
                 modal:true,
                 close: function() {$("#addHopeContent").focus();}
             }).dialog( "open");
             return;
         }
-
-        $("#addHopePanel").append('<a href="javascript:void(0)" style="display: none">'+ addHopeContent +'<i class="deleteHope" title="删除">×</i></a>').children().last().show("normal");
+        hopeTags += "," + addHopeContent;
+        $("#addHopePanel").append('<a href="javascript:void(0)" style="display: none">'+ addHopeContent +'<i class="deleteHope" title="删除">×</i></a>').children().last().show();
         deleteHope();
     });
-
+    $("#addHopeContent").keyup(function(){
+        var keycode = (event.keyCode ? event.keyCode : event.which);
+        if(keycode == '13'){
+            $("#addHope").click();
+        }
+    });
     //保存期望标签·城市
     $("#saveHopes").each(function(){
         $(this).bind({
@@ -338,6 +384,26 @@ $(function($) {
                 }
 
                 //ajax保存期望值
+                $.ajax({
+                    dataType: "json",
+                    type: "post",
+                    url: "/accounts/sessions/ajax_create",
+                    data: {
+                        "job": hopeTags.replace(/(^[,]+)|([,]+$)/g, ""),//职位
+                        "city": $.trim($("#mypwd").val()),//城市
+                        "authenticity_token": $("meta[name='csrf-token']").attr("content")
+                    },
+                    success: function(result) {
+                        if (result.status == "ok") {
+                            $( "#dialog").html("保存成功，正在跳转").dialog({
+                                modal:true
+                            }).dialog("close");
+                            window.location.reload();
+                        } else {
+                            $( "#dialog").html("保存失败"+result.content);
+                        }
+                    }
+                });
             },
             mousedown:function(){
                 $(this).css({"padding-left":"1px","padding-top":"1px"});
@@ -475,5 +541,110 @@ $(function($) {
             close:function(){}
         }).dialog( "open");
     });
+    //发布职位 getContent
+    $("#positionIssue").click(function(){
+        //验证
+        $(".verification").blur();
+        //查看职位详情
+        var _content = $.trim(myEditor.getContent());
+        if(_content){
+            $(".jobMore").hide();
+        }else{
+            $(".jobMore").show();
+        }
+        if($(".error:visible").length != 0){
+            return;
+        }
+        $( "#dialog").html("正在发布").dialog({
+            modal:true
+        }).dialog("open");
+        $("#addHopeContenthidden").val(hopeTags.replace(/(^[,]+)|([,]+$)/g, ""));
+        $("#new_post").submit();
+    });
+
+    //上传照片
+
+     /*   $("#file_upload").uploadify({
+            //开启调试
+            'debug' : true,
+            //是否自动上传
+            'auto':false,
+            //超时时间
+            'successTimeout':99999,
+            //附带值
+            'formData':{
+                'userid':'用户id',
+                'username':'用户名',
+                'rnd':'加密密文'
+            },
+            //flash
+            'swf': "/鸟窝html/javascripts/uploadify/uploadify.swf",
+            //不执行默认的onSelect事件
+            'overrideEvents' : ['onDialogClose'],
+            //文件选择后的容器ID
+            'queueID':'uploadfileQueue',
+            //服务器端脚本使用的文件对象的名称 $_FILES个['upload']
+            'fileObjName':'upload',
+            //上传处理程序
+            'uploader':'/accounts/profile/ajax_update_logo',
+            //浏览按钮的背景图片路径
+            //'buttonImage':'/鸟窝html/javascripts/uploadify/upbutton.gif',
+            //浏览按钮的宽度
+            //'width':'100',
+            //浏览按钮的高度
+            //'height':'32',
+            'left': -500,
+            //expressInstall.swf文件的路径。
+            *//*'expressInstall':'expressInstall.swf',*//*
+            //在浏览窗口底部的文件类型下拉菜单中显示的文本
+            //'fileTypeDesc':'支持的格式：',
+            //允许上传的文件后缀
+            'fileTypeExts':'*.jpg;*.jpge;*.gif;*.png',
+            //上传文件的大小限制
+            'fileSizeLimit':'3MB',
+            //上传数量
+            'queueSizeLimit' : 25,
+            //每次更新上载的文件的进展
+            'onUploadProgress' : function(file, bytesUploaded, bytesTotal, totalBytesUploaded, totalBytesTotal) {
+                //有时候上传进度什么想自己个性化控制，可以利用这个方法
+                //使用方法见官方说明
+            },
+            //选择上传文件后调用
+            'onSelect' : function(file) {
+
+            },
+            //返回一个错误，选择文件的时候触发
+            'onSelectError':function(file, errorCode, errorMsg){
+                switch(errorCode) {
+                    case -100:
+                        alert("上传的文件数量已经超出系统限制的"+$('#file_upload').uploadify('settings','queueSizeLimit')+"个文件！");
+                        break;
+                    case -110:
+                        alert("文件 ["+file.name+"] 大小超出系统限制的"+$('#file_upload').uploadify('settings','fileSizeLimit')+"大小！");
+                        break;
+                    case -120:
+                        alert("文件 ["+file.name+"] 大小异常！");
+                        break;
+                    case -130:
+                        alert("文件 ["+file.name+"] 类型不正确！");
+                        break;
+                }
+            },
+            //检测FLASH失败调用
+            'onFallback':function(){
+                alert("您未安装FLASH控件，无法上传图片！请安装FLASH控件后再试。");
+            },
+            //上传到服务器，服务器返回相应信息到data里
+            'onUploadSuccess':function(file, data, response){
+                alert(data);
+            }
+        });*/
+    $("#file_upload").uploadify({
+        'auto'     : false,
+        'swf'      : '/鸟窝html/javascripts/uploadify/uploadify.swf',
+        'uploader' : '/accounts/profile/ajax_update_logo'
+    });
+
+    //保存基本资料
 
 });

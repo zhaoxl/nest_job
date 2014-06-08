@@ -1,0 +1,626 @@
+[2014-06-08 16:28:08,642][INFO ][node                     ] [Domo] version[1.0.0], pid[8410], build[a46900e/2014-02-12T16:18:34Z]
+[2014-06-08 16:28:08,642][INFO ][node                     ] [Domo] initializing ...
+[2014-06-08 16:28:09,055][INFO ][plugins                  ] [Domo] loaded [transport-thrift, analysis-mmseg, analysis-pinyin, mapper-attachments, marvel, analysis-smartcn, analysis-ik, analysis-ansj, DocumentPartialUpdate, river-email, analysis-string2int, analysis-stconvert], sites [marvel, bigdesk, head, inquisitor, kopf, paramedic, rtf, segmentspy]
+[2014-06-08 16:28:14,191][INFO ][node                     ] [Domo] initialized
+[2014-06-08 16:28:14,192][INFO ][node                     ] [Domo] starting ...
+[2014-06-08 16:28:14,256][INFO ][thrift                   ] [Domo] bound on port [9500]
+[2014-06-08 16:28:14,376][INFO ][transport                ] [Domo] bound_address {inet[/0:0:0:0:0:0:0:0%0:9300]}, publish_address {inet[/192.168.3.156:9300]}
+[2014-06-08 16:28:17,568][INFO ][cluster.service          ] [Domo] new_master [Domo][ee0tAVp3QOid5t_QDRQPpQ][MacMiniE0100015][inet[/192.168.3.156:9300]], reason: zen-disco-join (elected_as_master)
+[2014-06-08 16:28:17,629][INFO ][discovery                ] [Domo] elasticsearch/ee0tAVp3QOid5t_QDRQPpQ
+[2014-06-08 16:28:17,672][INFO ][http                     ] [Domo] bound_address {inet[/0:0:0:0:0:0:0:0%0:9200]}, publish_address {inet[/192.168.3.156:9200]}
+[2014-06-08 16:28:17,708][INFO ][gateway                  ] [Domo] recovered [0] indices into cluster_state
+[2014-06-08 16:28:17,708][INFO ][node                     ] [Domo] started
+[2014-06-08 16:28:25,630][INFO ][mmseg-analyzer           ] chars loaded time=338ms, line=14861, on file=chars.dic
+[2014-06-08 16:28:25,634][INFO ][mmseg-analyzer           ] words loaded time=1ms, line=3, on file=words-my.dic
+[2014-06-08 16:28:26,207][INFO ][mmseg-analyzer           ] words loaded time=573ms, line=263638, on file=words.dic
+[2014-06-08 16:28:26,207][INFO ][mmseg-analyzer           ] load all dic use time=916ms
+[2014-06-08 16:28:26,217][INFO ][mmseg-analyzer           ] unit loaded time=10ms, line=35, on file=units.dic
+[2014-06-08 16:28:27,588][INFO ][ik-analyzer              ] [Dict Loading]ik/custom/mydict.dic
+[2014-06-08 16:28:27,598][INFO ][ik-analyzer              ] [Dict Loading]ik/custom/single_word_low_freq.dic
+[2014-06-08 16:28:27,823][INFO ][ik-analyzer              ] [Dict Loading]ik/custom/ext_stopword.dic
+[2014-06-08 16:28:28,018][INFO ][ansj-analyzer            ] ansj停止词典加载完毕!
+[2014-06-08 16:28:32,050][INFO ][ansj-analyzer            ] ansj分词器预热完毕，可以使用!
+[2014-06-08 16:28:32,075][INFO ][ansj-redis-pool          ] 127.0.0.1:6379
+[2014-06-08 16:28:32,099][ERROR][ansj-redis-utils         ] Could not get a resource from the pool
+redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool
+	at redis.clients.util.Pool.getResource(Pool.java:22)
+	at org.ansj.elasticsearch.pubsub.redis.RedisUtils.getConnection(RedisUtils.java:22)
+	at org.ansj.elasticsearch.index.config.AnsjElasticConfigurator$1.run(AnsjElasticConfigurator.java:79)
+	at java.lang.Thread.run(Thread.java:695)
+Caused by: redis.clients.jedis.exceptions.JedisConnectionException: java.net.ConnectException: Connection refused
+	at redis.clients.jedis.Connection.connect(Connection.java:124)
+	at redis.clients.jedis.BinaryClient.connect(BinaryClient.java:54)
+	at redis.clients.jedis.BinaryJedis.connect(BinaryJedis.java:1657)
+	at redis.clients.jedis.JedisPool$JedisFactory.makeObject(JedisPool.java:63)
+	at org.apache.commons.pool.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:1158)
+	at redis.clients.util.Pool.getResource(Pool.java:20)
+	... 3 more
+Caused by: java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(PlainSocketImpl.java:382)
+	at java.net.PlainSocketImpl.connectToAddress(PlainSocketImpl.java:241)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:228)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:431)
+	at java.net.Socket.connect(Socket.java:527)
+	at redis.clients.jedis.Connection.connect(Connection.java:119)
+	... 8 more
+[2014-06-08 16:28:32,102][INFO ][ansj-analyzer            ] redis守护线程准备完毕,ip:127.0.0.1:6379,port:6379,channel:ansj_term
+[2014-06-08 16:28:32,499][INFO ][cluster.metadata         ] [Domo] [.marvel-2014.06.08] creating index, cause [auto(bulk api)], shards [1]/[1], mappings [node_stats, index_stats, _default_]
+[2014-06-08 16:28:33,577][INFO ][cluster.metadata         ] [Domo] [.marvel-2014.06.08] update_mapping [node_stats] (dynamic)
+[2014-06-08 16:28:33,713][INFO ][cluster.metadata         ] [Domo] [.marvel-2014.06.08] update_mapping [routing_event] (dynamic)
+[2014-06-08 16:28:33,726][INFO ][cluster.metadata         ] [Domo] [.marvel-2014.06.08] update_mapping [index_event] (dynamic)
+[2014-06-08 16:28:33,737][INFO ][cluster.metadata         ] [Domo] [.marvel-2014.06.08] update_mapping [shard_event] (dynamic)
+[2014-06-08 16:28:33,748][INFO ][cluster.metadata         ] [Domo] [.marvel-2014.06.08] update_mapping [cluster_event] (dynamic)
+[2014-06-08 16:28:33,757][INFO ][cluster.metadata         ] [Domo] [.marvel-2014.06.08] update_mapping [node_event] (dynamic)
+[2014-06-08 16:28:33,824][INFO ][cluster.metadata         ] [Domo] [.marvel-2014.06.08] update_mapping [indices_stats] (dynamic)
+[2014-06-08 16:28:33,867][INFO ][cluster.metadata         ] [Domo] [.marvel-2014.06.08] update_mapping [index_stats] (dynamic)
+[2014-06-08 16:28:33,921][INFO ][cluster.metadata         ] [Domo] [.marvel-2014.06.08] update_mapping [cluster_stats] (dynamic)
+[2014-06-08 16:29:58,195][DEBUG][action.admin.indices.analyze] [Domo] failed to execute [org.elasticsearch.action.admin.indices.analyze.AnalyzeRequest@70e08379]
+org.elasticsearch.ElasticsearchIllegalArgumentException: failed to find analyzer [mmseg]
+	at org.elasticsearch.action.admin.indices.analyze.TransportAnalyzeAction.shardOperation(TransportAnalyzeAction.java:149)
+	at org.elasticsearch.action.admin.indices.analyze.TransportAnalyzeAction.shardOperation(TransportAnalyzeAction.java:55)
+	at org.elasticsearch.action.support.single.custom.TransportSingleCustomOperationAction$AsyncSingleAction$1.run(TransportSingleCustomOperationAction.java:141)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:695)
+[2014-06-08 16:30:21,983][DEBUG][action.admin.indices.analyze] [Domo] failed to execute [org.elasticsearch.action.admin.indices.analyze.AnalyzeRequest@588e2e94]
+org.elasticsearch.ElasticsearchIllegalArgumentException: failed to find analyzer [mmseg]
+	at org.elasticsearch.action.admin.indices.analyze.TransportAnalyzeAction.shardOperation(TransportAnalyzeAction.java:149)
+	at org.elasticsearch.action.admin.indices.analyze.TransportAnalyzeAction.shardOperation(TransportAnalyzeAction.java:55)
+	at org.elasticsearch.action.support.single.custom.TransportSingleCustomOperationAction$AsyncSingleAction$1.run(TransportSingleCustomOperationAction.java:141)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:695)
+[2014-06-08 16:30:26,570][DEBUG][action.admin.indices.analyze] [Domo] failed to execute [org.elasticsearch.action.admin.indices.analyze.AnalyzeRequest@5ac51169]
+org.elasticsearch.ElasticsearchIllegalArgumentException: failed to find analyzer [mmseg]
+	at org.elasticsearch.action.admin.indices.analyze.TransportAnalyzeAction.shardOperation(TransportAnalyzeAction.java:149)
+	at org.elasticsearch.action.admin.indices.analyze.TransportAnalyzeAction.shardOperation(TransportAnalyzeAction.java:55)
+	at org.elasticsearch.action.support.single.custom.TransportSingleCustomOperationAction$AsyncSingleAction$1.run(TransportSingleCustomOperationAction.java:141)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:695)
+[2014-06-08 16:36:57,592][INFO ][cluster.routing.allocation.decider] [Domo] updating [cluster.routing.allocation.disable_allocation] from [false] to [true]
+[2014-06-08 16:36:57,592][INFO ][cluster.routing.allocation.decider] [Domo] updating [cluster.routing.allocation.disable_allocation] from [false] to [true]
+[2014-06-08 16:36:57,592][INFO ][cluster.routing.allocation.decider] [Domo] updating [cluster.routing.allocation.disable_allocation] from [false] to [true]
+[2014-06-08 16:36:59,804][INFO ][cluster.routing.allocation.decider] [Domo] updating [cluster.routing.allocation.disable_allocation] from [true] to [false]
+[2014-06-08 16:36:59,805][INFO ][cluster.routing.allocation.decider] [Domo] updating [cluster.routing.allocation.disable_allocation] from [true] to [false]
+[2014-06-08 16:36:59,805][INFO ][cluster.routing.allocation.decider] [Domo] updating [cluster.routing.allocation.disable_allocation] from [true] to [false]
+[2014-06-08 16:38:59,150][INFO ][node                     ] [Domo] stopping ...
+[2014-06-08 16:38:59,212][ERROR][marvel.agent.exporter    ] [Domo] error sending data
+java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(PlainSocketImpl.java:382)
+	at java.net.PlainSocketImpl.connectToAddress(PlainSocketImpl.java:241)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:228)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:431)
+	at java.net.Socket.connect(Socket.java:527)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:158)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:424)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:538)
+	at sun.net.www.http.HttpClient.parseHTTP(HttpClient.java:668)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1218)
+	at java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:379)
+	at org.elasticsearch.marvel.agent.exporter.ESExporter.sendCloseExportingConnection(ESExporter.java:218)
+	at org.elasticsearch.marvel.agent.exporter.ESExporter.exportXContent(ESExporter.java:251)
+	at org.elasticsearch.marvel.agent.exporter.ESExporter.exportEvents(ESExporter.java:160)
+	at org.elasticsearch.marvel.agent.AgentService$ExportingWorker.exportEvents(AgentService.java:287)
+	at org.elasticsearch.marvel.agent.AgentService$ExportingWorker.run(AgentService.java:249)
+	at java.lang.Thread.run(Thread.java:695)
+[2014-06-08 16:38:59,213][INFO ][node                     ] [Domo] stopped
+[2014-06-08 16:38:59,213][INFO ][node                     ] [Domo] closing ...
+[2014-06-08 16:38:59,228][INFO ][node                     ] [Domo] closed
+[2014-06-08 16:39:08,169][INFO ][node                     ] [Blackwing] version[1.0.0], pid[8787], build[a46900e/2014-02-12T16:18:34Z]
+[2014-06-08 16:39:08,170][INFO ][node                     ] [Blackwing] initializing ...
+[2014-06-08 16:39:08,444][INFO ][plugins                  ] [Blackwing] loaded [transport-thrift, analysis-mmseg, analysis-pinyin, mapper-attachments, marvel, analysis-smartcn, analysis-ik, analysis-ansj, DocumentPartialUpdate, river-email, analysis-string2int, analysis-stconvert], sites [marvel, bigdesk, head, inquisitor, kopf, paramedic, rtf, segmentspy]
+[2014-06-08 16:39:11,127][INFO ][node                     ] [Blackwing] initialized
+[2014-06-08 16:39:11,127][INFO ][node                     ] [Blackwing] starting ...
+[2014-06-08 16:39:11,170][INFO ][thrift                   ] [Blackwing] bound on port [9500]
+[2014-06-08 16:39:11,270][INFO ][transport                ] [Blackwing] bound_address {inet[/0:0:0:0:0:0:0:0%0:9300]}, publish_address {inet[/192.168.3.156:9300]}
+[2014-06-08 16:39:14,408][INFO ][cluster.service          ] [Blackwing] new_master [Blackwing][8N0pMWmeRkO_qoa0DinxNg][MacMiniE0100015][inet[/192.168.3.156:9300]], reason: zen-disco-join (elected_as_master)
+[2014-06-08 16:39:14,446][INFO ][discovery                ] [Blackwing] elasticsearch/8N0pMWmeRkO_qoa0DinxNg
+[2014-06-08 16:39:14,495][INFO ][http                     ] [Blackwing] bound_address {inet[/0:0:0:0:0:0:0:0%0:9200]}, publish_address {inet[/192.168.3.156:9200]}
+[2014-06-08 16:39:15,710][INFO ][mmseg-analyzer           ] chars loaded time=561ms, line=14861, on file=chars.dic
+[2014-06-08 16:39:15,714][INFO ][mmseg-analyzer           ] words loaded time=1ms, line=3, on file=words-my.dic
+[2014-06-08 16:39:16,274][INFO ][mmseg-analyzer           ] words loaded time=560ms, line=263638, on file=words.dic
+[2014-06-08 16:39:16,274][INFO ][mmseg-analyzer           ] load all dic use time=1125ms
+[2014-06-08 16:39:16,306][INFO ][mmseg-analyzer           ] unit loaded time=32ms, line=35, on file=units.dic
+[2014-06-08 16:39:17,687][INFO ][ik-analyzer              ] [Dict Loading]ik/custom/mydict.dic
+[2014-06-08 16:39:17,698][INFO ][ik-analyzer              ] [Dict Loading]ik/custom/single_word_low_freq.dic
+[2014-06-08 16:39:17,705][INFO ][ik-analyzer              ] [Dict Loading]ik/custom/ext_stopword.dic
+[2014-06-08 16:39:17,973][INFO ][ansj-analyzer            ] ansj停止词典加载完毕!
+[2014-06-08 16:39:22,413][INFO ][ansj-analyzer            ] ansj分词器预热完毕，可以使用!
+[2014-06-08 16:39:22,417][INFO ][ansj-redis-pool          ] 127.0.0.1:6379
+[2014-06-08 16:39:22,441][ERROR][ansj-redis-utils         ] Could not get a resource from the pool
+redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool
+	at redis.clients.util.Pool.getResource(Pool.java:22)
+	at org.ansj.elasticsearch.pubsub.redis.RedisUtils.getConnection(RedisUtils.java:22)
+	at org.ansj.elasticsearch.index.config.AnsjElasticConfigurator$1.run(AnsjElasticConfigurator.java:79)
+	at java.lang.Thread.run(Thread.java:695)
+Caused by: redis.clients.jedis.exceptions.JedisConnectionException: java.net.ConnectException: Connection refused
+	at redis.clients.jedis.Connection.connect(Connection.java:124)
+	at redis.clients.jedis.BinaryClient.connect(BinaryClient.java:54)
+	at redis.clients.jedis.BinaryJedis.connect(BinaryJedis.java:1657)
+	at redis.clients.jedis.JedisPool$JedisFactory.makeObject(JedisPool.java:63)
+	at org.apache.commons.pool.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:1158)
+	at redis.clients.util.Pool.getResource(Pool.java:20)
+	... 3 more
+Caused by: java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(PlainSocketImpl.java:382)
+	at java.net.PlainSocketImpl.connectToAddress(PlainSocketImpl.java:241)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:228)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:431)
+	at java.net.Socket.connect(Socket.java:527)
+	at redis.clients.jedis.Connection.connect(Connection.java:119)
+	... 8 more
+[2014-06-08 16:39:22,445][INFO ][ansj-analyzer            ] redis守护线程准备完毕,ip:127.0.0.1:6379,port:6379,channel:ansj_term
+[2014-06-08 16:39:23,004][INFO ][gateway                  ] [Blackwing] recovered [1] indices into cluster_state
+[2014-06-08 16:39:23,007][INFO ][node                     ] [Blackwing] started
+[2014-06-08 16:44:57,110][INFO ][node                     ] [Blackwing] stopping ...
+[2014-06-08 16:44:57,186][ERROR][marvel.agent.exporter    ] [Blackwing] error sending data
+java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(PlainSocketImpl.java:382)
+	at java.net.PlainSocketImpl.connectToAddress(PlainSocketImpl.java:241)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:228)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:431)
+	at java.net.Socket.connect(Socket.java:527)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:158)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:424)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:538)
+	at sun.net.www.http.HttpClient.parseHTTP(HttpClient.java:668)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1218)
+	at java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:379)
+	at org.elasticsearch.marvel.agent.exporter.ESExporter.sendCloseExportingConnection(ESExporter.java:218)
+	at org.elasticsearch.marvel.agent.exporter.ESExporter.exportXContent(ESExporter.java:251)
+	at org.elasticsearch.marvel.agent.exporter.ESExporter.exportEvents(ESExporter.java:160)
+	at org.elasticsearch.marvel.agent.AgentService$ExportingWorker.exportEvents(AgentService.java:287)
+	at org.elasticsearch.marvel.agent.AgentService$ExportingWorker.run(AgentService.java:249)
+	at java.lang.Thread.run(Thread.java:695)
+[2014-06-08 16:44:57,187][INFO ][node                     ] [Blackwing] stopped
+[2014-06-08 16:44:57,187][INFO ][node                     ] [Blackwing] closing ...
+[2014-06-08 16:44:57,195][INFO ][node                     ] [Blackwing] closed
+[2014-06-08 16:46:02,421][INFO ][node                     ] [Vertigo] version[1.0.0], pid[8894], build[a46900e/2014-02-12T16:18:34Z]
+[2014-06-08 16:46:02,422][INFO ][node                     ] [Vertigo] initializing ...
+[2014-06-08 16:46:02,710][INFO ][plugins                  ] [Vertigo] loaded [transport-thrift, analysis-mmseg, analysis-pinyin, mapper-attachments, marvel, analysis-smartcn, analysis-ik, analysis-ansj, DocumentPartialUpdate, river-email, analysis-string2int, analysis-stconvert], sites [marvel, bigdesk, head, inquisitor, kopf, paramedic, rtf, segmentspy]
+[2014-06-08 16:46:05,560][INFO ][node                     ] [Vertigo] initialized
+[2014-06-08 16:46:05,560][INFO ][node                     ] [Vertigo] starting ...
+[2014-06-08 16:46:05,592][INFO ][thrift                   ] [Vertigo] bound on port [9500]
+[2014-06-08 16:46:05,689][INFO ][transport                ] [Vertigo] bound_address {inet[/0:0:0:0:0:0:0:0%0:9300]}, publish_address {inet[/192.168.3.156:9300]}
+[2014-06-08 16:46:08,812][INFO ][cluster.service          ] [Vertigo] new_master [Vertigo][yrxcsXo8RLKzQD7wCORFYw][MacMiniE0100015][inet[/192.168.3.156:9300]], reason: zen-disco-join (elected_as_master)
+[2014-06-08 16:46:08,859][INFO ][discovery                ] [Vertigo] elasticsearch/yrxcsXo8RLKzQD7wCORFYw
+[2014-06-08 16:46:08,914][INFO ][http                     ] [Vertigo] bound_address {inet[/0:0:0:0:0:0:0:0%0:9200]}, publish_address {inet[/192.168.3.156:9200]}
+[2014-06-08 16:46:09,742][INFO ][mmseg-analyzer           ] chars loaded time=326ms, line=14861, on file=chars.dic
+[2014-06-08 16:46:09,746][INFO ][mmseg-analyzer           ] words loaded time=1ms, line=3, on file=words-my.dic
+[2014-06-08 16:46:10,331][INFO ][mmseg-analyzer           ] words loaded time=585ms, line=263638, on file=words.dic
+[2014-06-08 16:46:10,331][INFO ][mmseg-analyzer           ] load all dic use time=915ms
+[2014-06-08 16:46:10,332][INFO ][mmseg-analyzer           ] unit loaded time=1ms, line=35, on file=units.dic
+[2014-06-08 16:46:11,582][INFO ][ik-analyzer              ] [Dict Loading]ik/custom/mydict.dic
+[2014-06-08 16:46:11,598][INFO ][ik-analyzer              ] [Dict Loading]ik/custom/single_word_low_freq.dic
+[2014-06-08 16:46:11,606][INFO ][ik-analyzer              ] [Dict Loading]ik/custom/ext_stopword.dic
+[2014-06-08 16:46:11,717][INFO ][ansj-analyzer            ] ansj停止词典加载完毕!
+[2014-06-08 16:46:16,380][INFO ][ansj-analyzer            ] ansj分词器预热完毕，可以使用!
+[2014-06-08 16:46:16,383][INFO ][ansj-redis-pool          ] 127.0.0.1:6379
+[2014-06-08 16:46:16,403][ERROR][ansj-redis-utils         ] Could not get a resource from the pool
+redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool
+	at redis.clients.util.Pool.getResource(Pool.java:22)
+	at org.ansj.elasticsearch.pubsub.redis.RedisUtils.getConnection(RedisUtils.java:22)
+	at org.ansj.elasticsearch.index.config.AnsjElasticConfigurator$1.run(AnsjElasticConfigurator.java:79)
+	at java.lang.Thread.run(Thread.java:695)
+Caused by: redis.clients.jedis.exceptions.JedisConnectionException: java.net.ConnectException: Connection refused
+	at redis.clients.jedis.Connection.connect(Connection.java:124)
+	at redis.clients.jedis.BinaryClient.connect(BinaryClient.java:54)
+	at redis.clients.jedis.BinaryJedis.connect(BinaryJedis.java:1657)
+	at redis.clients.jedis.JedisPool$JedisFactory.makeObject(JedisPool.java:63)
+	at org.apache.commons.pool.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:1158)
+	at redis.clients.util.Pool.getResource(Pool.java:20)
+	... 3 more
+Caused by: java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(PlainSocketImpl.java:382)
+	at java.net.PlainSocketImpl.connectToAddress(PlainSocketImpl.java:241)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:228)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:431)
+	at java.net.Socket.connect(Socket.java:527)
+	at redis.clients.jedis.Connection.connect(Connection.java:119)
+	... 8 more
+[2014-06-08 16:46:16,407][INFO ][ansj-analyzer            ] redis守护线程准备完毕,ip:127.0.0.1:6379,port:6379,channel:ansj_term
+[2014-06-08 16:46:17,054][INFO ][gateway                  ] [Vertigo] recovered [1] indices into cluster_state
+[2014-06-08 16:46:17,057][INFO ][node                     ] [Vertigo] started
+[2014-06-08 16:53:29,539][INFO ][node                     ] [Vertigo] stopping ...
+[2014-06-08 16:53:29,572][ERROR][marvel.agent.exporter    ] [Vertigo] error sending data
+java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(PlainSocketImpl.java:382)
+	at java.net.PlainSocketImpl.connectToAddress(PlainSocketImpl.java:241)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:228)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:431)
+	at java.net.Socket.connect(Socket.java:527)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:158)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:424)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:538)
+	at sun.net.www.http.HttpClient.parseHTTP(HttpClient.java:668)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1218)
+	at java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:379)
+	at org.elasticsearch.marvel.agent.exporter.ESExporter.sendCloseExportingConnection(ESExporter.java:218)
+	at org.elasticsearch.marvel.agent.exporter.ESExporter.exportXContent(ESExporter.java:251)
+	at org.elasticsearch.marvel.agent.exporter.ESExporter.exportEvents(ESExporter.java:160)
+	at org.elasticsearch.marvel.agent.AgentService$ExportingWorker.exportEvents(AgentService.java:287)
+	at org.elasticsearch.marvel.agent.AgentService$ExportingWorker.run(AgentService.java:249)
+	at java.lang.Thread.run(Thread.java:695)
+[2014-06-08 16:53:29,572][INFO ][node                     ] [Vertigo] stopped
+[2014-06-08 16:53:29,572][INFO ][node                     ] [Vertigo] closing ...
+[2014-06-08 16:53:29,579][INFO ][node                     ] [Vertigo] closed
+[2014-06-08 16:53:36,531][INFO ][node                     ] [Scanner] version[1.0.0], pid[8979], build[a46900e/2014-02-12T16:18:34Z]
+[2014-06-08 16:53:36,532][INFO ][node                     ] [Scanner] initializing ...
+[2014-06-08 16:53:37,490][INFO ][plugins                  ] [Scanner] loaded [transport-thrift, analysis-mmseg, analysis-pinyin, mapper-attachments, marvel, analysis-smartcn, analysis-ik, analysis-ansj, DocumentPartialUpdate, river-email, analysis-string2int, analysis-stconvert], sites [marvel, bigdesk, head, inquisitor, kopf, paramedic, rtf, segmentspy]
+[2014-06-08 16:53:40,061][INFO ][node                     ] [Scanner] initialized
+[2014-06-08 16:53:40,061][INFO ][node                     ] [Scanner] starting ...
+[2014-06-08 16:53:40,089][INFO ][thrift                   ] [Scanner] bound on port [9500]
+[2014-06-08 16:53:40,205][INFO ][transport                ] [Scanner] bound_address {inet[/0:0:0:0:0:0:0:0%0:9300]}, publish_address {inet[/192.168.3.156:9300]}
+[2014-06-08 16:53:43,289][INFO ][cluster.service          ] [Scanner] new_master [Scanner][mvIpTGVxTJyEK7SksOCYXA][MacMiniE0100015][inet[/192.168.3.156:9300]], reason: zen-disco-join (elected_as_master)
+[2014-06-08 16:53:43,327][INFO ][discovery                ] [Scanner] elasticsearch/mvIpTGVxTJyEK7SksOCYXA
+[2014-06-08 16:53:43,377][INFO ][http                     ] [Scanner] bound_address {inet[/0:0:0:0:0:0:0:0%0:9200]}, publish_address {inet[/192.168.3.156:9200]}
+[2014-06-08 16:53:44,073][INFO ][mmseg-analyzer           ] chars loaded time=234ms, line=14861, on file=chars.dic
+[2014-06-08 16:53:44,086][INFO ][mmseg-analyzer           ] words loaded time=10ms, line=3, on file=words-my.dic
+[2014-06-08 16:53:44,631][INFO ][mmseg-analyzer           ] words loaded time=545ms, line=263638, on file=words.dic
+[2014-06-08 16:53:44,631][INFO ][mmseg-analyzer           ] load all dic use time=792ms
+[2014-06-08 16:53:44,632][INFO ][mmseg-analyzer           ] unit loaded time=1ms, line=35, on file=units.dic
+[2014-06-08 16:53:45,749][INFO ][ik-analyzer              ] [Dict Loading]ik/custom/mydict.dic
+[2014-06-08 16:53:45,766][INFO ][ik-analyzer              ] [Dict Loading]ik/custom/single_word_low_freq.dic
+[2014-06-08 16:53:45,773][INFO ][ik-analyzer              ] [Dict Loading]ik/custom/ext_stopword.dic
+[2014-06-08 16:53:46,007][INFO ][ansj-analyzer            ] ansj停止词典加载完毕!
+[2014-06-08 16:53:49,997][INFO ][ansj-analyzer            ] ansj分词器预热完毕，可以使用!
+[2014-06-08 16:53:50,001][INFO ][ansj-redis-pool          ] 127.0.0.1:6379
+[2014-06-08 16:53:50,025][ERROR][ansj-redis-utils         ] Could not get a resource from the pool
+redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool
+	at redis.clients.util.Pool.getResource(Pool.java:22)
+	at org.ansj.elasticsearch.pubsub.redis.RedisUtils.getConnection(RedisUtils.java:22)
+	at org.ansj.elasticsearch.index.config.AnsjElasticConfigurator$1.run(AnsjElasticConfigurator.java:79)
+	at java.lang.Thread.run(Thread.java:695)
+Caused by: redis.clients.jedis.exceptions.JedisConnectionException: java.net.ConnectException: Connection refused
+	at redis.clients.jedis.Connection.connect(Connection.java:124)
+	at redis.clients.jedis.BinaryClient.connect(BinaryClient.java:54)
+	at redis.clients.jedis.BinaryJedis.connect(BinaryJedis.java:1657)
+	at redis.clients.jedis.JedisPool$JedisFactory.makeObject(JedisPool.java:63)
+	at org.apache.commons.pool.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:1158)
+	at redis.clients.util.Pool.getResource(Pool.java:20)
+	... 3 more
+Caused by: java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(PlainSocketImpl.java:382)
+	at java.net.PlainSocketImpl.connectToAddress(PlainSocketImpl.java:241)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:228)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:431)
+	at java.net.Socket.connect(Socket.java:527)
+	at redis.clients.jedis.Connection.connect(Connection.java:119)
+	... 8 more
+[2014-06-08 16:53:50,031][INFO ][ansj-analyzer            ] redis守护线程准备完毕,ip:127.0.0.1:6379,port:6379,channel:ansj_term
+[2014-06-08 16:53:50,807][INFO ][gateway                  ] [Scanner] recovered [1] indices into cluster_state
+[2014-06-08 16:53:50,816][INFO ][node                     ] [Scanner] started
+[2014-06-08 16:58:38,823][INFO ][cluster.metadata         ] [Scanner] [index1] creating index, cause [api], shards [1]/[1], mappings [node_stats, cluster_stats, indices_stats, shard_event, index_event, node_event, _default_, index_stats, cluster_event, routing_event]
+[2014-06-08 16:59:20,274][INFO ][cluster.metadata         ] [Scanner] closing indices [[index1]]
+[2014-06-08 16:59:24,476][INFO ][cluster.metadata         ] [Scanner] opening indices [[index1]]
+[2014-06-08 17:00:47,222][DEBUG][action.admin.indices.create] [Scanner] [posts] failed to create
+org.elasticsearch.indices.IndexCreationException: [posts] failed to create index
+	at org.elasticsearch.indices.InternalIndicesService.createIndex(InternalIndicesService.java:300)
+	at org.elasticsearch.cluster.metadata.MetaDataCreateIndexService$2.execute(MetaDataCreateIndexService.java:310)
+	at org.elasticsearch.cluster.service.InternalClusterService$UpdateTask.run(InternalClusterService.java:308)
+	at org.elasticsearch.common.util.concurrent.PrioritizedEsThreadPoolExecutor$TieBreakingPrioritizedRunnable.run(PrioritizedEsThreadPoolExecutor.java:134)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:695)
+Caused by: org.elasticsearch.ElasticsearchIllegalArgumentException: failed to find analyzer type [mmseg_analyzer] or tokenizer for [default]
+	at org.elasticsearch.index.analysis.AnalysisModule.configure(AnalysisModule.java:372)
+	at org.elasticsearch.common.inject.AbstractModule.configure(AbstractModule.java:60)
+	at org.elasticsearch.common.inject.spi.Elements$RecordingBinder.install(Elements.java:204)
+	at org.elasticsearch.common.inject.spi.Elements.getElements(Elements.java:85)
+	at org.elasticsearch.common.inject.InjectorShell$Builder.build(InjectorShell.java:130)
+	at org.elasticsearch.common.inject.InjectorBuilder.build(InjectorBuilder.java:99)
+	at org.elasticsearch.common.inject.InjectorImpl.createChildInjector(InjectorImpl.java:131)
+	at org.elasticsearch.common.inject.ModulesBuilder.createChildInjector(ModulesBuilder.java:69)
+	at org.elasticsearch.indices.InternalIndicesService.createIndex(InternalIndicesService.java:298)
+	... 6 more
+Caused by: org.elasticsearch.common.settings.NoClassSettingsException: Failed to load class setting [type] with value [mmseg_analyzer]
+	at org.elasticsearch.common.settings.ImmutableSettings.loadClass(ImmutableSettings.java:448)
+	at org.elasticsearch.common.settings.ImmutableSettings.getAsClass(ImmutableSettings.java:436)
+	at org.elasticsearch.index.analysis.AnalysisModule.configure(AnalysisModule.java:356)
+	... 14 more
+Caused by: java.lang.ClassNotFoundException: org.elasticsearch.index.analysis.mmseganalyzer.MmsegAnalyzerAnalyzerProvider
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:202)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:190)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:306)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:301)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:247)
+	at org.elasticsearch.common.settings.ImmutableSettings.loadClass(ImmutableSettings.java:446)
+	... 16 more
+[2014-06-08 17:02:31,007][DEBUG][action.admin.indices.create] [Scanner] [posts] failed to create
+org.elasticsearch.indices.IndexCreationException: [posts] failed to create index
+	at org.elasticsearch.indices.InternalIndicesService.createIndex(InternalIndicesService.java:300)
+	at org.elasticsearch.cluster.metadata.MetaDataCreateIndexService$2.execute(MetaDataCreateIndexService.java:310)
+	at org.elasticsearch.cluster.service.InternalClusterService$UpdateTask.run(InternalClusterService.java:308)
+	at org.elasticsearch.common.util.concurrent.PrioritizedEsThreadPoolExecutor$TieBreakingPrioritizedRunnable.run(PrioritizedEsThreadPoolExecutor.java:134)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:695)
+Caused by: org.elasticsearch.ElasticsearchIllegalArgumentException: failed to find analyzer type [mmseg_analyzer] or tokenizer for [default]
+	at org.elasticsearch.index.analysis.AnalysisModule.configure(AnalysisModule.java:372)
+	at org.elasticsearch.common.inject.AbstractModule.configure(AbstractModule.java:60)
+	at org.elasticsearch.common.inject.spi.Elements$RecordingBinder.install(Elements.java:204)
+	at org.elasticsearch.common.inject.spi.Elements.getElements(Elements.java:85)
+	at org.elasticsearch.common.inject.InjectorShell$Builder.build(InjectorShell.java:130)
+	at org.elasticsearch.common.inject.InjectorBuilder.build(InjectorBuilder.java:99)
+	at org.elasticsearch.common.inject.InjectorImpl.createChildInjector(InjectorImpl.java:131)
+	at org.elasticsearch.common.inject.ModulesBuilder.createChildInjector(ModulesBuilder.java:69)
+	at org.elasticsearch.indices.InternalIndicesService.createIndex(InternalIndicesService.java:298)
+	... 6 more
+Caused by: org.elasticsearch.common.settings.NoClassSettingsException: Failed to load class setting [type] with value [mmseg_analyzer]
+	at org.elasticsearch.common.settings.ImmutableSettings.loadClass(ImmutableSettings.java:448)
+	at org.elasticsearch.common.settings.ImmutableSettings.getAsClass(ImmutableSettings.java:436)
+	at org.elasticsearch.index.analysis.AnalysisModule.configure(AnalysisModule.java:356)
+	... 14 more
+Caused by: java.lang.ClassNotFoundException: org.elasticsearch.index.analysis.mmseganalyzer.MmsegAnalyzerAnalyzerProvider
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:202)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:190)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:306)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:301)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:247)
+	at org.elasticsearch.common.settings.ImmutableSettings.loadClass(ImmutableSettings.java:446)
+	... 16 more
+[2014-06-08 17:02:44,140][INFO ][cluster.metadata         ] [Scanner] closing indices [[index1]]
+[2014-06-08 17:03:01,242][INFO ][cluster.metadata         ] [Scanner] opening indices [[index1]]
+[2014-06-08 17:03:38,372][INFO ][cluster.metadata         ] [Scanner] closing indices [[index1]]
+[2014-06-08 17:03:54,474][INFO ][cluster.metadata         ] [Scanner] opening indices [[index1]]
+[2014-06-08 17:08:42,553][DEBUG][action.admin.indices.create] [Scanner] [index] failed to create
+org.elasticsearch.indices.IndexCreationException: [index] failed to create index
+	at org.elasticsearch.indices.InternalIndicesService.createIndex(InternalIndicesService.java:300)
+	at org.elasticsearch.cluster.metadata.MetaDataCreateIndexService$2.execute(MetaDataCreateIndexService.java:310)
+	at org.elasticsearch.cluster.service.InternalClusterService$UpdateTask.run(InternalClusterService.java:308)
+	at org.elasticsearch.common.util.concurrent.PrioritizedEsThreadPoolExecutor$TieBreakingPrioritizedRunnable.run(PrioritizedEsThreadPoolExecutor.java:134)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:695)
+Caused by: org.elasticsearch.ElasticsearchIllegalArgumentException: failed to find analyzer type [mmseg_analyzer] or tokenizer for [default]
+	at org.elasticsearch.index.analysis.AnalysisModule.configure(AnalysisModule.java:372)
+	at org.elasticsearch.common.inject.AbstractModule.configure(AbstractModule.java:60)
+	at org.elasticsearch.common.inject.spi.Elements$RecordingBinder.install(Elements.java:204)
+	at org.elasticsearch.common.inject.spi.Elements.getElements(Elements.java:85)
+	at org.elasticsearch.common.inject.InjectorShell$Builder.build(InjectorShell.java:130)
+	at org.elasticsearch.common.inject.InjectorBuilder.build(InjectorBuilder.java:99)
+	at org.elasticsearch.common.inject.InjectorImpl.createChildInjector(InjectorImpl.java:131)
+	at org.elasticsearch.common.inject.ModulesBuilder.createChildInjector(ModulesBuilder.java:69)
+	at org.elasticsearch.indices.InternalIndicesService.createIndex(InternalIndicesService.java:298)
+	... 6 more
+Caused by: org.elasticsearch.common.settings.NoClassSettingsException: Failed to load class setting [type] with value [mmseg_analyzer]
+	at org.elasticsearch.common.settings.ImmutableSettings.loadClass(ImmutableSettings.java:448)
+	at org.elasticsearch.common.settings.ImmutableSettings.getAsClass(ImmutableSettings.java:436)
+	at org.elasticsearch.index.analysis.AnalysisModule.configure(AnalysisModule.java:356)
+	... 14 more
+Caused by: java.lang.ClassNotFoundException: org.elasticsearch.index.analysis.mmseganalyzer.MmsegAnalyzerAnalyzerProvider
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:202)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:190)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:306)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:301)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:247)
+	at org.elasticsearch.common.settings.ImmutableSettings.loadClass(ImmutableSettings.java:446)
+	... 16 more
+[2014-06-08 17:09:18,210][DEBUG][action.admin.indices.create] [Scanner] [index] failed to create
+org.elasticsearch.indices.IndexCreationException: [index] failed to create index
+	at org.elasticsearch.indices.InternalIndicesService.createIndex(InternalIndicesService.java:300)
+	at org.elasticsearch.cluster.metadata.MetaDataCreateIndexService$2.execute(MetaDataCreateIndexService.java:310)
+	at org.elasticsearch.cluster.service.InternalClusterService$UpdateTask.run(InternalClusterService.java:308)
+	at org.elasticsearch.common.util.concurrent.PrioritizedEsThreadPoolExecutor$TieBreakingPrioritizedRunnable.run(PrioritizedEsThreadPoolExecutor.java:134)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:695)
+Caused by: org.elasticsearch.ElasticsearchIllegalArgumentException: failed to find analyzer type [mmseg_analyzer] or tokenizer for [default]
+	at org.elasticsearch.index.analysis.AnalysisModule.configure(AnalysisModule.java:372)
+	at org.elasticsearch.common.inject.AbstractModule.configure(AbstractModule.java:60)
+	at org.elasticsearch.common.inject.spi.Elements$RecordingBinder.install(Elements.java:204)
+	at org.elasticsearch.common.inject.spi.Elements.getElements(Elements.java:85)
+	at org.elasticsearch.common.inject.InjectorShell$Builder.build(InjectorShell.java:130)
+	at org.elasticsearch.common.inject.InjectorBuilder.build(InjectorBuilder.java:99)
+	at org.elasticsearch.common.inject.InjectorImpl.createChildInjector(InjectorImpl.java:131)
+	at org.elasticsearch.common.inject.ModulesBuilder.createChildInjector(ModulesBuilder.java:69)
+	at org.elasticsearch.indices.InternalIndicesService.createIndex(InternalIndicesService.java:298)
+	... 6 more
+Caused by: org.elasticsearch.common.settings.NoClassSettingsException: Failed to load class setting [type] with value [mmseg_analyzer]
+	at org.elasticsearch.common.settings.ImmutableSettings.loadClass(ImmutableSettings.java:448)
+	at org.elasticsearch.common.settings.ImmutableSettings.getAsClass(ImmutableSettings.java:436)
+	at org.elasticsearch.index.analysis.AnalysisModule.configure(AnalysisModule.java:356)
+	... 14 more
+Caused by: java.lang.ClassNotFoundException: org.elasticsearch.index.analysis.mmseganalyzer.MmsegAnalyzerAnalyzerProvider
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:202)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:190)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:306)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:301)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:247)
+	at org.elasticsearch.common.settings.ImmutableSettings.loadClass(ImmutableSettings.java:446)
+	... 16 more
+[2014-06-08 17:09:25,953][INFO ][node                     ] [Scanner] stopping ...
+[2014-06-08 17:09:26,030][ERROR][marvel.agent.exporter    ] [Scanner] error connecting to [localhost:9200]
+java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(PlainSocketImpl.java:382)
+	at java.net.PlainSocketImpl.connectToAddress(PlainSocketImpl.java:241)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:228)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:431)
+	at java.net.Socket.connect(Socket.java:527)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:158)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:424)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:538)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:214)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:300)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:319)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:987)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:923)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:841)
+	at org.elasticsearch.marvel.agent.exporter.ESExporter.openConnection(ESExporter.java:316)
+	at org.elasticsearch.marvel.agent.exporter.ESExporter.openExportingConnection(ESExporter.java:181)
+	at org.elasticsearch.marvel.agent.exporter.ESExporter.exportXContent(ESExporter.java:245)
+	at org.elasticsearch.marvel.agent.exporter.ESExporter.exportEvents(ESExporter.java:160)
+	at org.elasticsearch.marvel.agent.AgentService$ExportingWorker.exportEvents(AgentService.java:287)
+	at org.elasticsearch.marvel.agent.AgentService$ExportingWorker.run(AgentService.java:249)
+	at java.lang.Thread.run(Thread.java:695)
+[2014-06-08 17:09:26,031][ERROR][marvel.agent.exporter    ] [Scanner] could not connect to any configured elasticsearch instances: [localhost:9200]
+[2014-06-08 17:09:26,032][INFO ][node                     ] [Scanner] stopped
+[2014-06-08 17:09:26,032][INFO ][node                     ] [Scanner] closing ...
+[2014-06-08 17:09:26,037][INFO ][node                     ] [Scanner] closed
+[2014-06-08 17:09:44,389][INFO ][node                     ] [Archer] version[1.0.0], pid[9158], build[a46900e/2014-02-12T16:18:34Z]
+[2014-06-08 17:09:44,389][INFO ][node                     ] [Archer] initializing ...
+[2014-06-08 17:09:44,705][INFO ][plugins                  ] [Archer] loaded [transport-thrift, analysis-mmseg, analysis-pinyin, mapper-attachments, marvel, analysis-smartcn, analysis-ik, analysis-ansj, DocumentPartialUpdate, river-email, analysis-string2int, analysis-stconvert], sites [marvel, bigdesk, head, inquisitor, kopf, paramedic, rtf, segmentspy]
+[2014-06-08 17:09:47,373][INFO ][node                     ] [Archer] initialized
+[2014-06-08 17:09:47,374][INFO ][node                     ] [Archer] starting ...
+[2014-06-08 17:09:47,410][INFO ][thrift                   ] [Archer] bound on port [9500]
+[2014-06-08 17:09:47,532][INFO ][transport                ] [Archer] bound_address {inet[/0:0:0:0:0:0:0:0%0:9300]}, publish_address {inet[/192.168.3.156:9300]}
+[2014-06-08 17:09:50,617][INFO ][cluster.service          ] [Archer] new_master [Archer][Dck29mbaQqCilRB3ldABIA][MacMiniE0100015][inet[/192.168.3.156:9300]], reason: zen-disco-join (elected_as_master)
+[2014-06-08 17:09:50,662][INFO ][discovery                ] [Archer] elasticsearch/Dck29mbaQqCilRB3ldABIA
+[2014-06-08 17:09:50,810][INFO ][http                     ] [Archer] bound_address {inet[/0:0:0:0:0:0:0:0%0:9200]}, publish_address {inet[/192.168.3.156:9200]}
+[2014-06-08 17:09:52,038][INFO ][mmseg-analyzer           ] chars loaded time=609ms, line=14861, on file=chars.dic
+[2014-06-08 17:09:52,078][INFO ][mmseg-analyzer           ] words loaded time=38ms, line=3, on file=words-my.dic
+[2014-06-08 17:09:52,918][INFO ][mmseg-analyzer           ] words loaded time=839ms, line=263638, on file=words.dic
+[2014-06-08 17:09:52,918][INFO ][mmseg-analyzer           ] load all dic use time=1489ms
+[2014-06-08 17:09:52,956][INFO ][mmseg-analyzer           ] unit loaded time=38ms, line=35, on file=units.dic
+[2014-06-08 17:09:54,539][INFO ][ik-analyzer              ] [Dict Loading]ik/custom/mydict.dic
+[2014-06-08 17:09:54,549][INFO ][ik-analyzer              ] [Dict Loading]ik/custom/single_word_low_freq.dic
+[2014-06-08 17:09:54,555][INFO ][ik-analyzer              ] [Dict Loading]ik/custom/ext_stopword.dic
+[2014-06-08 17:09:54,646][INFO ][ansj-analyzer            ] ansj停止词典加载完毕!
+[2014-06-08 17:09:58,938][INFO ][ansj-analyzer            ] ansj分词器预热完毕，可以使用!
+[2014-06-08 17:09:58,943][INFO ][ansj-redis-pool          ] 127.0.0.1:6379
+[2014-06-08 17:09:58,967][ERROR][ansj-redis-utils         ] Could not get a resource from the pool
+redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool
+	at redis.clients.util.Pool.getResource(Pool.java:22)
+	at org.ansj.elasticsearch.pubsub.redis.RedisUtils.getConnection(RedisUtils.java:22)
+	at org.ansj.elasticsearch.index.config.AnsjElasticConfigurator$1.run(AnsjElasticConfigurator.java:79)
+	at java.lang.Thread.run(Thread.java:695)
+Caused by: redis.clients.jedis.exceptions.JedisConnectionException: java.net.ConnectException: Connection refused
+	at redis.clients.jedis.Connection.connect(Connection.java:124)
+	at redis.clients.jedis.BinaryClient.connect(BinaryClient.java:54)
+	at redis.clients.jedis.BinaryJedis.connect(BinaryJedis.java:1657)
+	at redis.clients.jedis.JedisPool$JedisFactory.makeObject(JedisPool.java:63)
+	at org.apache.commons.pool.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:1158)
+	at redis.clients.util.Pool.getResource(Pool.java:20)
+	... 3 more
+Caused by: java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(PlainSocketImpl.java:382)
+	at java.net.PlainSocketImpl.connectToAddress(PlainSocketImpl.java:241)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:228)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:431)
+	at java.net.Socket.connect(Socket.java:527)
+	at redis.clients.jedis.Connection.connect(Connection.java:119)
+	... 8 more
+[2014-06-08 17:09:58,970][INFO ][ansj-analyzer            ] redis守护线程准备完毕,ip:127.0.0.1:6379,port:6379,channel:ansj_term
+[2014-06-08 17:09:59,947][INFO ][gateway                  ] [Archer] recovered [2] indices into cluster_state
+[2014-06-08 17:10:00,537][INFO ][cluster.metadata         ] [Archer] [index] creating index, cause [api], shards [5]/[1], mappings []
+[2014-06-08 17:10:01,115][INFO ][node                     ] [Archer] started
+[2014-06-08 17:10:05,205][INFO ][cluster.metadata         ] [Archer] [.marvel-2014.06.08] update_mapping [index_event] (dynamic)
+[2014-06-08 17:10:36,988][INFO ][cluster.metadata         ] [Archer] [index] create_mapping [fulltext]
+[2014-06-08 17:11:30,045][DEBUG][action.admin.indices.analyze] [Archer] failed to execute [org.elasticsearch.action.admin.indices.analyze.AnalyzeRequest@398c75f4]
+org.elasticsearch.ElasticsearchIllegalArgumentException: failed to find analyzer [ikAnalyzer]
+	at org.elasticsearch.action.admin.indices.analyze.TransportAnalyzeAction.shardOperation(TransportAnalyzeAction.java:149)
+	at org.elasticsearch.action.admin.indices.analyze.TransportAnalyzeAction.shardOperation(TransportAnalyzeAction.java:55)
+	at org.elasticsearch.action.support.single.custom.TransportSingleCustomOperationAction$AsyncSingleAction$2.run(TransportSingleCustomOperationAction.java:174)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:695)
+[2014-06-08 17:11:33,889][DEBUG][action.admin.indices.analyze] [Archer] failed to execute [org.elasticsearch.action.admin.indices.analyze.AnalyzeRequest@617e32c7]
+org.elasticsearch.ElasticsearchIllegalArgumentException: failed to find analyzer [ikAnalyzer]
+	at org.elasticsearch.action.admin.indices.analyze.TransportAnalyzeAction.shardOperation(TransportAnalyzeAction.java:149)
+	at org.elasticsearch.action.admin.indices.analyze.TransportAnalyzeAction.shardOperation(TransportAnalyzeAction.java:55)
+	at org.elasticsearch.action.support.single.custom.TransportSingleCustomOperationAction$AsyncSingleAction$2.run(TransportSingleCustomOperationAction.java:174)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:695)
+[2014-06-08 17:11:36,231][DEBUG][action.admin.indices.analyze] [Archer] failed to execute [org.elasticsearch.action.admin.indices.analyze.AnalyzeRequest@24024ad8]
+org.elasticsearch.ElasticsearchIllegalArgumentException: failed to find analyzer [ikAnalyzer]
+	at org.elasticsearch.action.admin.indices.analyze.TransportAnalyzeAction.shardOperation(TransportAnalyzeAction.java:149)
+	at org.elasticsearch.action.admin.indices.analyze.TransportAnalyzeAction.shardOperation(TransportAnalyzeAction.java:55)
+	at org.elasticsearch.action.support.single.custom.TransportSingleCustomOperationAction$AsyncSingleAction$2.run(TransportSingleCustomOperationAction.java:174)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:695)
+[2014-06-08 17:12:03,950][INFO ][cluster.metadata         ] [Archer] [index1] deleting index
+[2014-06-08 17:52:42,231][INFO ][cluster.metadata         ] [Archer] [posts] creating index, cause [auto(index api)], shards [5]/[1], mappings []
+[2014-06-08 17:52:42,660][INFO ][cluster.metadata         ] [Archer] [posts] update_mapping [post] (dynamic)
+[2014-06-08 18:14:51,090][INFO ][cluster.metadata         ] [Archer] [index] deleting index
+[2014-06-08 18:43:58,320][INFO ][node                     ] [Archer] stopping ...
+[2014-06-08 18:43:58,645][ERROR][marvel.agent.exporter    ] [Archer] error connecting to [localhost:9200]
+java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(PlainSocketImpl.java:382)
+	at java.net.PlainSocketImpl.connectToAddress(PlainSocketImpl.java:241)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:228)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:431)
+	at java.net.Socket.connect(Socket.java:527)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:158)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:424)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:538)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:214)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:300)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:319)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:987)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:923)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:841)
+	at org.elasticsearch.marvel.agent.exporter.ESExporter.openConnection(ESExporter.java:316)
+	at org.elasticsearch.marvel.agent.exporter.ESExporter.openExportingConnection(ESExporter.java:181)
+	at org.elasticsearch.marvel.agent.exporter.ESExporter.exportXContent(ESExporter.java:245)
+	at org.elasticsearch.marvel.agent.exporter.ESExporter.exportEvents(ESExporter.java:160)
+	at org.elasticsearch.marvel.agent.AgentService$ExportingWorker.exportEvents(AgentService.java:287)
+	at org.elasticsearch.marvel.agent.AgentService$ExportingWorker.run(AgentService.java:249)
+	at java.lang.Thread.run(Thread.java:695)
+[2014-06-08 18:43:58,660][ERROR][marvel.agent.exporter    ] [Archer] could not connect to any configured elasticsearch instances: [localhost:9200]
+[2014-06-08 18:43:58,660][INFO ][node                     ] [Archer] stopped
+[2014-06-08 18:43:58,660][INFO ][node                     ] [Archer] closing ...
+[2014-06-08 18:43:58,689][INFO ][node                     ] [Archer] closed
+[2014-06-08 18:44:07,697][INFO ][node                     ] [Jacques DuQuesne] version[1.0.0], pid[14342], build[a46900e/2014-02-12T16:18:34Z]
+[2014-06-08 18:44:07,697][INFO ][node                     ] [Jacques DuQuesne] initializing ...
+[2014-06-08 18:44:08,010][INFO ][plugins                  ] [Jacques DuQuesne] loaded [transport-thrift, analysis-mmseg, analysis-pinyin, mapper-attachments, marvel, analysis-smartcn, analysis-ik, analysis-ansj, DocumentPartialUpdate, river-email, analysis-string2int, analysis-stconvert], sites [marvel, bigdesk, head, inquisitor, kopf, paramedic, rtf, segmentspy]
+[2014-06-08 18:44:10,680][INFO ][node                     ] [Jacques DuQuesne] initialized
+[2014-06-08 18:44:10,681][INFO ][node                     ] [Jacques DuQuesne] starting ...
+[2014-06-08 18:44:10,718][INFO ][thrift                   ] [Jacques DuQuesne] bound on port [9500]
+[2014-06-08 18:44:10,854][INFO ][transport                ] [Jacques DuQuesne] bound_address {inet[/0:0:0:0:0:0:0:0%0:9300]}, publish_address {inet[/192.168.3.156:9300]}
+[2014-06-08 18:44:13,963][INFO ][cluster.service          ] [Jacques DuQuesne] new_master [Jacques DuQuesne][dFaw2cdrRKmUNj3TQ5tVIw][MacMiniE0100015][inet[/192.168.3.156:9300]], reason: zen-disco-join (elected_as_master)
+[2014-06-08 18:44:14,005][INFO ][discovery                ] [Jacques DuQuesne] elasticsearch/dFaw2cdrRKmUNj3TQ5tVIw
+[2014-06-08 18:44:14,065][INFO ][http                     ] [Jacques DuQuesne] bound_address {inet[/0:0:0:0:0:0:0:0%0:9200]}, publish_address {inet[/192.168.3.156:9200]}
+[2014-06-08 18:44:14,887][INFO ][mmseg-analyzer           ] chars loaded time=341ms, line=14861, on file=chars.dic
+[2014-06-08 18:44:14,924][INFO ][mmseg-analyzer           ] words loaded time=16ms, line=4, on file=words-my.dic
+[2014-06-08 18:44:15,437][INFO ][mmseg-analyzer           ] words loaded time=512ms, line=263638, on file=words.dic
+[2014-06-08 18:44:15,437][INFO ][mmseg-analyzer           ] load all dic use time=891ms
+[2014-06-08 18:44:15,472][INFO ][mmseg-analyzer           ] unit loaded time=34ms, line=35, on file=units.dic
+[2014-06-08 18:44:17,013][INFO ][ik-analyzer              ] [Dict Loading]ik/custom/mydict.dic
+[2014-06-08 18:44:17,362][INFO ][ik-analyzer              ] [Dict Loading]ik/custom/single_word_low_freq.dic
+[2014-06-08 18:44:17,428][INFO ][ik-analyzer              ] [Dict Loading]ik/custom/ext_stopword.dic
+[2014-06-08 18:44:17,806][INFO ][ansj-analyzer            ] ansj停止词典加载完毕!
+[2014-06-08 18:44:21,885][INFO ][ansj-analyzer            ] ansj分词器预热完毕，可以使用!
+[2014-06-08 18:44:21,889][INFO ][ansj-redis-pool          ] 127.0.0.1:6379
+[2014-06-08 18:44:21,911][ERROR][ansj-redis-utils         ] Could not get a resource from the pool
+redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool
+	at redis.clients.util.Pool.getResource(Pool.java:22)
+	at org.ansj.elasticsearch.pubsub.redis.RedisUtils.getConnection(RedisUtils.java:22)
+	at org.ansj.elasticsearch.index.config.AnsjElasticConfigurator$1.run(AnsjElasticConfigurator.java:79)
+	at java.lang.Thread.run(Thread.java:695)
+Caused by: redis.clients.jedis.exceptions.JedisConnectionException: java.net.ConnectException: Connection refused
+	at redis.clients.jedis.Connection.connect(Connection.java:124)
+	at redis.clients.jedis.BinaryClient.connect(BinaryClient.java:54)
+	at redis.clients.jedis.BinaryJedis.connect(BinaryJedis.java:1657)
+	at redis.clients.jedis.JedisPool$JedisFactory.makeObject(JedisPool.java:63)
+	at org.apache.commons.pool.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:1158)
+	at redis.clients.util.Pool.getResource(Pool.java:20)
+	... 3 more
+Caused by: java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(PlainSocketImpl.java:382)
+	at java.net.PlainSocketImpl.connectToAddress(PlainSocketImpl.java:241)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:228)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:431)
+	at java.net.Socket.connect(Socket.java:527)
+	at redis.clients.jedis.Connection.connect(Connection.java:119)
+	... 8 more
+[2014-06-08 18:44:21,914][INFO ][ansj-analyzer            ] redis守护线程准备完毕,ip:127.0.0.1:6379,port:6379,channel:ansj_term
+[2014-06-08 18:44:22,361][INFO ][gateway                  ] [Jacques DuQuesne] recovered [2] indices into cluster_state
+[2014-06-08 18:44:22,364][INFO ][node                     ] [Jacques DuQuesne] started

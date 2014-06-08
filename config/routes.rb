@@ -13,8 +13,14 @@ NestJob::Application.routes.draw do
 
   resources :posts
   namespace :accounts do
-    resources :profile
+    resources :profile do
+      collection do
+        post :ajax_update_logo
+      end
+    end
+    
     resources :resumes
+    resources :posts
   end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
