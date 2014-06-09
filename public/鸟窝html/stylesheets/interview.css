@@ -29,3 +29,18 @@
 .employment .jobHunterInfo{padding:0;background:none;}
 .employment .employBtns{text-align:right;}
 .employment .employBtns a{margin-right:10px;}
+
+
+/*directSearch*/
+.directSearch{overflow:hidden;zoom:1;margin-top:10px;margin-bottom:20px;}
+.directSearch li{float:left;width:218px;height:80px;padding-top:10px;margin-right:10px;border:1px dashed #1abc9c;color:#535353;font-size:15px;text-align:center;}
+.directSearch li.last{margin-right:0;}
+.directSearch .current{background:#fff;}
+
+.soldOut{margin-top:15px;}
+.soldOut li{float:left;width:448px;height:170px;padding-top:13px;margin-bottom:10px;margin-right:10px;background:#fff;border:1px dashed #1abc9c;color:#434343;font-size:15px;}
+.soldOut li p{padding-left:20px;margin-bottom:11px;}
+.soldOut li .btns{text-align:center;}
+.soldOut li .btns a{margin:0 3px;}
+.soldOut .current{background:#f5fdfc;}
+
