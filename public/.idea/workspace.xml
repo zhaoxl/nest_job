@@ -23,60 +23,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/鸟窝html/javascripts/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="159" column="19" selection-start="5526" selection-end="5526" vertical-scroll-proportion="-14.12" vertical-offset="2668" max-vertical-offset="6954">
-              <folding>
-                <marker date="1401955445293" expanded="false" signature="6370:6442" placeholder="..." />
-                <marker date="1401955445293" expanded="false" signature="9692:9705" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="发布职位.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/鸟窝html/发布职位.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="108" column="54" selection-start="4130" selection-end="4130" vertical-scroll-proportion="-7.3018866" vertical-offset="1665" max-vertical-offset="4142">
+            <state line="108" column="54" selection-start="4130" selection-end="4130" vertical-scroll-proportion="-13.821428" vertical-offset="1665" max-vertical-offset="4142">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ui_common.css" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="ui_common.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/鸟窝html/stylesheets/ui_common.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="90" column="27" selection-start="4461" selection-end="4461" vertical-scroll-proportion="0.0" vertical-offset="1422" max-vertical-offset="2109">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="release_job.css" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/鸟窝html/stylesheets/release_job.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="59" selection-start="1058" selection-end="1058" vertical-scroll-proportion="0.30422124" vertical-offset="0" max-vertical-offset="687">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ueditor.config.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/鸟窝html/javascripts/ueditor1_4_3-src/ueditor.config.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="284" column="35" selection-start="11091" selection-end="11091" vertical-scroll-proportion="-8.04" vertical-offset="5195" max-vertical-offset="7961">
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="editor_api.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/鸟窝html/javascripts/ueditor1_4_3-src/_examples/editor_api.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="66" column="30" selection-start="2164" selection-end="2164" vertical-scroll-proportion="0.0" vertical-offset="684" max-vertical-offset="2565">
+            <state line="89" column="11" selection-start="4455" selection-end="4455" vertical-scroll-proportion="0.08733624" vertical-offset="1631" max-vertical-offset="2318">
               <folding />
             </state>
           </provider>
@@ -204,13 +163,27 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../ueditor1_4_3-src" />
+    <property name="last_opened_file_path" value="Z:/" />
     <property name="FullScreen" value="false" />
   </component>
   <component name="RunManager">
@@ -239,15 +212,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1456" height="886" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1456" height="886" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25681493" sideWeight="0.6712517" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26040173" sideWeight="0.6712517" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287483" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -274,146 +247,96 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/鸟窝html/人才详情.html">
+    <entry file="file://$PROJECT_DIR$/鸟窝html/javascripts/ueditor1_4_3-src/ueditor.config.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="87" column="70" selection-start="3364" selection-end="3369" vertical-scroll-proportion="0.0" vertical-offset="1442" max-vertical-offset="3344">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/鸟窝html/javascripts/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="352" column="32" selection-start="11537" selection-end="11537" vertical-scroll-proportion="0.0" vertical-offset="6688" max-vertical-offset="6954">
-          <folding>
-            <marker date="1401955445293" expanded="false" signature="6370:6442" placeholder="..." />
-            <marker date="1401955445293" expanded="false" signature="9692:9705" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/鸟窝html/人才详情.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="87" column="70" selection-start="3364" selection-end="3369" vertical-scroll-proportion="0.0" vertical-offset="1442" max-vertical-offset="3344">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/鸟窝html/注册.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="139" column="59" selection-start="5623" selection-end="5623" vertical-scroll-proportion="0.5835962" vertical-offset="1796" max-vertical-offset="4617">
-          <folding>
-            <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#4333#5124#0" expanded="false" />
-            <element signature="n#style#0;n#span#0;n#div#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#1;n#div#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#div#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#1;n#div#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#2;n#ul#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#div#0;n#li#2;n#ul#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#0;n#li#2;n#ul#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#1;n#div#0;n#li#2;n#ul#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#3;n#ul#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#0;n#li#3;n#ul#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#1;n#div#0;n#li#3;n#ul#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#4;n#ul#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#6;n#ul#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#7;n#ul#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#8;n#ul#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#9;n#ul#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#10;n#ul#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/鸟窝html/javascripts/ueditor1_4_3-src/ueditor.parse.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="0" selection-start="887" selection-end="887" vertical-scroll-proportion="-0.004285714" vertical-offset="763" max-vertical-offset="1463">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/鸟窝html/javascripts/ueditor1_4_3-src/_src/editor.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="700">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/鸟窝html/javascripts/ueditor1_4_3-src/_src/api.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.81857145" vertical-offset="573" max-vertical-offset="1273">
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/鸟窝html/javascripts/ueditor1_4_3-src/_examples/charts.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="9" selection-start="583" selection-end="583" vertical-scroll-proportion="-0.7529762" vertical-offset="772" max-vertical-offset="1444">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/鸟窝html/javascripts/ueditor1_4_3-src/_examples/completeDemo.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="12" selection-start="687" selection-end="687" vertical-scroll-proportion="0.45238096" vertical-offset="0" max-vertical-offset="3420">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/鸟窝html/javascripts/ueditor1_4_3-src/_examples/multiDemo.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="29" selection-start="872" selection-end="872" vertical-scroll-proportion="0.40625" vertical-offset="259" max-vertical-offset="931">
+        <state line="284" column="35" selection-start="11091" selection-end="11091" vertical-scroll-proportion="0.0" vertical-offset="5195" max-vertical-offset="7961">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/鸟窝html/javascripts/ueditor1_4_3-src/_examples/editor_api.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="30" selection-start="2164" selection-end="2164" vertical-scroll-proportion="0.0" vertical-offset="684" max-vertical-offset="2565">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2565">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/鸟窝html/stylesheets/ui_common.css">
+    <entry file="file://$PROJECT_DIR$/鸟窝html/人才详情.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="90" column="27" selection-start="4461" selection-end="4461" vertical-scroll-proportion="0.0" vertical-offset="1422" max-vertical-offset="2109">
-          <folding />
-        </state>
+        <state line="87" column="70" selection-start="3364" selection-end="3369" vertical-scroll-proportion="0.0" vertical-offset="1442" max-vertical-offset="3344" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/鸟窝html/javascripts/ueditor1_4_3-src/ueditor.config.js">
+    <entry file="file://$PROJECT_DIR$/鸟窝html/人才详情.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="284" column="35" selection-start="11091" selection-end="11091" vertical-scroll-proportion="-8.04" vertical-offset="5195" max-vertical-offset="7961">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
+        <state line="87" column="70" selection-start="3364" selection-end="3369" vertical-scroll-proportion="0.0" vertical-offset="1442" max-vertical-offset="3344" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/鸟窝html/javascripts/index.js">
+    <entry file="file://$PROJECT_DIR$/鸟窝html/注册.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="159" column="19" selection-start="5526" selection-end="5526" vertical-scroll-proportion="-14.12" vertical-offset="2668" max-vertical-offset="6954">
-          <folding>
-            <marker date="1401955445293" expanded="false" signature="6370:6442" placeholder="..." />
-            <marker date="1401955445293" expanded="false" signature="9692:9705" placeholder="..." />
-          </folding>
-        </state>
+        <state line="139" column="59" selection-start="5623" selection-end="5623" vertical-scroll-proportion="0.5835962" vertical-offset="1796" max-vertical-offset="4617" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/鸟窝html/javascripts/ueditor1_4_3-src/ueditor.parse.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="0" selection-start="887" selection-end="887" vertical-scroll-proportion="-0.004285714" vertical-offset="763" max-vertical-offset="1463" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/鸟窝html/javascripts/ueditor1_4_3-src/_src/editor.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="700" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/鸟窝html/javascripts/ueditor1_4_3-src/_src/api.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.81857145" vertical-offset="573" max-vertical-offset="1273" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/鸟窝html/javascripts/ueditor1_4_3-src/_examples/charts.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="9" selection-start="583" selection-end="583" vertical-scroll-proportion="-0.7529762" vertical-offset="772" max-vertical-offset="1444" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/鸟窝html/javascripts/ueditor1_4_3-src/_examples/completeDemo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="12" selection-start="687" selection-end="687" vertical-scroll-proportion="0.45238096" vertical-offset="0" max-vertical-offset="3420" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/鸟窝html/javascripts/ueditor1_4_3-src/_examples/multiDemo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="29" selection-start="872" selection-end="872" vertical-scroll-proportion="0.40625" vertical-offset="259" max-vertical-offset="931" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/鸟窝html/发布职位.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="108" column="54" selection-start="4130" selection-end="4130" vertical-scroll-proportion="-7.3018866" vertical-offset="1665" max-vertical-offset="4142">
+        <state line="108" column="54" selection-start="4130" selection-end="4130" vertical-scroll-proportion="-13.821428" vertical-offset="1665" max-vertical-offset="4142">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/鸟窝html/stylesheets/release_job.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="59" selection-start="1058" selection-end="1058" vertical-scroll-proportion="0.30422124" vertical-offset="0" max-vertical-offset="687">
+        <state line="13" column="0" selection-start="1160" selection-end="1160" vertical-scroll-proportion="0.3595342" vertical-offset="0" max-vertical-offset="687">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/鸟窝html/javascripts/ueditor1_4_3-src/ueditor.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="0" selection-start="2491" selection-end="2491" vertical-scroll-proportion="0.40320233" vertical-offset="578" max-vertical-offset="7904">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/鸟窝html/javascripts/ueditor1_4_3-src/_examples/editor_api.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="66" column="30" selection-start="2164" selection-end="2164" vertical-scroll-proportion="0.8142857" vertical-offset="684" max-vertical-offset="2565">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/鸟窝html/stylesheets/ui_common.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="89" column="11" selection-start="4455" selection-end="4455" vertical-scroll-proportion="0.08733624" vertical-offset="1631" max-vertical-offset="2318">
           <folding />
         </state>
       </provider>
