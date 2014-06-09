@@ -127,3 +127,7 @@ em{display:inline-block;width:35px;height:30px;background:url(../images/nw_icon.
 .searchTalent .form .frm .addPost em{background-position:-105px 0px;}
 .stBtn{padding-bottom:20px;background:#fff;text-align:center;}
 .stBtn .btnR{width:185px;height:35px;line-height:35px;font-size:14px;}
+
+/*xixinliang*/
+.suggestPicture{float:left !important;width:390px !important;font-size:12px !important;color:#27a695 !important}
+.suggestPicture strong{font-size:18px !important;}

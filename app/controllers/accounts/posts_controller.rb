@@ -4,10 +4,12 @@ class Accounts::PostsController < ApplicationController
 	end
   
   def create
-    @post = Post.new(post_create_params)
-    @post.save
+    post = Post.new(post_create_params)
+    post.content = params[:editorValue]
+    post.tagstr = params[:addhopecontenthidden]
+    post.save
     flash[:notice] = "保存完成"
-    redirect_to accounts_post_path(@post)
+    redirect_to accounts_post_path(post)
   end
   
   def show
@@ -20,6 +22,6 @@ class Accounts::PostsController < ApplicationController
   
   private  
   def post_create_params  
-    params.require(:post).permit(:title, :area, :price_min, :price_max, :address, :email, :department, :content, :tags)  
+    params.require(:post).permit(:title, :area, :price_min, :price_max, :address, :email, :department, :content)  
   end  
 end

@@ -7,7 +7,9 @@ class Account < ActiveRecord::Base
   has_attached_file :logo, :styles => { :medium => "300x300>", 
                                         :thumb => "100x100>",
                                         :original => "550x400>"}, 
-                                        :default_url => "/images/:style_missing.png"
+                                        :default_url => "/images/:style_missing.png",
+                                        path: ":rails_root/public/uploads/:class/:attachment/:id/:style/album_cover.:extension",
+                                        url: "/uploads/:class/:attachment/:id/:style/album_cover.:extension"
   validates_attachment_content_type :logo, :content_type => /\Aimage\/.*\Z/
   validates :email, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i, on: :create }
   

@@ -77,7 +77,7 @@ gem 'elasticsearch-model', git: 'git://github.com/elasticsearch/elasticsearch-ra
 gem 'easy_captcha'
 gem 'rmagick'
 #性能监控插件
-#new relic
+gem 'newrelic_rpm'
 #异常邮件插件
 #exception_notification ？
 

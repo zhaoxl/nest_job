@@ -26,6 +26,7 @@ class Accounts::ProfileController < ApplicationController
       unless current_account.save
         raise AjaxException.new(current_account.errors.messages.inject({}){|hash, item| hash[item[0]] = item[1]*','; hash})
       end
+      result[:content] = current_account.logo(:thumb)
     rescue Exception => ex
       result = {status: "error", content: ex.message}
       logger.error "ajax_update_logo error log================================================"

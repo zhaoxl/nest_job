@@ -29,18 +29,32 @@ class Post < ActiveRecord::Base
     end
   end
   
-  has_attached_file :logo, :processors => [:watermark], :styles => { :medium => "300x300>", 
-                                             :thumb => "100x100>",
-                                             :original => {:geometry => '550x400>',  
-                                                           :watermark_path => "#{Rails.root}/public/watermark.png",#水印图片所在位置  
-                                                           :position => 'SouthEast'
-                                                         }
-                                             }, 
-                                             :default_url => "/images/:style_missing.png"
-  validates_attachment_content_type :logo, :content_type => /\Aimage\/.*\Z/
+  #has_attached_file :logo, :processors => [:watermark], :styles => { :medium => "300x300>", 
+  #                                           :thumb => "100x100>",
+  #                                           :original => {:geometry => '550x400>',  
+  #                                                         :watermark_path => "#{Rails.root}/public/watermark.png",#水印图片所在位置  
+  #                                                         :position => 'SouthEast'
+  #                                                       }
+  #                                           }, 
+  #                                           :default_url => "/images/:style_missing.png"
+  #validates_attachment_content_type :logo, :content_type => /\Aimage\/.*\Z/
   
-  attr_accessor :tags
-  has_many :post_tags
+  attr_accessor :tagstr
+  has_many :post_tags, dependent: :destroy
+  has_many :tags, through: :post_tags
+  
+  after_save :convert_tags
+  
+  
+  private
+  def convert_tags
+    tag_arr = self.tagstr.split ","
+    new_tags = []
+    tag_arr.each do |tag|
+      new_tags << Tag.find_or_create_by(name: tag)
+    end
+    self.tags.replace new_tags
+  end
 end
 
 #Post.mappings.to_hash

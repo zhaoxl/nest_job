@@ -555,96 +555,69 @@ $(function($) {
         if($(".error:visible").length != 0){
             return;
         }
-        $( "#dialog").html("正在发布").dialog({
+        $( "#dialog").html("正在发布...").dialog({
             modal:true
         }).dialog("open");
         $("#addHopeContenthidden").val(hopeTags.replace(/(^[,]+)|([,]+$)/g, ""));
         $("#new_post").submit();
     });
-
+    var uploading = false;
     //上传照片
-
-     /*   $("#file_upload").uploadify({
-            //开启调试
-            'debug' : true,
-            //是否自动上传
-            'auto':false,
-            //超时时间
-            'successTimeout':99999,
-            //附带值
-            'formData':{
-                'userid':'用户id',
-                'username':'用户名',
-                'rnd':'加密密文'
-            },
-            //flash
-            'swf': "/鸟窝html/javascripts/uploadify/uploadify.swf",
-            //不执行默认的onSelect事件
-            'overrideEvents' : ['onDialogClose'],
-            //文件选择后的容器ID
-            'queueID':'uploadfileQueue',
-            //服务器端脚本使用的文件对象的名称 $_FILES个['upload']
-            'fileObjName':'upload',
-            //上传处理程序
-            'uploader':'/accounts/profile/ajax_update_logo',
-            //浏览按钮的背景图片路径
-            //'buttonImage':'/鸟窝html/javascripts/uploadify/upbutton.gif',
-            //浏览按钮的宽度
-            //'width':'100',
-            //浏览按钮的高度
-            //'height':'32',
-            'left': -500,
-            //expressInstall.swf文件的路径。
-            *//*'expressInstall':'expressInstall.swf',*//*
-            //在浏览窗口底部的文件类型下拉菜单中显示的文本
-            //'fileTypeDesc':'支持的格式：',
-            //允许上传的文件后缀
-            'fileTypeExts':'*.jpg;*.jpge;*.gif;*.png',
-            //上传文件的大小限制
-            'fileSizeLimit':'3MB',
-            //上传数量
-            'queueSizeLimit' : 25,
-            //每次更新上载的文件的进展
-            'onUploadProgress' : function(file, bytesUploaded, bytesTotal, totalBytesUploaded, totalBytesTotal) {
-                //有时候上传进度什么想自己个性化控制，可以利用这个方法
-                //使用方法见官方说明
-            },
-            //选择上传文件后调用
-            'onSelect' : function(file) {
-
-            },
-            //返回一个错误，选择文件的时候触发
-            'onSelectError':function(file, errorCode, errorMsg){
-                switch(errorCode) {
-                    case -100:
-                        alert("上传的文件数量已经超出系统限制的"+$('#file_upload').uploadify('settings','queueSizeLimit')+"个文件！");
-                        break;
-                    case -110:
-                        alert("文件 ["+file.name+"] 大小超出系统限制的"+$('#file_upload').uploadify('settings','fileSizeLimit')+"大小！");
-                        break;
-                    case -120:
-                        alert("文件 ["+file.name+"] 大小异常！");
-                        break;
-                    case -130:
-                        alert("文件 ["+file.name+"] 类型不正确！");
-                        break;
-                }
-            },
-            //检测FLASH失败调用
-            'onFallback':function(){
-                alert("您未安装FLASH控件，无法上传图片！请安装FLASH控件后再试。");
-            },
-            //上传到服务器，服务器返回相应信息到data里
-            'onUploadSuccess':function(file, data, response){
-                alert(data);
+    new AjaxUpload("#myimage", {
+        action: '/accounts/profile/ajax_update_logo',
+        name:'file',
+        //选择后自动开始上传
+        autoSubmit:true,
+        data:{
+            "authenticity_token": $("meta[name='csrf-token']").attr("content")
+        },
+        //返回Text格式数据
+        responseType: "json",
+        //上传的时候按钮不可用
+        onSubmit : function(filename,ext){
+            if(uploading) return;
+            //设置允许上传的文件格式
+            if (!(ext && /^(jpg|png|jpeg|gif|JPG|PNG|JPEG|GIF)$/.test(ext))){
+                myAlert('未允许上传的文件格式!');
+                // cancel upload
+                return false;
             }
-        });*/
-    $("#file_upload").uploadify({
-        'auto'     : false,
-        'swf'      : '/鸟窝html/javascripts/uploadify/uploadify.swf',
-        'uploader' : '/accounts/profile/ajax_update_logo'
+            $( "#dialog").html("上传头像...").dialog({
+                modal:true
+            }).dialog("open");
+            uploading = true;
+        },
+        //上传完成后取得文件名filename为本地取得的文件名，msg为服务器返回的信息
+        onComplete: function(filename,json) {
+            uploading = false;
+            console.log(json);
+            if(json.status == "ok"){
+                $(".myimgs").attr("src", json.content);
+                $( "#dialog").html("上传成功");
+                setTimeout(function(){
+                    $( "#dialog").dialog({
+                        modal:true
+                    }).dialog("close");
+                },1500);
+            }else{
+                $( "#dialog").html(json.content);
+                setTimeout(function(){
+                    $( "#dialog").dialog({
+                        modal:true
+                    }).dialog("close");
+                },1500);
+            }
+        }
     });
-
     //保存基本资料
-
+    $("#saveInfo").click(function(){
+        $(".verification").blur();
+        if($(".error:visible").length != 0){
+            return;
+        }
+        $( "#dialog").html("保存基本资料...").dialog({
+            modal:true
+        }).dialog("open");
+        $("form").eq(0).submit();
+    });
 });
