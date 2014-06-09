@@ -15,16 +15,17 @@
 .jbHunter .via{height:90px;padding-top:60px;}
 .jbHunter .jhInfo{height:100px;}
 .jobHunterInfo .jhImg{float:left;margin-right:20px;}
+.jobHunterInfo .jhImg img{width:80px;height:80px;}
 .jhDetail{overflow:hidden;zoom:1;}
 .jhDetail ul{float:left;margin-right:30px;}
 .jhDetail li{margin:0;}
 .jobHunterInfo .interviewBtns{margin-right:30px;text-align:right;font-size:12px;}
 
-.searchTalent{overflow:hidden;zoom:1;border:1px solid #27a695;}
-.main .searchTalent .form{overflow:hidden;zoom:1;width:100%;margin-top:0;padding-top:30px;background:#fff;}
-.main .searchTalent .form .frm{float:left;width:320px;margin-right:25px;}
-.main .searchTalent .form .frm span{width:80px;margin-right:0px;}
-.main .searchTalent .form .frm input{width:185px;margin-right:10px;}
-.searchTalent .form .frm .addPost em{background-position:-105px 0px;}
-.stBtn{padding-bottom:20px;background:#fff;text-align:center;}
-.stBtn .btnR{width:185px;height:35px;line-height:35px;font-size:14px;}
+/*收藏*/
+.employment{overflow:hidden;zoom:1;margin:20px 0 30px;}
+.employment li{padding:15px;background:#fff;margin-top:-1px;border-top:1px dashed #e7e9ea;}
+.employment .current{background:#f5fdfc;}
+.employment .jhDetail li{padding:0 0 10px 0;background:none;border:none;}
+.employment .jobHunterInfo{padding:0;background:none;}
+.employment .employBtns{text-align:right;}
+.employment .employBtns a{margin-right:10px;}

@@ -6,6 +6,7 @@
 .main .form .frm .addPost em{background-position:-105px 0px;}
 .main .form .frm .file{position:relative;float:left;width:80px;height:80px;margin-right:40px;}
 .main .form .frm span.fImg{width:80px;}
+.main .form .frm span.fImg img{width:80px;height:80px;}
 .main .form .frm .file a{position:absolute;bottom:0;left:0;width:100%;background:#000;color:#fff;text-align:center;}
 .main .jobBtns{margin-left:237px;}
 .main .jobBtns .btn{width:135px;height:30px;line-height:30px;font-size:14px;border-bottom:2px solid #1b7a6d;font-family: '微软雅黑'; border: none;}

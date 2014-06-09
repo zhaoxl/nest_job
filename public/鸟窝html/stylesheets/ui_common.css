@@ -76,6 +76,7 @@ em{display:inline-block;width:35px;height:30px;background:url(../images/nw_icon.
 /*ml subnav*/
 .mr .info{overflow:hidden;zoom:1;padding-bottom:15px;border-bottom:1px dashed #e6e6e6;}
 .info .userImg{float:left;margin-right:20px;}
+.info .userImg img{width:80px;height:80px;}
 .info .userInfo{float:left;color:#363837;font:14px '微软雅黑';}
 .cash{margin-top:15px;}
 .cash li{margin-bottom:10px;}
@@ -101,6 +102,7 @@ em{display:inline-block;width:35px;height:30px;background:url(../images/nw_icon.
 /*hrInfo*/
 .hrInfo{overflow:hidden;zoom:1;font-size:14px;color:#4e5053;}
 .hrInfo .hrImg{float:left;margin-right:20px;}
+.hrInfo .hrImg img{width:80px;height:80px;}
 .hrInfo .hrIf{float:left;}
 .hrInfo .hrIf p{line-height:normal;}
 .hrInfo .hrIf p span{margin-right:60px;}
@@ -115,3 +117,13 @@ em{display:inline-block;width:35px;height:30px;background:url(../images/nw_icon.
 .pager li .current{background:#27a695;color:#fff;}
 .pager .etc{background:none;border:none;}
 .pager li span{color:#bcbdbd;}
+
+/*searchTalent*/
+.searchTalent{overflow:hidden;zoom:1;margin-bottom:20px;border:1px solid #27a695;}
+.main .searchTalent .form{overflow:hidden;zoom:1;width:100%;margin-top:0;padding-top:30px;background:#fff;}
+.main .searchTalent .form .frm{float:left;width:320px;margin-right:25px;}
+.main .searchTalent .form .frm span{width:80px;margin-right:0px;}
+.main .searchTalent .form .frm input{width:185px;margin-right:10px;}
+.searchTalent .form .frm .addPost em{background-position:-105px 0px;}
+.stBtn{padding-bottom:20px;background:#fff;text-align:center;}
+.stBtn .btnR{width:185px;height:35px;line-height:35px;font-size:14px;}
