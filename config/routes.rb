@@ -8,10 +8,14 @@ NestJob::Application.routes.draw do
     post "/accounts/sessions/ajax_create" => "accounts/sessions#ajax_create"
   end
     
-  get '/' => 'application#index'
+  get '/' => 'index#index'
 
 
-  resources :posts
+  resources :posts do
+    collection do
+      get :search
+    end
+  end
   namespace :accounts do
     resources :profile do
       collection do

@@ -11,6 +11,9 @@
   <%= javascript_include_tag '/鸟窝html/javascripts/jquery-1.10.2.js', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag '/鸟窝html/javascripts/jquery-ui-1.10.4.min.js', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag '/鸟窝html/javascripts/cookie.js', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'http://counter.sina.com.cn/ip', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag '/鸟窝html/javascripts/getcity.js', 'data-turbolinks-track' => true %>
+
 
   <%= yield :head_include%>
   <%= csrf_meta_tags %>
@@ -20,12 +23,12 @@
 		<div class="header">
 			<h1><a href="/" class="logo">鸟窝</a></h1>
 			 <div class="search">
-                <div class="searchBox loginTip" data-msgtip="请填写期望：职位与城市">
-                    <input type="text" style="color:#8f8f8f;text-align: left;line-height: 30px" value=" 输入职位名称，如：销售" id="searchJobs">
-                    <a href="#" class="searchBtn"><em>&nbsp;</em></a>
+                <div class="searchBox" data-msgtip="请填写期望：职位与城市">
+                    <input type="text" id="searchJobs" style="color:#8f8f8f;text-align: left;line-height: 30px" value=" 输入职位名称，如：销售" id="searchJobs" />
+                    <a href="javascript:void(0)" id="searchJobBtn" class="searchBtn"><em>&nbsp;</em></a>
                 </div>
                 <div class="cities">
-                    <p><span>城市</span><a href="#" class="cityBtn"><em>&nbsp;</em></a></p>
+                    <p><span id="mycity">城市</span><a href="#" class="cityBtn"><em>&nbsp;</em></a></p>
                     <ul>
                         <li>北京</li>
                         <li>上海</li>

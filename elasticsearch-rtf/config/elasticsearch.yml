@@ -660,7 +660,7 @@ index:
           ip: 127.0.0.1:6379
           channel: ansj_term
 
-index.analysis.analyzer.default.type: mmseg
+index.analysis.analyzer.default.type: ik
 #index.analysis.analyzer.default.type: keyword
 
 # rtf.filter.redis.host: 127.0.0.1

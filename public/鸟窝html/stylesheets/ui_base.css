@@ -77,3 +77,14 @@ a:hover {
     overflow: hidden;
     visibility: hidden;
 }
+
+/*searchCityPop xixinliang*/
+#searchCityPop{margin:0px;background-color: #e1f3f1;}
+#searchCityPop a{margin:10px;color: #fff}
+
+#initiateInterviewPop{background-color: #fff;text-align: left;color: #A1A4A3}
+#initiateInterviewPop div{font-size: 20px}
+#initiateInterviewPop input{border: 1px solid #ccc;width: 200px;height: 30px}
+#initiateInterviewPop .one{height: 200px;width: 100%;}
+#initiateInterviewPop .two{background-color: #E7EEED;height: 202px;width: 100%;font-size: 15px;text-align: left;padding: 15px}
+#initiateInterviewPop a{color: green}

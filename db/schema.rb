@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140608023743) do
+ActiveRecord::Schema.define(version: 20140609110148) do
 
   create_table "account_resume_experiences", force: true do |t|
     t.string   "company_name"
@@ -44,6 +44,11 @@ ActiveRecord::Schema.define(version: 20140608023743) do
     t.integer  "gender"
   end
 
+  create_table "account_tags", force: true do |t|
+    t.integer "account_id"
+    t.integer "tag_id"
+  end
+
   create_table "accounts", force: true do |t|
     t.string   "email"
     t.string   "password"
@@ -68,6 +73,7 @@ ActiveRecord::Schema.define(version: 20140608023743) do
     t.string   "last_sign_in_ip"
     t.string   "description"
     t.string   "company_email"
+    t.string   "hope_city"
   end
 
   add_index "accounts", ["email"], name: "index_accounts_on_email", unique: true, using: :btree

@@ -75,7 +75,7 @@ gem 'aasm', '3.1.1'
 gem 'elasticsearch-model', git: 'git://github.com/elasticsearch/elasticsearch-rails.git'
 #验证码
 gem 'easy_captcha'
-gem 'rmagick'
+gem 'rmagick', require: false
 #性能监控插件
 gem 'newrelic_rpm'
 #异常邮件插件

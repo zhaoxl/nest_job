@@ -10,7 +10,7 @@
  ************************************************************
  */
 $(function($) {
-    var isSaveHope = false;//是否保存过期望职位信息
+    var isSaveHope = true;//是否保存过期望职位信息
     //验证=======================start
     $(".verification").each(function(){
         $(this).bind({
@@ -245,11 +245,55 @@ $(function($) {
         },
         resizable:false
     });
+    $("body").append(
+    '<!--选择城市-->'+
+        '<div class="interviewBtns" id="searchCityPop">'+
+        ' <a href="#" class="btnR">北京</a>'+
+        ' <a href="#" class="btnR">上海</a>'+
+        '  <a href="#" class="btnR">广州</a>'+
+        '  <a href="#" class="btnR">深圳</a>'+
+        ' <a href="#" class="btnR">成都</a>'+
+        '   <a href="#" class="btnR">杭州</a>'+
+        '   <a href="#" class="btnR">武汉</a>'+
+        '   <a href="#" class="btnR">南京</a>'+
+        '   <a href="#" class="btnR">其他</a>'+
+        ' </div>');
+    //选择城市====start
+    $("#searchCityPop").dialog({
+        autoOpen:false,
+        modal:false,
+        height:200,
+        width:500,
+        title:"选择城市",
+        show:{effect:'drop', direction:'up'},
+        hide:{effect:'drop', direction:'down'},
+        draggable:false,
+        close: function() {
+            $(".verification").first().focus();
+        },
+        resizable:false
+    });
+    $("#js_searchCity").click(function(){
+        $( "#searchCityPop").dialog({
+            modal:true,
+            close:function(){}
+        }).dialog( "open");
+    });
     //搜索============start
-    var searchJob = function(content, e){
-        var searchJobs = content || $.trim($("#searchJobs").val());
-        if(!e || e.keyCode){
-            //ajax 搜索词
+    var searchJob = function(){
+        var searchJobs = $.trim($("#searchJobs").val());
+        if(searchJobs == "输入职位名称，如：销售" || !searchJobs){
+            $( "#dialog").html("请输入要搜索的职位").dialog({
+                modal:true,
+                close: function() {$("#addHopeContent").focus();}
+            }).dialog( "open");
+            setTimeout(function(){
+                $( "#dialog").dialog( "close");
+            },2000)
+            return;
+        }
+        if(searchJobs){
+            window.location.href="/posts/search?k=" + searchJobs;
         }
 
     }
@@ -266,13 +310,18 @@ $(function($) {
             if(value == "输入职位名称，如：销售"){
                 $(this).val("")
             }
-            if(!isSaveHope) $(this).blur();
         },
         keyup:function(event){
-            searchJob("", event);
+            var keycode = (event.keyCode ? event.keyCode : event.which);
+            if(keycode == '13'){
+                searchJob();
+            }
+
         }
     });
-    //发现标签搜索
+
+    ILData_callback("mycity");
+  /*  //发现标签搜索
     $(".f_btn").each(function(){
         $(this).bind({
             mouseout:function(){
@@ -286,8 +335,10 @@ $(function($) {
                 searchJob($.trim($(this).html()));
             }
         });
+    });*/
+    $("#searchJobBtn").click(function(){
+        searchJob();
     });
-    $("#searchJobBtn").click(searchJob);
     var hopeTags = "";
     //期望职位标签删除=====================start
     var deleteHope = function(){
@@ -417,15 +468,7 @@ $(function($) {
         });
     });
 
-    //收藏
-    $(".collect").each(function(){
-        $(this).click(function(){
-            $( "#dialog").html("收藏成功").dialog({
-                modal:true,
-                close:function(){}
-            }).dialog( "open");
-        });
-    });
+
     //分享成功
     $(".share").each(function(){
         $(this).click(function(){
@@ -563,7 +606,7 @@ $(function($) {
     });
     var uploading = false;
     //上传照片
-    new AjaxUpload("#myimage", {
+    $("#myimage").length > 0 && new AjaxUpload("#myimage", {
         action: '/accounts/profile/ajax_update_logo',
         name:'file',
         //选择后自动开始上传
@@ -620,4 +663,46 @@ $(function($) {
         }).dialog("open");
         $("form").eq(0).submit();
     });
+
+
+
 });
+
+//发起面试
+function initiateInterview(){
+    $( "#initiateInterviewPop").dialog({
+        modal:true,
+        height:500,
+        title:"发起面试",
+        width:500
+    }).dialog("open");
+
+/*    //ajax保存期望值
+    $.ajax({
+        dataType: "json",
+        type: "post",
+        url: "/accounts/sessions/ajax_create",
+        data: {
+            "jobID": "1",//发起面试的职位id
+            "authenticity_token": $("meta[name='csrf-token']").attr("content")
+        },
+        success: function(result) {
+            if (result.status == "ok") {
+                $( "#dialog").html("发起成功，请等待HR处理").dialog({
+                    modal:true
+                }).dialog("close");
+            } else {
+                $( "#dialog").html("保存失败"+result.content);
+            }
+        }
+    });*/
+}
+
+//收藏职位
+function myCollect(_this){
+    var jobID = $(_this).attr("jobid");
+    $( "#dialog").html("收藏成功").dialog({
+        modal:true,
+        close:function(){}
+    }).dialog( "open");
+}

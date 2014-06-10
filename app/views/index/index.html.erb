@@ -1,0 +1,89 @@
+<div class="mainContainer">
+	<div class="main">
+		<div class="ml">
+			<h2 class="regH2">推荐公司</h2>
+			<ul class="brands loginTip" data-msgtip="请填写期望：职位与城市">
+				<li><a href="#" class="baidu"><span>百度</span></a></li>
+				<li><a href="#" class="baiduyun"><span>百度云</span></a></li>
+				<li><a href="#" class="huaban"><span>花瓣</span></a></li>
+				<li><a href="#" class="oneshop"><span>1号店</span></a></li>
+				<li><a href="#" class="jd"><span>京东</span></a></li>
+				<li><a href="#" class="sina"><span>新浪</span></a></li>
+			</ul>
+		</div>
+		<div class="mm">
+<!--					<ul class="mSubNav">
+				<li><a href="#" class="findTit">发现</a></li>
+				<li><a href="#" class="f_current">JS</a></li>
+				<li><a href="#">CSS</a></li>
+				<li><a href="#">UI</a></li>
+				<li><a href="#">PM</a></li>
+				<li><a href="#" class="topTit">热门</a></li>
+				<li><a href="#" class="t_current">JS</a></li>
+				<li><a href="#">CSS</a></li>
+				<li><a href="#">UI</a></li>
+				<li><a href="#">PM</a></li>
+			</ul>-->
+                <ul class="mSubNav">
+                    <li><a href="#" class="findTit">发现</a></li>
+                    <li class="loginTip" data-msgtip="请填写期望：职位与城市"><a href="javascript:void(0)" class="f_current">JS</a></li>
+                    <li class="loginTip" data-msgtip="请填写期望：职位与城市"><a href="javascript:void(0)" class="f_btn">CSS</a></li>
+                    <li class="loginTip" data-msgtip="请填写期望：职位与城市"><a href="javascript:void(0)" class="f_btn">UI</a></li>
+                    <li class="loginTip" data-msgtip="请填写期望：职位与城市"><a href="javascript:void(0)" class="f_btn">PM</a></li>
+                    <li><a href="#" class="topTit">热门</a></li>
+                    <li class="loginTip" data-msgtip="请填写期望：职位与城市"><a href="#" class="t_current">JS</a></li>
+                    <li class="loginTip" data-msgtip="请填写期望：职位与城市"><a href="#">CSS</a></li>
+                    <li class="loginTip" data-msgtip="请填写期望：职位与城市"><a href="#">UI</a></li>
+                    <li class="loginTip" data-msgtip="请填写期望：职位与城市"><a href="#">PM</a></li>
+                </ul>
+			<h2 class="indexH2">嗨，给自己期望的工作留点印记吧，才能进行下一步哦！！！</h2>
+			<!--<div class="postForm">
+				<div class="hopePost">
+					<div class="frm">
+						<span>期望职位：</span>
+						<div class="posts">
+							<a href="#">JavaScript<i>×</i></a>
+							<a href="#">前端css<i>×</i></a>
+							<a href="#">nodeJS<i>×</i></a>
+							<a href="#">Designer<i>×</i></a>
+							<a href="#">前端css<i>×</i></a>
+							<a href="#">nodeJS<i>×</i></a>
+							<a href="#">Designer<i>×</i></a>
+						</div>
+						<div class="postInput">
+							<input type="text" /><a href="#" class="addPost"><em>&nbsp;</em></a>
+						</div>
+					</div>
+					<div class="frm">
+						<span>期望城市：</span>
+						<div class="postInput">
+							<input type="text" />
+						</div>
+					</div>
+					<a href="#" class="saveBtn">保存印记</a>
+				</div>
+			</div>-->
+                <div class="postForm">
+                    <div class="hopePost">
+                        <div class="frm">
+                            <span>期望职位：</span>
+                            <div class="posts" id="addHopePanel">
+                            </div>
+
+                            <div class="postInput">
+                                <input type="text" id="addHopeContent"><a href="javascript:void(0)" id="addHope" class="addPost"><em>&nbsp;</em></a>
+                            </div>
+                        </div>
+                        <div class="frm">
+                            <span>期望城市：</span>
+                            <div class="postInput">
+                                <input type="text" id="cityHopes">
+                            </div>
+                        </div>
+                        <a href="javascript:void(0)" id="saveHopes" class="saveBtn">保存印记</a>
+                    </div>
+                </div>
+		</div>
+	</div>
+	<%= render partial: "/layouts/right"%>
+</div>

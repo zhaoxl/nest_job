@@ -1,7 +1,7 @@
 <%if current_account%>
 <div class="mr">
 	<div class="info">
-		<div class="userImg"><%= link_to image_tag(current_account.logo(:thumb)), accounts_profile_index_path, class: "myimgs"%></div>
+		<div class="userImg"><%= link_to image_tag(current_account.logo(:thumb), class: "myimgs"), accounts_profile_index_path, class: "myimgs"%></div>
 		<div class="userInfo">
 			<p><%= current_account.nick_name || "请完善昵称" %></p>
 			<p>会员：5级</p>

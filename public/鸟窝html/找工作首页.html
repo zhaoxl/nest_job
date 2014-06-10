@@ -6,6 +6,10 @@
 	<link rel="stylesheet" href="stylesheets/ui_base.css" />
 	<link rel="stylesheet" href="stylesheets/ui_common.css" />
 	<link rel="stylesheet" href="stylesheets/register.css" />
+    <link rel="stylesheet" href="javascripts/css/ui-lightness/jquery-ui-1.10.4.min.css" />
+    <script type="text/javascript" src="javascripts/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="javascripts/jquery-ui-1.10.4.min.js"></script>
+    <script type="text/javascript" src="javascripts/index.js"></script>
 </head>
 <body>
 	<div class="headerWrap">
@@ -88,7 +92,7 @@
 							</div>
 							
 							<div class="employBtns">
-								<a href="#" class="btnR">发起面试</a><a href="#" class="btnR">收    藏</a>
+								<a href="javascript:initiateInterview(this)" class="btnR">发起面试</a><a href="#" class="btnR">收    藏</a>
 							</div>
 						</li>
 						<li>
@@ -255,5 +259,21 @@
 			</div>
 		</div>
 	</div>
+    <div id="initiateInterviewPop">
+        <!--层-->
+        <div class="one">
+            <div>邀约金：<input class=""></div>
+            <div>密语：</div><div><textarea rows="3" cols="15"></textarea></div>
+        </div>
+        <div class="two">
+            什么是鸟窝币？<br />
+            <p>为应聘方与招聘方创造直接价值与长尾价值</p>
+            邀请面试如何玩？<br />
+            <p>为应聘方与招聘方创造直接价值与长尾价值</p>
+            什么是面试币？<br />
+            <p>为应聘方与招聘方创造直接价值与长尾价值</p>
+            <a href="javascript:void(0)">更多教程</a>
+        </div>
+    </div>
 </body>
 </html>

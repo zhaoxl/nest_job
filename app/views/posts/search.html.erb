@@ -1,0 +1,64 @@
+<%content_for :head_include do%>
+<%end%>
+<div class="mainContainer">
+  <div class="main">
+  	<div class="ml">
+  		<h2 class="regH2">推荐公司</h2>
+  		<ul class="brands">
+  			<li><a href="#" class="baidu"><span>百度</span></a></li>
+  			<li><a href="#" class="baiduyun"><span>百度云</span></a></li>
+  			<li><a href="#" class="huaban"><span>花瓣</span></a></li>
+  			<li><a href="#" class="oneshop"><span>1号店</span></a></li>
+  			<li><a href="#" class="jd"><span>京东</span></a></li>
+  			<li><a href="#" class="sina"><span>新浪</span></a></li>
+  		</ul>
+  	</div>
+  	<div class="mm">
+  		<ul class="mSubNav">
+  			<li><a href="#" class="findTit">发现</a></li>
+  			<li><a href="#" class="f_current">JS</a></li>
+  			<li><a href="#">CSS</a></li>
+  			<li><a href="#">UI</a></li>
+  			<li><a href="#">PM</a></li>
+  			<li><a href="#" class="topTit">热门</a></li>
+  			<li><a href="#" class="t_current">JS</a></li>
+  			<li><a href="#">CSS</a></li>
+  			<li><a href="#">UI</a></li>
+  			<li><a href="#">PM</a></li>
+  		</ul>
+      <%if @posts.present?%>
+  		<ul class="employment">
+  			<%@posts.each do |post|%>
+        <%post_record = @records.find(post.id)%>
+  			<li class="selectcurrent">
+  				<div class="employInfo">
+  					<div class="userImg"><%= link_to image_tag(post_record.account.logo(:thumb)), "#"%></div>
+  					<div class="employDetail">
+  						<p><span class="b"><%= post_record.account.nick_name%>   （<%= post_record.protect_email%>）</span><span>发布了  <%= raw post.highlight.title ? post.highlight.title[0] : post.title%></span></p>  
+  						<p><span class="b">地点：<%= raw post.highlight.address ? post.highlight.address[0] : post.address%></span><span class="b">公司：<%= post_record.company.name%></span><span class="b">薪资：<%= "#{post.price_min.to_i}k ~ #{post.price_max.to_i}k"%></span></p>
+  						<dl>
+  						 	<dt>职位要求：</dt>
+  						 	<%= sanitize(post.highlight.content ? post.highlight.content[0] : post.content)  %>
+  						 </dl> 
+  					</div>
+  				</div>
+				
+  				<div class="employBtns">
+  					<a href="#" class="btnR">发起面试</a><a href="<%= post_path(post)%>" class="btnR">查    看</a><a href="#" class="btnR">收    藏</a>
+  				</div>
+  			</li>
+        <%end%>
+  		</ul>
+      <%= paginate @posts, window: 6%>
+      <%else%>
+			<ul class="employment">
+				<li>
+          <p class="noSearchTags" >您搜索的职位似乎很厉害的样子，但是没有o(╯□╰)o换个关键词再搜一下</p>
+				</li>
+			</ul>
+      <%end%>
+  	</div>
+  </div>
+  <%= render partial: "/layouts/right"%>
+</div>
+

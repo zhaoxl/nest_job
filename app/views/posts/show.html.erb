@@ -1,0 +1,63 @@
+<%content_for :head_include do%>
+	<link rel="stylesheet" href="/鸟窝html/stylesheets/job_detail.css" />
+<%end%>
+<div class="mainContainer">
+	<div class="main">
+		<div class="ml">
+			<h2 class="h2Title">公司信息</h2>
+			<div class="companyInfo">
+				<div class="compImg"><a href="#"><img src="images/company_demo.jpg" alt="" /></a></div>
+				<div class="compInfo">
+					<p><%= @company.name%></p>
+					<p class="cmpUrl"><a href="#">www.ifeng.com</a></p>
+					<p>性质：<%= @company.nature.to_s%></p>
+					<p>行业：<%= @company.industry.to_s%></p>
+					<div class="slide">轮播图展示</div>
+					<p>融资阶段：<%= @company.financing_stage%></p>
+				</div>
+			</div>
+			<h2 class="h2Title">团队成员</h2>
+			<div class="members">
+				<ul>
+					<li>
+						<div class="memImg">
+							<a href="#"><img src="images/user_demo.jpg" alt=""></a>
+						</div>
+						<p class="name">周绍宁</p>
+						<p>创始人兼CEO</p>
+					</li>
+					<li>
+						<div class="memImg">
+							<a href="#"><img src="images/user_demo.jpg" alt=""></a>
+						</div>
+						<p class="name">周绍宁</p>
+						<p>创始人兼CEO</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="mm">
+			<h2 class="h2Title">职位详情</h2>
+			<div class="jobDetail">
+				<div class="hrInfo">
+					<div class="hrImg"><a href="#"><img src="images/user_demo.jpg" alt=""></a></div>
+					<div class="hrIf">
+						<p><span><%= @post.account.nick_name%> （<%= @post.protect_email%>）</span></p>
+						<p class="hot"><span>发布了  <%= @post.title%></span></p> 
+						<p><span>地点：<%= @post.address%></span><span>公司：<%= @company.name%></span><span>薪资：￥<%= "#{@post.price_min.to_i}k ~ #{@post.price_max.to_i}k"%></span></p>
+						<p class="time">发布时间：<%= @post.created_at.strftime("%Y.%m.%d")%></p>
+					</div>
+				</div>
+        <div class="content">
+          <%= sanitize @post.content %>
+        </div>
+			</div>
+			<div class="jobBtns">
+				<a href="#" class="btnR">发起面试</a><a href="#" class="btnR">收    藏</a>
+				<a href="#" class="btnR">分    享</a>
+			</div>
+		</div>
+	</div>
+  <%= render partial: "/layouts/right"%>
+</div>
+

@@ -1,0 +1,81 @@
+[2014-06-09 09:54:21,619][INFO ][node                     ] [Stingray] version[1.0.0], pid[1097], build[a46900e/2014-02-12T16:18:34Z]
+[2014-06-09 09:54:21,619][INFO ][node                     ] [Stingray] initializing ...
+[2014-06-09 09:54:21,799][INFO ][plugins                  ] [Stingray] loaded [transport-thrift, analysis-mmseg, analysis-pinyin, mapper-attachments, marvel, analysis-smartcn, analysis-ik, analysis-ansj, DocumentPartialUpdate, river-email, analysis-string2int, analysis-stconvert], sites [marvel, bigdesk, head, inquisitor, kopf, paramedic, rtf, segmentspy]
+[2014-06-09 09:54:24,825][INFO ][node                     ] [Stingray] initialized
+[2014-06-09 09:54:24,826][INFO ][node                     ] [Stingray] starting ...
+[2014-06-09 09:54:24,857][INFO ][thrift                   ] [Stingray] bound on port [9500]
+[2014-06-09 09:54:25,004][INFO ][transport                ] [Stingray] bound_address {inet[/0:0:0:0:0:0:0:0%0:9300]}, publish_address {inet[/192.168.3.156:9300]}
+[2014-06-09 09:54:28,219][INFO ][cluster.service          ] [Stingray] new_master [Stingray][adtAOK2uSV-tbZITIqm1sw][MacMiniE0100015][inet[/192.168.3.156:9300]], reason: zen-disco-join (elected_as_master)
+[2014-06-09 09:54:28,321][INFO ][discovery                ] [Stingray] elasticsearch/adtAOK2uSV-tbZITIqm1sw
+[2014-06-09 09:54:28,336][INFO ][http                     ] [Stingray] bound_address {inet[/0:0:0:0:0:0:0:0%0:9200]}, publish_address {inet[/192.168.3.156:9200]}
+[2014-06-09 09:54:28,356][INFO ][gateway                  ] [Stingray] recovered [0] indices into cluster_state
+[2014-06-09 09:54:28,356][INFO ][node                     ] [Stingray] started
+[2014-06-09 09:54:35,808][INFO ][mmseg-analyzer           ] chars loaded time=362ms, line=14861, on file=chars.dic
+[2014-06-09 09:54:35,812][INFO ][mmseg-analyzer           ] words loaded time=1ms, line=4, on file=words-my.dic
+[2014-06-09 09:54:36,318][INFO ][mmseg-analyzer           ] words loaded time=506ms, line=263638, on file=words.dic
+[2014-06-09 09:54:36,318][INFO ][mmseg-analyzer           ] load all dic use time=872ms
+[2014-06-09 09:54:36,319][INFO ][mmseg-analyzer           ] unit loaded time=0ms, line=35, on file=units.dic
+[2014-06-09 09:54:37,822][INFO ][ik-analyzer              ] [Dict Loading]ik/custom/mydict.dic
+[2014-06-09 09:54:37,822][INFO ][ik-analyzer              ] [Dict Loading]ik/custom/single_word_low_freq.dic
+[2014-06-09 09:54:37,827][INFO ][ik-analyzer              ] [Dict Loading]ik/custom/ext_stopword.dic
+[2014-06-09 09:54:38,156][INFO ][ansj-analyzer            ] ansj停止词典加载完毕!
+[2014-06-09 09:54:42,199][INFO ][ansj-analyzer            ] ansj分词器预热完毕，可以使用!
+[2014-06-09 09:54:42,202][INFO ][ansj-redis-pool          ] 127.0.0.1:6379
+[2014-06-09 09:54:42,220][ERROR][ansj-redis-utils         ] Could not get a resource from the pool
+redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool
+	at redis.clients.util.Pool.getResource(Pool.java:22)
+	at org.ansj.elasticsearch.pubsub.redis.RedisUtils.getConnection(RedisUtils.java:22)
+	at org.ansj.elasticsearch.index.config.AnsjElasticConfigurator$1.run(AnsjElasticConfigurator.java:79)
+	at java.lang.Thread.run(Thread.java:695)
+Caused by: redis.clients.jedis.exceptions.JedisConnectionException: java.net.ConnectException: Connection refused
+	at redis.clients.jedis.Connection.connect(Connection.java:124)
+	at redis.clients.jedis.BinaryClient.connect(BinaryClient.java:54)
+	at redis.clients.jedis.BinaryJedis.connect(BinaryJedis.java:1657)
+	at redis.clients.jedis.JedisPool$JedisFactory.makeObject(JedisPool.java:63)
+	at org.apache.commons.pool.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:1158)
+	at redis.clients.util.Pool.getResource(Pool.java:20)
+	... 3 more
+Caused by: java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(PlainSocketImpl.java:382)
+	at java.net.PlainSocketImpl.connectToAddress(PlainSocketImpl.java:241)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:228)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:431)
+	at java.net.Socket.connect(Socket.java:527)
+	at redis.clients.jedis.Connection.connect(Connection.java:119)
+	... 8 more
+[2014-06-09 09:54:42,223][INFO ][ansj-analyzer            ] redis守护线程准备完毕,ip:127.0.0.1:6379,port:6379,channel:ansj_term
+[2014-06-09 09:54:42,404][INFO ][cluster.metadata         ] [Stingray] [.marvel-2014.06.09] creating index, cause [auto(bulk api)], shards [1]/[1], mappings [node_stats, index_stats, _default_]
+[2014-06-09 09:54:43,254][INFO ][cluster.metadata         ] [Stingray] [.marvel-2014.06.09] update_mapping [node_stats] (dynamic)
+[2014-06-09 09:54:43,369][INFO ][cluster.metadata         ] [Stingray] [.marvel-2014.06.09] update_mapping [routing_event] (dynamic)
+[2014-06-09 09:54:43,381][INFO ][cluster.metadata         ] [Stingray] [.marvel-2014.06.09] update_mapping [index_event] (dynamic)
+[2014-06-09 09:54:43,391][INFO ][cluster.metadata         ] [Stingray] [.marvel-2014.06.09] update_mapping [shard_event] (dynamic)
+[2014-06-09 09:54:43,401][INFO ][cluster.metadata         ] [Stingray] [.marvel-2014.06.09] update_mapping [cluster_event] (dynamic)
+[2014-06-09 09:54:43,410][INFO ][cluster.metadata         ] [Stingray] [.marvel-2014.06.09] update_mapping [node_event] (dynamic)
+[2014-06-09 09:54:43,505][INFO ][cluster.metadata         ] [Stingray] [.marvel-2014.06.09] update_mapping [indices_stats] (dynamic)
+[2014-06-09 09:54:43,542][INFO ][cluster.metadata         ] [Stingray] [.marvel-2014.06.09] update_mapping [index_stats] (dynamic)
+[2014-06-09 09:54:43,576][INFO ][cluster.metadata         ] [Stingray] [.marvel-2014.06.09] update_mapping [cluster_stats] (dynamic)
+[2014-06-09 09:57:54,808][INFO ][node                     ] [Stingray] stopping ...
+[2014-06-09 09:57:54,938][ERROR][marvel.agent.exporter    ] [Stingray] error sending data
+java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(PlainSocketImpl.java:382)
+	at java.net.PlainSocketImpl.connectToAddress(PlainSocketImpl.java:241)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:228)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:431)
+	at java.net.Socket.connect(Socket.java:527)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:158)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:424)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:538)
+	at sun.net.www.http.HttpClient.parseHTTP(HttpClient.java:668)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1218)
+	at java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:379)
+	at org.elasticsearch.marvel.agent.exporter.ESExporter.sendCloseExportingConnection(ESExporter.java:218)
+	at org.elasticsearch.marvel.agent.exporter.ESExporter.exportXContent(ESExporter.java:251)
+	at org.elasticsearch.marvel.agent.exporter.ESExporter.exportEvents(ESExporter.java:160)
+	at org.elasticsearch.marvel.agent.AgentService$ExportingWorker.exportEvents(AgentService.java:287)
+	at org.elasticsearch.marvel.agent.AgentService$ExportingWorker.run(AgentService.java:249)
+	at java.lang.Thread.run(Thread.java:695)
+[2014-06-09 09:57:54,939][INFO ][node                     ] [Stingray] stopped
+[2014-06-09 09:57:54,939][INFO ][node                     ] [Stingray] closing ...
+[2014-06-09 09:57:54,957][INFO ][node                     ] [Stingray] closed
