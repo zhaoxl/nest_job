@@ -8,7 +8,7 @@ body{font-family:'微软雅黑';}
 /*icon em*/
 em{display:inline-block;width:35px;height:30px;background:url(../images/nw_icon.png) no-repeat;}
 /*button*/
-.btn{display:inline-block;background:#27a695;color:#fff;text-align:center;}
+.btn{display:inline-block;background:#27a695;color:#fff;text-align:center;border-bottom:2px solid #1b7a6d;}
 .btnR{display:inline-block;width:80px;height:26px;line-height:26px;background:#1abc9c;color:#fff;text-align:center;border-bottom:2px solid #0e876f;border-radius:5px;}
 .btn:hover,.btnR:hover{background:#16a085;}
 .jobBImport{background: #fe4028;border-bottom: 2px solid #fe4028;}
