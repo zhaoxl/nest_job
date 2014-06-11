@@ -321,7 +321,7 @@ $(function($) {
     });
 
     ILData_callback("mycity");
-  /*  //发现标签搜索
+   //发现标签搜索
     $(".f_btn").each(function(){
         $(this).bind({
             mouseout:function(){
@@ -335,7 +335,7 @@ $(function($) {
                 searchJob($.trim($(this).html()));
             }
         });
-    });*/
+    });
     $("#searchJobBtn").click(function(){
         searchJob();
     });
@@ -438,10 +438,10 @@ $(function($) {
                 $.ajax({
                     dataType: "json",
                     type: "post",
-                    url: "/accounts/sessions/ajax_create",
+                    url: "index/ajax_update_hope",
                     data: {
-                        "job": hopeTags.replace(/(^[,]+)|([,]+$)/g, ""),//职位
-                        "city": $.trim($("#mypwd").val()),//城市
+                        "tags": hopeTags.replace(/(^[,]+)|([,]+$)/g, ""),//职位
+                        "hope_city": cityHopes,//城市
                         "authenticity_token": $("meta[name='csrf-token']").attr("content")
                     },
                     success: function(result) {
@@ -662,6 +662,16 @@ $(function($) {
             modal:true
         }).dialog("open");
         $("form").eq(0).submit();
+    });
+
+    //职位列表效果
+    $(".selectcurrent").bind({
+        mouseover:function(){
+            $(this).addClass("current");
+        },
+        mouseout:function(){
+            $(this).removeClass("current");
+        }
     });
 
 

@@ -36,6 +36,11 @@ class Accounts::RegistrationsController < Devise::RegistrationsController
         raise AjaxException.new(resource.errors.messages.inject({}){|hash, item| hash[item[0]] = item[1]*','; hash})
       end
       
+      #从cookie取出首页关联的标签
+      resource.hope_city = cookies[:account_hope_city] if cookies[:account_hope_city].present?
+      resource.tag_list.add(cookies[:account_tag_list].split(",")) if cookies[:account_tag_list].present?
+      
+      #登陆
       sign_in(:account, resource)
     rescue Exception => ex
       result = {status: "error", content: ex.message}

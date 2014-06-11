@@ -1,4 +1,10 @@
 class Accounts::PostsController < ApplicationController
+  before_action :authenticate_account!
+  
+  def index
+    @posts = current_account.posts.ct_desc.page(params[:id]).per(8)
+  end
+  
 	def new
 		@post = Post.new
 	end
@@ -6,7 +12,7 @@ class Accounts::PostsController < ApplicationController
   def create
     post = Post.new(post_create_params)
     post.content = params[:editorValue]
-    post.tagstr = params[:addhopecontenthidden]
+    post.tag_list.add params[:addhopecontenthidden].split(",")
     post.save
     flash[:notice] = "保存完成"
     redirect_to accounts_post_path(post)

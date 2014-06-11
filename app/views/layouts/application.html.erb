@@ -2,6 +2,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<link rel="shortcut icon" href="/images/logo.ico"  type="image/x-icon" />
+	<link rel="Bookmark" href="/images/logo.ico">
 	<title>鸟窝</title>
   <%= stylesheet_link_tag    '/鸟窝html/stylesheets/ui_base.css', media: 'all', 'data-turbolinks-track' => true %>
   <%= stylesheet_link_tag    '/鸟窝html/stylesheets/ui_common.css', media: 'all', 'data-turbolinks-track' => true %>
@@ -42,7 +44,7 @@
                 </div>
             </div>
 			<ul class="nav">
-				<li><a href="#" class="current">找工作首页</a></li>
+				<li><%= link_to "找工作首页", posts_path, class: "current"%></li>
 				<li><a href="#">找人才首页</a></li>
         <%if current_account%>
 				<li><a href="#">HR面试消息</a></li>

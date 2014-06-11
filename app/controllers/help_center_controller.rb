@@ -1,0 +1,2 @@
+class HelpCenterController < ApplicationController
+end

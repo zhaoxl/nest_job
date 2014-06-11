@@ -1,0 +1,68 @@
+<%= content_for :head_include do%>
+	<link rel="stylesheet" href="/鸟窝html/stylesheets/interview.css" />
+<%end%>
+<div class="mainContainer">
+	<div class="main">
+		<!-- <div class="mm"> -->
+			<div class="searchTalent">
+				<h2 class="h2Title">搜人才：至少填写一个搜索条件</h2>
+				<div class="form">
+					<div class="frm">
+						<span class="">目标城市：</span>
+						<input type="text" /><a href="#" class="addPost"><em>&nbsp;</em></a>
+					</div>
+					<div class="frm">
+						<span class="">工作年限：</span>
+						<input type="text" /><a href="#" class="addPost"><em>&nbsp;</em></a>
+					</div>
+					<div class="frm">
+						<span class="">目标职位：</span>
+						<input type="text" /><a href="#" class="addPost"><em>&nbsp;</em></a>
+					</div>
+				</div>
+				<div class="stBtn">
+					<a href="#" class="btnR">点击搜索</a>
+				</div>
+			</div>
+			<h2 class="h2Title">直接搜索</h2>
+			<ul class="directSearch">
+				<li class="current">
+					<p>目标职位：php</p>
+					<p>工作年限：2年</p>
+					<p>所在城市：北京</p>
+				</li>
+				<li>
+					<p>目标职位：php</p>
+					<p>工作年限：2年</p>
+					<p>所在城市：北京</p>
+				</li>
+				<li>
+					<p>目标职位：php</p>
+					<p>工作年限：2年</p>
+					<p>所在城市：北京</p>
+				</li>
+				<li class="last">
+					<p>目标职位：php</p>
+					<p>工作年限：2年</p>
+					<p>所在城市：北京</p>
+				</li>
+			</ul>
+			<h2 class="h2Title">已发布职位</h2>
+			<ul class="soldOut">
+        <%@posts.each_with_index do |post, index|%>
+				<li<%= " style=margin-right:0px;" if (index+1)%2==0 %>>
+					<p><%= post.created_at.strftime("%Y 年 %m 月 %d 日")%></p>
+					<p>发布职位：<%= post.title%></p>
+					<p>所在部门：<%= post.department%></p>
+					<p>工作城市：<%= post.area%></p>
+					<div class="btns">
+						<a href="#" class="btnR">查   看</a><a href="#" class="btnR">编     辑</a><a href="#" class="btnR">删     除</a><a href="#" class="btnR">下     架</a>
+					</div>
+				</li>
+        <%end%>
+			</ul>
+      <%= paginate @posts, window: 6%>
+		</div>
+	<!-- </div> -->
+  <%= render partial: "/layouts/right"%>
+</div>

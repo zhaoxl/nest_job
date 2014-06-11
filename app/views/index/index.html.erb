@@ -12,57 +12,20 @@
 			</ul>
 		</div>
 		<div class="mm">
-<!--					<ul class="mSubNav">
-				<li><a href="#" class="findTit">发现</a></li>
-				<li><a href="#" class="f_current">JS</a></li>
-				<li><a href="#">CSS</a></li>
-				<li><a href="#">UI</a></li>
-				<li><a href="#">PM</a></li>
-				<li><a href="#" class="topTit">热门</a></li>
-				<li><a href="#" class="t_current">JS</a></li>
-				<li><a href="#">CSS</a></li>
-				<li><a href="#">UI</a></li>
-				<li><a href="#">PM</a></li>
-			</ul>-->
-                <ul class="mSubNav">
-                    <li><a href="#" class="findTit">发现</a></li>
-                    <li class="loginTip" data-msgtip="请填写期望：职位与城市"><a href="javascript:void(0)" class="f_current">JS</a></li>
-                    <li class="loginTip" data-msgtip="请填写期望：职位与城市"><a href="javascript:void(0)" class="f_btn">CSS</a></li>
-                    <li class="loginTip" data-msgtip="请填写期望：职位与城市"><a href="javascript:void(0)" class="f_btn">UI</a></li>
-                    <li class="loginTip" data-msgtip="请填写期望：职位与城市"><a href="javascript:void(0)" class="f_btn">PM</a></li>
-                    <li><a href="#" class="topTit">热门</a></li>
-                    <li class="loginTip" data-msgtip="请填写期望：职位与城市"><a href="#" class="t_current">JS</a></li>
-                    <li class="loginTip" data-msgtip="请填写期望：职位与城市"><a href="#">CSS</a></li>
-                    <li class="loginTip" data-msgtip="请填写期望：职位与城市"><a href="#">UI</a></li>
-                    <li class="loginTip" data-msgtip="请填写期望：职位与城市"><a href="#">PM</a></li>
-                </ul>
-			<h2 class="indexH2">嗨，给自己期望的工作留点印记吧，才能进行下一步哦！！！</h2>
-			<!--<div class="postForm">
-				<div class="hopePost">
-					<div class="frm">
-						<span>期望职位：</span>
-						<div class="posts">
-							<a href="#">JavaScript<i>×</i></a>
-							<a href="#">前端css<i>×</i></a>
-							<a href="#">nodeJS<i>×</i></a>
-							<a href="#">Designer<i>×</i></a>
-							<a href="#">前端css<i>×</i></a>
-							<a href="#">nodeJS<i>×</i></a>
-							<a href="#">Designer<i>×</i></a>
-						</div>
-						<div class="postInput">
-							<input type="text" /><a href="#" class="addPost"><em>&nbsp;</em></a>
-						</div>
-					</div>
-					<div class="frm">
-						<span>期望城市：</span>
-						<div class="postInput">
-							<input type="text" />
-						</div>
-					</div>
-					<a href="#" class="saveBtn">保存印记</a>
-				</div>
-			</div>-->
+        <ul class="mSubNav">
+            <li><a href="#" class="findTit">发现</a></li>
+            <li class="loginTip" data-msgtip="请填写期望：职位与城市"><a href="javascript:void(0)" class="f_current">JS</a></li>
+            <li class="loginTip" data-msgtip="请填写期望：职位与城市"><a href="javascript:void(0)" class="f_btn">CSS</a></li>
+            <li class="loginTip" data-msgtip="请填写期望：职位与城市"><a href="javascript:void(0)" class="f_btn">UI</a></li>
+            <li class="loginTip" data-msgtip="请填写期望：职位与城市"><a href="javascript:void(0)" class="f_btn">PM</a></li>
+            <li><a href="#" class="topTit">热门</a></li>
+            <li class="loginTip" data-msgtip="请填写期望：职位与城市"><a href="#" class="t_current">JS</a></li>
+            <li class="loginTip" data-msgtip="请填写期望：职位与城市"><a href="#">CSS</a></li>
+            <li class="loginTip" data-msgtip="请填写期望：职位与城市"><a href="#">UI</a></li>
+            <li class="loginTip" data-msgtip="请填写期望：职位与城市"><a href="#">PM</a></li>
+        </ul>
+        <%if @account_tags.blank?%>
+        <h2 class="indexH2">嗨，给自己期望的工作留点印记吧，才能进行下一步哦！！！</h2>
                 <div class="postForm">
                     <div class="hopePost">
                         <div class="frm">
@@ -83,6 +46,56 @@
                         <a href="javascript:void(0)" id="saveHopes" class="saveBtn">保存印记</a>
                     </div>
                 </div>
+                <%else%>
+                  <%if @posts.present?%>
+                		<ul class="employment">
+                			<%@posts.each do |post|%>
+                			<li class="selectcurrent">
+                				<div class="employInfo">
+                					<div class="userImg"><%= link_to image_tag(post.account.logo(:thumb)), "#"%></div>
+                					<div class="employDetail">
+                						<p><span class="b"><%= post.account.nick_name%>   （<%= post.protect_email%>）</span><span>发布了  <%= post.title%></span></p>  
+                						<p><span class="b">地点：<%= post.address%></span><span class="b">公司：<%= post.company.name%></span><span class="b">薪资：<%= "#{post.price_min.to_i}k ~ #{post.price_max.to_i}k"%></span></p>
+                						<dl>
+                						 	<dt>职位要求：</dt>
+                						 	<%= sanitize post.content %>
+                						 </dl> 
+                					</div>
+                				</div>
+				
+                				<div class="employBtns">
+                					<a href="#" class="btnR">发起面试</a><a href="<%= post_path(post)%>" class="btnR">查    看</a><a href="#" class="btnR">收    藏</a>
+                				</div>
+                			</li>
+                      <%end%>
+                		</ul>
+                    <%= paginate @posts, window: 6%>
+                  <%else%>
+                        <p class="nohopeJob">您期望的职位让小伙们惊呆了( ⊙ o ⊙ )啊！居然没有，我们会尽快补全，尝试一下其它职位吧！</p>
+                		<ul class="employment">
+                			<%@hot_posts.each do |post|%>
+                			<li class="selectcurrent">
+                				<div class="employInfo">
+                					<div class="userImg"><%= link_to image_tag(post.account.logo(:thumb)), "#"%></div>
+                					<div class="employDetail">
+                						<p><span class="b"><%= post.account.nick_name%>   （<%= post.protect_email%>）</span><span>发布了  <%= post.title%></span></p>  
+                						<p><span class="b">地点：<%= post.address%></span><span class="b">公司：<%= post.company.name%></span><span class="b">薪资：<%= "#{post.price_min.to_i}k ~ #{post.price_max.to_i}k"%></span></p>
+                						<dl>
+                						 	<dt>职位要求：</dt>
+                						 	<%= sanitize post.content %>
+                						 </dl> 
+                					</div>
+                				</div>
+				
+                				<div class="employBtns">
+                					<a href="#" class="btnR">发起面试</a><a href="<%= post_path(post)%>" class="btnR">查    看</a><a href="#" class="btnR">收    藏</a>
+                				</div>
+                			</li>
+                      <%end%>
+                		</ul>
+                    <%= paginate @hot_posts, window: 6%>
+                  <%end%>
+                <%end%>
 		</div>
 	</div>
 	<%= render partial: "/layouts/right"%>

@@ -13,9 +13,15 @@ class Account < ActiveRecord::Base
   validates_attachment_content_type :logo, :content_type => /\Aimage\/.*\Z/
   validates :email, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i, on: :create }
   
+  #tag插件
+  acts_as_taggable
+  
   has_many :account_resumes
+  has_many :posts
+  has_many :favorites
   
   scope :by_email, lambda{|email| where(email: email)}
+  
   
   # 当前简历
   #
@@ -29,4 +35,7 @@ class Account < ActiveRecord::Base
   def current_account_resume
     self.account_resumes.first
   end
+  
+  
+  private
 end

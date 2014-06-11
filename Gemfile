@@ -89,3 +89,5 @@ gem 'newrelic_rpm'
 #
 gem 'execjs'  
 gem 'therubyracer' 
+#tag插件 https://github.com/mbleigh/acts-as-taggable-on
+gem 'acts-as-taggable-on'

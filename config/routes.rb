@@ -10,12 +10,20 @@ NestJob::Application.routes.draw do
     
   get '/' => 'index#index'
 
-
+  resources :index do
+    collection do
+      post :ajax_update_hope
+    end
+  end
+  
   resources :posts do
     collection do
       get :search
     end
   end
+  
+  resources :help_center
+  
   namespace :accounts do
     resources :profile do
       collection do

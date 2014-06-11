@@ -27,6 +27,7 @@
   			<li><a href="#">PM</a></li>
   		</ul>
       <%if @posts.present?%>
+      用时：<%= (@time*1000).to_s % "%.4f"%>毫秒
   		<ul class="employment">
   			<%@posts.each do |post|%>
         <%post_record = @records.find(post.id)%>
@@ -34,7 +35,7 @@
   				<div class="employInfo">
   					<div class="userImg"><%= link_to image_tag(post_record.account.logo(:thumb)), "#"%></div>
   					<div class="employDetail">
-  						<p><span class="b"><%= post_record.account.nick_name%>   （<%= post_record.protect_email%>）</span><span>发布了  <%= raw post.highlight.title ? post.highlight.title[0] : post.title%></span></p>  
+  						<p><span class="b"><%= post_record.account.nick_name%>   （<%= post_record.protect_email%>）</span><span>发布了  <%= raw post.highlight.title ? post.highlight.title[0] : post.title%>&nbsp;<%= post._score%></span></p>  
   						<p><span class="b">地点：<%= raw post.highlight.address ? post.highlight.address[0] : post.address%></span><span class="b">公司：<%= post_record.company.name%></span><span class="b">薪资：<%= "#{post.price_min.to_i}k ~ #{post.price_max.to_i}k"%></span></p>
   						<dl>
   						 	<dt>职位要求：</dt>
@@ -44,7 +45,7 @@
   				</div>
 				
   				<div class="employBtns">
-  					<a href="#" class="btnR">发起面试</a><a href="<%= post_path(post)%>" class="btnR">查    看</a><a href="#" class="btnR">收    藏</a>
+  					<a href="#" class="btnR">发起面试</a><a href="<%= post_path(post_record)%>" class="btnR">查    看</a><a href="#" class="btnR">收    藏</a>
   				</div>
   			</li>
         <%end%>

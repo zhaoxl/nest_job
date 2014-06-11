@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140609110148) do
+ActiveRecord::Schema.define(version: 20140611120008) do
 
   create_table "account_resume_experiences", force: true do |t|
     t.string   "company_name"
@@ -174,7 +174,7 @@ ActiveRecord::Schema.define(version: 20140609110148) do
 
   create_table "hot_search_tags", force: true do |t|
     t.string   "session_id"
-    t.integer  "user_id"
+    t.integer  "account_id"
     t.string   "name"
     t.integer  "search_count"
     t.datetime "created_at"
@@ -201,7 +201,20 @@ ActiveRecord::Schema.define(version: 20140609110148) do
     t.string   "address"
     t.string   "department"
     t.string   "email"
+    t.integer  "look_num",    default: 0
   end
+
+  create_table "taggings", force: true do |t|
+    t.integer  "tag_id"
+    t.integer  "taggable_id"
+    t.string   "taggable_type"
+    t.integer  "tagger_id"
+    t.string   "tagger_type"
+    t.string   "context",       limit: 128
+    t.datetime "created_at"
+  end
+
+  add_index "taggings", ["tag_id", "taggable_id", "taggable_type", "context", "tagger_id", "tagger_type"], name: "taggings_idx", unique: true, using: :btree
 
   create_table "tags", force: true do |t|
     t.integer  "parent_id"
@@ -209,7 +222,10 @@ ActiveRecord::Schema.define(version: 20140609110148) do
     t.string   "status"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "taggings_count", default: 0
   end
+
+  add_index "tags", ["name"], name: "index_tags_on_name", unique: true, using: :btree
 
   create_table "tries", force: true do |t|
     t.integer  "company_id"

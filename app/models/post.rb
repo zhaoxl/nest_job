@@ -5,26 +5,7 @@ class Post < ActiveRecord::Base
   after_destroy { logger.debug ["Deleting document... ", (__elasticsearch__.delete_document rescue "Elasticsearch not connect")].join }
   
   settings index: { 
-    number_of_shards: 1,
-    "fulltext" =>  {
-            "_all" =>  {
-            "indexAnalyzer" =>  "ik",
-            "searchAnalyzer" =>  "ik",
-            "term_vector" =>  "no",
-            "store" =>  "false"
-        },
-        "properties" =>  {
-            "content" =>  {
-                "type" =>  "string",
-                "store" =>  "no",
-                "term_vector" =>  "with_positions_offsets",
-                "indexAnalyzer" =>  "ik",
-                "searchAnalyzer" =>  "ik",
-                "include_in_all" =>  "true",
-                "boost" =>  8
-            }
-        }
-    }
+    number_of_shards: 1
   } do
     mappings dynamic: 'false' do
       indexes :title,       analyzer: 'english', index_options: 'offsets'
@@ -45,16 +26,16 @@ class Post < ActiveRecord::Base
   #                                           :default_url => "/images/:style_missing.png"
   #validates_attachment_content_type :logo, :content_type => /\Aimage\/.*\Z/
   
-  attr_accessor :tagstr
+  #tag插件
+  acts_as_taggable
+  
   belongs_to :account
   belongs_to :company
-  has_many :post_tags, dependent: :destroy
-  has_many :tags, through: :post_tags
   
   scope :ct_desc, ->{order("created_at DESC")}
   scope :by_area, ->(area){where(area: area)}
+  scope :by_look_num_desc, ->{order("look_num DESC")}
   
-  after_save :convert_tags
   
   # 受保护的email地址
   #
@@ -72,25 +53,6 @@ class Post < ActiveRecord::Base
   end
   
   private
-  # 转换标签字符串到关联标签库
-  #
-  # 作者: 赵晓龙
-  # 最后更新时间: 2014-06-09
-  #
-  # ==== 示例
-  # after_save :convert_tags
-  # ==== 返回类型
-  # [Tag]
-  def convert_tags
-    return if self.tagstr.blank?
-    
-    tag_arr = self.tagstr.split ","
-    new_tags = []
-    tag_arr.each do |tag|
-      new_tags << Tag.find_or_create_by(name: tag)
-    end
-    self.tags.replace new_tags
-  end
 end
 
 #Post.mappings.to_hash
