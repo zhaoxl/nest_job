@@ -19,10 +19,9 @@
             <li class="loginTip" data-msgtip="请填写期望：职位与城市"><a href="javascript:void(0)" class="f_btn">UI</a></li>
             <li class="loginTip" data-msgtip="请填写期望：职位与城市"><a href="javascript:void(0)" class="f_btn">PM</a></li>
             <li><a href="#" class="topTit">热门</a></li>
-            <li class="loginTip" data-msgtip="请填写期望：职位与城市"><a href="#" class="t_current">JS</a></li>
-            <li class="loginTip" data-msgtip="请填写期望：职位与城市"><a href="#">CSS</a></li>
-            <li class="loginTip" data-msgtip="请填写期望：职位与城市"><a href="#">UI</a></li>
-            <li class="loginTip" data-msgtip="请填写期望：职位与城市"><a href="#">PM</a></li>
+            <%self_hot_search_tags.each do |tag|%>
+            <li class="loginTip" data-msgtip="请填写期望：职位与城市"><a href="<%= search_posts_path(k: tag.name)%>" class="t_current"><%= tag.name%></a></li>
+            <%end%>
         </ul>
         <%if @account_tags.blank?%>
         <h2 class="indexH2">嗨，给自己期望的工作留点印记吧，才能进行下一步哦！！！</h2>
@@ -64,7 +63,7 @@
                 				</div>
 				
                 				<div class="employBtns">
-                					<a href="#" class="btnR">发起面试</a><a href="<%= post_path(post)%>" class="btnR">查    看</a><a href="#" class="btnR">收    藏</a>
+                					<a href="#" class="btnR">发起面试</a><a href="<%= post_path(post)%>" class="btnR">查    看</a><a jobid="<%= post.id%>"  onclick="addCollect(this)" href="javascript:void(0)" class="btnR">收    藏</a>
                 				</div>
                 			</li>
                       <%end%>
@@ -88,7 +87,7 @@
                 				</div>
 				
                 				<div class="employBtns">
-                					<a href="#" class="btnR">发起面试</a><a href="<%= post_path(post)%>" class="btnR">查    看</a><a href="#" class="btnR">收    藏</a>
+                					<a href="#" class="btnR">发起面试</a><a href="<%= post_path(post)%>" class="btnR">查    看</a><a jobid="<%= post.id%>"  onclick="addCollect(this)" href="javascript:void(0)" class="btnR">收    藏</a>
                 				</div>
                 			</li>
                       <%end%>

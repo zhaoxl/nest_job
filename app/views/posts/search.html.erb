@@ -45,7 +45,7 @@
   				</div>
 				
   				<div class="employBtns">
-  					<a href="#" class="btnR">发起面试</a><a href="<%= post_path(post_record)%>" class="btnR">查    看</a><a href="#" class="btnR">收    藏</a>
+  					<a href="#" class="btnR">发起面试</a><a href="<%= post_path(post_record)%>" class="btnR">查    看</a><a jobid="<%= post_record.id%>"  onclick="addCollect(this)" href="javascript:void(0)" class="btnR">收    藏</a>
   				</div>
   			</li>
         <%end%>

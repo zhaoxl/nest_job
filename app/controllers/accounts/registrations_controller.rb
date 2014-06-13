@@ -37,8 +37,8 @@ class Accounts::RegistrationsController < Devise::RegistrationsController
       end
       
       #从cookie取出首页关联的标签
-      resource.hope_city = cookies[:account_hope_city] if cookies[:account_hope_city].present?
-      resource.tag_list.add(cookies[:account_tag_list].split(",")) if cookies[:account_tag_list].present?
+      resource.hope_city = cookies.delete(:account_hope_city) if cookies[:account_hope_city].present?
+      resource.tag_list.add(cookies.delete(:account_tag_list).split(",")) if cookies[:account_tag_list].present?
       
       #登陆
       sign_in(:account, resource)

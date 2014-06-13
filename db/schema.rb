@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140611120008) do
+ActiveRecord::Schema.define(version: 20140612071524) do
 
   create_table "account_resume_experiences", force: true do |t|
     t.string   "company_name"
@@ -74,6 +74,7 @@ ActiveRecord::Schema.define(version: 20140611120008) do
     t.string   "description"
     t.string   "company_email"
     t.string   "hope_city"
+    t.integer  "industry_id"
   end
 
   add_index "accounts", ["email"], name: "index_accounts_on_email", unique: true, using: :btree
@@ -173,12 +174,17 @@ ActiveRecord::Schema.define(version: 20140611120008) do
   end
 
   create_table "hot_search_tags", force: true do |t|
-    t.string   "session_id"
+    t.string   "cookie_id"
     t.integer  "account_id"
     t.string   "name"
     t.integer  "search_count"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "industry_id"
+  end
+
+  create_table "industries", force: true do |t|
+    t.string "name"
   end
 
   create_table "post_tags", force: true do |t|
@@ -202,6 +208,7 @@ ActiveRecord::Schema.define(version: 20140611120008) do
     t.string   "department"
     t.string   "email"
     t.integer  "look_num",    default: 0
+    t.integer  "industry_id"
   end
 
   create_table "taggings", force: true do |t|

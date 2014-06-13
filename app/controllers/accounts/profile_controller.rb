@@ -38,6 +38,6 @@ class Accounts::ProfileController < ApplicationController
   
   private  
   def account_update_params  
-    params.require(:account).permit(:nick_name, :email, :company_email, :description)  
+    params.require(:account).permit(:nick_name, :email, :company_email, :description, :industry_id)  
   end 
 end

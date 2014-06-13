@@ -15,4 +15,8 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.for(:sign_in) { |u| u.permit({ roles: [] }, :email, :password, :remember_me, :authentication_token) }
     devise_parameter_sanitizer.for(:sign_up) { |u| u.permit({ roles: [] }, :email, :password, :authentication_token) }
   end
+  
+  def get_cookie_id
+    return cookies[:cookie_id] ||= SecureRandom.uuid
+  end
 end

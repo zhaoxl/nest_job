@@ -21,8 +21,9 @@ class PostsController < ApplicationController
       k.split(' ').each do|key|
         if current_account.present?
           search_tag = HotSearchTag.find_or_create_by(account_id: current_account.id, name: key)
+          search_tag.industry_id = current_account.industry_id
         else
-          search_tag = HotSearchTag.find_or_create_by(session_id: session["session_id"], name: key)
+          search_tag = HotSearchTag.find_or_create_by(cookie_id: get_cookie_id, name: key)
         end
         search_tag.search_count = search_tag.search_count.to_i + 1
         search_tag.save
@@ -31,7 +32,7 @@ class PostsController < ApplicationController
       filter = {
         "term" => {"area" => area}
       } if area.present?
-      Post.__elasticsearch__.client = Elasticsearch::Client.new(log: true, trace: true) if Rails.env.development?
+      Post.__elasticsearch__.client = Elasticsearch::Client.new(log: true, trace: true, host: "54.178.208.102:9200") if Rails.env.development?
       @time = Benchmark.realtime do
         @posts = Post.__elasticsearch__.search "query" => {"bool" => {"must" => [],"must_not" => [],
               "should" =>  [

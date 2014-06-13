@@ -40,6 +40,11 @@
   							<span class="error" id="errorpeopleCompanyEmail">*请填写公司邮箱</span>
   						</div>
   						<div class="frm">
+  							<span class="">关注行业：</span>
+                <%= f.select :industry_id, Industry.all.collect { |p| [ p.name, p.id ] }, id: "industryId", class: "verification","data-noHide" => "1","error-id" => "errorindustryId","data-type" => "notnull"%>
+  							<span class="error" id="errorindustryId">*请填写公司邮箱</span>
+  						</div>
+  						<div class="frm">
   							<span class="">简       介：</span>
                 <%= f.text_field :description,id: "peopleIntroduce", class: "verification","data-noHide" => "1","error-id" => "errorpeopleIntroduce","data-type" => "notnull"%>
   							<span class="error" id="errorpeopleIntroduce">*请填写相关简介</span>

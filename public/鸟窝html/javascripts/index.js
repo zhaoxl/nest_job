@@ -319,8 +319,8 @@ $(function($) {
 
         }
     });
-
-    ILData_callback("mycity");
+    var ILData_callback = ILData_callback || false;
+    ILData_callback && ILData_callback("mycity");
    //发现标签搜索
     $(".f_btn").each(function(){
         $(this).bind({
@@ -673,46 +673,71 @@ $(function($) {
             $(this).removeClass("current");
         }
     });
-
+   //发起面试
+    $(".initiateInterviewBtn").each(function(){
+        $(this).click(function(){
+            $(".initiateInterviewPop").show();
+        });
+    })
+    $(".closeinitiateInterviewBtn").each(function(){
+        $(this).click(function(){
+            $(".initiateInterviewPop").hide();
+        });
+    })
 
 
 });
 
-//发起面试
-function initiateInterview(){
-    $( "#initiateInterviewPop").dialog({
+//收藏职位
+function addCollect(_this){
+    var jobID = $(_this).attr("jobid"),
+        isc = $(_this).attr("isc");
+    if(isc == "1"){
+        $( "#dialog").html("已收藏").dialog({
+            modal:true,
+            close:function(){}
+        }).dialog( "open");
+        setTimeout(function(){
+            $( "#dialog").dialog({
+                modal:true,
+                close:function(){}
+            }).dialog( "close");
+        },2000);
+        return;
+    }
+    $( "#dialog").html("收藏中...").dialog({
         modal:true,
-        height:500,
-        title:"发起面试",
-        width:500
-    }).dialog("open");
-
-/*    //ajax保存期望值
+        close:function(){}
+    }).dialog( "open");
     $.ajax({
         dataType: "json",
         type: "post",
-        url: "/accounts/sessions/ajax_create",
+        url: "/accounts/favorites/ajax_create",
         data: {
-            "jobID": "1",//发起面试的职位id
+            "id": jobID,//职位
+            "item_type": "post",
             "authenticity_token": $("meta[name='csrf-token']").attr("content")
         },
         success: function(result) {
             if (result.status == "ok") {
-                $( "#dialog").html("发起成功，请等待HR处理").dialog({
-                    modal:true
-                }).dialog("close");
+                $( "#dialog").html("收藏成功").dialog({
+                    modal:true,
+                    close:function(){}
+                }).dialog( "open");
+                setTimeout(function(){
+                    $( "#dialog").dialog({
+                        modal:true,
+                        close:function(){}
+                    }).dialog( "close");
+                },2000);
+                $(_this).html("已 收 藏").attr("isc","1");
             } else {
-                $( "#dialog").html("保存失败"+result.content);
+                $( "#dialog").html(result.content).dialog({
+                    modal:true,
+                    close:function(){}
+                }).dialog( "open");
             }
         }
-    });*/
-}
+    });
 
-//收藏职位
-function myCollect(_this){
-    var jobID = $(_this).attr("jobid");
-    $( "#dialog").html("收藏成功").dialog({
-        modal:true,
-        close:function(){}
-    }).dialog( "open");
 }

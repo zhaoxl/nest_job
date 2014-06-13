@@ -7,8 +7,8 @@ class Accounts::SessionsController < Devise::SessionsController
   def create
     super
     #从cookie取出首页关联的标签
-    current_account.hope_city = cookies[:account_hope_city] if cookies[:account_hope_city].present?
-    current_account.tag_list.add(cookies[:account_tag_list].split(",")) if cookies[:account_tag_list].present?
+    current_account.hope_city = cookies.delete(:account_hope_city) if cookies[:account_hope_city].present?
+    current_account.tag_list.add(cookies.delete(:account_tag_list).split(",")) if cookies[:account_tag_list].present?
     current_account.save
   end
   
@@ -22,8 +22,8 @@ class Accounts::SessionsController < Devise::SessionsController
       if account = Account.by_email(params[:account][:email]).first
         if account.valid_password?(params[:account][:password])
           #从cookie取出首页关联的标签
-          account.hope_city = cookies[:account_hope_city] if cookies[:account_hope_city].present?
-          account.tag_list.add(cookies[:account_tag_list].split(",")) if cookies[:account_tag_list].present?
+          account.hope_city = cookies.delete(:account_hope_city) if cookies[:account_hope_city].present?
+          account.tag_list.add(cookies.delete(:account_tag_list).split(",")) if cookies[:account_tag_list].present?
           
           #登陆
           sign_in(:account, account)

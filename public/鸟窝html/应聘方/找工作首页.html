@@ -6,8 +6,41 @@
 	<link rel="stylesheet" href="../stylesheets/ui_base.css" />
 	<link rel="stylesheet" href="../stylesheets/ui_common.css" />
 	<link rel="stylesheet" href="../stylesheets/register.css" />
+    <link rel="stylesheet" href="../stylesheets/popup.css" />
+    <link rel="stylesheet" href="../javascripts/css/ui-lightness/jquery-ui-1.10.4.min.css" />
+    <script type="text/javascript" src="../javascripts/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="../javascripts/jquery-ui-1.10.4.min.js"></script>
+    <script type="text/javascript" src="../javascripts/cookie.js"></script>
+    <script type="text/javascript" src="../javascripts/index.js"></script>
 </head>
 <body>
+<!--发起职位层-->
+<div class="ui-widget-overlay ui-front initiateInterviewPop"></div>
+<div class="popUpBox initiateInterviewPop" id="initiateInterviewPop">
+  <h1 class="h2Title">发起面试</h1>
+    <div class="form">
+        <div class="frm">
+            <span>邀约金：</span><input type="text" class="txt"/>
+        </div>
+        <div class="frm">
+            <span>密语：</span><textarea name="" id="" class="txtar"></textarea>
+        </div>
+    </div>
+    <div class="help">
+        <p>什么是发起面试？</p>
+        <p>鸟窝币：作为“鸟窝”平台的虚拟货币，1元=1个鸟窝币，可以提现为普通现金。</p><br/>
+        <p>什么是邀约金？</p>
+        <p>鸟窝币：作为“鸟窝”平台的虚拟货币，1元=1个鸟窝币，可以提现为普通现金。</p><br/>
+        <p>什么是密语？</p>
+        <p>鸟窝币：作为“鸟窝”平台的虚拟货币，1元=1个鸟窝币，可以提现为普通现金。</p>
+        <p><a href="#">>>查看更多教程</a></p>
+    </div>
+    <div class="popupBtn">
+        <a href="javascript:void(0)" id="goinitiateInterviewBtn" class="btn closeinitiateInterviewBtn">发    起</a>
+        <a href="javascript:void(0)" style="background-color: #ccc;border-color: #ccc" class="btn closeinitiateInterviewBtn">关    闭</a>
+    </div>
+</div>
+<!--发起职位弹层-->
 	<div class="headerWrap">
 		<div class="header">
 			<h1><a href="#" class="logo">鸟窝</a></h1>
@@ -88,7 +121,7 @@
 							</div>
 							
 							<div class="employBtns">
-								<a href="#" class="btnR">发起面试</a><a href="#" class="btnR">收    藏</a>
+								<a href="javascript:void(0)" class="btnR initiateInterviewBtn">发起面试</a><a jobid="2" onclick="addCollect(this)" href="javascript:void(0)" class="btnR">收    藏</a>
 							</div>
 						</li>
 						<li>
@@ -255,5 +288,6 @@
 			</div>
 		</div>
 	</div>
+
 </body>
 </html>

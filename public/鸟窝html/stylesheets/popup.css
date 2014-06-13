@@ -7,5 +7,5 @@
 .popUpBox .form .txtar{float:left;width:265px;height:115px;border:1px solid #d2d2d2;}
 .popUpBox .help{height:203px;padding:10px;background:#e7eeed;color:#5c5b5b;line-height:1.8;}
 .popUpBox .help a{color:#00b9a0;}
-.popUpBox .popupBtn{height:75px;line-height:75px;text-align:center;}
+.popUpBox .popupBtn{height:75px;line-height:75px;text-align:center;background-color: #f6f6f6;}
 .popUpBox .btn{width:135px;height:30px;line-height:30px;}
