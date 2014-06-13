@@ -417,5 +417,12 @@ function ILData_callback(eID)
         new_city_id=101010100;
         cityname='北京';
     }
-    document.getElementById(eID).innerHTML = cityname;
+    document.getElementById(eID).value = "城市：" + cityname;
 }
+
+var clear = self.setInterval(function(){
+
+},50)
+    var ILData_callback = ILData_callback || false;
+    ILData_callback && ILData_callback("mycity");
+});

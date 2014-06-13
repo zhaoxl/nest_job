@@ -30,13 +30,10 @@
                     <a href="javascript:void(0)" id="searchJobBtn" class="searchBtn"><em>&nbsp;</em></a>
                 </div>
                 <div class="cities">
-                    <p><span id="mycity">城市</span><a href="#" class="cityBtn"><em>&nbsp;</em></a></p>
-                    <ul>
-                        <li>北京</li>
-                        <li>上海</li>
-                    </ul>
+                    <p><input value="城市：" id="mycity"></p>
                 </div>
                 <div class="history">
+                  <a href="javascript:void(0)">搜索痕迹：</a>
                   <%self_hot_search_tags.each do |tag|%>
                     <%= link_to tag.name, search_posts_path(k: tag.name)%>
                   <%end%>

@@ -32,6 +32,7 @@ NestJob::Application.routes.draw do
     end
     
     resources :resumes
+    resources :resume_experiences
     resources :posts
     resources :favorites do
       collection do

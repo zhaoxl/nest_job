@@ -319,8 +319,7 @@ $(function($) {
 
         }
     });
-    var ILData_callback = ILData_callback || false;
-    ILData_callback && ILData_callback("mycity");
+
    //发现标签搜索
     $(".f_btn").each(function(){
         $(this).bind({

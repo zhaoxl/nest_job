@@ -32,7 +32,8 @@ class PostsController < ApplicationController
       filter = {
         "term" => {"area" => area}
       } if area.present?
-      Post.__elasticsearch__.client = Elasticsearch::Client.new(log: true, trace: true, host: "54.178.208.102:9200") if Rails.env.development?
+      development_settings = {log: true, trace: true} if Rails.env.development?
+      Post.__elasticsearch__.client = Elasticsearch::Client.new({host: "54.178.208.102:9200"}.merge(development_settings||{}))
       @time = Benchmark.realtime do
         @posts = Post.__elasticsearch__.search "query" => {"bool" => {"must" => [],"must_not" => [],
               "should" =>  [
