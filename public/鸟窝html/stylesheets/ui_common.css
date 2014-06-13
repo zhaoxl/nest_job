@@ -94,11 +94,13 @@ em{display:inline-block;width:35px;height:30px;background:url(../images/nw_icon.
 .main .form .frm{overflow:hidden;zoom:1;margin-bottom:15px;}
 .main .form .frm span{float:left;width:110px;padding-top:5px;margin-right:20px;color:#3b3939;font-size:14px;text-align:right;}
 .main .form .frm input{float:left;width:330px;height:30px;padding:3px;margin-right:40px;border:1px solid #dcdcdc;color:#717171;}
+.main .form .frm label{float:left;margin-right:30px;margin-top:8px;}
+.main .form .frm .rad{width:13px;height:13px;margin-top:2px;margin-right:5px;border:none;}
 .main .form .frm .error{display:none;float:left;width:160px;color:#f41818;font-size:12px;text-align:left;}
 .main .form .frm .small{width:90px;margin-right:10px;}
 .main .form .frm .smallR{width:30px;text-align:left;}
 .main .form .frm textarea{float:left;width:330px;height:180px;padding:3px;margin-right:40px;resize:none;border:1px solid #dcdcdc;vertical-align:top;}
-
+.main .form .frm select{height:20px;margin-top:6px;border:1px solid #dcdcdc;}
 
 /*hrInfo*/
 .hrInfo{overflow:hidden;zoom:1;font-size:14px;color:#4e5053;}
