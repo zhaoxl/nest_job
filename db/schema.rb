@@ -11,7 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140613071331) do
+ActiveRecord::Schema.define(version: 20140616101844) do
+
+  create_table "account_post_applies", force: true do |t|
+    t.integer  "account_id"
+    t.integer  "post_id"
+    t.float    "price"
+    t.string   "message"
+    t.string   "reply"
+    t.string   "status"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "account_resume_experiences", force: true do |t|
     t.string   "company_name"

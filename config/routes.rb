@@ -34,6 +34,7 @@ NestJob::Application.routes.draw do
     resources :resumes
     resources :resume_experiences
     resources :posts
+    resources :account_post_applies
     resources :favorites do
       collection do
         post :ajax_create

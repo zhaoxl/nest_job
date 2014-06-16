@@ -420,9 +420,8 @@ function ILData_callback(eID)
     document.getElementById(eID).value = "城市：" + cityname;
 }
 
-var clear = self.setInterval(function(){
-
-},50)
-    var ILData_callback = ILData_callback || false;
-    ILData_callback && ILData_callback("mycity");
+$(function($) {
+    ILData_callback("mycity")
 });
+
+

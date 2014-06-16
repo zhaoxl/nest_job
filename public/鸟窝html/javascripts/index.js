@@ -432,7 +432,12 @@ $(function($) {
                     }).dialog( "open");
                     return;
                 }
-
+                $( "#dialog").html("正在保存您的期望职位...").dialog({
+                    modal:true,
+                    close:function(){
+                        $("#addHopeContent").focus();
+                    }
+                }).dialog( "open");
                 //ajax保存期望值
                 $.ajax({
                     dataType: "json",
@@ -448,7 +453,9 @@ $(function($) {
                             $( "#dialog").html("保存成功，正在跳转").dialog({
                                 modal:true
                             }).dialog("close");
-                            window.location.reload();
+                            setTimeout(function(){
+                                window.location.reload();
+                            },1000);
                         } else {
                             $( "#dialog").html("保存失败"+result.content);
                         }
@@ -673,8 +680,10 @@ $(function($) {
         }
     });
    //发起面试
+    var initiateInterviewBtn = null;
     $(".initiateInterviewBtn").each(function(){
         $(this).click(function(){
+            initiateInterviewBtn = $(this);
             $(".initiateInterviewPop").show();
         });
     })
@@ -683,6 +692,65 @@ $(function($) {
             $(".initiateInterviewPop").hide();
         });
     })
+    //发起面试确认
+    $("#goinitiateInterviewBtn").click(function(){
+        var jobID = $(initiateInterviewBtn).attr("jobid"),
+            isc = $(initiateInterviewBtn).attr("isc"),
+            interviewContent = $.trim($("#interviewContent").val()),
+            interviewCurrency = $.trim($("#interviewCurrency").val());
+        if(!/^\d+$/.test(interviewCurrency)) {
+            $( "#dialog").html("请填写面试币，例如：0 、100等").dialog({
+                modal:true,
+                close:function(){}
+            }).dialog( "open");
+            setTimeout(function(){
+                $( "#dialog").dialog( "close");
+            }, 1500)
+            return;
+        }
+        if(isc == "1"){
+            $( "#dialog").html("已发起面试").dialog({
+                modal:true,
+                close:function(){}
+            }).dialog( "open");
+            return;
+        }
+
+        $( "#dialog").html("发起面试...").dialog({
+            modal:true,
+            close:function(){}
+        }).dialog( "open");
+        $.ajax({
+            dataType: "json",
+            type: "post",
+            url: "/accounts/favorites/ajax_create",
+            data: {
+                "id": jobID,//职位
+                "item_type": "post",
+                "authenticity_token": $("meta[name='csrf-token']").attr("content")
+            },
+            success: function(result) {
+                if (result.status == "ok") {
+                    $( "#dialog").html("发起成功，等待HR处理").dialog({
+                        modal:true,
+                        close:function(){}
+                    }).dialog( "open");
+                    setTimeout(function(){
+                        $( "#dialog").dialog({
+                            modal:true,
+                            close:function(){}
+                        }).dialog( "close");
+                    },2000);
+                    $(_this).html("已发起面试").attr("isc","1");
+                } else {
+                    $( "#dialog").html(result.content).dialog({
+                        modal:true,
+                        close:function(){}
+                    }).dialog( "open");
+                }
+            }
+        });
+    });
 
 
 });
@@ -692,19 +760,43 @@ function addCollect(_this){
     var jobID = $(_this).attr("jobid"),
         isc = $(_this).attr("isc");
     if(isc == "1"){
-        $( "#dialog").html("已收藏").dialog({
+        $( "#dialog").html("取消收藏...").dialog({
             modal:true,
             close:function(){}
         }).dialog( "open");
-        setTimeout(function(){
-            $( "#dialog").dialog({
-                modal:true,
-                close:function(){}
-            }).dialog( "close");
-        },2000);
+        $.ajax({
+            dataType: "json",
+            type: "post",
+            url: "/accounts/favorites/ajax_destroy",
+            data: {
+                "id": jobID,//职位
+                "authenticity_token": $("meta[name='csrf-token']").attr("content")
+            },
+            success: function(result) {
+                if (result.status == "ok") {
+                    $( "#dialog").html("取消收藏成功").dialog({
+                        modal:true,
+                        close:function(){}
+                    }).dialog( "open");
+                    setTimeout(function(){
+                        $( "#dialog").dialog({
+                            modal:true,
+                            close:function(){}
+                        }).dialog( "close");
+                    },2000);
+                    $(_this).html("收藏").attr("isc","0");
+                } else {
+                    $( "#dialog").html(result.content).dialog({
+                        modal:true,
+                        close:function(){}
+                    }).dialog( "open");
+                }
+            }
+        });
+
         return;
     }
-    $( "#dialog").html("收藏中...").dialog({
+    $( "#dialog").html("收藏...").dialog({
         modal:true,
         close:function(){}
     }).dialog( "open");
@@ -729,7 +821,7 @@ function addCollect(_this){
                         close:function(){}
                     }).dialog( "close");
                 },2000);
-                $(_this).html("已 收 藏").attr("isc","1");
+                $(_this).html("取消收藏").attr("isc","1");
             } else {
                 $( "#dialog").html(result.content).dialog({
                     modal:true,

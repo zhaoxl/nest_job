@@ -1,0 +1,2 @@
+module Accounts::AccountPostAppliesHelper
+end
