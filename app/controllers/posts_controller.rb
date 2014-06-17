@@ -33,13 +33,13 @@ class PostsController < ApplicationController
         "term" => {"area" => area}
       } if area.present?
       development_settings = {log: true, trace: true} if Rails.env.development?
-      Post.__elasticsearch__.client = Elasticsearch::Client.new({host: "54.178.208.102:9200"}.merge(development_settings||{}))
+      Post.__elasticsearch__.client = Elasticsearch::Client.new({host: "115.28.176.6:9200"}.merge(development_settings||{}))
       @time = Benchmark.realtime do
         @posts = Post.__elasticsearch__.search "query" => {"bool" => {"must" => [],"must_not" => [],
               "should" =>  [
                 { "match" => { "title" =>  k }},
                 { "match" => { "address" => k }},
-                { "match" => { "content" => k }}
+                { "match" => { "sanitize_content" => k }}
               ],
               "minimum_should_match" =>  1,
               "boost" =>  1.0
@@ -48,7 +48,11 @@ class PostsController < ApplicationController
           "filter" => filter,
           "sort" => [],
           "facets" => {},
-          highlight: { fields: { title: {}, content: {}, address: {} } }
+          highlight: { fields: { 
+                                  title: {"pre_tags" => ["<b>"], "post_tags" => ["</b>"]}, 
+                                  sanitize_content: {"pre_tags" => ["<b>"], "post_tags" => ["</b>"]}, 
+                                  address: {"pre_tags" => ["<b>"], "post_tags" => ["</b>"]} } 
+                               }
       end
       @posts = @posts.page(params[:page]).per(5)
       @records = @posts.records.includes(:account)

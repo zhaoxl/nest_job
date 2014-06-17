@@ -6,7 +6,7 @@
 		<div class="ml">
 			<h2 class="h2Title">公司信息</h2>
 			<div class="companyInfo">
-				<div class="compImg"><a href="#"><img src="images/company_demo.jpg" alt="" /></a></div>
+				<div class="compImg"><%= link_to image_tag(@post.account.logo(:thumb)), "#"%></div>
 				<div class="compInfo">
 					<p><%= @company.name%></p>
 					<p class="cmpUrl"><a href="#">www.ifeng.com</a></p>

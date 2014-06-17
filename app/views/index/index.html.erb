@@ -36,64 +36,42 @@
                                 <input type="text" id="addHopeContent"><a href="javascript:void(0)" id="addHope" class="addPost"><em>&nbsp;</em></a>
                             </div>
                         </div>
-                        <div class="frm">
+                        <div class="">
                             <span>期望城市：</span>
                             <div class="postInput">
-                                <input type="text" id="cityHopes">
+                                <select id="cityHopes" data-placeholder="选择城市" style="width:100px;height:40px"><select>
                             </div>
                         </div>
+                        <br>
                         <a href="javascript:void(0)" id="saveHopes" class="saveBtn">保存印记</a>
                     </div>
                 </div>
                 <%else%>
-                  <%if @posts.present?%>
+                  <%if @hot_posts.present?%>
+                    <p class="nohopeJob">您期望的职位让小伙们惊呆了( ⊙ o ⊙ )啊！居然没有，我们会尽快补全，尝试一下其它职位吧！</p>
+                  <%end%>
                 		<ul class="employment">
-                			<%@posts.each do |post|%>
+                			<%(@posts || @hot_posts).each do |post|%>
                 			<li class="selectcurrent">
                 				<div class="employInfo">
                 					<div class="userImg"><%= link_to image_tag(post.account.logo(:thumb)), "#"%></div>
                 					<div class="employDetail">
-                						<p><span class="b"><%= post.account.nick_name%>   （<%= post.protect_email%>）</span><span>发布了  <%= post.title%></span></p>  
+                						<p><span class="b"><%= post.account.nick_name%>   （<%= post.protect_email%>）</span><span>发布了  <%= post.title%></span></p>
                 						<p><span class="b">地点：<%= post.address%></span><span class="b">公司：<%= post.company.name%></span><span class="b">薪资：<%= "#{post.price_min.to_i}k ~ #{post.price_max.to_i}k"%></span></p>
                 						<dl>
                 						 	<dt>职位要求：</dt>
-                						 	<%= sanitize post.content %>
-                						 </dl> 
+                						 	<%= post.sanitize_content.to_s[0, 200] %>
+                						 </dl>
                 					</div>
                 				</div>
-				
+
                 				<div class="employBtns">
                 					<a href="javascript:void(0)" jobid="<%= post.id%>" class="btnR initiateInterviewBtn">发起面试</a><a href="<%= post_path(post)%>" class="btnR">查    看</a><a jobid="<%= post.id%>"  onclick="addCollect(this)" href="javascript:void(0)" class="btnR">收    藏</a>
                 				</div>
                 			</li>
                       <%end%>
                 		</ul>
-                    <%= paginate @posts, window: 6%>
-                  <%else%>
-                        <p class="nohopeJob">您期望的职位让小伙们惊呆了( ⊙ o ⊙ )啊！居然没有，我们会尽快补全，尝试一下其它职位吧！</p>
-                		<ul class="employment">
-                			<%@hot_posts.each do |post|%>
-                			<li class="selectcurrent">
-                				<div class="employInfo">
-                					<div class="userImg"><%= link_to image_tag(post.account.logo(:thumb)), "#"%></div>
-                					<div class="employDetail">
-                						<p><span class="b"><%= post.account.nick_name%>   （<%= post.protect_email%>）</span><span>发布了  <%= post.title%></span></p>  
-                						<p><span class="b">地点：<%= post.address%></span><span class="b">公司：<%= post.company.name%></span><span class="b">薪资：<%= "#{post.price_min.to_i}k ~ #{post.price_max.to_i}k"%></span></p>
-                						<dl>
-                						 	<dt>职位要求：</dt>
-                						 	<%= sanitize post.content %>
-                						 </dl> 
-                					</div>
-                				</div>
-				
-                				<div class="employBtns">
-                					<a href="javascript:void(0)" class="btnR initiateInterviewBtn">发起面试</a><a href="<%= post_path(post)%>" class="btnR">查    看</a><a jobid="<%= post.id%>"  onclick="addCollect(this)" href="javascript:void(0)" class="btnR">收    藏</a>
-                				</div>
-                			</li>
-                      <%end%>
-                		</ul>
-                    <%= paginate @hot_posts, window: 6%>
-                  <%end%>
+                    <%= paginate (@posts || @hot_posts), window: 6%>
                 <%end%>
 		</div>
 	</div>

@@ -1,5 +1,3 @@
-//使用时可以将下面的代码写成JS文件，通过<script language="javascript" src="/weather/weather1.js"><\/script>来引入使用
-//www.18space.net
 var Citys=[
     new Array("101010100","北京"),
     new Array("101030100","天津"),
@@ -386,6 +384,7 @@ var Citys=[
 
 
 
+
 function ILData_callback(eID)
 {
     var cityname='北京';
@@ -417,11 +416,23 @@ function ILData_callback(eID)
         new_city_id=101010100;
         cityname='北京';
     }
-    document.getElementById(eID).value = "城市：" + cityname;
+    document.getElementById(eID).value = cityname;
 }
 
 $(function($) {
-    ILData_callback("mycity")
+    $("#mycity").chosen({disable_search_threshold: 10});
+    $("#cityHopes").chosen({disable_search_threshold: 10});
+    //ILData_callback("mycity")
+    var CitysOptions = "<option value='选择城市'>选择城市</option>",
+        l = Citys.length;
+    i = 0;
+    for(; i < l;i++){
+        CitysOptions += "<option value='"+Citys[i][1]+"'>"+Citys[i][1]+"</option>";
+    }
+    $('#mycity').html(CitysOptions);
+    $('#cityHopes').html(CitysOptions);
+    $("#mycity").trigger("chosen:updated");
+    $("#cityHopes").trigger("chosen:updated");
 });
 
 

@@ -10,16 +10,23 @@ class Accounts::PostsController < ApplicationController
 	end
   
   def create
+    development_settings = {log: true, trace: true} if Rails.env.development?
+    Post.__elasticsearch__.client = Elasticsearch::Client.new({host: "115.28.176.6:9200"}.merge(development_settings||{}))
     post = Post.new(post_create_params)
+    post.account_id = current_account.id
     post.content = params[:editorValue]
     post.tag_list.add params[:addhopecontenthidden].split(",")
+    post.sanitize_content = Nokogiri.parse(post.content).text if post.content.present? #去掉html标记的内容取200个字
+    #TODO: 公司ID
+    post.company_id = Company.last.id
     post.save
     flash[:notice] = "保存完成"
     redirect_to accounts_post_path(post)
   end
   
   def show
-    
+    @post = Post.find(params[:id])
+    @company = @post.company
   end
   
   def ajax_get_tags

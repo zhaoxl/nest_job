@@ -36,16 +36,26 @@
   					<div class="userImg"><%= link_to image_tag(post_record.account.logo(:thumb)), "#"%></div>
   					<div class="employDetail">
   						<p><span class="b"><%= post_record.account.nick_name%>   （<%= post_record.protect_email%>）</span><span>发布了  <%= raw post.highlight.title ? post.highlight.title[0] : post.title%>&nbsp;<%= post._score%></span></p>  
-  						<p><span class="b">地点：<%= raw post.highlight.address ? post.highlight.address[0] : post.address%></span><span class="b">公司：<%= post_record.company.name%></span><span class="b">薪资：<%= "#{post.price_min.to_i}k ~ #{post.price_max.to_i}k"%></span></p>
+  						<p><span class="b">地点：<%= raw post.highlight.address ? post.highlight.address[0] : post.address%></span><span class="b">  •  公司：<%= post_record.company.name%></span><span class="b">  •  薪资：<%= "#{post.price_min.to_i}k ~ #{post.price_max.to_i}k"%></span></p>
   						<dl>
   						 	<dt>职位要求：</dt>
-  						 	<%= sanitize(post.highlight.content ? post.highlight.content[0] : post.content)  %>
+  						 	<%= sanitize(post.highlight.sanitize_content ? post.highlight.sanitize_content[0] : post.sanitize_content.to_s[0, 200])  %>
   						 </dl> 
   					</div>
   				</div>
 				
   				<div class="employBtns">
-  					<a href="#" class="btnR">发起面试</a><a href="<%= post_path(post_record)%>" class="btnR">查    看</a><a jobid="<%= post_record.id%>"  onclick="addCollect(this)" href="javascript:void(0)" class="btnR">收    藏</a>
+            <%if current_account%>
+              <%if post.can_apply?(current_account.id)%>
+                <a href="javascript:void(0)" jobid="<%= post_record.id%>" class="btnR initiateInterviewBtn">发起面试</a>
+              <%else%>
+                <a href="javascript:void(0)" jobid="<%= post_record.id%>" class="btnR initiateInterviewBtn" isc="1">已发起面试</a>
+              <%end%>
+            <%else%>
+              <a href="<%= new_account_session_path%>" jobid="<%= post_record.id%>" class="btnR initiateInterviewBtn">发起面试</a>
+            <%end%>
+            <a href="<%= post_path(post_record)%>" class="btnR">查    看</a>
+            <a jobid="<%= post_record.id%>"  onclick="addCollect(this)" href="<%= current_account ? 'javascript:void(0)' : new_account_session_path%>" class="btnR">收    藏</a>
   				</div>
   			</li>
         <%end%>

@@ -12,7 +12,7 @@ class Post < ActiveRecord::Base
       indexes :description, analyzer: 'english', index_options: 'offsets'
       indexes :area,        analyzer: 'english', index_options: 'offsets'
       indexes :address,     analyzer: 'english', index_options: 'offsets'
-      indexes :content,     analyzer: 'english', index_options: 'offsets'
+      indexes :sanitize_content,     analyzer: 'english', index_options: 'offsets'
     end
   end
   
@@ -51,6 +51,21 @@ class Post < ActiveRecord::Base
     
     return self.email.sub(/^.{4}(.+)@.+$/.match(email)[1], "**")
   end
+  
+  # 判断是否可以申请职位
+  #
+  # 作者: 赵晓龙
+  # 最后更新时间: 2014-06-17
+  #
+  # ==== 示例
+  # post.can_apply?(123)
+  # ==== 返回类型
+  # Boolean
+  def can_apply?(account_id)
+    return false if account_id.blank?
+    !!AccountPostApply.by_account_id(account_id).by_post_id(self.id)
+  end
+  
   
   private
 end

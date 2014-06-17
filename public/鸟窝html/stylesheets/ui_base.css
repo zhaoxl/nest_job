@@ -3,7 +3,7 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fiel
     padding: 0;
 }
 body, button, input, select, textarea {
-    font: 12px/1.5 "宋体",Tahoma,Helvetica,Arial,sans-serif;
+    font: 12px/1.5 "宋体",Tahoma,Helvetica,Arial,sans-serif;color:#444;
 }
 fieldset, img {
     border: 0 none;
@@ -79,8 +79,10 @@ a:hover {
 }
 
 /*searchCityPop xixinliang*/
-#mycity{width: 100%;height: 100%}
+#mycity{width: 100%;height: 100%;padding-left: 4px;}
 #searchCityPop{margin:0px;background-color: #e1f3f1;}
 #searchCityPop a{margin:10px;color: #fff}
 .initiateInterviewPop{display: none}
 #initiateInterviewPop{position:absolute;display:none;z-index: 1000;top:50%;left:50%;margin-left: -246px;margin-top: -311px;background-color: #f6f6f6;}
+
+.userImg,.userImg img{width: 80px;height: 80px}

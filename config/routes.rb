@@ -13,6 +13,7 @@ NestJob::Application.routes.draw do
   resources :index do
     collection do
       post :ajax_update_hope
+      get :error_notice
     end
   end
   
@@ -34,13 +35,18 @@ NestJob::Application.routes.draw do
     resources :resumes
     resources :resume_experiences
     resources :posts
-    resources :account_post_applies
+    resources :account_post_applies do
+      collection do
+        post :ajax_create
+      end
+    end
     resources :favorites do
       collection do
         post :ajax_create
         post :ajax_destroy
       end
     end
+    resources :companies
   end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

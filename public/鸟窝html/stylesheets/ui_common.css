@@ -1,6 +1,6 @@
 body{font-family:'微软雅黑';}
 /*header*/
-.headerWrap{height:81px;background:#27a695;}
+.headerWrap{height:81px;background:#27a695;position: fixed;z-index: 99;left: 0;top: 0;width: 100%;filter:alpha(opacity=90);-moz-opacity:0.9;opacity:0.9;}
 .header{width:1170px;margin:0 auto;}
 .header h1{float:left;width:170px;}
 
@@ -22,13 +22,13 @@ em{display:inline-block;width:35px;height:30px;background:url(../images/nw_icon.
 .searchBtn{display:inline;float:left;margin-left:-35px;}
 .searchBtn em{background-position:0 0;}
 
-.cities{position:relative;float:left;width:90px;}
-.cities p{width:90px;height:30px;line-height:30px;background:#fff;color:#464c52;font-size:15px;}
+/*.cities{position:relative;float:left;width:90px;}*/
+/*.cities p{width:90px;height:30px;line-height:30px;color:#464c52;font-size:15px;}
 .cities p span{float:left;padding-left:5px;}
 .cities .cityBtn{float:right;}
-.cities .cityBtn em{background-position:-35px 0;}
-.cities ul{position:absolute;top:30px;left:0;display:none;border:1px solid #000;}
-.cities ul li{width:90px;height:20px;line-height:20px;background:#fff;border-bottom:1px solid #000;text-align:center;color:#464c52;}
+.cities .cityBtn em{background-position:-35px 0;}*/
+/*.cities ul{position:absolute;top:30px;left:0;display:none;border:1px solid #000;}*/
+/*.cities ul li{width:90px;height:20px;line-height:20px;background:#fff;border-bottom:1px solid #000;text-align:center;color:#464c52;}*/
 .history{float:left;width:350px;margin-top:8px;}
 .history a{font:13px '微软雅黑';color:#fff;}
 
@@ -39,7 +39,7 @@ em{display:inline-block;width:35px;height:30px;background:url(../images/nw_icon.
 
 
 /*footer*/
-.footerWrap{height:165px;background:#464c52;}
+.footerWrap{height:165px;background:#464c52;position: relative;top: 81px;}
 .footer{overflow:hidden;zoom:1;width:1170px;margin:0 auto;padding-top:24px;color:#fff;}
 .footer a{color:#fff;font:15px '微软雅黑';}
 .footer h4{margin-bottom:15px;font:15px '微软雅黑';}
@@ -56,7 +56,7 @@ em{display:inline-block;width:35px;height:30px;background:url(../images/nw_icon.
 .coWorker .first{background-position:0 -27px;}
 
 /*main*/
-.mainWrap{background:#e1f3f1;}
+.mainWrap{background:#e1f3f1;position: relative;top:81px;}
 .mainContainer{overflow:hidden;zoom:1;width:1170px;margin:0 auto;padding-top:40px;}
 .main{float:left;width:910px;}
 .main .ml{float:left;width:165px;margin-right:28px;}
@@ -132,6 +132,10 @@ em{display:inline-block;width:35px;height:30px;background:url(../images/nw_icon.
 .stBtn .btnR{width:185px;height:35px;line-height:35px;font-size:14px;}
 
 /*xixinliang*/
+.chosen-results em{display: inline-block;
+    width: auto;
+    height: auto;
+    background: none !important;}
 .suggestPicture{float:left !important;width:390px !important;font-size:12px !important;color:#27a695 !important}
 .suggestPicture strong{font-size:18px !important;}
 .nohopeJob{text-align: center;margin-top: 20px;color:#27a695;font-size: 15px;background-color: #fff;width: 716px;height: 60px;line-height: 60px;border: 1px dashed #27a695;}

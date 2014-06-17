@@ -91,3 +91,5 @@ gem 'execjs'
 gem 'therubyracer' 
 #tag插件 https://github.com/mbleigh/acts-as-taggable-on
 gem 'acts-as-taggable-on'
+#html分析插件
+gem 'nokogiri', '1.6.2.1'

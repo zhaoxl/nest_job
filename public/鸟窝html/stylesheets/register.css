@@ -71,11 +71,11 @@
 
 /*employment*/
 .employment{overflow:hidden;zoom:1;margin-top:25px;}
-.employment li{height:167px;padding:15px;margin-top:-1px;background:#fff;border-top:1px dashed #e7e9ea;}
+.employment li{min-height:167px;padding:15px;margin-top:-1px;background:#fff;border-top:1px dashed #e7e9ea;}
 .employment li .employInfo{overflow:hidden;zoom:1;}
 .employment .current{background:#f5fdfc;}
 .employment .userImg{float:left;margin-right:20px;}
-.employment .employDetail{float:left;color:#636363;line-height:1.8;}
+.employment .employDetail{float:left;color:#636363;line-height:1.8;float: left;width: 586px;}
 .employment .employDetail p .b{font-size:15px;color:#454343;}
 .employment .employBtns{text-align:right;}
 .employment .employBtns .btnR{display:inline-block;margin-right:5px;}

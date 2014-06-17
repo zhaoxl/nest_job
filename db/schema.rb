@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140616101844) do
+ActiveRecord::Schema.define(version: 20140617124916) do
 
   create_table "account_post_applies", force: true do |t|
     t.integer  "account_id"
@@ -153,6 +153,8 @@ ActiveRecord::Schema.define(version: 20140616101844) do
     t.datetime "deleted_at"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "tel"
+    t.string   "email"
   end
 
   create_table "company_invites", force: true do |t|
@@ -214,13 +216,14 @@ ActiveRecord::Schema.define(version: 20140616101844) do
     t.datetime "deleted_at"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.float    "price_min",   default: 0.0
-    t.float    "price_max",   default: 0.0
+    t.float    "price_min",        default: 0.0
+    t.float    "price_max",        default: 0.0
     t.string   "address"
     t.string   "department"
     t.string   "email"
-    t.integer  "look_num",    default: 0
+    t.integer  "look_num",         default: 0
     t.integer  "industry_id"
+    t.text     "sanitize_content"
   end
 
   create_table "taggings", force: true do |t|

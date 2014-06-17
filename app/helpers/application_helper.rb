@@ -59,7 +59,7 @@ module ApplicationHelper
     tags = HotSearchTag.by_search_count_desc.limit(4)
     
     if current_account.present?
-      tags = HotSearchTag.by_industry_id(current_account.industry_id)
+      tags = tags.by_industry_id(current_account.industry_id)
     elsif cookies[:cookie_id].present?
       #:TODO 先留着，据说是显示人工编辑的
       tags = []

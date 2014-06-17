@@ -20,6 +20,10 @@ class IndexController < ApplicationController
     end
   end
   
+  def error_notice
+    
+  end
+  
   #更新期望行业（标签）和期望城市
   def ajax_update_hope
     result = {status: "ok"}

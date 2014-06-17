@@ -297,6 +297,7 @@ $(function($) {
         }
 
     }
+
     //搜索框
     $("#searchJobs").bind({
         blur:function(){
@@ -683,6 +684,14 @@ $(function($) {
     var initiateInterviewBtn = null;
     $(".initiateInterviewBtn").each(function(){
         $(this).click(function(){
+            var isc = $(this).attr("isc");
+            if(isc == "1"){
+                $( "#dialog").html("已发起面试").dialog({
+                    modal:true,
+                    close:function(){}
+                }).dialog( "open");
+                return;
+            }
             initiateInterviewBtn = $(this);
             $(".initiateInterviewPop").show();
         });
@@ -699,13 +708,7 @@ $(function($) {
             interviewContent = $.trim($("#interviewContent").val()),
             interviewCurrency = $.trim($("#interviewCurrency").val());
         if(!/^\d+$/.test(interviewCurrency)) {
-            $( "#dialog").html("请填写面试币，例如：0 、100等").dialog({
-                modal:true,
-                close:function(){}
-            }).dialog( "open");
-            setTimeout(function(){
-                $( "#dialog").dialog( "close");
-            }, 1500)
+            interviewCurrency = 0;
             return;
         }
         if(isc == "1"){
@@ -715,7 +718,7 @@ $(function($) {
             }).dialog( "open");
             return;
         }
-
+        $(".initiateInterviewPop").hide();
         $( "#dialog").html("发起面试...").dialog({
             modal:true,
             close:function(){}
@@ -723,10 +726,11 @@ $(function($) {
         $.ajax({
             dataType: "json",
             type: "post",
-            url: "/accounts/favorites/ajax_create",
+            url: "/accounts/account_post_applies/ajax_create",
             data: {
-                "id": jobID,//职位
-                "item_type": "post",
+                "post_id": jobID,//职位
+                "price": interviewCurrency,
+                "message": interviewContent || "",
                 "authenticity_token": $("meta[name='csrf-token']").attr("content")
             },
             success: function(result) {
@@ -741,7 +745,7 @@ $(function($) {
                             close:function(){}
                         }).dialog( "close");
                     },2000);
-                    $(_this).html("已发起面试").attr("isc","1");
+                    $(initiateInterviewBtn).html("已发起面试").attr("isc","1");
                 } else {
                     $( "#dialog").html(result.content).dialog({
                         modal:true,

@@ -7,7 +7,7 @@ class Accounts::FavoritesController < ApplicationController
       raise "收藏类型错误" unless ["post"].include?(params[:item_type])
       item = params[:item_type].classify.constantize.find params[:id] rescue raise "内容不存在"
   
-      current_account.favorites.create(item_type: item.class.to_s, item_id: item.id) unless f = current_account.favorites.by_item(item)
+      current_account.favorites.create(item_type: item.class.to_s, item_id: item.id) unless f = current_account.favorites.by_item(item).first
     rescue Exception => ex
       result = {status: "error", content: ex.message}
       logger.error "accounts_create error log================================================"
