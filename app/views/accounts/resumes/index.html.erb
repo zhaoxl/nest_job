@@ -38,11 +38,10 @@
             <label>女<%= f.radio_button :gender, 0%></label>
 						<span class="error">*请填写昵称</span>
 					</div>
-          
 					<div class="frm">
 						<span class="">期望职位：</span>
             <%= f.text_field :tags%>
-						<span class="error">*请填写昵称</span>
+						<span class="error">*请填写期望职位</span>
 					</div>
 					<div class="frm">
 						<span class="">期望城市：</span>
@@ -53,6 +52,11 @@
 						<span class="">期望薪资：</span>
             <%= f.text_field :hope_salary%>
 						<span class="error">*请填写公司邮箱</span>
+					</div>
+					<div class="frm">
+						<span class="">邀约金：</span>
+            <%= f.text_field :price%>
+						<span class="error">*请填写邀约金</span>
 					</div>
 					<div class="frm">
 						<span class="">学历：</span>

@@ -72,22 +72,7 @@
                   <%end%>
                 </div>
             </div>
-			<ul class="nav">
-				<li><%= link_to "找工作首页", index_index_path, class: "current"%></li>
-				<li><a href="#">找人才首页</a></li>
-        <%if current_account%>
-				<li><a href="#">HR面试消息</a></li>
-				<li><%= link_to "完善简历", accounts_resumes_path%></li>
-				<li><%= link_to "#{ current_account.nick_name.present? ? "昵称：#{current_account.nick_name}" : "填写基本资料"}", accounts_profile_index_path%></li>
-				<li><%= link_to "退出", destroy_account_session_path%></li>
-        <%else%>
-        <li><%= link_to "登陆", new_account_session_path%></li>
-        <%end%>
-			</ul>
-			<!-- <div class="login_info">
-				<a href="#">昵称：猫猫鼠</a>
-				<a href="#">退出</a>
-			</div> -->
+			<%= render partial: "/layouts/top_nav"%>
 		</div>
 	</div>
 	<div class="mainWrap">

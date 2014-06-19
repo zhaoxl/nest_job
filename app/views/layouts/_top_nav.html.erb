@@ -1,0 +1,22 @@
+<% if current_account.blank?%>
+  <ul class="nav">
+  	<li><%= link_to "找工作首页", index_index_path, class: "current"%></li>
+  	<li><%= link_to "找人才首页", hr_index_path%></li>
+    <li><%= link_to "登陆", new_account_session_path%></li>
+  </ul>
+<%elsif current_account.account_type == Account::ACCOUNT_TYPE_WORKER%>
+  <ul class="nav">
+  	<li><%= link_to "找工作首页", index_index_path, class: "current"%></li>
+  	<li><a href="#">HR面试消息</a></li>
+  	<li><%= link_to "完善简历", accounts_resumes_path%></li>
+  	<li><%= link_to "#{ current_account.nick_name.present? ? "昵称：#{current_account.nick_name}" : "填写基本资料"}", accounts_profile_index_path%></li>
+  	<li><%= link_to "退出", destroy_account_session_path%></li>
+  </ul>
+<%else%>
+  <ul class="nav">
+  	<li><%= link_to "找人才首页", "javascript:void(0)", class: "isCompanyUser"%></li>
+  	<li><a href="#">人才面试消息</a></li>
+  	<li><%= link_to "发布职位", new_accounts_post_path%></li>
+  	<li><%= link_to "退出", destroy_account_session_path%></li>
+  </ul>
+<%end%>

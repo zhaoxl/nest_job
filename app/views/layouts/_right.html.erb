@@ -1,126 +1,150 @@
 <%if current_account%>
-<div class="mr">
-	<div class="info">
-		<div class="userImg"><%= link_to image_tag(current_account.logo(:thumb), class: "myimgs"), accounts_profile_index_path, class: "myimgs"%></div>
-		<div class="userInfo">
-			<p><%= current_account.nick_name || "请完善昵称" %></p>
-			<p>会员：5级</p>
-		</div>
-	</div>
-	<div class="cash">
-		<ul>
-			<li><span>面试币：1000</span><a href="#" class="btn">修   改</a></li>
-			<li><span>鸟窝币：1000</span><a href="#" class="btn">提   现</a></li>
-		</ul>
-	</div>
-	<div class="help">
-		<ul>
-			<li><a href="/help_center#1" class="first">什么是鸟窝币？</a></li>
-			<li><a href="/help_center#2">邀请面试如何玩？</a></li>
-			<li><a href="/help_center#3">什么是面试币？</a></li>
-			<li class="more"><a href="/help_center">更多教程</a></li>
-		</ul>
-		<div class="attention">
-			<a href="#" class="logo"></a>
-			<a href="#" class="focusOn">加关注</a>
-		</div>
-	</div>
-	<ul class="subNav">
-		<li><a href="#" class="tit tCurrent">我发起的面试</a></li>
-		<li><a href="#" class="current">待HR处理</a></li>
-		<li><a href="#">HR拒绝</a></li>
-		<li><a href="#">HR同意</a></li>
-		<li><a href="#">面试通过</a></li>
-		<li><a href="#">面试未通过</a></li>
-		<li><a href="#">试用期通过</a></li>
-		<li><a href="#">试用期未通过</a></li>
-		<li><a href="#" class="tit">HR发起的面试</a></li>
-		<li><a href="#">HR面试消息（1）</a></li>
-		<li><a href="#">我拒绝</a></li>
-		<li><a href="#">我同意</a></li>
-		<li><a href="#">面试通过</a></li>
-		<li><a href="#">面试未通过</a></li>
-		<li><a href="#">试用期通过</a></li>
-		<li><a href="#">试用期未通过</a></li>
-		<li><a href="#" class="tit">基本资料</a></li>
-		<li><a href="#" class="tit">我的收藏</a></li>
-		<li><a href="#" class="tit">系统消息</a></li>
-	</ul>
-</div>
-
+  <div class="mr">
+  	<div class="info">
+  		<div class="userImg"><%= link_to image_tag(current_account.logo(:thumb), class: "myimgs"), accounts_profile_index_path, class: "myimgs"%></div>
+  		<div class="userInfo">
+  			<p><%= current_account.nick_name || "请完善昵称" %></p>
+  			<p>会员：5级</p>
+  		</div>
+  	</div>
+  	<div class="cash">
+  		<ul>
+  			<li><span>面试币：1000</span><a href="#" class="btn">修   改</a></li>
+  			<li><span>鸟窝币：1000</span><a href="#" class="btn">提   现</a></li>
+  		</ul>
+  	</div>
+  	<div class="help">
+  		<ul>
+  			<li><a href="/help_center#1" class="first">什么是鸟窝币？</a></li>
+  			<li><a href="/help_center#2">邀请面试如何玩？</a></li>
+  			<li><a href="/help_center#3">什么是面试币？</a></li>
+  			<li class="more"><a href="/help_center">更多教程</a></li>
+  		</ul>
+  		<div class="attention">
+  			<a href="#" class="logo"></a>
+  			<a href="#" class="focusOn">加关注</a>
+  		</div>
+  	</div>
+    <%if current_account.account_type == Account::ACCOUNT_TYPE_WORKER%>
+    	<ul class="subNav">
+    		<li><a href="#" class="tit tCurrent">我申请的面试</a></li>
+    		<li><a href="#" class="current">待HR处理</a></li>
+    		<li><a href="#">HR拒绝</a></li>
+    		<li><a href="#">HR同意</a></li>
+    		<li><a href="#">面试通过</a></li>
+    		<li><a href="#">面试未通过</a></li>
+    		<li><a href="#">试用期通过</a></li>
+    		<li><a href="#">试用期未通过</a></li>
+    		<li><a href="#" class="tit">HR发起的面试</a></li>
+    		<li><a href="#">HR面试消息（1）</a></li>
+    		<li><a href="#">我拒绝</a></li>
+    		<li><a href="#">我同意</a></li>
+    		<li><a href="#">面试通过</a></li>
+    		<li><a href="#">面试未通过</a></li>
+    		<li><a href="#">试用期通过</a></li>
+    		<li><a href="#">试用期未通过</a></li>
+    		<li><a href="#" class="tit">基本资料</a></li>
+    		<li><a href="#" class="tit">我的收藏</a></li>
+    		<li><a href="#" class="tit">系统消息</a></li>
+    	</ul>
+    <%elsif current_account.account_type == Account::ACCOUNT_TYPE_HR%>
+    	<ul class="subNav">
+    		<li><a href="#" class="tit tCurrent">我发起的面试</a></li>
+    		<li><a href="#" class="current">待HR处理</a></li>
+    		<li><a href="#">HR拒绝</a></li>
+    		<li><a href="#">HR同意</a></li>
+    		<li><a href="#">面试通过</a></li>
+    		<li><a href="#">面试未通过</a></li>
+    		<li><a href="#">试用期通过</a></li>
+    		<li><a href="#">试用期未通过</a></li>
+    		<li><a href="#" class="tit">HR发起的面试</a></li>
+    		<li><a href="#">HR面试消息（1）</a></li>
+    		<li><a href="#">我拒绝</a></li>
+    		<li><a href="#">我同意</a></li>
+    		<li><a href="#">面试通过</a></li>
+    		<li><a href="#">面试未通过</a></li>
+    		<li><a href="#">试用期通过</a></li>
+    		<li><a href="#">试用期未通过</a></li>
+    		<li><a href="#" class="tit">基本资料</a></li>
+    		<li><a href="#" class="tit">我的收藏</a></li>
+    		<li><a href="#" class="tit">系统消息</a></li>
+    	</ul>
+    <%end%>
+  </div>
+  
 <%else%>
 
-<div class="mr">
-          <div class="login_box">
-      	    <%= form_for(resource, as: resource_name, url: accounts_registrations_ajax_create_path, html: {id: "sign_up_form"}, remote: true) do |f| %>
-      	      <%= devise_error_messages! %>
-              <div class="form">
-                  <ul>
-                      <li class="input_req">
-                          <div class="frm">
-                              <span class="prompt tipMsg">邮箱</span>
-                              <%= f.email_field :email,  id: "myemail", class: "txt mail current verification", style: "border: 1px solid rgb(160, 160, 160);", "data-em" => "email", "data-type" => "email", "error-id" => "errorEmail"%>
-                              <em class="email">&nbsp;</em>
-                              <span class="error errorregister errorlogin" id="errorEmail" data-msg="请输入正确邮箱地址">请输入正确邮箱地址</span>
-                          </div>
-                      </li>
-                      <li class="input_req">
-                          <div class="frm">
-                              <span class="prompt tipMsg">密码</span>
-                              <%= f.email_field :password,  type:"password", id: "mypwd", class: "txt verification", style: "border: 1px solid rgb(160, 160, 160);", "data-em" => "pwd", "data-type" => "pas", "error-id" => "errorpassword"%>
-                              <em class="pwd">&nbsp;</em>
-                              <span id="errorpassword" class="error errorregister errorlogin" data-msg="请输入6至16个字符">请输入6至16个字符</span>
-                          </div>
-                      </li>
-                      <li class="input_req" style="display: list-item;">
-                          <div class="frm VerifCode">
-                              <span class="prompt tipMsg">验证码</span>
-                							<input type="text" id="mycaptcha" class="txt" name="captcha" style="width: 60px; display: inline-block" />
-                              <%= captcha_tag(class: "updateCaptcha", style: "cursor: pointer", id: "captchaImg", title: "刷新验证码") %>
-                              <em class="pwd updateCaptcha">&nbsp;</em>
-                              <span class="error errorregister" id="captchaError" data-msg="请输入验证码">请输入验证码</span>
-                          </div>
-                      </li>
-                      <li class="registerPanel" style="display: list-item;">
-                          <div class="frm">
-                              <span>类型</span>
-                              <label><input type="radio" value="1" checked="checked" id="user_type" class="rad" name="rad">应聘方</label>
-                              <label><input type="radio" value="2" class="rad" name="rad">招聘方</label>
-                          </div>
-                      </li>
-                      <li>
-                          <div class="frm">
-                              <label class="remember"><input checked="checked" id="rememberMe" type="checkbox" class="rad">记住我</label>
-                              <a href="javascript:void(0)" id="forgetPassword" class="forget">忘记密码?</a>
-                          </div>
-                      </li>
-                      <li class="registerPanel" style="display: list-item;">
-                          <div class="frm">
-                              <label><input type="checkbox" checked="checked" id="registerAgree" class="rad"><a href="javascript:void(0)" id="userAgreement" class="deal" title="点击阅读鸟窝协议">已阅读并同意《鸟窝用户协议》</a></label>
-                          </div>
-                      </li>
-                      <li style="display: list-item;"><div class="frm"><a href="javascript:void(0)" id="registerBtn" class="registerBtn">注     册</a></div></li>
-                      <li style="display: none;"><div class="frm"><a href="javascript:void(0)" id="loginBtn" class="registerBtn">登     录</a></div></li>
-                      <li id="loginTip" style="display: list-item;"><a href="javascript:void(0)" class="loginBtn">登     录</a></li>
-                      <li style="display: none;" id="registerTip"><a href="javascript:void(0)" class="loginBtn">注     册</a></li>
-                      <li><a href="#" class="weibo thirdPtyBtn"><em>&nbsp;</em>使用微博登录</a></li>
-                      <li><a href="#" class="qq thirdPtyBtn"><em>&nbsp;</em>使用QQ登录</a></li>
-                      <li><a href="#" class="jobs thirdPtyBtn"><em>&nbsp;</em>招聘方入口</a></li>
-                  </ul>
-              </div>
-              <%end%>
-          </div>
-	<div class="help">
-		<ul>
-			<li><a href="#" class="first">什么是鸟窝币？</a></li>
-			<li><a href="#">邀请面试如何玩？</a></li>
-			<li><a href="#">什么是面试币？</a></li>
-			<li class="more"><a href="#">更多教程</a></li>
-		</ul>
-		<div class="attention">
-			<a href="#" class="logo"></a>
-			<a href="#" class="focusOn">加关注</a>
-		</div>
-	</div>
-</div>
+  <div class="mr">
+    <div class="login_box">
+      <%= form_for(resource, as: resource_name, url: accounts_registrations_ajax_create_path, html: {id: "sign_up_form"}, remote: true) do |f| %>
+        <%= devise_error_messages! %>
+        <div class="form">
+            <ul>
+                <li class="input_req">
+                    <div class="frm">
+                        <span class="prompt tipMsg">邮箱</span>
+                        <%= f.email_field :email,  id: "myemail", class: "txt mail current verification", style: "border: 1px solid rgb(160, 160, 160);", "data-em" => "email", "data-type" => "email", "error-id" => "errorEmail"%>
+                        <em class="email">&nbsp;</em>
+                        <span class="error errorregister errorlogin" id="errorEmail" data-msg="请输入正确邮箱地址">请输入正确邮箱地址</span>
+                    </div>
+                </li>
+                <li class="input_req">
+                    <div class="frm">
+                        <span class="prompt tipMsg">密码</span>
+                        <%= f.email_field :password,  type:"password", id: "mypwd", class: "txt verification", style: "border: 1px solid rgb(160, 160, 160);", "data-em" => "pwd", "data-type" => "pas", "error-id" => "errorpassword"%>
+                        <em class="pwd">&nbsp;</em>
+                        <span id="errorpassword" class="error errorregister errorlogin" data-msg="请输入6至16个字符">请输入6至16个字符</span>
+                    </div>
+                </li>
+                <li class="input_req" style="display: list-item;">
+                    <div class="frm VerifCode">
+                        <span class="prompt tipMsg">验证码</span>
+          							<input type="text" id="mycaptcha" class="txt" name="captcha" style="width: 60px; display: inline-block" />
+                        <%= captcha_tag(class: "updateCaptcha", style: "cursor: pointer", id: "captchaImg", title: "刷新验证码") %>
+                        <em class="pwd updateCaptcha">&nbsp;</em>
+                        <span class="error errorregister" id="captchaError" data-msg="请输入验证码">请输入验证码</span>
+                    </div>
+                </li>
+                <li class="registerPanel" style="display: list-item;">
+                    <div class="frm">
+                        <span>类型</span>
+                        <label><input type="radio" value="1" checked="checked" id="user_type" class="rad" name="rad">应聘方</label>
+                        <label><input type="radio" value="2" class="rad" name="rad">招聘方</label>
+                    </div>
+                </li>
+                <li>
+                    <div class="frm">
+                        <label class="remember"><input checked="checked" id="rememberMe" type="checkbox" class="rad">记住我</label>
+                        <a href="javascript:void(0)" id="forgetPassword" class="forget">忘记密码?</a>
+                    </div>
+                </li>
+                <li class="registerPanel" style="display: list-item;">
+                    <div class="frm">
+                        <label><input type="checkbox" checked="checked" id="registerAgree" class="rad"><a href="javascript:void(0)" id="userAgreement" class="deal" title="点击阅读鸟窝协议">已阅读并同意《鸟窝用户协议》</a></label>
+                    </div>
+                </li>
+                <li style="display: list-item;"><div class="frm"><a href="javascript:void(0)" id="registerBtn" class="registerBtn">注     册</a></div></li>
+                <li style="display: none;"><div class="frm"><a href="javascript:void(0)" id="loginBtn" class="registerBtn">登     录</a></div></li>
+                <li id="loginTip" style="display: list-item;"><a href="javascript:void(0)" class="loginBtn">登     录</a></li>
+                <li style="display: none;" id="registerTip"><a href="javascript:void(0)" class="loginBtn">注     册</a></li>
+                <li><a href="#" class="weibo thirdPtyBtn"><em>&nbsp;</em>使用微博登录</a></li>
+                <li><a href="#" class="qq thirdPtyBtn"><em>&nbsp;</em>使用QQ登录</a></li>
+                <li><a href="#" class="jobs thirdPtyBtn"><em>&nbsp;</em>招聘方入口</a></li>
+            </ul>
+        </div>
+        <%end%>
+    </div>
+  	<div class="help">
+  		<ul>
+  			<li><a href="#" class="first">什么是鸟窝币？</a></li>
+  			<li><a href="#">邀请面试如何玩？</a></li>
+  			<li><a href="#">什么是面试币？</a></li>
+  			<li class="more"><a href="#">更多教程</a></li>
+  		</ul>
+  		<div class="attention">
+  			<a href="#" class="logo"></a>
+  			<a href="#" class="focusOn">加关注</a>
+  		</div>
+  	</div>
+  </div>
 <%end%>

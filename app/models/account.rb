@@ -13,14 +13,18 @@ class Account < ActiveRecord::Base
   validates_attachment_content_type :logo, :content_type => /\Aimage\/.*\Z/
   validates :email, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i, on: :create }
   
-  #tag插件
-  acts_as_taggable
+
+  #用户类型枚举
+  ACCOUNT_TYPE_WORKER = 1 #员工
+  ACCOUNT_TYPE_HR    = 2 #HR
   
+  belongs_to :company
   has_many :account_resumes
   has_many :posts
   has_many :favorites
   
   scope :by_email, lambda{|email| where(email: email)}
+  scope :by_resume_ct_desc, ->{joins("INNER JOIN account_resumes ON accounts.id = account_resumes.account_id").order("account_resumes.created_at DESC")}
   
   
   # 当前简历
@@ -33,7 +37,10 @@ class Account < ActiveRecord::Base
   # ==== 返回类型
   # AccountResume
   def current_account_resume
-    self.account_resumes.first
+    unless account_resume = account_resumes.first
+      account_resume = current_account.account_resumes.build
+    end
+    return account_resume
   end
   
   

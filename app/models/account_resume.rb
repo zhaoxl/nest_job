@@ -1,12 +1,15 @@
 class AccountResume < ActiveRecord::Base
   attr_accessor :tags
   
-  has_many :account_resume_tags
   has_many :account_resume_experiences
+  #tag插件
+  acts_as_taggable
+  
+  scope :by_ct_desc, ->{order("created_at DESC")}
   
   #计算工作时间
   def work_year
-    unless earliest = account_resume_experiences.order_start_time_desc.first
+    unless earliest = account_resume_experiences.order_start_time_asc.first
       return 0
     end
     

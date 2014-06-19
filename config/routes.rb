@@ -24,6 +24,7 @@ NestJob::Application.routes.draw do
   end
   
   resources :help_center
+  resources :hr
   
   namespace :accounts do
     resources :profile do

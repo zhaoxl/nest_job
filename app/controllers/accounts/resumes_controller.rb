@@ -10,6 +10,7 @@ class Accounts::ResumesController < ApplicationController
   def create
     begin
       account_resume = current_account.account_resumes.new(post_params)
+      account_resume.tag_list.add account_resume.tags.split(",")
       unless account_resume.save
         raise account_resume.errors.messages.values.flatten.uniq
       end
@@ -35,6 +36,6 @@ class Accounts::ResumesController < ApplicationController
   
   private  
   def post_params  
-    params.require(:account_resume).permit(:name, :tel, :email, :birthday, :gender, :tags, :area, :hope_salary, :education)  
+    params.require(:account_resume).permit(:name, :tel, :email, :birthday, :gender, :area, :hope_salary, :education, :price, :tags)
   end 
 end

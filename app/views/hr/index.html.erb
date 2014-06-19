@@ -1,0 +1,83 @@
+<%content_for :head_include do%>
+	<link rel="stylesheet" href="/鸟窝html/stylesheets/interview.css" />
+<%end%>
+<div class="mainContainer">
+	<div class="main">
+		<!-- <div class="mm"> -->
+			<div class="searchTalent">
+				<h2 class="h2Title">搜人才：至少填写一个搜索条件</h2>
+				<div class="form">
+					<div class="frm">
+						<span class="">目标城市：</span>
+						<input type="text" />
+					</div>
+					<div class="frm">
+						<span class="">工作年限：</span>
+						<input type="text" />
+					</div>
+					<div class="frm">
+						<span class="">目标职位：</span>
+						<input type="text" />
+					</div>
+				</div>
+				<div class="stBtn">
+					<a href="#" class="btnR">点击搜索</a>
+				</div>
+			</div>
+			<h2 class="h2Title">直接搜索</h2>
+			<ul class="directSearch">
+				<li class="current">
+					<p>目标职位：php</p>
+					<p>工作年限：2年</p>
+					<p>所在城市：北京</p>
+				</li>
+				<li>
+					<p>目标职位：php</p>
+					<p>工作年限：2年</p>
+					<p>所在城市：北京</p>
+				</li>
+				<li>
+					<p>目标职位：php</p>
+					<p>工作年限：2年</p>
+					<p>所在城市：北京</p>
+				</li>
+				<li class="last">
+					<p>目标职位：php</p>
+					<p>工作年限：2年</p>
+					<p>所在城市：北京</p>
+				</li>
+			</ul>
+			<ul class="employment jbHunter">
+        <%if @accounts.blank?%>
+        请搜索人才
+        <%else%>
+        <%@accounts.each do |account|%>
+				<li class="current">
+					<div class="employInfo">
+						<div class="jobHunterInfo">
+							<div class="jhImg"><%= link_to image_tag(account.logo(:thumb)), "#"%></div>
+							<div class="jhDetail">
+								<ul>
+									<li>邀约金：￥<%= account.current_account_resume.price.to_i%></li>
+									<li>地    点：<%= account.current_account_resume.area%></li>
+									<li>学    历：<%= account.current_account_resume.education%></li>
+								</ul>
+								<ul>
+									<li>应聘职位：<%= account.current_account_resume.hope_post%> </li>
+									<li>工作时间：<%= account.current_account_resume.work_year%>年</li>
+									<li>期望薪资：￥<%= account.current_account_resume.hope_salary%></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="employBtns">
+						<a href="#" class="btnR">查   看</a><a href="#" class="btnR">发起面试</a><a href="#" class="btnR">收   藏</a>
+					</div>
+				</li>
+        <%end%>
+        <%end%>
+			</ul>
+			<%= paginate @accounts, window: 6%>
+		</div>
+    <%= render partial: "/layouts/right"%>
+</div>

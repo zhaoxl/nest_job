@@ -34,6 +34,10 @@ $(function($) {
                         var notchinese = /[\u4E00-\u9FA5]/ig;
                         bFail = !notchinese.test(value);
                         break;
+                    case 'tel':
+                        var tel = /\d{3}-\d{8}|\d{4}-\d{7}|\d{11}/;
+                        bFail = !tel.test(value);
+                        break;
                     case 'pas':
                         var notpas = /^\w{6,16}$/;
                         bFail = !notpas.test(value);
@@ -114,7 +118,7 @@ $(function($) {
             close:function(){}
         }).dialog( "open");
 
-
+        var user_type = $("#user_type:checked").length != 0 ? 1 : 2;
         $.ajax({
             dataType: "json",
             type: "post",
@@ -126,7 +130,7 @@ $(function($) {
               /*  "account[password_confirmation]": $.trim($("#mypwdReport").val()),//确认密码*/
                 "captcha": $("#mycaptcha").val() || "",//验证码
                 "rememberme": $("#rememberMe:checked").length != 0 ? "1" : "0",//
-                "user_type": $("#user_type:checked").length != 0 ? 1 : 2//用户类型
+                "user_type": user_type//用户类型
             },
             success: function(result) {
                 if (result.status == "ok") {
@@ -135,7 +139,11 @@ $(function($) {
                     }).dialog("close");
                     //cookie记录注册  时间 =  24*60*60*365
                     Cookie.Set("registered", "1", 31536000, "/");
-                    window.location.reload();
+                    if(user_type == "2"){
+                        window.location.replace("/accounts/companies/new");
+                    }else{
+                        window.location.reload();
+                    }
                 } else {
                     $( "#dialog").dialog({
                         modal:true
@@ -756,6 +764,19 @@ $(function($) {
         });
     });
 
+    $("#new_company").submit(function(){
+        $(".error").prev().blur();
+        if($("#new_company .error:visible").length > 0)  return false;
+    });
+    $(".isCompanyUser").each(function(){
+        $(this).click(function(){
+            if (confirm("您想切换为招聘方吗？"))  {
+                location.href='/hr';
+            }  else  {
+
+            };
+        });
+    });
 
 });
 

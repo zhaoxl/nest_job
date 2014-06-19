@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140617124916) do
+ActiveRecord::Schema.define(version: 20140619112048) do
 
   create_table "account_post_applies", force: true do |t|
     t.integer  "account_id"
@@ -54,6 +54,7 @@ ActiveRecord::Schema.define(version: 20140617124916) do
     t.string   "email"
     t.datetime "birthday"
     t.integer  "gender"
+    t.string   "hope_area"
   end
 
   create_table "account_tags", force: true do |t|
@@ -85,7 +86,6 @@ ActiveRecord::Schema.define(version: 20140617124916) do
     t.string   "last_sign_in_ip"
     t.string   "description"
     t.string   "company_email"
-    t.string   "hope_city"
     t.integer  "industry_id"
   end
 
@@ -195,6 +195,15 @@ ActiveRecord::Schema.define(version: 20140617124916) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "industry_id"
+  end
+
+  create_table "hr_search_logs", force: true do |t|
+    t.integer  "account_id"
+    t.string   "area"
+    t.string   "post"
+    t.integer  "year"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "industries", force: true do |t|

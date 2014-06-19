@@ -29,7 +29,8 @@ class Accounts::RegistrationsController < Devise::RegistrationsController
       end
       resource = Account.new(
         email: params[:account][:email],
-        password: params[:account][:password]
+        password: params[:account][:password],
+        account_type: params[:account][:user_type]
       )
       unless resource.save
         #创建失败
@@ -37,7 +38,7 @@ class Accounts::RegistrationsController < Devise::RegistrationsController
       end
       
       #从cookie取出首页关联的标签
-      resource.hope_city = cookies.delete(:account_hope_city) if cookies[:account_hope_city].present?
+      resource.hope_area = cookies.delete(:account_hope_area) if cookies[:account_hope_area].present?
       resource.tag_list.add(cookies.delete(:account_tag_list).split(",")) if cookies[:account_tag_list].present?
       
       #登陆
