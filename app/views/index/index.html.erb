@@ -23,7 +23,7 @@
             <li class="loginTip" data-msgtip="请填写期望：职位与城市"><a href="<%= search_posts_path(k: tag.name)%>" class="t_current"><%= tag.name%></a></li>
             <%end%>
         </ul>
-        <%if @account_tags.blank?%>
+        <%if @account_tags.blank? || @account_hope_area.blank?%>
         <h2 class="indexH2">嗨，给自己期望的工作留点印记吧，才能进行下一步哦！！！</h2>
                 <div class="postForm">
                     <div class="hopePost">

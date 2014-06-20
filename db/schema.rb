@@ -44,7 +44,7 @@ ActiveRecord::Schema.define(version: 20140619112048) do
     t.integer  "account_id"
     t.float    "price"
     t.string   "title"
-    t.string   "area"
+    t.string   "hope_area"
     t.string   "hope_salary"
     t.string   "education"
     t.datetime "created_at"
@@ -54,7 +54,6 @@ ActiveRecord::Schema.define(version: 20140619112048) do
     t.string   "email"
     t.datetime "birthday"
     t.integer  "gender"
-    t.string   "hope_area"
   end
 
   create_table "account_tags", force: true do |t|

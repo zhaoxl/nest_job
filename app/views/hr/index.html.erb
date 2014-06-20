@@ -48,24 +48,24 @@
 				</li>
 			</ul>
 			<ul class="employment jbHunter">
-        <%if @accounts.blank?%>
+        <%if @resumes.blank?%>
         请搜索人才
         <%else%>
-        <%@accounts.each do |account|%>
+        <%@resumes.each do |resume|%>
 				<li class="current">
 					<div class="employInfo">
 						<div class="jobHunterInfo">
-							<div class="jhImg"><%= link_to image_tag(account.logo(:thumb)), "#"%></div>
+							<div class="jhImg"><%= link_to image_tag(resume.account.logo(:thumb)), "#"%></div>
 							<div class="jhDetail">
 								<ul>
-									<li>邀约金：￥<%= account.current_account_resume.price.to_i%></li>
-									<li>地    点：<%= account.current_account_resume.area%></li>
-									<li>学    历：<%= account.current_account_resume.education%></li>
+									<li>邀约金：￥<%= resume.price.to_i%></li>
+									<li>地    点：<%= resume.area%></li>
+									<li>学    历：<%= resume.education%></li>
 								</ul>
 								<ul>
-									<li>应聘职位：<%= account.current_account_resume.hope_post%> </li>
-									<li>工作时间：<%= account.current_account_resume.work_year%>年</li>
-									<li>期望薪资：￥<%= account.current_account_resume.hope_salary%></li>
+									<li>应聘职位：<%= resume.hope_post%> </li>
+									<li>工作时间：<%= resume.work_year%>年</li>
+									<li>期望薪资：￥<%= resume.hope_salary%></li>
 								</ul>
 							</div>
 						</div>
@@ -77,7 +77,7 @@
         <%end%>
         <%end%>
 			</ul>
-			<%= paginate @accounts, window: 6%>
+			<%= paginate @resumes, window: 6%>
 		</div>
     <%= render partial: "/layouts/right"%>
 </div>

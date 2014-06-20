@@ -36,6 +36,6 @@ class Accounts::ResumesController < ApplicationController
   
   private  
   def post_params  
-    params.require(:account_resume).permit(:name, :tel, :email, :birthday, :gender, :area, :hope_salary, :education, :price, :tags)
+    params.require(:account_resume).permit(:name, :tel, :email, :birthday, :gender, :hope_salary, :education, :price, :tags, :hope_area)
   end 
 end

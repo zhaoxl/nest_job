@@ -38,7 +38,7 @@ class Account < ActiveRecord::Base
   # AccountResume
   def current_account_resume
     unless account_resume = account_resumes.first
-      account_resume = current_account.account_resumes.build
+      account_resume = self.account_resumes.build
     end
     return account_resume
   end

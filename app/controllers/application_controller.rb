@@ -17,6 +17,6 @@ class ApplicationController < ActionController::Base
   end
   
   def get_cookie_id
-    return cookies[:cookie_id] ||= SecureRandom.uuid
+    return cookies.permanent[:cookie_id] ||= SecureRandom.uuid
   end
 end

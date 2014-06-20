@@ -7,9 +7,16 @@ class Accounts::SessionsController < Devise::SessionsController
   def create
     super
     #从cookie取出首页关联的标签
-    current_account.hope_area = cookies.delete(:account_hope_area) if cookies[:account_hope_area].present?
-    current_account.tag_list.add(cookies.delete(:account_tag_list).split(",")) if cookies[:account_tag_list].present?
-    current_account.save
+    current_account_resume = current_account.current_account_resume
+    #如果简历里没有则从cookie取，否则存入cookie
+    if current_account_resume.hope_area.blank?
+      current_account_resume.hope_area = cookies[:account_hope_area] if cookies[:account_hope_area].present?
+      current_account_resume.tag_list.add(cookies[:account_tag_list].split(",")) if cookies[:account_tag_list].present?
+      current_account_resume.save
+    else
+      cookies.permanent[:account_hope_area] = current_account_resume.hope_area
+      cookies.permanent[:account_tag_list] = current_account_resume.tag_list * ","
+    end
   end
   
   def ajax_create
@@ -21,9 +28,17 @@ class Accounts::SessionsController < Devise::SessionsController
       end
       if account = Account.by_email(params[:account][:email]).first
         if account.valid_password?(params[:account][:password])
-          #从cookie取出首页关联的标签
-          account.hope_area = cookies.delete(:account_hope_area) if cookies[:account_hope_area].present?
-          account.tag_list.add(cookies.delete(:account_tag_list).split(",")) if cookies[:account_tag_list].present?
+          #同步期望城市和简历标签
+          #如果简历里没有则从cookie取，否则存入cookie
+          current_account_resume = account.current_account_resume
+          if current_account_resume.hope_area.blank?
+            current_account_resume.hope_area = cookies[:account_hope_area] if cookies[:account_hope_area].present?
+            current_account_resume.tag_list.add(cookies[:account_tag_list].split(",")) if cookies[:account_tag_list].present?
+            current_account_resume.save
+          else
+            cookies.permanent[:account_hope_area] = current_account_resume.hope_area
+            cookies.permanent[:account_tag_list] = current_account_resume.tag_list * ","
+          end
           
           #登陆
           sign_in(:account, account)

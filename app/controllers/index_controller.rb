@@ -1,11 +1,11 @@
 class IndexController < ApplicationController
   def index
     if current_account.present?
-      @account_tags = current_account.current_account_resume.tag_list
       @account_hope_area = current_account.current_account_resume.hope_area
+      @account_tags = current_account.current_account_resume.tag_list
     elsif cookies[:account_tag_list].present?
-      @account_tags = cookies[:account_tag_list]
       @account_hope_area = cookies[:account_hope_area]
+      @account_tags = cookies[:account_tag_list].to_s.split(",")
     end
     
     @posts = nil
@@ -28,18 +28,16 @@ class IndexController < ApplicationController
   def ajax_update_hope
     result = {status: "ok"}
     begin
-      hope_area = params[:hope_area]
+      hope_area = params[:hope_city]
       tagstr = params[:tags]
-      binding.pry
       if current_account.present? && account_resume = current_account.current_account_resume
           account_resume.hope_area = hope_area
           account_resume.tag_list.add tagstr.split(",")
           account_resume.save
-      else
-        #没登陆存入cookie
-        cookies[:account_tag_list] = tagstr
-        cookies[:account_hope_area] = hope_area
       end
+      #同时存入cookie
+      cookies.permanent[:account_tag_list] = tagstr
+      cookies.permanent[:account_hope_area] = hope_area
     rescue Exception => ex
       result = {status: "error", content: "保存失败"}
       logger.error "accounts_create error log================================================"

@@ -1,6 +1,7 @@
 class AccountResume < ActiveRecord::Base
   attr_accessor :tags
   
+  belongs_to :account
   has_many :account_resume_experiences
   #tag插件
   acts_as_taggable
