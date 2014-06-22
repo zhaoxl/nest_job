@@ -1,99 +1,304 @@
+<%content_for :head_include do%>
+    <link rel="stylesheet" href="/鸟窝html/javascripts/css/ui-lightness/jquery-ui-1.10.4.min.css" />
+    <script type="text/javascript" src="/鸟窝html/javascripts/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="/鸟窝html/javascripts/jquery-ui-1.10.4.min.js"></script>
+    <script type="text/javascript" src="/鸟窝html/javascripts/cookie.js"></script>
+    <script type="text/javascript" src="/鸟窝html/javascripts/index.js"></script>
+<%end%>
 <div class="mainContainer">
 	<div class="main">
-		<!-- <div class="ml">
-		</div> -->
-		<!-- <div class="mm"> -->
-			<h2 class="h2Title">完善简历</h2>
-			<%= form_for @account_resume, url: (@account_resume.new_record? ? accounts_resumes_path : accounts_resume_path(@account_resume)) do |f|%>
+  	<h2 class="h2Title">完善简历</h2>
+  	<ul class="perfectResume">
+  		<li class="current">
+  			<h3><i>* </i>个人信息</h3>
         <%if flash[:error]%>
         <span style="color: red">错误信息:<%= flash[:error]%></span>
         <%end%>
         <%if flash[:notice]%>
         <span style="color: green">提示信息:<%= flash[:notice]%></span>
         <%end%>
-				<div class="form">
-					<div class="frm">
-						<span class="">姓名：</span>
+  			<%= form_for @account_resume, url: (@account_resume.new_record? ? accounts_resumes_path : accounts_resume_path(@account_resume)) do |f|%>
+  			<div class="form">
+  				<div class="frm">
+  					<span class="">姓       名：</span>
             <%= f.text_field :name%>
-						<span class="error">*请填写昵称</span>
-					</div>
-					<div class="frm">
-						<span class="">手机：</span>
+  					<span class="error">*请填写姓名</span>
+  				</div>
+  				<div class="frm">
+  					<span class="">性       别：</span>
+  					<label><input type="radio" value="1"  checked="checked" class="rad" name="sex">男</label>
+  					<label><input type="radio" value="1"  class="rad" name="sex">女</label>
+  					<span class="error">*请选择性别</span>
+  				</div>
+  				<div class="frm">
+  					<span class="">出生年份：</span>
+            <%= f.text_field :birthday, value: format_to_date(@account_resume.birthday), id: "birthday"%>
+  					<span class="error">*请填写出生日期</span>
+  				</div>
+                          <div class="frm">
+  					<span class="">婚姻状态：</span>
+            <%= f.select :marital_status, AccountResume::MARITAL_STSTUS_ENUM.unshift([nil, "---请选择---"]), include_blank: false, style: "width:164px;", id: "marriage"%>
+  					<span class="error">*请填写出生日期</span>
+  				</div>
+  				<div class="frm">
+  					<span class="">手       机：</span>
             <%= f.text_field :tel%>
-						<span class="error">*请填写昵称</span>
-					</div>
-					<div class="frm">
-						<span class="">邮箱：</span>
+  					<span class="error">*请填写手机号</span>
+  				</div>
+  				<div class="frm">
+  					<span class="">邮       箱：</span>
             <%= f.text_field :email%>
-						<span class="error">*请填写昵称</span>
-					</div>
-					<div class="frm">
-						<span class="">出生年份：</span>
-            <%= f.text_field :birthday, value: format_to_date(@account_resume.birthday)%>
-						<span class="error">*请填写昵称</span>
-					</div>
-					<div class="frm">
-						<span class="">性别：</span>
-            <label>男<%= f.radio_button :gender, 1%></label>
-            <label>女<%= f.radio_button :gender, 0%></label>
-						<span class="error">*请填写昵称</span>
-					</div>
-					<div class="frm">
-						<span class="">期望职位：</span>
-            <%= f.text_field :tags%>
-						<span class="error">*请填写期望职位</span>
-					</div>
-					<div class="frm">
-						<span class="">期望城市：</span>
+  					<span class="error">*请填写手机号</span>
+  				</div>
+          <div class="frm">
+              <span class="">详细住址：</span>
+            <%= f.text_field :address%>
+              <span class="error">*请填写出生日期</span>
+          </div>
+  			</div>
+  			<div class="jobBtns">
+  				<a href="#" class="btn">保&nbsp;存</a>
+  			</div>
+        <%end%>
+  		</li>
+  		<li>
+  			<h3><i>* </i> 期望职位  |  <span>更精准帮您推荐喜欢的职位</span></h3>
+        <%= form_for @account_resume, url: (@account_resume.new_record? ? accounts_resumes_path : accounts_resume_path(@account_resume)) do |f|%>
+  			<div class="form">
+  				<div class="frm">
+  					<span class="">职位关键词</span>
+  					<div class="posts">
+              <%@account_resume.tag_list.each do |tag|%>
+  						<a href="#"><%= tag%><i>×</i></a>
+              <%end%>
+  					</div>
+  					<div class="postInput">
+  						<input type="text"><a href="#" class="addPost"><em>&nbsp;</em></a>
+  					</div>
+  					<span class="error">*请填写职位关键词，方便应聘方更方便的搜索您的职位</span>
+  				</div>
+  				<div class="frm">
+  					<span class="">期望城市：</span>
             <%= f.text_field :hope_area%>
-						<span class="error">*请填写联系邮箱</span>
-					</div>
-					<div class="frm">
-						<span class="">期望薪资：</span>
+  					<span class="error">*请填写城市</span>
+  				</div>
+  				<div class="frm">
+  					<span class="">期望薪资：</span>
             <%= f.text_field :hope_salary%>
-						<span class="error">*请填写公司邮箱</span>
-					</div>
-					<div class="frm">
-						<span class="">邀约金：</span>
-            <%= f.text_field :price%>
-						<span class="error">*请填写邀约金</span>
-					</div>
-					<div class="frm">
-						<span class="">学历：</span>
-            <%= f.text_field :education%>
-						<span class="error">*请填写公司邮箱</span>
-					</div>
-				</div>
-      
-				<div class="jobBtns">
-          <%= f.submit raw("保&nbsp;存"), class: "btn"%>
-				</div>
-      <%end%>
-      
-      <br /><br /><br /><br /><br />
-      <%= form_for AccountResumeExperience.new, url: accounts_resume_experiences_path do |f|%>
+  					<span class="error">*请填写薪资</span>
+  				</div>
+  			</div>
+  			<div class="jobBtns">
+  				<a href="#" class="btn">保&nbsp;存</a>
+  			</div>
+        <%end%>
+  		</li>
+  		<li>
+  			<h3><i>* </i>工作经历 |  <span>最能体现自己的工作能力</span></h3>
+        <%= form_for AccountResumeExperience.new, url: accounts_resume_experiences_path do |f|%>
         <%= f.hidden_field :account_resume_id, value: @account_resume.id %>
-        <span class="">公司：</span>
-        <%= f.text_field :company_name%><br />
-        <span class="">职位：</span>
-        <%= f.text_field :post%><br />
-        <span class="">开始时间：</span>
-        <%= f.text_field :start_time%><br />
-        <span class="">结束时间：</span>
-        <%= f.text_field :end_time%><br />
-        <span class="">描述：</span>
-        <%= f.text_area :description%><br />
-        <%= f.submit%>
-      <%end%>
-      <%= "还没有工作经历" if @account_resume.account_resume_experiences.blank?%>
-      <%@account_resume.account_resume_experiences.each do |item|%>
-        <%= item.company_name%><br />
-        <%= item.post%><br />
-        <%= item.start_time%><br />
-        <%= item.end_time%><br /><br /><br /><br />
-      <%end%>
-		</div>
-    
-	<!-- </div> -->
-  <%= render partial: "/layouts/right"%>
+  			<div class="form">
+  				<div class="frm">
+  					<span class="">公司名称：</span>
+            <%= f.text_field :company_name%><br />
+  					<span class="error">*请填写公司姓名</span>
+  				</div>
+  				<div class="frm">
+  					<span class="">公司职位：</span>
+            <%= f.text_field :post%><br />
+  					<span class="error">*请填写公司职位</span>
+  				</div>
+  				<div class="frm">
+  					<span class="">开始时间：</span>
+            <%= f.text_field :start_time, id: "startTimejob"%>
+  					<span class="error">*请填写开始时间</span>
+  				</div>
+  				<div class="frm">
+  					<span class="">结束时间：</span>
+            <%= f.text_field :start_time, id: "endTimejob"%>
+  					<span class="error">*请填写结束时间</span>
+  				</div>
+          <div class="frm">
+  					<span class="">薪资：</span>
+            <%= f.text_field :salary, id: "moneyjob"%>
+  					<span class="error">*请填写结束时间</span>
+  				</div>
+  				<div class="frm">
+  					<span class="">工作描述：</span>
+            <%= f.text_area :description%>
+  					<span class="error">*请填写结束时间</span>
+  				</div>
+  			</div>
+  			<div class="jobBtns">
+  				<a href="#" class="btn">保&nbsp;存</a>
+  			</div>
+        <%end%>
+        <% @experiences.each do |experience|%>
+  			<div class="readonly">
+    				<p>
+              <span class="itemNm">在职时间： </span> 
+              <%= experience.start_time.strftime("%Y年%m月")%>到<%= experience.end_time.strftime("%Y年%m月")%>
+            </p>
+    				<p><span class="itemNm">公司名称： </span><%= experience.company_name%></p>
+    				<p><span class="itemNm">公司职位：</span><%= experience.post%></p>
+    				<p><span class="itemNm">工作描述：</span><%= experience.description%></p>
+    				<div class="jobBtns">
+    					<a href="#" class="btnR">编&nbsp;辑</a><a href="#" class="btnR">删&nbsp;除</a>
+    				</div>
+  			</div>
+        <%end%>
+  		</li>
+  		<li>
+  			<h3><i>* </i>项目经验 |  <span>用人单位衡量人才的重要指标哦</span></h3>
+        <%= form_for AccountResumeObject.new, url: accounts_resume_objects_path do |f|%>
+  			<div class="form">
+  				<div class="frm">
+  					<span class="">项目名称：</span>
+            <%= f.text_field :name%>
+  					<span class="error">*请填写项目姓名</span>
+  				</div>
+  				<div class="frm">
+  					<span class="">项目描述：</span>
+  					<%= f.text_area :project_desc%>
+  					<span class="error">*请填写项目描述</span>
+  				</div>
+  				<div class="frm">
+  					<span class="">责任描述：</span>
+  					<%= f.text_area :role_desc%>
+  					<span class="error">*请填写责任描述</span>
+  				</div>
+  				<div class="frm">
+  					<span class="">开始时间：</span>
+            <%= f.text_field :start_date%>
+  					<span class="error">*请填写开始时间</span>
+  				</div>
+  				<div class="frm">
+  					<span class="">结束时间：</span>
+            <%= f.text_field :end_date%>
+  					<span class="error">*请填写结束时间</span>
+  				</div>
+  			</div>
+  			<div class="jobBtns">
+  				<a href="#" class="btn">保&nbsp;存</a>
+  			</div>
+        <%end%>
+        <% @objects.each do |object|%>
+  			<div class="readonly">
+  				<p>
+            <span class="itemNm">项目时间：  </span> 
+            <%= object.start_time.strftime("%Y年%m月")%>到<%= object.end_time.strftime("%Y年%m月")%>
+          </p>
+  				<p><span class="itemNm">工作名称：  </span><%= object.name%></p>
+  				<p><span class="itemNm">项目描述：</span><%= object.project_desc%></p>
+  				<p><span class="itemNm">责任描述：</span><%= object.role_desc%></p>
+  				<div class="jobBtns">
+  					<a href="#" class="btnR">编&nbsp;辑</a><a href="#" class="btnR">删&nbsp;除</a>
+  				</div>
+  			</div>
+        <%end%>
+  		</li>
+  		<li>
+  			<h3><i>* </i>教育经历 |  <span>可以提现你的专业及学习能力</span></h3>
+        <%= form_for AccountResumeEducation.new, url: accounts_resume_educations_path do |f|%>
+  			<div class="form">
+  				<div class="frm">
+  					<span class="">学       历：</span>
+            <%= f.text_field :name%>
+  					<span class="error">*请填写学历</span>
+  				</div>
+  				<div class="frm">
+  					<span class="">学       校：</span>
+            <%= f.text_field :school%>
+  					<span class="error">*请填写学校</span>
+  				</div>
+  				<div class="frm">
+  					<span class="">专       业：</span>
+            <%= f.text_field :major%>
+  					<span class="error">*请填写专业</span>
+  				</div>
+  				<div class="frm">
+  					<span class="">开始时间：</span>
+            <%= f.text_field :start_date%>
+  					<span class="error">*请填写开始时间</span>
+  				</div>
+  				<div class="frm">
+  					<span class="">结束时间：</span>
+            <%= f.text_field :end_date%>
+  					<span class="error">*请填写结束时间</span>
+  				</div>
+  			</div>
+  			<div class="jobBtns">
+  				<a href="#" class="btn">保&nbsp;存</a>
+  			</div>
+        <%end%>
+        <% @educations.each do |education|%>
+  			<div class="readonly">
+  				<p>
+            <span class="itemNm">教育时间：  </span>
+            <%= education.start_time.strftime("%Y年%m月")%>到<%= education.end_time.strftime("%Y年%m月")%>
+          </p>
+  				<p><span class="itemNm">学&nbsp;校：</span><%= education.school%></p>
+  				<p><span class="itemNm">学&nbsp;历： </span><%= education.name%></p>
+  				<p><span class="itemNm">专&nbsp;业： </span><%= education.major%></p>
+  				<div class="jobBtns">
+  					<a href="#" class="btnR">编&nbsp;辑</a><a href="#" class="btnR">删&nbsp;除</a>
+  				</div>
+  			</div>
+        <%end%>
+  		</li>
+  		<li>
+  			<h3><i>* </i>雷达设置 |  <span>定制您的个性化</span></h3>
+  			<div class="form">
+  				<div class="frm">
+  					<span class="">目前状态：</span>
+                              <select name="current_situation" style="width:154px;" id="current_situation">
+                                  <option value="0">目前正在找工作</option>
+                                  <option value="1">半年内无换工作的计划</option>
+                                  <option value="2">一年内无换工作的计划</option>
+                                  <option value="3" selected="">观望有好的机会再考虑</option>
+                                  <option value="4">我暂时不想找工作</option>
+                              </select>
+  					<span class="error">*请选择目前状态</span>
+  				</div>
+  				<div class="frm">
+  					<span class="lgspan">是否被单位搜索：</span>
+  					<label><input type="radio" value="1"  checked="checked" class="rad" name="issearch">是</label>
+  					<label><input type="radio" value="2"  class="rad" name="issearch">否</label>
+  					<span class="error">*请选择性别</span>
+  				</div>
+  				<div class="frm">
+  					<span class="">是否订阅：</span>
+  					<label><input type="radio" value="1"  checked="checked" class="rad" name="rad">是</label>
+  					<label><input type="radio" value="1"  class="rad" name="rad">否</label>
+  					<span class="error">*请选择性别</span>
+  				</div>
+  				<div class="frm">
+  					<span class="">订阅频率：</span>
+  					<select name="" id="">
+  						<option value="1">3天 / 次</option>
+  						<option value="2">7天 / 次</option>
+  					</select>
+  					<span class="error">*请填写开始时间</span>
+  				</div>
+  				<div class="frm">
+  					<span class="">订阅开始时间：</span>
+  					<input type="text" id="on_line_time"/>
+  					<span class="error">*请填写开始时间</span>
+  				</div>
+                          <div class="frm">
+  					<span class="">订阅结束时间：</span>
+  					<input type="text" id="off_line_time"/>
+  					<span class="error">*请填写结束时间</span>
+  				</div>
+  			</div>
+  			<div class="jobBtns">
+  				<a href="#" class="btn">保&nbsp;存</a>
+  			</div>
+  		</li>
+  	</ul>
+  	<div class="jobBtns">
+  		<a href="#" class="btn">保存所有</a>
+  	</div>
+  </div>
+	<%= render partial: "/layouts/right"%>
 </div>

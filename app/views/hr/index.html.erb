@@ -5,73 +5,62 @@
 	<div class="main">
 		<!-- <div class="mm"> -->
 			<div class="searchTalent">
-				<h2 class="h2Title">搜人才：至少填写一个搜索条件</h2>
-				<div class="form">
-					<div class="frm">
-						<span class="">目标城市：</span>
-						<input type="text" />
-					</div>
-					<div class="frm">
-						<span class="">工作年限：</span>
-						<input type="text" />
-					</div>
-					<div class="frm">
-						<span class="">目标职位：</span>
-						<input type="text" />
-					</div>
-				</div>
-				<div class="stBtn">
-					<a href="#" class="btnR">点击搜索</a>
-				</div>
+				<h2 class="h2Title">搜人才：至少填写一个搜索职位</h2>
+				<%= form_tag search_hr_index_path, method: :get do%>
+  				<div class="form">
+            <div class="frm">
+                <span class="">职位：</span>
+                <%= text_field_tag :tags, "", id: "searchJobContent"%>
+            </div>
+  					<div class="frm">
+  						<span class="">城市：</span>
+                <%= text_field_tag :area, "", id: "searchCityContent"%>
+  					</div>
+  					<div class="frm">
+  						<span class="">年限：</span>
+                <%= text_field_tag :year, "", id: "searchYearContent"%>
+  					</div>
+  				</div>
+  				<div class="stBtn">
+  					<a href="javascript:void(0)" id="clickSearch" class="btnR">点击搜索</a>
+  				</div>
+        <%end%>
 			</div>
-			<h2 class="h2Title">直接搜索</h2>
+			<h2 class="h2Title">点击搜索</h2>
 			<ul class="directSearch">
-				<li class="current">
-					<p>目标职位：php</p>
-					<p>工作年限：2年</p>
-					<p>所在城市：北京</p>
+        <%@search_logs.each do |log|%>
+				<li class="current" data-action="<%= search_hr_index_path(tags: log.post, area: log.area, year: log.year)%>">
+					<p>目标职位：<%= log.post%></p>
+					<p>工作年限：<%= log.year.present? ? "#{log.year}年" : "无"%></p>
+					<p>所在城市：<%= log.area.present? ? log.area : "无"%></p>
 				</li>
-				<li>
-					<p>目标职位：php</p>
-					<p>工作年限：2年</p>
-					<p>所在城市：北京</p>
-				</li>
-				<li>
-					<p>目标职位：php</p>
-					<p>工作年限：2年</p>
-					<p>所在城市：北京</p>
-				</li>
-				<li class="last">
-					<p>目标职位：php</p>
-					<p>工作年限：2年</p>
-					<p>所在城市：北京</p>
-				</li>
+        <%end%>
 			</ul>
 			<ul class="employment jbHunter">
         <%if @resumes.blank?%>
-        请搜索人才
+        <p class="searchPeoples"><img width="30" src="/鸟窝html/images/feiji.png">...下载简历不要钱，快抢高质量人才，猛戳上边 ↑_↑ <a href="javascript:$('body,html').animate({scrollTop:0},500);">点击搜索</a>...</p>
         <%else%>
         <%@resumes.each do |resume|%>
-				<li class="current">
+				<li class="">
 					<div class="employInfo">
 						<div class="jobHunterInfo">
 							<div class="jhImg"><%= link_to image_tag(resume.account.logo(:thumb)), "#"%></div>
 							<div class="jhDetail">
 								<ul>
-									<li>邀约金：￥<%= resume.price.to_i%></li>
-									<li>地    点：<%= resume.area%></li>
+									<li>面 试 币：￥<%= resume.price.to_i%></li>
+									<li>地    点：<%= resume.hope_area%></li>
 									<li>学    历：<%= resume.education%></li>
 								</ul>
 								<ul>
-									<li>应聘职位：<%= resume.hope_post%> </li>
-									<li>工作时间：<%= resume.work_year%>年</li>
+									<li>应聘职位：<%= resume.tag_list%> </li>
+									<li>工作时间：<%= AccountResumeExperience.work_year(resume.work_start_date)%>年</li>
 									<li>期望薪资：￥<%= resume.hope_salary%></li>
 								</ul>
 							</div>
 						</div>
 					</div>
 					<div class="employBtns">
-						<a href="#" class="btnR">查   看</a><a href="#" class="btnR">发起面试</a><a href="#" class="btnR">收   藏</a>
+						<a href="<%= hr_path(resume)%>" class="btnR">查   看</a><a href="javascript:void(0)" class="btnR initiateInterviewBtn">发起面试</a><a jobid="<%= resume.id%>"  onclick="addCollect(this)" href="javascript:void(0)" class="btnR">收   藏</a>
 					</div>
 				</li>
         <%end%>

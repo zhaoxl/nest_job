@@ -1,3 +1,23 @@
+<%if current_account.blank? || current_account.account_type == Account::ACCOUNT_TYPE_WORKER%>
+  <div class="search">
+    <div class="searchBox" data-msgtip="请填写期望：职位与城市">
+        <input type="text" id="searchJobs" style="color:#8f8f8f;text-align: left;line-height: 30px" value=" 输入职位名称，如：销售" id="searchJobs" />
+        <a href="javascript:void(0)" id="searchJobBtn" class="searchBtn"><em>&nbsp;</em></a>
+    </div>
+    <div class="cities">
+      <p>
+        <select id="mycity" data-placeholder="选择城市" style="width:100px;height:40px"><select>
+      </p>
+    </div>
+    <div class="history">
+      <a href="javascript:void(0)">搜索痕迹：</a>
+      <%self_hot_search_tags.each do |tag|%>
+        <%= link_to tag.name, search_posts_path(k: tag.name)%>
+      <%end%>
+    </div>
+  </div>
+<%end%>
+
 <% if current_account.blank?%>
   <ul class="nav">
   	<li><%= link_to "找工作首页", index_index_path, class: "current"%></li>

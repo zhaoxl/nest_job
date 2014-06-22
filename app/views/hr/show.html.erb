@@ -1,0 +1,47 @@
+<%content_for :head_include do%>
+	<link rel="stylesheet" href="/鸟窝html/stylesheets/job_detail.css" />
+<%end%>
+<div class="mainContainer">
+	<div class="main">
+		<h2 class="h2Title">人才详情</h2>
+		<div class="jobDetail">
+			<div class="hrInfo">
+				<div class="hrImg"><%= link_to image_tag(@account.logo(:thumb)), "#"%></div>
+				<div class="hrIf">
+					<p><span><%= @account.nick_name%> （<%= Post.convert_protect_email(@resume.email)%>） </span><span class="hot">面试币：￥<%= @resume.price.to_i%></span></p>
+					<p><span>邮箱：<%= Post.convert_protect_email(@account.email)%>  </span><span>年龄：<%= @resume.age%>岁</span></p>
+					<p><span>手机：<%= @resume.tel.to_s[0,3] + "*" * 8%>  </span><span>工作年限：<%= AccountResumeExperience.work_year(@resume.work_start_date)%>年</span></p>
+					<p><span>期望职位：<%= @resume.tag_list * "、"%></span><span>期望城市：<%= @resume.hope_area%></span></p>
+				</div>
+			</div>
+			<h5>经历经历：</h5>
+      <% @experiences.each do |experience|%>
+        <p>
+          <%= experience.start_time.strftime("%Y年%m月")%>到
+          <%= experience.end_time.strftime("%Y年%m月")%>&nbsp;
+          <%= experience.company_name%>
+        </p>
+      <%end%>
+			<h5>简述：</h5>
+			<p>学历并不高的我已在北京混迹了5年，通过这五年的煅造我拥有以下的素质：</p>
+			<p>WEB前端开发技术基础扎实：能够满足您对JS、PHP、HTML5工程师的要求。具有良好的编程思想。</p>
+			<p>较强的学习能力：在生活和工作中练就了自己快速学习的能力；一直关注互联网行业，对学习新技术（如：node.js）有着浓厚的兴趣，可以为公司节约成本。</p>
+			<p>积极向上的乐观心态：性格随和，乐观向上，抗压创新能力强。</p>
+			<p>强烈的团队意识：在以往的项目和工作中，强烈意识到并坚信团队的力量是最强大的。</p>
+			<p>超强的适应能力： 有近三年的工作经历，能够更快更好的适应任何工作环境，团结同事，积极工作。</p>
+			<p>高效的执行能力：一直恪守“今日事今日毕”的座右铭，保持优秀的工作作风和良好的生活习惯。</p>
+			<p>已婚：会怀着感恩的心更加珍惜这份工作机会，相比应届毕业生更踏实，更稳定。</p>
+			<p>个人网站：www.qingjs.com www.html5so.com</p>
+			<p>目前正在写JavaScript技术类书</p>
+			<h5>学历：大学</h5>
+			<h5>学校：清华园</h5>
+			<h5>专业：软件工程</h5>
+		</div>
+		<div class="jobBtns">
+			<a href="javascript:void(0)" class="btnR initiateInterview">发起面试</a>
+			<a href="javascript:void(0)" class="btnR collect">收    藏</a>
+			<a href="javascript:void(0)" class="btnR share">分    享</a>
+		</div>
+	</div>
+  <%= render partial: "/layouts/right"%>
+</div>

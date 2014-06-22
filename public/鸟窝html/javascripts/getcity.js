@@ -418,7 +418,7 @@ function ILData_callback(eID)
     }
     document.getElementById(eID).value = cityname;
 }
-
+//http://counter.sina.com.cn/ip  新浪ip
 $(function($) {
     $("#mycity").chosen({disable_search_threshold: 10});
     $("#cityHopes").chosen({disable_search_threshold: 10});

@@ -1,0 +1,99 @@
+<div class="mainContainer">
+	<div class="main">
+		<!-- <div class="ml">
+		</div> -->
+		<!-- <div class="mm"> -->
+			<h2 class="h2Title">完善简历</h2>
+			<%= form_for @account_resume, url: (@account_resume.new_record? ? accounts_resumes_path : accounts_resume_path(@account_resume)) do |f|%>
+        <%if flash[:error]%>
+        <span style="color: red">错误信息:<%= flash[:error]%></span>
+        <%end%>
+        <%if flash[:notice]%>
+        <span style="color: green">提示信息:<%= flash[:notice]%></span>
+        <%end%>
+				<div class="form">
+					<div class="frm">
+						<span class="">姓名：</span>
+            <%= f.text_field :name%>
+						<span class="error">*请填写昵称</span>
+					</div>
+					<div class="frm">
+						<span class="">手机：</span>
+            <%= f.text_field :tel%>
+						<span class="error">*请填写昵称</span>
+					</div>
+					<div class="frm">
+						<span class="">邮箱：</span>
+            <%= f.text_field :email%>
+						<span class="error">*请填写昵称</span>
+					</div>
+					<div class="frm">
+						<span class="">出生年份：</span>
+            <%= f.text_field :birthday, value: format_to_date(@account_resume.birthday)%>
+						<span class="error">*请填写昵称</span>
+					</div>
+					<div class="frm">
+						<span class="">性别：</span>
+            <label>男<%= f.radio_button :gender, 1%></label>
+            <label>女<%= f.radio_button :gender, 0%></label>
+						<span class="error">*请填写昵称</span>
+					</div>
+					<div class="frm">
+						<span class="">期望职位：</span>
+            <%= f.text_field :tags%>
+						<span class="error">*请填写期望职位</span>
+					</div>
+					<div class="frm">
+						<span class="">期望城市：</span>
+            <%= f.text_field :hope_area%>
+						<span class="error">*请填写联系邮箱</span>
+					</div>
+					<div class="frm">
+						<span class="">期望薪资：</span>
+            <%= f.text_field :hope_salary%>
+						<span class="error">*请填写公司邮箱</span>
+					</div>
+					<div class="frm">
+						<span class="">邀约金：</span>
+            <%= f.text_field :price%>
+						<span class="error">*请填写邀约金</span>
+					</div>
+					<div class="frm">
+						<span class="">学历：</span>
+            <%= f.text_field :education%>
+						<span class="error">*请填写公司邮箱</span>
+					</div>
+				</div>
+      
+				<div class="jobBtns">
+          <%= f.submit raw("保&nbsp;存"), class: "btn"%>
+				</div>
+      <%end%>
+      
+      <br /><br /><br /><br /><br />
+      <%= form_for AccountResumeExperience.new, url: accounts_resume_experiences_path do |f|%>
+        <%= f.hidden_field :account_resume_id, value: @account_resume.id %>
+        <span class="">公司：</span>
+        <%= f.text_field :company_name%><br />
+        <span class="">职位：</span>
+        <%= f.text_field :post%><br />
+        <span class="">开始时间：</span>
+        <%= f.text_field :start_time%><br />
+        <span class="">结束时间：</span>
+        <%= f.text_field :end_time%><br />
+        <span class="">描述：</span>
+        <%= f.text_area :description%><br />
+        <%= f.submit%>
+      <%end%>
+      <%= "还没有工作经历" if @account_resume.account_resume_experiences.blank?%>
+      <%@account_resume.account_resume_experiences.each do |item|%>
+        <%= item.company_name%><br />
+        <%= item.post%><br />
+        <%= item.start_time%><br />
+        <%= item.end_time%><br /><br /><br /><br />
+      <%end%>
+		</div>
+    
+	<!-- </div> -->
+  <%= render partial: "/layouts/right"%>
+</div>

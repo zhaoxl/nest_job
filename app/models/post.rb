@@ -49,7 +49,7 @@ class Post < ActiveRecord::Base
   def protect_email
     return "" if self.email.blank?
     
-    return self.email.sub(/^.{4}(.+)@.+$/.match(email)[1], "**")
+    return Post.convert_protect_email(self.email)
   end
   
   # 判断是否可以申请职位
@@ -64,6 +64,12 @@ class Post < ActiveRecord::Base
   def can_apply?(account_id)
     return false if account_id.blank?
     !!AccountPostApply.by_account_id(account_id).by_post_id(self.id)
+  end
+  
+  def self.convert_protect_email(email)
+    return "" if email.blank?
+    
+    email.sub(/^.{4}(.+)@.+$/.match(email)[1], "**")
   end
   
   

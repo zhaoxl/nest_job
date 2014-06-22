@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140619112048) do
+ActiveRecord::Schema.define(version: 20140622104337) do
 
   create_table "account_post_applies", force: true do |t|
     t.integer  "account_id"
@@ -24,6 +24,14 @@ ActiveRecord::Schema.define(version: 20140619112048) do
     t.datetime "updated_at"
   end
 
+  create_table "account_resume_educations", force: true do |t|
+    t.string "name"
+    t.string "school"
+    t.string "major"
+    t.date   "start_date"
+    t.date   "end_date"
+  end
+
   create_table "account_resume_experiences", force: true do |t|
     t.string   "company_name"
     t.string   "post"
@@ -33,6 +41,24 @@ ActiveRecord::Schema.define(version: 20140619112048) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "account_resume_id"
+    t.integer  "salary"
+  end
+
+  create_table "account_resume_objects", force: true do |t|
+    t.string "name"
+    t.string "project_desc"
+    t.string "role_desc"
+    t.date   "start_date"
+    t.date   "end_date"
+  end
+
+  create_table "account_resume_radars", force: true do |t|
+    t.string  "status"
+    t.boolean "be_searched",          default: false
+    t.boolean "subscribe",            default: false
+    t.integer "subscribe_frequency"
+    t.date    "subscribe_start_date"
+    t.date    "subscribe_end_date"
   end
 
   create_table "account_resume_tags", force: true do |t|
@@ -54,6 +80,9 @@ ActiveRecord::Schema.define(version: 20140619112048) do
     t.string   "email"
     t.datetime "birthday"
     t.integer  "gender"
+    t.date     "work_start_date"
+    t.string   "marital_status"
+    t.integer  "address"
   end
 
   create_table "account_tags", force: true do |t|
@@ -203,6 +232,7 @@ ActiveRecord::Schema.define(version: 20140619112048) do
     t.integer  "year"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "search_num", default: 0
   end
 
   create_table "industries", force: true do |t|
