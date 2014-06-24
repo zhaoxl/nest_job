@@ -1,0 +1,15 @@
+[2014-06-24 10:37:43,467][INFO ][node                     ] [Ramshot] stopping ...
+[2014-06-24 10:37:43,511][INFO ][node                     ] [Ramshot] stopped
+[2014-06-24 10:37:43,511][INFO ][node                     ] [Ramshot] closing ...
+[2014-06-24 10:37:43,519][INFO ][node                     ] [Ramshot] closed
+[2014-06-24 10:37:58,387][INFO ][node                     ] [Shanga] version[1.2.1], pid[11609], build[6c95b75/2014-06-03T15:02:52Z]
+[2014-06-24 10:37:58,394][INFO ][node                     ] [Shanga] initializing ...
+[2014-06-24 10:37:58,412][INFO ][plugins                  ] [Shanga] loaded [], sites [rtf, kopf]
+[2014-06-24 10:38:04,364][INFO ][node                     ] [Shanga] initialized
+[2014-06-24 10:38:04,364][INFO ][node                     ] [Shanga] starting ...
+[2014-06-24 10:38:04,532][INFO ][transport                ] [Shanga] bound_address {inet[/0.0.0.0:9300]}, publish_address {inet[/10.144.175.190:9300]}
+[2014-06-24 10:38:07,601][INFO ][cluster.service          ] [Shanga] new_master [Shanga][6o6xSaaxREuw-04NxwV27g][AY140617140935903c0fZ][inet[/10.144.175.190:9300]], reason: zen-disco-join (elected_as_master)
+[2014-06-24 10:38:07,666][INFO ][discovery                ] [Shanga] elasticsearch/6o6xSaaxREuw-04NxwV27g
+[2014-06-24 10:38:07,718][INFO ][http                     ] [Shanga] bound_address {inet[/0.0.0.0:9200]}, publish_address {inet[/10.144.175.190:9200]}
+[2014-06-24 10:38:09,077][INFO ][gateway                  ] [Shanga] recovered [1] indices into cluster_state
+[2014-06-24 10:38:09,085][INFO ][node                     ] [Shanga] started

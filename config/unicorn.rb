@@ -9,7 +9,7 @@ RAILS_ROOT = `pwd`.strip.sub(/releases\/\d+$/, 'current').to_s
 
 # Use at least one worker per core if you're on a dedicated server,
 # more will usually help for _short_ waits on databases/caches.
-worker_processes 3
+worker_processes 2
 puts "#{RAILS_ROOT}"
 
 # Help ensure your application will always spawn in the symlinked
@@ -20,10 +20,10 @@ working_directory RAILS_ROOT # available in 0.94.0+
 # we use a shorter backlog for quicker failover when busy
 #listen "/tmp/xypbx.sock", :backlog => 1024
 # listen 8001, tcp_nodelay: false, :tcp_nopush => true
-listen 8000, tcp_nodelay: false, :tcp_nopush => true
+listen 3000, tcp_nodelay: false, :tcp_nopush => true
 
 # nuke workers after 30 seconds instead of 60 seconds (the default)
-timeout 300
+timeout 30
 
 # feel free to point this anywhere accessible on the filesystem
 

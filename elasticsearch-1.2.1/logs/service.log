@@ -1,0 +1,632 @@
+STATUS | wrapper  | 2014/06/23 17:25:47 | --> Wrapper Started as Console
+STATUS | wrapper  | 2014/06/23 17:25:47 | Java Service Wrapper Community Edition 64-bit 3.5.14
+STATUS | wrapper  | 2014/06/23 17:25:47 |   Copyright (C) 1999-2011 Tanuki Software, Ltd. All Rights Reserved.
+STATUS | wrapper  | 2014/06/23 17:25:47 |     http://wrapper.tanukisoftware.com
+STATUS | wrapper  | 2014/06/23 17:25:47 | 
+STATUS | wrapper  | 2014/06/23 17:25:47 | Launching a JVM...
+INFO   | jvm 1    | 2014/06/23 17:25:48 | WrapperManager: Initializing...
+INFO   | jvm 1    | 2014/06/23 17:25:48 | WrapperSimpleApp Error: Class org.elasticsearch.bootstrap.ElasticsearchF found but could not be initialized: java.lang.UnsupportedClassVersionError: org/elasticsearch/bootstrap/ElasticsearchF : Unsupported major.minor version 51.0
+ERROR  | wrapper  | 2014/06/23 17:25:50 | JVM exited while loading the application.
+STATUS | wrapper  | 2014/06/23 17:25:54 | Launching a JVM...
+INFO   | jvm 2    | 2014/06/23 17:25:55 | WrapperManager: Initializing...
+INFO   | jvm 2    | 2014/06/23 17:25:55 | WrapperSimpleApp Error: Class org.elasticsearch.bootstrap.ElasticsearchF found but could not be initialized: java.lang.UnsupportedClassVersionError: org/elasticsearch/bootstrap/ElasticsearchF : Unsupported major.minor version 51.0
+ERROR  | wrapper  | 2014/06/23 17:25:56 | JVM exited while loading the application.
+STATUS | wrapper  | 2014/06/23 17:26:01 | Launching a JVM...
+INFO   | jvm 3    | 2014/06/23 17:26:01 | WrapperManager: Initializing...
+INFO   | jvm 3    | 2014/06/23 17:26:02 | WrapperSimpleApp Error: Class org.elasticsearch.bootstrap.ElasticsearchF found but could not be initialized: java.lang.UnsupportedClassVersionError: org/elasticsearch/bootstrap/ElasticsearchF : Unsupported major.minor version 51.0
+ERROR  | wrapper  | 2014/06/23 17:26:03 | JVM exited while loading the application.
+STATUS | wrapper  | 2014/06/23 17:26:07 | INT trapped.  Shutting down.
+STATUS | wrapper  | 2014/06/23 17:26:07 | <-- Wrapper Stopped
+STATUS | wrapper  | 2014/06/23 17:26:13 | --> Wrapper Started as Console
+STATUS | wrapper  | 2014/06/23 17:26:13 | Java Service Wrapper Community Edition 64-bit 3.5.14
+STATUS | wrapper  | 2014/06/23 17:26:13 |   Copyright (C) 1999-2011 Tanuki Software, Ltd. All Rights Reserved.
+STATUS | wrapper  | 2014/06/23 17:26:13 |     http://wrapper.tanukisoftware.com
+STATUS | wrapper  | 2014/06/23 17:26:13 | 
+STATUS | wrapper  | 2014/06/23 17:26:13 | Launching a JVM...
+INFO   | jvm 1    | 2014/06/23 17:26:14 | WrapperManager: Initializing...
+INFO   | jvm 1    | 2014/06/23 17:26:14 | WrapperSimpleApp Error: Class org.elasticsearch.bootstrap.ElasticsearchF found but could not be initialized: java.lang.UnsupportedClassVersionError: org/elasticsearch/bootstrap/ElasticsearchF : Unsupported major.minor version 51.0
+ERROR  | wrapper  | 2014/06/23 17:26:16 | JVM exited while loading the application.
+STATUS | wrapper  | 2014/06/23 17:26:17 | INT trapped.  Shutting down.
+STATUS | wrapper  | 2014/06/23 17:26:17 | <-- Wrapper Stopped
+STATUS | wrapper  | 2014/06/23 17:26:34 | --> Wrapper Started as Console
+STATUS | wrapper  | 2014/06/23 17:26:34 | Java Service Wrapper Community Edition 64-bit 3.5.14
+STATUS | wrapper  | 2014/06/23 17:26:34 |   Copyright (C) 1999-2011 Tanuki Software, Ltd. All Rights Reserved.
+STATUS | wrapper  | 2014/06/23 17:26:34 |     http://wrapper.tanukisoftware.com
+STATUS | wrapper  | 2014/06/23 17:26:34 | 
+STATUS | wrapper  | 2014/06/23 17:26:34 | Launching a JVM...
+INFO   | jvm 1    | 2014/06/23 17:26:35 | WrapperManager: Initializing...
+INFO   | jvm 1    | 2014/06/23 17:26:35 | WrapperSimpleApp Error: Class org.elasticsearch.bootstrap.ElasticsearchF found but could not be initialized: java.lang.UnsupportedClassVersionError: org/elasticsearch/bootstrap/ElasticsearchF : Unsupported major.minor version 51.0
+ERROR  | wrapper  | 2014/06/23 17:26:37 | JVM exited while loading the application.
+STATUS | wrapper  | 2014/06/23 17:26:39 | INT trapped.  Shutting down.
+STATUS | wrapper  | 2014/06/23 17:26:39 | <-- Wrapper Stopped
+STATUS | wrapper  | 2014/06/23 17:26:43 | --> Wrapper Started as Console
+STATUS | wrapper  | 2014/06/23 17:26:43 | Java Service Wrapper Community Edition 64-bit 3.5.14
+STATUS | wrapper  | 2014/06/23 17:26:43 |   Copyright (C) 1999-2011 Tanuki Software, Ltd. All Rights Reserved.
+STATUS | wrapper  | 2014/06/23 17:26:43 |     http://wrapper.tanukisoftware.com
+STATUS | wrapper  | 2014/06/23 17:26:43 | 
+STATUS | wrapper  | 2014/06/23 17:26:43 | Launching a JVM...
+INFO   | jvm 1    | 2014/06/23 17:26:44 | WrapperManager: Initializing...
+INFO   | jvm 1    | 2014/06/23 17:26:44 | WrapperSimpleApp Error: Class org.elasticsearch.bootstrap.ElasticsearchF found but could not be initialized: java.lang.UnsupportedClassVersionError: org/elasticsearch/bootstrap/ElasticsearchF : Unsupported major.minor version 51.0
+STATUS | wrapper  | 2014/06/23 17:26:45 | INT trapped.  Shutting down.
+WARN   | wrapper  | 2014/06/23 17:26:45 | JVM exited unexpectedly while stopping the application.
+STATUS | wrapper  | 2014/06/23 17:26:46 | <-- Wrapper Stopped
+STATUS | wrapper  | 2014/06/23 17:26:51 | --> Wrapper Started as Console
+STATUS | wrapper  | 2014/06/23 17:26:51 | Java Service Wrapper Community Edition 64-bit 3.5.14
+STATUS | wrapper  | 2014/06/23 17:26:51 |   Copyright (C) 1999-2011 Tanuki Software, Ltd. All Rights Reserved.
+STATUS | wrapper  | 2014/06/23 17:26:51 |     http://wrapper.tanukisoftware.com
+STATUS | wrapper  | 2014/06/23 17:26:51 | 
+STATUS | wrapper  | 2014/06/23 17:26:52 | Launching a JVM...
+INFO   | jvm 1    | 2014/06/23 17:26:52 | WrapperManager: Initializing...
+INFO   | jvm 1    | 2014/06/23 17:26:52 | WrapperSimpleApp Error: Class org.elasticsearch.bootstrap.ElasticsearchF found but could not be initialized: java.lang.UnsupportedClassVersionError: org/elasticsearch/bootstrap/ElasticsearchF : Unsupported major.minor version 51.0
+STATUS | wrapper  | 2014/06/23 17:26:53 | INT trapped.  Shutting down.
+WARN   | wrapper  | 2014/06/23 17:26:54 | JVM exited unexpectedly while stopping the application.
+STATUS | wrapper  | 2014/06/23 17:26:54 | <-- Wrapper Stopped
+STATUS | wrapper  | 2014/06/23 17:30:11 | --> Wrapper Started as Console
+STATUS | wrapper  | 2014/06/23 17:30:11 | Java Service Wrapper Community Edition 64-bit 3.5.14
+STATUS | wrapper  | 2014/06/23 17:30:11 |   Copyright (C) 1999-2011 Tanuki Software, Ltd. All Rights Reserved.
+STATUS | wrapper  | 2014/06/23 17:30:11 |     http://wrapper.tanukisoftware.com
+STATUS | wrapper  | 2014/06/23 17:30:11 | 
+STATUS | wrapper  | 2014/06/23 17:30:11 | Launching a JVM...
+INFO   | jvm 1    | 2014/06/23 17:30:12 | WrapperManager: Initializing...
+INFO   | jvm 1    | 2014/06/23 17:30:12 | WrapperSimpleApp Error: Class org.elasticsearch.bootstrap.ElasticsearchF found but could not be initialized: java.lang.UnsupportedClassVersionError: org/elasticsearch/bootstrap/ElasticsearchF : Unsupported major.minor version 51.0
+ERROR  | wrapper  | 2014/06/23 17:30:14 | JVM exited while loading the application.
+STATUS | wrapper  | 2014/06/23 17:30:14 | INT trapped.  Shutting down.
+STATUS | wrapper  | 2014/06/23 17:30:14 | <-- Wrapper Stopped
+STATUS | wrapper  | 2014/06/23 17:33:38 | --> Wrapper Started as Console
+STATUS | wrapper  | 2014/06/23 17:33:38 | Java Service Wrapper Community Edition 64-bit 3.5.14
+STATUS | wrapper  | 2014/06/23 17:33:38 |   Copyright (C) 1999-2011 Tanuki Software, Ltd. All Rights Reserved.
+STATUS | wrapper  | 2014/06/23 17:33:38 |     http://wrapper.tanukisoftware.com
+STATUS | wrapper  | 2014/06/23 17:33:38 | 
+STATUS | wrapper  | 2014/06/23 17:33:39 | Launching a JVM...
+INFO   | jvm 1    | 2014/06/23 17:33:39 | WrapperManager: Initializing...
+INFO   | jvm 1    | 2014/06/23 17:33:40 | [2014-06-23 17:33:40,819][INFO ][node                     ] [Ikthalon] version[1.2.1], pid[9374], build[6c95b75/2014-06-03T15:02:52Z]
+INFO   | jvm 1    | 2014/06/23 17:33:40 | [2014-06-23 17:33:40,820][INFO ][node                     ] [Ikthalon] initializing ...
+INFO   | jvm 1    | 2014/06/23 17:33:40 | [2014-06-23 17:33:40,839][INFO ][plugins                  ] [Ikthalon] loaded [], sites [rtf]
+INFO   | jvm 1    | 2014/06/23 17:33:46 | [2014-06-23 17:33:46,440][INFO ][node                     ] [Ikthalon] initialized
+INFO   | jvm 1    | 2014/06/23 17:33:46 | [2014-06-23 17:33:46,441][INFO ][node                     ] [Ikthalon] starting ...
+INFO   | jvm 1    | 2014/06/23 17:33:46 | [2014-06-23 17:33:46,620][INFO ][transport                ] [Ikthalon] bound_address {inet[/0.0.0.0:9300]}, publish_address {inet[/10.144.175.190:9300]}
+INFO   | jvm 1    | 2014/06/23 17:33:49 | [2014-06-23 17:33:49,695][INFO ][cluster.service          ] [Ikthalon] new_master [Ikthalon][vAMTMVnoRz2ggL4aZTzX4Q][AY140617140935903c0fZ][inet[/10.144.175.190:9300]], reason: zen-disco-join (elected_as_master)
+INFO   | jvm 1    | 2014/06/23 17:33:49 | [2014-06-23 17:33:49,767][INFO ][discovery                ] [Ikthalon] elasticsearch/vAMTMVnoRz2ggL4aZTzX4Q
+INFO   | jvm 1    | 2014/06/23 17:33:50 | [2014-06-23 17:33:49,930][INFO ][http                     ] [Ikthalon] bound_address {inet[/0.0.0.0:9200]}, publish_address {inet[/10.144.175.190:9200]}
+INFO   | jvm 1    | 2014/06/23 17:33:50 | [2014-06-23 17:33:49,990][INFO ][gateway                  ] [Ikthalon] recovered [0] indices into cluster_state
+INFO   | jvm 1    | 2014/06/23 17:33:50 | [2014-06-23 17:33:49,991][INFO ][node                     ] [Ikthalon] started
+STATUS | wrapper  | 2014/06/23 17:35:31 | INT trapped.  Shutting down.
+INFO   | jvm 1    | 2014/06/23 17:35:32 | [2014-06-23 17:35:32,287][INFO ][node                     ] [Ikthalon] stopping ...
+INFO   | jvm 1    | 2014/06/23 17:35:32 | [2014-06-23 17:35:32,336][INFO ][node                     ] [Ikthalon] stopped
+INFO   | jvm 1    | 2014/06/23 17:35:32 | [2014-06-23 17:35:32,336][INFO ][node                     ] [Ikthalon] closing ...
+INFO   | jvm 1    | 2014/06/23 17:35:32 | [2014-06-23 17:35:32,354][INFO ][node                     ] [Ikthalon] closed
+STATUS | wrapper  | 2014/06/23 17:35:32 | INT trapped.  Forcing immediate shutdown.
+STATUS | wrapper  | 2014/06/23 17:35:32 | <-- Wrapper Stopped
+STATUS | wrapper  | 2014/06/23 17:38:39 | --> Wrapper Started as Console
+STATUS | wrapper  | 2014/06/23 17:38:39 | Java Service Wrapper Community Edition 64-bit 3.5.14
+STATUS | wrapper  | 2014/06/23 17:38:39 |   Copyright (C) 1999-2011 Tanuki Software, Ltd. All Rights Reserved.
+STATUS | wrapper  | 2014/06/23 17:38:39 |     http://wrapper.tanukisoftware.com
+STATUS | wrapper  | 2014/06/23 17:38:39 | 
+STATUS | wrapper  | 2014/06/23 17:38:39 | Launching a JVM...
+INFO   | jvm 1    | 2014/06/23 17:38:40 | WrapperManager: Initializing...
+INFO   | jvm 1    | 2014/06/23 17:38:41 | [2014-06-23 17:38:41,520][INFO ][node                     ] [Red Shift] version[1.2.1], pid[9687], build[6c95b75/2014-06-03T15:02:52Z]
+INFO   | jvm 1    | 2014/06/23 17:38:41 | [2014-06-23 17:38:41,520][INFO ][node                     ] [Red Shift] initializing ...
+INFO   | jvm 1    | 2014/06/23 17:38:41 | [2014-06-23 17:38:41,893][INFO ][plugins                  ] [Red Shift] loaded [transport-thrift, analysis-mmseg, analysis-pinyin, mapper-attachments, analysis-ik, marvel, analysis-smartcn, analysis-ansj, DocumentPartialUpdate, river-email, analysis-string2int, analysis-stconvert], sites [marvel, bigdesk, segmentspy, rtf, kopf, head, inquisitor, paramedic]
+INFO   | jvm 1    | 2014/06/23 17:38:44 | {1.2.1}: Initialization Failed ...
+INFO   | jvm 1    | 2014/06/23 17:38:44 | - ExecutionError[java.lang.IncompatibleClassChangeError: Implementing class]
+INFO   | jvm 1    | 2014/06/23 17:38:44 | 	IncompatibleClassChangeError[Implementing class]
+STATUS | wrapper  | 2014/06/23 17:38:46 | <-- Wrapper Stopped
+STATUS | wrapper  | 2014/06/23 17:39:48 | --> Wrapper Started as Console
+STATUS | wrapper  | 2014/06/23 17:39:48 | Java Service Wrapper Community Edition 64-bit 3.5.14
+STATUS | wrapper  | 2014/06/23 17:39:48 |   Copyright (C) 1999-2011 Tanuki Software, Ltd. All Rights Reserved.
+STATUS | wrapper  | 2014/06/23 17:39:48 |     http://wrapper.tanukisoftware.com
+STATUS | wrapper  | 2014/06/23 17:39:48 | 
+STATUS | wrapper  | 2014/06/23 17:39:48 | Launching a JVM...
+INFO   | jvm 1    | 2014/06/23 17:39:48 | WrapperManager: Initializing...
+INFO   | jvm 1    | 2014/06/23 17:39:50 | [2014-06-23 17:39:50,266][INFO ][node                     ] [Eson the Searcher] version[1.2.1], pid[9932], build[6c95b75/2014-06-03T15:02:52Z]
+INFO   | jvm 1    | 2014/06/23 17:39:50 | [2014-06-23 17:39:50,277][INFO ][node                     ] [Eson the Searcher] initializing ...
+INFO   | jvm 1    | 2014/06/23 17:39:50 | [2014-06-23 17:39:50,639][INFO ][plugins                  ] [Eson the Searcher] loaded [transport-thrift, analysis-mmseg, analysis-pinyin, mapper-attachments, analysis-ik, marvel, analysis-smartcn, analysis-ansj, DocumentPartialUpdate, river-email, analysis-string2int, analysis-stconvert], sites [marvel, bigdesk, segmentspy, rtf, kopf, head, inquisitor, paramedic]
+INFO   | jvm 1    | 2014/06/23 17:39:52 | {1.2.1}: Initialization Failed ...
+INFO   | jvm 1    | 2014/06/23 17:39:52 | - ExecutionError[java.lang.IncompatibleClassChangeError: Implementing class]
+INFO   | jvm 1    | 2014/06/23 17:39:52 | 	IncompatibleClassChangeError[Implementing class]
+STATUS | wrapper  | 2014/06/23 17:39:54 | <-- Wrapper Stopped
+STATUS | wrapper  | 2014/06/23 17:41:48 | --> Wrapper Started as Console
+STATUS | wrapper  | 2014/06/23 17:41:48 | Java Service Wrapper Community Edition 64-bit 3.5.14
+STATUS | wrapper  | 2014/06/23 17:41:48 |   Copyright (C) 1999-2011 Tanuki Software, Ltd. All Rights Reserved.
+STATUS | wrapper  | 2014/06/23 17:41:48 |     http://wrapper.tanukisoftware.com
+STATUS | wrapper  | 2014/06/23 17:41:48 | 
+STATUS | wrapper  | 2014/06/23 17:41:48 | Launching a JVM...
+INFO   | jvm 1    | 2014/06/23 17:41:48 | WrapperManager: Initializing...
+INFO   | jvm 1    | 2014/06/23 17:41:50 | [2014-06-23 17:41:50,063][INFO ][node                     ] [Hag] version[1.2.1], pid[10087], build[6c95b75/2014-06-03T15:02:52Z]
+INFO   | jvm 1    | 2014/06/23 17:41:50 | [2014-06-23 17:41:50,064][INFO ][node                     ] [Hag] initializing ...
+INFO   | jvm 1    | 2014/06/23 17:41:50 | [2014-06-23 17:41:50,328][INFO ][plugins                  ] [Hag] loaded [transport-thrift, analysis-mmseg, analysis-pinyin, mapper-attachments, analysis-ik, marvel, analysis-smartcn, analysis-ansj, DocumentPartialUpdate, river-email, analysis-string2int, analysis-stconvert], sites [marvel, bigdesk, segmentspy, rtf, kopf, head, inquisitor, paramedic]
+INFO   | jvm 1    | 2014/06/23 17:41:52 | {1.2.1}: Initialization Failed ...
+INFO   | jvm 1    | 2014/06/23 17:41:52 | - ExecutionError[java.lang.IncompatibleClassChangeError: Implementing class]
+INFO   | jvm 1    | 2014/06/23 17:41:52 | 	IncompatibleClassChangeError[Implementing class]
+STATUS | wrapper  | 2014/06/23 17:41:54 | <-- Wrapper Stopped
+STATUS | wrapper  | 2014/06/23 17:43:02 | --> Wrapper Started as Console
+STATUS | wrapper  | 2014/06/23 17:43:02 | Java Service Wrapper Community Edition 64-bit 3.5.14
+STATUS | wrapper  | 2014/06/23 17:43:02 |   Copyright (C) 1999-2011 Tanuki Software, Ltd. All Rights Reserved.
+STATUS | wrapper  | 2014/06/23 17:43:02 |     http://wrapper.tanukisoftware.com
+STATUS | wrapper  | 2014/06/23 17:43:02 | 
+STATUS | wrapper  | 2014/06/23 17:43:03 | Launching a JVM...
+INFO   | jvm 1    | 2014/06/23 17:43:03 | WrapperManager: Initializing...
+INFO   | jvm 1    | 2014/06/23 17:43:04 | [2014-06-23 17:43:04,802][INFO ][node                     ] [Hippolyta] version[1.2.1], pid[10213], build[6c95b75/2014-06-03T15:02:52Z]
+INFO   | jvm 1    | 2014/06/23 17:43:04 | [2014-06-23 17:43:04,807][INFO ][node                     ] [Hippolyta] initializing ...
+INFO   | jvm 1    | 2014/06/23 17:43:05 | [2014-06-23 17:43:05,095][INFO ][plugins                  ] [Hippolyta] loaded [transport-thrift, analysis-mmseg, analysis-pinyin, mapper-attachments, analysis-ik, analysis-smartcn, analysis-ansj, DocumentPartialUpdate, river-email, analysis-string2int, analysis-stconvert], sites [bigdesk, segmentspy, rtf, kopf, head, inquisitor, paramedic]
+INFO   | jvm 1    | 2014/06/23 17:43:07 | {1.2.1}: Initialization Failed ...
+INFO   | jvm 1    | 2014/06/23 17:43:07 | - ExecutionError[java.lang.IncompatibleClassChangeError: Implementing class]
+INFO   | jvm 1    | 2014/06/23 17:43:07 | 	IncompatibleClassChangeError[Implementing class]
+STATUS | wrapper  | 2014/06/23 17:43:09 | INT trapped.  Forcing immediate shutdown.
+STATUS | wrapper  | 2014/06/23 17:43:09 | <-- Wrapper Stopped
+STATUS | wrapper  | 2014/06/23 17:43:22 | --> Wrapper Started as Console
+STATUS | wrapper  | 2014/06/23 17:43:22 | Java Service Wrapper Community Edition 64-bit 3.5.14
+STATUS | wrapper  | 2014/06/23 17:43:22 |   Copyright (C) 1999-2011 Tanuki Software, Ltd. All Rights Reserved.
+STATUS | wrapper  | 2014/06/23 17:43:22 |     http://wrapper.tanukisoftware.com
+STATUS | wrapper  | 2014/06/23 17:43:22 | 
+STATUS | wrapper  | 2014/06/23 17:43:23 | Launching a JVM...
+INFO   | jvm 1    | 2014/06/23 17:43:23 | WrapperManager: Initializing...
+INFO   | jvm 1    | 2014/06/23 17:43:24 | [2014-06-23 17:43:24,840][INFO ][node                     ] [Alex] version[1.2.1], pid[10325], build[6c95b75/2014-06-03T15:02:52Z]
+INFO   | jvm 1    | 2014/06/23 17:43:24 | [2014-06-23 17:43:24,841][INFO ][node                     ] [Alex] initializing ...
+INFO   | jvm 1    | 2014/06/23 17:43:25 | [2014-06-23 17:43:25,194][INFO ][plugins                  ] [Alex] loaded [transport-thrift, analysis-mmseg, analysis-pinyin, mapper-attachments, analysis-ik, analysis-smartcn, analysis-ansj, DocumentPartialUpdate, river-email, analysis-string2int, analysis-stconvert], sites [segmentspy, rtf, kopf, head, inquisitor, paramedic]
+INFO   | jvm 1    | 2014/06/23 17:43:27 | {1.2.1}: Initialization Failed ...
+INFO   | jvm 1    | 2014/06/23 17:43:27 | - ExecutionError[java.lang.IncompatibleClassChangeError: Implementing class]
+INFO   | jvm 1    | 2014/06/23 17:43:27 | 	IncompatibleClassChangeError[Implementing class]
+STATUS | wrapper  | 2014/06/23 17:43:29 | <-- Wrapper Stopped
+STATUS | wrapper  | 2014/06/23 17:44:12 | --> Wrapper Started as Console
+STATUS | wrapper  | 2014/06/23 17:44:12 | Java Service Wrapper Community Edition 64-bit 3.5.14
+STATUS | wrapper  | 2014/06/23 17:44:12 |   Copyright (C) 1999-2011 Tanuki Software, Ltd. All Rights Reserved.
+STATUS | wrapper  | 2014/06/23 17:44:12 |     http://wrapper.tanukisoftware.com
+STATUS | wrapper  | 2014/06/23 17:44:12 | 
+STATUS | wrapper  | 2014/06/23 17:44:13 | Launching a JVM...
+INFO   | jvm 1    | 2014/06/23 17:44:13 | WrapperManager: Initializing...
+INFO   | jvm 1    | 2014/06/23 17:44:15 | [2014-06-23 17:44:14,998][INFO ][node                     ] [Terror] version[1.2.1], pid[10464], build[6c95b75/2014-06-03T15:02:52Z]
+INFO   | jvm 1    | 2014/06/23 17:44:15 | [2014-06-23 17:44:15,009][INFO ][node                     ] [Terror] initializing ...
+INFO   | jvm 1    | 2014/06/23 17:44:15 | [2014-06-23 17:44:15,406][INFO ][plugins                  ] [Terror] loaded [transport-thrift, analysis-mmseg, analysis-pinyin, mapper-attachments, analysis-ik, analysis-smartcn, analysis-ansj, DocumentPartialUpdate, river-email, analysis-string2int, analysis-stconvert], sites [rtf]
+INFO   | jvm 1    | 2014/06/23 17:44:17 | {1.2.1}: Initialization Failed ...
+INFO   | jvm 1    | 2014/06/23 17:44:17 | - ExecutionError[java.lang.IncompatibleClassChangeError: Implementing class]
+INFO   | jvm 1    | 2014/06/23 17:44:17 | 	IncompatibleClassChangeError[Implementing class]
+STATUS | wrapper  | 2014/06/23 17:44:19 | <-- Wrapper Stopped
+STATUS | wrapper  | 2014/06/23 17:44:29 | --> Wrapper Started as Console
+STATUS | wrapper  | 2014/06/23 17:44:29 | Java Service Wrapper Community Edition 64-bit 3.5.14
+STATUS | wrapper  | 2014/06/23 17:44:29 |   Copyright (C) 1999-2011 Tanuki Software, Ltd. All Rights Reserved.
+STATUS | wrapper  | 2014/06/23 17:44:29 |     http://wrapper.tanukisoftware.com
+STATUS | wrapper  | 2014/06/23 17:44:29 | 
+STATUS | wrapper  | 2014/06/23 17:44:29 | Launching a JVM...
+INFO   | jvm 1    | 2014/06/23 17:44:29 | WrapperManager: Initializing...
+INFO   | jvm 1    | 2014/06/23 17:44:31 | [2014-06-23 17:44:31,377][INFO ][node                     ] [Adrian Corbo] version[1.2.1], pid[10558], build[6c95b75/2014-06-03T15:02:52Z]
+INFO   | jvm 1    | 2014/06/23 17:44:31 | [2014-06-23 17:44:31,378][INFO ][node                     ] [Adrian Corbo] initializing ...
+INFO   | jvm 1    | 2014/06/23 17:44:31 | [2014-06-23 17:44:31,687][INFO ][plugins                  ] [Adrian Corbo] loaded [analysis-mmseg, analysis-pinyin, mapper-attachments, analysis-ik, analysis-smartcn, analysis-ansj, DocumentPartialUpdate, river-email, analysis-string2int, analysis-stconvert], sites [rtf]
+INFO   | jvm 1    | 2014/06/23 17:44:33 | {1.2.1}: Initialization Failed ...
+INFO   | jvm 1    | 2014/06/23 17:44:33 | - ExecutionError[java.lang.NoClassDefFoundError: org/elasticsearch/rest/XContentRestResponse]
+INFO   | jvm 1    | 2014/06/23 17:44:33 | 	NoClassDefFoundError[org/elasticsearch/rest/XContentRestResponse]
+INFO   | jvm 1    | 2014/06/23 17:44:33 | 		ClassNotFoundException[org.elasticsearch.rest.XContentRestResponse]
+STATUS | wrapper  | 2014/06/23 17:44:35 | <-- Wrapper Stopped
+STATUS | wrapper  | 2014/06/23 17:46:28 | --> Wrapper Started as Console
+STATUS | wrapper  | 2014/06/23 17:46:28 | Java Service Wrapper Community Edition 64-bit 3.5.14
+STATUS | wrapper  | 2014/06/23 17:46:28 |   Copyright (C) 1999-2011 Tanuki Software, Ltd. All Rights Reserved.
+STATUS | wrapper  | 2014/06/23 17:46:28 |     http://wrapper.tanukisoftware.com
+STATUS | wrapper  | 2014/06/23 17:46:28 | 
+STATUS | wrapper  | 2014/06/23 17:46:28 | Launching a JVM...
+INFO   | jvm 1    | 2014/06/23 17:46:29 | WrapperManager: Initializing...
+INFO   | jvm 1    | 2014/06/23 17:46:30 | [2014-06-23 17:46:30,447][INFO ][node                     ] [Diamanda Nero] version[1.2.1], pid[10739], build[6c95b75/2014-06-03T15:02:52Z]
+INFO   | jvm 1    | 2014/06/23 17:46:30 | [2014-06-23 17:46:30,451][INFO ][node                     ] [Diamanda Nero] initializing ...
+INFO   | jvm 1    | 2014/06/23 17:46:30 | [2014-06-23 17:46:30,667][INFO ][plugins                  ] [Diamanda Nero] loaded [analysis-mmseg, analysis-pinyin, mapper-attachments, analysis-ik, marvel, analysis-smartcn, analysis-ansj, DocumentPartialUpdate, river-email, analysis-string2int, analysis-stconvert], sites [marvel, bigdesk, segmentspy, rtf, kopf, head, inquisitor, paramedic]
+INFO   | jvm 1    | 2014/06/23 17:46:32 | {1.2.1}: Initialization Failed ...
+INFO   | jvm 1    | 2014/06/23 17:46:32 | - ExecutionError[java.lang.NoClassDefFoundError: org/elasticsearch/rest/XContentRestResponse]
+INFO   | jvm 1    | 2014/06/23 17:46:32 | 	NoClassDefFoundError[org/elasticsearch/rest/XContentRestResponse]
+INFO   | jvm 1    | 2014/06/23 17:46:32 | 		ClassNotFoundException[org.elasticsearch.rest.XContentRestResponse]
+STATUS | wrapper  | 2014/06/23 17:46:34 | <-- Wrapper Stopped
+STATUS | wrapper  | 2014/06/23 17:47:10 | --> Wrapper Started as Console
+STATUS | wrapper  | 2014/06/23 17:47:10 | Java Service Wrapper Community Edition 64-bit 3.5.14
+STATUS | wrapper  | 2014/06/23 17:47:10 |   Copyright (C) 1999-2011 Tanuki Software, Ltd. All Rights Reserved.
+STATUS | wrapper  | 2014/06/23 17:47:10 |     http://wrapper.tanukisoftware.com
+STATUS | wrapper  | 2014/06/23 17:47:10 | 
+STATUS | wrapper  | 2014/06/23 17:47:11 | Launching a JVM...
+INFO   | jvm 1    | 2014/06/23 17:47:11 | WrapperManager: Initializing...
+INFO   | jvm 1    | 2014/06/23 17:47:12 | [2014-06-23 17:47:12,706][INFO ][node                     ] [Monet St. Croix] version[1.2.1], pid[10867], build[6c95b75/2014-06-03T15:02:52Z]
+INFO   | jvm 1    | 2014/06/23 17:47:12 | [2014-06-23 17:47:12,707][INFO ][node                     ] [Monet St. Croix] initializing ...
+INFO   | jvm 1    | 2014/06/23 17:47:13 | [2014-06-23 17:47:13,152][INFO ][plugins                  ] [Monet St. Croix] loaded [transport-thrift, analysis-mmseg, analysis-pinyin, mapper-attachments, analysis-ik, marvel, analysis-smartcn, analysis-ansj, DocumentPartialUpdate, river-email, analysis-string2int, analysis-stconvert], sites [marvel, bigdesk, segmentspy, rtf, kopf, head, inquisitor, paramedic]
+INFO   | jvm 1    | 2014/06/23 17:47:15 | {1.2.1}: Initialization Failed ...
+INFO   | jvm 1    | 2014/06/23 17:47:15 | - ExecutionError[java.lang.IncompatibleClassChangeError: Implementing class]
+INFO   | jvm 1    | 2014/06/23 17:47:15 | 	IncompatibleClassChangeError[Implementing class]
+STATUS | wrapper  | 2014/06/23 17:47:17 | <-- Wrapper Stopped
+STATUS | wrapper  | 2014/06/23 17:47:30 | --> Wrapper Started as Console
+STATUS | wrapper  | 2014/06/23 17:47:30 | Java Service Wrapper Community Edition 64-bit 3.5.14
+STATUS | wrapper  | 2014/06/23 17:47:30 |   Copyright (C) 1999-2011 Tanuki Software, Ltd. All Rights Reserved.
+STATUS | wrapper  | 2014/06/23 17:47:30 |     http://wrapper.tanukisoftware.com
+STATUS | wrapper  | 2014/06/23 17:47:30 | 
+STATUS | wrapper  | 2014/06/23 17:47:30 | Launching a JVM...
+INFO   | jvm 1    | 2014/06/23 17:47:30 | WrapperManager: Initializing...
+INFO   | jvm 1    | 2014/06/23 17:47:32 | [2014-06-23 17:47:32,420][INFO ][node                     ] [Mass Master] version[1.2.1], pid[10965], build[6c95b75/2014-06-03T15:02:52Z]
+INFO   | jvm 1    | 2014/06/23 17:47:32 | [2014-06-23 17:47:32,421][INFO ][node                     ] [Mass Master] initializing ...
+INFO   | jvm 1    | 2014/06/23 17:47:32 | [2014-06-23 17:47:32,663][INFO ][plugins                  ] [Mass Master] loaded [transport-thrift, mapper-attachments, marvel, DocumentPartialUpdate, river-email], sites [marvel, bigdesk, segmentspy, rtf, kopf, head, inquisitor, paramedic]
+INFO   | jvm 1    | 2014/06/23 17:47:34 | {1.2.1}: Initialization Failed ...
+INFO   | jvm 1    | 2014/06/23 17:47:34 | - ExecutionError[java.lang.IncompatibleClassChangeError: Implementing class]
+INFO   | jvm 1    | 2014/06/23 17:47:34 | 	IncompatibleClassChangeError[Implementing class]
+STATUS | wrapper  | 2014/06/23 17:47:36 | <-- Wrapper Stopped
+STATUS | wrapper  | 2014/06/23 17:47:55 | --> Wrapper Started as Console
+STATUS | wrapper  | 2014/06/23 17:47:55 | Java Service Wrapper Community Edition 64-bit 3.5.14
+STATUS | wrapper  | 2014/06/23 17:47:55 |   Copyright (C) 1999-2011 Tanuki Software, Ltd. All Rights Reserved.
+STATUS | wrapper  | 2014/06/23 17:47:55 |     http://wrapper.tanukisoftware.com
+STATUS | wrapper  | 2014/06/23 17:47:55 | 
+STATUS | wrapper  | 2014/06/23 17:47:56 | Launching a JVM...
+INFO   | jvm 1    | 2014/06/23 17:47:56 | WrapperManager: Initializing...
+INFO   | jvm 1    | 2014/06/23 17:47:58 | [2014-06-23 17:47:58,073][INFO ][node                     ] [Alicia Masters] version[1.2.1], pid[11065], build[6c95b75/2014-06-03T15:02:52Z]
+INFO   | jvm 1    | 2014/06/23 17:47:58 | [2014-06-23 17:47:58,074][INFO ][node                     ] [Alicia Masters] initializing ...
+INFO   | jvm 1    | 2014/06/23 17:47:58 | [2014-06-23 17:47:58,180][INFO ][plugins                  ] [Alicia Masters] loaded [transport-thrift, marvel, DocumentPartialUpdate, river-email], sites [marvel, bigdesk, segmentspy, rtf, kopf, head, inquisitor, paramedic]
+INFO   | jvm 1    | 2014/06/23 17:48:00 | {1.2.1}: Initialization Failed ...
+INFO   | jvm 1    | 2014/06/23 17:48:00 | - ExecutionError[java.lang.IncompatibleClassChangeError: Implementing class]
+INFO   | jvm 1    | 2014/06/23 17:48:00 | 	IncompatibleClassChangeError[Implementing class]
+STATUS | wrapper  | 2014/06/23 17:48:02 | <-- Wrapper Stopped
+STATUS | wrapper  | 2014/06/23 17:48:14 | --> Wrapper Started as Console
+STATUS | wrapper  | 2014/06/23 17:48:14 | Java Service Wrapper Community Edition 64-bit 3.5.14
+STATUS | wrapper  | 2014/06/23 17:48:14 |   Copyright (C) 1999-2011 Tanuki Software, Ltd. All Rights Reserved.
+STATUS | wrapper  | 2014/06/23 17:48:14 |     http://wrapper.tanukisoftware.com
+STATUS | wrapper  | 2014/06/23 17:48:14 | 
+STATUS | wrapper  | 2014/06/23 17:48:14 | Launching a JVM...
+INFO   | jvm 1    | 2014/06/23 17:48:14 | WrapperManager: Initializing...
+INFO   | jvm 1    | 2014/06/23 17:48:16 | [2014-06-23 17:48:16,121][INFO ][node                     ] [Doughboy] version[1.2.1], pid[11155], build[6c95b75/2014-06-03T15:02:52Z]
+INFO   | jvm 1    | 2014/06/23 17:48:16 | [2014-06-23 17:48:16,122][INFO ][node                     ] [Doughboy] initializing ...
+INFO   | jvm 1    | 2014/06/23 17:48:16 | [2014-06-23 17:48:16,214][INFO ][plugins                  ] [Doughboy] loaded [transport-thrift, DocumentPartialUpdate, river-email], sites [bigdesk, segmentspy, rtf, kopf, head, inquisitor, paramedic]
+INFO   | jvm 1    | 2014/06/23 17:48:18 | {1.2.1}: Initialization Failed ...
+INFO   | jvm 1    | 2014/06/23 17:48:18 | - ExecutionError[java.lang.IncompatibleClassChangeError: Implementing class]
+INFO   | jvm 1    | 2014/06/23 17:48:18 | 	IncompatibleClassChangeError[Implementing class]
+STATUS | wrapper  | 2014/06/23 17:48:20 | <-- Wrapper Stopped
+STATUS | wrapper  | 2014/06/23 17:48:52 | --> Wrapper Started as Console
+STATUS | wrapper  | 2014/06/23 17:48:52 | Java Service Wrapper Community Edition 64-bit 3.5.14
+STATUS | wrapper  | 2014/06/23 17:48:52 |   Copyright (C) 1999-2011 Tanuki Software, Ltd. All Rights Reserved.
+STATUS | wrapper  | 2014/06/23 17:48:52 |     http://wrapper.tanukisoftware.com
+STATUS | wrapper  | 2014/06/23 17:48:52 | 
+STATUS | wrapper  | 2014/06/23 17:48:53 | Launching a JVM...
+INFO   | jvm 1    | 2014/06/23 17:48:53 | WrapperManager: Initializing...
+INFO   | jvm 1    | 2014/06/23 17:48:54 | [2014-06-23 17:48:54,785][INFO ][node                     ] [Kirtsyn Perrin Short Stop] version[1.2.1], pid[11277], build[6c95b75/2014-06-03T15:02:52Z]
+INFO   | jvm 1    | 2014/06/23 17:48:54 | [2014-06-23 17:48:54,786][INFO ][node                     ] [Kirtsyn Perrin Short Stop] initializing ...
+INFO   | jvm 1    | 2014/06/23 17:48:54 | [2014-06-23 17:48:54,847][INFO ][plugins                  ] [Kirtsyn Perrin Short Stop] loaded [transport-thrift, DocumentPartialUpdate], sites [bigdesk, segmentspy, rtf, kopf, head, inquisitor, paramedic]
+INFO   | jvm 1    | 2014/06/23 17:48:56 | {1.2.1}: Initialization Failed ...
+INFO   | jvm 1    | 2014/06/23 17:48:56 | - ExecutionError[java.lang.IncompatibleClassChangeError: Implementing class]
+INFO   | jvm 1    | 2014/06/23 17:48:56 | 	IncompatibleClassChangeError[Implementing class]
+STATUS | wrapper  | 2014/06/23 17:48:58 | <-- Wrapper Stopped
+STATUS | wrapper  | 2014/06/23 17:50:01 | --> Wrapper Started as Console
+STATUS | wrapper  | 2014/06/23 17:50:01 | Java Service Wrapper Community Edition 64-bit 3.5.14
+STATUS | wrapper  | 2014/06/23 17:50:01 |   Copyright (C) 1999-2011 Tanuki Software, Ltd. All Rights Reserved.
+STATUS | wrapper  | 2014/06/23 17:50:01 |     http://wrapper.tanukisoftware.com
+STATUS | wrapper  | 2014/06/23 17:50:01 | 
+STATUS | wrapper  | 2014/06/23 17:50:01 | Launching a JVM...
+INFO   | jvm 1    | 2014/06/23 17:50:02 | WrapperManager: Initializing...
+INFO   | jvm 1    | 2014/06/23 17:50:03 | [2014-06-23 17:50:03,692][INFO ][node                     ] [Hellion] version[1.2.1], pid[11427], build[6c95b75/2014-06-03T15:02:52Z]
+INFO   | jvm 1    | 2014/06/23 17:50:03 | [2014-06-23 17:50:03,693][INFO ][node                     ] [Hellion] initializing ...
+INFO   | jvm 1    | 2014/06/23 17:50:03 | [2014-06-23 17:50:03,742][INFO ][plugins                  ] [Hellion] loaded [transport-thrift, DocumentPartialUpdate], sites [bigdesk, segmentspy, rtf, kopf, head, paramedic]
+INFO   | jvm 1    | 2014/06/23 17:50:05 | {1.2.1}: Initialization Failed ...
+INFO   | jvm 1    | 2014/06/23 17:50:05 | - ExecutionError[java.lang.IncompatibleClassChangeError: Implementing class]
+INFO   | jvm 1    | 2014/06/23 17:50:05 | 	IncompatibleClassChangeError[Implementing class]
+STATUS | wrapper  | 2014/06/23 17:50:07 | <-- Wrapper Stopped
+STATUS | wrapper  | 2014/06/23 17:50:49 | --> Wrapper Started as Console
+STATUS | wrapper  | 2014/06/23 17:50:49 | Java Service Wrapper Community Edition 64-bit 3.5.14
+STATUS | wrapper  | 2014/06/23 17:50:49 |   Copyright (C) 1999-2011 Tanuki Software, Ltd. All Rights Reserved.
+STATUS | wrapper  | 2014/06/23 17:50:49 |     http://wrapper.tanukisoftware.com
+STATUS | wrapper  | 2014/06/23 17:50:49 | 
+STATUS | wrapper  | 2014/06/23 17:50:49 | Launching a JVM...
+INFO   | jvm 1    | 2014/06/23 17:50:49 | WrapperManager: Initializing...
+INFO   | jvm 1    | 2014/06/23 17:50:51 | [2014-06-23 17:50:50,982][INFO ][node                     ] [Bling] version[1.2.1], pid[11541], build[6c95b75/2014-06-03T15:02:52Z]
+INFO   | jvm 1    | 2014/06/23 17:50:51 | [2014-06-23 17:50:50,988][INFO ][node                     ] [Bling] initializing ...
+INFO   | jvm 1    | 2014/06/23 17:50:51 | [2014-06-23 17:50:51,020][INFO ][plugins                  ] [Bling] loaded [transport-thrift, DocumentPartialUpdate], sites [bigdesk, rtf, kopf, head, paramedic]
+INFO   | jvm 1    | 2014/06/23 17:50:52 | {1.2.1}: Initialization Failed ...
+INFO   | jvm 1    | 2014/06/23 17:50:52 | - ExecutionError[java.lang.IncompatibleClassChangeError: Implementing class]
+INFO   | jvm 1    | 2014/06/23 17:50:52 | 	IncompatibleClassChangeError[Implementing class]
+STATUS | wrapper  | 2014/06/23 17:50:54 | INT trapped.  Forcing immediate shutdown.
+INFO   | wrapper  | 2014/06/23 17:50:54 | JVM exited on its own while waiting to kill the application.
+STATUS | wrapper  | 2014/06/23 17:50:54 | <-- Wrapper Stopped
+STATUS | wrapper  | 2014/06/23 17:51:13 | --> Wrapper Started as Console
+STATUS | wrapper  | 2014/06/23 17:51:13 | Java Service Wrapper Community Edition 64-bit 3.5.14
+STATUS | wrapper  | 2014/06/23 17:51:13 |   Copyright (C) 1999-2011 Tanuki Software, Ltd. All Rights Reserved.
+STATUS | wrapper  | 2014/06/23 17:51:13 |     http://wrapper.tanukisoftware.com
+STATUS | wrapper  | 2014/06/23 17:51:13 | 
+STATUS | wrapper  | 2014/06/23 17:51:13 | Launching a JVM...
+INFO   | jvm 1    | 2014/06/23 17:51:13 | WrapperManager: Initializing...
+INFO   | jvm 1    | 2014/06/23 17:51:15 | [2014-06-23 17:51:15,195][INFO ][node                     ] [Alistair Smythe] version[1.2.1], pid[11652], build[6c95b75/2014-06-03T15:02:52Z]
+INFO   | jvm 1    | 2014/06/23 17:51:15 | [2014-06-23 17:51:15,196][INFO ][node                     ] [Alistair Smythe] initializing ...
+INFO   | jvm 1    | 2014/06/23 17:51:15 | [2014-06-23 17:51:15,240][INFO ][plugins                  ] [Alistair Smythe] loaded [transport-thrift, DocumentPartialUpdate], sites [bigdesk, rtf, head]
+INFO   | jvm 1    | 2014/06/23 17:51:17 | {1.2.1}: Initialization Failed ...
+INFO   | jvm 1    | 2014/06/23 17:51:17 | - ExecutionError[java.lang.IncompatibleClassChangeError: Implementing class]
+INFO   | jvm 1    | 2014/06/23 17:51:17 | 	IncompatibleClassChangeError[Implementing class]
+STATUS | wrapper  | 2014/06/23 17:51:19 | <-- Wrapper Stopped
+STATUS | wrapper  | 2014/06/23 17:51:51 | --> Wrapper Started as Console
+STATUS | wrapper  | 2014/06/23 17:51:51 | Java Service Wrapper Community Edition 64-bit 3.5.14
+STATUS | wrapper  | 2014/06/23 17:51:51 |   Copyright (C) 1999-2011 Tanuki Software, Ltd. All Rights Reserved.
+STATUS | wrapper  | 2014/06/23 17:51:51 |     http://wrapper.tanukisoftware.com
+STATUS | wrapper  | 2014/06/23 17:51:51 | 
+STATUS | wrapper  | 2014/06/23 17:51:51 | Launching a JVM...
+INFO   | jvm 1    | 2014/06/23 17:51:51 | WrapperManager: Initializing...
+INFO   | jvm 1    | 2014/06/23 17:51:53 | [2014-06-23 17:51:53,266][INFO ][node                     ] [Son of Satan] version[1.2.1], pid[11878], build[6c95b75/2014-06-03T15:02:52Z]
+INFO   | jvm 1    | 2014/06/23 17:51:53 | [2014-06-23 17:51:53,269][INFO ][node                     ] [Son of Satan] initializing ...
+INFO   | jvm 1    | 2014/06/23 17:51:53 | [2014-06-23 17:51:53,312][INFO ][plugins                  ] [Son of Satan] loaded [transport-thrift, DocumentPartialUpdate], sites [rtf, head]
+INFO   | jvm 1    | 2014/06/23 17:51:55 | {1.2.1}: Initialization Failed ...
+INFO   | jvm 1    | 2014/06/23 17:51:55 | - ExecutionError[java.lang.IncompatibleClassChangeError: Implementing class]
+INFO   | jvm 1    | 2014/06/23 17:51:55 | 	IncompatibleClassChangeError[Implementing class]
+STATUS | wrapper  | 2014/06/23 17:51:57 | INT trapped.  Forcing immediate shutdown.
+STATUS | wrapper  | 2014/06/23 17:51:57 | <-- Wrapper Stopped
+STATUS | wrapper  | 2014/06/23 17:52:14 | --> Wrapper Started as Console
+STATUS | wrapper  | 2014/06/23 17:52:14 | Java Service Wrapper Community Edition 64-bit 3.5.14
+STATUS | wrapper  | 2014/06/23 17:52:14 |   Copyright (C) 1999-2011 Tanuki Software, Ltd. All Rights Reserved.
+STATUS | wrapper  | 2014/06/23 17:52:14 |     http://wrapper.tanukisoftware.com
+STATUS | wrapper  | 2014/06/23 17:52:14 | 
+STATUS | wrapper  | 2014/06/23 17:52:14 | Launching a JVM...
+INFO   | jvm 1    | 2014/06/23 17:52:14 | WrapperManager: Initializing...
+INFO   | jvm 1    | 2014/06/23 17:52:16 | [2014-06-23 17:52:16,137][INFO ][node                     ] [Astronomer] version[1.2.1], pid[11974], build[6c95b75/2014-06-03T15:02:52Z]
+INFO   | jvm 1    | 2014/06/23 17:52:16 | [2014-06-23 17:52:16,137][INFO ][node                     ] [Astronomer] initializing ...
+INFO   | jvm 1    | 2014/06/23 17:52:16 | [2014-06-23 17:52:16,157][INFO ][plugins                  ] [Astronomer] loaded [transport-thrift], sites [rtf]
+INFO   | jvm 1    | 2014/06/23 17:52:18 | {1.2.1}: Initialization Failed ...
+INFO   | jvm 1    | 2014/06/23 17:52:18 | - ExecutionError[java.lang.IncompatibleClassChangeError: Implementing class]
+INFO   | jvm 1    | 2014/06/23 17:52:18 | 	IncompatibleClassChangeError[Implementing class]
+STATUS | wrapper  | 2014/06/23 17:52:20 | <-- Wrapper Stopped
+STATUS | wrapper  | 2014/06/23 17:52:28 | --> Wrapper Started as Console
+STATUS | wrapper  | 2014/06/23 17:52:28 | Java Service Wrapper Community Edition 64-bit 3.5.14
+STATUS | wrapper  | 2014/06/23 17:52:28 |   Copyright (C) 1999-2011 Tanuki Software, Ltd. All Rights Reserved.
+STATUS | wrapper  | 2014/06/23 17:52:28 |     http://wrapper.tanukisoftware.com
+STATUS | wrapper  | 2014/06/23 17:52:28 | 
+STATUS | wrapper  | 2014/06/23 17:52:28 | Launching a JVM...
+INFO   | jvm 1    | 2014/06/23 17:52:29 | WrapperManager: Initializing...
+INFO   | jvm 1    | 2014/06/23 17:52:30 | [2014-06-23 17:52:30,745][INFO ][node                     ] [Hercules] version[1.2.1], pid[12086], build[6c95b75/2014-06-03T15:02:52Z]
+INFO   | jvm 1    | 2014/06/23 17:52:30 | [2014-06-23 17:52:30,746][INFO ][node                     ] [Hercules] initializing ...
+INFO   | jvm 1    | 2014/06/23 17:52:30 | [2014-06-23 17:52:30,781][INFO ][plugins                  ] [Hercules] loaded [transport-thrift], sites []
+INFO   | jvm 1    | 2014/06/23 17:52:32 | {1.2.1}: Initialization Failed ...
+INFO   | jvm 1    | 2014/06/23 17:52:32 | - ExecutionError[java.lang.IncompatibleClassChangeError: Implementing class]
+INFO   | jvm 1    | 2014/06/23 17:52:32 | 	IncompatibleClassChangeError[Implementing class]
+STATUS | wrapper  | 2014/06/23 17:52:34 | INT trapped.  Forcing immediate shutdown.
+STATUS | wrapper  | 2014/06/23 17:52:34 | <-- Wrapper Stopped
+STATUS | wrapper  | 2014/06/23 17:52:39 | --> Wrapper Started as Console
+STATUS | wrapper  | 2014/06/23 17:52:39 | Java Service Wrapper Community Edition 64-bit 3.5.14
+STATUS | wrapper  | 2014/06/23 17:52:39 |   Copyright (C) 1999-2011 Tanuki Software, Ltd. All Rights Reserved.
+STATUS | wrapper  | 2014/06/23 17:52:39 |     http://wrapper.tanukisoftware.com
+STATUS | wrapper  | 2014/06/23 17:52:39 | 
+STATUS | wrapper  | 2014/06/23 17:52:39 | Launching a JVM...
+INFO   | jvm 1    | 2014/06/23 17:52:40 | WrapperManager: Initializing...
+INFO   | jvm 1    | 2014/06/23 17:52:41 | [2014-06-23 17:52:41,756][INFO ][node                     ] [Goliath] version[1.2.1], pid[12176], build[6c95b75/2014-06-03T15:02:52Z]
+INFO   | jvm 1    | 2014/06/23 17:52:41 | [2014-06-23 17:52:41,757][INFO ][node                     ] [Goliath] initializing ...
+INFO   | jvm 1    | 2014/06/23 17:52:41 | [2014-06-23 17:52:41,772][INFO ][plugins                  ] [Goliath] loaded [], sites []
+INFO   | jvm 1    | 2014/06/23 17:52:47 | [2014-06-23 17:52:47,064][INFO ][node                     ] [Goliath] initialized
+INFO   | jvm 1    | 2014/06/23 17:52:47 | [2014-06-23 17:52:47,065][INFO ][node                     ] [Goliath] starting ...
+INFO   | jvm 1    | 2014/06/23 17:52:47 | [2014-06-23 17:52:47,171][INFO ][transport                ] [Goliath] bound_address {inet[/0.0.0.0:9300]}, publish_address {inet[/10.144.175.190:9300]}
+INFO   | jvm 1    | 2014/06/23 17:52:50 | [2014-06-23 17:52:50,225][INFO ][cluster.service          ] [Goliath] new_master [Goliath][c3415U-VSciKHRmxZyDCbg][AY140617140935903c0fZ][inet[/10.144.175.190:9300]], reason: zen-disco-join (elected_as_master)
+INFO   | jvm 1    | 2014/06/23 17:52:50 | [2014-06-23 17:52:50,292][INFO ][discovery                ] [Goliath] elasticsearch/c3415U-VSciKHRmxZyDCbg
+INFO   | jvm 1    | 2014/06/23 17:52:50 | [2014-06-23 17:52:50,441][INFO ][http                     ] [Goliath] bound_address {inet[/0.0.0.0:9200]}, publish_address {inet[/10.144.175.190:9200]}
+INFO   | jvm 1    | 2014/06/23 17:52:50 | [2014-06-23 17:52:50,513][INFO ][gateway                  ] [Goliath] recovered [0] indices into cluster_state
+INFO   | jvm 1    | 2014/06/23 17:52:50 | [2014-06-23 17:52:50,514][INFO ][node                     ] [Goliath] started
+STATUS | wrapper  | 2014/06/23 17:52:53 | INT trapped.  Shutting down.
+STATUS | wrapper  | 2014/06/23 17:52:53 | INT trapped.  Forcing immediate shutdown.
+ERROR  | wrapper  | 2014/06/23 17:52:53 | JVM did not exit on request, terminated
+STATUS | wrapper  | 2014/06/23 17:52:53 | INT trapped.  Forcing immediate shutdown.
+STATUS | wrapper  | 2014/06/23 17:52:53 | INT trapped.  Forcing immediate shutdown.
+STATUS | wrapper  | 2014/06/23 17:52:53 | <-- Wrapper Stopped
+STATUS | wrapper  | 2014/06/23 17:53:19 | --> Wrapper Started as Console
+STATUS | wrapper  | 2014/06/23 17:53:19 | Java Service Wrapper Community Edition 64-bit 3.5.14
+STATUS | wrapper  | 2014/06/23 17:53:19 |   Copyright (C) 1999-2011 Tanuki Software, Ltd. All Rights Reserved.
+STATUS | wrapper  | 2014/06/23 17:53:19 |     http://wrapper.tanukisoftware.com
+STATUS | wrapper  | 2014/06/23 17:53:19 | 
+STATUS | wrapper  | 2014/06/23 17:53:19 | Launching a JVM...
+INFO   | jvm 1    | 2014/06/23 17:53:19 | WrapperManager: Initializing...
+INFO   | jvm 1    | 2014/06/23 17:53:21 | [2014-06-23 17:53:21,438][INFO ][node                     ] [Colossus] version[1.2.1], pid[12336], build[6c95b75/2014-06-03T15:02:52Z]
+INFO   | jvm 1    | 2014/06/23 17:53:21 | [2014-06-23 17:53:21,439][INFO ][node                     ] [Colossus] initializing ...
+INFO   | jvm 1    | 2014/06/23 17:53:21 | [2014-06-23 17:53:21,790][INFO ][plugins                  ] [Colossus] loaded [analysis-mmseg, analysis-pinyin, mapper-attachments, analysis-ik, marvel, analysis-smartcn, analysis-ansj, DocumentPartialUpdate, river-email, analysis-string2int, analysis-stconvert], sites [marvel, bigdesk, segmentspy, rtf, kopf, head, inquisitor, paramedic]
+INFO   | jvm 1    | 2014/06/23 17:53:23 | {1.2.1}: Initialization Failed ...
+INFO   | jvm 1    | 2014/06/23 17:53:23 | - ExecutionError[java.lang.NoClassDefFoundError: org/elasticsearch/rest/XContentRestResponse]
+INFO   | jvm 1    | 2014/06/23 17:53:23 | 	NoClassDefFoundError[org/elasticsearch/rest/XContentRestResponse]
+INFO   | jvm 1    | 2014/06/23 17:53:23 | 		ClassNotFoundException[org.elasticsearch.rest.XContentRestResponse]
+STATUS | wrapper  | 2014/06/23 17:53:25 | <-- Wrapper Stopped
+STATUS | wrapper  | 2014/06/23 17:55:58 | --> Wrapper Started as Console
+STATUS | wrapper  | 2014/06/23 17:55:58 | Java Service Wrapper Community Edition 64-bit 3.5.14
+STATUS | wrapper  | 2014/06/23 17:55:58 |   Copyright (C) 1999-2011 Tanuki Software, Ltd. All Rights Reserved.
+STATUS | wrapper  | 2014/06/23 17:55:58 |     http://wrapper.tanukisoftware.com
+STATUS | wrapper  | 2014/06/23 17:55:58 | 
+STATUS | wrapper  | 2014/06/23 17:55:58 | Launching a JVM...
+INFO   | jvm 1    | 2014/06/23 17:55:58 | WrapperManager: Initializing...
+INFO   | jvm 1    | 2014/06/23 17:56:00 | [2014-06-23 17:56:00,081][INFO ][node                     ] [Kamuu] version[1.2.1], pid[12542], build[6c95b75/2014-06-03T15:02:52Z]
+INFO   | jvm 1    | 2014/06/23 17:56:00 | [2014-06-23 17:56:00,082][INFO ][node                     ] [Kamuu] initializing ...
+INFO   | jvm 1    | 2014/06/23 17:56:00 | [2014-06-23 17:56:00,434][INFO ][plugins                  ] [Kamuu] loaded [analysis-mmseg, analysis-pinyin, mapper-attachments, analysis-ik, marvel, analysis-smartcn, analysis-ansj, DocumentPartialUpdate, river-email, analysis-string2int, analysis-stconvert], sites [marvel, bigdesk, segmentspy, rtf, kopf, head, inquisitor, paramedic]
+INFO   | jvm 1    | 2014/06/23 17:56:02 | {1.2.1}: Initialization Failed ...
+INFO   | jvm 1    | 2014/06/23 17:56:02 | - ExecutionError[java.lang.NoClassDefFoundError: org/elasticsearch/rest/XContentRestResponse]
+INFO   | jvm 1    | 2014/06/23 17:56:02 | 	NoClassDefFoundError[org/elasticsearch/rest/XContentRestResponse]
+INFO   | jvm 1    | 2014/06/23 17:56:02 | 		ClassNotFoundException[org.elasticsearch.rest.XContentRestResponse]
+STATUS | wrapper  | 2014/06/23 17:56:04 | <-- Wrapper Stopped
+STATUS | wrapper  | 2014/06/23 18:09:04 | --> Wrapper Started as Console
+STATUS | wrapper  | 2014/06/23 18:09:04 | Java Service Wrapper Community Edition 64-bit 3.5.14
+STATUS | wrapper  | 2014/06/23 18:09:04 |   Copyright (C) 1999-2011 Tanuki Software, Ltd. All Rights Reserved.
+STATUS | wrapper  | 2014/06/23 18:09:04 |     http://wrapper.tanukisoftware.com
+STATUS | wrapper  | 2014/06/23 18:09:04 | 
+STATUS | wrapper  | 2014/06/23 18:09:04 | Launching a JVM...
+INFO   | jvm 1    | 2014/06/23 18:09:04 | WrapperManager: Initializing...
+INFO   | jvm 1    | 2014/06/23 18:09:06 | [2014-06-23 18:09:06,411][INFO ][node                     ] [Him] version[1.2.1], pid[13020], build[6c95b75/2014-06-03T15:02:52Z]
+INFO   | jvm 1    | 2014/06/23 18:09:06 | [2014-06-23 18:09:06,412][INFO ][node                     ] [Him] initializing ...
+INFO   | jvm 1    | 2014/06/23 18:09:06 | [2014-06-23 18:09:06,721][INFO ][plugins                  ] [Him] loaded [analysis-mmseg, analysis-pinyin, mapper-attachments, analysis-ik, marvel, analysis-smartcn, analysis-ansj, DocumentPartialUpdate, river-email, analysis-string2int, analysis-stconvert], sites [marvel, bigdesk, segmentspy, rtf, inquisitor, paramedic]
+INFO   | jvm 1    | 2014/06/23 18:09:08 | {1.2.1}: Initialization Failed ...
+INFO   | jvm 1    | 2014/06/23 18:09:08 | - ExecutionError[java.lang.NoClassDefFoundError: org/elasticsearch/rest/XContentRestResponse]
+INFO   | jvm 1    | 2014/06/23 18:09:08 | 	NoClassDefFoundError[org/elasticsearch/rest/XContentRestResponse]
+INFO   | jvm 1    | 2014/06/23 18:09:08 | 		ClassNotFoundException[org.elasticsearch.rest.XContentRestResponse]
+STATUS | wrapper  | 2014/06/23 18:09:11 | <-- Wrapper Stopped
+STATUS | wrapper  | 2014/06/23 18:09:34 | --> Wrapper Started as Console
+STATUS | wrapper  | 2014/06/23 18:09:34 | Java Service Wrapper Community Edition 64-bit 3.5.14
+STATUS | wrapper  | 2014/06/23 18:09:34 |   Copyright (C) 1999-2011 Tanuki Software, Ltd. All Rights Reserved.
+STATUS | wrapper  | 2014/06/23 18:09:34 |     http://wrapper.tanukisoftware.com
+STATUS | wrapper  | 2014/06/23 18:09:34 | 
+STATUS | wrapper  | 2014/06/23 18:09:34 | Launching a JVM...
+INFO   | jvm 1    | 2014/06/23 18:09:34 | WrapperManager: Initializing...
+INFO   | jvm 1    | 2014/06/23 18:09:36 | [2014-06-23 18:09:36,222][INFO ][node                     ] [Hellfire] version[1.2.1], pid[13131], build[6c95b75/2014-06-03T15:02:52Z]
+INFO   | jvm 1    | 2014/06/23 18:09:36 | [2014-06-23 18:09:36,227][INFO ][node                     ] [Hellfire] initializing ...
+INFO   | jvm 1    | 2014/06/23 18:09:36 | [2014-06-23 18:09:36,543][INFO ][plugins                  ] [Hellfire] loaded [mapper-attachments, analysis-ik, marvel, analysis-smartcn, analysis-ansj, DocumentPartialUpdate, river-email, analysis-string2int, analysis-stconvert], sites [marvel, bigdesk, segmentspy, rtf, inquisitor, paramedic]
+INFO   | jvm 1    | 2014/06/23 18:09:38 | {1.2.1}: Initialization Failed ...
+INFO   | jvm 1    | 2014/06/23 18:09:38 | - ExecutionError[java.lang.NoClassDefFoundError: org/elasticsearch/rest/XContentRestResponse]
+INFO   | jvm 1    | 2014/06/23 18:09:38 | 	NoClassDefFoundError[org/elasticsearch/rest/XContentRestResponse]
+INFO   | jvm 1    | 2014/06/23 18:09:38 | 		ClassNotFoundException[org.elasticsearch.rest.XContentRestResponse]
+STATUS | wrapper  | 2014/06/23 18:09:40 | <-- Wrapper Stopped
+STATUS | wrapper  | 2014/06/23 18:09:54 | --> Wrapper Started as Console
+STATUS | wrapper  | 2014/06/23 18:09:54 | Java Service Wrapper Community Edition 64-bit 3.5.14
+STATUS | wrapper  | 2014/06/23 18:09:54 |   Copyright (C) 1999-2011 Tanuki Software, Ltd. All Rights Reserved.
+STATUS | wrapper  | 2014/06/23 18:09:54 |     http://wrapper.tanukisoftware.com
+STATUS | wrapper  | 2014/06/23 18:09:54 | 
+STATUS | wrapper  | 2014/06/23 18:09:54 | Launching a JVM...
+INFO   | jvm 1    | 2014/06/23 18:09:55 | WrapperManager: Initializing...
+INFO   | jvm 1    | 2014/06/23 18:09:56 | [2014-06-23 18:09:56,560][INFO ][node                     ] [Weapon X] version[1.2.1], pid[13230], build[6c95b75/2014-06-03T15:02:52Z]
+INFO   | jvm 1    | 2014/06/23 18:09:56 | [2014-06-23 18:09:56,561][INFO ][node                     ] [Weapon X] initializing ...
+INFO   | jvm 1    | 2014/06/23 18:09:56 | [2014-06-23 18:09:56,769][INFO ][plugins                  ] [Weapon X] loaded [marvel, analysis-smartcn, analysis-ansj, DocumentPartialUpdate, river-email, analysis-string2int, analysis-stconvert], sites [marvel, bigdesk, segmentspy, rtf, inquisitor, paramedic]
+INFO   | jvm 1    | 2014/06/23 18:09:59 | {1.2.1}: Initialization Failed ...
+INFO   | jvm 1    | 2014/06/23 18:09:59 | - ExecutionError[java.lang.NoClassDefFoundError: org/elasticsearch/rest/XContentRestResponse]
+INFO   | jvm 1    | 2014/06/23 18:09:59 | 	NoClassDefFoundError[org/elasticsearch/rest/XContentRestResponse]
+INFO   | jvm 1    | 2014/06/23 18:09:59 | 		ClassNotFoundException[org.elasticsearch.rest.XContentRestResponse]
+STATUS | wrapper  | 2014/06/23 18:10:01 | <-- Wrapper Stopped
+STATUS | wrapper  | 2014/06/23 18:10:19 | --> Wrapper Started as Console
+STATUS | wrapper  | 2014/06/23 18:10:19 | Java Service Wrapper Community Edition 64-bit 3.5.14
+STATUS | wrapper  | 2014/06/23 18:10:19 |   Copyright (C) 1999-2011 Tanuki Software, Ltd. All Rights Reserved.
+STATUS | wrapper  | 2014/06/23 18:10:19 |     http://wrapper.tanukisoftware.com
+STATUS | wrapper  | 2014/06/23 18:10:19 | 
+STATUS | wrapper  | 2014/06/23 18:10:19 | Launching a JVM...
+INFO   | jvm 1    | 2014/06/23 18:10:19 | WrapperManager: Initializing...
+INFO   | jvm 1    | 2014/06/23 18:10:21 | [2014-06-23 18:10:21,386][INFO ][node                     ] [Peace Monger] version[1.2.1], pid[13340], build[6c95b75/2014-06-03T15:02:52Z]
+INFO   | jvm 1    | 2014/06/23 18:10:21 | [2014-06-23 18:10:21,391][INFO ][node                     ] [Peace Monger] initializing ...
+INFO   | jvm 1    | 2014/06/23 18:10:21 | [2014-06-23 18:10:21,549][INFO ][plugins                  ] [Peace Monger] loaded [analysis-ansj, DocumentPartialUpdate, river-email, analysis-string2int, analysis-stconvert], sites [bigdesk, segmentspy, rtf, inquisitor, paramedic]
+INFO   | jvm 1    | 2014/06/23 18:10:23 | {1.2.1}: Initialization Failed ...
+INFO   | jvm 1    | 2014/06/23 18:10:23 | - ExecutionError[java.lang.NoClassDefFoundError: org/elasticsearch/rest/XContentRestResponse]
+INFO   | jvm 1    | 2014/06/23 18:10:23 | 	NoClassDefFoundError[org/elasticsearch/rest/XContentRestResponse]
+INFO   | jvm 1    | 2014/06/23 18:10:23 | 		ClassNotFoundException[org.elasticsearch.rest.XContentRestResponse]
+STATUS | wrapper  | 2014/06/23 18:10:25 | <-- Wrapper Stopped
+STATUS | wrapper  | 2014/06/23 18:10:43 | --> Wrapper Started as Console
+STATUS | wrapper  | 2014/06/23 18:10:43 | Java Service Wrapper Community Edition 64-bit 3.5.14
+STATUS | wrapper  | 2014/06/23 18:10:43 |   Copyright (C) 1999-2011 Tanuki Software, Ltd. All Rights Reserved.
+STATUS | wrapper  | 2014/06/23 18:10:43 |     http://wrapper.tanukisoftware.com
+STATUS | wrapper  | 2014/06/23 18:10:43 | 
+STATUS | wrapper  | 2014/06/23 18:10:43 | Launching a JVM...
+INFO   | jvm 1    | 2014/06/23 18:10:43 | WrapperManager: Initializing...
+INFO   | jvm 1    | 2014/06/23 18:10:45 | [2014-06-23 18:10:45,457][INFO ][node                     ] [Tartarus] version[1.2.1], pid[13439], build[6c95b75/2014-06-03T15:02:52Z]
+INFO   | jvm 1    | 2014/06/23 18:10:45 | [2014-06-23 18:10:45,458][INFO ][node                     ] [Tartarus] initializing ...
+INFO   | jvm 1    | 2014/06/23 18:10:45 | [2014-06-23 18:10:45,526][INFO ][plugins                  ] [Tartarus] loaded [DocumentPartialUpdate, analysis-string2int, analysis-stconvert], sites [bigdesk, segmentspy, rtf, inquisitor, paramedic]
+INFO   | jvm 1    | 2014/06/23 18:10:47 | {1.2.1}: Initialization Failed ...
+INFO   | jvm 1    | 2014/06/23 18:10:47 | - ExecutionError[java.lang.NoClassDefFoundError: org/elasticsearch/rest/XContentRestResponse]
+INFO   | jvm 1    | 2014/06/23 18:10:47 | 	NoClassDefFoundError[org/elasticsearch/rest/XContentRestResponse]
+INFO   | jvm 1    | 2014/06/23 18:10:47 | 		ClassNotFoundException[org.elasticsearch.rest.XContentRestResponse]
+STATUS | wrapper  | 2014/06/23 18:10:49 | <-- Wrapper Stopped
+STATUS | wrapper  | 2014/06/23 18:11:15 | --> Wrapper Started as Console
+STATUS | wrapper  | 2014/06/23 18:11:15 | Java Service Wrapper Community Edition 64-bit 3.5.14
+STATUS | wrapper  | 2014/06/23 18:11:15 |   Copyright (C) 1999-2011 Tanuki Software, Ltd. All Rights Reserved.
+STATUS | wrapper  | 2014/06/23 18:11:15 |     http://wrapper.tanukisoftware.com
+STATUS | wrapper  | 2014/06/23 18:11:15 | 
+STATUS | wrapper  | 2014/06/23 18:11:16 | Launching a JVM...
+INFO   | jvm 1    | 2014/06/23 18:11:16 | WrapperManager: Initializing...
+INFO   | jvm 1    | 2014/06/23 18:11:17 | [2014-06-23 18:11:17,818][INFO ][node                     ] [Baal] version[1.2.1], pid[13550], build[6c95b75/2014-06-03T15:02:52Z]
+INFO   | jvm 1    | 2014/06/23 18:11:17 | [2014-06-23 18:11:17,823][INFO ][node                     ] [Baal] initializing ...
+INFO   | jvm 1    | 2014/06/23 18:11:17 | [2014-06-23 18:11:17,859][INFO ][plugins                  ] [Baal] loaded [DocumentPartialUpdate], sites [bigdesk, segmentspy, rtf, inquisitor, paramedic]
+INFO   | jvm 1    | 2014/06/23 18:11:20 | {1.2.1}: Initialization Failed ...
+INFO   | jvm 1    | 2014/06/23 18:11:20 | - ExecutionError[java.lang.NoClassDefFoundError: org/elasticsearch/rest/XContentRestResponse]
+INFO   | jvm 1    | 2014/06/23 18:11:20 | 	NoClassDefFoundError[org/elasticsearch/rest/XContentRestResponse]
+INFO   | jvm 1    | 2014/06/23 18:11:20 | 		ClassNotFoundException[org.elasticsearch.rest.XContentRestResponse]
+STATUS | wrapper  | 2014/06/23 18:11:21 | INT trapped.  Forcing immediate shutdown.
+ERROR  | wrapper  | 2014/06/23 18:11:21 | JVM did not exit on request, terminated
+STATUS | wrapper  | 2014/06/23 18:11:22 | <-- Wrapper Stopped
+STATUS | wrapper  | 2014/06/23 18:11:34 | --> Wrapper Started as Console
+STATUS | wrapper  | 2014/06/23 18:11:34 | Java Service Wrapper Community Edition 64-bit 3.5.14
+STATUS | wrapper  | 2014/06/23 18:11:34 |   Copyright (C) 1999-2011 Tanuki Software, Ltd. All Rights Reserved.
+STATUS | wrapper  | 2014/06/23 18:11:34 |     http://wrapper.tanukisoftware.com
+STATUS | wrapper  | 2014/06/23 18:11:34 | 
+STATUS | wrapper  | 2014/06/23 18:11:34 | Launching a JVM...
+INFO   | jvm 1    | 2014/06/23 18:11:35 | WrapperManager: Initializing...
+INFO   | jvm 1    | 2014/06/23 18:11:36 | [2014-06-23 18:11:36,610][INFO ][node                     ] [Scourge of the Underworld] version[1.2.1], pid[13647], build[6c95b75/2014-06-03T15:02:52Z]
+INFO   | jvm 1    | 2014/06/23 18:11:36 | [2014-06-23 18:11:36,623][INFO ][node                     ] [Scourge of the Underworld] initializing ...
+INFO   | jvm 1    | 2014/06/23 18:11:36 | [2014-06-23 18:11:36,657][INFO ][plugins                  ] [Scourge of the Underworld] loaded [DocumentPartialUpdate], sites [rtf, inquisitor, paramedic]
+INFO   | jvm 1    | 2014/06/23 18:11:38 | {1.2.1}: Initialization Failed ...
+INFO   | jvm 1    | 2014/06/23 18:11:38 | - ExecutionError[java.lang.NoClassDefFoundError: org/elasticsearch/rest/XContentRestResponse]
+INFO   | jvm 1    | 2014/06/23 18:11:38 | 	NoClassDefFoundError[org/elasticsearch/rest/XContentRestResponse]
+INFO   | jvm 1    | 2014/06/23 18:11:38 | 		ClassNotFoundException[org.elasticsearch.rest.XContentRestResponse]
+STATUS | wrapper  | 2014/06/23 18:11:40 | INT trapped.  Forcing immediate shutdown.
+ERROR  | wrapper  | 2014/06/23 18:11:40 | JVM did not exit on request, terminated
+STATUS | wrapper  | 2014/06/23 18:11:40 | <-- Wrapper Stopped
+STATUS | wrapper  | 2014/06/23 18:11:55 | --> Wrapper Started as Console
+STATUS | wrapper  | 2014/06/23 18:11:55 | Java Service Wrapper Community Edition 64-bit 3.5.14
+STATUS | wrapper  | 2014/06/23 18:11:55 |   Copyright (C) 1999-2011 Tanuki Software, Ltd. All Rights Reserved.
+STATUS | wrapper  | 2014/06/23 18:11:55 |     http://wrapper.tanukisoftware.com
+STATUS | wrapper  | 2014/06/23 18:11:55 | 
+STATUS | wrapper  | 2014/06/23 18:11:55 | Launching a JVM...
+INFO   | jvm 1    | 2014/06/23 18:11:56 | WrapperManager: Initializing...
+INFO   | jvm 1    | 2014/06/23 18:11:57 | [2014-06-23 18:11:57,771][INFO ][node                     ] [Slipstream] version[1.2.1], pid[13748], build[6c95b75/2014-06-03T15:02:52Z]
+INFO   | jvm 1    | 2014/06/23 18:11:57 | [2014-06-23 18:11:57,780][INFO ][node                     ] [Slipstream] initializing ...
+INFO   | jvm 1    | 2014/06/23 18:11:57 | [2014-06-23 18:11:57,809][INFO ][plugins                  ] [Slipstream] loaded [DocumentPartialUpdate], sites [paramedic]
+INFO   | jvm 1    | 2014/06/23 18:12:00 | {1.2.1}: Initialization Failed ...
+INFO   | jvm 1    | 2014/06/23 18:12:00 | - ExecutionError[java.lang.NoClassDefFoundError: org/elasticsearch/rest/XContentRestResponse]
+INFO   | jvm 1    | 2014/06/23 18:12:00 | 	NoClassDefFoundError[org/elasticsearch/rest/XContentRestResponse]
+INFO   | jvm 1    | 2014/06/23 18:12:00 | 		ClassNotFoundException[org.elasticsearch.rest.XContentRestResponse]
+STATUS | wrapper  | 2014/06/23 18:12:01 | INT trapped.  Forcing immediate shutdown.
+ERROR  | wrapper  | 2014/06/23 18:12:01 | JVM did not exit on request, terminated
+STATUS | wrapper  | 2014/06/23 18:12:01 | <-- Wrapper Stopped
+STATUS | wrapper  | 2014/06/23 18:12:12 | --> Wrapper Started as Console
+STATUS | wrapper  | 2014/06/23 18:12:12 | Java Service Wrapper Community Edition 64-bit 3.5.14
+STATUS | wrapper  | 2014/06/23 18:12:12 |   Copyright (C) 1999-2011 Tanuki Software, Ltd. All Rights Reserved.
+STATUS | wrapper  | 2014/06/23 18:12:12 |     http://wrapper.tanukisoftware.com
+STATUS | wrapper  | 2014/06/23 18:12:12 | 
+STATUS | wrapper  | 2014/06/23 18:12:13 | Launching a JVM...
+INFO   | jvm 1    | 2014/06/23 18:12:13 | WrapperManager: Initializing...
+INFO   | jvm 1    | 2014/06/23 18:12:15 | [2014-06-23 18:12:15,047][INFO ][node                     ] [Fantasia] version[1.2.1], pid[13848], build[6c95b75/2014-06-03T15:02:52Z]
+INFO   | jvm 1    | 2014/06/23 18:12:15 | [2014-06-23 18:12:15,048][INFO ][node                     ] [Fantasia] initializing ...
+INFO   | jvm 1    | 2014/06/23 18:12:15 | [2014-06-23 18:12:15,077][INFO ][plugins                  ] [Fantasia] loaded [DocumentPartialUpdate], sites []
+INFO   | jvm 1    | 2014/06/23 18:12:17 | {1.2.1}: Initialization Failed ...
+INFO   | jvm 1    | 2014/06/23 18:12:17 | - ExecutionError[java.lang.NoClassDefFoundError: org/elasticsearch/rest/XContentRestResponse]
+INFO   | jvm 1    | 2014/06/23 18:12:17 | 	NoClassDefFoundError[org/elasticsearch/rest/XContentRestResponse]
+INFO   | jvm 1    | 2014/06/23 18:12:17 | 		ClassNotFoundException[org.elasticsearch.rest.XContentRestResponse]
+STATUS | wrapper  | 2014/06/23 18:12:19 | <-- Wrapper Stopped
+STATUS | wrapper  | 2014/06/23 18:16:42 | --> Wrapper Started as Console
+STATUS | wrapper  | 2014/06/23 18:16:42 | Java Service Wrapper Community Edition 64-bit 3.5.14
+STATUS | wrapper  | 2014/06/23 18:16:42 |   Copyright (C) 1999-2011 Tanuki Software, Ltd. All Rights Reserved.
+STATUS | wrapper  | 2014/06/23 18:16:42 |     http://wrapper.tanukisoftware.com
+STATUS | wrapper  | 2014/06/23 18:16:42 | 
+STATUS | wrapper  | 2014/06/23 18:16:43 | Launching a JVM...
+INFO   | jvm 1    | 2014/06/23 18:16:43 | WrapperManager: Initializing...
+INFO   | jvm 1    | 2014/06/23 18:16:45 | [2014-06-23 18:16:44,946][INFO ][node                     ] [George Washington Bridge] version[1.2.1], pid[14289], build[6c95b75/2014-06-03T15:02:52Z]
+INFO   | jvm 1    | 2014/06/23 18:16:45 | [2014-06-23 18:16:44,947][INFO ][node                     ] [George Washington Bridge] initializing ...
+INFO   | jvm 1    | 2014/06/23 18:16:45 | [2014-06-23 18:16:44,963][INFO ][plugins                  ] [George Washington Bridge] loaded [], sites []
+INFO   | jvm 1    | 2014/06/23 18:16:50 | [2014-06-23 18:16:50,705][INFO ][node                     ] [George Washington Bridge] initialized
+INFO   | jvm 1    | 2014/06/23 18:16:50 | [2014-06-23 18:16:50,705][INFO ][node                     ] [George Washington Bridge] starting ...
+INFO   | jvm 1    | 2014/06/23 18:16:50 | [2014-06-23 18:16:50,870][INFO ][transport                ] [George Washington Bridge] bound_address {inet[/0.0.0.0:9300]}, publish_address {inet[/10.144.175.190:9300]}
+INFO   | jvm 1    | 2014/06/23 18:16:54 | [2014-06-23 18:16:53,943][INFO ][cluster.service          ] [George Washington Bridge] new_master [George Washington Bridge][Ur6rB0eyROG9rzX0J-sqsw][AY140617140935903c0fZ][inet[/10.144.175.190:9300]], reason: zen-disco-join (elected_as_master)
+INFO   | jvm 1    | 2014/06/23 18:16:54 | [2014-06-23 18:16:53,987][INFO ][discovery                ] [George Washington Bridge] elasticsearch/Ur6rB0eyROG9rzX0J-sqsw
+INFO   | jvm 1    | 2014/06/23 18:16:54 | [2014-06-23 18:16:54,139][INFO ][http                     ] [George Washington Bridge] bound_address {inet[/0.0.0.0:9200]}, publish_address {inet[/10.144.175.190:9200]}
+INFO   | jvm 1    | 2014/06/23 18:16:54 | [2014-06-23 18:16:54,237][INFO ][gateway                  ] [George Washington Bridge] recovered [0] indices into cluster_state
+INFO   | jvm 1    | 2014/06/23 18:16:54 | [2014-06-23 18:16:54,238][INFO ][node                     ] [George Washington Bridge] started
+STATUS | wrapper  | 2014/06/23 18:16:55 | INT trapped.  Shutting down.
+INFO   | jvm 1    | 2014/06/23 18:16:56 | [2014-06-23 18:16:56,706][INFO ][node                     ] [George Washington Bridge] stopping ...
+INFO   | jvm 1    | 2014/06/23 18:16:56 | [2014-06-23 18:16:56,751][INFO ][node                     ] [George Washington Bridge] stopped
+INFO   | jvm 1    | 2014/06/23 18:16:56 | [2014-06-23 18:16:56,751][INFO ][node                     ] [George Washington Bridge] closing ...
+INFO   | jvm 1    | 2014/06/23 18:16:56 | [2014-06-23 18:16:56,770][INFO ][node                     ] [George Washington Bridge] closed
+STATUS | wrapper  | 2014/06/23 18:16:56 | INT trapped.  Forcing immediate shutdown.
+STATUS | wrapper  | 2014/06/23 18:16:56 | <-- Wrapper Stopped
+STATUS | wrapper  | 2014/06/23 18:17:36 | --> Wrapper Started as Console
+STATUS | wrapper  | 2014/06/23 18:17:36 | Java Service Wrapper Community Edition 64-bit 3.5.14
+STATUS | wrapper  | 2014/06/23 18:17:36 |   Copyright (C) 1999-2011 Tanuki Software, Ltd. All Rights Reserved.
+STATUS | wrapper  | 2014/06/23 18:17:36 |     http://wrapper.tanukisoftware.com
+STATUS | wrapper  | 2014/06/23 18:17:36 | 
+STATUS | wrapper  | 2014/06/23 18:17:37 | Launching a JVM...
+INFO   | jvm 1    | 2014/06/23 18:17:37 | WrapperManager: Initializing...
+INFO   | jvm 1    | 2014/06/23 18:17:38 | [2014-06-23 18:17:38,913][INFO ][node                     ] [James Proudstar] version[1.2.1], pid[14458], build[6c95b75/2014-06-03T15:02:52Z]
+INFO   | jvm 1    | 2014/06/23 18:17:38 | [2014-06-23 18:17:38,914][INFO ][node                     ] [James Proudstar] initializing ...
+INFO   | jvm 1    | 2014/06/23 18:17:38 | [2014-06-23 18:17:38,942][INFO ][plugins                  ] [James Proudstar] loaded [], sites [rtf, kopf]
+INFO   | jvm 1    | 2014/06/23 18:17:44 | [2014-06-23 18:17:44,783][INFO ][node                     ] [James Proudstar] initialized
+INFO   | jvm 1    | 2014/06/23 18:17:44 | [2014-06-23 18:17:44,784][INFO ][node                     ] [James Proudstar] starting ...
+INFO   | jvm 1    | 2014/06/23 18:17:44 | [2014-06-23 18:17:44,959][INFO ][transport                ] [James Proudstar] bound_address {inet[/0.0.0.0:9300]}, publish_address {inet[/10.144.175.190:9300]}
+INFO   | jvm 1    | 2014/06/23 18:17:48 | [2014-06-23 18:17:48,039][INFO ][cluster.service          ] [James Proudstar] new_master [James Proudstar][o77dKHBYQ-OxkY8mhujrsQ][AY140617140935903c0fZ][inet[/10.144.175.190:9300]], reason: zen-disco-join (elected_as_master)
+INFO   | jvm 1    | 2014/06/23 18:17:48 | [2014-06-23 18:17:48,108][INFO ][discovery                ] [James Proudstar] elasticsearch/o77dKHBYQ-OxkY8mhujrsQ
+INFO   | jvm 1    | 2014/06/23 18:17:48 | [2014-06-23 18:17:48,263][INFO ][http                     ] [James Proudstar] bound_address {inet[/0.0.0.0:9200]}, publish_address {inet[/10.144.175.190:9200]}
+INFO   | jvm 1    | 2014/06/23 18:17:48 | [2014-06-23 18:17:48,325][INFO ][gateway                  ] [James Proudstar] recovered [0] indices into cluster_state
+INFO   | jvm 1    | 2014/06/23 18:17:48 | [2014-06-23 18:17:48,327][INFO ][node                     ] [James Proudstar] started
+STATUS | wrapper  | 2014/06/23 18:18:35 | INT trapped.  Shutting down.
+INFO   | jvm 1    | 2014/06/23 18:18:36 | [2014-06-23 18:18:36,510][INFO ][node                     ] [James Proudstar] stopping ...
+INFO   | jvm 1    | 2014/06/23 18:18:36 | [2014-06-23 18:18:36,560][INFO ][node                     ] [James Proudstar] stopped
+INFO   | jvm 1    | 2014/06/23 18:18:36 | [2014-06-23 18:18:36,561][INFO ][node                     ] [James Proudstar] closing ...
+INFO   | jvm 1    | 2014/06/23 18:18:36 | [2014-06-23 18:18:36,571][INFO ][node                     ] [James Proudstar] closed
+STATUS | wrapper  | 2014/06/23 18:18:36 | <-- Wrapper Stopped
+STATUS | wrapper  | 2014/06/23 18:18:42 | --> Wrapper Started as Daemon
+STATUS | wrapper  | 2014/06/23 18:18:42 | Java Service Wrapper Community Edition 64-bit 3.5.14
+STATUS | wrapper  | 2014/06/23 18:18:42 |   Copyright (C) 1999-2011 Tanuki Software, Ltd. All Rights Reserved.
+STATUS | wrapper  | 2014/06/23 18:18:42 |     http://wrapper.tanukisoftware.com
+STATUS | wrapper  | 2014/06/23 18:18:42 | 
+STATUS | wrapper  | 2014/06/23 18:18:42 | Launching a JVM...
+INFO   | jvm 1    | 2014/06/23 18:18:42 | WrapperManager: Initializing...
+STATUS | wrapper  | 2014/06/24 10:37:42 | TERM trapped.  Shutting down.
+STATUS | wrapper  | 2014/06/24 10:37:43 | <-- Wrapper Stopped
+STATUS | wrapper  | 2014/06/24 10:37:56 | --> Wrapper Started as Daemon
+STATUS | wrapper  | 2014/06/24 10:37:56 | Java Service Wrapper Community Edition 64-bit 3.5.14
+STATUS | wrapper  | 2014/06/24 10:37:56 |   Copyright (C) 1999-2011 Tanuki Software, Ltd. All Rights Reserved.
+STATUS | wrapper  | 2014/06/24 10:37:56 |     http://wrapper.tanukisoftware.com
+STATUS | wrapper  | 2014/06/24 10:37:56 | 
+STATUS | wrapper  | 2014/06/24 10:37:56 | Launching a JVM...
+INFO   | jvm 1    | 2014/06/24 10:37:56 | WrapperManager: Initializing...

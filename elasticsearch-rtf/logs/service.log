@@ -7134,3 +7134,378 @@ INFO   | jvm 1    | 2014/06/12 18:33:29 | [2014-06-12 18:33:29,209][INFO ][node 
 INFO   | jvm 1    | 2014/06/12 18:33:29 | [2014-06-12 18:33:29,209][INFO ][node                     ] [U-Man] closing ...
 INFO   | jvm 1    | 2014/06/12 18:33:29 | [2014-06-12 18:33:29,232][INFO ][node                     ] [U-Man] closed
 STATUS | wrapper  | 2014/06/12 18:33:31 | <-- Wrapper Stopped
+STATUS | wrapper  | 2014/06/17 16:36:08 | --> Wrapper Started as Console
+STATUS | wrapper  | 2014/06/17 16:36:08 | Java Service Wrapper Community Edition 64-bit 3.5.14
+STATUS | wrapper  | 2014/06/17 16:36:08 |   Copyright (C) 1999-2011 Tanuki Software, Ltd. All Rights Reserved.
+STATUS | wrapper  | 2014/06/17 16:36:08 |     http://wrapper.tanukisoftware.com
+STATUS | wrapper  | 2014/06/17 16:36:08 | 
+WARN   | wrapper  | 2014/06/17 16:36:08 | The configured wrapper.java.command could not be found, attempting to launch anyway: java
+STATUS | wrapper  | 2014/06/17 16:36:08 | Launching a JVM...
+ERROR  | wrapper  | 2014/06/17 16:36:08 | JVM exited while loading the application.
+ERROR  | wrapper  | 2014/06/17 16:36:08 | Unable to start JVM: No such file or directory (2)
+ADVICE | wrapper  | 2014/06/17 16:36:08 | 
+ADVICE | wrapper  | 2014/06/17 16:36:08 | ------------------------------------------------------------------------
+ADVICE | wrapper  | 2014/06/17 16:36:08 | Advice:
+ADVICE | wrapper  | 2014/06/17 16:36:08 | Usually when the Wrapper fails to start the JVM process, it is because
+ADVICE | wrapper  | 2014/06/17 16:36:08 | of a problem with the value of the configured Java command.  Currently:
+ADVICE | wrapper  | 2014/06/17 16:36:08 | wrapper.java.command=java
+ADVICE | wrapper  | 2014/06/17 16:36:08 | Please make sure that the PATH or any other referenced environment
+ADVICE | wrapper  | 2014/06/17 16:36:08 | variables are correctly defined for the current environment.
+ADVICE | wrapper  | 2014/06/17 16:36:08 | ------------------------------------------------------------------------
+ADVICE | wrapper  | 2014/06/17 16:36:08 | 
+WARN   | wrapper  | 2014/06/17 16:36:13 | The configured wrapper.java.command could not be found, attempting to launch anyway: java
+STATUS | wrapper  | 2014/06/17 16:36:13 | Launching a JVM...
+ERROR  | wrapper  | 2014/06/17 16:36:13 | JVM exited while loading the application.
+ERROR  | wrapper  | 2014/06/17 16:36:13 | Unable to start JVM: No such file or directory (2)
+ADVICE | wrapper  | 2014/06/17 16:36:13 | 
+ADVICE | wrapper  | 2014/06/17 16:36:13 | ------------------------------------------------------------------------
+ADVICE | wrapper  | 2014/06/17 16:36:13 | Advice:
+ADVICE | wrapper  | 2014/06/17 16:36:13 | Usually when the Wrapper fails to start the JVM process, it is because
+ADVICE | wrapper  | 2014/06/17 16:36:13 | of a problem with the value of the configured Java command.  Currently:
+ADVICE | wrapper  | 2014/06/17 16:36:13 | wrapper.java.command=java
+ADVICE | wrapper  | 2014/06/17 16:36:13 | Please make sure that the PATH or any other referenced environment
+ADVICE | wrapper  | 2014/06/17 16:36:13 | variables are correctly defined for the current environment.
+ADVICE | wrapper  | 2014/06/17 16:36:13 | ------------------------------------------------------------------------
+ADVICE | wrapper  | 2014/06/17 16:36:13 | 
+WARN   | wrapper  | 2014/06/17 16:36:17 | The configured wrapper.java.command could not be found, attempting to launch anyway: java
+STATUS | wrapper  | 2014/06/17 16:36:17 | Launching a JVM...
+ERROR  | wrapper  | 2014/06/17 16:36:17 | JVM exited while loading the application.
+ERROR  | wrapper  | 2014/06/17 16:36:17 | Unable to start JVM: No such file or directory (2)
+ADVICE | wrapper  | 2014/06/17 16:36:17 | 
+ADVICE | wrapper  | 2014/06/17 16:36:17 | ------------------------------------------------------------------------
+ADVICE | wrapper  | 2014/06/17 16:36:17 | Advice:
+ADVICE | wrapper  | 2014/06/17 16:36:17 | Usually when the Wrapper fails to start the JVM process, it is because
+ADVICE | wrapper  | 2014/06/17 16:36:17 | of a problem with the value of the configured Java command.  Currently:
+ADVICE | wrapper  | 2014/06/17 16:36:17 | wrapper.java.command=java
+ADVICE | wrapper  | 2014/06/17 16:36:17 | Please make sure that the PATH or any other referenced environment
+ADVICE | wrapper  | 2014/06/17 16:36:17 | variables are correctly defined for the current environment.
+ADVICE | wrapper  | 2014/06/17 16:36:17 | ------------------------------------------------------------------------
+ADVICE | wrapper  | 2014/06/17 16:36:17 | 
+WARN   | wrapper  | 2014/06/17 16:36:22 | The configured wrapper.java.command could not be found, attempting to launch anyway: java
+STATUS | wrapper  | 2014/06/17 16:36:22 | Launching a JVM...
+ERROR  | wrapper  | 2014/06/17 16:36:22 | JVM exited while loading the application.
+ERROR  | wrapper  | 2014/06/17 16:36:22 | Unable to start JVM: No such file or directory (2)
+ADVICE | wrapper  | 2014/06/17 16:36:22 | 
+ADVICE | wrapper  | 2014/06/17 16:36:22 | ------------------------------------------------------------------------
+ADVICE | wrapper  | 2014/06/17 16:36:22 | Advice:
+ADVICE | wrapper  | 2014/06/17 16:36:22 | Usually when the Wrapper fails to start the JVM process, it is because
+ADVICE | wrapper  | 2014/06/17 16:36:22 | of a problem with the value of the configured Java command.  Currently:
+ADVICE | wrapper  | 2014/06/17 16:36:22 | wrapper.java.command=java
+ADVICE | wrapper  | 2014/06/17 16:36:22 | Please make sure that the PATH or any other referenced environment
+ADVICE | wrapper  | 2014/06/17 16:36:22 | variables are correctly defined for the current environment.
+ADVICE | wrapper  | 2014/06/17 16:36:22 | ------------------------------------------------------------------------
+ADVICE | wrapper  | 2014/06/17 16:36:22 | 
+WARN   | wrapper  | 2014/06/17 16:36:26 | The configured wrapper.java.command could not be found, attempting to launch anyway: java
+STATUS | wrapper  | 2014/06/17 16:36:26 | Launching a JVM...
+ERROR  | wrapper  | 2014/06/17 16:36:26 | JVM exited while loading the application.
+ERROR  | wrapper  | 2014/06/17 16:36:26 | Unable to start JVM: No such file or directory (2)
+ADVICE | wrapper  | 2014/06/17 16:36:26 | 
+ADVICE | wrapper  | 2014/06/17 16:36:26 | ------------------------------------------------------------------------
+ADVICE | wrapper  | 2014/06/17 16:36:26 | Advice:
+ADVICE | wrapper  | 2014/06/17 16:36:26 | Usually when the Wrapper fails to start the JVM process, it is because
+ADVICE | wrapper  | 2014/06/17 16:36:26 | of a problem with the value of the configured Java command.  Currently:
+ADVICE | wrapper  | 2014/06/17 16:36:26 | wrapper.java.command=java
+ADVICE | wrapper  | 2014/06/17 16:36:26 | Please make sure that the PATH or any other referenced environment
+ADVICE | wrapper  | 2014/06/17 16:36:26 | variables are correctly defined for the current environment.
+ADVICE | wrapper  | 2014/06/17 16:36:26 | ------------------------------------------------------------------------
+ADVICE | wrapper  | 2014/06/17 16:36:26 | 
+FATAL  | wrapper  | 2014/06/17 16:36:27 | There were 5 failed launches in a row, each lasting less than 300 seconds.  Giving up.
+FATAL  | wrapper  | 2014/06/17 16:36:27 |   There may be a configuration problem: please check the logs.
+STATUS | wrapper  | 2014/06/17 16:36:27 | <-- Wrapper Stopped
+STATUS | wrapper  | 2014/06/17 16:38:26 | --> Wrapper Started as Console
+STATUS | wrapper  | 2014/06/17 16:38:26 | Java Service Wrapper Community Edition 64-bit 3.5.14
+STATUS | wrapper  | 2014/06/17 16:38:26 |   Copyright (C) 1999-2011 Tanuki Software, Ltd. All Rights Reserved.
+STATUS | wrapper  | 2014/06/17 16:38:26 |     http://wrapper.tanukisoftware.com
+STATUS | wrapper  | 2014/06/17 16:38:26 | 
+STATUS | wrapper  | 2014/06/17 16:38:27 | Launching a JVM...
+INFO   | jvm 1    | 2014/06/17 16:38:27 | WrapperManager: Initializing...
+INFO   | jvm 1    | 2014/06/17 16:38:28 | [2014-06-17 16:38:28,903][INFO ][node                     ] [Thundra] version[1.0.0], pid[11585], build[a46900e/2014-02-12T16:18:34Z]
+INFO   | jvm 1    | 2014/06/17 16:38:28 | [2014-06-17 16:38:28,904][INFO ][node                     ] [Thundra] initializing ...
+INFO   | jvm 1    | 2014/06/17 16:38:29 | [2014-06-17 16:38:29,091][INFO ][plugins                  ] [Thundra] loaded [transport-thrift, analysis-mmseg, analysis-pinyin, mapper-attachments, analysis-ik, marvel, analysis-smartcn, analysis-ansj, DocumentPartialUpdate, river-email, analysis-string2int, analysis-stconvert], sites [marvel, bigdesk, segmentspy, rtf, kopf, head, inquisitor, paramedic]
+INFO   | jvm 1    | 2014/06/17 16:38:34 | [2014-06-17 16:38:34,776][INFO ][node                     ] [Thundra] initialized
+INFO   | jvm 1    | 2014/06/17 16:38:34 | [2014-06-17 16:38:34,776][INFO ][node                     ] [Thundra] starting ...
+INFO   | jvm 1    | 2014/06/17 16:38:34 | [2014-06-17 16:38:34,876][INFO ][thrift                   ] [Thundra] bound on port [9500]
+INFO   | jvm 1    | 2014/06/17 16:38:35 | [2014-06-17 16:38:35,095][INFO ][transport                ] [Thundra] bound_address {inet[/0.0.0.0:9300]}, publish_address {inet[/10.144.175.190:9300]}
+INFO   | jvm 1    | 2014/06/17 16:38:38 | [2014-06-17 16:38:38,167][INFO ][cluster.service          ] [Thundra] new_master [Thundra][2nA2FxEIRYq9Z0N-gdNbjg][AY140617140935903c0fZ][inet[/10.144.175.190:9300]], reason: zen-disco-join (elected_as_master)
+INFO   | jvm 1    | 2014/06/17 16:38:38 | [2014-06-17 16:38:38,269][INFO ][discovery                ] [Thundra] elasticsearch/2nA2FxEIRYq9Z0N-gdNbjg
+INFO   | jvm 1    | 2014/06/17 16:38:38 | [2014-06-17 16:38:38,494][INFO ][http                     ] [Thundra] bound_address {inet[/0.0.0.0:9200]}, publish_address {inet[/10.144.175.190:9200]}
+INFO   | jvm 1    | 2014/06/17 16:38:40 | [2014-06-17 16:38:40,680][INFO ][mmseg-analyzer           ] chars loaded time=726ms, line=14861, on file=chars.dic
+INFO   | jvm 1    | 2014/06/17 16:38:40 | [2014-06-17 16:38:40,693][INFO ][mmseg-analyzer           ] words loaded time=1ms, line=4, on file=words-my.dic
+INFO   | jvm 1    | 2014/06/17 16:38:42 | [2014-06-17 16:38:42,095][INFO ][mmseg-analyzer           ] words loaded time=1402ms, line=263638, on file=words.dic
+INFO   | jvm 1    | 2014/06/17 16:38:42 | [2014-06-17 16:38:42,095][INFO ][mmseg-analyzer           ] load all dic use time=2141ms
+INFO   | jvm 1    | 2014/06/17 16:38:42 | [2014-06-17 16:38:42,103][INFO ][mmseg-analyzer           ] unit loaded time=8ms, line=35, on file=units.dic
+INFO   | jvm 1    | 2014/06/17 16:38:45 | [2014-06-17 16:38:45,483][INFO ][ik-analyzer              ] [Dict Loading]ik/custom/mydict.dic
+INFO   | jvm 1    | 2014/06/17 16:38:45 | [2014-06-17 16:38:45,484][INFO ][ik-analyzer              ] [Dict Loading]ik/custom/single_word_low_freq.dic
+INFO   | jvm 1    | 2014/06/17 16:38:45 | [2014-06-17 16:38:45,491][INFO ][ik-analyzer              ] [Dict Loading]ik/custom/ext_stopword.dic
+INFO   | jvm 1    | 2014/06/17 16:38:45 | Jun 17, 2014 4:38:45 PM org.ansj.util.MyStaticValue <clinit>
+INFO   | jvm 1    | 2014/06/17 16:38:45 | WARNING: not find library.properties in classpath use it by default !
+INFO   | jvm 1    | 2014/06/17 16:38:45 | [2014-06-17 16:38:45,809][INFO ][ansj-analyzer            ] ansj停止词典加载完毕!
+INFO   | jvm 1    | 2014/06/17 16:38:58 | Jun 17, 2014 4:38:58 PM org.ansj.library.InitDictionary init
+INFO   | jvm 1    | 2014/06/17 16:38:58 | INFO: init core library ok use time :12191
+INFO   | jvm 1    | 2014/06/17 16:39:17 | [2014-06-17 16:39:17,417][DEBUG][action.admin.indices.create] [Thundra] [.marvel-2014.06.17] failed to create
+INFO   | jvm 1    | 2014/06/17 16:39:17 | org.elasticsearch.cluster.metadata.ProcessClusterEventTimeoutException: failed to process cluster event (create-index [.marvel-2014.06.17], cause [auto(bulk api)]) within 30s
+INFO   | jvm 1    | 2014/06/17 16:39:17 | 	at org.elasticsearch.cluster.service.InternalClusterService$2$1.run(InternalClusterService.java:247)
+INFO   | jvm 1    | 2014/06/17 16:39:17 | 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1146)
+INFO   | jvm 1    | 2014/06/17 16:39:17 | 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+INFO   | jvm 1    | 2014/06/17 16:39:17 | 	at java.lang.Thread.run(Thread.java:701)
+INFO   | jvm 1    | 2014/06/17 16:39:17 | [2014-06-17 16:39:17,588][ERROR][marvel.agent.exporter    ] [Thundra] remote target didn't respond with 200 OK response code [503 Service Unavailable]. content: [:)
+INFO   | jvm 1    | 2014/06/17 16:39:17 | �error�ProcessClusterEventTimeoutException[failed to process cluster event (create-index [.marvel-2014.06.17], cause [auto(bulk api)]) within 30s]�status$��]
+INFO   | jvm 1    | 2014/06/17 16:39:36 | Jun 17, 2014 4:39:35 PM org.ansj.library.UserDefineLibrary loadFile
+INFO   | jvm 1    | 2014/06/17 16:39:36 | INFO: init user userLibrary ok path is : /root/ruby_work/nest_job/elasticsearch-rtf/config/ansj/user/default.dic
+INFO   | jvm 1    | 2014/06/17 16:39:36 | Jun 17, 2014 4:39:35 PM org.ansj.library.UserDefineLibrary loadFile
+INFO   | jvm 1    | 2014/06/17 16:39:36 | INFO: init user userLibrary ok path is : /root/ruby_work/nest_job/elasticsearch-rtf/config/ansj/user/ext.dic
+INFO   | jvm 1    | 2014/06/17 16:39:36 | Jun 17, 2014 4:39:35 PM org.ansj.library.UserDefineLibrary loadFile
+INFO   | jvm 1    | 2014/06/17 16:39:36 | INFO: init user userLibrary ok path is : /root/ruby_work/nest_job/elasticsearch-rtf/config/ansj/user/customer.dic
+INFO   | jvm 1    | 2014/06/17 16:39:36 | Jun 17, 2014 4:39:35 PM org.ansj.library.UserDefineLibrary initAmbiguityLibrary
+INFO   | jvm 1    | 2014/06/17 16:39:36 | INFO: init ambiguityLibrary ok!
+STATUS | wrapper  | 2014/06/17 16:39:39 | INT trapped.  Shutting down.
+STATUS | wrapper  | 2014/06/17 16:39:41 | INT trapped.  Forcing immediate shutdown.
+ERROR  | wrapper  | 2014/06/17 16:39:41 | JVM did not exit on request, terminated
+STATUS | wrapper  | 2014/06/17 16:39:41 | INT trapped.  Forcing immediate shutdown.
+STATUS | wrapper  | 2014/06/17 16:39:41 | <-- Wrapper Stopped
+STATUS | wrapper  | 2014/06/17 16:39:47 | --> Wrapper Started as Console
+STATUS | wrapper  | 2014/06/17 16:39:47 | Java Service Wrapper Community Edition 64-bit 3.5.14
+STATUS | wrapper  | 2014/06/17 16:39:47 |   Copyright (C) 1999-2011 Tanuki Software, Ltd. All Rights Reserved.
+STATUS | wrapper  | 2014/06/17 16:39:47 |     http://wrapper.tanukisoftware.com
+STATUS | wrapper  | 2014/06/17 16:39:47 | 
+STATUS | wrapper  | 2014/06/17 16:39:47 | Launching a JVM...
+INFO   | jvm 1    | 2014/06/17 16:39:48 | WrapperManager: Initializing...
+INFO   | jvm 1    | 2014/06/17 16:39:49 | [2014-06-17 16:39:49,544][INFO ][node                     ] [Forge] version[1.0.0], pid[11732], build[a46900e/2014-02-12T16:18:34Z]
+INFO   | jvm 1    | 2014/06/17 16:39:49 | [2014-06-17 16:39:49,551][INFO ][node                     ] [Forge] initializing ...
+INFO   | jvm 1    | 2014/06/17 16:39:49 | [2014-06-17 16:39:49,823][INFO ][plugins                  ] [Forge] loaded [transport-thrift, analysis-mmseg, analysis-pinyin, mapper-attachments, analysis-ik, marvel, analysis-smartcn, analysis-ansj, DocumentPartialUpdate, river-email, analysis-string2int, analysis-stconvert], sites [marvel, bigdesk, segmentspy, rtf, kopf, head, inquisitor, paramedic]
+INFO   | jvm 1    | 2014/06/17 16:39:55 | [2014-06-17 16:39:55,290][INFO ][node                     ] [Forge] initialized
+INFO   | jvm 1    | 2014/06/17 16:39:55 | [2014-06-17 16:39:55,290][INFO ][node                     ] [Forge] starting ...
+INFO   | jvm 1    | 2014/06/17 16:39:55 | [2014-06-17 16:39:55,346][INFO ][thrift                   ] [Forge] bound on port [9500]
+INFO   | jvm 1    | 2014/06/17 16:39:55 | [2014-06-17 16:39:55,483][INFO ][transport                ] [Forge] bound_address {inet[/0.0.0.0:9300]}, publish_address {inet[/10.144.175.190:9300]}
+INFO   | jvm 1    | 2014/06/17 16:39:58 | [2014-06-17 16:39:58,533][INFO ][cluster.service          ] [Forge] new_master [Forge][mpQjZAWBTF-vjaoUSdlv4A][AY140617140935903c0fZ][inet[/10.144.175.190:9300]], reason: zen-disco-join (elected_as_master)
+INFO   | jvm 1    | 2014/06/17 16:39:58 | [2014-06-17 16:39:58,640][INFO ][discovery                ] [Forge] elasticsearch/mpQjZAWBTF-vjaoUSdlv4A
+INFO   | jvm 1    | 2014/06/17 16:39:58 | [2014-06-17 16:39:58,854][INFO ][http                     ] [Forge] bound_address {inet[/0.0.0.0:9200]}, publish_address {inet[/10.144.175.190:9200]}
+INFO   | jvm 1    | 2014/06/17 16:40:00 | [2014-06-17 16:40:00,856][INFO ][mmseg-analyzer           ] chars loaded time=717ms, line=14861, on file=chars.dic
+INFO   | jvm 1    | 2014/06/17 16:40:00 | [2014-06-17 16:40:00,873][INFO ][mmseg-analyzer           ] words loaded time=1ms, line=4, on file=words-my.dic
+INFO   | jvm 1    | 2014/06/17 16:40:02 | [2014-06-17 16:40:02,336][INFO ][mmseg-analyzer           ] words loaded time=1463ms, line=263638, on file=words.dic
+INFO   | jvm 1    | 2014/06/17 16:40:02 | [2014-06-17 16:40:02,337][INFO ][mmseg-analyzer           ] load all dic use time=2198ms
+INFO   | jvm 1    | 2014/06/17 16:40:02 | [2014-06-17 16:40:02,343][INFO ][mmseg-analyzer           ] unit loaded time=6ms, line=35, on file=units.dic
+INFO   | jvm 1    | 2014/06/17 16:40:06 | [2014-06-17 16:40:06,503][INFO ][ik-analyzer              ] [Dict Loading]ik/custom/mydict.dic
+INFO   | jvm 1    | 2014/06/17 16:40:06 | [2014-06-17 16:40:06,503][INFO ][ik-analyzer              ] [Dict Loading]ik/custom/single_word_low_freq.dic
+INFO   | jvm 1    | 2014/06/17 16:40:06 | [2014-06-17 16:40:06,524][INFO ][ik-analyzer              ] [Dict Loading]ik/custom/ext_stopword.dic
+INFO   | jvm 1    | 2014/06/17 16:40:07 | Jun 17, 2014 4:40:07 PM org.ansj.util.MyStaticValue <clinit>
+INFO   | jvm 1    | 2014/06/17 16:40:07 | WARNING: not find library.properties in classpath use it by default !
+INFO   | jvm 1    | 2014/06/17 16:40:07 | [2014-06-17 16:40:07,342][INFO ][ansj-analyzer            ] ansj停止词典加载完毕!
+INFO   | jvm 1    | 2014/06/17 16:40:20 | Jun 17, 2014 4:40:20 PM org.ansj.library.InitDictionary init
+INFO   | jvm 1    | 2014/06/17 16:40:20 | INFO: init core library ok use time :13368
+INFO   | jvm 1    | 2014/06/17 16:40:38 | [2014-06-17 16:40:38,472][DEBUG][action.admin.indices.create] [Forge] [.marvel-2014.06.17] failed to create
+INFO   | jvm 1    | 2014/06/17 16:40:38 | org.elasticsearch.cluster.metadata.ProcessClusterEventTimeoutException: failed to process cluster event (create-index [.marvel-2014.06.17], cause [auto(bulk api)]) within 30s
+INFO   | jvm 1    | 2014/06/17 16:40:38 | 	at org.elasticsearch.cluster.service.InternalClusterService$2$1.run(InternalClusterService.java:247)
+INFO   | jvm 1    | 2014/06/17 16:40:38 | 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1146)
+INFO   | jvm 1    | 2014/06/17 16:40:38 | 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+INFO   | jvm 1    | 2014/06/17 16:40:38 | 	at java.lang.Thread.run(Thread.java:701)
+INFO   | jvm 1    | 2014/06/17 16:40:38 | [2014-06-17 16:40:38,672][ERROR][marvel.agent.exporter    ] [Forge] remote target didn't respond with 200 OK response code [503 Service Unavailable]. content: [:)
+INFO   | jvm 1    | 2014/06/17 16:40:38 | �error�ProcessClusterEventTimeoutException[failed to process cluster event (create-index [.marvel-2014.06.17], cause [auto(bulk api)]) within 30s]�status$��]
+INFO   | jvm 1    | 2014/06/17 16:40:56 | Jun 17, 2014 4:40:56 PM org.ansj.library.UserDefineLibrary loadFile
+INFO   | jvm 1    | 2014/06/17 16:40:56 | INFO: init user userLibrary ok path is : /root/ruby_work/nest_job/elasticsearch-rtf/config/ansj/user/default.dic
+INFO   | jvm 1    | 2014/06/17 16:40:56 | Jun 17, 2014 4:40:56 PM org.ansj.library.UserDefineLibrary loadFile
+INFO   | jvm 1    | 2014/06/17 16:40:56 | INFO: init user userLibrary ok path is : /root/ruby_work/nest_job/elasticsearch-rtf/config/ansj/user/ext.dic
+INFO   | jvm 1    | 2014/06/17 16:40:56 | Jun 17, 2014 4:40:56 PM org.ansj.library.UserDefineLibrary loadFile
+INFO   | jvm 1    | 2014/06/17 16:40:56 | INFO: init user userLibrary ok path is : /root/ruby_work/nest_job/elasticsearch-rtf/config/ansj/user/customer.dic
+INFO   | jvm 1    | 2014/06/17 16:40:56 | Jun 17, 2014 4:40:56 PM org.ansj.library.UserDefineLibrary initAmbiguityLibrary
+INFO   | jvm 1    | 2014/06/17 16:40:56 | INFO: init ambiguityLibrary ok!
+INFO   | jvm 1    | 2014/06/17 16:41:10 | [2014-06-17 16:41:10,308][DEBUG][action.admin.indices.create] [Forge] [.marvel-2014.06.17] failed to create
+INFO   | jvm 1    | 2014/06/17 16:41:10 | org.elasticsearch.cluster.metadata.ProcessClusterEventTimeoutException: failed to process cluster event (create-index [.marvel-2014.06.17], cause [auto(bulk api)]) within 30s
+INFO   | jvm 1    | 2014/06/17 16:41:10 | 	at org.elasticsearch.cluster.service.InternalClusterService$2$1.run(InternalClusterService.java:247)
+INFO   | jvm 1    | 2014/06/17 16:41:10 | 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1146)
+INFO   | jvm 1    | 2014/06/17 16:41:10 | 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+INFO   | jvm 1    | 2014/06/17 16:41:10 | 	at java.lang.Thread.run(Thread.java:701)
+INFO   | jvm 1    | 2014/06/17 16:41:10 | [2014-06-17 16:41:10,319][ERROR][marvel.agent.exporter    ] [Forge] remote target didn't respond with 200 OK response code [503 Service Unavailable]. content: [:)
+INFO   | jvm 1    | 2014/06/17 16:41:10 | �error�ProcessClusterEventTimeoutException[failed to process cluster event (create-index [.marvel-2014.06.17], cause [auto(bulk api)]) within 30s]�status$��]
+INFO   | jvm 1    | 2014/06/17 16:41:43 | [2014-06-17 16:41:43,096][DEBUG][action.admin.indices.create] [Forge] [.marvel-2014.06.17] failed to create
+INFO   | jvm 1    | 2014/06/17 16:41:43 | org.elasticsearch.cluster.metadata.ProcessClusterEventTimeoutException: failed to process cluster event (create-index [.marvel-2014.06.17], cause [auto(bulk api)]) within 30s
+INFO   | jvm 1    | 2014/06/17 16:41:43 | 	at org.elasticsearch.cluster.service.InternalClusterService$2$1.run(InternalClusterService.java:247)
+INFO   | jvm 1    | 2014/06/17 16:41:43 | 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1146)
+INFO   | jvm 1    | 2014/06/17 16:41:43 | 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+INFO   | jvm 1    | 2014/06/17 16:41:43 | 	at java.lang.Thread.run(Thread.java:701)
+INFO   | jvm 1    | 2014/06/17 16:41:43 | [2014-06-17 16:41:43,111][ERROR][marvel.agent.exporter    ] [Forge] remote target didn't respond with 200 OK response code [503 Service Unavailable]. content: [:)
+INFO   | jvm 1    | 2014/06/17 16:41:43 | �error�ProcessClusterEventTimeoutException[failed to process cluster event (create-index [.marvel-2014.06.17], cause [auto(bulk api)]) within 30s]�status$��]
+INFO   | jvm 1    | 2014/06/17 16:42:20 | [2014-06-17 16:42:20,263][DEBUG][action.admin.indices.create] [Forge] [.marvel-2014.06.17] failed to create
+INFO   | jvm 1    | 2014/06/17 16:42:20 | org.elasticsearch.cluster.metadata.ProcessClusterEventTimeoutException: failed to process cluster event (create-index [.marvel-2014.06.17], cause [auto(bulk api)]) within 30s
+INFO   | jvm 1    | 2014/06/17 16:42:20 | 	at org.elasticsearch.cluster.service.InternalClusterService$2$1.run(InternalClusterService.java:247)
+INFO   | jvm 1    | 2014/06/17 16:42:20 | 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1146)
+INFO   | jvm 1    | 2014/06/17 16:42:20 | 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+INFO   | jvm 1    | 2014/06/17 16:42:20 | 	at java.lang.Thread.run(Thread.java:701)
+INFO   | jvm 1    | 2014/06/17 16:42:20 | [2014-06-17 16:42:20,266][ERROR][marvel.agent.exporter    ] [Forge] remote target didn't respond with 200 OK response code [503 Service Unavailable]. content: [:)
+INFO   | jvm 1    | 2014/06/17 16:42:20 | �error�ProcessClusterEventTimeoutException[failed to process cluster event (create-index [.marvel-2014.06.17], cause [auto(bulk api)]) within 30s]�status$��]
+INFO   | jvm 1    | 2014/06/17 16:43:06 | [2014-06-17 16:43:06,528][DEBUG][action.admin.indices.create] [Forge] [.marvel-2014.06.17] failed to create
+INFO   | jvm 1    | 2014/06/17 16:43:06 | org.elasticsearch.cluster.metadata.ProcessClusterEventTimeoutException: failed to process cluster event (create-index [.marvel-2014.06.17], cause [auto(bulk api)]) within 30s
+INFO   | jvm 1    | 2014/06/17 16:43:06 | 	at org.elasticsearch.cluster.service.InternalClusterService$2$1.run(InternalClusterService.java:247)
+INFO   | jvm 1    | 2014/06/17 16:43:06 | 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1146)
+INFO   | jvm 1    | 2014/06/17 16:43:06 | 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+INFO   | jvm 1    | 2014/06/17 16:43:06 | 	at java.lang.Thread.run(Thread.java:701)
+INFO   | jvm 1    | 2014/06/17 16:43:08 | [2014-06-17 16:43:08,674][ERROR][marvel.agent.exporter    ] [Forge] remote target didn't respond with 200 OK response code [503 Service Unavailable]. content: [:)
+INFO   | jvm 1    | 2014/06/17 16:43:08 | �error�ProcessClusterEventTimeoutException[failed to process cluster event (create-index [.marvel-2014.06.17], cause [auto(bulk api)]) within 30s]�status$��]
+INFO   | jvm 1    | 2014/06/17 16:43:46 | [2014-06-17 16:43:46,401][DEBUG][action.admin.indices.create] [Forge] [.marvel-2014.06.17] failed to create
+INFO   | jvm 1    | 2014/06/17 16:43:46 | org.elasticsearch.cluster.metadata.ProcessClusterEventTimeoutException: failed to process cluster event (create-index [.marvel-2014.06.17], cause [auto(bulk api)]) within 30s
+INFO   | jvm 1    | 2014/06/17 16:43:46 | 	at org.elasticsearch.cluster.service.InternalClusterService$2$1.run(InternalClusterService.java:247)
+INFO   | jvm 1    | 2014/06/17 16:43:46 | 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1146)
+INFO   | jvm 1    | 2014/06/17 16:43:46 | 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+INFO   | jvm 1    | 2014/06/17 16:43:46 | 	at java.lang.Thread.run(Thread.java:701)
+INFO   | jvm 1    | 2014/06/17 16:43:53 | [2014-06-17 16:43:53,853][ERROR][marvel.agent.exporter    ] [Forge] remote target didn't respond with 200 OK response code [503 Service Unavailable]. content: [:)
+INFO   | jvm 1    | 2014/06/17 16:43:53 | �error�ProcessClusterEventTimeoutException[failed to process cluster event (create-index [.marvel-2014.06.17], cause [auto(bulk api)]) within 30s]�status$��]
+INFO   | jvm 1    | 2014/06/17 16:47:03 | [2014-06-17 16:47:03,782][DEBUG][action.admin.indices.create] [Forge] [.marvel-2014.06.17] failed to create
+INFO   | jvm 1    | 2014/06/17 16:47:03 | org.elasticsearch.cluster.metadata.ProcessClusterEventTimeoutException: failed to process cluster event (create-index [.marvel-2014.06.17], cause [auto(bulk api)]) within 30s
+INFO   | jvm 1    | 2014/06/17 16:47:03 | 	at org.elasticsearch.cluster.service.InternalClusterService$2$1.run(InternalClusterService.java:247)
+INFO   | jvm 1    | 2014/06/17 16:47:03 | 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1146)
+INFO   | jvm 1    | 2014/06/17 16:47:03 | 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+INFO   | jvm 1    | 2014/06/17 16:47:03 | 	at java.lang.Thread.run(Thread.java:701)
+INFO   | jvm 1    | 2014/06/17 16:47:33 | [2014-06-17 16:47:31,685][WARN ][http.netty               ] [Forge] Caught exception while handling client http traffic, closing connection [id: 0x4e21c3f6, /127.0.0.1:50478 => /127.0.0.1:9200]
+INFO   | jvm 1    | 2014/06/17 16:47:33 | java.lang.IllegalArgumentException: empty text
+INFO   | jvm 1    | 2014/06/17 16:47:33 | 	at org.elasticsearch.common.netty.handler.codec.http.HttpVersion.<init>(HttpVersion.java:97)
+INFO   | jvm 1    | 2014/06/17 16:47:33 | 	at org.elasticsearch.common.netty.handler.codec.http.HttpVersion.valueOf(HttpVersion.java:62)
+INFO   | jvm 1    | 2014/06/17 16:47:33 | 	at org.elasticsearch.common.netty.handler.codec.http.HttpRequestDecoder.createMessage(HttpRequestDecoder.java:75)
+INFO   | jvm 1    | 2014/06/17 16:47:33 | 	at org.elasticsearch.common.netty.handler.codec.http.HttpMessageDecoder.decode(HttpMessageDecoder.java:189)
+INFO   | jvm 1    | 2014/06/17 16:47:33 | 	at org.elasticsearch.common.netty.handler.codec.http.HttpMessageDecoder.decode(HttpMessageDecoder.java:101)
+INFO   | jvm 1    | 2014/06/17 16:47:33 | 	at org.elasticsearch.common.netty.handler.codec.replay.ReplayingDecoder.callDecode(ReplayingDecoder.java:500)
+INFO   | jvm 1    | 2014/06/17 16:47:33 | 	at org.elasticsearch.common.netty.handler.codec.replay.ReplayingDecoder.messageReceived(ReplayingDecoder.java:435)
+INFO   | jvm 1    | 2014/06/17 16:47:33 | 	at org.elasticsearch.common.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+INFO   | jvm 1    | 2014/06/17 16:47:33 | 	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+INFO   | jvm 1    | 2014/06/17 16:47:33 | 	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+INFO   | jvm 1    | 2014/06/17 16:47:33 | 	at org.elasticsearch.common.netty.OpenChannelsHandler.handleUpstream(OpenChannelsHandler.java:74)
+INFO   | jvm 1    | 2014/06/17 16:47:33 | 	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+INFO   | jvm 1    | 2014/06/17 16:47:33 | 	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:559)
+INFO   | jvm 1    | 2014/06/17 16:47:33 | 	at org.elasticsearch.common.netty.channel.Channels.fireMessageReceived(Channels.java:268)
+INFO   | jvm 1    | 2014/06/17 16:47:33 | 	at org.elasticsearch.common.netty.channel.Channels.fireMessageReceived(Channels.java:255)
+INFO   | jvm 1    | 2014/06/17 16:47:33 | 	at org.elasticsearch.common.netty.channel.socket.nio.NioWorker.read(NioWorker.java:88)
+INFO   | jvm 1    | 2014/06/17 16:47:33 | 	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108)
+INFO   | jvm 1    | 2014/06/17 16:47:33 | 	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+INFO   | jvm 1    | 2014/06/17 16:47:33 | 	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
+INFO   | jvm 1    | 2014/06/17 16:47:33 | 	at org.elasticsearch.common.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
+INFO   | jvm 1    | 2014/06/17 16:47:33 | 	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+INFO   | jvm 1    | 2014/06/17 16:47:33 | 	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+INFO   | jvm 1    | 2014/06/17 16:47:33 | 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1146)
+INFO   | jvm 1    | 2014/06/17 16:47:33 | 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+INFO   | jvm 1    | 2014/06/17 16:47:33 | 	at java.lang.Thread.run(Thread.java:701)
+INFO   | jvm 1    | 2014/06/17 16:47:33 | [2014-06-17 16:47:33,208][WARN ][http.netty               ] [Forge] Caught exception while handling client http traffic, closing connection [id: 0x4e21c3f6, /127.0.0.1:50478 :> /127.0.0.1:9200]
+INFO   | jvm 1    | 2014/06/17 16:47:33 | java.lang.IllegalArgumentException: empty text
+INFO   | jvm 1    | 2014/06/17 16:47:33 | 	at org.elasticsearch.common.netty.handler.codec.http.HttpVersion.<init>(HttpVersion.java:97)
+INFO   | jvm 1    | 2014/06/17 16:47:33 | 	at org.elasticsearch.common.netty.handler.codec.http.HttpVersion.valueOf(HttpVersion.java:62)
+INFO   | jvm 1    | 2014/06/17 16:47:33 | 	at org.elasticsearch.common.netty.handler.codec.http.HttpRequestDecoder.createMessage(HttpRequestDecoder.java:75)
+INFO   | jvm 1    | 2014/06/17 16:47:33 | 	at org.elasticsearch.common.netty.handler.codec.http.HttpMessageDecoder.decode(HttpMessageDecoder.java:189)
+INFO   | jvm 1    | 2014/06/17 16:47:33 | 	at org.elasticsearch.common.netty.handler.codec.http.HttpMessageDecoder.decode(HttpMessageDecoder.java:101)
+INFO   | jvm 1    | 2014/06/17 16:47:33 | 	at org.elasticsearch.common.netty.handler.codec.replay.ReplayingDecoder.callDecode(ReplayingDecoder.java:500)
+INFO   | jvm 1    | 2014/06/17 16:47:33 | 	at org.elasticsearch.common.netty.handler.codec.replay.ReplayingDecoder.cleanup(ReplayingDecoder.java:554)
+INFO   | jvm 1    | 2014/06/17 16:47:33 | 	at org.elasticsearch.common.netty.handler.codec.frame.FrameDecoder.channelDisconnected(FrameDecoder.java:365)
+INFO   | jvm 1    | 2014/06/17 16:47:33 | 	at org.elasticsearch.common.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:102)
+INFO   | jvm 1    | 2014/06/17 16:47:33 | 	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+INFO   | jvm 1    | 2014/06/17 16:47:33 | 	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+INFO   | jvm 1    | 2014/06/17 16:47:33 | 	at org.elasticsearch.common.netty.OpenChannelsHandler.handleUpstream(OpenChannelsHandler.java:74)
+INFO   | jvm 1    | 2014/06/17 16:47:33 | 	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+INFO   | jvm 1    | 2014/06/17 16:47:33 | 	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:559)
+INFO   | jvm 1    | 2014/06/17 16:47:33 | 	at org.elasticsearch.common.netty.channel.Channels.fireChannelDisconnected(Channels.java:396)
+INFO   | jvm 1    | 2014/06/17 16:47:33 | 	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.close(AbstractNioWorker.java:360)
+INFO   | jvm 1    | 2014/06/17 16:47:33 | 	at org.elasticsearch.common.netty.channel.socket.nio.NioServerSocketPipelineSink.handleAcceptedSocket(NioServerSocketPipelineSink.java:81)
+INFO   | jvm 1    | 2014/06/17 16:47:33 | 	at org.elasticsearch.common.netty.channel.socket.nio.NioServerSocketPipelineSink.eventSunk(NioServerSocketPipelineSink.java:36)
+INFO   | jvm 1    | 2014/06/17 16:47:33 | 	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendDownstream(DefaultChannelPipeline.java:779)
+INFO   | jvm 1    | 2014/06/17 16:47:33 | 	at org.elasticsearch.common.netty.handler.codec.oneone.OneToOneEncoder.handleDownstream(OneToOneEncoder.java:54)
+INFO   | jvm 1    | 2014/06/17 16:47:33 | 	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendDownstream(DefaultChannelPipeline.java:591)
+INFO   | jvm 1    | 2014/06/17 16:47:33 | 	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendDownstream(DefaultChannelPipeline.java:582)
+INFO   | jvm 1    | 2014/06/17 16:47:33 | 	at org.elasticsearch.common.netty.channel.Channels.close(Channels.java:812)
+INFO   | jvm 1    | 2014/06/17 16:47:33 | 	at org.elasticsearch.common.netty.channel.AbstractChannel.close(AbstractChannel.java:197)
+INFO   | jvm 1    | 2014/06/17 16:47:33 | 	at org.elasticsearch.http.netty.NettyHttpServerTransport.exceptionCaught(NettyHttpServerTransport.java:307)
+INFO   | jvm 1    | 2014/06/17 16:47:33 | 	at org.elasticsearch.http.netty.HttpRequestHandler.exceptionCaught(HttpRequestHandler.java:49)
+INFO   | jvm 1    | 2014/06/17 16:47:33 | 	at org.elasticsearch.common.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:112)
+INFO   | jvm 1    | 2014/06/17 16:47:33 | 	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+INFO   | jvm 1    | 2014/06/17 16:47:33 | 	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+INFO   | jvm 1    | 2014/06/17 16:47:33 | 	at org.elasticsearch.common.netty.channel.SimpleChannelUpstreamHandler.exceptionCaught(SimpleChannelUpstreamHandler.java:153)
+INFO   | jvm 1    | 2014/06/17 16:47:33 | 	at org.elasticsearch.common.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:112)
+INFO   | jvm 1    | 2014/06/17 16:47:33 | 	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+INFO   | jvm 1    | 2014/06/17 16:47:33 | 	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+INFO   | jvm 1    | 2014/06/17 16:47:33 | 	at org.elasticsearch.common.netty.handler.codec.frame.FrameDecoder.exceptionCaught(FrameDecoder.java:377)
+INFO   | jvm 1    | 2014/06/17 16:47:33 | 	at org.elasticsearch.common.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:112)
+INFO   | jvm 1    | 2014/06/17 16:47:33 | 	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+INFO   | jvm 1    | 2014/06/17 16:47:33 | 	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+INFO   | jvm 1    | 2014/06/17 16:47:33 | 	at org.elasticsearch.common.netty.OpenChannelsHandler.handleUpstream(OpenChannelsHandler.java:74)
+INFO   | jvm 1    | 2014/06/17 16:47:33 | 	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+INFO   | jvm 1    | 2014/06/17 16:47:33 | 	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:559)
+INFO   | jvm 1    | 2014/06/17 16:47:33 | 	at org.elasticsearch.common.netty.channel.Channels.fireExceptionCaught(Channels.java:525)
+INFO   | jvm 1    | 2014/06/17 16:47:33 | 	at org.elasticsearch.common.netty.channel.AbstractChannelSink.exceptionCaught(AbstractChannelSink.java:48)
+INFO   | jvm 1    | 2014/06/17 16:47:33 | 	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.notifyHandlerException(DefaultChannelPipeline.java:658)
+INFO   | jvm 1    | 2014/06/17 16:47:33 | 	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:566)
+INFO   | jvm 1    | 2014/06/17 16:47:33 | 	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+INFO   | jvm 1    | 2014/06/17 16:47:33 | 	at org.elasticsearch.common.netty.OpenChannelsHandler.handleUpstream(OpenChannelsHandler.java:74)
+INFO   | jvm 1    | 2014/06/17 16:47:33 | 	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+INFO   | jvm 1    | 2014/06/17 16:47:33 | 	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:559)
+INFO   | jvm 1    | 2014/06/17 16:47:33 | 	at org.elasticsearch.common.netty.channel.Channels.fireMessageReceived(Channels.java:268)
+INFO   | jvm 1    | 2014/06/17 16:47:33 | 	at org.elasticsearch.common.netty.channel.Channels.fireMessageReceived(Channels.java:255)
+INFO   | jvm 1    | 2014/06/17 16:47:33 | 	at org.elasticsearch.common.netty.channel.socket.nio.NioWorker.read(NioWorker.java:88)
+INFO   | jvm 1    | 2014/06/17 16:47:33 | 	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108)
+INFO   | jvm 1    | 2014/06/17 16:47:33 | 	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318)
+INFO   | jvm 1    | 2014/06/17 16:47:33 | 	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
+INFO   | jvm 1    | 2014/06/17 16:47:33 | 	at org.elasticsearch.common.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
+INFO   | jvm 1    | 2014/06/17 16:47:33 | 	at org.elasticsearch.common.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+INFO   | jvm 1    | 2014/06/17 16:47:33 | 	at org.elasticsearch.common.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+INFO   | jvm 1    | 2014/06/17 16:47:33 | 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1146)
+INFO   | jvm 1    | 2014/06/17 16:47:33 | 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+INFO   | jvm 1    | 2014/06/17 16:47:33 | 	at java.lang.Thread.run(Thread.java:701)
+INFO   | jvm 1    | 2014/06/17 16:48:42 | [2014-06-17 16:48:42,516][ERROR][marvel.agent.exporter    ] [Forge] remote target didn't respond with 200 OK response code [503 Service Unavailable]. content: [:)
+INFO   | jvm 1    | 2014/06/17 16:48:42 | �error�ProcessClusterEventTimeoutException[failed to process cluster event (create-index [.marvel-2014.06.17], cause [auto(bulk api)]) within 30s]�status$��]
+STATUS | wrapper  | 2014/06/17 16:55:53 | INT trapped.  Shutting down.
+STATUS | wrapper  | 2014/06/17 16:55:54 | INT trapped.  Forcing immediate shutdown.
+ERROR  | wrapper  | 2014/06/17 16:55:54 | JVM did not exit on request, terminated
+STATUS | wrapper  | 2014/06/17 16:55:55 | <-- Wrapper Stopped
+STATUS | wrapper  | 2014/06/17 16:56:20 | --> Wrapper Started as Daemon
+STATUS | wrapper  | 2014/06/17 16:56:20 | Java Service Wrapper Community Edition 64-bit 3.5.14
+STATUS | wrapper  | 2014/06/17 16:56:20 |   Copyright (C) 1999-2011 Tanuki Software, Ltd. All Rights Reserved.
+STATUS | wrapper  | 2014/06/17 16:56:20 |     http://wrapper.tanukisoftware.com
+STATUS | wrapper  | 2014/06/17 16:56:20 | 
+STATUS | wrapper  | 2014/06/17 16:56:20 | Launching a JVM...
+INFO   | jvm 1    | 2014/06/17 16:56:20 | WrapperManager: Initializing...
+INFO   | jvm 1    | 2014/06/17 16:56:39 | Jun 17, 2014 4:56:39 PM org.ansj.util.MyStaticValue <clinit>
+INFO   | jvm 1    | 2014/06/17 16:56:39 | WARNING: not find library.properties in classpath use it by default !
+INFO   | jvm 1    | 2014/06/17 16:56:45 | Jun 17, 2014 4:56:45 PM org.ansj.library.InitDictionary init
+INFO   | jvm 1    | 2014/06/17 16:56:45 | INFO: init core library ok use time :6264
+INFO   | jvm 1    | 2014/06/17 16:56:48 | Jun 17, 2014 4:56:48 PM org.ansj.library.UserDefineLibrary loadFile
+INFO   | jvm 1    | 2014/06/17 16:56:48 | INFO: init user userLibrary ok path is : /root/ruby_work/nest_job/elasticsearch-rtf/config/ansj/user/default.dic
+INFO   | jvm 1    | 2014/06/17 16:56:48 | Jun 17, 2014 4:56:48 PM org.ansj.library.UserDefineLibrary loadFile
+INFO   | jvm 1    | 2014/06/17 16:56:48 | INFO: init user userLibrary ok path is : /root/ruby_work/nest_job/elasticsearch-rtf/config/ansj/user/ext.dic
+INFO   | jvm 1    | 2014/06/17 16:56:48 | Jun 17, 2014 4:56:48 PM org.ansj.library.UserDefineLibrary loadFile
+INFO   | jvm 1    | 2014/06/17 16:56:48 | INFO: init user userLibrary ok path is : /root/ruby_work/nest_job/elasticsearch-rtf/config/ansj/user/customer.dic
+INFO   | jvm 1    | 2014/06/17 16:56:48 | Jun 17, 2014 4:56:48 PM org.ansj.library.UserDefineLibrary initAmbiguityLibrary
+INFO   | jvm 1    | 2014/06/17 16:56:48 | INFO: init ambiguityLibrary ok!
+INFO   | jvm 1    | 2014/06/17 16:56:51 | Jun 17, 2014 4:56:50 PM org.ansj.library.NgramLibrary <clinit>
+INFO   | jvm 1    | 2014/06/17 16:56:51 | INFO: init ngram ok use time :2623
+STATUS | wrapper  | 2014/06/17 16:58:14 | --> Wrapper Started as Daemon
+STATUS | wrapper  | 2014/06/17 16:58:14 | Java Service Wrapper Community Edition 64-bit 3.5.14
+STATUS | wrapper  | 2014/06/17 16:58:14 |   Copyright (C) 1999-2011 Tanuki Software, Ltd. All Rights Reserved.
+STATUS | wrapper  | 2014/06/17 16:58:14 |     http://wrapper.tanukisoftware.com
+STATUS | wrapper  | 2014/06/17 16:58:14 | 
+STATUS | wrapper  | 2014/06/17 16:58:14 | Launching a JVM...
+INFO   | jvm 1    | 2014/06/17 16:58:15 | WrapperManager: Initializing...
+INFO   | jvm 1    | 2014/06/17 16:58:33 | Jun 17, 2014 4:58:33 PM org.ansj.util.MyStaticValue <clinit>
+INFO   | jvm 1    | 2014/06/17 16:58:33 | WARNING: not find library.properties in classpath use it by default !
+INFO   | jvm 1    | 2014/06/17 16:58:39 | Jun 17, 2014 4:58:39 PM org.ansj.library.InitDictionary init
+INFO   | jvm 1    | 2014/06/17 16:58:39 | INFO: init core library ok use time :6020
+INFO   | jvm 1    | 2014/06/17 16:58:39 | Jun 17, 2014 4:58:39 PM org.ansj.library.UserDefineLibrary loadLibrary
+INFO   | jvm 1    | 2014/06/17 16:58:39 | WARNING: init userLibrary  waring :/root/ruby_work/nest_job/elasticsearch-rtf/config/ansj/user because : not find that file or can not to read !
+INFO   | jvm 1    | 2014/06/17 16:58:39 | Jun 17, 2014 4:58:39 PM org.ansj.library.UserDefineLibrary initAmbiguityLibrary
+INFO   | jvm 1    | 2014/06/17 16:58:39 | WARNING: init ambiguity  waring :/root/ruby_work/nest_job/elasticsearch-rtf/config/ansj/ambiguity.dic because : not find that file or can not to read !
+INFO   | jvm 1    | 2014/06/17 16:58:42 | Jun 17, 2014 4:58:42 PM org.ansj.library.NgramLibrary <clinit>
+INFO   | jvm 1    | 2014/06/17 16:58:42 | INFO: init ngram ok use time :2329
+STATUS | wrapper  | 2014/06/20 15:14:58 | TERM trapped.  Shutting down.
+STATUS | wrapper  | 2014/06/20 15:14:59 | <-- Wrapper Stopped
+STATUS | wrapper  | 2014/06/23 15:48:45 | --> Wrapper Started as Daemon
+STATUS | wrapper  | 2014/06/23 15:48:45 | Java Service Wrapper Community Edition 64-bit 3.5.14
+STATUS | wrapper  | 2014/06/23 15:48:45 |   Copyright (C) 1999-2011 Tanuki Software, Ltd. All Rights Reserved.
+STATUS | wrapper  | 2014/06/23 15:48:45 |     http://wrapper.tanukisoftware.com
+STATUS | wrapper  | 2014/06/23 15:48:45 | 
+STATUS | wrapper  | 2014/06/23 15:48:45 | Launching a JVM...
+INFO   | jvm 1    | 2014/06/23 15:48:46 | WrapperManager: Initializing...
+INFO   | jvm 1    | 2014/06/23 15:49:04 | Jun 23, 2014 3:49:04 PM org.ansj.util.MyStaticValue <clinit>
+INFO   | jvm 1    | 2014/06/23 15:49:04 | WARNING: not find library.properties in classpath use it by default !
+INFO   | jvm 1    | 2014/06/23 15:49:11 | Jun 23, 2014 3:49:11 PM org.ansj.library.InitDictionary init
+INFO   | jvm 1    | 2014/06/23 15:49:11 | INFO: init core library ok use time :6206
+INFO   | jvm 1    | 2014/06/23 15:49:11 | Jun 23, 2014 3:49:11 PM org.ansj.library.UserDefineLibrary loadLibrary
+INFO   | jvm 1    | 2014/06/23 15:49:11 | WARNING: init userLibrary  waring :/root/ruby_work/nest_job/elasticsearch-rtf/config/ansj/user because : not find that file or can not to read !
+INFO   | jvm 1    | 2014/06/23 15:49:11 | Jun 23, 2014 3:49:11 PM org.ansj.library.UserDefineLibrary initAmbiguityLibrary
+INFO   | jvm 1    | 2014/06/23 15:49:11 | WARNING: init ambiguity  waring :/root/ruby_work/nest_job/elasticsearch-rtf/config/ansj/ambiguity.dic because : not find that file or can not to read !
+INFO   | jvm 1    | 2014/06/23 15:49:15 | Jun 23, 2014 3:49:14 PM org.ansj.library.NgramLibrary <clinit>
+INFO   | jvm 1    | 2014/06/23 15:49:15 | INFO: init ngram ok use time :3830
+STATUS | wrapper  | 2014/06/23 16:50:58 | TERM trapped.  Shutting down.
+STATUS | wrapper  | 2014/06/23 16:50:59 | <-- Wrapper Stopped
