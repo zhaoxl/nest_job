@@ -1,0 +1,55 @@
+WARN   | wrapper  | 2014/06/23 16:56:28 | Unable to write to the configured log directory: /root/ruby_work/nest_job/elasticsearch-1.2.1/logs (No such file or directory)
+WARN   | wrapper  | 2014/06/23 16:56:28 |   The directory does not exist.
+WARN   | wrapper  | 2014/06/23 16:56:28 | Unable to write to the configured log file: /root/ruby_work/nest_job/elasticsearch-1.2.1/logs/service.log (No such file or directory)
+WARN   | wrapper  | 2014/06/23 16:56:28 |   Falling back to the default file in the current working directory: wrapper.log
+STATUS | wrapper  | 2014/06/23 16:56:28 | --> Wrapper Started as Console
+STATUS | wrapper  | 2014/06/23 16:56:28 | Java Service Wrapper Community Edition 64-bit 3.5.14
+STATUS | wrapper  | 2014/06/23 16:56:28 |   Copyright (C) 1999-2011 Tanuki Software, Ltd. All Rights Reserved.
+STATUS | wrapper  | 2014/06/23 16:56:28 |     http://wrapper.tanukisoftware.com
+STATUS | wrapper  | 2014/06/23 16:56:28 | 
+STATUS | wrapper  | 2014/06/23 16:56:29 | Launching a JVM...
+INFO   | jvm 1    | 2014/06/23 16:56:29 | WrapperManager: Initializing...
+INFO   | jvm 1    | 2014/06/23 16:56:29 | WrapperSimpleApp Error: Class org.elasticsearch.bootstrap.ElasticsearchF found but could not be initialized: java.lang.UnsupportedClassVersionError: org/elasticsearch/bootstrap/ElasticsearchF : Unsupported major.minor version 51.0
+ERROR  | wrapper  | 2014/06/23 16:56:31 | JVM exited while loading the application.
+STATUS | wrapper  | 2014/06/23 16:56:35 | Launching a JVM...
+INFO   | jvm 2    | 2014/06/23 16:56:36 | WrapperManager: Initializing...
+INFO   | jvm 2    | 2014/06/23 16:56:36 | WrapperSimpleApp Error: Class org.elasticsearch.bootstrap.ElasticsearchF found but could not be initialized: java.lang.UnsupportedClassVersionError: org/elasticsearch/bootstrap/ElasticsearchF : Unsupported major.minor version 51.0
+ERROR  | wrapper  | 2014/06/23 16:56:38 | JVM exited while loading the application.
+STATUS | wrapper  | 2014/06/23 16:56:42 | Launching a JVM...
+INFO   | jvm 3    | 2014/06/23 16:56:43 | WrapperManager: Initializing...
+INFO   | jvm 3    | 2014/06/23 16:56:43 | WrapperSimpleApp Error: Class org.elasticsearch.bootstrap.ElasticsearchF found but could not be initialized: java.lang.UnsupportedClassVersionError: org/elasticsearch/bootstrap/ElasticsearchF : Unsupported major.minor version 51.0
+ERROR  | wrapper  | 2014/06/23 16:56:45 | JVM exited while loading the application.
+STATUS | wrapper  | 2014/06/23 16:56:49 | Launching a JVM...
+INFO   | jvm 4    | 2014/06/23 16:56:49 | WrapperManager: Initializing...
+INFO   | jvm 4    | 2014/06/23 16:56:50 | WrapperSimpleApp Error: Class org.elasticsearch.bootstrap.ElasticsearchF found but could not be initialized: java.lang.UnsupportedClassVersionError: org/elasticsearch/bootstrap/ElasticsearchF : Unsupported major.minor version 51.0
+ERROR  | wrapper  | 2014/06/23 16:56:51 | JVM exited while loading the application.
+STATUS | wrapper  | 2014/06/23 16:56:56 | Launching a JVM...
+INFO   | jvm 5    | 2014/06/23 16:56:56 | WrapperManager: Initializing...
+INFO   | jvm 5    | 2014/06/23 16:56:56 | WrapperSimpleApp Error: Class org.elasticsearch.bootstrap.ElasticsearchF found but could not be initialized: java.lang.UnsupportedClassVersionError: org/elasticsearch/bootstrap/ElasticsearchF : Unsupported major.minor version 51.0
+ERROR  | wrapper  | 2014/06/23 16:56:58 | JVM exited while loading the application.
+FATAL  | wrapper  | 2014/06/23 16:56:58 | There were 5 failed launches in a row, each lasting less than 300 seconds.  Giving up.
+FATAL  | wrapper  | 2014/06/23 16:56:58 |   There may be a configuration problem: please check the logs.
+STATUS | wrapper  | 2014/06/23 16:56:58 | <-- Wrapper Stopped
+WARN   | wrapper  | 2014/06/23 17:06:41 | Unable to write to the configured log directory: /root/ruby_work/nest_job/elasticsearch-1.2.1/logs (No such file or directory)
+WARN   | wrapper  | 2014/06/23 17:06:41 |   The directory does not exist.
+WARN   | wrapper  | 2014/06/23 17:06:41 | Unable to write to the configured log file: /root/ruby_work/nest_job/elasticsearch-1.2.1/logs/service.log (No such file or directory)
+WARN   | wrapper  | 2014/06/23 17:06:41 |   Falling back to the default file in the current working directory: wrapper.log
+STATUS | wrapper  | 2014/06/23 17:06:41 | --> Wrapper Started as Console
+STATUS | wrapper  | 2014/06/23 17:06:41 | Java Service Wrapper Community Edition 64-bit 3.5.14
+STATUS | wrapper  | 2014/06/23 17:06:41 |   Copyright (C) 1999-2011 Tanuki Software, Ltd. All Rights Reserved.
+STATUS | wrapper  | 2014/06/23 17:06:41 |     http://wrapper.tanukisoftware.com
+STATUS | wrapper  | 2014/06/23 17:06:41 | 
+STATUS | wrapper  | 2014/06/23 17:06:41 | Launching a JVM...
+INFO   | jvm 1    | 2014/06/23 17:06:42 | WrapperManager: Initializing...
+INFO   | jvm 1    | 2014/06/23 17:06:42 | WrapperSimpleApp Error: Class org.elasticsearch.bootstrap.ElasticsearchF found but could not be initialized: java.lang.UnsupportedClassVersionError: org/elasticsearch/bootstrap/ElasticsearchF : Unsupported major.minor version 51.0
+ERROR  | wrapper  | 2014/06/23 17:06:43 | JVM exited while loading the application.
+STATUS | wrapper  | 2014/06/23 17:06:48 | Launching a JVM...
+INFO   | jvm 2    | 2014/06/23 17:06:48 | WrapperManager: Initializing...
+INFO   | jvm 2    | 2014/06/23 17:06:49 | WrapperSimpleApp Error: Class org.elasticsearch.bootstrap.ElasticsearchF found but could not be initialized: java.lang.UnsupportedClassVersionError: org/elasticsearch/bootstrap/ElasticsearchF : Unsupported major.minor version 51.0
+ERROR  | wrapper  | 2014/06/23 17:06:50 | JVM exited while loading the application.
+STATUS | wrapper  | 2014/06/23 17:06:55 | Launching a JVM...
+INFO   | jvm 3    | 2014/06/23 17:06:55 | WrapperManager: Initializing...
+INFO   | jvm 3    | 2014/06/23 17:06:55 | WrapperSimpleApp Error: Class org.elasticsearch.bootstrap.ElasticsearchF found but could not be initialized: java.lang.UnsupportedClassVersionError: org/elasticsearch/bootstrap/ElasticsearchF : Unsupported major.minor version 51.0
+ERROR  | wrapper  | 2014/06/23 17:06:57 | JVM exited while loading the application.
+STATUS | wrapper  | 2014/06/23 17:06:57 | INT trapped.  Shutting down.
+STATUS | wrapper  | 2014/06/23 17:06:57 | <-- Wrapper Stopped
