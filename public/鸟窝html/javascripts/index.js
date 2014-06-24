@@ -113,7 +113,7 @@ $(function($) {
             }).dialog( "open");
             return;
         }
-        $( "#dialog").html("努力注册中···").dialog({
+        $( "#dialog").html("努力注册中...").dialog({
             modal:true,
             close:function(){}
         }).dialog( "open");
@@ -134,7 +134,7 @@ $(function($) {
             },
             success: function(result) {
                 if (result.status == "ok") {
-                    $( "#dialog").html("注册成功，正在跳转").dialog({
+                    $( "#dialog").html("注册成功，正在跳转...").dialog({
                         modal:true
                     }).dialog("close");
                     //cookie记录注册  时间 =  24*60*60*365
@@ -161,6 +161,59 @@ $(function($) {
             }
         });
     });
+    //出生月份  生日
+    $("#birthday").datepicker({
+        timeText: '时间',
+        hourText: '小时',
+        minuteText: '分钟',
+        secondText: '秒',
+        currentText: '现在',
+        closeText: '完成',
+        showSecond: true, //显示秒
+        timeFormat: 'hh:mm:ss'//格式化时间
+    });    //出生月份  生日
+    $("#startTimejob").datepicker({
+        timeText: '时间',
+        hourText: '小时',
+        minuteText: '分钟',
+        secondText: '秒',
+        currentText: '现在',
+        closeText: '完成',
+        showSecond: true, //显示秒
+        timeFormat: 'hh:mm:ss'//格式化时间
+    });
+    $("#endTimejob").datepicker({
+        timeText: '时间',
+        hourText: '小时',
+        minuteText: '分钟',
+        secondText: '秒',
+        currentText: '现在',
+        closeText: '完成',
+        showSecond: true, //显示秒
+        timeFormat: 'hh:mm:ss'//格式化时间
+    });
+    //开始时间
+    $("#on_line_time").datepicker({
+
+        timeText: '时间',
+        hourText: '小时',
+        minuteText: '分钟',
+        secondText: '秒',
+        currentText: '现在',
+        closeText: '完成',
+        showSecond: true, //显示秒
+        timeFormat: 'hh:mm:ss'//格式化时间
+    });
+    $("#off_line_time").datepicker({
+        timeText: '时间',
+        hourText: '小时',
+        minuteText: '分钟',
+        secondText: '秒',
+        currentText: '现在',
+        closeText: '完成',
+        showSecond: true, //显示秒
+        timeFormat: 'hh:mm:ss'//格式化时间
+    });
     $("#mycaptcha").bind({
         blur:function(){
             if(!$.trim($(this).val())){
@@ -185,7 +238,7 @@ $(function($) {
         if($(".errorlogin:visible").length != 0){
             return;
         }
-        $( "#dialog").html("登录中···").dialog({
+        $( "#dialog").html("登录中...").dialog({
             modal:true,
             close:function(){}
         }).dialog( "open");
@@ -777,6 +830,47 @@ $(function($) {
             };
         });
     });
+    var _color = 1,
+        intervalColor = -1;
+    //点击搜索职位
+    $("#clickSearch").click(function(){
+        var searchJobContent = $.trim($("#searchJobContent").val());
+        if(!searchJobContent){
+            $( "#dialog").html("请填写搜索人才的“职位”").dialog({
+                modal:true,
+                close:function(){
+                    $("#searchJobContent").focus();
+                    intervalColor = setInterval(function(){
+                        $("#searchJobContent").css("border", _color%2 == 0?"1px solid #FECCCB":"1px solid #dcdcdc");
+                        _color++;
+                        if(_color == 5){
+                            clearInterval(intervalColor);
+                        }
+                    }, 500);
+                }
+            }).dialog( "open");
+            return;
+        }
+        $(this).parent().parent().submit();
+    });
+
+    $(".directSearch").eq(0).children("li").each(function(){
+        $(this).bind({
+            mouseout:function(){
+                $(this).addClass("current");
+            },
+            mouseover:function(){
+                $(this).removeClass("current");
+            },
+            click:function(){
+                var action = $(this).attr("data-action");
+                window.location.href = action;
+            }
+        });
+    });
+    //公司主页行业
+    $("#add_industry").chosen({disable_search_threshold: 10});
+
 
 });
 
@@ -795,6 +889,7 @@ function addCollect(_this){
             url: "/accounts/favorites/ajax_destroy",
             data: {
                 "id": jobID,//职位
+                "item_type": window.location.href.search("/hr") != -1 ? "account_resume":"post",
                 "authenticity_token": $("meta[name='csrf-token']").attr("content")
             },
             success: function(result) {
@@ -831,7 +926,7 @@ function addCollect(_this){
         url: "/accounts/favorites/ajax_create",
         data: {
             "id": jobID,//职位
-            "item_type": "post",
+            "item_type": window.location.href.search("/hr") != -1 ? "account_resume":"post",
             "authenticity_token": $("meta[name='csrf-token']").attr("content")
         },
         success: function(result) {

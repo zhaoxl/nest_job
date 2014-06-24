@@ -6,6 +6,11 @@
 	<link rel="stylesheet" href="../stylesheets/ui_base.css" />
 	<link rel="stylesheet" href="../stylesheets/ui_common.css" />
 	<link rel="stylesheet" href="../stylesheets/release_job.css" />
+    <link rel="stylesheet" href="../javascripts/css/ui-lightness/jquery-ui-1.10.4.min.css" />
+    <script type="text/javascript" src="../javascripts/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="../javascripts/jquery-ui-1.10.4.min.js"></script>
+    <script type="text/javascript" src="../javascripts/cookie.js"></script>
+    <script type="text/javascript" src="../javascripts/index.js"></script>
 </head>
 <body>
 	<div class="headerWrap">
@@ -62,13 +67,22 @@
 								</div>
 								<div class="frm">
 									<span class="">性       别：</span>
-									<label><input type="radio" value="1"  class="rad" name="rad">男</label>
-									<label><input type="radio" value="1"  class="rad" name="rad">女</label>
+									<label><input type="radio" value="1"  checked="checked" class="rad" name="sex">男</label>
+									<label><input type="radio" value="1"  class="rad" name="sex">女</label>
 									<span class="error">*请选择性别</span>
 								</div>
 								<div class="frm">
 									<span class="">出生年份：</span>
-									<input type="text" />
+									<input type="text" id="birthday"/>
+									<span class="error">*请填写出生日期</span>
+								</div>
+                                <div class="frm">
+									<span class="">婚姻状态：</span>
+                                    <select name="marriage" style="width:164px;" id="marriage">
+                                        <option selected="" value="">---请选择---</option>
+                                        <option value="0">未婚</option>
+                                        <option value="1" >已婚</option>
+                                        <option value="2">保密</option></select>
 									<span class="error">*请填写出生日期</span>
 								</div>
 								<div class="frm">
@@ -81,6 +95,11 @@
 									<input type="text" />
 									<span class="error">*请填写手机号</span>
 								</div>
+                                <div class="frm">
+                                    <span class="">详细住址：</span>
+                                    <input type="text" />
+                                    <span class="error">*请填写出生日期</span>
+                                </div>
 							</div>
 							<div class="jobBtns">
 								<a href="#" class="btn">保&nbsp;存</a>
@@ -135,12 +154,17 @@
 								</div>
 								<div class="frm">
 									<span class="">开始时间：</span>
-									<input type="text" />
+									<input type="text" id="startTimejob"/>
 									<span class="error">*请填写开始时间</span>
 								</div>
 								<div class="frm">
 									<span class="">结束时间：</span>
-									<input type="text" />
+									<input type="text" id="endTimejob"/>
+									<span class="error">*请填写结束时间</span>
+								</div>
+                                <div class="frm">
+									<span class="">薪资：</span>
+									<input type="text" id="moneyjob"/>
 									<span class="error">*请填写结束时间</span>
 								</div>
 								<div class="frm">
@@ -251,32 +275,43 @@
 							<div class="form">
 								<div class="frm">
 									<span class="">目前状态：</span>
-									<input type="text" />
-									<span class="error">*请填写学历</span>
+                                    <select name="current_situation" style="width:154px;" id="current_situation">
+                                        <option value="0">目前正在找工作</option>
+                                        <option value="1">半年内无换工作的计划</option>
+                                        <option value="2">一年内无换工作的计划</option>
+                                        <option value="3" selected="">观望有好的机会再考虑</option>
+                                        <option value="4">我暂时不想找工作</option>
+                                    </select>
+									<span class="error">*请选择目前状态</span>
 								</div>
 								<div class="frm">
 									<span class="lgspan">是否被单位搜索：</span>
-									<label><input type="radio" value="1"  class="rad" name="rad">是</label>
-									<label><input type="radio" value="1"  class="rad" name="rad">否</label>
+									<label><input type="radio" value="1"  checked="checked" class="rad" name="issearch">是</label>
+									<label><input type="radio" value="2"  class="rad" name="issearch">否</label>
 									<span class="error">*请选择性别</span>
 								</div>
 								<div class="frm">
 									<span class="">是否订阅：</span>
-									<label><input type="radio" value="1"  class="rad" name="rad">是</label>
+									<label><input type="radio" value="1"  checked="checked" class="rad" name="rad">是</label>
 									<label><input type="radio" value="1"  class="rad" name="rad">否</label>
 									<span class="error">*请选择性别</span>
 								</div>
 								<div class="frm">
 									<span class="">订阅频率：</span>
 									<select name="" id="">
-										<option value="">一次 / 周</option>
-										<option value="">两次 / 周</option>
+										<option value="1">3天 / 次</option>
+										<option value="2">7天 / 次</option>
 									</select>
 									<span class="error">*请填写开始时间</span>
 								</div>
 								<div class="frm">
+									<span class="">订阅开始时间：</span>
+									<input type="text" id="on_line_time"/>
+									<span class="error">*请填写开始时间</span>
+								</div>
+                                <div class="frm">
 									<span class="">订阅结束时间：</span>
-									<input type="text" />
+									<input type="text" id="off_line_time"/>
 									<span class="error">*请填写结束时间</span>
 								</div>
 							</div>

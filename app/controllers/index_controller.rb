@@ -1,5 +1,8 @@
 class IndexController < ApplicationController
   def index
+    if current_account.present? && current_account.account_type == Account::ACCOUNT_TYPE_HR
+      redirect_to hr_index_path and return 
+    end
     if current_account.present?
       @account_hope_area = current_account.current_account_resume.hope_area
       @account_tags = current_account.current_account_resume.tag_list
@@ -13,10 +16,9 @@ class IndexController < ApplicationController
       @posts = Post.tagged_with(@account_tags, :any => true).by_look_num_desc
       @posts = @posts.by_area(@account_hope_area) if @account_hope_area.present?
       @posts = @posts.page(params[:page]).per(5)
-    end
-    
-    if @posts
-      @hot_posts = Post.by_look_num_desc.page(params[:page]).per(5)
+      if @posts.blank?
+        @hot_posts = Post.by_look_num_desc.page(params[:page]).per(5)
+      end
     end
   end
   

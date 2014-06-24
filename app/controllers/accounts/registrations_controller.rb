@@ -27,7 +27,6 @@ class Accounts::RegistrationsController < Devise::RegistrationsController
         #验证码错误
         raise AjaxException.new({captcha: "验证码错误"})
       end
-      binding.pry
       resource = Account.new(
         email: params[:account][:email],
         password: params[:account][:password],

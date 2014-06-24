@@ -33,7 +33,7 @@
 
 /*directSearch*/
 .directSearch{overflow:hidden;zoom:1;margin-top:10px;margin-bottom:20px;}
-.directSearch li{float:left;width:218px;height:80px;padding-top:10px;margin-right:10px;border:1px dashed #1abc9c;color:#535353;font-size:15px;text-align:center;}
+.directSearch li{cursor:pointer;float:left;width:215px;height:80px;padding-top:10px;margin-right:10px;border:1px dashed #1abc9c;color:#535353;font-size:15px;text-align:center;}
 .directSearch li.last{margin-right:0;}
 .directSearch .current{background:#fff;}
 
@@ -43,4 +43,9 @@
 .soldOut li .btns{text-align:center;}
 .soldOut li .btns a{margin:0 3px;}
 .soldOut .current{background:#f5fdfc;}
+
+/*xixinliang*/
+.searchPeoples{margin: 10px;text-align: center;font-size: 20px;color:#27a695}
+.searchPeoples img{position: relative;top:8px}
+.searchPeoples a{color: #27a695}
 

@@ -93,3 +93,4 @@ gem 'therubyracer'
 gem 'acts-as-taggable-on'
 #html分析插件
 gem 'nokogiri', '1.6.2.1'
+gem 'unicorn', '~> 4.8'

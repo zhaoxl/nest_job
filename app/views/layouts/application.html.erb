@@ -15,7 +15,7 @@
   <%= javascript_include_tag '/鸟窝html/javascripts/jquery-1.10.2.js', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag '/鸟窝html/javascripts/jquery-ui-1.10.4.min.js', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag '/鸟窝html/javascripts/cookie.js', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'http://counter.sina.com.cn/ip', 'data-turbolinks-track' => true %>
+
   <%= javascript_include_tag '/鸟窝html/javascripts/getcity.js', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag '/鸟窝html/javascripts/chosen/chosen.jquery.js', 'data-turbolinks-track' => true %>
 
@@ -54,24 +54,6 @@
 	<div class="headerWrap">
 		<div class="header">
 			<h1><a href="/" class="logo">鸟窝</a></h1>
-			 <div class="search">
-                <div class="searchBox" data-msgtip="请填写期望：职位与城市">
-                    <input type="text" id="searchJobs" style="color:#8f8f8f;text-align: left;line-height: 30px" value=" 输入职位名称，如：销售" id="searchJobs" />
-                    <a href="javascript:void(0)" id="searchJobBtn" class="searchBtn"><em>&nbsp;</em></a>
-                </div>
-                <div class="cities">
-                    <!--p title='请输入搜索城市'><input value="" id="mycity"></p-->
-                    <p>
-                        <select id="mycity" data-placeholder="选择城市" style="width:100px;height:40px"><select>
-                    </p>
-                </div>
-                <div class="history">
-                  <a href="javascript:void(0)">搜索痕迹：</a>
-                  <%self_hot_search_tags.each do |tag|%>
-                    <%= link_to tag.name, search_posts_path(k: tag.name)%>
-                  <%end%>
-                </div>
-            </div>
 			<%= render partial: "/layouts/top_nav"%>
 		</div>
 	</div>

@@ -6,24 +6,34 @@ class AccountResume < ActiveRecord::Base
   #tag插件
   acts_as_taggable
   
-  scope :by_ct_desc, ->{order("created_at DESC")}
+  MARITAL_STSTUS_ENUM = [[0, "未婚"], [1, "已婚"], [2, "保密"]]
   
-  #计算工作时间
-  def work_year
-    unless earliest = account_resume_experiences.order_start_time_asc.first
-      return 0
-    end
+  scope :by_ct_desc, ->{order("created_at DESC")}
+  scope :by_area, ->(area){where(hope_area: area)}
+  scope :by_work_year_gte, ->(year){
+    date = Date.today - year
+    where("TO_DAYS(work_start_date) >= TO_DAYS(?)", date)
+  } #工作时间大于等于多少年
+  
+  
+  def self.search(tags, area, year)
+    tags = tags.split(/[,\s]/) unless tags.is_a?(Array)
     
-    if earliest.start_time.blank?
-      return 0
-    end
+    resumes = by_ct_desc
+    resumes = resumes.tagged_with(tags, :any => true) if tags.present?
+    resumes = resumes.by_area(area) if area.present?
+    resumes = resumes.by_work_year_gte(year.to_i) if year.present?
     
-    days = (Date.today - earliest.start_time.to_date).to_f
-    year = days / 365
-    year = if (year.ceil - year) >= 0.5 
-      year.ceil - 0.5
-    else 
-      year.ceil
-    end
+    return resumes
   end
+  
+  def age
+    today = Date.today
+    dob = self.birthday
+    
+    age = today.year - dob.year
+    age -= 1 if dob.strftime("%m%d").to_i > today.strftime("%m%d").to_i
+    age
+  end
+  
 end
