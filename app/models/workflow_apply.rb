@@ -1,0 +1,2 @@
+class WorkflowApply < Workflow
+end

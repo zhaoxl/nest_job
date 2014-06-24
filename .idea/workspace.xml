@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8d10e6ed-71fc-423f-9eda-c4ce70a95b50" name="Default" comment="">
+      <change type="DELETED" beforePath="Z:\app\views\accounts\resumes\index2.html.erb" afterPath="" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/lib/elasticsearch-1.0.0.jar" afterPath="Z:/elasticsearch-rtf/lib/elasticsearch-1.0.0.jar" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/plugins/analysis-ik/elasticsearch-analysis-ik-1.2.6.jar" afterPath="Z:/elasticsearch-rtf/plugins/analysis-ik/elasticsearch-analysis-ik-1.2.6.jar" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/plugins/analysis-mmseg/elasticsearch-analysis-mmseg-1.2.2.jar" afterPath="Z:/elasticsearch-rtf/plugins/analysis-mmseg/elasticsearch-analysis-mmseg-1.2.2.jar" />
@@ -76,7 +77,10 @@
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/bin/service/lib/wrapper-windows-x86-32.dll" afterPath="Z:/elasticsearch-rtf/bin/service/lib/wrapper-windows-x86-32.dll" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/bin/service/lib/wrapper-windows-x86-64.dll" afterPath="Z:/elasticsearch-rtf/bin/service/lib/wrapper-windows-x86-64.dll" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/bin/service/lib/wrapper.jar" afterPath="Z:/elasticsearch-rtf/bin/service/lib/wrapper.jar" />
-      <change type="MODIFICATION" beforePath="Z:/Gemfile" afterPath="Z:/Gemfile" />
+      <change type="MODIFICATION" beforePath="Z:/db/migrate/20140622093139_create_account_resume_objects.rb" afterPath="Z:/db/migrate/20140622093139_create_account_resume_objects.rb" />
+      <change type="MODIFICATION" beforePath="Z:/db/migrate/20140622094555_create_account_resume_educations.rb" afterPath="Z:/db/migrate/20140622094555_create_account_resume_educations.rb" />
+      <change type="MODIFICATION" beforePath="Z:/db/migrate/20140622094706_create_account_resume_radars.rb" afterPath="Z:/db/migrate/20140622094706_create_account_resume_radars.rb" />
+      <change type="MODIFICATION" beforePath="Z:/db/migrate/20140622102309_add_address_and_marital_status_to_account_resumes.rb" afterPath="Z:/db/migrate/20140622102309_add_address_and_marital_status_to_account_resumes.rb" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/config/ik/IKAnalyzer.cfg.xml" afterPath="Z:/elasticsearch-rtf/config/ik/IKAnalyzer.cfg.xml" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/LICENSE.txt" afterPath="Z:/elasticsearch-rtf/LICENSE.txt" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/NOTICE.txt" afterPath="Z:/elasticsearch-rtf/NOTICE.txt" />
@@ -88,10 +92,8 @@
       <change type="MODIFICATION" beforePath="Z:/app/views/kaminari/_paginator.html.erb" afterPath="Z:/app/views/kaminari/_paginator.html.erb" />
       <change type="MODIFICATION" beforePath="Z:/app/views/kaminari/_prev_page.html.erb" afterPath="Z:/app/views/kaminari/_prev_page.html.erb" />
       <change type="MODIFICATION" beforePath="Z:/app/views/layouts/_top_nav.html.erb" afterPath="Z:/app/views/layouts/_top_nav.html.erb" />
-      <change type="MODIFICATION" beforePath="Z:/app/models/account.rb" afterPath="Z:/app/models/account.rb" />
       <change type="MODIFICATION" beforePath="Z:/app/models/account_resume.rb" afterPath="Z:/app/models/account_resume.rb" />
-      <change type="MODIFICATION" beforePath="Z:/app/models/account_resume_experience.rb" afterPath="Z:/app/models/account_resume_experience.rb" />
-      <change type="MODIFICATION" beforePath="Z:/app/views/layouts/application.html.erb" afterPath="Z:/app/views/layouts/application.html.erb" />
+      <change type="MODIFICATION" beforePath="Z:/app/helpers/application_helper.rb" afterPath="Z:/app/helpers/application_helper.rb" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/plugins/rtf/_site/assets/css/bootstrap.css" afterPath="Z:/elasticsearch-rtf/plugins/rtf/_site/assets/css/bootstrap.css" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/plugins/rtf/_site/assets/js/bootstrap.js" afterPath="Z:/elasticsearch-rtf/plugins/rtf/_site/assets/js/bootstrap.js" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/plugins/rtf/_site/assets/css/bootstrap.min.css" afterPath="Z:/elasticsearch-rtf/plugins/rtf/_site/assets/css/bootstrap.min.css" />
@@ -106,26 +108,24 @@
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/bin/service/elasticsearch64" afterPath="Z:/elasticsearch-rtf/bin/service/elasticsearch64" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/bin/elasticsearch" afterPath="Z:/elasticsearch-rtf/bin/elasticsearch" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/bin/service/elasticsearch" afterPath="Z:/elasticsearch-rtf/bin/service/elasticsearch" />
+      <change type="MODIFICATION" beforePath="Z:/config/environment.rb" afterPath="Z:/config/environment.rb" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/config/ik/custom/ext_stopword.dic" afterPath="Z:/elasticsearch-rtf/config/ik/custom/ext_stopword.dic" />
-      <change type="MODIFICATION" beforePath="Z:/app/controllers/accounts/favorites_controller.rb" afterPath="Z:/app/controllers/accounts/favorites_controller.rb" />
-      <change type="MODIFICATION" beforePath="Z:/public/鸟窝html/javascripts/getcity.js" afterPath="Z:/public/鸟窝html/javascripts/getcity.js" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/plugins/rtf/_site/assets/fonts/glyphicons-halflings-regular.svg" afterPath="Z:/elasticsearch-rtf/plugins/rtf/_site/assets/fonts/glyphicons-halflings-regular.svg" />
-      <change type="MODIFICATION" beforePath="Z:/app/controllers/hr_controller.rb" afterPath="Z:/app/controllers/hr_controller.rb" />
-      <change type="MODIFICATION" beforePath="Z:/app/models/hr_search_log.rb" afterPath="Z:/app/models/hr_search_log.rb" />
       <change type="MODIFICATION" beforePath="Z:/app/views/accounts/resumes/index.html.erb" afterPath="Z:/app/views/accounts/resumes/index.html.erb" />
-      <change type="MODIFICATION" beforePath="Z:/app/views/hr/index.html.erb" afterPath="Z:/app/views/hr/index.html.erb" />
       <change type="MODIFICATION" beforePath="Z:/public/鸟窝html/javascripts/index.js" afterPath="Z:/public/鸟窝html/javascripts/index.js" />
-      <change type="MODIFICATION" beforePath="Z:/app/controllers/index_controller.rb" afterPath="Z:/app/controllers/index_controller.rb" />
-      <change type="MODIFICATION" beforePath="Z:/public/鸟窝html/stylesheets/interview.css" afterPath="Z:/public/鸟窝html/stylesheets/interview.css" />
+      <change type="MODIFICATION" beforePath="Z:/public/鸟窝html/javascripts/jquery-ui-1.10.4.min.js" afterPath="Z:/public/鸟窝html/javascripts/jquery-ui-1.10.4.min.js" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/config/logging.yml" afterPath="Z:/elasticsearch-rtf/config/logging.yml" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/config/ik/main.dic" afterPath="Z:/elasticsearch-rtf/config/ik/main.dic" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/config/ik/custom/mydict.dic" afterPath="Z:/elasticsearch-rtf/config/ik/custom/mydict.dic" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/bin/plugin.bat" afterPath="Z:/elasticsearch-rtf/bin/plugin.bat" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/bin/plugin" afterPath="Z:/elasticsearch-rtf/bin/plugin" />
       <change type="MODIFICATION" beforePath="Z:/app/models/post.rb" afterPath="Z:/app/models/post.rb" />
+      <change type="MODIFICATION" beforePath="Z:/app/controllers/posts_controller.rb" afterPath="Z:/app/controllers/posts_controller.rb" />
+      <change type="MODIFICATION" beforePath="Z:/app/controllers/accounts/posts_controller.rb" afterPath="Z:/app/controllers/accounts/posts_controller.rb" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/config/ik/preposition.dic" afterPath="Z:/elasticsearch-rtf/config/ik/preposition.dic" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/config/ik/quantifier.dic" afterPath="Z:/elasticsearch-rtf/config/ik/quantifier.dic" />
-      <change type="MODIFICATION" beforePath="Z:/app/controllers/accounts/registrations_controller.rb" afterPath="Z:/app/controllers/accounts/registrations_controller.rb" />
+      <change type="MODIFICATION" beforePath="Z:/app/controllers/accounts/resume_experiences_controller.rb" afterPath="Z:/app/controllers/accounts/resume_experiences_controller.rb" />
+      <change type="MODIFICATION" beforePath="Z:/app/controllers/accounts/resumes_controller.rb" afterPath="Z:/app/controllers/accounts/resumes_controller.rb" />
       <change type="MODIFICATION" beforePath="Z:/config/routes.rb" afterPath="Z:/config/routes.rb" />
       <change type="MODIFICATION" beforePath="Z:/db/schema.rb" afterPath="Z:/db/schema.rb" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/config/ik/stopword.dic" afterPath="Z:/elasticsearch-rtf/config/ik/stopword.dic" />
@@ -137,8 +137,6 @@
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/config/mmseg/words-my.dic" afterPath="Z:/elasticsearch-rtf/config/mmseg/words-my.dic" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/config/mmseg/words.dic" afterPath="Z:/elasticsearch-rtf/config/mmseg/words.dic" />
       <change type="MODIFICATION" beforePath="Z:/.idea/workspace.xml" afterPath="Z:/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="Z:/public/鸟窝html/招聘方/公司主页.html" afterPath="Z:/public/鸟窝html/招聘方/公司主页.html" />
-      <change type="MODIFICATION" beforePath="Z:/public/鸟窝html/应聘方/完善简历.html" afterPath="Z:/public/鸟窝html/应聘方/完善简历.html" />
     </list>
     <ignored path=".iws" />
     <ignored path=".idea/workspace.xml" />
@@ -155,6 +153,11 @@
   <component name="DaemonCodeAnalyzer">
     <disable_hints />
   </component>
+  <component name="DatabaseView">
+    <flatten value="false" />
+    <groupTables value="false" />
+    <sortChildren value="false" />
+  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="" />
@@ -164,15 +167,15 @@
       <file leaf-file-name="index.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://Z:/public/鸟窝html/javascripts/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="864" column="29" selection-start="30747" selection-end="30747" vertical-scroll-proportion="-10.32" vertical-offset="16158" max-vertical-offset="18221">
+            <state line="865" column="40" selection-start="31115" selection-end="31115" vertical-scroll-proportion="-5.716981" vertical-offset="16132" max-vertical-offset="18259">
               <folding>
-                <marker date="1403434351000" expanded="false" signature="10484:10556" placeholder="..." />
-                <marker date="1403434351000" expanded="false" signature="15733:15746" placeholder="..." />
-                <marker date="1403434351000" expanded="false" signature="19139:19223" placeholder="..." />
-                <marker date="1403434351000" expanded="false" signature="22367:22437" placeholder="..." />
-                <marker date="1403434351000" expanded="false" signature="22484:22511" placeholder="..." />
-                <marker date="1403434351000" expanded="false" signature="22586:22601" placeholder="..." />
-                <marker date="1403434351000" expanded="false" signature="22657:22820" placeholder="..." />
+                <marker date="1403616336000" expanded="false" signature="10157:10229" placeholder="..." />
+                <marker date="1403616336000" expanded="false" signature="15516:15529" placeholder="..." />
+                <marker date="1403616336000" expanded="false" signature="18922:19006" placeholder="..." />
+                <marker date="1403616336000" expanded="false" signature="22150:22220" placeholder="..." />
+                <marker date="1403616336000" expanded="false" signature="22267:22294" placeholder="..." />
+                <marker date="1403616336000" expanded="false" signature="22369:22384" placeholder="..." />
+                <marker date="1403616336000" expanded="false" signature="22440:22603" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -181,55 +184,16 @@
       <file leaf-file-name="application.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://Z:/app/views/layouts/application.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="50" selection-start="1573" selection-end="1596" vertical-scroll-proportion="0.0" vertical-offset="40" max-vertical-offset="1862">
+            <state line="92" column="7" selection-start="3910" selection-end="3910" vertical-scroll-proportion="0.0" vertical-offset="1135" max-vertical-offset="1862">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="getcity.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://Z:/public/鸟窝html/javascripts/getcity.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="423" column="22" selection-start="14162" selection-end="14162" vertical-scroll-proportion="0.0" vertical-offset="7736" max-vertical-offset="8436">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="公司主页.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://Z:/public/鸟窝html/招聘方/公司主页.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="81" column="76" selection-start="2902" selection-end="2902" vertical-scroll-proportion="0.36437908" vertical-offset="1316" max-vertical-offset="5396">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ui_common.css" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="ui_common.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://Z:/public/鸟窝html/stylesheets/ui_common.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="136" column="63" selection-start="7361" selection-end="7361" vertical-scroll-proportion="0.0" vertical-offset="2128" max-vertical-offset="2793">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://Z:/app/views/hr/index.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="48" selection-start="1945" selection-end="1945" vertical-scroll-proportion="-16.653847" vertical-offset="517" max-vertical-offset="1463">
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="找工作首页.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://Z:/public/鸟窝html/应聘方/找工作首页.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="0" selection-start="513" selection-end="930" vertical-scroll-proportion="-6.107143" vertical-offset="0" max-vertical-offset="5662">
+            <state line="143" column="36" selection-start="8189" selection-end="8189" vertical-scroll-proportion="0.83161" vertical-offset="2154" max-vertical-offset="2850">
               <folding />
             </state>
           </provider>
@@ -238,11 +202,29 @@
       <file leaf-file-name="完善简历.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://Z:/public/鸟窝html/应聘方/完善简历.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="165" column="36" selection-start="5929" selection-end="5929" vertical-scroll-proportion="-4.4150944" vertical-offset="2901" max-vertical-offset="7828">
-              <folding>
-                <element signature="n#style#0;n#select#0;n#div#3;n#div#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#select#0;n#div#0;n#div#0;n#li#5;n#ul#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state line="96" column="38" selection-start="3609" selection-end="3609" vertical-scroll-proportion="-12.428572" vertical-offset="1476" max-vertical-offset="7828">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://Z:/app/views/accounts/resumes/index.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="294" column="58" selection-start="16571" selection-end="16581" vertical-scroll-proportion="-8.54902" vertical-offset="5150" max-vertical-offset="5776">
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="注册.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://Z:/public/鸟窝html/注册.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="139" column="116" selection-start="5704" selection-end="5716" vertical-scroll-proportion="-8.821428" vertical-offset="2394" max-vertical-offset="5092">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -265,10 +247,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="Z:/public/鸟窝html/stylesheets/register.css" />
-        <option value="Z:/public/鸟窝html/stylesheets/ui_base.css" />
-        <option value="Z:/public/鸟窝html/javascripts/chosen/chosen.css" />
-        <option value="Z:/public/鸟窝html/javascripts/chosen/chosen.jquery.js" />
         <option value="Z:/app/views/index/index.html.erb" />
         <option value="Z:/public/鸟窝html/stylesheets/interviewline.css" />
         <option value="Z:/public/鸟窝html/面试导航轴.html" />
@@ -278,18 +256,22 @@
         <option value="Z:/app/views/hr/index.html.erb" />
         <option value="Z:/public/鸟窝html/应聘方/完善简历.html" />
         <option value="Z:/public/鸟窝html/javascripts/getcity.js" />
+        <option value="Z:/public/鸟窝html/招聘方/公司主页.html" />
+        <option value="Z:/app/views/layouts/_top_nav.html.erb" />
+        <option value="Z:/app/views/layouts/_right.html.erb" />
+        <option value="Z:/public/鸟窝html/javascripts/jquery-ui-1.10.4.min.js" />
+        <option value="Z:/app/views/accounts/resumes/index.html.erb" />
         <option value="Z:/public/鸟窝html/javascripts/index.js" />
         <option value="Z:/public/鸟窝html/stylesheets/ui_common.css" />
-        <option value="Z:/public/鸟窝html/招聘方/公司主页.html" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
+    <option name="x" value="-17" />
+    <option name="y" value="28" />
     <option name="width" value="1456" />
-    <option name="height" value="886" />
+    <option name="height" value="876" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -619,6 +601,32 @@
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="accounts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resumes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Z" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Z:" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
@@ -655,15 +663,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1456" height="886" extended-state="6" />
-    <editor active="false" />
+    <frame x="-17" y="28" width="1456" height="876" extended-state="1" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998565" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27044475" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2790531" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -690,133 +698,128 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://Z:/app/views/index/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="26" selection-start="292" selection-end="292" vertical-scroll-proportion="-1.0695915" vertical-offset="840" max-vertical-offset="1615">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://Z:/app/views/help_center/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="30" selection-start="447" selection-end="447" vertical-scroll-proportion="0.43620178" vertical-offset="10" max-vertical-offset="684" />
-      </provider>
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://Z:/public/鸟窝html/招聘方/搜人才首页.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="36" selection-start="608" selection-end="608" vertical-scroll-proportion="-0.96130955" vertical-offset="912" max-vertical-offset="5681">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://Z:/app/views/layouts/_right.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="0" selection-start="2736" selection-end="2736" vertical-scroll-proportion="-5.8461537" vertical-offset="1273" max-vertical-offset="2945" />
-      </provider>
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://Z:/public/鸟窝html/stylesheets/interview.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="52" selection-start="1988" selection-end="1988" vertical-scroll-proportion="0.0" vertical-offset="396" max-vertical-offset="1083">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://Z:/public/鸟窝html/招聘方/发布职位.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="30" selection-start="843" selection-end="843" vertical-scroll-proportion="0.46130502" vertical-offset="0" max-vertical-offset="4142">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://Z:/public/鸟窝html/招聘方/下架职位.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="59" selection-start="507" selection-end="507" vertical-scroll-proportion="0.23065251" vertical-offset="0" max-vertical-offset="4598">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://Z:/app/views/hr/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="48" selection-start="1945" selection-end="1945" vertical-scroll-proportion="-16.653847" vertical-offset="517" max-vertical-offset="1463">
-          <folding />
-        </state>
+        <state line="50" column="48" selection-start="1945" selection-end="1945" vertical-scroll-proportion="0.0" vertical-offset="517" max-vertical-offset="1463" />
       </provider>
       <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://Z:/public/鸟窝html/应聘方/完善简历.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="165" column="36" selection-start="5929" selection-end="5929" vertical-scroll-proportion="-4.4150944" vertical-offset="2901" max-vertical-offset="7828">
-          <folding>
-            <element signature="n#style#0;n#select#0;n#div#3;n#div#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#select#0;n#div#0;n#div#0;n#li#5;n#ul#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://Z:/public/鸟窝html/javascripts/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="864" column="29" selection-start="30747" selection-end="30747" vertical-scroll-proportion="-10.32" vertical-offset="16158" max-vertical-offset="18221">
-          <folding>
-            <marker date="1403434351000" expanded="false" signature="10484:10556" placeholder="..." />
-            <marker date="1403434351000" expanded="false" signature="15733:15746" placeholder="..." />
-            <marker date="1403434351000" expanded="false" signature="19139:19223" placeholder="..." />
-            <marker date="1403434351000" expanded="false" signature="22367:22437" placeholder="..." />
-            <marker date="1403434351000" expanded="false" signature="22484:22511" placeholder="..." />
-            <marker date="1403434351000" expanded="false" signature="22586:22601" placeholder="..." />
-            <marker date="1403434351000" expanded="false" signature="22657:22820" placeholder="..." />
-          </folding>
-        </state>
       </provider>
     </entry>
     <entry file="file://Z:/public/鸟窝html/javascripts/chosen/chosen.jquery.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="525" column="4" selection-start="17753" selection-end="17753" vertical-scroll-proportion="0.33233082" vertical-offset="9564" max-vertical-offset="22933">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://Z:/app/views/layouts/application.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="50" selection-start="1573" selection-end="1596" vertical-scroll-proportion="0.0" vertical-offset="40" max-vertical-offset="1862">
-          <folding />
-        </state>
+        <state line="525" column="4" selection-start="17753" selection-end="17753" vertical-scroll-proportion="0.33233082" vertical-offset="9564" max-vertical-offset="22933" />
       </provider>
     </entry>
     <entry file="file://Z:/public/鸟窝html/javascripts/getcity.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="423" column="22" selection-start="14162" selection-end="14162" vertical-scroll-proportion="0.0" vertical-offset="7736" max-vertical-offset="8436">
-          <folding />
+        <state line="423" column="22" selection-start="14162" selection-end="14162" vertical-scroll-proportion="0.0" vertical-offset="7736" max-vertical-offset="8436" />
+      </provider>
+    </entry>
+    <entry file="file://Z:/public/鸟窝html/招聘方/公司主页.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="78" column="30" selection-start="2744" selection-end="2744" vertical-scroll-proportion="-10.0" vertical-offset="1202" max-vertical-offset="5396">
+          <folding>
+            <element signature="n#style#0;n#select#0;n#div#3;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://Z:/public/鸟窝html/stylesheets/ui_common.css">
+    <entry file="file://Z:/app/views/index/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="136" column="63" selection-start="7361" selection-end="7361" vertical-scroll-proportion="0.0" vertical-offset="2128" max-vertical-offset="2793">
+        <state line="44" column="28" selection-start="2403" selection-end="2403" vertical-scroll-proportion="1.3615636" vertical-offset="0" max-vertical-offset="1615">
           <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://Z:/app/views/layouts/_right.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="87" column="53" selection-start="3487" selection-end="3487" vertical-scroll-proportion="0.22995462" vertical-offset="1501" max-vertical-offset="2945" />
+      </provider>
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://Z:/app/views/layouts/_top_nav.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="39" selection-start="995" selection-end="995" vertical-scroll-proportion="0.37571427" vertical-offset="193" max-vertical-offset="893" />
+      </provider>
+    </entry>
+    <entry file="file://Z:/public/鸟窝html/javascripts/jquery-ui-1.10.4.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="43072" selection-start="44048" selection-end="44048" vertical-scroll-proportion="0.14350453" vertical-offset="0" max-vertical-offset="662">
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://Z:/public/鸟窝html/应聘方/找工作首页.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="513" selection-end="930" vertical-scroll-proportion="-6.107143" vertical-offset="0" max-vertical-offset="5662">
+        <state line="89" column="55" selection-start="3382" selection-end="3382" vertical-scroll-proportion="-0.29608127" vertical-offset="1895" max-vertical-offset="5662">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://Z:/public/鸟窝html/招聘方/公司主页.html">
+    <entry file="file://Z:/public/鸟窝html/找工作首页.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="81" column="76" selection-start="2902" selection-end="2902" vertical-scroll-proportion="0.36437908" vertical-offset="1316" max-vertical-offset="5396">
+        <state line="18" column="39" selection-start="931" selection-end="931" vertical-scroll-proportion="-2.1923077" vertical-offset="1881" max-vertical-offset="5396">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://Z:/public/鸟窝html/应聘方/完善简历.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="96" column="38" selection-start="3609" selection-end="3609" vertical-scroll-proportion="-12.428572" vertical-offset="1476" max-vertical-offset="7828">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://Z:/public/鸟窝html/注册.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="139" column="116" selection-start="5704" selection-end="5716" vertical-scroll-proportion="-8.821428" vertical-offset="2394" max-vertical-offset="5092">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://Z:/app/views/accounts/resumes/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="294" column="58" selection-start="16571" selection-end="16581" vertical-scroll-proportion="-8.54902" vertical-offset="5150" max-vertical-offset="5776">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://Z:/app/views/layouts/application.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="92" column="7" selection-start="3910" selection-end="3910" vertical-scroll-proportion="0.0" vertical-offset="1135" max-vertical-offset="1862">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://Z:/public/鸟窝html/javascripts/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="865" column="40" selection-start="31115" selection-end="31115" vertical-scroll-proportion="-5.716981" vertical-offset="16132" max-vertical-offset="18259">
+          <folding>
+            <marker date="1403616336000" expanded="false" signature="10157:10229" placeholder="..." />
+            <marker date="1403616336000" expanded="false" signature="15516:15529" placeholder="..." />
+            <marker date="1403616336000" expanded="false" signature="18922:19006" placeholder="..." />
+            <marker date="1403616336000" expanded="false" signature="22150:22220" placeholder="..." />
+            <marker date="1403616336000" expanded="false" signature="22267:22294" placeholder="..." />
+            <marker date="1403616336000" expanded="false" signature="22369:22384" placeholder="..." />
+            <marker date="1403616336000" expanded="false" signature="22440:22603" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://Z:/public/鸟窝html/stylesheets/ui_common.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="143" column="36" selection-start="8189" selection-end="8189" vertical-scroll-proportion="0.83161" vertical-offset="2154" max-vertical-offset="2850">
           <folding />
         </state>
       </provider>

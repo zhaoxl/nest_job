@@ -34,6 +34,10 @@ $(function($) {
                         var notchinese = /[\u4E00-\u9FA5]/ig;
                         bFail = !notchinese.test(value);
                         break;
+                    case 'mobi':
+                        var notmobi = /\d{11}/ig;
+                        bFail = !notmobi.test(value);
+                        break;
                     case 'tel':
                         var tel = /\d{3}-\d{8}|\d{4}-\d{7}|\d{11}/;
                         bFail = !tel.test(value);
@@ -42,12 +46,20 @@ $(function($) {
                         var notpas = /^\w{6,16}$/;
                         bFail = !notpas.test(value);
                         break;
+                    case 'date':
+                        var notdate = /\d{4}-\d{2}-\d{2}/;
+                        bFail = !notdate.test(value);
+                        break;
                     case 'email':
                         var emailReg = /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;
                         bFail = !emailReg.test(value);
                         break;
                     case 'money':
                         var emailReg = /\b(?:[0-9]|[1-9][0-9]|1[0-4][0-9]|500)\b/;
+                        bFail = !emailReg.test(value);
+                        break;
+                    case 'hopemoney':
+                        var emailReg = /\d{1,}/ig;
                         bFail = !emailReg.test(value);
                         break;
                     case 'chinese':
@@ -155,65 +167,32 @@ $(function($) {
 
                     if(_c.captcha){
                         $("#captchaError").html(_c.captcha).css("display", "block");
-                        $("#captchaImg").click();
                     }
+                    $("#captchaImg").click();
                 }
             }
         });
     });
-    //出生月份  生日
-    $("#birthday").datepicker({
-        timeText: '时间',
-        hourText: '小时',
-        minuteText: '分钟',
-        secondText: '秒',
-        currentText: '现在',
-        closeText: '完成',
-        showSecond: true, //显示秒
-        timeFormat: 'hh:mm:ss'//格式化时间
-    });    //出生月份  生日
-    $("#startTimejob").datepicker({
-        timeText: '时间',
-        hourText: '小时',
-        minuteText: '分钟',
-        secondText: '秒',
-        currentText: '现在',
-        closeText: '完成',
-        showSecond: true, //显示秒
-        timeFormat: 'hh:mm:ss'//格式化时间
-    });
-    $("#endTimejob").datepicker({
-        timeText: '时间',
-        hourText: '小时',
-        minuteText: '分钟',
-        secondText: '秒',
-        currentText: '现在',
-        closeText: '完成',
-        showSecond: true, //显示秒
-        timeFormat: 'hh:mm:ss'//格式化时间
-    });
-    //开始时间
-    $("#on_line_time").datepicker({
 
-        timeText: '时间',
-        hourText: '小时',
-        minuteText: '分钟',
-        secondText: '秒',
-        currentText: '现在',
-        closeText: '完成',
-        showSecond: true, //显示秒
-        timeFormat: 'hh:mm:ss'//格式化时间
+    $(".timeDatepicker").each(function(){
+        //出生月份  生日
+        $(this).datepicker({
+            maxDate:new Date().getFullYear(),
+            timeText: '时间',
+            hourText: '小时',
+            minuteText: '分钟',
+            secondText: '秒',
+            currentText: '现在',
+            closeText: '完成',
+            showSecond: true, //显示秒
+            timeFormat: 'hh:mm:ss',//格式化时间
+            onClose :function(){
+                $(this).blur();
+            }
+        });
     });
-    $("#off_line_time").datepicker({
-        timeText: '时间',
-        hourText: '小时',
-        minuteText: '分钟',
-        secondText: '秒',
-        currentText: '现在',
-        closeText: '完成',
-        showSecond: true, //显示秒
-        timeFormat: 'hh:mm:ss'//格式化时间
-    });
+
+
     $("#mycaptcha").bind({
         blur:function(){
             if(!$.trim($(this).val())){
@@ -291,7 +270,7 @@ $(function($) {
             }).dialog( "open");
         })
     });
-    $("body").append('<div id="dialog" style="background-color: #27A695;color: #fff;text-align: center;font-size: 15px" title="Basic dialog">--->请登录后再操作</div>')
+    $("#dialog").length==0 && $("body").append('<div id="dialog" style="background-color: #27A695;color: #fff;text-align: center;font-size: 15px" title="Basic dialog">--->请登录后再操作</div>')
     $.ui.dialog.prototype._focusTabbable = function(){};
     $("#dialog").dialog({
         autoOpen:false,
@@ -425,10 +404,11 @@ $(function($) {
             addHopePanelA = $("#addHopePanel a"),
             addHopePanelC = addHopePanelA.length,
             isreport = false,
+            dataMsg = $(this).attr("data-msg"),
             dataMax = $(this).attr("data-max");
 
         if(addHopePanelC >= 3 && dataMax!= "1"){
-            $( "#dialog").html("期望职位·标签不超过3个").dialog({
+            $( "#dialog").html((dataMsg || "期望职位")+"·标签不超过3个").dialog({
                 modal:true,
                 close: function() {$("#addHopeContent").focus();}
             }).dialog( "open");
@@ -436,8 +416,9 @@ $(function($) {
         }
 
         if(!addHopeContent) {
-            $( "#dialog").html("期望职位·标签不能为空").dialog({
+            $( "#dialog").html((dataMsg || "期望职位")+"·标签不能为空").dialog({
                 modal:true,
+                title:"系统消息",
                 close: function() {$("#addHopeContent").focus();}
                 }).dialog( "open");
             return;
@@ -868,8 +849,29 @@ $(function($) {
             }
         });
     });
+    $(".perfectResume").eq(0).children("li").each(function(){
+        $(this).bind({
+            mouseout:function(){
+                $(this).removeClass("current");
+            },
+            mouseover:function(){
+                $(this).addClass("current");
+            }
+        });
+    });
+    //保存所有
+    $(".saveAllJob").eq(0).each(function(){
+        $(this).bind({
+            mouseout:function(){
+                $(this).css("border", "1px dotted #e1f3f1");
+            },
+            mouseover:function(){
+                $(this).css("border", "2px dotted #ffffff");
+            }
+        });
+    });
     //公司主页行业
-    $("#add_industry").chosen({disable_search_threshold: 10});
+    $("#add_industry").length>0 && $("#add_industry").chosen({disable_search_threshold: 10});
 
 
 });

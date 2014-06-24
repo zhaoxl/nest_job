@@ -3,10 +3,13 @@ class AccountResume < ActiveRecord::Base
   
   belongs_to :account
   has_many :account_resume_experiences
+  has_many :account_resume_objects
+  has_many :account_resume_educations
+  has_many :account_resume_radars
   #tag插件
   acts_as_taggable
   
-  MARITAL_STSTUS_ENUM = [[0, "未婚"], [1, "已婚"], [2, "保密"]]
+  MARITAL_STSTUS_ENUM = [["未婚", 0], ["已婚", 1], ["保密", 2]]
   
   scope :by_ct_desc, ->{order("created_at DESC")}
   scope :by_area, ->(area){where(hope_area: area)}

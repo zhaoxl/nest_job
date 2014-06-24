@@ -1,15 +1,16 @@
 <%content_for :head_include do%>
-    <link rel="stylesheet" href="/鸟窝html/javascripts/css/ui-lightness/jquery-ui-1.10.4.min.css" />
-    <script type="text/javascript" src="/鸟窝html/javascripts/jquery-1.10.2.js"></script>
-    <script type="text/javascript" src="/鸟窝html/javascripts/jquery-ui-1.10.4.min.js"></script>
-    <script type="text/javascript" src="/鸟窝html/javascripts/cookie.js"></script>
-    <script type="text/javascript" src="/鸟窝html/javascripts/index.js"></script>
+	<link rel="stylesheet" href="/鸟窝html/stylesheets/release_job.css" />
+  <link rel="stylesheet" href="/鸟窝html/javascripts/css/ui-lightness/jquery-ui-1.10.4.min.css" />
+  <script type="text/javascript" src="/鸟窝html/javascripts/jquery-1.10.2.js"></script>
+  <script type="text/javascript" src="/鸟窝html/javascripts/jquery-ui-1.10.4.min.js"></script>
+  <script type="text/javascript" src="/鸟窝html/javascripts/cookie.js"></script>
+
 <%end%>
 <div class="mainContainer">
 	<div class="main">
   	<h2 class="h2Title">完善简历</h2>
   	<ul class="perfectResume">
-  		<li class="current">
+  		<li class="">
   			<h3><i>* </i>个人信息</h3>
         <%if flash[:error]%>
         <span style="color: red">错误信息:<%= flash[:error]%></span>
@@ -17,127 +18,120 @@
         <%if flash[:notice]%>
         <span style="color: green">提示信息:<%= flash[:notice]%></span>
         <%end%>
-  			<%= form_for @account_resume, url: (@account_resume.new_record? ? accounts_resumes_path : accounts_resume_path(@account_resume)) do |f|%>
+  			<%= form_for @account_resume, url: ajax_save_accounts_resume_educations_path do |f|%>
   			<div class="form">
   				<div class="frm">
   					<span class="">姓       名：</span>
-            <%= f.text_field :name%>
-  					<span class="error">*请填写姓名</span>
+  					<%= f.text_field :name,  id: "update_name", class: "verification", style: "border: 1px solid rgb(160, 160, 160);","data-noHide"=>"1", "data-em" => "notnull", "data-type" => "email", "error-id" => "errorupdate_name"%>
+  					<span class="error" id="errorupdate_name">*请填写姓名</span>
   				</div>
   				<div class="frm">
   					<span class="">性       别：</span>
-  					<label><input type="radio" value="1"  checked="checked" class="rad" name="sex">男</label>
-  					<label><input type="radio" value="1"  class="rad" name="sex">女</label>
+                    <label>男<%= f.radio_button :gender, 1, "checked"=>"checked",class: :rad%></label>
+                    <label>女<%= f.radio_button :gender, 0, class: :rad%></label>
   					<span class="error">*请选择性别</span>
   				</div>
   				<div class="frm">
   					<span class="">出生年份：</span>
-            <%= f.text_field :birthday, value: format_to_date(@account_resume.birthday), id: "birthday"%>
-  					<span class="error">*请填写出生日期</span>
+                    <%= f.text_field :birthday, value: format_to_date(@account_resume.birthday), id: "birthday",class: "verification timeDatepicker","data-noHide"=>"1", "data-em" => "notnull", "data-type" => "date", "error-id" => "errorbirthday"%>
+  					<span class="error" id="errorbirthday">*请填写出生日期</span>
   				</div>
                           <div class="frm">
   					<span class="">婚姻状态：</span>
-            <%= f.select :marital_status, AccountResume::MARITAL_STSTUS_ENUM.unshift([nil, "---请选择---"]), include_blank: false, style: "width:164px;", id: "marriage"%>
-  					<span class="error">*请填写出生日期</span>
+                    <%= f.select :marital_status, AccountResume::MARITAL_STSTUS_ENUM.dup.unshift(["---请选择---", nil]), include_blank: false, style: "width:164px;", id: "marriage"%>
+  					<span class="error">*请填写婚姻状态</span>
   				</div>
   				<div class="frm">
   					<span class="">手       机：</span>
-            <%= f.text_field :tel%>
-  					<span class="error">*请填写手机号</span>
+                    <%= f.text_field :tel,  id: "update_mobi", class: "verification", style: "border: 1px solid rgb(160, 160, 160);","data-noHide"=>"1", "data-em" => "notnull", "data-type" => "mobi", "error-id" => "errorupdate_mobi"%>
+  					<span class="error" id="errorupdate_mobi">*请填写手机号</span>
   				</div>
   				<div class="frm">
   					<span class="">邮       箱：</span>
-            <%= f.text_field :email%>
-  					<span class="error">*请填写手机号</span>
+                     <%= f.text_field :email,  id: "update_email", class: "verification", style: "border: 1px solid rgb(160, 160, 160);","data-noHide"=>"1", "data-em" => "notnull", "data-type" => "email", "error-id" => "errorupdate_email"%>
+  					<span class="error" id="errorupdate_email">*请填写邮箱</span>
   				</div>
           <div class="frm">
               <span class="">详细住址：</span>
-            <%= f.text_field :address%>
-              <span class="error">*请填写出生日期</span>
+                <%= f.text_field :address,  id: "update_address", class: "verification", style: "border: 1px solid rgb(160, 160, 160);","data-noHide"=>"1", "data-em" => "notnull", "data-type" => "email", "error-id" => "errorupdate_address"%>
+              <span class="error" id="errorupdate_address">*请填写详细住址</span>
           </div>
-  			</div>
-  			<div class="jobBtns">
-  				<a href="#" class="btn">保&nbsp;存</a>
   			</div>
         <%end%>
   		</li>
   		<li>
   			<h3><i>* </i> 期望职位  |  <span>更精准帮您推荐喜欢的职位</span></h3>
-        <%= form_for @account_resume, url: (@account_resume.new_record? ? accounts_resumes_path : accounts_resume_path(@account_resume)) do |f|%>
+        <%= form_for @account_resume, url: ajax_save_accounts_resume_educations_path do |f|%>
   			<div class="form">
   				<div class="frm">
   					<span class="">职位关键词</span>
-  					<div class="posts">
-              <%@account_resume.tag_list.each do |tag|%>
-  						<a href="#"><%= tag%><i>×</i></a>
+  					<div class="posts" id="addHopePanel">
+                        <%@account_resume.tag_list.each do |tag|%>
               <%end%>
   					</div>
   					<div class="postInput">
-  						<input type="text"><a href="#" class="addPost"><em>&nbsp;</em></a>
+  						 <input type="text" id="addHopeContent"><a href="javascript:void(0)" data-msg="职位关键词" id="addHope" class="addPost"><em>&nbsp;</em></a>
   					</div>
   					<span class="error">*请填写职位关键词，方便应聘方更方便的搜索您的职位</span>
   				</div>
   				<div class="frm">
   					<span class="">期望城市：</span>
-            <%= f.text_field :hope_area%>
-  					<span class="error">*请填写城市</span>
+                    <%= f.text_field :hope_area,  id: "update_hope_area", class: "verification", style: "border: 1px solid rgb(160, 160, 160);","data-noHide"=>"1", "data-em" => "notnull", "data-type" => "notnull", "error-id" => "errorupdate_hope_area"%>
+  					<span class="error" id="errorupdate_hope_area">*请填写城市</span>
   				</div>
   				<div class="frm">
   					<span class="">期望薪资：</span>
-            <%= f.text_field :hope_salary%>
-  					<span class="error">*请填写薪资</span>
+  					<%= f.text_field :hope_salary,  id: "update_hope_salary", class: "verification", style: "border: 1px solid rgb(160, 160, 160);","data-noHide"=>"1", "data-em" => "notnull", "data-type" => "hopemoney", "error-id" => "errorupdate_hope_salary"%>
+  					<span class="error" id="errorupdate_hope_salary">*请填写数字格式的期望薪资</span>
   				</div>
-  			</div>
-  			<div class="jobBtns">
-  				<a href="#" class="btn">保&nbsp;存</a>
   			</div>
         <%end%>
   		</li>
   		<li>
   			<h3><i>* </i>工作经历 |  <span>最能体现自己的工作能力</span></h3>
-        <%= form_for AccountResumeExperience.new, url: accounts_resume_experiences_path do |f|%>
+        <%= form_for AccountResumeExperience.new, url: ajax_save_accounts_resume_experiences_path do |f|%>
         <%= f.hidden_field :account_resume_id, value: @account_resume.id %>
   			<div class="form">
   				<div class="frm">
   					<span class="">公司名称：</span>
-            <%= f.text_field :company_name%><br />
-  					<span class="error">*请填写公司姓名</span>
+  					<%= f.text_field :company_name,  id: "update_company_name", class: "verification", style: "border: 1px solid rgb(160, 160, 160);","data-noHide"=>"1", "data-em" => "notnull", "data-type" => "notnull", "error-id" => "errorupdate_company_name"%><br />
+  					<span class="error" id="errorupdate_company_name">*请填写公司姓名</span>
   				</div>
   				<div class="frm">
   					<span class="">公司职位：</span>
-            <%= f.text_field :post%><br />
-  					<span class="error">*请填写公司职位</span>
+  					<%= f.text_field :post,  id: "update_company_post", class: "verification", style: "border: 1px solid rgb(160, 160, 160);","data-noHide"=>"1", "data-em" => "notnull", "data-type" => "notnull", "error-id" => "errorupdate_company_post"%><br />
+  					<span class="error" id="errorupdate_company_post">*请填写公司职位</span>
   				</div>
   				<div class="frm">
   					<span class="">开始时间：</span>
-            <%= f.text_field :start_time, id: "startTimejob"%>
-  					<span class="error">*请填写开始时间</span>
+                    <%= f.text_field :start_time, value: format_to_date(@account_resume.birthday), id: "startTimejob",class: "verification timeDatepicker","data-noHide"=>"1", "data-em" => "notnull", "data-type" => "date", "error-id" => "errorstartTimejob"%>
+  					<span class="error" id="errorstartTimejob">*请填写开始时间</span>
   				</div>
   				<div class="frm">
   					<span class="">结束时间：</span>
-            <%= f.text_field :start_time, id: "endTimejob"%>
-  					<span class="error">*请填写结束时间</span>
+  					<%= f.text_field :end_time, value: format_to_date(@account_resume.birthday), id: "endTimejob",class: "verification timeDatepicker","data-noHide"=>"1", "data-em" => "notnull", "data-type" => "date", "error-id" => "errorendTimejob"%>
+  					<span class="error" id='errorendTimejob'>*请填写结束时间</span>
   				</div>
           <div class="frm">
   					<span class="">薪资：</span>
-            <%= f.text_field :salary, id: "moneyjob"%>
-  					<span class="error">*请填写结束时间</span>
+  					<%= f.text_field :salary,  id: "moneyjob", class: "verification", style: "border: 1px solid rgb(160, 160, 160);","data-noHide"=>"1", "data-em" => "notnull", "data-type" => "hopemoney", "error-id" => "errormoneyjob"%>
+  					<span class="error" id="errormoneyjob">*请填写薪资</span>
   				</div>
   				<div class="frm">
   					<span class="">工作描述：</span>
-            <%= f.text_area :description%>
-  					<span class="error">*请填写结束时间</span>
+  					<%= f.text_area :description,  id: "myjobdes", class: "verification", style: "border: 1px solid rgb(160, 160, 160);","data-noHide"=>"1", "data-em" => "notnull", "data-type" => "notnull", "error-id" => "errormyjobdes"%>
+  					<span class="error" id="errormyjobdes">*请填写结束时间</span>
   				</div>
   			</div>
   			<div class="jobBtns">
-  				<a href="#" class="btn">保&nbsp;存</a>
+          <%= f.submit raw("添&nbsp;加"), class: "btn"%>
   			</div>
         <%end%>
         <% @experiences.each do |experience|%>
   			<div class="readonly">
     				<p>
               <span class="itemNm">在职时间： </span> 
-              <%= experience.start_time.strftime("%Y年%m月")%>到<%= experience.end_time.strftime("%Y年%m月")%>
+              <%= strftime(experience.start_time, "%Y年%m月")%>到<%= strftime(experience.end_time, "%Y年%m月")%>
             </p>
     				<p><span class="itemNm">公司名称： </span><%= experience.company_name%></p>
     				<p><span class="itemNm">公司职位：</span><%= experience.post%></p>
@@ -150,43 +144,44 @@
   		</li>
   		<li>
   			<h3><i>* </i>项目经验 |  <span>用人单位衡量人才的重要指标哦</span></h3>
-        <%= form_for AccountResumeObject.new, url: accounts_resume_objects_path do |f|%>
+        <%= form_for AccountResumeObject.new, url: ajax_save_accounts_resume_objects_path do |f|%>
+        <%= f.hidden_field :account_resume_id, value: @account_resume.id %>
   			<div class="form">
   				<div class="frm">
   					<span class="">项目名称：</span>
-            <%= f.text_field :name%>
-  					<span class="error">*请填写项目姓名</span>
+  					<%= f.text_field :name,  id: "myprojectname", class: "verification", style: "border: 1px solid rgb(160, 160, 160);","data-noHide"=>"1", "data-em" => "notnull", "data-type" => "notnull", "error-id" => "errormyprojectname"%>
+  					<span class="error" id="errormyprojectname">*请填写项目姓名</span>
   				</div>
   				<div class="frm">
   					<span class="">项目描述：</span>
-  					<%= f.text_area :project_desc%>
-  					<span class="error">*请填写项目描述</span>
+  					<%= f.text_area :project_desc,  id: "project_desc", class: "verification", style: "border: 1px solid rgb(160, 160, 160);","data-noHide"=>"1", "data-em" => "notnull", "data-type" => "notnull", "error-id" => "errorproject_desc"%>
+  					<span class="error" id="errorproject_desc">*请填写项目描述</span>
   				</div>
   				<div class="frm">
   					<span class="">责任描述：</span>
-  					<%= f.text_area :role_desc%>
-  					<span class="error">*请填写责任描述</span>
+  					<%= f.text_area :role_desc,  id: "role_desc", class: "verification", style: "border: 1px solid rgb(160, 160, 160);","data-noHide"=>"1", "data-em" => "notnull", "data-type" => "notnull", "error-id" => "errorrole_desc"%>
+  					<span class="error" id="errorrole_desc">*请填写责任描述</span>
   				</div>
   				<div class="frm">
   					<span class="">开始时间：</span>
-            <%= f.text_field :start_date%>
-  					<span class="error">*请填写开始时间</span>
+  					<%= f.text_field :start_date, value: format_to_date(@account_resume.birthday), id: "startTimeproject",class: "verification timeDatepicker","data-noHide"=>"1", "data-em" => "notnull", "data-type" => "date", "error-id" => "errorstartTimeproject"%>
+  					<span class="error" id="errorstartTimeproject">*请填写开始时间</span>
   				</div>
   				<div class="frm">
   					<span class="">结束时间：</span>
-            <%= f.text_field :end_date%>
-  					<span class="error">*请填写结束时间</span>
+  					<%= f.text_field :end_date, value: format_to_date(@account_resume.birthday), id: "endTimeproject",class: "verification timeDatepicker","data-noHide"=>"1", "data-em" => "notnull", "data-type" => "date", "error-id" => "errorendTimeproject"%>
+  					<span class="error" id="errorendTimeproject">*请填写结束时间</span>
   				</div>
   			</div>
   			<div class="jobBtns">
-  				<a href="#" class="btn">保&nbsp;存</a>
+          <%= f.submit raw("添&nbsp;加"), class: "btn"%>
   			</div>
         <%end%>
         <% @objects.each do |object|%>
   			<div class="readonly">
   				<p>
             <span class="itemNm">项目时间：  </span> 
-            <%= object.start_time.strftime("%Y年%m月")%>到<%= object.end_time.strftime("%Y年%m月")%>
+            <%= strftime(object.start_date, "%Y年%m月")%>到<%= strftime(object.end_date, "%Y年%m月")%>
           </p>
   				<p><span class="itemNm">工作名称：  </span><%= object.name%></p>
   				<p><span class="itemNm">项目描述：</span><%= object.project_desc%></p>
@@ -199,43 +194,46 @@
   		</li>
   		<li>
   			<h3><i>* </i>教育经历 |  <span>可以提现你的专业及学习能力</span></h3>
-        <%= form_for AccountResumeEducation.new, url: accounts_resume_educations_path do |f|%>
+        <%= form_for AccountResumeEducation.new, url: ajax_save_accounts_resume_educations_path do |f|%>
+        <%= f.hidden_field :account_resume_id, value: @account_resume.id %>
   			<div class="form">
   				<div class="frm">
   					<span class="">学       历：</span>
-            <%= f.text_field :name%>
+                <select id="Degree" name="Degree">
+                    <option value="1">初中</option><option value="2">高中</option><option value="3">中技</option><option value="4">中专</option><option value="5" selected="">大专</option><option value="6" selected='selected'>本科</option><option value="-1">MBA</option><option value="7">硕士</option><option value="8">博士</option><option value="9">其他</option>
+                </select>
   					<span class="error">*请填写学历</span>
   				</div>
   				<div class="frm">
   					<span class="">学       校：</span>
-            <%= f.text_field :school%>
-  					<span class="error">*请填写学校</span>
+  					<%= f.text_field :school,  id: "role_school", class: "verification", style: "border: 1px solid rgb(160, 160, 160);","data-noHide"=>"1", "data-em" => "notnull", "data-type" => "notnull", "error-id" => "errorrole_school"%>
+  					<span class="error" id="errorrole_school">*请填写学校</span>
   				</div>
   				<div class="frm">
   					<span class="">专       业：</span>
-            <%= f.text_field :major%>
-  					<span class="error">*请填写专业</span>
+  					<%= f.text_field :major,  id: "role_major", class: "verification", style: "border: 1px solid rgb(160, 160, 160);","data-noHide"=>"1", "data-em" => "notnull", "data-type" => "notnull", "error-id" => "errorrole_major"%>
+  					<span class="error" id="errorrole_major">*请填写专业</span>
   				</div>
   				<div class="frm">
   					<span class="">开始时间：</span>
-            <%= f.text_field :start_date%>
-  					<span class="error">*请填写开始时间</span>
+  					<%= f.text_field :start_date, value: format_to_date(@account_resume.birthday), id: "startTimeeducation",class: "verification timeDatepicker","data-noHide"=>"1", "data-em" => "notnull", "data-type" => "date", "error-id" => "errorstartTimeeducation"%>
+  					<span class="error" id='errorstartTimeeducation'>*请填写开始时间</span>
   				</div>
   				<div class="frm">
   					<span class="">结束时间：</span>
-            <%= f.text_field :end_date%>
-  					<span class="error">*请填写结束时间</span>
+  					<%= f.text_field :end_date, value: format_to_date(@account_resume.birthday), id: "endTimeeducation",class: "verification timeDatepicker","data-noHide"=>"1", "data-em" => "notnull", "data-type" => "date", "error-id" => "errorendTimeeducation"%>
+  					<span class="error" id="errorendTimeeducation">*请填写结束时间</span>
   				</div>
   			</div>
   			<div class="jobBtns">
-  				<a href="#" class="btn">保&nbsp;存</a>
+          <%= f.submit raw("添&nbsp;加"), class: "btn"%>
   			</div>
         <%end%>
         <% @educations.each do |education|%>
   			<div class="readonly">
   				<p>
             <span class="itemNm">教育时间：  </span>
-            <%= education.start_time.strftime("%Y年%m月")%>到<%= education.end_time.strftime("%Y年%m月")%>
+            <%= strftime(education.start_date, "%Y年%m月")%>到<%= strftime(education.end_date, "%Y年%m月")%>
           </p>
   				<p><span class="itemNm">学&nbsp;校：</span><%= education.school%></p>
   				<p><span class="itemNm">学&nbsp;历： </span><%= education.name%></p>
@@ -252,10 +250,10 @@
   				<div class="frm">
   					<span class="">目前状态：</span>
                               <select name="current_situation" style="width:154px;" id="current_situation">
-                                  <option value="0">目前正在找工作</option>
+                                  <option value="0" selected="selected">目前正在找工作</option>
                                   <option value="1">半年内无换工作的计划</option>
                                   <option value="2">一年内无换工作的计划</option>
-                                  <option value="3" selected="">观望有好的机会再考虑</option>
+                                  <option value="3">观望有好的机会再考虑</option>
                                   <option value="4">我暂时不想找工作</option>
                               </select>
   					<span class="error">*请选择目前状态</span>
@@ -282,22 +280,19 @@
   				</div>
   				<div class="frm">
   					<span class="">订阅开始时间：</span>
-  					<input type="text" id="on_line_time"/>
-  					<span class="error">*请填写开始时间</span>
+  					<input type="text" class="timeDatepicker verification" data-noHide="1" data-type = "date"  id="on_line_time" error-id="erroron_line_time"/>
+  					<span class="error" id="erroron_line_time">*请填写开始时间</span>
   				</div>
                           <div class="frm">
   					<span class="">订阅结束时间：</span>
-  					<input type="text" id="off_line_time"/>
-  					<span class="error">*请填写结束时间</span>
+  					<input type="text" class="timeDatepicker verification"  data-noHide="1"  data-type = "date" id="off_line_time" error-id="erroroff_line_time"/>
+  					<span class="error" id="erroroff_line_time">*请填写结束时间</span>
   				</div>
-  			</div>
-  			<div class="jobBtns">
-  				<a href="#" class="btn">保&nbsp;存</a>
   			</div>
   		</li>
   	</ul>
   	<div class="jobBtns">
-  		<a href="#" class="btn">保存所有</a>
+  		<a href="javascript:void(0)" class="btn saveAllJob">猛戳保存</a>
   	</div>
   </div>
 	<%= render partial: "/layouts/right"%>

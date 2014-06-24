@@ -1,6 +1,7 @@
 class CreateAccountResumeRadars < ActiveRecord::Migration
   def change
     create_table :account_resume_radars do |t|
+      t.references  :account_resume
       t.string  :status
       t.boolean :be_searched, default: false    #是否可以被搜索
       t.boolean :subscribe,   default: false    #是否订阅

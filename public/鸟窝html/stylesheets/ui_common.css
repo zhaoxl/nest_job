@@ -34,7 +34,7 @@ em{display:inline-block;width:35px;height:30px;background:url(../images/nw_icon.
 
 .header .nav{float:left;width:580px;}
 .header .nav li{float:left;}
-.header .nav li a{display:block;width:90px;height:54px;padding-top:27px;text-align:center;font:15px '微软雅黑';color:#fff;}
+.header .nav li a{display:block;width:100px;height:54px;padding-top:27px;text-align:center;font:15px '微软雅黑';color:#fff;}
 .header .nav li a:hover{background:#46515c;}
 
 
@@ -133,9 +133,12 @@ em{display:inline-block;width:35px;height:30px;background:url(../images/nw_icon.
 
 /*xixinliang*/
 .industryChooserSelect{zoom: 1;margin-bottom: 15px;}
+.header .nav li a span{display: inline-block;padding: 0 2px;font-family: arial;font-size: 10px;-webkit-transform: scale(0.875);background-color: #dd3838;color: #fff;border-radius: 2px;min-width: 11px;_width: 11px;height: 12px;;text-align: center;}
 .industryChooserSelect .ispan{float: left;width: 110px;margin-right: 20px;color: #3b3939;font-size: 14px;text-align: right;}
 .industryChooserSelect .error{display: none;margin-right: 32px;float: right;width: 160px;color: #f41818;font-size: 12px;text-align: left;}
 .chosen-results em{display: inline-block;width: auto;height: auto;background: none !important;}
 .suggestPicture{float:left !important;width:390px !important;font-size:12px !important;color:#27a695 !important}
 .suggestPicture strong{font-size:18px !important;}
 .nohopeJob{text-align: center;margin-top: 20px;color:#27a695;font-size: 15px;background-color: #fff;width: 716px;height: 60px;line-height: 60px;border: 1px dashed #27a695;}
+#forgetPasswordPop{display: none}
+.saveAllJob{position: fixed;border:1px dotted #e1f3f1;top: 240px;z-index: 1;left: 720px;}

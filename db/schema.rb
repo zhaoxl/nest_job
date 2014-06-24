@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140622104337) do
+ActiveRecord::Schema.define(version: 20140623073813) do
 
   create_table "account_post_applies", force: true do |t|
     t.integer  "account_id"
@@ -25,11 +25,12 @@ ActiveRecord::Schema.define(version: 20140622104337) do
   end
 
   create_table "account_resume_educations", force: true do |t|
-    t.string "name"
-    t.string "school"
-    t.string "major"
-    t.date   "start_date"
-    t.date   "end_date"
+    t.integer "account_resume_id"
+    t.string  "name"
+    t.string  "school"
+    t.string  "major"
+    t.date    "start_date"
+    t.date    "end_date"
   end
 
   create_table "account_resume_experiences", force: true do |t|
@@ -37,7 +38,7 @@ ActiveRecord::Schema.define(version: 20140622104337) do
     t.string   "post"
     t.datetime "start_time"
     t.datetime "end_time"
-    t.string   "description"
+    t.string   "description",       limit: 2000
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "account_resume_id"
@@ -45,14 +46,16 @@ ActiveRecord::Schema.define(version: 20140622104337) do
   end
 
   create_table "account_resume_objects", force: true do |t|
-    t.string "name"
-    t.string "project_desc"
-    t.string "role_desc"
-    t.date   "start_date"
-    t.date   "end_date"
+    t.integer "account_resume_id"
+    t.string  "name"
+    t.string  "project_desc",      limit: 2000
+    t.string  "role_desc",         limit: 2000
+    t.date    "start_date"
+    t.date    "end_date"
   end
 
   create_table "account_resume_radars", force: true do |t|
+    t.integer "account_resume_id"
     t.string  "status"
     t.boolean "be_searched",          default: false
     t.boolean "subscribe",            default: false
@@ -82,7 +85,7 @@ ActiveRecord::Schema.define(version: 20140622104337) do
     t.integer  "gender"
     t.date     "work_start_date"
     t.string   "marital_status"
-    t.integer  "address"
+    t.string   "address"
   end
 
   create_table "account_tags", force: true do |t|
@@ -262,6 +265,7 @@ ActiveRecord::Schema.define(version: 20140622104337) do
     t.integer  "look_num",         default: 0
     t.integer  "industry_id"
     t.text     "sanitize_content"
+    t.string   "status"
   end
 
   create_table "taggings", force: true do |t|

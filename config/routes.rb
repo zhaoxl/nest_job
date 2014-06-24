@@ -37,8 +37,27 @@ NestJob::Application.routes.draw do
       end
     end
     
-    resources :resumes
-    resources :resume_experiences
+    resources :resumes do
+      collection do
+        post :ajax_save
+      end
+    end
+    resources :resume_experiences do
+      collection do
+        post :ajax_save
+      end
+    end
+    resources :resume_objects do
+      collection do
+        post :ajax_save
+      end
+    end
+    resources :resume_educations do
+      collection do
+        post :ajax_save
+      end
+    end
+    resources :resume_radars
     resources :posts
     resources :account_post_applies do
       collection do

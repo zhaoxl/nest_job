@@ -1,0 +1,2 @@
+module Accounts::ResumeEducationsHelper
+end

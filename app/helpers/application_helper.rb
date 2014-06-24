@@ -67,4 +67,18 @@ module ApplicationHelper
     
     return tags
   end
+  
+  # 格式化日期
+  #
+  # 作者: 赵晓龙
+  # 最后更新时间: 2014-06-24
+  #
+  # ==== 示例
+  # strftime(Date.today, "%Y-%m-%d")
+  # ==== 返回类型
+  # String
+  def strftime(date, format)
+    return "" if date.blank?
+    date.strftime format
+  end
 end

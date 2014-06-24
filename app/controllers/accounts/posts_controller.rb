@@ -15,8 +15,6 @@ class Accounts::PostsController < ApplicationController
 	end
   
   def create
-    development_settings = {log: true, trace: true} if Rails.env.development?
-    Post.__elasticsearch__.client = Elasticsearch::Client.new({host: "115.28.176.6:9200"}.merge(development_settings||{}))
     post = Post.new(post_create_params)
     post.account_id = current_account.id
     post.content = params[:editorValue]

@@ -1,10 +1,10 @@
-class Accounts::ResumeExperiencesController < ApplicationController
+class Accounts::ResumeEducationsController < ApplicationController
   before_action :authenticate_account!
   
   def ajax_save
     result = {status: "ok"}
     begin
-      object = AccountResumeExperience.new(experience_create_params)
+      object = AccountResumeEducation.new(education_create_params)
       unless object.save
         raise AjaxException.new(object.errors.messages.inject({}){|hash, item| hash[item[0]] = item[1]*','; hash})
       end
@@ -18,7 +18,7 @@ class Accounts::ResumeExperiencesController < ApplicationController
   end
   
   private  
-  def experience_create_params  
-    params.require(:account_resume_experience).permit(:account_resume_id, :company_name, :post, :start_time, :end_time, :description)  
+  def education_create_params  
+    params.require(:account_resume_education).permit(:account_resume_id, :name, :school, :major, :start_date, :end_date)  
   end 
 end

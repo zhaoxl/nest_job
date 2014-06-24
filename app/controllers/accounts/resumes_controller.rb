@@ -2,40 +2,31 @@ class Accounts::ResumesController < ApplicationController
   before_action :authenticate_account!
   
   def index
-    unless @account_resume = current_account.current_account_resume
-      @account_resume = AccountResume.new
-    end
+    @account_resume = AccountResume.find_or_create_by(account_id: current_account.id)
+    @experiences = @account_resume.account_resume_experiences
+    @objects = @account_resume.account_resume_objects
+    @educations = @account_resume.account_resume_educations
   end
   
-  def create
-    begin
-      account_resume = current_account.account_resumes.new(post_params)
-      account_resume.tag_list.add account_resume.tags.split(",")
-      unless account_resume.save
-        raise account_resume.errors.messages.values.flatten.uniq
-      end
-      flash[:notice] = "保存成功"
-    rescue Exception => ex
-      flash[:error] = ex.message
-    end
-    redirect_to :back
-  end
-  
-  def update
+  def ajax_save
+    result = {status: "ok"}
     begin
       account_resume = current_account.current_account_resume
-      unless account_resume.update_attributes(post_params)
-        raise account_resume.errors.messages.values.flatten.uniq
+      unless account_resume.update_attributes(resume_params)
+        raise AjaxException.new(account_resume.errors.messages.inject({}){|hash, item| hash[item[0]] = item[1]*','; hash})
       end
-      flash[:notice] = "保存成功"
+      account_resume.tag_list = account_resume.tags.split(",")
     rescue Exception => ex
-      flash[:error] = ex.message
+      result = {status: "error", content: ex.message}
+      logger.error "accounts_create error log================================================"
+      logger.error ex.message
+      logger.error ex.backtrace
     end
-    redirect_to :back
+    render result.to_json
   end
   
   private  
-  def post_params  
-    params.require(:account_resume).permit(:name, :tel, :email, :birthday, :gender, :hope_salary, :education, :price, :tags, :hope_area)
-  end 
+  def resume_params  
+    params.require(:account_resume).permit(:name, :tel, :email, :birthday, :gender, :education, :price, :marital_status, :address, :hope_salary, :hope_area, :tags)
+  end
 end
