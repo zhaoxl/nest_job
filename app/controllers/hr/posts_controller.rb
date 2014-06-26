@@ -1,4 +1,4 @@
-class Accounts::PostsController < ApplicationController
+class Hr::PostsController < ApplicationController
   before_action :authenticate_account!
   
   def index

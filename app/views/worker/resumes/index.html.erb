@@ -18,7 +18,7 @@
         <%if flash[:notice]%>
         <span style="color: green">提示信息:<%= flash[:notice]%></span>
         <%end%>
-  			<%= form_for @account_resume, url: ajax_save_accounts_resume_educations_path do |f|%>
+  			<%= form_for @account_resume, url: ajax_save_worker_resume_educations_path do |f|%>
   			<div class="form">
   				<div class="frm">
   					<span class="">姓       名：</span>
@@ -61,7 +61,7 @@
   		</li>
   		<li>
   			<h3><i>* </i> 期望职位  |  <span>更精准帮您推荐喜欢的职位</span></h3>
-        <%= form_for @account_resume, url: ajax_save_accounts_resume_educations_path do |f|%>
+        <%= form_for @account_resume, url: ajax_save_worker_resume_educations_path do |f|%>
   			<div class="form">
   				<div class="frm">
   					<span class="">职位关键词</span>
@@ -89,9 +89,9 @@
   		</li>
   		<li>
   			<h3><i>* </i>工作经历 |  <span>最能体现自己的工作能力</span></h3>
-        <%= form_for AccountResumeExperience.new, url: ajax_save_accounts_resume_experiences_path do |f|%>
+        <%= form_for AccountResumeExperience.new, url: ajax_save_worker_resume_experiences_path do |f|%>
         <%= f.hidden_field :account_resume_id, value: @account_resume.id %>
-  			<div class="form">
+  			<div class="form" id="jobhistory">
   				<div class="frm">
   					<span class="">公司名称：</span>
   					<%= f.text_field :company_name,  id: "update_company_name", class: "verification", style: "border: 1px solid rgb(160, 160, 160);","data-noHide"=>"1", "data-em" => "notnull", "data-type" => "notnull", "error-id" => "errorupdate_company_name"%><br />
@@ -124,7 +124,7 @@
   				</div>
   			</div>
   			<div class="jobBtns">
-          <%= f.submit raw("添&nbsp;加"), class: "btn"%>
+                <button class="btn" name="button" type="button" id="addjobhistory">添&nbsp;加</button>
   			</div>
         <%end%>
         <% @experiences.each do |experience|%>
@@ -135,16 +135,17 @@
             </p>
     				<p><span class="itemNm">公司名称： </span><%= experience.company_name%></p>
     				<p><span class="itemNm">公司职位：</span><%= experience.post%></p>
+    				<p><span class="itemNm">薪资：</span><%= experience.salary%></p>
     				<p><span class="itemNm">工作描述：</span><%= experience.description%></p>
     				<div class="jobBtns">
-    					<a href="#" class="btnR">编&nbsp;辑</a><a href="#" class="btnR">删&nbsp;除</a>
+    					<a href="javascript:void(0)" data-moneyjob='<%= experience.salary%>' data-startime='<%= strftime(experience.start_time, "%Y-%m-%d")%>' data-endime='<%= strftime(experience.end_time, "%Y-%m-%d")%>' data-company_name='<%= experience.company_name%>' data-post='<%= experience.post%>' data-description='<%= experience.description%>' data-id="<%= experience.id%>" class="btnR editJobhistory">编&nbsp;辑</a><a href="javascript:void(0)" class="btnR delJobhistory" data-id="<%= experience.id%>">删&nbsp;除</a>
     				</div>
   			</div>
         <%end%>
   		</li>
   		<li>
   			<h3><i>* </i>项目经验 |  <span>用人单位衡量人才的重要指标哦</span></h3>
-        <%= form_for AccountResumeObject.new, url: ajax_save_accounts_resume_objects_path do |f|%>
+        <%= form_for AccountResumeObject.new, url: ajax_save_worker_resume_objects_path do |f|%>
         <%= f.hidden_field :account_resume_id, value: @account_resume.id %>
   			<div class="form">
   				<div class="frm">
@@ -174,7 +175,7 @@
   				</div>
   			</div>
   			<div class="jobBtns">
-          <%= f.submit raw("添&nbsp;加"), class: "btn"%>
+                <input class="btn" name="commit" type="button" id="addprojects" value="添&nbsp;加">
   			</div>
         <%end%>
         <% @objects.each do |object|%>
@@ -194,7 +195,7 @@
   		</li>
   		<li>
   			<h3><i>* </i>教育经历 |  <span>可以提现你的专业及学习能力</span></h3>
-        <%= form_for AccountResumeEducation.new, url: ajax_save_accounts_resume_educations_path do |f|%>
+        <%= form_for AccountResumeEducation.new, url: ajax_save_worker_resume_educations_path do |f|%>
         <%= f.hidden_field :account_resume_id, value: @account_resume.id %>
   			<div class="form">
   				<div class="frm">
@@ -297,3 +298,41 @@
   </div>
 	<%= render partial: "/layouts/right"%>
 </div>
+    <div class="mainpop" style="display: none" id="editJobpop">
+        <div class="form" id="jobhistory">
+            <div class="frm">
+                <span class="">公司名称：</span>
+                <input class="verification" data-em="notnull" data-nohide="1" data-type="notnull" error-id="errorupdate_company_nameedit" id="update_company_nameedit" name="account_resume_experience[company_name]" style="border: 1px solid rgb(160, 160, 160);" type="text"><br>
+                <span class="error" id="errorupdate_company_nameedit">*请填写公司姓名</span>
+            </div>
+            <div class="frm">
+                <span class="">公司职位：</span>
+                <input class="verification" data-em="notnull" data-nohide="1" data-type="notnull" error-id="errorupdate_company_postedit" id="update_company_posteditedit" name="account_resume_experience[post]" style="border: 1px solid rgb(160, 160, 160);" type="text"><br>
+                <span class="error" id="errorupdate_company_postedit">*请填写公司职位</span>
+            </div>
+            <div class="frm">
+                <span class="">开始时间：</span>
+                <input class="verification timeDatepicker" data-em="notnull" data-nohide="1" data-type="date" error-id="errorstartTimejobedit" id="startTimejobedit" name="account_resume_experience[start_time]" type="text">
+                <span class="error" id="errorstartTimejobedit">*请填写开始时间</span>
+            </div>
+            <div class="frm">
+                <span class="">结束时间：</span>
+                <input class="verification timeDatepicker" data-em="notnull" data-nohide="1" data-type="date" error-id="errorendTimejobedit" id="endTimejobedit" name="account_resume_experience[end_time]" type="text">
+                <span class="error" id="errorendTimejobedit">*请填写结束时间</span>
+            </div>
+      <div class="frm">
+                <span class="">薪资：</span>
+                <input class="verification" data-em="notnull" data-nohide="1" data-type="hopemoney" error-id="errormoneyjobedit" id="moneyjobedit" name="account_resume_experience[salary]" style="border: 1px solid rgb(160, 160, 160);" type="text">
+                <span class="error" id="errormoneyjobedit">*请填写薪资</span>
+            </div>
+            <div class="frm">
+                <span class="">工作描述：</span>
+                <textarea class="verification" data-em="notnull" data-nohide="1" data-type="notnull" error-id="errormyjobdesedit" id="myjobdesedit" name="account_resume_experience[description]" style="border: 1px solid rgb(160, 160, 160);"></textarea>
+                <span class="error" id="errormyjobdesedit">*请填写结束时间</span>
+            </div>
+        </div>
+        <div class="jobBtns">
+            <button class="btn" name="button" type="button" id="editjobhistory">确&nbsp;认</button>
+        </div>
+    </div>
+

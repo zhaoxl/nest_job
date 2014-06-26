@@ -1,4 +1,4 @@
-class Accounts::ResumesController < ApplicationController
+class Worker::ResumesController < ApplicationController
   before_action :authenticate_account!
   
   def index
@@ -22,7 +22,7 @@ class Accounts::ResumesController < ApplicationController
       logger.error ex.message
       logger.error ex.backtrace
     end
-    render result.to_json
+    render json: result.to_json
   end
   
   private  

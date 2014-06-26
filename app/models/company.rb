@@ -11,4 +11,5 @@ class Company < ActiveRecord::Base
   
   belongs_to :nature
   belongs_to :industry
+  
 end

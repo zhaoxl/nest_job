@@ -2,30 +2,62 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8d10e6ed-71fc-423f-9eda-c4ce70a95b50" name="Default" comment="">
-      <change type="DELETED" beforePath="Z:\app\views\accounts\resumes\index2.html.erb" afterPath="" />
+      <change type="DELETED" beforePath="Z:\app\controllers\accounts\account_post_applies_controller.rb" afterPath="" />
+      <change type="DELETED" beforePath="Z:\app\controllers\accounts\companies_controller.rb" afterPath="" />
+      <change type="DELETED" beforePath="Z:\app\controllers\accounts\posts_controller.rb" afterPath="" />
+      <change type="DELETED" beforePath="Z:\app\controllers\accounts\resume_educations_controller.rb" afterPath="" />
+      <change type="DELETED" beforePath="Z:\app\controllers\accounts\resume_experiences_controller.rb" afterPath="" />
+      <change type="DELETED" beforePath="Z:\app\controllers\accounts\resume_objects_controller.rb" afterPath="" />
+      <change type="DELETED" beforePath="Z:\app\controllers\accounts\resumes_controller.rb" afterPath="" />
+      <change type="DELETED" beforePath="Z:\app\controllers\accounts_controller.rb" afterPath="" />
+      <change type="DELETED" beforePath="Z:\app\controllers\hr_controller.rb" afterPath="" />
+      <change type="DELETED" beforePath="Z:\app\views\accounts\posts\index.html.erb" afterPath="" />
+      <change type="DELETED" beforePath="Z:\app\views\accounts\posts\new.html.erb" afterPath="" />
+      <change type="DELETED" beforePath="Z:\app\views\accounts\posts\show.html.erb" afterPath="" />
+      <change type="DELETED" beforePath="Z:\app\views\accounts\resumes\index.html.erb" afterPath="" />
+      <change type="DELETED" beforePath="Z:\app\views\hr\index.html.erb" afterPath="" />
+      <change type="DELETED" beforePath="Z:\app\views\hr\show.html.erb" afterPath="" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/lib/elasticsearch-1.0.0.jar" afterPath="Z:/elasticsearch-rtf/lib/elasticsearch-1.0.0.jar" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/plugins/analysis-ik/elasticsearch-analysis-ik-1.2.6.jar" afterPath="Z:/elasticsearch-rtf/plugins/analysis-ik/elasticsearch-analysis-ik-1.2.6.jar" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/plugins/analysis-mmseg/elasticsearch-analysis-mmseg-1.2.2.jar" afterPath="Z:/elasticsearch-rtf/plugins/analysis-mmseg/elasticsearch-analysis-mmseg-1.2.2.jar" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/plugins/analysis-pinyin/elasticsearch-analysis-pinyin-1.2.2.jar" afterPath="Z:/elasticsearch-rtf/plugins/analysis-pinyin/elasticsearch-analysis-pinyin-1.2.2.jar" />
+      <change type="MODIFICATION" beforePath="Z:/elasticsearch-1.2.1/bin/service/exec/elasticsearch-freebsd-x86-32" afterPath="Z:/elasticsearch-1.2.1/bin/service/exec/elasticsearch-freebsd-x86-32" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/bin/service/exec/elasticsearch-freebsd-x86-32" afterPath="Z:/elasticsearch-rtf/bin/service/exec/elasticsearch-freebsd-x86-32" />
+      <change type="MODIFICATION" beforePath="Z:/elasticsearch-1.2.1/bin/service/exec/elasticsearch-freebsd-x86-64" afterPath="Z:/elasticsearch-1.2.1/bin/service/exec/elasticsearch-freebsd-x86-64" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/bin/service/exec/elasticsearch-freebsd-x86-64" afterPath="Z:/elasticsearch-rtf/bin/service/exec/elasticsearch-freebsd-x86-64" />
+      <change type="MODIFICATION" beforePath="Z:/elasticsearch-1.2.1/bin/service/exec/elasticsearch-linux-ia-64" afterPath="Z:/elasticsearch-1.2.1/bin/service/exec/elasticsearch-linux-ia-64" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/bin/service/exec/elasticsearch-linux-ia-64" afterPath="Z:/elasticsearch-rtf/bin/service/exec/elasticsearch-linux-ia-64" />
+      <change type="MODIFICATION" beforePath="Z:/elasticsearch-1.2.1/bin/service/exec/elasticsearch-linux-ppc-32" afterPath="Z:/elasticsearch-1.2.1/bin/service/exec/elasticsearch-linux-ppc-32" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/bin/service/exec/elasticsearch-linux-ppc-32" afterPath="Z:/elasticsearch-rtf/bin/service/exec/elasticsearch-linux-ppc-32" />
+      <change type="MODIFICATION" beforePath="Z:/elasticsearch-1.2.1/bin/service/exec/elasticsearch-linux-ppc-64" afterPath="Z:/elasticsearch-1.2.1/bin/service/exec/elasticsearch-linux-ppc-64" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/bin/service/exec/elasticsearch-linux-ppc-64" afterPath="Z:/elasticsearch-rtf/bin/service/exec/elasticsearch-linux-ppc-64" />
+      <change type="MODIFICATION" beforePath="Z:/elasticsearch-1.2.1/bin/service/exec/elasticsearch-linux-x86-32" afterPath="Z:/elasticsearch-1.2.1/bin/service/exec/elasticsearch-linux-x86-32" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/bin/service/exec/elasticsearch-linux-x86-32" afterPath="Z:/elasticsearch-rtf/bin/service/exec/elasticsearch-linux-x86-32" />
+      <change type="MODIFICATION" beforePath="Z:/elasticsearch-1.2.1/bin/service/exec/elasticsearch-linux-x86-64" afterPath="Z:/elasticsearch-1.2.1/bin/service/exec/elasticsearch-linux-x86-64" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/bin/service/exec/elasticsearch-linux-x86-64" afterPath="Z:/elasticsearch-rtf/bin/service/exec/elasticsearch-linux-x86-64" />
+      <change type="MODIFICATION" beforePath="Z:/elasticsearch-1.2.1/bin/service/exec/elasticsearch-macosx-universal-32" afterPath="Z:/elasticsearch-1.2.1/bin/service/exec/elasticsearch-macosx-universal-32" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/bin/service/exec/elasticsearch-macosx-universal-32" afterPath="Z:/elasticsearch-rtf/bin/service/exec/elasticsearch-macosx-universal-32" />
+      <change type="MODIFICATION" beforePath="Z:/elasticsearch-1.2.1/bin/service/exec/elasticsearch-macosx-universal-64" afterPath="Z:/elasticsearch-1.2.1/bin/service/exec/elasticsearch-macosx-universal-64" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/bin/service/exec/elasticsearch-macosx-universal-64" afterPath="Z:/elasticsearch-rtf/bin/service/exec/elasticsearch-macosx-universal-64" />
+      <change type="MODIFICATION" beforePath="Z:/elasticsearch-1.2.1/bin/service/exec/elasticsearch-solaris-sparc-32" afterPath="Z:/elasticsearch-1.2.1/bin/service/exec/elasticsearch-solaris-sparc-32" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/bin/service/exec/elasticsearch-solaris-sparc-32" afterPath="Z:/elasticsearch-rtf/bin/service/exec/elasticsearch-solaris-sparc-32" />
+      <change type="MODIFICATION" beforePath="Z:/elasticsearch-1.2.1/bin/service/exec/elasticsearch-solaris-sparc-64" afterPath="Z:/elasticsearch-1.2.1/bin/service/exec/elasticsearch-solaris-sparc-64" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/bin/service/exec/elasticsearch-solaris-sparc-64" afterPath="Z:/elasticsearch-rtf/bin/service/exec/elasticsearch-solaris-sparc-64" />
+      <change type="MODIFICATION" beforePath="Z:/elasticsearch-1.2.1/bin/service/exec/elasticsearch-solaris-x86-32" afterPath="Z:/elasticsearch-1.2.1/bin/service/exec/elasticsearch-solaris-x86-32" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/bin/service/exec/elasticsearch-solaris-x86-32" afterPath="Z:/elasticsearch-rtf/bin/service/exec/elasticsearch-solaris-x86-32" />
+      <change type="MODIFICATION" beforePath="Z:/elasticsearch-1.2.1/bin/service/exec/elasticsearch-solaris-x86-64" afterPath="Z:/elasticsearch-1.2.1/bin/service/exec/elasticsearch-solaris-x86-64" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/bin/service/exec/elasticsearch-solaris-x86-64" afterPath="Z:/elasticsearch-rtf/bin/service/exec/elasticsearch-solaris-x86-64" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/plugins/partialupdate/elasticsearch-tools-partialupdate-1.2.2.jar" afterPath="Z:/elasticsearch-rtf/plugins/partialupdate/elasticsearch-tools-partialupdate-1.2.2.jar" />
+      <change type="MODIFICATION" beforePath="Z:/elasticsearch-1.2.1/bin/service/exec/elasticsearch-windows-x86-32.exe" afterPath="Z:/elasticsearch-1.2.1/bin/service/exec/elasticsearch-windows-x86-32.exe" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/bin/service/exec/elasticsearch-windows-x86-32.exe" afterPath="Z:/elasticsearch-rtf/bin/service/exec/elasticsearch-windows-x86-32.exe" />
+      <change type="MODIFICATION" beforePath="Z:/elasticsearch-1.2.1/bin/service/exec/elasticsearch-windows-x86-64.exe" afterPath="Z:/elasticsearch-1.2.1/bin/service/exec/elasticsearch-windows-x86-64.exe" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/bin/service/exec/elasticsearch-windows-x86-64.exe" afterPath="Z:/elasticsearch-rtf/bin/service/exec/elasticsearch-windows-x86-64.exe" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/plugins/partialupdate/fastjson-1.1.14.jar" afterPath="Z:/elasticsearch-rtf/plugins/partialupdate/fastjson-1.1.14.jar" />
+      <change type="MODIFICATION" beforePath="Z:/elasticsearch-1.2.1/plugins/rtf/_site/assets/fonts/glyphicons-halflings-regular.eot" afterPath="Z:/elasticsearch-1.2.1/plugins/rtf/_site/assets/fonts/glyphicons-halflings-regular.eot" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/plugins/rtf/_site/assets/fonts/glyphicons-halflings-regular.eot" afterPath="Z:/elasticsearch-rtf/plugins/rtf/_site/assets/fonts/glyphicons-halflings-regular.eot" />
+      <change type="MODIFICATION" beforePath="Z:/elasticsearch-1.2.1/plugins/rtf/_site/assets/fonts/glyphicons-halflings-regular.ttf" afterPath="Z:/elasticsearch-1.2.1/plugins/rtf/_site/assets/fonts/glyphicons-halflings-regular.ttf" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/plugins/rtf/_site/assets/fonts/glyphicons-halflings-regular.ttf" afterPath="Z:/elasticsearch-rtf/plugins/rtf/_site/assets/fonts/glyphicons-halflings-regular.ttf" />
+      <change type="MODIFICATION" beforePath="Z:/elasticsearch-1.2.1/plugins/rtf/_site/assets/fonts/glyphicons-halflings-regular.woff" afterPath="Z:/elasticsearch-1.2.1/plugins/rtf/_site/assets/fonts/glyphicons-halflings-regular.woff" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/plugins/rtf/_site/assets/fonts/glyphicons-halflings-regular.woff" afterPath="Z:/elasticsearch-rtf/plugins/rtf/_site/assets/fonts/glyphicons-halflings-regular.woff" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/lib/jna-3.3.0.jar" afterPath="Z:/elasticsearch-rtf/lib/jna-3.3.0.jar" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/lib/jts-1.12.jar" afterPath="Z:/elasticsearch-rtf/lib/jts-1.12.jar" />
@@ -41,18 +73,31 @@
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/lib/sigar/libsigar-x86-freebsd-6.so" afterPath="Z:/elasticsearch-rtf/lib/sigar/libsigar-x86-freebsd-6.so" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/lib/sigar/libsigar-x86-linux.so" afterPath="Z:/elasticsearch-rtf/lib/sigar/libsigar-x86-linux.so" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/lib/sigar/libsigar-x86-solaris.so" afterPath="Z:/elasticsearch-rtf/lib/sigar/libsigar-x86-solaris.so" />
+      <change type="MODIFICATION" beforePath="Z:/elasticsearch-1.2.1/bin/service/lib/libwrapper-freebsd-x86-32.so" afterPath="Z:/elasticsearch-1.2.1/bin/service/lib/libwrapper-freebsd-x86-32.so" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/bin/service/lib/libwrapper-freebsd-x86-32.so" afterPath="Z:/elasticsearch-rtf/bin/service/lib/libwrapper-freebsd-x86-32.so" />
+      <change type="MODIFICATION" beforePath="Z:/elasticsearch-1.2.1/bin/service/lib/libwrapper-freebsd-x86-64.so" afterPath="Z:/elasticsearch-1.2.1/bin/service/lib/libwrapper-freebsd-x86-64.so" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/bin/service/lib/libwrapper-freebsd-x86-64.so" afterPath="Z:/elasticsearch-rtf/bin/service/lib/libwrapper-freebsd-x86-64.so" />
+      <change type="MODIFICATION" beforePath="Z:/elasticsearch-1.2.1/bin/service/lib/libwrapper-linux-ia-64.so" afterPath="Z:/elasticsearch-1.2.1/bin/service/lib/libwrapper-linux-ia-64.so" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/bin/service/lib/libwrapper-linux-ia-64.so" afterPath="Z:/elasticsearch-rtf/bin/service/lib/libwrapper-linux-ia-64.so" />
+      <change type="MODIFICATION" beforePath="Z:/elasticsearch-1.2.1/bin/service/lib/libwrapper-linux-ppc-32.so" afterPath="Z:/elasticsearch-1.2.1/bin/service/lib/libwrapper-linux-ppc-32.so" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/bin/service/lib/libwrapper-linux-ppc-32.so" afterPath="Z:/elasticsearch-rtf/bin/service/lib/libwrapper-linux-ppc-32.so" />
+      <change type="MODIFICATION" beforePath="Z:/elasticsearch-1.2.1/bin/service/lib/libwrapper-linux-ppc-64.so" afterPath="Z:/elasticsearch-1.2.1/bin/service/lib/libwrapper-linux-ppc-64.so" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/bin/service/lib/libwrapper-linux-ppc-64.so" afterPath="Z:/elasticsearch-rtf/bin/service/lib/libwrapper-linux-ppc-64.so" />
+      <change type="MODIFICATION" beforePath="Z:/elasticsearch-1.2.1/bin/service/lib/libwrapper-linux-x86-32.so" afterPath="Z:/elasticsearch-1.2.1/bin/service/lib/libwrapper-linux-x86-32.so" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/bin/service/lib/libwrapper-linux-x86-32.so" afterPath="Z:/elasticsearch-rtf/bin/service/lib/libwrapper-linux-x86-32.so" />
+      <change type="MODIFICATION" beforePath="Z:/elasticsearch-1.2.1/bin/service/lib/libwrapper-linux-x86-64.so" afterPath="Z:/elasticsearch-1.2.1/bin/service/lib/libwrapper-linux-x86-64.so" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/bin/service/lib/libwrapper-linux-x86-64.so" afterPath="Z:/elasticsearch-rtf/bin/service/lib/libwrapper-linux-x86-64.so" />
+      <change type="MODIFICATION" beforePath="Z:/elasticsearch-1.2.1/bin/service/lib/libwrapper-macosx-universal-32.jnilib" afterPath="Z:/elasticsearch-1.2.1/bin/service/lib/libwrapper-macosx-universal-32.jnilib" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/bin/service/lib/libwrapper-macosx-universal-32.jnilib" afterPath="Z:/elasticsearch-rtf/bin/service/lib/libwrapper-macosx-universal-32.jnilib" />
+      <change type="MODIFICATION" beforePath="Z:/elasticsearch-1.2.1/bin/service/lib/libwrapper-macosx-universal-64.jnilib" afterPath="Z:/elasticsearch-1.2.1/bin/service/lib/libwrapper-macosx-universal-64.jnilib" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/bin/service/lib/libwrapper-macosx-universal-64.jnilib" afterPath="Z:/elasticsearch-rtf/bin/service/lib/libwrapper-macosx-universal-64.jnilib" />
+      <change type="MODIFICATION" beforePath="Z:/elasticsearch-1.2.1/bin/service/lib/libwrapper-solaris-sparc-32.so" afterPath="Z:/elasticsearch-1.2.1/bin/service/lib/libwrapper-solaris-sparc-32.so" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/bin/service/lib/libwrapper-solaris-sparc-32.so" afterPath="Z:/elasticsearch-rtf/bin/service/lib/libwrapper-solaris-sparc-32.so" />
+      <change type="MODIFICATION" beforePath="Z:/elasticsearch-1.2.1/bin/service/lib/libwrapper-solaris-sparc-64.so" afterPath="Z:/elasticsearch-1.2.1/bin/service/lib/libwrapper-solaris-sparc-64.so" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/bin/service/lib/libwrapper-solaris-sparc-64.so" afterPath="Z:/elasticsearch-rtf/bin/service/lib/libwrapper-solaris-sparc-64.so" />
+      <change type="MODIFICATION" beforePath="Z:/elasticsearch-1.2.1/bin/service/lib/libwrapper-solaris-x86-32.so" afterPath="Z:/elasticsearch-1.2.1/bin/service/lib/libwrapper-solaris-x86-32.so" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/bin/service/lib/libwrapper-solaris-x86-32.so" afterPath="Z:/elasticsearch-rtf/bin/service/lib/libwrapper-solaris-x86-32.so" />
+      <change type="MODIFICATION" beforePath="Z:/elasticsearch-1.2.1/bin/service/lib/libwrapper-solaris-x86-64.so" afterPath="Z:/elasticsearch-1.2.1/bin/service/lib/libwrapper-solaris-x86-64.so" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/bin/service/lib/libwrapper-solaris-x86-64.so" afterPath="Z:/elasticsearch-rtf/bin/service/lib/libwrapper-solaris-x86-64.so" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/lib/log4j-1.2.17.jar" afterPath="Z:/elasticsearch-rtf/lib/log4j-1.2.17.jar" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/lib/lucene-analyzers-common-4.6.1.jar" afterPath="Z:/elasticsearch-rtf/lib/lucene-analyzers-common-4.6.1.jar" />
@@ -74,13 +119,14 @@
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/config/ik/custom/single_word_low_freq.dic" afterPath="Z:/elasticsearch-rtf/config/ik/custom/single_word_low_freq.dic" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/config/ik/custom/sougou.dic" afterPath="Z:/elasticsearch-rtf/config/ik/custom/sougou.dic" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/lib/spatial4j-0.3.jar" afterPath="Z:/elasticsearch-rtf/lib/spatial4j-0.3.jar" />
+      <change type="MODIFICATION" beforePath="Z:/elasticsearch-1.2.1/bin/service/lib/wrapper-windows-x86-32.dll" afterPath="Z:/elasticsearch-1.2.1/bin/service/lib/wrapper-windows-x86-32.dll" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/bin/service/lib/wrapper-windows-x86-32.dll" afterPath="Z:/elasticsearch-rtf/bin/service/lib/wrapper-windows-x86-32.dll" />
+      <change type="MODIFICATION" beforePath="Z:/elasticsearch-1.2.1/bin/service/lib/wrapper-windows-x86-64.dll" afterPath="Z:/elasticsearch-1.2.1/bin/service/lib/wrapper-windows-x86-64.dll" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/bin/service/lib/wrapper-windows-x86-64.dll" afterPath="Z:/elasticsearch-rtf/bin/service/lib/wrapper-windows-x86-64.dll" />
+      <change type="MODIFICATION" beforePath="Z:/elasticsearch-1.2.1/bin/service/lib/wrapper.jar" afterPath="Z:/elasticsearch-1.2.1/bin/service/lib/wrapper.jar" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/bin/service/lib/wrapper.jar" afterPath="Z:/elasticsearch-rtf/bin/service/lib/wrapper.jar" />
-      <change type="MODIFICATION" beforePath="Z:/db/migrate/20140622093139_create_account_resume_objects.rb" afterPath="Z:/db/migrate/20140622093139_create_account_resume_objects.rb" />
-      <change type="MODIFICATION" beforePath="Z:/db/migrate/20140622094555_create_account_resume_educations.rb" afterPath="Z:/db/migrate/20140622094555_create_account_resume_educations.rb" />
-      <change type="MODIFICATION" beforePath="Z:/db/migrate/20140622094706_create_account_resume_radars.rb" afterPath="Z:/db/migrate/20140622094706_create_account_resume_radars.rb" />
-      <change type="MODIFICATION" beforePath="Z:/db/migrate/20140622102309_add_address_and_marital_status_to_account_resumes.rb" afterPath="Z:/db/migrate/20140622102309_add_address_and_marital_status_to_account_resumes.rb" />
+      <change type="MODIFICATION" beforePath="Z:/db/migrate/20140623064610_change_description_column_len.rb" afterPath="Z:/db/migrate/20140623064610_change_description_column_len.rb" />
+      <change type="MODIFICATION" beforePath="Z:/db/migrate/20140624132321_create_workflows.rb" afterPath="Z:/db/migrate/20140624132321_create_workflows.rb" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/config/ik/IKAnalyzer.cfg.xml" afterPath="Z:/elasticsearch-rtf/config/ik/IKAnalyzer.cfg.xml" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/LICENSE.txt" afterPath="Z:/elasticsearch-rtf/LICENSE.txt" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/NOTICE.txt" afterPath="Z:/elasticsearch-rtf/NOTICE.txt" />
@@ -92,40 +138,49 @@
       <change type="MODIFICATION" beforePath="Z:/app/views/kaminari/_paginator.html.erb" afterPath="Z:/app/views/kaminari/_paginator.html.erb" />
       <change type="MODIFICATION" beforePath="Z:/app/views/kaminari/_prev_page.html.erb" afterPath="Z:/app/views/kaminari/_prev_page.html.erb" />
       <change type="MODIFICATION" beforePath="Z:/app/views/layouts/_top_nav.html.erb" afterPath="Z:/app/views/layouts/_top_nav.html.erb" />
-      <change type="MODIFICATION" beforePath="Z:/app/models/account_resume.rb" afterPath="Z:/app/models/account_resume.rb" />
-      <change type="MODIFICATION" beforePath="Z:/app/helpers/application_helper.rb" afterPath="Z:/app/helpers/application_helper.rb" />
+      <change type="MODIFICATION" beforePath="Z:/app/models/account_resume_education.rb" afterPath="Z:/app/models/account_resume_education.rb" />
+      <change type="MODIFICATION" beforePath="Z:/app/models/account_resume_experience.rb" afterPath="Z:/app/models/account_resume_experience.rb" />
+      <change type="MODIFICATION" beforePath="Z:/app/models/account_resume_object.rb" afterPath="Z:/app/models/account_resume_object.rb" />
+      <change type="MODIFICATION" beforePath="Z:/app/views/layouts/application.html.erb" afterPath="Z:/app/views/layouts/application.html.erb" />
+      <change type="MODIFICATION" beforePath="Z:/elasticsearch-1.2.1/plugins/rtf/_site/assets/css/bootstrap.css" afterPath="Z:/elasticsearch-1.2.1/plugins/rtf/_site/assets/css/bootstrap.css" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/plugins/rtf/_site/assets/css/bootstrap.css" afterPath="Z:/elasticsearch-rtf/plugins/rtf/_site/assets/css/bootstrap.css" />
+      <change type="MODIFICATION" beforePath="Z:/elasticsearch-1.2.1/plugins/rtf/_site/assets/js/bootstrap.js" afterPath="Z:/elasticsearch-1.2.1/plugins/rtf/_site/assets/js/bootstrap.js" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/plugins/rtf/_site/assets/js/bootstrap.js" afterPath="Z:/elasticsearch-rtf/plugins/rtf/_site/assets/js/bootstrap.js" />
+      <change type="MODIFICATION" beforePath="Z:/elasticsearch-1.2.1/plugins/rtf/_site/assets/css/bootstrap.min.css" afterPath="Z:/elasticsearch-1.2.1/plugins/rtf/_site/assets/css/bootstrap.min.css" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/plugins/rtf/_site/assets/css/bootstrap.min.css" afterPath="Z:/elasticsearch-rtf/plugins/rtf/_site/assets/css/bootstrap.min.css" />
+      <change type="MODIFICATION" beforePath="Z:/elasticsearch-1.2.1/plugins/rtf/_site/assets/js/bootstrap.min.js" afterPath="Z:/elasticsearch-1.2.1/plugins/rtf/_site/assets/js/bootstrap.min.js" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/plugins/rtf/_site/assets/js/bootstrap.min.js" afterPath="Z:/elasticsearch-rtf/plugins/rtf/_site/assets/js/bootstrap.min.js" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/config/mmseg/chars.dic" afterPath="Z:/elasticsearch-rtf/config/mmseg/chars.dic" />
+      <change type="MODIFICATION" beforePath="Z:/app/models/company.rb" afterPath="Z:/app/models/company.rb" />
+      <change type="MODIFICATION" beforePath="Z:/elasticsearch-1.2.1/bin/service/elasticsearch.bat" afterPath="Z:/elasticsearch-1.2.1/bin/service/elasticsearch.bat" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/bin/elasticsearch.bat" afterPath="Z:/elasticsearch-rtf/bin/elasticsearch.bat" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/bin/service/elasticsearch.bat" afterPath="Z:/elasticsearch-rtf/bin/service/elasticsearch.bat" />
+      <change type="MODIFICATION" beforePath="Z:/elasticsearch-1.2.1/bin/service/elasticsearch.conf" afterPath="Z:/elasticsearch-1.2.1/bin/service/elasticsearch.conf" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/bin/service/elasticsearch.conf" afterPath="Z:/elasticsearch-rtf/bin/service/elasticsearch.conf" />
+      <change type="MODIFICATION" beforePath="Z:/elasticsearch-1.2.1/bin/elasticsearch.in.sh" afterPath="Z:/elasticsearch-1.2.1/bin/elasticsearch.in.sh" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/bin/elasticsearch.in.sh" afterPath="Z:/elasticsearch-rtf/bin/elasticsearch.in.sh" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/config/elasticsearch.yml" afterPath="Z:/elasticsearch-rtf/config/elasticsearch.yml" />
+      <change type="MODIFICATION" beforePath="Z:/elasticsearch-1.2.1/bin/service/elasticsearch32" afterPath="Z:/elasticsearch-1.2.1/bin/service/elasticsearch32" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/bin/service/elasticsearch32" afterPath="Z:/elasticsearch-rtf/bin/service/elasticsearch32" />
+      <change type="MODIFICATION" beforePath="Z:/elasticsearch-1.2.1/bin/service/elasticsearch64" afterPath="Z:/elasticsearch-1.2.1/bin/service/elasticsearch64" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/bin/service/elasticsearch64" afterPath="Z:/elasticsearch-rtf/bin/service/elasticsearch64" />
+      <change type="MODIFICATION" beforePath="Z:/elasticsearch-1.2.1/bin/elasticsearch" afterPath="Z:/elasticsearch-1.2.1/bin/elasticsearch" />
+      <change type="MODIFICATION" beforePath="Z:/elasticsearch-1.2.1/bin/service/elasticsearch" afterPath="Z:/elasticsearch-1.2.1/bin/service/elasticsearch" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/bin/elasticsearch" afterPath="Z:/elasticsearch-rtf/bin/elasticsearch" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/bin/service/elasticsearch" afterPath="Z:/elasticsearch-rtf/bin/service/elasticsearch" />
-      <change type="MODIFICATION" beforePath="Z:/config/environment.rb" afterPath="Z:/config/environment.rb" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/config/ik/custom/ext_stopword.dic" afterPath="Z:/elasticsearch-rtf/config/ik/custom/ext_stopword.dic" />
+      <change type="MODIFICATION" beforePath="Z:/elasticsearch-1.2.1/plugins/rtf/_site/assets/fonts/glyphicons-halflings-regular.svg" afterPath="Z:/elasticsearch-1.2.1/plugins/rtf/_site/assets/fonts/glyphicons-halflings-regular.svg" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/plugins/rtf/_site/assets/fonts/glyphicons-halflings-regular.svg" afterPath="Z:/elasticsearch-rtf/plugins/rtf/_site/assets/fonts/glyphicons-halflings-regular.svg" />
-      <change type="MODIFICATION" beforePath="Z:/app/views/accounts/resumes/index.html.erb" afterPath="Z:/app/views/accounts/resumes/index.html.erb" />
       <change type="MODIFICATION" beforePath="Z:/public/鸟窝html/javascripts/index.js" afterPath="Z:/public/鸟窝html/javascripts/index.js" />
-      <change type="MODIFICATION" beforePath="Z:/public/鸟窝html/javascripts/jquery-ui-1.10.4.min.js" afterPath="Z:/public/鸟窝html/javascripts/jquery-ui-1.10.4.min.js" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/config/logging.yml" afterPath="Z:/elasticsearch-rtf/config/logging.yml" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/config/ik/main.dic" afterPath="Z:/elasticsearch-rtf/config/ik/main.dic" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/config/ik/custom/mydict.dic" afterPath="Z:/elasticsearch-rtf/config/ik/custom/mydict.dic" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/bin/plugin.bat" afterPath="Z:/elasticsearch-rtf/bin/plugin.bat" />
+      <change type="MODIFICATION" beforePath="Z:/elasticsearch-1.2.1/bin/plugin" afterPath="Z:/elasticsearch-1.2.1/bin/plugin" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/bin/plugin" afterPath="Z:/elasticsearch-rtf/bin/plugin" />
-      <change type="MODIFICATION" beforePath="Z:/app/models/post.rb" afterPath="Z:/app/models/post.rb" />
-      <change type="MODIFICATION" beforePath="Z:/app/controllers/posts_controller.rb" afterPath="Z:/app/controllers/posts_controller.rb" />
-      <change type="MODIFICATION" beforePath="Z:/app/controllers/accounts/posts_controller.rb" afterPath="Z:/app/controllers/accounts/posts_controller.rb" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/config/ik/preposition.dic" afterPath="Z:/elasticsearch-rtf/config/ik/preposition.dic" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/config/ik/quantifier.dic" afterPath="Z:/elasticsearch-rtf/config/ik/quantifier.dic" />
-      <change type="MODIFICATION" beforePath="Z:/app/controllers/accounts/resume_experiences_controller.rb" afterPath="Z:/app/controllers/accounts/resume_experiences_controller.rb" />
-      <change type="MODIFICATION" beforePath="Z:/app/controllers/accounts/resumes_controller.rb" afterPath="Z:/app/controllers/accounts/resumes_controller.rb" />
+      <change type="MODIFICATION" beforePath="Z:/public/鸟窝html/stylesheets/release_job.css" afterPath="Z:/public/鸟窝html/stylesheets/release_job.css" />
       <change type="MODIFICATION" beforePath="Z:/config/routes.rb" afterPath="Z:/config/routes.rb" />
       <change type="MODIFICATION" beforePath="Z:/db/schema.rb" afterPath="Z:/db/schema.rb" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/config/ik/stopword.dic" afterPath="Z:/elasticsearch-rtf/config/ik/stopword.dic" />
@@ -136,7 +191,11 @@
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/config/mmseg/units.dic" afterPath="Z:/elasticsearch-rtf/config/mmseg/units.dic" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/config/mmseg/words-my.dic" afterPath="Z:/elasticsearch-rtf/config/mmseg/words-my.dic" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/config/mmseg/words.dic" afterPath="Z:/elasticsearch-rtf/config/mmseg/words.dic" />
+      <change type="MODIFICATION" beforePath="Z:/app/models/workflow.rb" afterPath="Z:/app/models/workflow.rb" />
+      <change type="MODIFICATION" beforePath="Z:/app/models/workflow_apply.rb" afterPath="Z:/app/models/workflow_apply.rb" />
+      <change type="MODIFICATION" beforePath="Z:/app/models/workflow_invite.rb" afterPath="Z:/app/models/workflow_invite.rb" />
       <change type="MODIFICATION" beforePath="Z:/.idea/workspace.xml" afterPath="Z:/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="Z:/public/鸟窝html/应聘方/完善简历.html" afterPath="Z:/public/鸟窝html/应聘方/完善简历.html" />
     </list>
     <ignored path=".iws" />
     <ignored path=".idea/workspace.xml" />
@@ -164,54 +223,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://Z:/public/鸟窝html/javascripts/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="865" column="40" selection-start="31115" selection-end="31115" vertical-scroll-proportion="-5.716981" vertical-offset="16132" max-vertical-offset="18259">
-              <folding>
-                <marker date="1403616336000" expanded="false" signature="10157:10229" placeholder="..." />
-                <marker date="1403616336000" expanded="false" signature="15516:15529" placeholder="..." />
-                <marker date="1403616336000" expanded="false" signature="18922:19006" placeholder="..." />
-                <marker date="1403616336000" expanded="false" signature="22150:22220" placeholder="..." />
-                <marker date="1403616336000" expanded="false" signature="22267:22294" placeholder="..." />
-                <marker date="1403616336000" expanded="false" signature="22369:22384" placeholder="..." />
-                <marker date="1403616336000" expanded="false" signature="22440:22603" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="application.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://Z:/app/views/layouts/application.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="92" column="7" selection-start="3910" selection-end="3910" vertical-scroll-proportion="0.0" vertical-offset="1135" max-vertical-offset="1862">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ui_common.css" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://Z:/public/鸟窝html/stylesheets/ui_common.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="143" column="36" selection-start="8189" selection-end="8189" vertical-scroll-proportion="0.83161" vertical-offset="2154" max-vertical-offset="2850">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="完善简历.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://Z:/public/鸟窝html/应聘方/完善简历.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="96" column="38" selection-start="3609" selection-end="3609" vertical-scroll-proportion="-12.428572" vertical-offset="1476" max-vertical-offset="7828">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://Z:/app/views/accounts/resumes/index.html.erb">
+        <entry file="file://Z:/app/views/worker/resumes/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="294" column="58" selection-start="16571" selection-end="16581" vertical-scroll-proportion="-8.54902" vertical-offset="5150" max-vertical-offset="5776">
+            <state line="175" column="18" selection-start="11051" selection-end="11051" vertical-scroll-proportion="-11.769231" vertical-offset="3019" max-vertical-offset="6536">
               <folding />
             </state>
           </provider>
@@ -220,10 +235,45 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="index.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://Z:/public/鸟窝html/javascripts/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1013" column="33" selection-start="38050" selection-end="38050" vertical-scroll-proportion="0.2437107" vertical-offset="19092" max-vertical-offset="22971">
+              <folding>
+                <marker date="1403787305000" expanded="false" signature="10503:10575" placeholder="..." />
+                <marker date="1403787305000" expanded="false" signature="15862:15875" placeholder="..." />
+                <marker date="1403787305000" expanded="false" signature="19268:19352" placeholder="..." />
+                <marker date="1403787305000" expanded="false" signature="22496:22566" placeholder="..." />
+                <marker date="1403787305000" expanded="false" signature="22613:22640" placeholder="..." />
+                <marker date="1403787305000" expanded="false" signature="22715:22730" placeholder="..." />
+                <marker date="1403787305000" expanded="false" signature="22786:22949" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ui_common.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://Z:/public/鸟窝html/stylesheets/ui_common.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="127" column="30" selection-start="6997" selection-end="6997" vertical-scroll-proportion="0.0" vertical-offset="2413" max-vertical-offset="2888">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="完善简历.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://Z:/public/鸟窝html/应聘方/完善简历.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="406" column="0" selection-start="14232" selection-end="15721" vertical-scroll-proportion="0.0" vertical-offset="7714" max-vertical-offset="8550">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="注册.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://Z:/public/鸟窝html/注册.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="139" column="116" selection-start="5704" selection-end="5716" vertical-scroll-proportion="-8.821428" vertical-offset="2394" max-vertical-offset="5092">
+            <state line="97" column="51" selection-start="3954" selection-end="3954" vertical-scroll-proportion="0.0" vertical-offset="1596" max-vertical-offset="5092">
               <folding />
             </state>
           </provider>
@@ -247,31 +297,31 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="Z:/app/views/index/index.html.erb" />
-        <option value="Z:/public/鸟窝html/stylesheets/interviewline.css" />
         <option value="Z:/public/鸟窝html/面试导航轴.html" />
         <option value="Z:/app/views/accounts/companies/new.html.erb" />
-        <option value="Z:/app/views/layouts/application.html.erb" />
         <option value="Z:/public/鸟窝html/stylesheets/interview.css" />
         <option value="Z:/app/views/hr/index.html.erb" />
-        <option value="Z:/public/鸟窝html/应聘方/完善简历.html" />
         <option value="Z:/public/鸟窝html/javascripts/getcity.js" />
         <option value="Z:/public/鸟窝html/招聘方/公司主页.html" />
         <option value="Z:/app/views/layouts/_top_nav.html.erb" />
         <option value="Z:/app/views/layouts/_right.html.erb" />
         <option value="Z:/public/鸟窝html/javascripts/jquery-ui-1.10.4.min.js" />
         <option value="Z:/app/views/accounts/resumes/index.html.erb" />
-        <option value="Z:/public/鸟窝html/javascripts/index.js" />
+        <option value="Z:/app/views/layouts/application.html.erb" />
+        <option value="Z:/public/鸟窝html/stylesheets/release_job.css" />
+        <option value="Z:/public/鸟窝html/应聘方/完善简历.html" />
         <option value="Z:/public/鸟窝html/stylesheets/ui_common.css" />
+        <option value="Z:/app/views/worker/resumes/index.html.erb" />
+        <option value="Z:/public/鸟窝html/javascripts/index.js" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-17" />
-    <option name="y" value="28" />
+    <option name="x" value="-118" />
+    <option name="y" value="58" />
     <option name="width" value="1456" />
-    <option name="height" value="876" />
+    <option name="height" value="860" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -455,6 +505,54 @@
               <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="worker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resumes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Z" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Z:" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="worker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Z" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Z:" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -601,32 +699,6 @@
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="accounts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resumes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Z" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Z:" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
@@ -663,15 +735,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-17" y="28" width="1456" height="876" extended-state="1" />
-    <editor active="true" />
+    <frame x="-118" y="58" width="1456" height="860" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998565" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2790531" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19870876" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -698,14 +770,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://Z:/app/views/hr/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="48" selection-start="1945" selection-end="1945" vertical-scroll-proportion="0.0" vertical-offset="517" max-vertical-offset="1463" />
-      </provider>
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://Z:/public/鸟窝html/javascripts/chosen/chosen.jquery.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="525" column="4" selection-start="17753" selection-end="17753" vertical-scroll-proportion="0.33233082" vertical-offset="9564" max-vertical-offset="22933" />
@@ -718,11 +782,7 @@
     </entry>
     <entry file="file://Z:/public/鸟窝html/招聘方/公司主页.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="30" selection-start="2744" selection-end="2744" vertical-scroll-proportion="-10.0" vertical-offset="1202" max-vertical-offset="5396">
-          <folding>
-            <element signature="n#style#0;n#select#0;n#div#3;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
+        <state line="78" column="30" selection-start="2744" selection-end="2744" vertical-scroll-proportion="-10.0" vertical-offset="1202" max-vertical-offset="5396" />
       </provider>
     </entry>
     <entry file="file://Z:/app/views/index/index.html.erb">
@@ -771,23 +831,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://Z:/app/views/layouts/application.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="7" selection-start="1703" selection-end="1703" vertical-scroll-proportion="0.19" vertical-offset="323" max-vertical-offset="1862" />
+      </provider>
+    </entry>
+    <entry file="file://Z:/public/鸟窝html/stylesheets/release_job.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="52" selection-start="1019" selection-end="1019" vertical-scroll-proportion="0.30289856" vertical-offset="0" max-vertical-offset="969" />
+      </provider>
+    </entry>
+    <entry file="file://Z:/public/鸟窝html/stylesheets/ui_common.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="127" column="30" selection-start="6997" selection-end="6997" vertical-scroll-proportion="0.0" vertical-offset="2211" max-vertical-offset="2888">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://Z:/public/鸟窝html/应聘方/完善简历.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="96" column="38" selection-start="3609" selection-end="3609" vertical-scroll-proportion="-12.428572" vertical-offset="1476" max-vertical-offset="7828">
+        <state line="406" column="0" selection-start="14232" selection-end="15721" vertical-scroll-proportion="0.0" vertical-offset="7714" max-vertical-offset="8550">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://Z:/public/鸟窝html/注册.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="139" column="116" selection-start="5704" selection-end="5716" vertical-scroll-proportion="-8.821428" vertical-offset="2394" max-vertical-offset="5092">
+        <state line="97" column="51" selection-start="3954" selection-end="3954" vertical-scroll-proportion="0.0" vertical-offset="1596" max-vertical-offset="5092">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://Z:/app/views/accounts/resumes/index.html.erb">
+    <entry file="file://Z:/app/views/worker/resumes/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="294" column="58" selection-start="16571" selection-end="16581" vertical-scroll-proportion="-8.54902" vertical-offset="5150" max-vertical-offset="5776">
+        <state line="175" column="18" selection-start="11051" selection-end="11051" vertical-scroll-proportion="-11.769231" vertical-offset="3019" max-vertical-offset="6536">
           <folding />
         </state>
       </provider>
@@ -795,32 +872,18 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://Z:/app/views/layouts/application.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="92" column="7" selection-start="3910" selection-end="3910" vertical-scroll-proportion="0.0" vertical-offset="1135" max-vertical-offset="1862">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://Z:/public/鸟窝html/javascripts/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="865" column="40" selection-start="31115" selection-end="31115" vertical-scroll-proportion="-5.716981" vertical-offset="16132" max-vertical-offset="18259">
+        <state line="1013" column="33" selection-start="38050" selection-end="38050" vertical-scroll-proportion="0.2437107" vertical-offset="19092" max-vertical-offset="22971">
           <folding>
-            <marker date="1403616336000" expanded="false" signature="10157:10229" placeholder="..." />
-            <marker date="1403616336000" expanded="false" signature="15516:15529" placeholder="..." />
-            <marker date="1403616336000" expanded="false" signature="18922:19006" placeholder="..." />
-            <marker date="1403616336000" expanded="false" signature="22150:22220" placeholder="..." />
-            <marker date="1403616336000" expanded="false" signature="22267:22294" placeholder="..." />
-            <marker date="1403616336000" expanded="false" signature="22369:22384" placeholder="..." />
-            <marker date="1403616336000" expanded="false" signature="22440:22603" placeholder="..." />
+            <marker date="1403787305000" expanded="false" signature="10503:10575" placeholder="..." />
+            <marker date="1403787305000" expanded="false" signature="15862:15875" placeholder="..." />
+            <marker date="1403787305000" expanded="false" signature="19268:19352" placeholder="..." />
+            <marker date="1403787305000" expanded="false" signature="22496:22566" placeholder="..." />
+            <marker date="1403787305000" expanded="false" signature="22613:22640" placeholder="..." />
+            <marker date="1403787305000" expanded="false" signature="22715:22730" placeholder="..." />
+            <marker date="1403787305000" expanded="false" signature="22786:22949" placeholder="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://Z:/public/鸟窝html/stylesheets/ui_common.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="143" column="36" selection-start="8189" selection-end="8189" vertical-scroll-proportion="0.83161" vertical-offset="2154" max-vertical-offset="2850">
-          <folding />
         </state>
       </provider>
     </entry>

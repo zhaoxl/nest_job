@@ -1,4 +1,4 @@
-class HrController < ApplicationController
+class Hr::IndexController < ApplicationController
   before_action :authenticate_account!
   
   def index

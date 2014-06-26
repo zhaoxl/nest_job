@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140623073813) do
+ActiveRecord::Schema.define(version: 20140626111327) do
 
   create_table "account_post_applies", force: true do |t|
     t.integer  "account_id"
@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 20140623073813) do
     t.string  "major"
     t.date    "start_date"
     t.date    "end_date"
+    t.integer "account_id"
   end
 
   create_table "account_resume_experiences", force: true do |t|
@@ -43,6 +44,7 @@ ActiveRecord::Schema.define(version: 20140623073813) do
     t.datetime "updated_at"
     t.integer  "account_resume_id"
     t.integer  "salary"
+    t.integer  "account_id"
   end
 
   create_table "account_resume_objects", force: true do |t|
@@ -52,6 +54,7 @@ ActiveRecord::Schema.define(version: 20140623073813) do
     t.string  "role_desc",         limit: 2000
     t.date    "start_date"
     t.date    "end_date"
+    t.integer "account_id"
   end
 
   create_table "account_resume_radars", force: true do |t|
@@ -155,6 +158,20 @@ ActiveRecord::Schema.define(version: 20140623073813) do
     t.string "province_name"
   end
 
+  create_table "auditions", force: true do |t|
+    t.integer  "workflow_id"
+    t.string   "status"
+    t.integer  "worker_account_id"
+    t.integer  "hr_account_id"
+    t.integer  "post_id"
+    t.integer  "company_id"
+    t.integer  "price"
+    t.string   "message",           limit: 2000
+    t.string   "reply",             limit: 2000
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "bills", force: true do |t|
     t.integer  "account_id"
     t.integer  "from_account_id"
@@ -242,6 +259,21 @@ ActiveRecord::Schema.define(version: 20140623073813) do
     t.string "name"
   end
 
+  create_table "messages", force: true do |t|
+    t.integer  "sender_account_id"
+    t.integer  "receiver_account_id"
+    t.string   "item_type"
+    t.integer  "item_id"
+    t.string   "title",               limit: 200
+    t.string   "description",         limit: 2000
+    t.text     "content"
+    t.datetime "expire_at"
+    t.string   "status"
+    t.integer  "message_level"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "post_tags", force: true do |t|
     t.integer "post_id"
     t.integer "tag_id"
@@ -310,6 +342,20 @@ ActiveRecord::Schema.define(version: 20140623073813) do
     t.string   "status"
     t.integer  "price"
     t.datetime "deleted_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "workflows", force: true do |t|
+    t.integer  "worker_account_id"
+    t.integer  "hr_account_id"
+    t.integer  "post_id"
+    t.integer  "company_id"
+    t.string   "status"
+    t.string   "work_class_name"
+    t.integer  "price"
+    t.string   "message",           limit: 2000
+    t.string   "reply",             limit: 2000
     t.datetime "created_at"
     t.datetime "updated_at"
   end

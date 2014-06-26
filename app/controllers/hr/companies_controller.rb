@@ -1,4 +1,4 @@
-class Accounts::CompaniesController < ApplicationController
+class Hr::CompaniesController < ApplicationController
   before_action :authenticate_account!
   
   def new

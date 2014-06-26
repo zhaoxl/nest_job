@@ -11,7 +11,7 @@
 		<!-- <div class="mm"> -->
 			<h2 class="h2Title">发布职位 | <a href="#">今天发布了2个职位</a></h2>
 			<div class="form">
-				<%= form_for @post, url: accounts_posts_path, method: :post do |f|%>
+				<%= form_for @post, url: hr_posts_path, method: :post do |f|%>
         <%if flash[:error]%>
         <span style="color: red">错误信息:<%= flash[:error]%></span>
         <%end%>

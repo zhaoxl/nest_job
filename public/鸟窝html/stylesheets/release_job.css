@@ -8,8 +8,8 @@
 .main .form .frm span.fImg{width:80px;padding-top:0;}
 .main .form .frm span.fImg img{width:80px;height:80px;}
 .main .form .frm .file a{position:absolute;bottom:0;left:0;width:100%;background:#000;color:#fff;text-align:center;}
-.main .jobBtns{margin-left:237px;margin-bottom:20px;}
-.main .jobBtns .btn{width:135px;height:30px;line-height:30px;font-size:14px;border-bottom:2px solid #1b7a6d;font-family: '微软雅黑';}
+.main .jobBtns,.mainpop .jobBtns{margin-left:237px;margin-bottom:20px;}
+.main .jobBtns .btn,.mainpop .jobBtns .btn{width:135px;height:30px;line-height:30px;font-size:14px;border-bottom:2px solid #1b7a6d;font-family: '微软雅黑';}
 #myEditor{position: relative;left: 130px;+left:131px;clear: both;top:-25px;+top:0px}/*编辑器*/
 .jobMore{position: relative;float: right !important;top:-150px}
 

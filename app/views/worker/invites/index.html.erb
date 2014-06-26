@@ -1,0 +1,45 @@
+<%content_for :head_include do%>
+	<link rel="stylesheet" href="/鸟窝html/stylesheets/interview.css" />
+
+<%end%>
+<div class="mainContainer">
+	<div class="main">
+		<h2 class="h2Title">HR面试消息</h2>
+		<div class="interview">
+			<ul class="interviewList">
+				<%@items.each do |item|%>
+        <%hr = item.hr%>
+        <%company = item.company%>
+        <%post = item.post%>
+				<li>
+					<div class="interviewRequire">
+						<div class="hrInfo">
+							<div class="hrImg"><a href="#"><img src="../images/user_demo.jpg" alt=""></a></div>
+							<div class="hrIf">
+								<p><span>公司：<%= company.try(:name)%></span></p>
+								<p><span>地点：<%= post.try(:address)%></span><span>薪资：￥<%= post.try(:price_min)%>k ~ <%= post.try(:price_max)%>k</span></p>
+							</div>
+						</div>
+						<div class="myNeed">
+							<p><span>邀约金：</span><span>￥<%= item.price%></span></p>
+							<p><span>密语：</span><span><%= item.message%></span></p>
+						</div>
+					</div>
+					<div class="interviewOption">
+						<div class="interviewStatus">
+							<p></p>
+							<p></p>
+							<p></p>
+						</div>
+						<div class="interviewBtns">
+							<a href="<%= worker_auditions_path(id: item.id)%>" class="btnR">接受面试邀请</a><a href="#" class="btnR">拒绝面试邀请</a>
+							<a href="#" class="btnR">分享职位</a>
+						</div>
+					</div>
+				</li>
+				<%end%>
+			</ul>
+		</div>
+	</div>
+	<%= render partial: "/layouts/right"%>
+</div>
