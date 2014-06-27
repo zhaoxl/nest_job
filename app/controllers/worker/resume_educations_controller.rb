@@ -4,8 +4,8 @@ class Worker::ResumeEducationsController < ApplicationController
   
   def ajax_save
     begin
-      object = AccountResumeEducation.find_or_create_by(id: params[:id], account_resume_id: params[:account_resume_education][:account_resume_id], account_id: current_account.id)
-      unless object.update_attributes(experience_create_params)
+      object = AccountResumeEducation.find_or_create_by(id: params[:id], account_id: current_account.id)
+      unless object.update_attributes(education_create_params)
         raise AjaxException.new(object.errors.messages.inject({}){|hash, item| hash[item[0]] = item[1]*','; hash})
       end
 

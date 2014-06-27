@@ -138,7 +138,7 @@
     				<p><span class="itemNm">薪资：</span><%= experience.salary%></p>
     				<p><span class="itemNm">工作描述：</span><%= experience.description%></p>
     				<div class="jobBtns">
-    					<a href="javascript:void(0)" data-moneyjob='<%= experience.salary%>' data-startime='<%= strftime(experience.start_time, "%Y-%m-%d")%>' data-endime='<%= strftime(experience.end_time, "%Y-%m-%d")%>' data-company_name='<%= experience.company_name%>' data-post='<%= experience.post%>' data-description='<%= experience.description%>' data-id="<%= experience.id%>" class="btnR editJobhistory">编&nbsp;辑</a><a href="javascript:void(0)" class="btnR delJobhistory" data-id="<%= experience.id%>">删&nbsp;除</a>
+    					<a href="javascript:void(0)" data-moneyjob='<%= experience.salary%>' data-startime='<%= strftime(experience.start_time, "%Y-%m-%d")%>' data-endime='<%= strftime(experience.end_time, "%Y-%m-%d")%>' data-company_name='<%= experience.company_name%>' data-post='<%= experience.post%>' data-description='<%= experience.description%>' data-id="<%= experience.id%>" class="btnR editJobhistory" data-id="<%= experience.id%>">编&nbsp;辑</a><a href="javascript:void(0)" class="btnR delJobhistory" data-id="<%= experience.id%>">删&nbsp;除</a>
     				</div>
   			</div>
         <%end%>
@@ -184,11 +184,11 @@
             <span class="itemNm">项目时间：  </span> 
             <%= strftime(object.start_date, "%Y年%m月")%>到<%= strftime(object.end_date, "%Y年%m月")%>
           </p>
-  				<p><span class="itemNm">工作名称：  </span><%= object.name%></p>
+  				<p><span class="itemNm">项目名称：  </span><%= object.name%></p>
   				<p><span class="itemNm">项目描述：</span><%= object.project_desc%></p>
   				<p><span class="itemNm">责任描述：</span><%= object.role_desc%></p>
   				<div class="jobBtns">
-  					<a href="#" class="btnR">编&nbsp;辑</a><a href="#" class="btnR">删&nbsp;除</a>
+  					<a href="javascript:void(0)" class="btnR editProjecthistory" data-startime="<%= strftime(object.start_date, "%Y-%m-%d")%>" data-endime="<%= strftime(object.end_date, "%Y-%m-%d")%>" data-projectName="<%= object.name%>" data-project_desc="<%= object.project_desc%>" data-role_desc="<%= object.role_desc%>" data-id="<%= object.id%>">编&nbsp;辑</a><a href="javascript:void(0)" class="btnR delProjecthistory" data-id="<%= object.id%>">删&nbsp;除</a>
   				</div>
   			</div>
         <%end%>
@@ -201,7 +201,7 @@
   				<div class="frm">
   					<span class="">学       历：</span>
                 <select id="Degree" name="Degree">
-                    <option value="1">初中</option><option value="2">高中</option><option value="3">中技</option><option value="4">中专</option><option value="5" selected="">大专</option><option value="6" selected='selected'>本科</option><option value="-1">MBA</option><option value="7">硕士</option><option value="8">博士</option><option value="9">其他</option>
+                    <option value="初中">初中</option><option value="高中">高中</option><option value="中技">中技</option><option value="中专">中专</option><option value="大专" selected="">大专</option><option value="本科" selected='selected'>本科</option><option value="MBA">MBA</option><option value="硕士">硕士</option><option value="博士">博士</option><option value="其他">其他</option>
                 </select>
   					<span class="error">*请填写学历</span>
   				</div>
@@ -227,7 +227,7 @@
   				</div>
   			</div>
   			<div class="jobBtns">
-          <%= f.submit raw("添&nbsp;加"), class: "btn"%>
+                <input class="btn" name="commit" type="button" id="addAccount" value="添&nbsp;加">
   			</div>
         <%end%>
         <% @educations.each do |education|%>
@@ -240,7 +240,7 @@
   				<p><span class="itemNm">学&nbsp;历： </span><%= education.name%></p>
   				<p><span class="itemNm">专&nbsp;业： </span><%= education.major%></p>
   				<div class="jobBtns">
-  					<a href="#" class="btnR">编&nbsp;辑</a><a href="#" class="btnR">删&nbsp;除</a>
+  					<a href="javascript:void(0)" class="btnR" data-id="<%= education.id%>">编&nbsp;辑</a><a href="javascript:void(0)" class="btnR deleducationhistory" data-id="<%= education.id%>">删&nbsp;除</a>
   				</div>
   			</div>
         <%end%>
@@ -335,4 +335,36 @@
             <button class="btn" name="button" type="button" id="editjobhistory">确&nbsp;认</button>
         </div>
     </div>
+        <div class="mainpop" style="display: none" id="editProjectpop">
+            <div class="form">
+                <div class="frm">
+                    <span class="">项目名称：</span>
+                    <input class="verification" data-em="notnull" data-nohide="1" data-type="notnull" error-id="errormyprojectnameedit" id="myprojectnameedit" name="account_resume_object[name]" style="border: 1px solid rgb(160, 160, 160);" type="text">
+                    <span class="error notnull" id="errormyprojectnameedit">*请填写项目姓名</span>
+                </div>
+                <div class="frm">
+                    <span class="">项目描述：</span>
+                    <textarea class="verification" data-em="notnull" data-nohide="1" data-type="notnull" error-id="errorproject_descedit" id="project_descedit" name="account_resume_object[project_desc]" style="border: 1px solid rgb(160, 160, 160);"></textarea>
+                    <span class="error" id="errorproject_descedit">*请填写项目描述</span>
+                </div>
+                <div class="frm">
+                    <span class="">责任描述：</span>
+                    <textarea class="verification" data-em="notnull" data-nohide="1" data-type="notnull" error-id="errorrole_descedit" id="role_descedit" name="account_resume_object[role_desc]" style="border: 1px solid rgb(160, 160, 160);"></textarea>
+                    <span class="error" id="errorrole_descedit">*请填写责任描述</span>
+                </div>
+                <div class="frm">
+                    <span class="">开始时间：</span>
+                    <input class="verification timeDatepicker" data-em="notnull" data-nohide="1" data-type="date" error-id="errorstartTimeprojectedit" id="startTimeprojectedit" name="account_resume_object[start_date]" type="text">
+                    <span class="error" id="errorstartTimeprojectedit">*请填写开始时间</span>
+                </div>
+                <div class="frm">
+                    <span class="">结束时间：</span>
+                    <input class="verification timeDatepicker" data-em="notnull" data-nohide="1" data-type="date" error-id="errorendTimeprojectedit" id="endTimeprojectedit" name="account_resume_object[end_date]" type="text">
+                    <span class="error" id="errorendTimeprojectedit">*请填写结束时间</span>
+                </div>
+            </div>
+            <div class="jobBtns">
+                <input class="btn" name="commit" type="button" id="editprojecthistory" value="确&nbsp;认">
+            </div>
+        </div>
 

@@ -186,6 +186,19 @@ $(function($) {
         },
         resizable:false
     });
+    $("#editProjectpop").dialog({
+        autoOpen:false,
+        modal:true,
+        width:800,
+        title:"编辑项目经验",
+        show:{effect:'drop', direction:'up'},
+        hide:{effect:'drop', direction:'down'},
+        draggable:false,
+        close: function() {
+
+        },
+        resizable:false
+    });
     $(".timeDatepicker").each(function(){
         //出生月份  生日
         $(this).datepicker({
@@ -878,6 +891,7 @@ $(function($) {
             }
         });
     });
+    var editJobhistorys={};
     //公司主页行业
     $("#add_industry").length>0 && $("#add_industry").chosen({disable_search_threshold: 10});
     var updateJobhistory = function(){
@@ -893,6 +907,74 @@ $(function($) {
                     dataType: "json",
                     type: "post",
                     url: "/worker/resume_experiences/"+$(this).attr("data-id"),
+                    data: {
+                        _method: "delete",
+                        "authenticity_token": $("meta[name='csrf-token']").attr("content")
+                    },
+                    success: function(result) {
+                        if (result.status == "ok") {
+                            $( "#dialog").dialog({
+                                modal:true,
+                                close:function(){}
+                            }).dialog( "close");
+                            _self.parent().parent().hide(500);
+                        } else {
+                            $( "#dialog").html(result.content).dialog({
+                                modal:true,
+                                close:function(){}
+                            }).dialog( "open");
+                        }
+                    }
+                });
+            });
+
+        });
+        //删除项目经历
+        $(".delProjecthistory").unbind().each(function(){
+            $(this).click(function(){
+                var _self = $(this);
+                $( "#dialog").html("删除...").dialog({
+                    modal:true,
+                    close:function(){}
+                }).dialog( "open");
+                $.ajax({
+                    dataType: "json",
+                    type: "post",
+                    url: "/worker/resume_objects/"+$(this).attr("data-id"),
+                    data: {
+                        _method: "delete",
+                        "authenticity_token": $("meta[name='csrf-token']").attr("content")
+                    },
+                    success: function(result) {
+                        if (result.status == "ok") {
+                            $( "#dialog").dialog({
+                                modal:true,
+                                close:function(){}
+                            }).dialog( "close");
+                            _self.parent().parent().hide(500);
+                        } else {
+                            $( "#dialog").html(result.content).dialog({
+                                modal:true,
+                                close:function(){}
+                            }).dialog( "open");
+                        }
+                    }
+                });
+            });
+
+        });
+        //删除项目经历
+        $(".deleducationhistory").unbind().each(function(){
+            $(this).click(function(){
+                var _self = $(this);
+                $( "#dialog").html("删除...").dialog({
+                    modal:true,
+                    close:function(){}
+                }).dialog( "open");
+                $.ajax({
+                    dataType: "json",
+                    type: "post",
+                    url: "/worker/resume_educations/"+$(this).attr("data-id"),
                     data: {
                         _method: "delete",
                         "authenticity_token": $("meta[name='csrf-token']").attr("content")
@@ -932,6 +1014,25 @@ $(function($) {
                 $("#endTimejobedit").val($(this).attr("data-endime"));
                 $("#moneyjobedit").val($(this).attr("data-moneyjob"));
                 $("#myjobdesedit").val($(this).attr("data-description"));
+            });
+
+        });
+        //编辑项目经历
+        $(".editProjecthistory").unbind().each(function(){
+            $(this).click(function(){
+                editJobhistorys={
+                    e:$(this),
+                    id:$(this).attr("data-id")
+                };
+                $( "#editProjectpop").dialog({
+                    modal:true,
+                    close:function(){}
+                }).dialog( "open");
+                $("#startTimeprojectedit").val($(this).attr("data-startime"));
+                $("#endTimeprojectedit").val($(this).attr("data-endime"));
+                $("#myprojectnameedit").val($(this).attr("data-projectName"));
+                $("#project_descedit").val($(this).attr("data-project_desc"));
+                $("#role_descedit").val($(this).attr("data-role_desc"));
             });
 
         });
@@ -1031,17 +1132,67 @@ $(function($) {
                         }).dialog( "close");
                         $("#jobhistory .verification").val("");
                         //构建经历
-                        $(".perfectResume").children("li").eq(2).append('<div class="readonly">'
-                            +'<p>'
-                            +'    <span class="itemNm">在职时间： </span>'
-                            + result.content.date
-                            +'  </p>'
-                            +'  <p><span class="itemNm">公司名称： </span>'+update_company_name+'</p>'
-                            +'  <p><span class="itemNm">公司职位：</span>'+update_company_post+'</p>'
-                            +'  <p><span class="itemNm">薪资：</span>'+moneyjob+'</p>'
-                            +'  <p><span class="itemNm">工作描述：</span>'+myjobdes+'</p>'
+                        $(".perfectResume").children("li").eq(3).append('<div class="readonly">'
+                            +'  <p><span class="itemNm">项目时间： </span>'+result.content.date+'</p>'
+                            +'  <p><span class="itemNm">工作名称：</span>'+myprojectname+'</p>'
+                            +'  <p><span class="itemNm">项目描述：</span>'+project_desc+'</p>'
+                            +'  <p><span class="itemNm">责任描述：</span>'+role_desc+'</p>'
                             +'  <div class="jobBtns">'
-                            +'<a href="javascript:void(0)" data-moneyjob="'+moneyjob+'" data-startime="'+startTimejob+'" data-endime="'+endTimejob+'" data-company_name="'+update_company_name+'" data-post="'+update_company_post+'" data-description="'+myjobdes+'" data-id="'+result.content.id+'" class="btnR editJobhistory">编&nbsp;辑</a><a href="javascript:void(0)" class="btnR delJobhistory" data-id="'+result.content.id+'">删&nbsp;除</a>'
+                            +'      <a href="javascript:void(0)" class="btnR editProjecthistory" data-startime="'+startTimeproject+'" data-endime="'+endTimeproject+'" data-projectName="'+myprojectname+'" data-project_desc="'+project_desc+'" data-role_desc="'+role_desc+'" data-id="'+result.content.id+'">编&nbsp;辑</a><a href="javascript:void(0)" class="btnR delProjecthistory" data-id="'+result.content.id+'">删&nbsp;除</a>'
+                            +'  </div>'
+                            +'</div>');
+                        updateJobhistory();
+                    } else {
+                        $( "#dialog").html(result.content).dialog({
+                            modal:true,
+                            close:function(){}
+                        }).dialog( "open");
+                    }
+                }
+            });
+        }
+    });
+    //添加教育经历
+    $("#addAccount").click(function(){
+        $("#new_account_resume_education .verification").blur();
+        if($("#new_account_resume_education .error:visible").length==0){
+            $( "#dialog").html("添加...").dialog({
+                modal:true,
+                close:function(){}
+            }).dialog( "open");
+            var degree=$.trim($("#Degree").val()),
+                role_school=$.trim($("#role_school").val()),
+                role_major=$.trim($("#role_major").val()),
+                startTimeeducation=$.trim($("#startTimeeducation").val()),
+                endTimeeducation=$.trim($("#endTimeeducation").val());
+            $.ajax({
+                dataType: "json",
+                type: "post",
+                url: "/worker/resume_educations/ajax_save",
+                data: {
+                    "account_resume_education[name]": degree,
+                    "account_resume_education[school]": role_school,
+                    "account_resume_education[major]": role_major,
+                    "account_resume_education[start_date]": startTimeeducation,
+                    "account_resume_education[end_date]": endTimeeducation,
+                    "account_resume_education[account_resume_id]": $.trim($("#account_resume_education_account_resume_id").val()),
+                    "authenticity_token": $("meta[name='csrf-token']").attr("content")
+                },
+                success: function(result) {
+                    if (result.status == "ok") {
+                        $( "#dialog").dialog({
+                            modal:true,
+                            close:function(){}
+                        }).dialog( "close");
+                        $("#jobhistory .verification").val("");
+                        //构建经历
+                        $(".perfectResume").children("li").eq(4).append('<div class="readonly">'
+                            +'  <p><span class="itemNm">项目时间： </span>'+result.content.date+'</p>'
+                            +'  <p><span class="itemNm">工作名称：</span>'+myprojectname+'</p>'
+                            +'  <p><span class="itemNm">项目描述：</span>'+project_desc+'</p>'
+                            +'  <p><span class="itemNm">责任描述：</span>'+role_desc+'</p>'
+                            +'  <div class="jobBtns">'
+                            +'      <a href="javascript:void(0)" class="btnR editProjecthistory" data-startime="'+startTimeproject+'" data-endime="'+endTimeproject+'" data-projectName="'+myprojectname+'" data-project_desc="'+project_desc+'" data-role_desc="'+role_desc+'" data-id="'+result.content.id+'">编&nbsp;辑</a><a href="javascript:void(0)" class="btnR deleducationhistory" data-id="'+result.content.id+'">删&nbsp;除</a>'
                             +'  </div>'
                             +'</div>');
                         updateJobhistory();
@@ -1056,7 +1207,7 @@ $(function($) {
         }
     });
     //确认职业经历
-    var editJobhistorys={};
+
     $("#editjobhistory").click(function(){
         $("#editjobhistory .verification").blur();
         if($("#editjobhistory .error:visible").length==0){
@@ -1107,6 +1258,66 @@ $(function($) {
                             +'  </div>'
                             +'</div>');
                         editJobhistorysParent.remove();
+                        updateJobhistory();
+                    } else {
+                        $( "#dialog").html(result.content).dialog({
+                            modal:true,
+                            close:function(){}
+                        }).dialog( "open");
+                    }
+                }
+            });
+        }
+    });
+    //确认项目经历
+
+    $("#editprojecthistory").click(function(){
+        $("#editProjectpop .verification").blur();
+        if($("#editProjectpop .error:visible").length==0){
+            $(this).html("确认...");
+
+            var myprojectname=$.trim($("#myprojectnameedit").val()),
+                project_desc=$.trim($("#project_descedit").val()),
+                role_desc=$.trim($("#role_descedit").val()),
+                startTimeproject=$.trim($("#startTimeprojectedit").val()),
+                endTimeproject=$.trim($("#endTimeprojectedit").val());
+            $.ajax({
+                dataType: "json",
+                type: "post",
+                url: "/worker/resume_objects/ajax_save",
+                data: {
+                    "id":editJobhistorys.id,
+                    "account_resume_object[name]": myprojectname,
+                    "account_resume_object[project_desc]": project_desc,
+                    "account_resume_object[role_desc]": role_desc,
+                    "account_resume_object[start_date]": startTimeproject,
+                    "account_resume_object[end_date]": endTimeproject,
+                    "account_resume_object[account_resume_id]": $.trim($("#account_resume_object_account_resume_id").val()),
+                    "authenticity_token": $("meta[name='csrf-token']").attr("content")
+                },
+                success: function(result) {
+                    $("#editprojecthistory").html("确认");
+                    $( "#editProjectpop").dialog({
+                        modal:true,
+                        close:function(){}
+                    }).dialog( "close");
+                    if (result.status == "ok") {
+
+                        //构建经历
+                        var editProjecthistorysParent = editJobhistorys.e.parent().parent();
+                        editProjecthistorysParent.after('<div class="readonly">'
+                            +'<p>'
+                            +'    <span class="itemNm">项目时间： </span>'
+                            + result.content.date
+                            +'  </p>'
+                            +'  <p><span class="itemNm">项目名称： </span>'+myprojectname+'</p>'
+                            +'  <p><span class="itemNm">项目描述：</span>'+project_desc+'</p>'
+                            +'  <p><span class="itemNm">责任描述：</span>'+role_desc+'</p>'
+                            +'  <div class="jobBtns">'
+                            +'      <a href="javascript:void(0)" class="btnR editProjecthistory" data-startime="'+startTimeproject+'" data-endime="'+endTimeproject+'" data-projectName="'+myprojectname+'" data-project_desc="'+project_desc+'" data-role_desc="'+role_desc+'" data-id="'+result.content.id+'">编&nbsp;辑</a><a href="javascript:void(0)" class="btnR delProjecthistory" data-id="'+result.content.id+'">删&nbsp;除</a>'
+                            +'  </div>'
+                            +'</div>');
+                        editProjecthistorysParent.remove();
                         updateJobhistory();
                     } else {
                         $( "#dialog").html(result.content).dialog({
