@@ -4,7 +4,7 @@
 <%end%>
 <div class="mainContainer">
 	<div class="main">
-		<h2 class="h2Title">HR面试消息</h2>
+		<h2 class="h2Title">我申请的面试</h2>
 		<div class="interview">
 			<ul class="interviewList">
 				<%@items.each do |item|%>
@@ -27,12 +27,12 @@
 					</div>
 					<div class="interviewOption">
 						<div class="interviewStatus">
-							<p></p>
+							<p>当前状态:<%= I18n.t("model.workflow.status.#{item.status}")%></p>
 							<p></p>
 							<p></p>
 						</div>
 						<div class="interviewBtns">
-							<a href="<%= worker_auditions_path(id: item.id)%>" class="btnR">接受面试邀请</a><a href="#" class="btnR">拒绝面试邀请</a>
+							<a href="#" class="btnR"><%= item.id%></a>
 							<a href="#" class="btnR">分享职位</a>
 						</div>
 					</div>

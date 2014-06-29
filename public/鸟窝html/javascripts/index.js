@@ -186,6 +186,20 @@ $(function($) {
         },
         resizable:false
     });
+    //教育经历
+    $("#editDucationpop").dialog({
+        autoOpen:false,
+        modal:true,
+        width:800,
+        title:"编辑经历",
+        show:{effect:'drop', direction:'up'},
+        hide:{effect:'drop', direction:'down'},
+        draggable:false,
+        close: function() {
+
+        },
+        resizable:false
+    });
     $("#editProjectpop").dialog({
         autoOpen:false,
         modal:true,
@@ -405,6 +419,10 @@ $(function($) {
         searchJob();
     });
     var hopeTags = "";
+    //初始化职位标签
+    $("#addHopePanel a").each(function(){
+        hopeTags += "," + $(this).html().replace('<i title="删除" class="deleteHope">×</i>', "");
+    });
     //期望职位标签删除=====================start
     var deleteHope = function(){
         $(".deleteHope").unbind().each(function(){
@@ -888,6 +906,39 @@ $(function($) {
     $(".saveAllJob").eq(0).each(function(){
         $(this).bind({
             click:function(){
+                $( "#dialog").html("保存...").dialog({
+                    modal:true,
+                    close:function(){}
+                }).dialog( "open");
+                $.ajax({
+                    dataType: "json",
+                    type: "post",
+                    url: "/worker/resumes/ajax_save",
+                    data: {
+                        "account_resume[name]": $.trim($("#update_name").val()),
+                        "account_resume[gender]": $("#account_resume_gender_1:checked").length == 1 ? "1" : "0",
+                        "account_resume[birthday]": $.trim($("#birthday").val()),
+                        "account_resume[marital_status]": $.trim($("#account_resume_marital_status").val()),
+                        "account_resume[tel]": $.trim($("#update_mobi").val()),
+                        "account_resume[email]": $.trim($("#update_email").val()),
+                        "account_resume[address]": $.trim($("#update_address").val()),
+                        "account_resume[tags]": hopeTags.replace(/(^[,]+)|([,]+$)/g, ""),
+                        "account_resume[hope_area]":  $.trim($("#update_hope_area").val()),
+                        "account_resume[hope_salary]":  $.trim($("#update_hope_salary").val()),
+                        "authenticity_token": $("meta[name='csrf-token']").attr("content")
+                    },
+                    success: function(result) {
+                        if (result.status == "ok") {
+                            $( "#dialog").html("保存成功");
+                            window.location.reload();
+                        } else {
+                            $( "#dialog").html(result.content).dialog({
+                                modal:true,
+                                close:function(){}
+                            }).dialog( "open");
+                        }
+                    }
+                });
             }
         });
     });
@@ -963,7 +1014,7 @@ $(function($) {
             });
 
         });
-        //删除项目经历
+        //删除教育经历
         $(".deleducationhistory").unbind().each(function(){
             $(this).click(function(){
                 var _self = $(this);
@@ -1033,6 +1084,25 @@ $(function($) {
                 $("#myprojectnameedit").val($(this).attr("data-projectName"));
                 $("#project_descedit").val($(this).attr("data-project_desc"));
                 $("#role_descedit").val($(this).attr("data-role_desc"));
+            });
+
+        });
+        //编辑教育经历
+        $(".editDucationhistory").unbind().each(function(){
+            $(this).click(function(){
+                editJobhistorys={
+                    e:$(this),
+                    id:$(this).attr("data-id")
+                };
+                $( "#editDucationpop").dialog({
+                    modal:true,
+                    close:function(){}
+                }).dialog( "open");
+                $("#Degreeedit").val($(this).attr("data-Degree"));
+                $("#role_schooledit").val($(this).attr("data-role_school"));
+                $("#role_majoredit").val($(this).attr("data-role_major"));
+                $("#startTimeeducationedit").val($(this).attr("data-startTimeeducationedit"));
+                $("#endTimeeducationedit").val($(this).attr("data-endTimeeducationedit"));
             });
 
         });
@@ -1187,12 +1257,12 @@ $(function($) {
                         $("#jobhistory .verification").val("");
                         //构建经历
                         $(".perfectResume").children("li").eq(4).append('<div class="readonly">'
-                            +'  <p><span class="itemNm">项目时间： </span>'+result.content.date+'</p>'
-                            +'  <p><span class="itemNm">工作名称：</span>'+myprojectname+'</p>'
-                            +'  <p><span class="itemNm">项目描述：</span>'+project_desc+'</p>'
-                            +'  <p><span class="itemNm">责任描述：</span>'+role_desc+'</p>'
+                            +'  <p><span class="itemNm">教育时间： </span>'+result.content.date+'</p>'
+                            +'  <p><span class="itemNm">学校：</span>'+role_school+'</p>'
+                            +'  <p><span class="itemNm">学历：</span>'+degree+'</p>'
+                            +'  <p><span class="itemNm">专业：</span>'+role_major+'</p>'
                             +'  <div class="jobBtns">'
-                            +'      <a href="javascript:void(0)" class="btnR editProjecthistory" data-startime="'+startTimeproject+'" data-endime="'+endTimeproject+'" data-projectName="'+myprojectname+'" data-project_desc="'+project_desc+'" data-role_desc="'+role_desc+'" data-id="'+result.content.id+'">编&nbsp;辑</a><a href="javascript:void(0)" class="btnR deleducationhistory" data-id="'+result.content.id+'">删&nbsp;除</a>'
+                            +'      <a data-Degree="'+degree+'" data-endTimeeducationedit="'+endTimeeducation+'" data-startTimeeducationedit="'+startTimeeducation+'" data-role_school="'+role_school+'" data-role_major="'+role_major+'" href="javascript:void(0)" class="btnR editDucationhistory" data-id="'+result.content.id+'">编&nbsp;辑</a><a href="javascript:void(0)" class="btnR deleducationhistory" data-id="'+result.content.id+'">删&nbsp;除</a>'
                             +'  </div>'
                             +'</div>');
                         updateJobhistory();
@@ -1329,7 +1399,67 @@ $(function($) {
             });
         }
     });
+    //确认教育经历
 
+    $("#editAccount").click(function(){
+        $("#editAccount .verification").blur();
+        if($("#editAccount .error:visible").length==0){
+            $(this).html("确认...");
+
+            var Degreeedit=$.trim($("#Degreeedit").val()),
+                role_schooledit=$.trim($("#role_schooledit").val()),
+                role_majoredit=$.trim($("#role_majoredit").val()),
+                startTimeeducationedit=$.trim($("#startTimeeducationedit").val()),
+                endTimeeducationedit=$.trim($("#endTimeeducationedit").val());
+
+            $.ajax({
+                dataType: "json",
+                type: "post",
+                url: "/worker/resume_educations/ajax_save",
+                data: {
+                    "id":editJobhistorys.id,
+                    "account_resume_education[name]": Degreeedit,
+                    "account_resume_education[school]": role_schooledit,
+                    "account_resume_education[major]": role_majoredit,
+                    "account_resume_education[start_date]": startTimeeducationedit,
+                    "account_resume_education[end_date]": endTimeeducationedit,
+                    "account_resume_education[account_resume_id]": $.trim($("#account_resume_education_account_resume_id").val()),
+                    "authenticity_token": $("meta[name='csrf-token']").attr("content")
+                },
+                success: function(result) {
+                    $("#editAccount").html("确认");
+                    $( "#editDucationpop").dialog({
+                        modal:true,
+                        close:function(){}
+                    }).dialog( "close");
+                    if (result.status == "ok") {
+
+                        //构建经历
+                        var editProjecthistorysParent = editJobhistorys.e.parent().parent();
+
+                        //构建经历
+                        editProjecthistorysParent.after('<div class="readonly">'
+                            +'  <p><span class="itemNm">教育时间： </span>'+result.content.date+'</p>'
+                            +'  <p><span class="itemNm">学校：</span>'+role_schooledit+'</p>'
+                            +'  <p><span class="itemNm">学历：</span>'+Degreeedit+'</p>'
+                            +'  <p><span class="itemNm">专业：</span>'+role_majoredit+'</p>'
+                            +'  <div class="jobBtns">'
+                            +'      <a data-Degree="'+Degreeedit+'" data-endTimeeducationedit="'+endTimeeducationedit+'" data-startTimeeducationedit="'+startTimeeducationedit+'" data-role_school="'+role_schooledit+'" data-role_major="'+role_majoredit+'" href="javascript:void(0)" class="btnR editDucationhistory" data-id="'+result.content.id+'">编&nbsp;辑</a><a href="javascript:void(0)" class="btnR deleducationhistory" data-id="'+result.content.id+'">删&nbsp;除</a>'
+                            +'  </div>'
+                            +'</div>');
+
+                        editProjecthistorysParent.remove();
+                        updateJobhistory();
+                    } else {
+                        $( "#dialog").html(result.content).dialog({
+                            modal:true,
+                            close:function(){}
+                        }).dialog( "open");
+                    }
+                }
+            });
+        }
+    });
 
 
 

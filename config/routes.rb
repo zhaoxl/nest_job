@@ -78,12 +78,8 @@ NestJob::Application.routes.draw do
     resources :resume_radars
     resources :invites
     resources :auditions do
-      collection do
-        get :create
-      end
     end
   end
-  
   
   
   namespace :accounts do

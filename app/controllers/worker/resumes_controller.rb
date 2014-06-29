@@ -12,10 +12,11 @@ class Worker::ResumesController < ApplicationController
     result = {status: "ok"}
     begin
       account_resume = current_account.current_account_resume
-      unless account_resume.update_attributes(resume_params)
+      account_resume.assign_attributes(resume_params)
+      account_resume.tag_list = account_resume.tags.to_s.split(",")
+      unless account_resume.save
         raise AjaxException.new(account_resume.errors.messages.inject({}){|hash, item| hash[item[0]] = item[1]*','; hash})
       end
-      account_resume.tag_list = account_resume.tags.split(",")
     rescue Exception => ex
       result = {status: "error", content: ex.message}
       logger.error "accounts_create error log================================================"

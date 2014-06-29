@@ -1,0 +1,12 @@
+"zh-CN":
+  model:
+    workflow:
+      status:
+        status_apply_normal: 待HR处理
+        status_apply_hr_reject: HR拒绝
+        
+        status_apply_wait_audition: 等待面试
+        status_apply_being_audition: 正在面试
+        status_invite_wait_audition: 等待面试
+        status_invite_being_audition: 正在面试
+        status_apply_audition_passed: 面试通过

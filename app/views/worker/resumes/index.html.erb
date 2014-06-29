@@ -18,11 +18,11 @@
         <%if flash[:notice]%>
         <span style="color: green">提示信息:<%= flash[:notice]%></span>
         <%end%>
-  			<%= form_for @account_resume, url: ajax_save_worker_resume_educations_path do |f|%>
+  			<%= form_for @account_resume, url: ajax_save_worker_resumes_path do |f|%>
   			<div class="form">
   				<div class="frm">
   					<span class="">姓       名：</span>
-  					<%= f.text_field :name,  id: "update_name", class: "verification", style: "border: 1px solid rgb(160, 160, 160);","data-noHide"=>"1", "data-em" => "notnull", "data-type" => "email", "error-id" => "errorupdate_name"%>
+  					<%= f.text_field :name,  id: "update_name", class: "verification", style: "border: 1px solid rgb(160, 160, 160);","data-noHide"=>"1", "data-em" => "notnull", "data-type" => "notnull", "error-id" => "errorupdate_name"%>
   					<span class="error" id="errorupdate_name">*请填写姓名</span>
   				</div>
   				<div class="frm">
@@ -53,7 +53,7 @@
   				</div>
           <div class="frm">
               <span class="">详细住址：</span>
-                <%= f.text_field :address,  id: "update_address", class: "verification", style: "border: 1px solid rgb(160, 160, 160);","data-noHide"=>"1", "data-em" => "notnull", "data-type" => "email", "error-id" => "errorupdate_address"%>
+                <%= f.text_field :address,  id: "update_address", class: "verification", style: "border: 1px solid rgb(160, 160, 160);","data-noHide"=>"1", "data-em" => "notnull", "data-type" => "notnull", "error-id" => "errorupdate_address"%>
               <span class="error" id="errorupdate_address">*请填写详细住址</span>
           </div>
   			</div>
@@ -66,7 +66,8 @@
   				<div class="frm">
   					<span class="">职位关键词</span>
   					<div class="posts" id="addHopePanel">
-                        <%@account_resume.tag_list.each do |tag|%>
+              <%@account_resume.tag_list.each do |tag|%>
+                <a style="" href="javascript:void(0)"><%= tag%><i title="删除" class="deleteHope">×</i></a>
               <%end%>
   					</div>
   					<div class="postInput">
@@ -240,7 +241,7 @@
   				<p><span class="itemNm">学&nbsp;历： </span><%= education.name%></p>
   				<p><span class="itemNm">专&nbsp;业： </span><%= education.major%></p>
   				<div class="jobBtns">
-  					<a href="javascript:void(0)" class="btnR" data-id="<%= education.id%>">编&nbsp;辑</a><a href="javascript:void(0)" class="btnR deleducationhistory" data-id="<%= education.id%>">删&nbsp;除</a>
+  					<a data-Degree="<%= education.name%>" data-endTimeeducationedit="<%= strftime(education.end_date, "%Y-%m-%d")%>" data-startTimeeducationedit="<%= strftime(education.start_date, "%Y-%m-%d")%>" data-role_school="<%= education.school%>" data-role_major="<%= education.major%>" href="javascript:void(0)" class="btnR editDucationhistory" data-id="<%= education.id%>">编&nbsp;辑</a><a href="javascript:void(0)" class="btnR deleducationhistory" data-id="<%= education.id%>">删&nbsp;除</a>
   				</div>
   			</div>
         <%end%>
@@ -293,7 +294,7 @@
   		</li>
   	</ul>
   	<div class="jobBtns">
-  		<a href="javascript:void(0)" class="btn saveAllJob">猛戳保存</a>
+  		<a href="javascript:void(0)" id='saveALl' class="btn saveAllJob">猛戳保存</a>
   	</div>
   </div>
 	<%= render partial: "/layouts/right"%>
@@ -366,5 +367,39 @@
             <div class="jobBtns">
                 <input class="btn" name="commit" type="button" id="editprojecthistory" value="确&nbsp;认">
             </div>
+        </div>
+          <div class="mainpop" style="display: none" id="editDucationpop">
+                <div class="form">
+                    <div class="frm">
+                        <span class="">学       历：</span>
+                    <select id="Degreeedit" name="Degree">
+                        <option value="初中">初中</option><option value="高中">高中</option><option value="中技">中技</option><option value="中专">中专</option><option value="大专" selected="">大专</option><option value="本科" selected="selected">本科</option><option value="MBA">MBA</option><option value="硕士">硕士</option><option value="博士">博士</option><option value="其他">其他</option>
+                    </select>
+                        <span class="error">*请填写学历</span>
+                    </div>
+                    <div class="frm">
+                        <span class="">学       校：</span>
+                        <input class="verification" data-em="notnull" data-nohide="1" data-type="notnull" error-id="errorrole_schooledit" id="role_schooledit" name="account_resume_education[school]" style="border: 1px solid rgb(160, 160, 160);" type="text">
+                        <span class="error notnull" id="errorrole_schooledit" style="display: none;">*请填写学校</span>
+                    </div>
+                    <div class="frm">
+                        <span class="">专       业：</span>
+                        <input class="verification" data-em="notnull" data-nohide="1" data-type="notnull" error-id="errorrole_majoredit" id="role_majoredit" name="account_resume_education[major]" style="border: 1px solid rgb(160, 160, 160);" type="text">
+                        <span class="error notnull" id="errorrole_majoredit" style="display: none;">*请填写专业</span>
+                    </div>
+                    <div class="frm">
+                        <span class="">开始时间：</span>
+                        <input class="verification timeDatepicker" data-em="notnull" data-nohide="1" data-type="date" error-id="errorstartTimeeducationedit" id="startTimeeducationedit" name="account_resume_education[start_date]" type="text" style="border: 1px solid rgb(160, 160, 160);">
+                        <span class="error notnull" id="errorstartTimeeducationedit" style="display: none;">*请填写开始时间</span>
+                    </div>
+                    <div class="frm">
+                        <span class="">结束时间：</span>
+                        <input class="verification timeDatepicker" data-em="notnull" data-nohide="1" data-type="date" error-id="errorendTimeeducationedit" id="endTimeeducationedit" name="account_resume_education[end_date]" type="text" style="border: 1px solid rgb(160, 160, 160);">
+                        <span class="error notnull" id="errorendTimeeducationedit" style="display: none;">*请填写结束时间</span>
+                    </div>
+                </div>
+                <div class="jobBtns">
+                    <input class="btn" name="commit" type="button" id="editAccount" value="确&nbsp;认">
+                </div>
         </div>
 

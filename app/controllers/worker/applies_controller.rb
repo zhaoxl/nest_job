@@ -1,6 +1,13 @@
 class Worker::AppliesController < ApplicationController
   before_action :authenticate_account!
   
+  def index
+    @items = WorkflowApply.by_worker_account_id(current_account.id).order_ct_desc
+    @items = @items.by_status([:status_apply_normal]) if params[:status] == "status_apply_normal"
+    @items = @items.by_status([:status_apply_hr_reject]) if params[:status] == "status_apply_hr_reject"
+    @items = @items.by_status([:status_apply_wait_audition]) if params[:status] == "status_apply_wait_audition"
+  end
+  
   def ajax_create
     result = {status: "ok"}
     begin

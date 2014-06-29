@@ -27,10 +27,10 @@
   	</div>
     <%if current_account.account_type == Account::ACCOUNT_TYPE_WORKER%>
     	<ul class="subNav">
-    		<li><a href="#" class="tit tCurrent">我申请的面试</a></li>
-    		<li><a href="#" class="current">待HR处理</a></li>
-    		<li><a href="#">HR拒绝</a></li>
-    		<li><a href="#">HR同意</a></li>
+    		<li><a href="<%= worker_applies_path%>" class="tit tCurrent">我申请的面试</a></li>
+    		<li><a href="<%= worker_applies_path(status: :status_apply_normal)%>" class="<%= "current" if params[:status] == "status_apply_normal"%>">待HR处理</a></li>
+    		<li><a href="<%= worker_applies_path(status: :status_apply_hr_reject)%>" class="<%= "current" if params[:status] == "status_apply_hr_reject"%>">HR拒绝</a></li>
+    		<li><a href="<%= worker_applies_path(status: :status_apply_wait_audition)%>" class="<%= "current" if params[:status] == "status_apply_wait_audition"%>">等待面试</a></li>
     		<li><a href="#">面试通过</a></li>
     		<li><a href="#">面试未通过</a></li>
     		<li><a href="#">试用期通过</a></li>
