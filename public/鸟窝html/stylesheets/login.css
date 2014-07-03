@@ -42,3 +42,8 @@ li .jobs em{background-position:-74px -60px;}
 .contentWrap .regBox .thirdPartyBtns{float:left;width:190px;height:270px;}
 .thirdPartyBtns h2{margin-bottom:15px;font-weight:normal;font-size:15px;}
 .thirdPartyBtns li{width:190px;margin-bottom:20px;}
+
+/*=============*/
+#loginPanel{
+    display: none;
+}

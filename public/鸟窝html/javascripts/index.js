@@ -103,6 +103,30 @@ $(function($) {
         $("#registerBtn").parent().parent().hide();
         $("#loginBtn").parent().parent().show();
     });
+    $("#loginTipT").click(function(){
+        $("#resisterPanel").animate({
+            opacity: 0
+        }, 0, "linear",function(){
+            $(this).hide();
+            $("#loginPanel").show().animate({
+                opacity: 0
+            },0,"linear",function(){
+                $("#loginPanel").show().animate({opacity: 0.8},500);
+            });
+        });
+    });
+    $("#registerTipT").click(function(){
+        $("#loginPanel").animate({
+            opacity: 0
+        }, 0, "linear",function(){
+            $(this).hide();
+            $("#resisterPanel").show().animate({
+                opacity: 0
+            },0,"linear",function(){
+                $("#resisterPanel").show().animate({opacity: 0.8},500);
+            });
+        });
+     });
     //注册切换==================start
     $("#registerTip").click(function(){
         $(".registerPanel").show();

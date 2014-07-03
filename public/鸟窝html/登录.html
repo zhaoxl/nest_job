@@ -6,12 +6,16 @@
 	<link rel="stylesheet" href="stylesheets/ui_base.css" />
 	<link rel="stylesheet" href="stylesheets/ui_common.css" />
 	<link rel="stylesheet" href="stylesheets/login.css" />
+    <link rel="stylesheet" href="javascripts/css/ui-lightness/jquery-ui-1.10.4.min.css" />
+    <script type="text/javascript" src="javascripts/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="javascripts/jquery-ui-1.10.4.min.js"></script>
+    <script type="text/javascript" src="javascripts/index.js"></script>
 </head>
 <body>
 	<div class="contentWrap">
 		<div class="bg"><img src="images/login_bg.jpg" alt=""/></div>
 		<h1><a href="#" class="logo">鸟窝</a></h1>
-		<div class="regBox">
+		<div id='resisterPanel' class="regBox">
 			<div class="form">
         <ul>
           <li class="input_req">
@@ -66,7 +70,7 @@
 				<h2>已经有账号？请直接登录</h2>
 				<ul>
 					<li style="display: none;"><div class="frm"><a href="javascript:void(0)" id="loginBtn" class="registerBtn">登     录</a></div></li>
-          <li id="loginTip" style="display: list-item;"><a href="javascript:void(0)" class="loginBtn">登     录</a></li>
+          <li id="loginTipT" style="display: list-item;"><a href="javascript:void(0)" class="loginBtn">登     录</a></li>
           <li style="display: none;" id="registerTip"><a href="javascript:void(0)" class="loginBtn">注     册</a></li>
           <li><a href="#" class="weibo thirdPtyBtn"><em>&nbsp;</em>使用微博登录</a></li>
           <li><a href="#" class="qq thirdPtyBtn"><em>&nbsp;</em>使用QQ登录</a></li>
@@ -74,7 +78,7 @@
 				</ul>
 			</div>
 		</div>
-		<div class="regBox loginBox">
+		<div class="regBox loginBox" id="loginPanel">
 			<div class="form">
         <ul>
           <li class="input_req">
@@ -116,7 +120,7 @@
 				<h2>还不是鸟窝用户？点击注册</h2>
 				<ul>
 					<!-- <li style="display: none;"><div class="frm"><a href="javascript:void(0)" id="loginBtn" class="registerBtn">注     册</a></div></li> -->
-          <li id="loginTip" style="display: list-item;"><a href="javascript:void(0)" class="loginBtn">注     册</a></li>
+          <li id="registerTipT" style="display: list-item;"><a href="javascript:void(0)" class="loginBtn">注     册</a></li>
           <!-- <li style="display: none;" id="registerTip"><a href="javascript:void(0)" class="loginBtn">注     册</a></li> -->
           <li><a href="#" class="weibo thirdPtyBtn"><em>&nbsp;</em>使用微博登录</a></li>
           <li><a href="#" class="qq thirdPtyBtn"><em>&nbsp;</em>使用QQ登录</a></li>

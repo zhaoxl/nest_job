@@ -6,6 +6,10 @@ class Worker::AppliesController < ApplicationController
     @items = @items.by_status([:status_apply_normal]) if params[:status] == "status_apply_normal"
     @items = @items.by_status([:status_apply_hr_reject]) if params[:status] == "status_apply_hr_reject"
     @items = @items.by_status([:status_apply_wait_audition]) if params[:status] == "status_apply_wait_audition"
+    @items = @items.by_status([:status_apply_audition_passed]) if params[:status] == "status_apply_audition_passed"
+    @items = @items.by_status([:status_apply_audition_failed]) if params[:status] == "status_apply_audition_failed"
+    @items = @items.by_status([:status_apply_probation_passed]) if params[:status] == "status_apply_probation_passed"
+    @items = @items.by_status([:status_apply_probation_failed]) if params[:status] == "status_apply_probation_failed"
   end
   
   def ajax_create
