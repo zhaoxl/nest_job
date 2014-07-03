@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8d10e6ed-71fc-423f-9eda-c4ce70a95b50" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="Z:/public/产品/面试流程.js" />
+      <change type="DELETED" beforePath="Z:\app\helpers\worker\applies_helper.rb" afterPath="" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/lib/elasticsearch-1.0.0.jar" afterPath="Z:/elasticsearch-rtf/lib/elasticsearch-1.0.0.jar" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/plugins/analysis-ik/elasticsearch-analysis-ik-1.2.6.jar" afterPath="Z:/elasticsearch-rtf/plugins/analysis-ik/elasticsearch-analysis-ik-1.2.6.jar" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/plugins/analysis-mmseg/elasticsearch-analysis-mmseg-1.2.2.jar" afterPath="Z:/elasticsearch-rtf/plugins/analysis-mmseg/elasticsearch-analysis-mmseg-1.2.2.jar" />
@@ -122,8 +122,6 @@
       <change type="MODIFICATION" beforePath="Z:/app/views/kaminari/_paginator.html.erb" afterPath="Z:/app/views/kaminari/_paginator.html.erb" />
       <change type="MODIFICATION" beforePath="Z:/app/views/kaminari/_prev_page.html.erb" afterPath="Z:/app/views/kaminari/_prev_page.html.erb" />
       <change type="MODIFICATION" beforePath="Z:/app/views/layouts/_right.html.erb" afterPath="Z:/app/views/layouts/_right.html.erb" />
-      <change type="MODIFICATION" beforePath="Z:/app/controllers/worker/applies_controller.rb" afterPath="Z:/app/controllers/worker/applies_controller.rb" />
-      <change type="MODIFICATION" beforePath="Z:/app/helpers/worker/applies_helper.rb" afterPath="Z:/app/helpers/worker/applies_helper.rb" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-1.2.1/plugins/rtf/_site/assets/css/bootstrap.css" afterPath="Z:/elasticsearch-1.2.1/plugins/rtf/_site/assets/css/bootstrap.css" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/plugins/rtf/_site/assets/css/bootstrap.css" afterPath="Z:/elasticsearch-rtf/plugins/rtf/_site/assets/css/bootstrap.css" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-1.2.1/plugins/rtf/_site/assets/js/bootstrap.js" afterPath="Z:/elasticsearch-1.2.1/plugins/rtf/_site/assets/js/bootstrap.js" />
@@ -133,6 +131,7 @@
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-1.2.1/plugins/rtf/_site/assets/js/bootstrap.min.js" afterPath="Z:/elasticsearch-1.2.1/plugins/rtf/_site/assets/js/bootstrap.min.js" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/plugins/rtf/_site/assets/js/bootstrap.min.js" afterPath="Z:/elasticsearch-rtf/plugins/rtf/_site/assets/js/bootstrap.min.js" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/config/mmseg/chars.dic" afterPath="Z:/elasticsearch-rtf/config/mmseg/chars.dic" />
+      <change type="MODIFICATION" beforePath="Z:/lib/diversity_result.rb" afterPath="Z:/lib/diversity_result.rb" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-1.2.1/bin/service/elasticsearch.bat" afterPath="Z:/elasticsearch-1.2.1/bin/service/elasticsearch.bat" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/bin/elasticsearch.bat" afterPath="Z:/elasticsearch-rtf/bin/elasticsearch.bat" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/bin/service/elasticsearch.bat" afterPath="Z:/elasticsearch-rtf/bin/service/elasticsearch.bat" />
@@ -153,17 +152,22 @@
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-1.2.1/plugins/rtf/_site/assets/fonts/glyphicons-halflings-regular.svg" afterPath="Z:/elasticsearch-1.2.1/plugins/rtf/_site/assets/fonts/glyphicons-halflings-regular.svg" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/plugins/rtf/_site/assets/fonts/glyphicons-halflings-regular.svg" afterPath="Z:/elasticsearch-rtf/plugins/rtf/_site/assets/fonts/glyphicons-halflings-regular.svg" />
       <change type="MODIFICATION" beforePath="Z:/app/views/worker/applies/index.html.erb" afterPath="Z:/app/views/worker/applies/index.html.erb" />
+      <change type="MODIFICATION" beforePath="Z:/app/views/worker/invites/index.html.erb" afterPath="Z:/app/views/worker/invites/index.html.erb" />
       <change type="MODIFICATION" beforePath="Z:/public/鸟窝html/javascripts/index.js" afterPath="Z:/public/鸟窝html/javascripts/index.js" />
       <change type="MODIFICATION" beforePath="Z:/app/controllers/worker/invites_controller.rb" afterPath="Z:/app/controllers/worker/invites_controller.rb" />
+      <change type="MODIFICATION" beforePath="Z:/app/helpers/worker/invites_helper.rb" afterPath="Z:/app/helpers/worker/invites_helper.rb" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/config/logging.yml" afterPath="Z:/elasticsearch-rtf/config/logging.yml" />
-      <change type="MODIFICATION" beforePath="Z:/public/鸟窝html/stylesheets/login.css" afterPath="Z:/public/鸟窝html/stylesheets/login.css" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/config/ik/main.dic" afterPath="Z:/elasticsearch-rtf/config/ik/main.dic" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/config/ik/custom/mydict.dic" afterPath="Z:/elasticsearch-rtf/config/ik/custom/mydict.dic" />
+      <change type="MODIFICATION" beforePath="Z:/app/views/accounts/registrations/new.html.erb" afterPath="Z:/app/views/accounts/registrations/new.html.erb" />
+      <change type="MODIFICATION" beforePath="Z:/app/views/accounts/sessions/new.html.erb" afterPath="Z:/app/views/accounts/sessions/new.html.erb" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/bin/plugin.bat" afterPath="Z:/elasticsearch-rtf/bin/plugin.bat" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-1.2.1/bin/plugin" afterPath="Z:/elasticsearch-1.2.1/bin/plugin" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/bin/plugin" afterPath="Z:/elasticsearch-rtf/bin/plugin" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/config/ik/preposition.dic" afterPath="Z:/elasticsearch-rtf/config/ik/preposition.dic" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/config/ik/quantifier.dic" afterPath="Z:/elasticsearch-rtf/config/ik/quantifier.dic" />
+      <change type="MODIFICATION" beforePath="Z:/app/controllers/accounts/registrations_controller.rb" afterPath="Z:/app/controllers/accounts/registrations_controller.rb" />
+      <change type="MODIFICATION" beforePath="Z:/app/controllers/accounts/sessions_controller.rb" afterPath="Z:/app/controllers/accounts/sessions_controller.rb" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/config/ik/stopword.dic" afterPath="Z:/elasticsearch-rtf/config/ik/stopword.dic" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/config/ik/suffix.dic" afterPath="Z:/elasticsearch-rtf/config/ik/suffix.dic" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/config/ik/surname.dic" afterPath="Z:/elasticsearch-rtf/config/ik/surname.dic" />
@@ -171,7 +175,8 @@
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/config/mmseg/units.dic" afterPath="Z:/elasticsearch-rtf/config/mmseg/units.dic" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/config/mmseg/words-my.dic" afterPath="Z:/elasticsearch-rtf/config/mmseg/words-my.dic" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/config/mmseg/words.dic" afterPath="Z:/elasticsearch-rtf/config/mmseg/words.dic" />
-      <change type="MODIFICATION" beforePath="Z:/app/models/workflow_apply.rb" afterPath="Z:/app/models/workflow_apply.rb" />
+      <change type="MODIFICATION" beforePath="Z:/config/locales/model/workflow.zh-CN.yml" afterPath="Z:/config/locales/model/workflow.zh-CN.yml" />
+      <change type="MODIFICATION" beforePath="Z:/app/models/workflow_invite.rb" afterPath="Z:/app/models/workflow_invite.rb" />
       <change type="MODIFICATION" beforePath="Z:/.idea/workspace.xml" afterPath="Z:/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="Z:/public/鸟窝html/登录.html" afterPath="Z:/public/鸟窝html/登录.html" />
     </list>
@@ -201,31 +206,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="登录.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://Z:/public/鸟窝html/登录.html">
+      <file leaf-file-name="index.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://Z:/public/鸟窝html/javascripts/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="122" column="30" selection-start="6715" selection-end="6727" vertical-scroll-proportion="-6.4716983" vertical-offset="797" max-vertical-offset="1444">
+            <state line="367" column="21" selection-start="13272" selection-end="13272" vertical-scroll-proportion="0.6325301" vertical-offset="6553" max-vertical-offset="31293">
               <folding>
-                <element signature="tag#div#1;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+                <marker date="1404393308000" expanded="false" signature="14513:14585" placeholder="..." />
+                <marker date="1404393308000" expanded="false" signature="20032:20045" placeholder="..." />
+                <marker date="1404393308000" expanded="false" signature="23720:23804" placeholder="..." />
+                <marker date="1404393308000" expanded="false" signature="26948:27018" placeholder="..." />
+                <marker date="1404393308000" expanded="false" signature="27065:27092" placeholder="..." />
+                <marker date="1404393308000" expanded="false" signature="27167:27182" placeholder="..." />
+                <marker date="1404393308000" expanded="false" signature="27238:27401" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://Z:/public/鸟窝html/javascripts/index.js">
+      <file leaf-file-name="new.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://Z:/app/views/accounts/sessions/new.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="117" column="0" selection-start="4477" selection-end="4477" vertical-scroll-proportion="0.4471299" vertical-offset="1927" max-vertical-offset="29906">
-              <folding>
-                <marker date="1404359192000" expanded="false" signature="11898:11970" placeholder="..." />
-                <marker date="1404359192000" expanded="false" signature="17417:17430" placeholder="..." />
-                <marker date="1404359192000" expanded="false" signature="20823:20907" placeholder="..." />
-                <marker date="1404359192000" expanded="false" signature="24051:24121" placeholder="..." />
-                <marker date="1404359192000" expanded="false" signature="24168:24195" placeholder="..." />
-                <marker date="1404359192000" expanded="false" signature="24270:24285" placeholder="..." />
-                <marker date="1404359192000" expanded="false" signature="24341:24504" placeholder="..." />
-              </folding>
+            <state line="123" column="31" selection-start="6623" selection-end="6623" vertical-scroll-proportion="-6.1372547" vertical-offset="2024" max-vertical-offset="2660">
+              <folding />
             </state>
+          </provider>
+          <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+            <state />
           </provider>
         </entry>
       </file>
@@ -247,7 +253,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="Z:/public/鸟窝html/招聘方/公司主页.html" />
         <option value="Z:/app/views/layouts/_top_nav.html.erb" />
         <option value="Z:/app/views/layouts/_right.html.erb" />
         <option value="Z:/public/鸟窝html/javascripts/jquery-ui-1.10.4.min.js" />
@@ -262,16 +267,17 @@
         <option value="Z:/public/产品/面试流程.js" />
         <option value="Z:/public/鸟窝html/stylesheets/login.css" />
         <option value="Z:/public/鸟窝html/登录.html" />
+        <option value="Z:/app/views/accounts/sessions/new.html.erb" />
         <option value="Z:/public/鸟窝html/javascripts/index.js" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1456" />
-    <option name="height" value="886" />
+    <option name="x" value="216" />
+    <option name="y" value="275" />
+    <option name="width" value="1165" />
+    <option name="height" value="916" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -299,6 +305,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -604,10 +611,87 @@
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="accounts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shared" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Z" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Z:" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="accounts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sessions" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Z" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Z:" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="accounts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="registrations" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Z" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Z:" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -641,15 +725,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1456" height="886" extended-state="6" />
-    <editor active="true" />
+    <frame x="216" y="275" width="1165" height="916" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998565" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21879484" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28105167" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -741,9 +825,7 @@
     </entry>
     <entry file="file://Z:/public/鸟窝html/stylesheets/login.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="32" selection-start="2238" selection-end="2238" vertical-scroll-proportion="0.55749637" vertical-offset="244" max-vertical-offset="1026">
-          <folding />
-        </state>
+        <state line="33" column="32" selection-start="2238" selection-end="2238" vertical-scroll-proportion="0.55749637" vertical-offset="244" max-vertical-offset="1026" />
       </provider>
     </entry>
     <entry file="file://Z:/public/鸟窝html/注册.html">
@@ -753,26 +835,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://Z:/public/鸟窝html/登录.html">
+    <entry file="file://Z:/app/views/accounts/sessions/new.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="122" column="30" selection-start="6715" selection-end="6727" vertical-scroll-proportion="-6.4716983" vertical-offset="797" max-vertical-offset="1444">
-          <folding>
-            <element signature="tag#div#1;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
-          </folding>
+        <state line="123" column="31" selection-start="6623" selection-end="6623" vertical-scroll-proportion="-6.1372547" vertical-offset="2024" max-vertical-offset="2660">
+          <folding />
         </state>
+      </provider>
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
       </provider>
     </entry>
     <entry file="file://Z:/public/鸟窝html/javascripts/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="117" column="0" selection-start="4477" selection-end="4477" vertical-scroll-proportion="0.4471299" vertical-offset="1927" max-vertical-offset="29906">
+        <state line="367" column="21" selection-start="13272" selection-end="13272" vertical-scroll-proportion="0.6325301" vertical-offset="6553" max-vertical-offset="31293">
           <folding>
-            <marker date="1404359192000" expanded="false" signature="11898:11970" placeholder="..." />
-            <marker date="1404359192000" expanded="false" signature="17417:17430" placeholder="..." />
-            <marker date="1404359192000" expanded="false" signature="20823:20907" placeholder="..." />
-            <marker date="1404359192000" expanded="false" signature="24051:24121" placeholder="..." />
-            <marker date="1404359192000" expanded="false" signature="24168:24195" placeholder="..." />
-            <marker date="1404359192000" expanded="false" signature="24270:24285" placeholder="..." />
-            <marker date="1404359192000" expanded="false" signature="24341:24504" placeholder="..." />
+            <marker date="1404393308000" expanded="false" signature="14513:14585" placeholder="..." />
+            <marker date="1404393308000" expanded="false" signature="20032:20045" placeholder="..." />
+            <marker date="1404393308000" expanded="false" signature="23720:23804" placeholder="..." />
+            <marker date="1404393308000" expanded="false" signature="26948:27018" placeholder="..." />
+            <marker date="1404393308000" expanded="false" signature="27065:27092" placeholder="..." />
+            <marker date="1404393308000" expanded="false" signature="27167:27182" placeholder="..." />
+            <marker date="1404393308000" expanded="false" signature="27238:27401" placeholder="..." />
           </folding>
         </state>
       </provider>

@@ -45,6 +45,8 @@ class Accounts::RegistrationsController < Devise::RegistrationsController
       
       #登陆
       sign_in(:account, resource)
+      hr_register_step2_path = new_hr_company_path if resource.account_type = Account::ACCOUNT_TYPE_HR
+      result = {status: "ok", content: hr_register_step2_path||cookies[:goto]||after_sign_in_path_for(resource)}
     rescue Exception => ex
       result = {status: "error", content: ex.message}
       logger.error "accounts_create error log================================================"

@@ -1,7 +1,7 @@
 class Accounts::SessionsController < Devise::SessionsController
   
   def new
-    super
+    render layout: false
   end
   
   def create
@@ -26,11 +26,11 @@ class Accounts::SessionsController < Devise::SessionsController
         #验证码错误
         raise AjaxException.new({captcha: "验证码错误"})
       end
-      if account = Account.by_email(params[:account][:email]).first
-        if account.valid_password?(params[:account][:password])
+      if resource = Account.by_email(params[:account][:email]).first
+        if resource.valid_password?(params[:account][:password])
           #同步期望城市和简历标签
           #如果简历里没有则从cookie取，否则存入cookie
-          current_account_resume = account.current_account_resume
+          current_account_resume = resource.current_account_resume
           if current_account_resume.hope_area.blank?
             current_account_resume.hope_area = cookies[:account_hope_area] if cookies[:account_hope_area].present?
             current_account_resume.tag_list.add(cookies[:account_tag_list].split(",")) if cookies[:account_tag_list].present?
@@ -41,7 +41,8 @@ class Accounts::SessionsController < Devise::SessionsController
           end
           
           #登陆
-          sign_in(:account, account)
+          sign_in(:account, resource)
+          result = {status: "ok", content: cookies[:goto]||after_sign_in_path_for(resource)}
         else
           raise AjaxException.new({password: "密码错误"})
         end

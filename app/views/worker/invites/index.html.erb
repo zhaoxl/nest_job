@@ -4,7 +4,7 @@
 <%end%>
 <div class="mainContainer">
 	<div class="main">
-		<h2 class="h2Title"><%= workflow_status_cn(params[:status])%></h2>
+		<h2 class="h2Title"><%= I18n.t!("model.workflow.status.#{params[:status]}") rescue "HR申请的面试"%></h2>
 		<div class="interview">
 			<ul class="interviewList">
 				<%@items.each do |item|%>

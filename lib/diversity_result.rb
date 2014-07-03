@@ -8,10 +8,12 @@ module DiversityResult
       
       if flash[:error].present?
         result = {status: "error", content: flash[:error]}
+      elsif flash[:alert].present?
+        result = {status: "alert", content: flash[:alert]}
       else
-        result = {status: "ok", content: flash[:ok]}
+        result = {status: "ok", content: flash[:notice]}
       end
-      flash[:error] = flash[:notice] = flash[:ok] = nil
+      flash[:error] = flash[:notice] = nil
       
       format.json {
         render json: result.to_json

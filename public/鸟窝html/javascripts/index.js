@@ -111,6 +111,7 @@ $(function($) {
             $("#loginPanel").show().animate({
                 opacity: 0
             },0,"linear",function(){
+                $(".updateCaptchal").click();
                 $("#loginPanel").show().animate({opacity: 0.8},500);
             });
         });
@@ -124,9 +125,11 @@ $(function($) {
                 opacity: 0
             },0,"linear",function(){
                 $("#resisterPanel").show().animate({opacity: 0.8},500);
+                $(".updateCaptcha").click();
             });
         });
      });
+
     //注册切换==================start
     $("#registerTip").click(function(){
         $(".registerPanel").show();
@@ -166,7 +169,8 @@ $(function($) {
               /*  "account[password_confirmation]": $.trim($("#mypwdReport").val()),//确认密码*/
                 "captcha": $("#mycaptcha").val() || "",//验证码
                 "rememberme": $("#rememberMe:checked").length != 0 ? "1" : "0",//
-                "user_type": user_type//用户类型
+                "user_type": user_type,//用户类型
+                "authenticity_token": $("meta[name='csrf-token']").attr("content")
             },
             success: function(result) {
                 if (result.status == "ok") {
@@ -174,7 +178,12 @@ $(function($) {
                         modal:true
                     }).dialog("close");
                     //cookie记录注册  时间 =  24*60*60*365
-                    Cookie.Set("registered", "1", 31536000, "/");
+                    isCookie != "undefined" && Cookie.Set("registered", "1", 31536000, "/");
+                    if(result.content){
+                        window.location.href=result.content;
+                        return;
+                    }
+
                     if(user_type == "2"){
                         window.location.replace("/accounts/companies/new");
                     }else{
@@ -256,7 +265,7 @@ $(function($) {
     });
     //$( "#editJobpop").dialog( "close");
 
-    $("#mycaptcha").bind({
+    $("#mycaptcha,#mycaptchal").bind({
         blur:function(){
             if(!$.trim($(this).val())){
                 $(this).prev().show();
@@ -300,6 +309,10 @@ $(function($) {
                     $( "#dialog").html("登录成功，正在跳转").dialog({
                         modal:true
                     }).dialog("close");
+                    if(result.content){
+                        window.location.href=result.content;
+                        return;
+                    }
                     window.location.reload();
                 } else {
                     $( "#dialog").dialog({
@@ -317,6 +330,59 @@ $(function($) {
                     if(_c.password){
                         $("#errorpassword").html(_c.password).css("display", "block");
                         $("#captchaImg").click();
+                    }
+                }
+            }
+        });
+    });
+    //登录=====================start
+    $("#loginBtnpop").click(function(){
+        $("#mycaptchal").blur();
+        $(".errorloginl").prev().prev().blur();
+        if($(".errorloginl:visible").length != 0){
+            return;
+        }
+        $( "#dialog").html("登录中...").dialog({
+            modal:true,
+            close:function(){}
+        }).dialog( "open");
+        $.ajax({
+            dataType: "json",
+            type: "post",
+            url: "/accounts/sessions/ajax_create",
+            data: {
+                "account[email]": $.trim($("#myemaill").val()),//邮箱
+                "account[password]": $.trim($("#mypwdl").val()),//密码
+                "captcha": $("#mycaptchal").val() || "",//验证码
+                "rememberme": $("#rememberMel:checked").length != 0 ? "1" : "0",//记住我
+                "authenticity_token": $("meta[name='csrf-token']").attr("content")
+            },
+            success: function(result) {
+                if (result.status == "ok") {
+                    $( "#dialog").html("登录成功，正在跳转").dialog({
+                        modal:true
+                    }).dialog("close");
+                    if(result.content){
+                        window.location.href=result.content;
+                        return;
+                    }
+                    window.location.reload();
+                } else {
+                    $( "#dialog").dialog({
+                        modal:true
+                    }).dialog("close");
+                    var _c = result.content;
+                    if(_c.email){
+                        $("#errorpasswordl").html(_c.email).css("display", "block")
+                    }
+
+                    if(_c.captcha){
+                        $("#captchaErrorl").html(_c.captcha).css("display", "block");
+                        $("#captchaImgl").click();
+                    }
+                    if(_c.password){
+                        $("#errorpasswordl").html(_c.password).css("display", "block");
+                        $("#captchaImgl").click();
                     }
                 }
             }
@@ -583,7 +649,13 @@ $(function($) {
             $("#captchaImg").attr("src", "/captcha?i="+new Date().getTime());
         });
     });
-
+      //刷新验证码
+    $(".updateCaptchal").each(function(){
+        $(this).click(function(){
+            $("#captchaImgl").attr("src", "/captcha?i="+new Date().getTime());
+        });
+    });
+    $(".updateCaptcha").click();
 
     //分享成功
     $(".share").each(function(){
@@ -596,7 +668,8 @@ $(function($) {
     });
 
     //检测用户是否注册过，如果注册过显示登录框，否则显示注册框
-    if(Cookie.Get("registered") == "1"){
+    var isCookie = typeof Cookie;
+    if(isCookie != "undefined" && Cookie.Get("registered") == "1"){
         //显示 登录
         $("#loginTip").click();
     }
