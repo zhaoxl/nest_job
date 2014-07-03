@@ -1,8 +1,9 @@
 .contentWrap{padding-top:100px;}
 .contentWrap .bg{position:fixed; top:0; left:0; bottom:0; right:0; z-index:-1; }
 .contentWrap .bg img{width:100%;height:100%;border:0;}
-.contentWrap h1{margin:0 0 30px 0;text-align:center;}
-.contentWrap h1 a{display:inline-block;width:235px;height:96px;background:url(../images/login_center.png) no-repeat;}
+.contentWrap h1{margin-bottom:5px;text-align:center;}
+.contentWrap h1 a{display:inline-block;width:172px;height:66px;background:url(../images/login_center.png) no-repeat;}
+.contentWrap h2{margin:0 0 30px 0;color:#474746;text-align:center;font-weight:normal;font-size:14px;}
 .contentWrap .regBox{width:556px;height:300px;margin:0 auto;padding:40px;background:#fff;opacity:0.8;filter:alpha(opacity=80);border-radius:8px;}
 .contentWrap .regBox .form{float:left;width:300px;/*height:270px;*/margin-right:50px;border-right:1px solid #bfbfbf;}
 .contentWrap .regBox .form li{width:240px;}
