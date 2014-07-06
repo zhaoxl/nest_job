@@ -47,11 +47,13 @@ class PostsController < ApplicationController
           "filter" => filter,
           "sort" => [],
           "facets" => {},
-          highlight: { fields: { 
-                                  title: {"pre_tags" => ["<b>"], "post_tags" => ["</b>"]}, 
-                                  sanitize_content: {"pre_tags" => ["<b>"], "post_tags" => ["</b>"]}, 
-                                  address: {"pre_tags" => ["<b>"], "post_tags" => ["</b>"]} } 
-                               }
+          highlight: { 
+            fields: { 
+              title: {"pre_tags" => ["<b>"], "post_tags" => ["</b>"]}, 
+              sanitize_content: {"pre_tags" => ["<b>"], "post_tags" => ["</b>"]}, 
+              address: {"pre_tags" => ["<b>"], "post_tags" => ["</b>"]} 
+            } 
+        }
       end
       @posts = @posts.page(params[:page]).per(5)
       @records = @posts.records.includes(:account)

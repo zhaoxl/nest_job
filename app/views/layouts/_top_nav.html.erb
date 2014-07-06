@@ -21,7 +21,7 @@
 <% if current_account.blank?%>
   <ul class="nav">
   	<li><%= link_to "找工作首页", index_index_path, class: "current"%></li>
-  	<li><%= link_to "找人才首页", hr_index_path%></li>
+  	<li><%= link_to "找人才首页", hr_root_path%></li>
     <li><%= link_to "登陆", new_account_session_path%></li>
   </ul>
 <%elsif current_account.account_type == Account::ACCOUNT_TYPE_WORKER%>

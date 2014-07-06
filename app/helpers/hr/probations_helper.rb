@@ -1,0 +1,2 @@
+module Hr::ProbationsHelper
+end

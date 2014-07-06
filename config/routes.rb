@@ -34,16 +34,36 @@ NestJob::Application.routes.draw do
   
   
   
+
   
-  
-  resources :hr, controller: "hr/index" do
+  resources :hr, controller: "hr/index", only: [] do
     collection do
       get :search
     end
   end
   namespace :hr do
+    root to: "index#index"
+    get ':id', to: 'index#show', constraints: {id: /\d+/}, shallow: true
     resources :posts
     resources :companies
+    resources :applies do
+      collection do
+        post :accept
+        post :reject
+      end
+    end
+    resources :auditions do
+      collection do
+        post :pass
+        post :fail
+      end
+    end
+    resources :probations do
+      collection do
+        post :pass
+        post :fail
+      end
+    end
   end
   
   
@@ -72,7 +92,7 @@ NestJob::Application.routes.draw do
     end
     resources :applies do
       collection do
-        post :ajax_create
+        post :create
       end
     end
     resources :resume_radars

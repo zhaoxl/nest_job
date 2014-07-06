@@ -24,7 +24,7 @@ class Hr::PostsController < ApplicationController
     post.company_id = Company.last.id
     post.save
     flash[:notice] = "保存完成"
-    redirect_to accounts_post_path(post)
+    redirect_to hr_post_path(post)
   end
   
   def show

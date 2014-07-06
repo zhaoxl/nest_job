@@ -6,16 +6,9 @@ module DiversityResult
         yield
       }
       
-      if flash[:error].present?
-        result = {status: "error", content: flash[:error]}
-      elsif flash[:alert].present?
-        result = {status: "alert", content: flash[:alert]}
-      else
-        result = {status: "ok", content: flash[:notice]}
-      end
-      flash[:error] = flash[:notice] = nil
-      
       format.json {
+        result = flash.to_hash.compact
+        flash.clear
         render json: result.to_json
       }
       format.js {

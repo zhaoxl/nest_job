@@ -30,32 +30,32 @@
     		<li><a href="<%= worker_applies_path%>" class="tit tCurrent">我申请的面试</a></li>
     		<li><a href="<%= worker_applies_path(status: :status_apply_normal)%>" class="<%= "current" if params[:status] == "status_apply_normal"%>">待HR处理</a></li>
     		<li><a href="<%= worker_applies_path(status: :status_apply_hr_reject)%>" class="<%= "current" if params[:status] == "status_apply_hr_reject"%>">HR拒绝</a></li>
-    		<li><a href="<%= worker_applies_path(status: :status_apply_wait_audition)%>" class="<%= "current" if params[:status] == "status_apply_wait_audition"%>">等待面试</a></li>
-    		<li><a href="<%= worker_applies_path(status: :status_apply_audition_passed)%>" class="<%= "current" if params[:status] == "status_apply_audition_passed"%>">面试通过</a></li>
-    		<li><a href="<%= worker_applies_path(status: :status_apply_audition_failed)%>" class="<%= "current" if params[:status] == "status_apply_audition_failed"%>">面试未通过</a></li>
-    		<li><a href="<%= worker_applies_path(status: :status_apply_probation_passed)%>" class="<%= "current" if params[:status] == "status_apply_probation_passed"%>">试用期通过</a></li>
-    		<li><a href="<%= worker_applies_path(status: :status_apply_probation_failed)%>" class="<%= "current" if params[:status] == "status_apply_probation_failed"%>">试用期未通过</a></li>
+    		<li><a href="<%= worker_applies_path(status: :status_wait_audition)%>" class="<%= "current" if params[:status] == "status_wait_audition"%>">等待面试</a></li>
+    		<li><a href="<%= worker_applies_path(status: :status_audition_passed)%>" class="<%= "current" if params[:status] == "status_audition_passed"%>">面试通过</a></li>
+    		<li><a href="<%= worker_applies_path(status: :status_audition_failed)%>" class="<%= "current" if params[:status] == "status_audition_failed"%>">面试未通过</a></li>
+    		<li><a href="<%= worker_applies_path(status: :status_probation_passed)%>" class="<%= "current" if params[:status] == "status_probation_passed"%>">试用期通过</a></li>
+    		<li><a href="<%= worker_applies_path(status: :status_probation_failed)%>" class="<%= "current" if params[:status] == "status_probation_failed"%>">试用期未通过</a></li>
     		<li><a href="<%= worker_invites_path(status: :status_invite_normal)%>" class="tit">HR面试消息</a></li>
     		<li><a href="<%= worker_invites_path(status: :status_invite_reject)%>" class="<%= "current" if params[:status] == "status_invite_reject"%>">我拒绝</a></li>
-    		<li><a href="<%= worker_invites_path(status: :status_invite_wait_audition)%>" class="<%= "current" if params[:status] == "status_invite_wait_audition"%>">我同意</a></li>
-    		<li><a href="<%= worker_invites_path(status: :status_invite_audition_passed)%>" class="<%= "current" if params[:status] == "status_invite_audition_passed"%>">面试通过</a></li>
-    		<li><a href="<%= worker_invites_path(status: :status_invite_audition_failed)%>" class="<%= "current" if params[:status] == "status_invite_audition_failed"%>">面试未通过</a></li>
-    		<li><a href="<%= worker_invites_path(status: :status_invite_probation_passed)%>" class="<%= "current" if params[:status] == "status_invite_probation_passed"%>">试用期通过</a></li>
-    		<li><a href="<%= worker_invites_path(status: :status_invite_probation_failed)%>" class="<%= "current" if params[:status] == "status_invite_probation_failed"%>">试用期未通过</a></li>
+    		<li><a href="<%= worker_invites_path(status: :status_wait_audition)%>" class="<%= "current" if params[:status] == "status_wait_audition"%>">我同意</a></li>
+    		<li><a href="<%= worker_invites_path(status: :status_audition_passed)%>" class="<%= "current" if params[:status] == "status_audition_passed"%>">面试通过</a></li>
+    		<li><a href="<%= worker_invites_path(status: :status_audition_failed)%>" class="<%= "current" if params[:status] == "status_audition_failed"%>">面试未通过</a></li>
+    		<li><a href="<%= worker_invites_path(status: :status_probation_passed)%>" class="<%= "current" if params[:status] == "status_probation_passed"%>">试用期通过</a></li>
+    		<li><a href="<%= worker_invites_path(status: :status_probation_failed)%>" class="<%= "current" if params[:status] == "status_probation_failed"%>">试用期未通过</a></li>
     		<li><a href="#" class="tit">基本资料</a></li>
     		<li><a href="#" class="tit">我的收藏</a></li>
     		<li><a href="#" class="tit">系统消息</a></li>
     	</ul>
     <%elsif current_account.account_type == Account::ACCOUNT_TYPE_HR%>
     	<ul class="subNav">
-    		<li><a href="#" class="tit tCurrent">我发起的面试</a></li>
-    		<li><a href="#" class="current">待HR处理</a></li>
-    		<li><a href="#">HR拒绝</a></li>
-    		<li><a href="#">HR同意</a></li>
-    		<li><a href="#">面试通过</a></li>
-    		<li><a href="#">面试未通过</a></li>
-    		<li><a href="#">试用期通过</a></li>
-    		<li><a href="#">试用期未通过</a></li>
+    		<li><a href="<%= hr_applies_path%>" class="tit tCurrent">应聘方发起的面试</a></li>
+    		<li><a href="<%= hr_applies_path(status: :status_apply_normal)%>" class="<%= "current" if params[:status] == "status_apply_normal"%>">待HR处理</a></li>
+    		<li><a href="<%= hr_applies_path(status: :status_apply_hr_reject)%>" class="<%= "current" if params[:status] == "status_apply_hr_reject"%>">HR拒绝</a></li>
+    		<li><a href="<%= hr_applies_path(status: :status_wait_audition)%>" class="<%= "current" if params[:status] == "status_wait_audition"%>">HR同意</a></li>
+    		<li><a href="<%= hr_applies_path(status: :status_audition_passed)%>" class="<%= "current" if params[:status] == "status_audition_passed"%>">面试通过</a></li>
+    		<li><a href="<%= hr_applies_path(status: :status_audition_failed)%>" class="<%= "current" if params[:status] == "status_audition_failed"%>">面试未通过</a></li>
+    		<li><a href="<%= hr_applies_path(status: :status_probation_passed)%>" class="<%= "current" if params[:status] == "status_probation_passed"%>">试用期通过</a></li>
+    		<li><a href="<%= hr_applies_path(status: :status_probation_failed)%>" class="<%= "current" if params[:status] == "status_probation_failed"%>">试用期未通过</a></li>
     		<li><a href="#" class="tit">HR发起的面试</a></li>
     		<li><a href="#">HR面试消息（1）</a></li>
     		<li><a href="#">我拒绝</a></li>

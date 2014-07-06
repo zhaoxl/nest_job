@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class AccountPostApplyTest < ActiveSupport::TestCase
+class Hr::ProbationsControllerTest < ActionController::TestCase
   # test "the truth" do
   #   assert true
   # end

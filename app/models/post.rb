@@ -1,5 +1,6 @@
 class Post < ActiveRecord::Base
   include Elasticsearch::Model
+  self.__elasticsearch__.client = ELASTICSEARCH_CLIENT
   #include Elasticsearch::Model::Callbacks
   after_save :sync_elasticsearch_index
   after_destroy { logger.debug ["Deleting document... ", (__elasticsearch__.delete_document rescue "Elasticsearch not connect")].join }
@@ -78,7 +79,7 @@ class Post < ActiveRecord::Base
   # Boolean
   def can_apply?(account_id)
     return false if account_id.blank?
-    !!AccountPostApply.by_account_id(account_id).by_post_id(self.id)
+    Workflow.by_worker_account_id(account_id).by_post_id(self.id).not_status("success").blank?
   end
   
   # 转换受保护的email地址
