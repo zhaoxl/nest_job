@@ -3,26 +3,7 @@
 		<!-- <div class="mm"> -->
 			<h2 class="h2Title">招聘方注册第2步</h2>
 			<%= form_for Company.new, url: hr_companies_path do |f|%>
-			<div class="form">
-				<div class="frm">
-					<span class="">公司全称</span>
-					<%= f.text_field :name,id: "mycompany",class: "verification","data-type" => "notnull","data-nohide" => "1", "error-id" => "errormycompany"%>
-					<span class="error" id="errormycompany">*请填写公司名称</span>
-				</div>
-				<div class="frm">
-					<span class="">联系电话</span>
-					<%= f.text_field :tel,id: "mytel",class: "verification","data-type" => "tel","data-nohide" => "1", "error-id" => "errormytel"%>
-					<span class="error" id="errormytel">*请填写“区号-号码”或手机号</span>
-				</div>
-				<div class="frm">
-					<span class="">接受简历的邮箱</span>
-					<%= f.text_field :email,id: "myemail",class: "verification","data-type" => "email","data-nohide" => "1", "error-id" => "errormyemail"%>
-					<span class="error" id="errormyemail">*请填写接受简历的邮箱</span>
-				</div>
-			</div>
-			<div class="registerBtn">
-        <%= f.submit raw("保&nbsp;存"), class: "btn"%>
-			</div>
+			  <%= render partial: "/hr/companies/form", locals: {f: f}%>
       <%end%>
 			<div class="questions">
 				<dl>

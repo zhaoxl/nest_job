@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140626111327) do
+ActiveRecord::Schema.define(version: 20140707123056) do
 
   create_table "account_post_applies", force: true do |t|
     t.integer  "account_id"
@@ -191,7 +191,6 @@ ActiveRecord::Schema.define(version: 20140626111327) do
     t.string   "home_page"
     t.string   "financing_stage"
     t.string   "area"
-    t.string   "account_ids"
     t.string   "logo_file_name"
     t.string   "logo_content_type"
     t.integer  "logo_file_size"
@@ -203,6 +202,7 @@ ActiveRecord::Schema.define(version: 20140626111327) do
     t.datetime "updated_at"
     t.string   "tel"
     t.string   "email"
+    t.text     "content"
   end
 
   create_table "company_invites", force: true do |t|
@@ -226,6 +226,16 @@ ActiveRecord::Schema.define(version: 20140626111327) do
     t.string   "post"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "company_id"
+  end
+
+  create_table "company_scenes", force: true do |t|
+    t.string   "name"
+    t.integer  "company_id"
+    t.string   "logo_file_name"
+    t.string   "logo_content_type"
+    t.integer  "logo_file_size"
+    t.datetime "logo_updated_at"
   end
 
   create_table "favorites", force: true do |t|

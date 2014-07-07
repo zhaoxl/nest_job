@@ -1,0 +1,49 @@
+<%company = current_account.company || current_account.build_company%>
+<%= form_for company, url: company.new_record? ? hr_companies_path : hr_company_path(company) do |f|%>
+<h2 class="h2Title">公司信息</h2>
+<div class="form">
+	<div class="frm">
+		<span class="">公司全称</span>
+		<%= f.text_field :name,id: "mycompany",class: "verification","data-type" => "notnull","data-nohide" => "1", "error-id" => "errormycompany"%>
+		<span class="error" id="errormycompany">*请填写公司名称</span>
+	</div>
+	<div class="frm">
+		<span class="">联系电话</span>
+		<%= f.text_field :tel,id: "mytel",class: "verification","data-type" => "tel","data-nohide" => "1", "error-id" => "errormytel"%>
+		<span class="error" id="errormytel">*请填写“区号-号码”或手机号</span>
+	</div>
+	<div class="frm">
+		<span class="">接受简历的邮箱</span>
+		<%= f.text_field :email,id: "myemail",class: "verification","data-type" => "email","data-nohide" => "1", "error-id" => "errormyemail"%>
+		<span class="error" id="errormyemail">*请填写接受简历的邮箱</span>
+	</div>
+	<div class="frm">
+		<span class="">公司性质</span>
+		<%= f.text_field :nature_id, id: "nature_id", class: "verification", "data-type" => "nature_id", "data-nohide" => "1", "error-id" => "errnature"%>
+		<span class="error" id="errnature">*请填写公司性质</span>
+	</div>
+	<div class="frm">
+		<span class="">公司行业</span>
+		<%= f.text_field :industry_id, id: "industry_id", class: "verification", "data-type" => "industry_id", "data-nohide" => "1", "error-id" => "errorindustry_id"%>
+		<span class="error" id="errorindustry_id">*请填写公司行业</span>
+	</div>
+	<div class="frm">
+		<span class="">网 址</span>
+		<%= f.text_field :home_page, id: "home_page", class: "verification", "data-type" => "home_page", "data-nohide" => "1", "error-id" => "errorhome_page"%>
+		<span class="error" id="errorhome_page">*请填写网址</span>
+	</div>
+	<div class="frm">
+		<span class="">融资阶段</span>
+		<%= f.text_field :financing_stage, id: "financing_stage", class: "verification", "data-type" => "financing_stage", "data-nohide" => "1", "error-id" => "errorfinancing_stage"%>
+		<span class="error" id="errorfinancing_stage">*请填写融资阶段</span>
+	</div>
+	<div class="frm">
+		<span class="">公司地址</span>
+		<%= f.text_field :area, id: "area", class: "verification", "data-type" => "area", "data-nohide" => "1", "error-id" => "errorarea"%>
+		<span class="error" id="errorarea">*请填写公司地址</span>
+	</div>
+</div>
+<div class="registerBtn">
+  <%= f.submit raw("保&nbsp;存"), class: "btn"%>
+</div>
+<%end%>

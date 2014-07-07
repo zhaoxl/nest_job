@@ -46,6 +46,8 @@ NestJob::Application.routes.draw do
     get ':id', to: 'index#show', constraints: {id: /\d+/}, shallow: true
     resources :posts
     resources :companies
+    resources :company_members
+    resources :company_scenes
     resources :applies do
       collection do
         post :accept

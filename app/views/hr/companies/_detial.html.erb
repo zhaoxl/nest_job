@@ -1,0 +1,86 @@
+<h2 class="h2Title">团队核心成员</h2>
+<%company = current_account.company || current_account.build_company%>
+<%= form_for company.company_members.build, url: hr_company_members_path, :html => { :multipart => true } do |f|%>
+<%= f.hidden_field :company_id%>
+<div class="form">
+	<div class="frm">
+		<span class="">成员头像</span>
+		<div class="file">
+			<span class="fImg"><img src="../images/file_default.png" alt="" /></span>
+			<a href="#">上传照片</a>
+		</div>
+		<!-- <span class="error">*请填写职位名称</span> -->
+	</div>
+	<div class="frm">
+		<span class="">成员姓名</span>
+		<%= f.text_field :name%>
+		<span class="error">*请填写昵称</span>
+	</div>
+	<div class="frm">
+		<span class="">成员职位</span>
+		<%= f.text_field :post%>
+		<span class="error">*请填写职位</span>
+	</div>
+</div>
+<div class="jobBtns">
+  <%= f.submit "添加成员"%>
+	<a href="#" class="btn">添加成员</a>
+</div>
+<%end%>
+<ul class="Imgslist userImgsList">
+  <% company.company_members.each do |member|%>
+	<li>
+		<div class="userImg">
+			<span class="uImg"><img src="../images/placeDemo.jpg" alt="" /></span>
+		</div>
+		<p><%= member.name%></p>
+		<p><%= member.post%></p>
+	</li>
+  <%end%>
+</ul>
+<h2 class="h2Title">公司场景展示</h2>
+<%company = current_account.company || current_account.build_company%>
+<%= form_for company.company_scenes.build, url: hr_company_scenes_path, :html => { :multipart => true } do |f|%>
+<%= f.hidden_field :company_id%>
+<div class="form">
+	<div class="frm">
+		<span class="">公司图片</span>
+		<div class="file">
+			<span class="fImg"><img src="../images/file_default.png" alt="" /></span>
+			<a href="#">上传照片</a>
+		</div>
+		<!-- <span class="error">*请填写职位名称</span> -->
+	</div>
+	<div class="frm">
+		<span class="">场景名称</span>
+		<%= f.text_field :name%>
+		<span class="error">*请填写昵称</span>
+	</div>
+</div>
+<div class="jobBtns">
+	<%= f.submit "添加照片"%>
+	<a href="#" class="btn">添加照片</a>
+</div>
+<%end%>
+<ul class="Imgslist placeImgslist">
+  <% company.company_scenes.each do |scene|%>
+	<li>
+		<div class="placeImg">
+			<span class="pImg"><img src="../images/placeDemo.jpg" alt="" /></span>
+			<a href="#">修改</a>
+		</div>
+		<p><%= scene.name%></p>
+	</li>
+  <%end%>
+</ul>
+<div class="form">
+	<div class="frm">
+		<span class="">公司介绍</span>
+		<textarea name="" id=""></textarea>
+		<span class="error">*请填写昵称</span>
+	</div>
+</div>
+<div class="jobBtns">
+	<!-- <a href="#" class="btnR">发起面试</a><a href="#" class="btnR">收    藏</a> -->
+	<a href="#" class="btn">保&nbsp;存</a>
+</div>

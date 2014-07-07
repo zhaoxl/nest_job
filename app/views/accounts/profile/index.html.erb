@@ -81,6 +81,10 @@
                         <a href="javascript:void(0)" id="saveInfo" class="btn">保&nbsp;存</a>
   					</div>
           <%end%>
+          <%if current_account.account_type == Account::ACCOUNT_TYPE_HR%>
+            <%= render partial: "/hr/companies/form"%>
+            <%= render partial: "/hr/companies/detial"%>
+          <%end%>
 				</div>
 			<!-- </div> -->
 			<%= render partial: "/layouts/right"%>
