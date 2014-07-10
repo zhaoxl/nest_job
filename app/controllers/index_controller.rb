@@ -48,6 +48,7 @@ class IndexController < ApplicationController
     end
     render json: result.to_json
   end
+  
 end
 
 

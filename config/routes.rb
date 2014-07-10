@@ -19,6 +19,7 @@ NestJob::Application.routes.draw do
     collection do
       post :ajax_update_hope
       get :error_notice
+      get :about
     end
   end
   
