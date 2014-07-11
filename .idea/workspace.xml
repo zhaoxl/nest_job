@@ -110,6 +110,7 @@
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/bin/service/lib/wrapper-windows-x86-64.dll" afterPath="Z:/elasticsearch-rtf/bin/service/lib/wrapper-windows-x86-64.dll" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-1.2.1/bin/service/lib/wrapper.jar" afterPath="Z:/elasticsearch-1.2.1/bin/service/lib/wrapper.jar" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/bin/service/lib/wrapper.jar" afterPath="Z:/elasticsearch-rtf/bin/service/lib/wrapper.jar" />
+      <change type="MODIFICATION" beforePath="Z:/Gemfile" afterPath="Z:/Gemfile" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/config/ik/IKAnalyzer.cfg.xml" afterPath="Z:/elasticsearch-rtf/config/ik/IKAnalyzer.cfg.xml" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/LICENSE.txt" afterPath="Z:/elasticsearch-rtf/LICENSE.txt" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/NOTICE.txt" afterPath="Z:/elasticsearch-rtf/NOTICE.txt" />
@@ -120,8 +121,6 @@
       <change type="MODIFICATION" beforePath="Z:/app/views/kaminari/_page.html.erb" afterPath="Z:/app/views/kaminari/_page.html.erb" />
       <change type="MODIFICATION" beforePath="Z:/app/views/kaminari/_paginator.html.erb" afterPath="Z:/app/views/kaminari/_paginator.html.erb" />
       <change type="MODIFICATION" beforePath="Z:/app/views/kaminari/_prev_page.html.erb" afterPath="Z:/app/views/kaminari/_prev_page.html.erb" />
-      <change type="MODIFICATION" beforePath="Z:/app/views/layouts/_top_nav.html.erb" afterPath="Z:/app/views/layouts/_top_nav.html.erb" />
-      <change type="MODIFICATION" beforePath="Z:/app/views/layouts/application.html.erb" afterPath="Z:/app/views/layouts/application.html.erb" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-1.2.1/plugins/rtf/_site/assets/css/bootstrap.css" afterPath="Z:/elasticsearch-1.2.1/plugins/rtf/_site/assets/css/bootstrap.css" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/plugins/rtf/_site/assets/css/bootstrap.css" afterPath="Z:/elasticsearch-rtf/plugins/rtf/_site/assets/css/bootstrap.css" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-1.2.1/plugins/rtf/_site/assets/js/bootstrap.js" afterPath="Z:/elasticsearch-1.2.1/plugins/rtf/_site/assets/js/bootstrap.js" />
@@ -147,10 +146,10 @@
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-1.2.1/bin/service/elasticsearch" afterPath="Z:/elasticsearch-1.2.1/bin/service/elasticsearch" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/bin/elasticsearch" afterPath="Z:/elasticsearch-rtf/bin/elasticsearch" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/bin/service/elasticsearch" afterPath="Z:/elasticsearch-rtf/bin/service/elasticsearch" />
+      <change type="MODIFICATION" beforePath="Z:/config/environment.rb" afterPath="Z:/config/environment.rb" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/config/ik/custom/ext_stopword.dic" afterPath="Z:/elasticsearch-rtf/config/ik/custom/ext_stopword.dic" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-1.2.1/plugins/rtf/_site/assets/fonts/glyphicons-halflings-regular.svg" afterPath="Z:/elasticsearch-1.2.1/plugins/rtf/_site/assets/fonts/glyphicons-halflings-regular.svg" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/plugins/rtf/_site/assets/fonts/glyphicons-halflings-regular.svg" afterPath="Z:/elasticsearch-rtf/plugins/rtf/_site/assets/fonts/glyphicons-halflings-regular.svg" />
-      <change type="MODIFICATION" beforePath="Z:/app/controllers/index_controller.rb" afterPath="Z:/app/controllers/index_controller.rb" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/config/logging.yml" afterPath="Z:/elasticsearch-rtf/config/logging.yml" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/config/ik/main.dic" afterPath="Z:/elasticsearch-rtf/config/ik/main.dic" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/config/ik/custom/mydict.dic" afterPath="Z:/elasticsearch-rtf/config/ik/custom/mydict.dic" />
@@ -160,6 +159,7 @@
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/config/ik/preposition.dic" afterPath="Z:/elasticsearch-rtf/config/ik/preposition.dic" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/config/ik/quantifier.dic" afterPath="Z:/elasticsearch-rtf/config/ik/quantifier.dic" />
       <change type="MODIFICATION" beforePath="Z:/config/routes.rb" afterPath="Z:/config/routes.rb" />
+      <change type="MODIFICATION" beforePath="Z:/app/controllers/accounts/sessions_controller.rb" afterPath="Z:/app/controllers/accounts/sessions_controller.rb" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/config/ik/stopword.dic" afterPath="Z:/elasticsearch-rtf/config/ik/stopword.dic" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/config/ik/suffix.dic" afterPath="Z:/elasticsearch-rtf/config/ik/suffix.dic" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/config/ik/surname.dic" afterPath="Z:/elasticsearch-rtf/config/ik/surname.dic" />
@@ -204,10 +204,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_top_nav.html.erb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="_top_nav.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://Z:/app/views/layouts/_top_nav.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="29" selection-start="865" selection-end="865" vertical-scroll-proportion="0.5971429" vertical-offset="0" max-vertical-offset="912">
+            <state line="24" column="52" selection-start="1003" selection-end="1003" vertical-scroll-proportion="0.0" vertical-offset="456" max-vertical-offset="912">
               <folding />
             </state>
           </provider>
@@ -216,19 +216,16 @@
       <file leaf-file-name="application.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://Z:/app/views/layouts/application.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="66" column="64" selection-start="3279" selection-end="3279" vertical-scroll-proportion="0.0" vertical-offset="1254" max-vertical-offset="1862">
+            <state line="49" column="51" selection-start="2780" selection-end="2780" vertical-scroll-proportion="0.0" vertical-offset="627" max-vertical-offset="1862">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="new.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://Z:/app/views/accounts/sessions/new.html.erb">
-          <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-            <state />
-          </provider>
+      <file leaf-file-name="面试未通过.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://Z:/public/鸟窝html/应聘方/面试未通过.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="123" column="31" selection-start="6644" selection-end="6644" vertical-scroll-proportion="0.0" vertical-offset="2024" max-vertical-offset="2660">
+            <state line="27" column="42" selection-start="968" selection-end="968" vertical-scroll-proportion="0.76339287" vertical-offset="0" max-vertical-offset="4674">
               <folding />
             </state>
           </provider>
@@ -304,7 +301,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -352,6 +348,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="鸟窝html" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Z" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Z:" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="鸟窝html" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="应聘方" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -691,6 +709,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -724,15 +743,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1456" height="886" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1456" height="886" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998565" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2374462" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2517934" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -817,16 +836,6 @@
         <state line="8" column="0" selection-start="442" selection-end="771" vertical-scroll-proportion="-5.428571" vertical-offset="0" max-vertical-offset="5092" />
       </provider>
     </entry>
-    <entry file="file://Z:/app/views/accounts/sessions/new.html.erb">
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="123" column="31" selection-start="6644" selection-end="6644" vertical-scroll-proportion="0.0" vertical-offset="2024" max-vertical-offset="2660">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://Z:/public/鸟窝html/javascripts/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="365" column="60" selection-start="13218" selection-end="13218" vertical-scroll-proportion="0.0" vertical-offset="6553" max-vertical-offset="31293">
@@ -834,16 +843,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://Z:/app/views/layouts/application.html.erb">
+    <entry file="file://Z:/app/views/layouts/_top_nav.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="64" selection-start="3279" selection-end="3279" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1862">
+        <state line="24" column="52" selection-start="1003" selection-end="1003" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="912">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://Z:/app/views/layouts/_top_nav.html.erb">
+    <entry file="file://Z:/app/views/layouts/application.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="29" selection-start="865" selection-end="865" vertical-scroll-proportion="0.5971429" vertical-offset="0" max-vertical-offset="912">
+        <state line="49" column="51" selection-start="2780" selection-end="2780" vertical-scroll-proportion="0.0" vertical-offset="627" max-vertical-offset="1862">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://Z:/public/鸟窝html/应聘方/面试未通过.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="42" selection-start="968" selection-end="968" vertical-scroll-proportion="0.76339287" vertical-offset="0" max-vertical-offset="4674">
           <folding />
         </state>
       </provider>

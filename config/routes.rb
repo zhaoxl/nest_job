@@ -6,10 +6,11 @@ NestJob::Application.routes.draw do
   devise_scope :account do
     post "/accounts/registrations/ajax_create" => "accounts/registrations#ajax_create"
     post "/accounts/sessions/ajax_create" => "accounts/sessions#ajax_create"
+    #get '/auth/:provider' => 'accounts/sessions#auth'
+    get '/auth/:provider/callback' => 'accounts/sessions#auth_create'
   end
     
   get '/' => 'index#index'
-  
   
   
   

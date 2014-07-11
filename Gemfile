@@ -94,3 +94,8 @@ gem 'acts-as-taggable-on'
 #html分析插件
 gem 'nokogiri', '1.6.2.1'
 gem 'unicorn', '~> 4.8'
+#微博插件
+gem 'weibo2'
+gem 'omniauth', '1.1.4'
+gem 'omniauth-weibo-oauth2', '0.3.0'
+gem 'omniauth-qq',  :git => 'git://github.com/blankyao/omniauth-qq.git'

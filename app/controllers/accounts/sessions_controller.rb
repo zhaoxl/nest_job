@@ -57,4 +57,54 @@ class Accounts::SessionsController < Devise::SessionsController
     end
     render json: result.to_json
   end
+  
+  def auth
+    case params[:provider]
+    when "weibo"
+      client = Weibo2::Client.new
+      redirect_to client.auth_code.authorize_url and return
+    end
+  end
+  
+  def auth_create
+    p auth_hash
+    binding.pry
+    #@authorization = Authorization.find_or_create_from_auth_hash(request.env['omniauth.auth'])
+    #session[:current_auth_id] = @authorization.id
+    #if @current_user.present?
+    #  # 登陆用户视为绑定
+    #  begin
+    #    cookies[:callback] = nil
+    #    @authorization.bind_user(@current_user)
+    #    if @callback = request.env['omniauth.params']["callback"]
+    #      render layout: false and return
+    #    end
+    #    return_to = (cookies[:return_to].present? ? cookies[:return_to] : "/tools/#{@authorization.provider}")
+    #    cookies[:return_to] = nil
+    #    redirect_to return_to
+    #  rescue BindUserError
+    #    cookies[:callback] = request.env['omniauth.params']["callback"] if request.env['omniauth.params']["callback"]
+    #    redirect_to "/tools/#{@authorization.provider}", :flash => { :account_name => @current_user.name }
+    #  rescue BindAuthError
+    #    cookies[:return_to] = "/tools/#{@authorization.provider}"
+    #    cookies[:callback] = request.env['omniauth.params']["callback"] if request.env['omniauth.params']["callback"]
+    #    redirect_to "/tools/#{@authorization.provider}", :flash => { :auth_name => @authorization.name }
+    #  end
+    #elsif !@authorization.deleted and @authorization.user_id.present?
+    #  # 未登录用户 微博帐号已经绑定天际帐号
+    #  # 产品经理陈昌宏 2012-9-27 说未登录用户，用新浪微博登陆，如果微博帐号已经绑定天际帐号，则把该天际帐号直接设成登陆状态
+    #  session[:current_user_id] = @authorization.user_id
+    #  @current_account = Account.find(@authorization.user_id) rescue nil
+    #  return_url = (cookies[:return_to].present? ? cookies[:return_to] : 'http://www.tianji.com/home')
+    #  return_url = return_url =~ /^http:/ ? return_url : "http://www.tianji.com#{return_url}"
+    #  redirect_to cas_login_address(@current_account.login_account, @current_account.password_or_crypted_password, return_url)
+    #else
+    #  # 未登录用户 微博帐号没有绑定天际帐号
+    #  redirect_to new_from_auth_account_accounts_path
+    #end
+  end
+  
+  def auth_hash
+    request.env['omniauth.auth']
+  end
 end
