@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140707123056) do
+ActiveRecord::Schema.define(version: 20140715034607) do
 
   create_table "account_post_applies", force: true do |t|
     t.integer  "account_id"
@@ -22,6 +22,16 @@ ActiveRecord::Schema.define(version: 20140707123056) do
     t.string   "status"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "account_radars", force: true do |t|
+    t.integer  "account_id"
+    t.string   "status"
+    t.boolean  "can_search",          default: true
+    t.boolean  "subscribe",           default: true
+    t.integer  "subscribe_frequency", default: 3
+    t.datetime "start_date"
+    t.datetime "end_date"
   end
 
   create_table "account_resume_educations", force: true do |t|
@@ -170,6 +180,18 @@ ActiveRecord::Schema.define(version: 20140707123056) do
     t.string   "reply",             limit: 2000
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "authorizations", force: true do |t|
+    t.integer "account_id"
+    t.string  "provider"
+    t.string  "uid"
+    t.string  "token"
+    t.string  "nickname"
+    t.string  "logo"
+    t.string  "gender"
+    t.string  "province"
+    t.string  "city"
   end
 
   create_table "bills", force: true do |t|

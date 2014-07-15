@@ -7,11 +7,8 @@ module DiversityResult
       }
       
       format.json {
-        result = flash.to_hash.compact
+        result = flash.to_hash.compact.map{|item| {status: item[0], content: item[1]}}.first
         flash.clear
-        render json: result.to_json
-      }
-      format.js {
         render json: result.to_json
       }
     end

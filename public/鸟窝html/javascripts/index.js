@@ -170,7 +170,9 @@ $(function($) {
                 "captcha": $("#mycaptcha").val() || "",//验证码
                 "rememberme": $("#rememberMe:checked").length != 0 ? "1" : "0",//
                 "user_type": user_type,//用户类型
-                "authenticity_token": $("meta[name='csrf-token']").attr("content")
+                "authenticity_token": $("meta[name='csrf-token']").attr("content"),
+                "provider": $("#provider").val(),
+                "uid": $("#uid").val()
             },
             success: function(result) {
                 if (result.status == "ok") {
@@ -355,7 +357,9 @@ $(function($) {
                 "account[password]": $.trim($("#mypwdl").val()),//密码
                 "captcha": $("#mycaptchal").val() || "",//验证码
                 "rememberme": $("#rememberMel:checked").length != 0 ? "1" : "0",//记住我
-                "authenticity_token": $("meta[name='csrf-token']").attr("content")
+                "authenticity_token": $("meta[name='csrf-token']").attr("content"),
+                "provider": $("#provider").val(),
+                "uid": $("#uid").val()
             },
             success: function(result) {
                 if (result.status == "ok") {

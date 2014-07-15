@@ -4,20 +4,20 @@ class Accounts::SessionsController < Devise::SessionsController
     render layout: false
   end
   
-  def create
-    super
-    #从cookie取出首页关联的标签
-    current_account_resume = current_account.current_account_resume
-    #如果简历里没有则从cookie取，否则存入cookie
-    if current_account_resume.hope_area.blank?
-      current_account_resume.hope_area = cookies[:account_hope_area] if cookies[:account_hope_area].present?
-      current_account_resume.tag_list.add(cookies[:account_tag_list].split(",")) if cookies[:account_tag_list].present?
-      current_account_resume.save
-    else
-      cookies.permanent[:account_hope_area] = current_account_resume.hope_area
-      cookies.permanent[:account_tag_list] = current_account_resume.tag_list * ","
-    end
-  end
+  #def create
+  #  super
+  #  #从cookie取出首页关联的标签
+  #  current_account_resume = current_account.current_account_resume
+  #  #如果简历里没有则从cookie取，否则存入cookie
+  #  if current_account_resume.hope_area.blank?
+  #    current_account_resume.hope_area = cookies[:account_hope_area] if cookies[:account_hope_area].present?
+  #    current_account_resume.tag_list.add(cookies[:account_tag_list].split(",")) if cookies[:account_tag_list].present?
+  #    current_account_resume.save
+  #  else
+  #    cookies.permanent[:account_hope_area] = current_account_resume.hope_area
+  #    cookies.permanent[:account_tag_list] = current_account_resume.tag_list * ","
+  #  end
+  #end
   
   def ajax_create
     result = {status: "ok"}
@@ -38,6 +38,13 @@ class Accounts::SessionsController < Devise::SessionsController
           else
             cookies.permanent[:account_hope_area] = current_account_resume.hope_area
             cookies.permanent[:account_tag_list] = current_account_resume.tag_list * ","
+          end
+          
+          #判断是否是微博绑定用户，如果是则绑定微博账号
+          if params[:provider].present? && params[:uid].present?
+            if auth = Authorization.by_auth(params[:provider], params[:uid]).first
+              auth.bind_account(resource)
+            end
           end
           
           #登陆
@@ -67,41 +74,20 @@ class Accounts::SessionsController < Devise::SessionsController
   end
   
   def auth_create
-    p auth_hash
-    binding.pry
-    #@authorization = Authorization.find_or_create_from_auth_hash(request.env['omniauth.auth'])
-    #session[:current_auth_id] = @authorization.id
-    #if @current_user.present?
-    #  # 登陆用户视为绑定
-    #  begin
-    #    cookies[:callback] = nil
-    #    @authorization.bind_user(@current_user)
-    #    if @callback = request.env['omniauth.params']["callback"]
-    #      render layout: false and return
-    #    end
-    #    return_to = (cookies[:return_to].present? ? cookies[:return_to] : "/tools/#{@authorization.provider}")
-    #    cookies[:return_to] = nil
-    #    redirect_to return_to
-    #  rescue BindUserError
-    #    cookies[:callback] = request.env['omniauth.params']["callback"] if request.env['omniauth.params']["callback"]
-    #    redirect_to "/tools/#{@authorization.provider}", :flash => { :account_name => @current_user.name }
-    #  rescue BindAuthError
-    #    cookies[:return_to] = "/tools/#{@authorization.provider}"
-    #    cookies[:callback] = request.env['omniauth.params']["callback"] if request.env['omniauth.params']["callback"]
-    #    redirect_to "/tools/#{@authorization.provider}", :flash => { :auth_name => @authorization.name }
-    #  end
-    #elsif !@authorization.deleted and @authorization.user_id.present?
-    #  # 未登录用户 微博帐号已经绑定天际帐号
-    #  # 产品经理陈昌宏 2012-9-27 说未登录用户，用新浪微博登陆，如果微博帐号已经绑定天际帐号，则把该天际帐号直接设成登陆状态
-    #  session[:current_user_id] = @authorization.user_id
-    #  @current_account = Account.find(@authorization.user_id) rescue nil
-    #  return_url = (cookies[:return_to].present? ? cookies[:return_to] : 'http://www.tianji.com/home')
-    #  return_url = return_url =~ /^http:/ ? return_url : "http://www.tianji.com#{return_url}"
-    #  redirect_to cas_login_address(@current_account.login_account, @current_account.password_or_crypted_password, return_url)
-    #else
-    #  # 未登录用户 微博帐号没有绑定天际帐号
-    #  redirect_to new_from_auth_account_accounts_path
-    #end
+    @authorization = Authorization.find_or_create_from_auth_hash(auth_hash)
+    session[:current_auth_id] = @authorization.id
+    if @current_account.present?
+      #直接绑定
+      @authorization.bind_account(@current_account)
+      redirect_to (cookies.delete(:goto)||index_index_path) and return
+    elsif account = @authorization.account
+      #如果用户已经绑定过则直接登录
+      sign_in(:account, account)
+      redirect_to (cookies.delete(:goto)||index_index_path) and return
+    elsif @current_account.blank?
+      #没登陆就去注册页
+      redirect_to new_account_session_path(provider: @authorization.provider, uid: @authorization.uid) and return
+    end
   end
   
   def auth_hash

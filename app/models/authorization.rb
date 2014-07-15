@@ -1,6 +1,8 @@
 class Authorization < ActiveRecord::Base
   belongs_to :account
   
+  scope :by_auth, ->(provider, uid){where(provider: provider).where(uid: uid)}
+  
   def self.find_or_create_from_auth_hash(auth_hash)
     auth_hash.deep_symbolize_keys!
     provider = auth_hash[:provider]
@@ -8,10 +10,18 @@ class Authorization < ActiveRecord::Base
     authorization = find_or_create_by({provider: params[:provider], uid: params[:uid]})
     authorization.assign_attributes(params)
     authorization.save
+    authorization
+  end
+  
+  def bind_account(account)
+    return false if account.blank?
+    
+    self.account = account
+    self.save
   end
   
   private
-  def qq_params(auth_hash)
+  def self.qq_params(auth_hash)
     params = {
       provider: auth_hash[:provider],
       uid: auth_hash[:uid],
@@ -24,7 +34,7 @@ class Authorization < ActiveRecord::Base
     }
   end
   
-  def weibo_params(auth_hash)
+  def self.weibo_params(auth_hash)
     params = {
       provider: auth_hash[:provider],
       uid: auth_hash[:uid],

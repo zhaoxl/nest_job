@@ -43,6 +43,13 @@ class Accounts::RegistrationsController < Devise::RegistrationsController
       current_account_resume.tag_list.add(cookies[:account_tag_list].split(",")) if cookies[:account_tag_list].present?
       current_account_resume.save
       
+      #判断是否是微博绑定用户，如果是则绑定微博账号
+      if params[:provider].present? && params[:uid].present?
+        if auth = Authorization.by_auth(params[:provider], params[:uid]).first
+          auth.bind_account(resource)
+        end
+      end
+      
       #登陆
       sign_in(:account, resource)
       hr_register_step2_path = new_hr_company_path if resource.account_type = Account::ACCOUNT_TYPE_HR
