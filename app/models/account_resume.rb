@@ -6,7 +6,6 @@ class AccountResume < ActiveRecord::Base
   has_many :account_resume_objects
   has_many :account_resume_educations
   has_many :account_resume_radars
-  has_one  :account_radar
   #tag插件
   acts_as_taggable
   

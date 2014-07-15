@@ -23,6 +23,7 @@ class Account < ActiveRecord::Base
   has_many :posts
   has_many :favorites
   has_many :hr_search_logs
+  has_one  :account_radar, class_name: AccountRadar
   
   scope :by_email, lambda{|email| where(email: email)}
   scope :by_resume_ct_desc, ->{joins("INNER JOIN account_resumes ON accounts.id = account_resumes.account_id").order("account_resumes.created_at DESC")}

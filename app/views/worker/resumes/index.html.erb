@@ -248,49 +248,43 @@
   		</li>
   		<li>
   			<h3><i>* </i>雷达设置 |  <span>定制您的个性化</span></h3>
+        <%= form_for current_account.account_radar||current_account.build_account_radar, url: save_worker_radars_path, method: :post do |f|%>
   			<div class="form">
   				<div class="frm">
   					<span class="">目前状态：</span>
-                              <select name="current_situation" style="width:154px;" id="current_situation">
-                                  <option value="0" selected="selected">目前正在找工作</option>
-                                  <option value="1">半年内无换工作的计划</option>
-                                  <option value="2">一年内无换工作的计划</option>
-                                  <option value="3">观望有好的机会再考虑</option>
-                                  <option value="4">我暂时不想找工作</option>
-                              </select>
+            <%= f.select :idea, AccountRadar::IDEA_TYPES, style: "width:154px;"%>
   					<span class="error">*请选择目前状态</span>
   				</div>
   				<div class="frm">
   					<span class="lgspan">是否被单位搜索：</span>
-  					<label><input type="radio" value="1"  checked="checked" class="rad" name="issearch">是</label>
-  					<label><input type="radio" value="2"  class="rad" name="issearch">否</label>
+  					<label><%= f.radio_button :can_search, true, class: "rad"%>是</label>
+  					<label><%= f.radio_button :can_search, false, class: "rad"%>否</label>
   					<span class="error">*请选择性别</span>
   				</div>
   				<div class="frm">
   					<span class="">是否订阅：</span>
-  					<label><input type="radio" value="1"  checked="checked" class="rad" name="rad">是</label>
-  					<label><input type="radio" value="1"  class="rad" name="rad">否</label>
+  					<label><%= f.radio_button :subscribe, true, class: "rad"%>是</label>
+  					<label><%= f.radio_button :subscribe, false, class: "rad"%>否</label>
   					<span class="error">*请选择性别</span>
   				</div>
   				<div class="frm">
   					<span class="">订阅频率：</span>
-  					<select name="" id="">
-  						<option value="1">3天 / 次</option>
-  						<option value="2">7天 / 次</option>
-  					</select>
+            <%= f.select :subscribe_frequency, AccountRadar::SUBSCRIBE_FREQUENCIES, style: "width:154px;"%>
   					<span class="error">*请填写开始时间</span>
   				</div>
   				<div class="frm">
   					<span class="">订阅开始时间：</span>
-  					<input type="text" class="timeDatepicker verification" data-noHide="1" data-type = "date"  id="on_line_time" error-id="erroron_line_time"/>
+            <%= f.text_field :start_date, class: "timeDatepicker verification", "data-noHide" => "1", "data-type" => "date",  id: "on_line_time", "error-id" => "erroron_line_time"%>
   					<span class="error" id="erroron_line_time">*请填写开始时间</span>
   				</div>
                           <div class="frm">
   					<span class="">订阅结束时间：</span>
-  					<input type="text" class="timeDatepicker verification"  data-noHide="1"  data-type = "date" id="off_line_time" error-id="erroroff_line_time"/>
+            <%= f.text_field :end_date, class: "timeDatepicker verification", "data-noHide" => "1", "data-type" => "date",  id: "off_line_time", "error-id" => "erroroff_line_time"%>
   					<span class="error" id="erroroff_line_time">*请填写结束时间</span>
   				</div>
   			</div>
+        <%= f.submit "保存"%>
+        <%end%>
   		</li>
   	</ul>
   	<div class="jobBtns">

@@ -2,7 +2,7 @@ class CreateAccountRadars < ActiveRecord::Migration
   def change
     create_table :account_radars do |t|
       t.references  :account
-      t.string      :status
+      t.string      :idea
       t.boolean     :can_search,                default: true
       t.boolean     :subscribe,                 default: true
       t.integer     :subscribe_frequency,       default: 3

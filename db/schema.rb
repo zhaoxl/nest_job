@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 20140715034607) do
 
   create_table "account_radars", force: true do |t|
     t.integer  "account_id"
-    t.string   "status"
+    t.string   "idea"
     t.boolean  "can_search",          default: true
     t.boolean  "subscribe",           default: true
     t.integer  "subscribe_frequency", default: 3

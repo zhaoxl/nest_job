@@ -8,7 +8,6 @@ class Worker::RadarsController < ApplicationController
       unless object.update_attributes(object_create_params)
         raise AjaxException.new(object.errors.messages.inject({}){|hash, item| hash[item[0]] = item[1]*','; hash})
       end
-
     rescue Exception => ex
       flash[:error] = ex.message
       logger.error "action error log================================================"
@@ -23,6 +22,6 @@ class Worker::RadarsController < ApplicationController
   
   private  
   def object_create_params  
-    params.require(:account_radar).permit(:status, :can_search, :subscribe, :subscribe_frequency, :start_date, :end_date)  
+    params.require(:account_radar).permit(:idea, :can_search, :subscribe, :subscribe_frequency, :start_date, :end_date)  
   end 
 end

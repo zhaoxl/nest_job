@@ -94,6 +94,11 @@ NestJob::Application.routes.draw do
         post :ajax_save
       end
     end
+    resources :radars do
+      collection do
+        post :save
+      end
+    end
     resources :applies do
       collection do
         post :create
