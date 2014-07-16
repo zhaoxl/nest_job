@@ -912,7 +912,7 @@ $(function($) {
         $.ajax({
             dataType: "json",
             type: "post",
-            url: "/worker/applies/ajax_create",
+            url: "/worker/applies/create",
             data: {
                 "post_id": jobID,//职位
                 "price": interviewCurrency,
@@ -920,7 +920,7 @@ $(function($) {
                 "authenticity_token": $("meta[name='csrf-token']").attr("content")
             },
             success: function(result) {
-                if (result.status == "ok") {
+                if (result.status == "success") {
                     $( "#dialog").html("发起成功，等待HR处理").dialog({
                         modal:true,
                         close:function(){}

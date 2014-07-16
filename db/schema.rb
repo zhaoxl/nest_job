@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140715034607) do
+ActiveRecord::Schema.define(version: 20140716095456) do
 
   create_table "account_post_applies", force: true do |t|
     t.integer  "account_id"
@@ -304,6 +304,10 @@ ActiveRecord::Schema.define(version: 20140715034607) do
     t.integer  "message_level"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "natures", force: true do |t|
+    t.string "name"
   end
 
   create_table "post_tags", force: true do |t|

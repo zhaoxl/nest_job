@@ -41,7 +41,7 @@
 			<h2 class="h2Title">职位详情</h2>
 			<div class="jobDetail">
 				<div class="hrInfo">
-					<div class="hrImg"><a href="#"><img src="images/user_demo.jpg" alt=""></a></div>
+					<div class="hrImg"><%= link_to image_tag(@post.account.logo(:thumb)), "#"%></div>
 					<div class="hrIf">
 						<p><span><%= current_account.nick_name%> （<%= @post.protect_email%>）</span></p>
 						<p class="hot"><span>发布了  <%= @post.title%></span></p> 

@@ -92,9 +92,12 @@ class Post < ActiveRecord::Base
   # ==== 返回类型
   # String
   def self.convert_protect_email(email)
+    email.strip!
     return "" if email.blank?
-    
-    email.sub(/^.{4}(.+)@.+$/.match(email)[1], "**")
+
+    if trim_match = /^.{4}(.+)@.+$/.match(email) || trim_match = /^(.+)@.+$/.match(email)
+      email.sub(trim_match[1], "**")
+    end
   end
   
   
