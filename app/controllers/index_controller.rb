@@ -14,7 +14,7 @@ class IndexController < ApplicationController
     @posts = nil
     if @account_tags.present?
       @posts = Post.tagged_with(@account_tags, :any => true).by_look_num_desc
-      @posts = @posts.by_area(@account_hope_area) if @account_hope_area.present?
+      @posts = @posts.by_area(@account_hope_area) if @account_hope_area.present? && @account_hope_area != "选择城市"
       @posts = @posts.page(params[:page]).per(5)
       if @posts.blank?
         @hot_posts = Post.by_look_num_desc.page(params[:page]).per(5)
