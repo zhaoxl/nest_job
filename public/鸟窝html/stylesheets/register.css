@@ -55,7 +55,7 @@
 .mSubNav li .t_current{background-position:-60px 0;color:#464c52;}
 
 .mm .postForm{width:716px;height:415px;background:url(../images/nw_index.png) no-repeat;}
-.postForm .hopePost{width:580px;margin-left:90px;padding-top:120px;}
+.postForm .hopePost{width:580px;margin-left:175px;padding-top:75px;}
 .postForm .hopePost .frm{overflow:hidden;zoom:1;}
 .postForm .hopePost span{float:left;width:90px;font:17px '微软雅黑';}
 .postForm .hopePost .posts{overflow:hidden;zoom:1;width:480px;}
@@ -94,10 +94,31 @@
 .questions .highlight{color:#27a695;}
 
 
+/*menuBar*/
+.mm .menuBar{margin-bottom:30px;/*overflow:hidden;zoom:1;*/}
+.mm .menuBar li{float:left;width:115px;margin-left:3px;}
+.mm .menuBar li a{display:block;height:40px;line-height:38px;background:url(../images/register_menu.png) no-repeat;text-align:center;color:#000;font-size:14px;}
+.mm .menuBar li .current{background-position:0 -43px;color:#27a695;}
+.mm .menuBar li .tips{display:block;height:51px;line-height:50px;margin-top:-10px;background:url(../images/register_menu.png) no-repeat 8px -85px;font-size:18px;}
+.mm .menuBar li .tips i{display:block;margin-left:32px;padding-top:6px;font-style:normal;}
 
 
+/*processor_guide*/
+.mm .procGuide{overflow:hidden;zoom:1;}
+.mm .procGuide li{float:left;width:100px;margin-right:30px;text-align:center;}
+.mm .procGuide li a{font-size:14px;color:#6b7271;font-weight:bold;}
+.mm .procGuide li.last{width:70px;margin-left:6px;margin-right:0;}
+.mm .procGuide li .current{color:#27a696;}
+.mm .procGuide .third{margin-left:-10px;}
+.mm .pgd2{float:right;margin-bottom:30px;}
+/*.mm .pgd2 li.last{width:70px;}*/
 
-
-
-
-
+.mm .processorBar{height:50px;}
+.mm .processorBar .pb{width:693px;height:45px;margin:0 auto;background:url(../images/processBar.png) no-repeat;}
+.mm .processorBar .p0{background-position:0 0;}
+.mm .processorBar .p1{background-position:0 -45px;}
+.mm .processorBar .p2{background-position:0 -90px;}
+.mm .processorBar .p3{background-position:0 -135px;}
+.mm .processorBar .p4{background-position:0 -180px;}
+.mm .processorBar .p5{background-position:0 -225px;}
+.mm .processorBar .p6{background-position:0 -270px;}
