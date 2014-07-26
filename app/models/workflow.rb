@@ -1,8 +1,8 @@
 class Workflow < ActiveRecord::Base
   before_create :update_work_class_name
   
-  belongs_to :worker, class_name: :account, primary_key: :worker_account_id
-  belongs_to :hr, class_name: :account, primary_key: :hr_account_id
+  belongs_to :worker, class_name: Account, foreign_key: :worker_account_id
+  belongs_to :hr, class_name: Account, foreign_key: :hr_account_id
   belongs_to :post
   belongs_to :company
   
@@ -40,7 +40,6 @@ class Workflow < ActiveRecord::Base
       transitions from: :status_audition_passed, to: :status_probation_passed
     end
   end
-  
   
   
   private

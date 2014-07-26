@@ -8,7 +8,7 @@ class Hr::PostsController < ApplicationController
 	def new
     if current_account.company.blank?
       cookies[:goto] = request.original_url
-      redirect_to new_accounts_company_path and return
+      redirect_to new_hr_company_path and return
     end
     
 		@post = Post.new

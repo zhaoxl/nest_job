@@ -1,7 +1,7 @@
 .companyInfo{padding:30px 10px;margin-bottom:20px;background:#fff;color:#2c2c2c;font-size:14px;line-height:1.8;}
 .companyInfo .compImg img{border:1px solid #bcbdbd;}
 .companyInfo .cmpUrl a{color:#807d7d;text-decoration:underline;}
-.companyInfo .slide{width:100px;height:90px;margin:20px 0;border:1px solid #000;}
+.companyInfo .slide{height:100px;border:1px solid #000;}
 .members{overflow:hidden;padding:0 30px;background:#fff;}
 .members li{padding:30px 0;text-align:center;color:#6b6868;font-size:14px;margin-top:-1px;border-top:1px dashed #e8e8e8;}
 .members li .name{color:#2c2c2c;}

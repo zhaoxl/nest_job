@@ -1,3 +1,4 @@
+class AccountResumeIncompleteException < Exception;end
 class AccountResume < ActiveRecord::Base
   attr_accessor :tags
   
@@ -39,4 +40,14 @@ class AccountResume < ActiveRecord::Base
     age
   end
   
+  #判断简历是否完善
+  def complete?
+    self.name.present? &&
+    self.birthday.present? &&
+    self.tel.present? &&
+    self.email.present? &&
+    self.account_resume_experiences.present? &&
+    self.account_resume_objects.present? &&
+    self.account_resume_educations.present?
+  end
 end

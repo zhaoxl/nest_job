@@ -1,0 +1,41 @@
+<div class="mainContainer">
+	<div class="main">
+		<div class="ml">
+			<h2 class="regH2">推荐公司</h2>
+			<ul class="brands">
+				<li><a href="#" class="baidu"><span>百度</span></a></li>
+				<li><a href="#" class="baiduyun"><span>百度云</span></a></li>
+				<li><a href="#" class="huaban"><span>花瓣</span></a></li>
+				<li><a href="#" class="oneshop"><span>1号店</span></a></li>
+				<li><a href="#" class="jd"><span>京东</span></a></li>
+				<li><a href="#" class="sina"><span>新浪</span></a></li>
+			</ul>
+		</div>
+		<div class="mm">
+			<h2 class="h2Title">我的收藏</h2>
+			<ul class="employment">
+        <%@favorites.each do |favorite|%>
+				<li class="current">
+					<div class="employInfo">
+  					<div class="userImg"><%= link_to image_tag(post.account.logo(:thumb)), "#"%></div>
+  					<div class="employDetail">
+  						<p><span class="b"><%= post.account.nick_name%>   （<%= post.protect_email%>）</span><span>发布了  <%= post.title%></span></p>  
+  						<p><span class="b">地点：<%= post.address%></span><span class="b">公司：<%= post.company.name%></span><span class="b">薪资：<%= "#{post.price_min.to_i}k ~ #{post.price_max.to_i}k"%></span></p>
+  						<dl>
+  						 	<dt>职位要求：</dt>
+  						 	<%= sanitize post.content %>
+  						 </dl> 
+  					</div>
+					</div>
+					<div class="employBtns">
+						<a href="#" class="btnR">发起面试</a>
+						<a href="#" class="btnR">取消收藏</a>
+					</div>
+				</li>
+				<%end%>
+			</ul>
+      <%= paginate @favorites, window: 6%>
+		</div>
+	</div>
+	<%= render partial: "/layouts/right"%>
+</div>

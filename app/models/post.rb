@@ -1,6 +1,8 @@
 class Post < ActiveRecord::Base
   include Elasticsearch::Model
-  self.__elasticsearch__.client = ELASTICSEARCH_CLIENT
+  development_settings = {log: true, trace: true} if Rails.env.development?
+  self.__elasticsearch__.client = Elasticsearch::Client.new({host: "54.250.192.6:9200"}.merge(development_settings||{}))
+  #self.__elasticsearch__.client = ELASTICSEARCH_CLIENT
   #include Elasticsearch::Model::Callbacks
   after_save :sync_elasticsearch_index
   after_destroy { logger.debug ["Deleting document... ", (__elasticsearch__.delete_document rescue "Elasticsearch not connect")].join }

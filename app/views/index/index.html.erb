@@ -12,17 +12,7 @@
 			</ul>
 		</div>
 		<div class="mm">
-        <ul class="mSubNav">
-            <li><a href="#" class="findTit">发现</a></li>
-            <li class="loginTip" data-msgtip="请填写期望：职位与城市"><a href="javascript:void(0)" class="f_current">JS</a></li>
-            <li class="loginTip" data-msgtip="请填写期望：职位与城市"><a href="javascript:void(0)" class="f_btn">CSS</a></li>
-            <li class="loginTip" data-msgtip="请填写期望：职位与城市"><a href="javascript:void(0)" class="f_btn">UI</a></li>
-            <li class="loginTip" data-msgtip="请填写期望：职位与城市"><a href="javascript:void(0)" class="f_btn">PM</a></li>
-            <!--<li><a href="#" class="topTit">热门</a></li>
-            <%#self_hot_search_tags.each do |tag|%>
-            <li class="loginTip" data-msgtip="请填写期望：职位与城市"><a href="<%#= search_posts_path(k: tag.name)%>" class="t_current"><%#= tag.name%></a></li>
-            <%#end%>-->
-        </ul>
+        <%= render partial: "/layouts/top_timeline"%>
         <%if @account_tags.blank? || @account_hope_area.blank?%>
         <h2 class="indexH2">嗨，给自己期望的工作留点印记吧，才能进行下一步哦！！！</h2>
                 <div class="postForm">
@@ -47,6 +37,7 @@
                     </div>
                 </div>
                 <%else%>
+                  <%resume_is_complete = current_account && current_account.current_account_resume.complete?%>
                   <%if @hot_posts.present?%>
                     <p class="nohopeJob">您期望的职位让小伙们惊呆了( ⊙ o ⊙ )啊！居然没有，我们会尽快补全，尝试一下其它职位吧！</p>
                   <%end%>
@@ -66,7 +57,7 @@
                 				</div>
 
                 				<div class="employBtns">
-                					<a href="javascript:void(0)" jobid="<%= post.id%>" class="btnR initiateInterviewBtn">发起面试</a><a href="<%= post_path(post)%>" class="btnR">查    看</a><a jobid="<%= post.id%>"  onclick="addCollect(this)" href="javascript:void(0)" class="btnR">收    藏</a>
+                					<a href="javascript:void(0)" jobid="<%= post.id%>" class="btnR initiateInterviewBtn" resume_complete="<%= resume_is_complete%>">发起面试</a><a href="<%= post_path(post)%>" class="btnR">查    看</a><a jobid="<%= post.id%>"  onclick="addCollect(this)" href="javascript:void(0)" class="btnR">收    藏</a>
                 				</div>
                 			</li>
                       <%end%>

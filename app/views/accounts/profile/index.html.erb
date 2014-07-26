@@ -40,7 +40,7 @@
   							<span class="error" id="errorpeopleCompanyEmail">*请填写公司邮箱</span>
   						</div>
   						<div class="frm">
-  							<span class="">关注行业：</span>
+  							<span class="">所在行业：</span>
                 <%= f.select :industry_id, Industry.all.collect { |p| [ p.name, p.id ] }, id: "industryId", class: "verification","data-noHide" => "1","error-id" => "errorindustryId","data-type" => "notnull"%>
   							<span class="error" id="errorindustryId">*请填写公司邮箱</span>
   						</div>

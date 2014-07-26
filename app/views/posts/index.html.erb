@@ -14,19 +14,27 @@
   		</ul>
   	</div>
   	<div class="mm">
-  		<ul class="mSubNav">
-  			<li><a href="#" class="findTit">发现</a></li>
-  			<li><a href="#" class="f_current">JS</a></li>
-  			<li><a href="#">CSS</a></li>
-  			<li><a href="#">UI</a></li>
-  			<li><a href="#">PM</a></li>
-  			<li><a href="#" class="topTit">热门</a></li>
-  			<li><a href="#" class="t_current">JS</a></li>
-  			<li><a href="#">CSS</a></li>
-  			<li><a href="#">UI</a></li>
-  			<li><a href="#">PM</a></li>
-  		</ul>
+        <ul class="procGuide pgd1">
+            <li><a href="#" class="current first">等待HR处理</a></li>
+            <li><a href="#" class="second">HR已查看简历</a></li>
+            <li class="third"><a href="#">HR同意</a></li>
+            <li><a href="#" class="fourth">面试通过</a></li>
+            <li><a href="#" class="fifth">试用期通过</a></li>
+            <li class="last sixth"><a href="#">恭喜</a></li>
+        </ul>
+        <div class="processorBar">
+            <div class="pb p0"></div>
+        </div>
+        <div class="procGuide">
+            <ul class="pgd2">
+                <li><a href="#" class="third">HR拒绝</a></li>
+                <li><a href="#" class="fourth">面试未通过</a></li>
+                <li><a href="#" class="fifth">试用期未通过</a></li>
+                <li class="last"></li>
+            </ul>
+        </div>
   		<ul class="employment">
+        <%resume_is_complete = current_account.current_account_resume.complete?%>
   			<%@posts.each do |post|%>
   			<li class="selectcurrent">
   				<div class="employInfo">
@@ -42,7 +50,7 @@
   				</div>
 				
   				<div class="employBtns">
-  					<a href="javascript:void(0)" class="btnR initiateInterviewBtn">发起面试</a><a href="<%= post_path(post)%>" class="btnR">查    看</a><a href="#" class="btnR">收    藏</a>
+  					<a href="javascript:void(0)" class="btnR initiateInterviewBtn" resume_complete="<%= resume_is_complete%>">发起面试</a><a href="<%= post_path(post)%>" class="btnR">查    看</a><a href="#" class="btnR">收    藏</a>
   				</div>
   			</li>
         <%end%>

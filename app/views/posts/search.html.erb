@@ -14,21 +14,11 @@
   		</ul>
   	</div>
   	<div class="mm">
-  		<ul class="mSubNav">
-  			<li><a href="#" class="findTit">发现</a></li>
-  			<li><a href="#" class="f_current">JS</a></li>
-  			<li><a href="#">CSS</a></li>
-  			<li><a href="#">UI</a></li>
-  			<li><a href="#">PM</a></li>
-  			<li><a href="#" class="topTit">热门</a></li>
-  			<li><a href="#" class="t_current">JS</a></li>
-  			<li><a href="#">CSS</a></li>
-  			<li><a href="#">UI</a></li>
-  			<li><a href="#">PM</a></li>
-  		</ul>
+      <%= render partial: "/layouts/top_timeline"%>
       <%if @posts.present?%>
-      用时：<%= (@time*1000).to_s % "%.4f"%>秒
+      <!--用时：<%#= (@time*1000).to_s % "%.4f"%>秒-->
   		<ul class="employment">
+        <%resume_is_complete = current_account.current_account_resume.complete?%>
   			<%@posts.each do |post|%>
         <%post_record = @records.find(post.id)%>
   			<li class="selectcurrent">
@@ -46,8 +36,8 @@
 				
   				<div class="employBtns">
             <%if current_account%>
-              <%if post.can_apply?(current_account.id)%>
-                <a href="javascript:void(0)" jobid="<%= post_record.id%>" class="btnR initiateInterviewBtn">发起面试</a>
+              <%if post_record.can_apply?(current_account.id)%>
+                <a href="javascript:void(0)" jobid="<%= post_record.id%>" class="btnR initiateInterviewBtn" resume_complete="<%= resume_is_complete%>">发起面试</a>
               <%else%>
                 <a href="javascript:void(0)" jobid="<%= post_record.id%>" class="btnR initiateInterviewBtn" isc="1">已发起面试</a>
               <%end%>

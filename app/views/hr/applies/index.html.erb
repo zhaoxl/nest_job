@@ -7,14 +7,18 @@
 		<h2 class="h2Title"><%= I18n.t!("model.workflow.status.#{params[:status]}") rescue "招聘方发起的面试"%>&nbsp;&nbsp;<%= flash.to_hash.inject([]){|msg, value| msg << value[1]} * ","%></h2>
 		<div class="interview">
 			<ul class="interviewList">
+        <%if @items.blank?%>
+        <li class='noinfo'>还没有人才面试您发布的职位，试一下<a href='/hr'>找人才</a>吧！</li>
+        <%end%>
 				<%@items.each do |item|%>
+        <%worker = item.worker%>
         <%hr = item.hr%>
         <%company = item.company%>
         <%post = item.post%>
 				<li>
 					<div class="interviewRequire">
 						<div class="hrInfo">
-							<div class="hrImg"><a href="#"><img src="../images/user_demo.jpg" alt=""></a></div>
+							<div class="hrImg"><%= link_to image_tag(worker.logo(:thumb)), "#"%></div>
 							<div class="hrIf">
 								<p><span>公司：<%= company.try(:name)%></span></p>
 								<p><span>地点：<%= post.try(:address)%></span><span>薪资：￥<%= post.try(:price_min)%>k ~ <%= post.try(:price_max)%>k</span></p>
@@ -27,7 +31,7 @@
 					</div>
 					<div class="interviewOption">
 						<div class="interviewStatus">
-							<p>当前状态:<%= I18n.t("model.workflow.status.#{item.status}")%></p>
+							<p>当前状态:<%= I18n.t("model.workflow.first_person_status.#{item.status}")%></p>
 							<p></p>
 							<p></p>
 						</div>

@@ -4,12 +4,12 @@ class Worker::ResumeExperiencesController < ApplicationController
   
   def ajax_save
     begin
-      object = AccountResumeExperience.find_or_create_by(id: params[:id], account_id: current_account.id)      
+      object = AccountResumeExperience.find_or_create_by(id: params[:id], account_id: current_account.id, account_resume_id: params[:account_resume_experience][:account_resume_id])    
       unless object.update_attributes(experience_create_params)
         raise AjaxException.new(object.errors.messages.inject({}){|hash, item| hash[item[0]] = item[1]*','; hash})
       end
       
-      flash[:ok] = {id: object.id, date: "#{object.start_time.strftime("%Y年%m月")}到#{object.end_time.strftime("%Y年%m月")}"}
+      flash[:success] = {id: object.id, date: "#{object.start_time.strftime("%Y年%m月")}到#{object.end_time.strftime("%Y年%m月")}"}
     rescue Exception => ex
       flash[:error] = ex.message
       logger.error "ajax_save error log================================================"

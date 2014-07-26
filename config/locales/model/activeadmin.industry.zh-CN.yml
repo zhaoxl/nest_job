@@ -1,0 +1,11 @@
+"zh-CN":
+  activerecord:
+    models:
+      industry:
+        one: 行业
+        other: 行业
+    attributes:
+      industry: 
+        name: 名称
+        
+        

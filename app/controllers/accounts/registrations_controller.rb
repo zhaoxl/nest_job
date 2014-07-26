@@ -1,4 +1,5 @@
 class Accounts::RegistrationsController < Devise::RegistrationsController
+  skip_after_filter :reset_last_captcha_code!, :only=>[:ajax_create]
   
   def new
     super
@@ -21,9 +22,12 @@ class Accounts::RegistrationsController < Devise::RegistrationsController
   end
   
   def ajax_create
+    binding.pry
     result = {status: "ok"}
     begin
       unless captcha_valid? params[:captcha]
+        #更新验证码
+        reset_last_captcha_code!
         #验证码错误
         raise AjaxException.new({captcha: "验证码错误"})
       end

@@ -9,3 +9,11 @@
         status_audition_failed: 面试失败
         status_probation_passed: 试用成功
         status_probation_failed: 试用失败
+      first_person_status:
+        status_apply_normal: 等待我处理
+        status_apply_hr_reject: 我已拒绝
+        status_wait_audition: 等待面试
+        status_audition_passed: 面试通过
+        status_audition_failed: 面试失败
+        status_probation_passed: 试用成功
+        status_probation_failed: 试用失败

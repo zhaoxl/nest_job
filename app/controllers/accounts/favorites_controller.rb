@@ -1,6 +1,10 @@
 class Accounts::FavoritesController < ApplicationController
   before_action :authenticate_account!
   
+  def index
+    @favorites = current_account.favorites.page(params[:page]).per(5)
+  end
+  
   def ajax_create
     result = {status: "ok"}
     begin

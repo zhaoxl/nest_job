@@ -197,7 +197,8 @@ $(function($) {
                     }).dialog("close");
                     var _c = result.content;
                     if(_c.email){
-                        $("#errorEmail").html(_c.email).css("display", "block")
+                        $("#errorEmail").html(_c.email).css("display", "block");
+                        return;
                     }
 
                     if(_c.captcha){
@@ -870,7 +871,15 @@ $(function($) {
     var initiateInterviewBtn = null;
     $(".initiateInterviewBtn").each(function(){
         $(this).click(function(){
-            var isc = $(this).attr("isc");
+            var isc = $(this).attr("isc"),
+                resume_complete = $(this).attr("resume_complete");
+            if(resume_complete=="false"){
+                $( "#dialog").html("请<a style='color:red' title='点击' href='/worker/resumes'>点击完善简历</a>，才能申请！").dialog({
+                    modal:true,
+                    close:function(){}
+                }).dialog( "open");
+                return;
+            }
             if(isc == "1"){
                 $( "#dialog").html("已发起面试").dialog({
                     modal:true,
@@ -887,6 +896,19 @@ $(function($) {
             $(".initiateInterviewPop").hide();
         });
     })
+    //修改签约金
+    $("#updateMoney").click(function(){
+        $(".updateMoneyPanel").hide();
+        $(".saveMoneyPanel").show();
+        $("#saveMoneyNum").focus();
+
+    });
+    $("#saveMoney").click(function(){
+        $(".updateMoneyPanel").show();
+        $(".saveMoneyPanel").hide();
+        $("#updateMoneys").html("签约金："+$("#saveMoneyNum").val());
+
+    });
     //发起面试确认
     $("#goinitiateInterviewBtn").click(function(){
         var jobID = $(initiateInterviewBtn).attr("jobid"),
@@ -912,7 +934,7 @@ $(function($) {
         $.ajax({
             dataType: "json",
             type: "post",
-            url: "/worker/applies/create",
+            url: "/worker/applies",
             data: {
                 "post_id": jobID,//职位
                 "price": interviewCurrency,
@@ -946,7 +968,7 @@ $(function($) {
         $(".error").prev().blur();
         if($("#new_company .error:visible").length > 0)  return false;
     });
-    $(".isCompanyUser").each(function(){
+   /* $(".isCompanyUser").each(function(){
         $(this).click(function(){
             if (confirm("您想切换为招聘方吗？"))  {
                 location.href='/hr';
@@ -954,7 +976,7 @@ $(function($) {
 
             };
         });
-    });
+    });*/
     var _color = 1,
         intervalColor = -1;
     //点击搜索职位
@@ -1064,7 +1086,7 @@ $(function($) {
                         "authenticity_token": $("meta[name='csrf-token']").attr("content")
                     },
                     success: function(result) {
-                        if (result.status == "ok") {
+                        if (result.status == "success") {
                             $( "#dialog").dialog({
                                 modal:true,
                                 close:function(){}
@@ -1098,7 +1120,7 @@ $(function($) {
                         "authenticity_token": $("meta[name='csrf-token']").attr("content")
                     },
                     success: function(result) {
-                        if (result.status == "ok") {
+                        if (result.status == "success") {
                             $( "#dialog").dialog({
                                 modal:true,
                                 close:function(){}
@@ -1132,7 +1154,7 @@ $(function($) {
                         "authenticity_token": $("meta[name='csrf-token']").attr("content")
                     },
                     success: function(result) {
-                        if (result.status == "ok") {
+                        if (result.status == "success") {
                             $( "#dialog").dialog({
                                 modal:true,
                                 close:function(){}
@@ -1238,7 +1260,7 @@ $(function($) {
                     "authenticity_token": $("meta[name='csrf-token']").attr("content")
                 },
                 success: function(result) {
-                    if (result.status == "ok") {
+                    if (result.status == "success") {
                         $( "#dialog").dialog({
                             modal:true,
                             close:function(){}
@@ -1296,7 +1318,7 @@ $(function($) {
                     "authenticity_token": $("meta[name='csrf-token']").attr("content")
                 },
                 success: function(result) {
-                    if (result.status == "ok") {
+                    if (result.status == "success") {
                         $( "#dialog").dialog({
                             modal:true,
                             close:function(){}
@@ -1350,7 +1372,7 @@ $(function($) {
                     "authenticity_token": $("meta[name='csrf-token']").attr("content")
                 },
                 success: function(result) {
-                    if (result.status == "ok") {
+                    if (result.status == "success") {
                         $( "#dialog").dialog({
                             modal:true,
                             close:function(){}
@@ -1411,7 +1433,7 @@ $(function($) {
                         modal:true,
                         close:function(){}
                     }).dialog( "close");
-                    if (result.status == "ok") {
+                    if (result.status == "success") {
 
                         //构建经历
                         var editJobhistorysParent = editJobhistorys.e.parent().parent();
@@ -1472,7 +1494,7 @@ $(function($) {
                         modal:true,
                         close:function(){}
                     }).dialog( "close");
-                    if (result.status == "ok") {
+                    if (result.status == "success") {
 
                         //构建经历
                         var editProjecthistorysParent = editJobhistorys.e.parent().parent();
@@ -1533,7 +1555,7 @@ $(function($) {
                         modal:true,
                         close:function(){}
                     }).dialog( "close");
-                    if (result.status == "ok") {
+                    if (result.status == "success") {
 
                         //构建经历
                         var editProjecthistorysParent = editJobhistorys.e.parent().parent();
@@ -1562,8 +1584,58 @@ $(function($) {
         }
     });
 
+    //面试操作
+    $(".interviewPro").each(function(){
 
+        $(this).attr("data-api",$(this).attr("href")).attr("href","javascript:void(0)").click(function(){
+            //获取处理模式
+            var clicked = $(this).attr("data-clicked"),
+                method = $(this).attr("data-method") || "get",
+                succes = $(this).attr("data-succes") || "操作成功",
+                self = this,
+                api = $(this).attr("data-api");
 
+            if(clicked == "close") return;
+            $(this).attr("data-clicked","close");
+
+            //发送ajax
+            $.ajax({
+                dataType: "json",
+                type: method,
+                url: api,
+                data: {
+                    "authenticity_token": $("meta[name='csrf-token']").attr("content")
+                },
+                success: function(result) {
+                    if (result.status == "success") {
+                        //删除互斥按钮
+                        var __p = $(self).parent();
+                        __p.children("a").hide();
+                        __p.html("3后秒消失，操作成功");
+                        var min= 3,
+                            _int = setInterval(function(){
+                                min--;
+                                __p.html(min+"后秒消失，操作成功");
+                                debugger
+                                if(min == 0){
+                                    clearInterval(_int);
+                                    __p.parent().parent().hide(300,function(){
+                                        $(this).remove();
+                                        if($(".interviewList").children("li").length ==0){
+                                            $(".interviewList").eq(0).html("<li class='noinfo'>还没有人才面试您发布的职位，赶紧-><a href='/hr'>找人才</a>吧！</li>");
+                                        }
+                                    });
+
+                                }
+                            },1000);
+                    } else {
+                        $(self).attr("data-clicked","open");
+                    }
+                }
+            });
+
+        });
+    });
 });
 
 //收藏职位

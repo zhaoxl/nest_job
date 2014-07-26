@@ -20,12 +20,19 @@ class Worker::AppliesController < ApplicationController
       message = params[:message]
       
       post = (Post.find(post_id) rescue raise "职位不存在")
+      raise AccountResumeIncompleteException, "请先完善简历" unless current_account.current_account_resume.complete?
       raise "不可以重复申请这个职位" unless post.can_apply?(current_account.id)
       resource = WorkflowApply.new(worker_account_id: current_account.id, hr_account_id: post.account_id, post_id: post_id, company_id: post.company_id, price: price, message: message)
       unless resource.save
         raise AjaxException.new(resource.errors.messages.inject({}){|hash, item| hash[item[0]] = item[1]*','; hash})
       end
       flash[:success] = "申请成功"
+    rescue AccountResumeIncompleteException => ex
+      flash[:redirect] = worker_resumes_path
+      flash[:error] = ex.message
+      logger.error "action error log================================================"
+      logger.error ex.message
+      logger.error ex.backtrace
     rescue Exception => ex
       flash[:error] = ex.message
       logger.error "action error log================================================"

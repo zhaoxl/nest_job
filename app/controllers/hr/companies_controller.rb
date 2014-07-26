@@ -2,6 +2,7 @@ class Hr::CompaniesController < ApplicationController
   before_action :authenticate_account!
   
   def new
+    redirect_to accounts_profile_index_path if current_account.company.present?
   end
   
   def create

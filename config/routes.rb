@@ -100,9 +100,6 @@ NestJob::Application.routes.draw do
       end
     end
     resources :applies do
-      collection do
-        post :create
-      end
     end
     resources :resume_radars
     resources :invites

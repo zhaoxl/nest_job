@@ -9,8 +9,9 @@
   	</div>
   	<div class="cash">
   		<ul>
-  			<li><span>面试币：1000</span><a href="#" class="btn">修   改</a></li>
-  			<li><span>鸟窝币：1000</span><a href="#" class="btn">提   现</a></li>
+  			<li class='updateMoneyPanel'><span id='updateMoneys'>签约金：1000</span><a href="javascript:void(0)" id='updateMoney' class="btn">修   改</a></li>
+  			<li class='saveMoneyPanel' style='display:none'><span>签约金：<input style='width:50px;border:1px solid #64ad9b;color:#444;' id='saveMoneyNum' type='text' value='1000'></span><a id='saveMoney'href="javascript:void(0)" class="btn">保   改</a></li>
+  			<li><span>鸟窝币：1000</span><a href="javascript:void(0)" class="btn">提   现</a></li>
   		</ul>
   	</div>
   	<div class="help">
@@ -43,7 +44,7 @@
     		<li><a href="<%= worker_invites_path(status: :status_probation_passed)%>" class="<%= "current" if params[:status] == "status_probation_passed"%>">试用期通过</a></li>
     		<li><a href="<%= worker_invites_path(status: :status_probation_failed)%>" class="<%= "current" if params[:status] == "status_probation_failed"%>">试用期未通过</a></li>
     		<li><a href="#" class="tit">基本资料</a></li>
-    		<li><a href="#" class="tit">我的收藏</a></li>
+    		<li><a href="<%= accounts_favorites_path%>" class="tit">我的收藏</a></li>
     		<li><a href="#" class="tit">系统消息</a></li>
     	</ul>
     <%elsif current_account.account_type == Account::ACCOUNT_TYPE_HR%>
@@ -65,7 +66,7 @@
     		<li><a href="#">试用期通过</a></li>
     		<li><a href="#">试用期未通过</a></li>
     		<li><a href="#" class="tit">基本资料</a></li>
-    		<li><a href="#" class="tit">我的收藏</a></li>
+    		<li><a href="<%= accounts_favorites_path%>" class="tit">我的收藏</a></li>
     		<li><a href="#" class="tit">系统消息</a></li>
     	</ul>
     <%end%>

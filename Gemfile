@@ -50,6 +50,7 @@ gem 'rails_kindeditor'
 #调试工具
 gem 'pry', '0.9.12.2'
 gem 'pry-nav', '0.2.3'
+gem 'binding_of_caller'
 #图片插件
 gem "paperclip", "~> 4.1"
 #多级插件

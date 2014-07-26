@@ -7,9 +7,12 @@ module DiversityResult
       }
       
       format.json {
-        result = flash.to_hash.compact.first || [:success, ""]
-        result = {status: result[0], content: result[1]}
+        msgs = flash.to_hash.compact
         flash.clear
+        result = msgs.extract!(:success, :error).first || [:success, ""]
+        result = {status: result[0].to_s, content: result[1]}
+        result.merge! msgs
+        
         render json: result.to_json
       }
     end
