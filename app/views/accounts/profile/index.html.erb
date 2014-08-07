@@ -35,11 +35,6 @@
   							<span class="error" id="errorpeopleEmail">*请填写联系邮箱</span>
   						</div>
   						<div class="frm">
-  							<span class="">公司邮箱：</span>
-                <%= f.text_field :company_email,id: "peopleCompanyEmail", class: "verification","data-noHide" => "1","error-id" => "errorpeopleCompanyEmail","data-type" => "notnull"%>
-  							<span class="error" id="errorpeopleCompanyEmail">*请填写公司邮箱</span>
-  						</div>
-  						<div class="frm">
   							<span class="">所在行业：</span>
                 <%= f.select :industry_id, Industry.all.collect { |p| [ p.name, p.id ] }, id: "industryId", class: "verification","data-noHide" => "1","error-id" => "errorindustryId","data-type" => "notnull"%>
   							<span class="error" id="errorindustryId">*请填写公司邮箱</span>
@@ -83,7 +78,7 @@
           <%end%>
           <%if current_account.account_type == Account::ACCOUNT_TYPE_HR%>
             <%= render partial: "/hr/companies/form"%>
-            <%= render partial: "/hr/companies/detial"%>
+            <%#= render partial: "/hr/companies/detial"%>
           <%end%>
 				</div>
 			<!-- </div> -->

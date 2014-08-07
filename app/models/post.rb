@@ -1,4 +1,6 @@
+require 'soft_deletion'
 class Post < ActiveRecord::Base
+  has_soft_deletion :default_scope => true
   include Elasticsearch::Model
   development_settings = {log: true, trace: true} if Rails.env.development?
   self.__elasticsearch__.client = Elasticsearch::Client.new({host: "54.250.192.6:9200"}.merge(development_settings||{}))
@@ -53,6 +55,7 @@ class Post < ActiveRecord::Base
   scope :ct_desc, ->{order("created_at DESC")}
   scope :by_area, ->(area){where(area: area)}
   scope :by_look_num_desc, ->{order("look_num DESC")}
+  scope :by_status, ->(status){where(status: status)}
   
   
   # 受保护的email地址
@@ -106,7 +109,7 @@ class Post < ActiveRecord::Base
   private
   
   def sync_elasticsearch_index
-    if self.status_normal?
+    if self.status_normal? && !self.deleted?
       logger.debug ["Updating document... ", (__elasticsearch__.index_document rescue "Elasticsearch not connect") ].join
     else
       logger.debug ["Deleting document... ", (__elasticsearch__.delete_document rescue "Elasticsearch not connect")].join

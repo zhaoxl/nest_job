@@ -18,7 +18,7 @@
       <%if @posts.present?%>
       <!--用时：<%#= (@time*1000).to_s % "%.4f"%>秒-->
   		<ul class="employment">
-        <%resume_is_complete = current_account.current_account_resume.complete?%>
+        <%resume_is_complete = current_account.present? && current_account.current_account_resume.complete?%>
   			<%@posts.each do |post|%>
         <%post_record = @records.find(post.id)%>
   			<li class="selectcurrent">

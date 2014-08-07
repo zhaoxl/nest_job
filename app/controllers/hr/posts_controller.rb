@@ -1,8 +1,11 @@
 class Hr::PostsController < ApplicationController
   before_action :authenticate_account!
+  include DiversityResult
   
   def index
-    @posts = current_account.posts.ct_desc.page(params[:id]).per(8)
+    @posts = current_account.posts.ct_desc
+    @posts = @posts.by_status([:status_off_shelves]) if params[:status] == "status_off_shelves"
+    @posts = @posts.page(params[:id]).per(8)
   end
   
 	def new
@@ -30,6 +33,26 @@ class Hr::PostsController < ApplicationController
   def show
     @post = Post.find(params[:id])
     @company = @post.company
+  end
+  
+  def edit
+    @post = Post.find(params[:id])
+  end
+  
+  def destroy
+    begin
+      post = Post.find(params[:id])
+      post.soft_delete!
+      flash[:success] = "操作成功"
+    rescue Exception => ex
+      flash[:error] = ex.message
+      logger.error "action error log================================================"
+      logger.error ex.message
+      logger.error ex.backtrace
+    end
+    dr_render do
+      redirect_to :back
+    end
   end
   
   def ajax_get_tags

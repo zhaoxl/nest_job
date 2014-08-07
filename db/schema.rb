@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140716095456) do
+ActiveRecord::Schema.define(version: 20140729122851) do
 
   create_table "account_post_applies", force: true do |t|
     t.integer  "account_id"
@@ -211,7 +211,7 @@ ActiveRecord::Schema.define(version: 20140716095456) do
   create_table "companies", force: true do |t|
     t.string   "name"
     t.string   "home_page"
-    t.string   "financing_stage"
+    t.integer  "financing_stage_id"
     t.string   "area"
     t.string   "logo_file_name"
     t.string   "logo_content_type"
@@ -265,6 +265,10 @@ ActiveRecord::Schema.define(version: 20140716095456) do
     t.string   "item_type"
     t.integer  "item_id"
     t.datetime "created_at"
+  end
+
+  create_table "financing_stages", force: true do |t|
+    t.string "name"
   end
 
   create_table "hot_search_tags", force: true do |t|
@@ -325,8 +329,8 @@ ActiveRecord::Schema.define(version: 20140716095456) do
     t.datetime "deleted_at"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.float    "price_min",        default: 0.0
-    t.float    "price_max",        default: 0.0
+    t.integer  "price_min",        default: 0
+    t.integer  "price_max",        default: 0
     t.string   "address"
     t.string   "department"
     t.string   "email"

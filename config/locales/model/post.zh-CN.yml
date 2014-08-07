@@ -1,0 +1,6 @@
+"zh-CN":
+  model:
+    post:
+      status:
+        status_normal: 正常
+        status_off_shelves: 下架

@@ -11,6 +11,7 @@ class Company < ActiveRecord::Base
   
   belongs_to :nature
   belongs_to :industry
+  belongs_to :financing_stage
   has_many :company_members
   has_many :company_scenes
 end

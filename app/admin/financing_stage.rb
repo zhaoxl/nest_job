@@ -1,4 +1,4 @@
-ActiveAdmin.register FinancingStage do
+ActiveAdmin.register Industry do
 
   
   # See permitted parameters documentation:

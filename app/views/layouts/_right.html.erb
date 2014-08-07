@@ -57,15 +57,10 @@
     		<li><a href="<%= hr_applies_path(status: :status_audition_failed)%>" class="<%= "current" if params[:status] == "status_audition_failed"%>">面试未通过</a></li>
     		<li><a href="<%= hr_applies_path(status: :status_probation_passed)%>" class="<%= "current" if params[:status] == "status_probation_passed"%>">试用期通过</a></li>
     		<li><a href="<%= hr_applies_path(status: :status_probation_failed)%>" class="<%= "current" if params[:status] == "status_probation_failed"%>">试用期未通过</a></li>
-    		<li><a href="#" class="tit">HR发起的面试</a></li>
-    		<li><a href="#">HR面试消息（1）</a></li>
-    		<li><a href="#">我拒绝</a></li>
-    		<li><a href="#">我同意</a></li>
-    		<li><a href="#">面试通过</a></li>
-    		<li><a href="#">面试未通过</a></li>
-    		<li><a href="#">试用期通过</a></li>
-    		<li><a href="#">试用期未通过</a></li>
-    		<li><a href="#" class="tit">基本资料</a></li>
+				<li><a href="<%= hr_posts_path%>" class="tit tCurrent">职位管理</a></li>
+				<li><a href="<%= new_hr_post_path%>">发布职位</a></li>
+				<li><a href="<%= hr_posts_path%>">已发布职位</a></li>
+				<li><a href="<%= hr_posts_path(status: :status_off_shelves)%>" class="current">下架的职位</a></li>
     		<li><a href="<%= accounts_favorites_path%>" class="tit">我的收藏</a></li>
     		<li><a href="#" class="tit">系统消息</a></li>
     	</ul>

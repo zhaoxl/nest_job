@@ -39,7 +39,7 @@ $(function($) {
                         bFail = !notmobi.test(value);
                         break;
                     case 'tel':
-                        var tel = /\d{3}-\d{8}|\d{4}-\d{7}|\d{11}/;
+                        var tel = /^((0\d{2,3})-)(\d{7,8})(-(\d{3,}))?$/;
                         bFail = !tel.test(value);
                         break;
                     case 'pas':
@@ -116,6 +116,7 @@ $(function($) {
             });
         });
     });
+    $("#loginTipT").click();
     $("#registerTipT").click(function(){
         $("#loginPanel").animate({
             opacity: 0
@@ -904,10 +905,35 @@ $(function($) {
 
     });
     $("#saveMoney").click(function(){
-        $(".updateMoneyPanel").show();
-        $(".saveMoneyPanel").hide();
-        $("#updateMoneys").html("签约金："+$("#saveMoneyNum").val());
+        if(!/^[0-9]*$/.test($("#saveMoneyNum").val())){
+            $( "#dialog").html("必须是数字").dialog({
+                modal:true,
+                close:function(){}
+            }).dialog( "open");
+            return;
+        }
 
+        $.ajax({
+            dataType: "json",
+            type: "post",
+            url: "/worker/applies",
+            data: {
+                "mony": $("#saveMoneyNum").val() || 0,//职位
+                "authenticity_token": $("meta[name='csrf-token']").attr("content")
+            },
+            success: function(result) {
+                if (result.status == "success") {
+                    $(".updateMoneyPanel").show();
+                    $(".saveMoneyPanel").hide();
+                    $("#updateMoneys").html("签约金："+$("#saveMoneyNum").val());
+                } else {
+                    $( "#dialog").html(result.content).dialog({
+                        modal:true,
+                        close:function(){}
+                    }).dialog( "open");
+                }
+            }
+        });
     });
     //发起面试确认
     $("#goinitiateInterviewBtn").click(function(){

@@ -1,5 +1,6 @@
 <%= content_for :head_include do%>
 	<link rel="stylesheet" href="/鸟窝html/stylesheets/interview.css" />
+  <%= javascript_include_tag :jquery_ujs%>
 <%end%>
 <div class="mainContainer">
 	<div class="main">
@@ -47,7 +48,7 @@
 					<p>所在城市：北京</p>
 				</li>
 			</ul>
-			<h2 class="h2Title">已发布职位</h2>
+			<h2 class="h2Title"><%= I18n.t!("model.post.status.#{params[:status]}职位") rescue "已发布职位"%></h2>
 			<ul class="soldOut">
         <%@posts.each_with_index do |post, index|%>
 				<li<%= " style=margin-right:0px;" if (index+1)%2==0 %>>
@@ -56,7 +57,7 @@
 					<p>所在部门：<%= post.department%></p>
 					<p>工作城市：<%= post.area%></p>
 					<div class="btns">
-						<a href="#" class="btnR">查   看</a><a href="#" class="btnR">编     辑</a><a href="#" class="btnR">删     除</a><a href="#" class="btnR">下     架</a>
+						<a href="<%= hr_post_path(post)%>" class="btnR">查   看</a><a href="<%= edit_hr_post_path(post)%>" class="btnR">编     辑</a><%= link_to "删     除", hr_post_path(post), method: :delete, class: "btnR"%><a href="#" class="btnR">下     架</a>
 					</div>
 				</li>
         <%end%>

@@ -30,6 +30,9 @@ class Hr::CompaniesController < ApplicationController
   
   private  
   def company_create_params  
-    params.require(:company).permit(:name, :home_page, :financing_stage, :area, :nature_id, :industry_id, :tel, :email, :content)
+    params.require(:company).permit(:name, :home_page, :financing_stage_id, :area, :nature_id, :industry_id, :tel, :email, :content)
   end  
 end
+
+
+

@@ -19,12 +19,12 @@
 	</div>
 	<div class="frm">
 		<span class="">公司性质</span>
-		<%= f.text_field :nature_id, id: "nature_id", class: "verification", "data-type" => "nature_id", "data-nohide" => "1", "error-id" => "errnature"%>
+		<%= f.select :nature_id, Nature.all.map{|item| [item.name, item.id]}, id: "nature_id", class: "verification", "data-type" => "nature_id", "data-nohide" => "1", "error-id" => "errnature"%>
 		<span class="error" id="errnature">*请填写公司性质</span>
 	</div>
 	<div class="frm">
 		<span class="">公司行业</span>
-		<%= f.text_field :industry_id, id: "industry_id", class: "verification", "data-type" => "industry_id", "data-nohide" => "1", "error-id" => "errorindustry_id"%>
+		<%= f.select :industry_id, Industry.all.map{|item| [item.name, item.id]}, id: "industry_id", class: "verification", "data-type" => "industry_id", "data-nohide" => "1", "error-id" => "errorindustry_id"%>
 		<span class="error" id="errorindustry_id">*请填写公司行业</span>
 	</div>
 	<div class="frm">
@@ -34,7 +34,7 @@
 	</div>
 	<div class="frm">
 		<span class="">融资阶段</span>
-		<%= f.text_field :financing_stage, id: "financing_stage", class: "verification", "data-type" => "financing_stage", "data-nohide" => "1", "error-id" => "errorfinancing_stage"%>
+		<%= f.select :financing_stage_id, FinancingStage.all.map{|item| [item.name, item.id]}, id: "financing_stage", class: "verification", "data-type" => "financing_stage", "data-nohide" => "1", "error-id" => "errorfinancing_stage"%>
 		<span class="error" id="errorfinancing_stage">*请填写融资阶段</span>
 	</div>
 	<div class="frm">
@@ -42,6 +42,11 @@
 		<%= f.text_field :area, id: "area", class: "verification", "data-type" => "area", "data-nohide" => "1", "error-id" => "errorarea"%>
 		<span class="error" id="errorarea">*请填写公司地址</span>
 	</div>
+  <div class="frm">
+		<span class="">公司介绍</span>
+    <%= f.text_area :content%>
+		<span class="error">*请填写公司介绍</span>
+  </div>
 </div>
 <div class="registerBtn">
   <%= f.submit raw("保&nbsp;存"), class: "btn"%>

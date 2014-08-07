@@ -9,32 +9,12 @@
 			<div class="companyInfo">
 				<div class="compImg"><a href="#"><img src="images/company_demo.jpg" alt="" /></a></div>
 				<div class="compInfo">
-					<p>凤凰网</p>
-					<p class="cmpUrl"><a href="#">www.ifeng.com</a></p>
-					<p>性质：成熟型公司</p>
-					<p>行业：新闻传媒</p>
-					<div class="slide">轮播图展示</div>
-					<p>融资阶段：A轮</p>
+					<p><%= @company.name%></p>
+					<p class="cmpUrl"><%= link_to @company.home_page, @company.home_page, target: :_blank%></p>
+					<p>性质：<%= @company.nature.to_s%></p>
+					<p>行业：<%= @company.industry.to_s%></p>
+					<p>融资阶段：<%= @company.financing_stage.to_s%></p>
 				</div>
-			</div>
-			<h2 class="h2Title">团队成员</h2>
-			<div class="members">
-				<ul>
-					<li>
-						<div class="memImg">
-							<a href="#"><img src="images/user_demo.jpg" alt=""></a>
-						</div>
-						<p class="name">周绍宁</p>
-						<p>创始人兼CEO</p>
-					</li>
-					<li>
-						<div class="memImg">
-							<a href="#"><img src="images/user_demo.jpg" alt=""></a>
-						</div>
-						<p class="name">周绍宁</p>
-						<p>创始人兼CEO</p>
-					</li>
-				</ul>
 			</div>
 		</div>
 		<div class="mm">
@@ -54,7 +34,6 @@
         </div>
 			</div>
 			<div class="jobBtns">
-                    <a href="javascript:void(0)" class="btnR jobBImport">搜索竞价</a>
 				<a href="javascript:void(0)" class="btnR">编    辑</a><a href="#" class="btnR">分    享</a>
 				<a href="javascript:void(0)" class="btnR">下    架</a>
 				<a href="javascript:void(0)" class="btnR">上    架</a>
