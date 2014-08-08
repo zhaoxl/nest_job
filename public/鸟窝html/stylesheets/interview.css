@@ -25,7 +25,7 @@
 .employment{overflow:hidden;zoom:1;margin:20px 0 30px;}
 .employment li{padding:15px;background:#fff;margin-top:-1px;border-top:1px dashed #e7e9ea;}
 .employment .current{background:#f5fdfc;}
-.employment .jhDetail li{padding:0 0 10px 0;background:none;border:none;}
+.employment .jhDetail li{padding:0 0 10px 0;background:none;border:none;min-height: unset;}
 .employment .jobHunterInfo{padding:0;background:none;}
 .employment .employBtns{text-align:right;}
 .employment .employBtns a{margin-right:10px;}

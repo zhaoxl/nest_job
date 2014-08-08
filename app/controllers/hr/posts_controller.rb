@@ -14,7 +14,7 @@ class Hr::PostsController < ApplicationController
       redirect_to new_hr_company_path and return
     end
     
-		@post = Post.new
+		@post = Post.new(email: current_account.email)
 	end
   
   def create
@@ -55,8 +55,28 @@ class Hr::PostsController < ApplicationController
     end
   end
   
-  def ajax_get_tags
-    Elasticsearch::Client.new.indices.analyze(index: "index", text: params[:title])
+  #def ajax_get_tags
+  #  Elasticsearch::Client.new.indices.analyze(index: "index", text: params[:title])
+  #end
+  
+  #修改职位上架下架状态
+  def set_status
+    begin
+      post = Post.find(params[:id])
+      if post.status_off_shelves?
+        post.set_status_to_normal!
+      else
+        post.set_status_to_off_shelves!
+      end
+    rescue Exception => ex
+      flash[:error] = ex.message
+      logger.error "action error log================================================"
+      logger.error ex.message
+      logger.error ex.backtrace
+    end
+    dr_render do
+      redirect_to :back
+    end
   end
   
   private  

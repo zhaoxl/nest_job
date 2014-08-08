@@ -46,7 +46,11 @@ NestJob::Application.routes.draw do
   namespace :hr do
     root to: "index#index"
     get ':id', to: 'index#show', constraints: {id: /\d+/}, shallow: true
-    resources :posts
+    resources :posts do
+      member do
+        get :set_status
+      end
+    end
     resources :companies
     resources :company_members
     resources :company_scenes

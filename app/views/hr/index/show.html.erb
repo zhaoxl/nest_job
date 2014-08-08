@@ -8,7 +8,7 @@
 			<div class="hrInfo">
 				<div class="hrImg"><%= link_to image_tag(@account.logo(:thumb)), "#"%></div>
 				<div class="hrIf">
-					<p><span><%= @account.nick_name%> （<%= Post.convert_protect_email(@resume.email)%>） </span><span class="hot">面试币：￥<%= @resume.price.to_i%></span></p>
+					<p><span><%= @account.nick_name%> （<%= Post.convert_protect_email(@resume.email)%>） </span><span class="hot">签约金：￥<%= @resume.price.to_i%></span></p>
 					<p><span>邮箱：<%= Post.convert_protect_email(@account.email)%>  </span><span>年龄：<%= @resume.age%>岁</span></p>
 					<p><span>手机：<%= @resume.tel.to_s[0,3] + "*" * 8%>  </span><span>工作年限：<%= AccountResumeExperience.work_year(@resume.work_start_date)%>年</span></p>
 					<p><span>期望职位：<%= @resume.tag_list * "、"%></span><span>期望城市：<%= @resume.hope_area%></span></p>
