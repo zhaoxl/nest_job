@@ -1,9 +1,0 @@
-[2014-06-19 08:00:03,896][INFO ][cluster.metadata         ] [Ultra-Marine] [.marvel-2014.06.19] creating index, cause [auto(bulk api)], shards [1]/[1], mappings [node_stats, index_stats, _default_]
-[2014-06-19 08:00:05,183][INFO ][cluster.metadata         ] [Ultra-Marine] [.marvel-2014.06.19] update_mapping [node_stats] (dynamic)
-[2014-06-19 08:00:05,225][INFO ][cluster.metadata         ] [Ultra-Marine] [.marvel-2014.06.19] update_mapping [cluster_event] (dynamic)
-[2014-06-19 08:00:05,284][INFO ][cluster.metadata         ] [Ultra-Marine] [.marvel-2014.06.19] update_mapping [index_event] (dynamic)
-[2014-06-19 08:00:05,304][INFO ][cluster.metadata         ] [Ultra-Marine] [.marvel-2014.06.19] update_mapping [routing_event] (dynamic)
-[2014-06-19 08:00:05,327][INFO ][cluster.metadata         ] [Ultra-Marine] [.marvel-2014.06.19] update_mapping [shard_event] (dynamic)
-[2014-06-19 08:00:05,430][INFO ][cluster.metadata         ] [Ultra-Marine] [.marvel-2014.06.19] update_mapping [indices_stats] (dynamic)
-[2014-06-19 08:00:05,513][INFO ][cluster.metadata         ] [Ultra-Marine] [.marvel-2014.06.19] update_mapping [index_stats] (dynamic)
-[2014-06-19 08:00:05,553][INFO ][cluster.metadata         ] [Ultra-Marine] [.marvel-2014.06.19] update_mapping [cluster_stats] (dynamic)
