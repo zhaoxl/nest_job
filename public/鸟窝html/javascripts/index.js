@@ -116,7 +116,7 @@ $(function($) {
             });
         });
     });
-    $("#loginTipT").click();
+
     $("#registerTipT").click(function(){
         $("#loginPanel").animate({
             opacity: 0
@@ -126,7 +126,7 @@ $(function($) {
                 opacity: 0
             },0,"linear",function(){
                 $("#resisterPanel").show().animate({opacity: 0.8},500);
-                $(".updateCaptcha").click();
+                $("#captchaImg").click();
             });
         });
      });
@@ -456,7 +456,8 @@ $(function($) {
     });
     //搜索============start
     var searchJob = function(){
-        var searchJobs = $.trim($("#searchJobs").val());
+        var searchJobs = $.trim($("#searchJobs").val()),
+            _area = $("#mycity").val()=="选择城市"?"":$("#mycity").val();
         if(searchJobs == "输入职位名称，如：销售" || !searchJobs){
             $( "#dialog").html("请输入要搜索的职位").dialog({
                 modal:true,
@@ -468,7 +469,7 @@ $(function($) {
             return;
         }
         if(searchJobs){
-            window.location.href="/posts/search?k=" + searchJobs;
+            window.location.href="/posts/search?k=" + searchJobs+"&area="+_area;
         }
 
     }
@@ -495,6 +496,14 @@ $(function($) {
 
         }
     });
+    //搜索的默认文字
+    if(window.location.href.search("search?") != -1){
+        var in1=window.location.href.indexOf("ch?k=")+5,
+            in2=window.location.href.indexOf("&area");
+        if(in2 == -1) in2=window.location.href.length;
+        $("#searchJobs").val(decodeURIComponent(window.location.href.substring(in1, in2)));
+    }
+
 
    //发现标签搜索
     $(".f_btn").each(function(){
@@ -874,6 +883,10 @@ $(function($) {
         $(this).click(function(){
             var isc = $(this).attr("isc"),
                 resume_complete = $(this).attr("resume_complete");
+            if(!logged){
+                window.location.href="/accounts/sign_in";
+                return;
+            }
             if(resume_complete=="false"){
                 $( "#dialog").html("请<a style='color:red' title='点击' href='/worker/resumes'>点击完善简历</a>，才能申请！").dialog({
                     modal:true,
@@ -1662,6 +1675,24 @@ $(function($) {
 
         });
     });
+    if($(".interviewList").children("li").length ==0){
+        $(".interviewList").eq(0).html("<li class='noinfo'>还没有面试信息，赶紧-><a href='/'>找工作</a>吧！</li>");
+    }
+    //面试导航
+    $(".procGuide a").each(function(){
+        var _class = $(this).attr("class") || "";
+        if(_class.search("current") == -1){
+            $(this).bind({
+                mouseout:function(){
+                    $(this).removeClass("current");
+                },
+                mouseover:function(){
+                    $(this).addClass("current");
+                }
+            });
+        }
+    });
+    $("#loginTipT").click();
 });
 
 //收藏职位

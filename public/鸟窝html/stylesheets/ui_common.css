@@ -34,7 +34,7 @@ em{display:inline-block;width:35px;height:30px;background:url(../images/nw_icon.
 
 .header .nav{float:left;width:580px;}
 .header .nav li{float:left;}
-.header .nav li a{display:block;width:100px;height:54px;padding-top:27px;text-align:center;font:15px '微软雅黑';color:#fff;}
+.header .nav li a{display:block;width:110px;height:54px;padding-top:27px;text-align:center;font:15px '微软雅黑';color:#fff;}
 .header .nav li a:hover{background:#46515c;}
 
 
@@ -118,6 +118,8 @@ em{display:inline-block;width:35px;height:30px;background:url(../images/nw_icon.
 .pager li{float:left;width:28px;height:28px;line-height:28px;margin-right:10px;background:#fff;border:1px solid #27a695;text-align:center;}
 .pager .last{background:none;border:none;}
 .pager .last em{background-position:-70px 0;}
+.pager .first{background:none;border:none; width: 38px;}
+.pager .first em{background-position:-140px 0;}
 .pager li a{display:block;color:#27a695;font-size:17px;}
 .pager li .current{background:#27a695;color:#fff;}
 .pager .etc{background:none;border:none;}
