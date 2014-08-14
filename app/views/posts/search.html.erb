@@ -45,7 +45,7 @@
               <a href="<%= new_account_session_path%>" jobid="<%= post_record.id%>" class="btnR initiateInterviewBtn">发起面试</a>
             <%end%>
             <a href="<%= post_path(post_record)%>" class="btnR">查    看</a>
-            <a jobid="<%= post_record.id%>"  onclick="addCollect(this)" href="<%= current_account ? 'javascript:void(0)' : new_account_session_path%>" class="btnR">收    藏</a>
+            <!--a jobid="<%= post_record.id%>"  onclick="addCollect(this)" href="<%= current_account ? 'javascript:void(0)' : new_account_session_path%>" class="btnR">收    藏</a-->
   				</div>
   			</li>
         <%end%>

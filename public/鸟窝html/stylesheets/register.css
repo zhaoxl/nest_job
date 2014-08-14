@@ -104,21 +104,25 @@
 
 
 /*processor_guide*/
-.mm .procGuide{overflow:hidden;zoom:1;}
-.mm .procGuide li{float:left;width:100px;margin-right:30px;text-align:center;}
-.mm .procGuide li a{font-size:14px;color:#6b7271;font-weight:bold;}
-.mm .procGuide li.last{width:70px;margin-left:6px;margin-right:0;}
-.mm .procGuide li .current{color:#27a696;}
-.mm .procGuide .third{margin-left:-10px;}
-.mm .pgd2{float:right;margin-bottom:30px;}
+ .procGuide{overflow:hidden;zoom:1;}
+ .procGuideOther{margin-right: 23px;}
+ .procGuideOleft{position: relative;left:165px}
+ .procGuide li{float:left;width:100px;margin-right:30px;text-align:center;}
+ .procGuide li a{font-size:14px;color:#6b7271;font-weight:bold;}
+ .procGuide li.last{width:70px;margin-left:6px;margin-right:0;}
+ .procGuide li .current{color:#27a696;}
+ .procGuide .third{margin-left:-10px;}
+ .pgd2{float:right;margin-bottom:30px;}
 /*.mm .pgd2 li.last{width:70px;}*/
 
-.mm .processorBar{height:50px;}
-.mm .processorBar .pb{width:693px;height:45px;margin:0 auto;background:url(../images/processBar.png) no-repeat;}
-.mm .processorBar .p0{background-position:0 0;}
-.mm .processorBar .p1{background-position:0 -45px;}
-.mm .processorBar .p2{background-position:0 -90px;}
-.mm .processorBar .p3{background-position:0 -135px;}
-.mm .processorBar .p4{background-position:0 -180px;}
-.mm .processorBar .p5{background-position:0 -225px;}
-.mm .processorBar .p6{background-position:0 -270px;}
+ .processorBar{height:50px;position: relative}
+ .processorBar .pb{width:693px;height:45px;background:url(../images/processBar.png) no-repeat;}
+ .processorBar .p0{background-position:0 0;}
+ .processorBar .p1{background-position:0 -45px;}
+ .processorBar .p2{background-position:0 -90px;}
+ .processorBar .p3{background-position:0 -135px;}
+ .processorBar .p4{background-position:0 -180px;}
+ .processorBar .p5{background-position:0 -225px;}
+ .processorBar .p6{background-position:0 -135px;}
+ .processorBar .p7{background-position:0 -180px;}
+ .processorBar .p8{background-position:0 -225px;}

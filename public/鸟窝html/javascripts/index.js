@@ -771,6 +771,26 @@ $(function($) {
         resizable:false
     });
 
+    //基本资料保存
+    $("#rubyinfos").dialog({
+        autoOpen:true,
+        modal:false,
+        height:80,
+        width:30,
+        title:"提示信息",
+        show:{effect:'drop', direction:'up'},
+        hide:{effect:'drop', direction:'down'},
+        draggable:false,
+        close: function() {
+
+        },
+        resizable:false
+    });
+
+    setTimeout(function(){
+        $( "#rubyinfos").dialog( "close");
+    },2000)
+
     $("#forgetPassword").click(function(){
         $( "#forgetPasswordPop").dialog({
             modal:true,
@@ -888,7 +908,7 @@ $(function($) {
                 return;
             }
             if(resume_complete=="false"){
-                $( "#dialog").html("请<a style='color:red' title='点击' href='/worker/resumes'>点击完善简历</a>，才能申请！").dialog({
+                $( "#dialog").html("请<a style='text-decoration:underline;color:#fff' title='点击' href='/worker/resumes'>点击完善简历</a>，才能申请！").dialog({
                     modal:true,
                     close:function(){}
                 }).dialog( "open");
@@ -910,6 +930,16 @@ $(function($) {
             $(".initiateInterviewPop").hide();
         });
     })
+    $(".history a").each(function(){
+        $(this).bind({
+            mouseover:function(){
+                $(this).css("text-decoration","underline");
+            },
+            mouseout:function(){
+                $(this).css("text-decoration","");
+            }
+        });
+    });
     //修改签约金
     $("#updateMoney").click(function(){
         $(".updateMoneyPanel").hide();
@@ -1101,6 +1131,17 @@ $(function($) {
                         }
                     }
                 });
+            }
+        });
+    });
+    //帮助
+    $(".helpslist a").each(function(){
+        $(this).bind({
+            mouseover:function(){
+                $(this).css("color","#27a695");
+            },
+            mouseout:function(){
+                $(this).css("color","#46515c");
             }
         });
     });
@@ -1676,7 +1717,7 @@ $(function($) {
         });
     });
     if($(".interviewList").children("li").length ==0){
-        $(".interviewList").eq(0).html("<li class='noinfo'>还没有面试信息，赶紧-><a href='/'>找工作</a>吧！</li>");
+        $(".interviewList").eq(0).html("<li class='noinfo'>还没有面试信息，尝试一下<a style='color:#27a695;text-decoration:underline;' href='/'>找工作</a>！</li>");
     }
     //面试导航
     $(".procGuide a").each(function(){

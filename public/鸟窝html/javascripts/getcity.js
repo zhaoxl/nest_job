@@ -422,6 +422,7 @@ function ILData_callback(eID)
 $(function($) {
     $("#mycity").chosen({disable_search_threshold: 10});
     $("#cityHopes").chosen({disable_search_threshold: 10});
+   // $("#update_hope_area").chosen({disable_search_threshold: 10});
     //ILData_callback("mycity")
     var CitysOptions = "<option value='选择城市'>选择城市</option>",
         l = Citys.length;
@@ -431,8 +432,10 @@ $(function($) {
     }
     $('#mycity').html(CitysOptions);
     $('#cityHopes').html(CitysOptions);
+   /* $('#update_hope_area').html(CitysOptions);*/
     $("#mycity").trigger("chosen:updated");
-    $("#cityHopes").trigger("chosen:updated");
+    /*$("#cityHopes").trigger("chosen:updated");*/
+   // $("#update_hope_area").trigger("chosen:updated");
 });
 
 

@@ -35,8 +35,6 @@ module ApplicationHelper
   # ==== 返回类型
   # [HotSearchTag]
   def self_hot_search_tags
-    tags = HotSearchTag.by_search_count_desc.limit(5)
-    
     if current_account.present?
       tags = HotSearchTag.by_account_id(current_account.id)
     elsif cookies[:cookie_id].present?
@@ -59,7 +57,7 @@ module ApplicationHelper
     tags = HotSearchTag.by_search_count_desc.limit(4)
     
     if current_account.present?
-      tags = tags.by_industry_id(current_account.industry_id)
+      tags = tags.by_industry_id(current_account.industry_id).group("name")
     elsif cookies[:cookie_id].present?
       #:TODO 先留着，据说是显示人工编辑的
       tags = []

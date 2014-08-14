@@ -78,6 +78,7 @@
   				<div class="frm">
   					<span class="">期望城市：</span>
                     <%= f.text_field :hope_area,  id: "update_hope_area", class: "verification", style: "border: 1px solid rgb(160, 160, 160);","data-noHide"=>"1", "data-em" => "notnull", "data-type" => "notnull", "error-id" => "errorupdate_hope_area"%>
+                    <!--select  id='update_hope_area' name='account_resume[hope_area]' data-placeholder="选择城市" style="width:100px;height:40px"><select-->
   					<span class="error" id="errorupdate_hope_area">*请填写城市</span>
   				</div>
   				<div class="frm">
@@ -115,7 +116,7 @@
   				</div>
           <div class="frm">
   					<span class="">薪资：</span>
-  					<%= f.text_field :salary,  id: "moneyjob", class: "verification", style: "border: 1px solid rgb(160, 160, 160);","data-noHide"=>"1", "data-em" => "notnull", "data-type" => "hopemoney", "error-id" => "errormoneyjob"%>
+  					<%= f.text_field :salary,  id: "moneyjob", class: "verification", style: "border: 1px solid rgb(160, 160, 160);","data-noHide"=>"1", "data-em" => "notnull", "data-type" => "hopemoney", "error-id" => "errormoneyjob"%>k
   					<span class="error" id="errormoneyjob">*请填写薪资</span>
   				</div>
   				<div class="frm">
@@ -136,7 +137,7 @@
             </p>
     				<p><span class="itemNm">公司名称： </span><%= experience.company_name%></p>
     				<p><span class="itemNm">公司职位：</span><%= experience.post%></p>
-    				<p><span class="itemNm">薪资：</span><%= experience.salary%></p>
+    				<p><span class="itemNm">薪资：</span><%= experience.salary%>k</p>
     				<p><span class="itemNm">工作描述：</span><%= experience.description%></p>
     				<div class="jobBtns">
     					<a href="javascript:void(0)" data-moneyjob='<%= experience.salary%>' data-startime='<%= strftime(experience.start_time, "%Y-%m-%d")%>' data-endime='<%= strftime(experience.end_time, "%Y-%m-%d")%>' data-company_name='<%= experience.company_name%>' data-post='<%= experience.post%>' data-description='<%= experience.description%>' data-id="<%= experience.id%>" class="btnR editJobhistory" data-id="<%= experience.id%>">编&nbsp;辑</a><a href="javascript:void(0)" class="btnR delJobhistory" data-id="<%= experience.id%>">删&nbsp;除</a>
@@ -283,7 +284,7 @@
   					<span class="error" id="erroroff_line_time">*请填写结束时间</span>
   				</div>
   			</div>
-        <%= f.submit "保存"%>
+
         <%end%>
   		</li>
   	</ul>
@@ -317,7 +318,7 @@
             </div>
       <div class="frm">
                 <span class="">薪资：</span>
-                <input class="verification" data-em="notnull" data-nohide="1" data-type="hopemoney" error-id="errormoneyjobedit" id="moneyjobedit" name="account_resume_experience[salary]" style="border: 1px solid rgb(160, 160, 160);" type="text">
+                <input class="verification" data-em="notnull" data-nohide="1" data-type="hopemoney" error-id="errormoneyjobedit" id="moneyjobedit" name="account_resume_experience[salary]" style="border: 1px solid rgb(160, 160, 160);" type="text">k
                 <span class="error" id="errormoneyjobedit">*请填写薪资</span>
             </div>
             <div class="frm">

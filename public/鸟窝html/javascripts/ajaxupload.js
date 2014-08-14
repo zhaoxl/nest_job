@@ -573,7 +573,7 @@
             	}
             },
             settings.timeout);*/
-
+      
             addEvent(iframe, 'load', function () {
 
                 if ( // For Safari 
@@ -594,8 +594,8 @@
 
                     return;
                 }
-
-                var doc = iframe.contentDocument ? iframe.contentDocument : window.frames[iframe.id].document;
+                var conwindow = iframe.contentWindow.document || iframe.contentDocument;
+                var doc = conwindow ? conwindow : window.frames[iframe.id].document;
 
                 // fixing Opera 9.26,10.00
                 if (doc.readyState && doc.readyState != 'complete') {

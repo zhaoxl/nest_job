@@ -33,7 +33,7 @@ class Worker::ResumesController < ApplicationController
       price = params[:price].to_i
       current_account.current_account_resume.update_attribute :price, price
     rescue Exception => ex
-      flash[:error] = ex.message
+      flash[:error] = "操作失败，请重试"
       logger.error "action error log================================================"
       logger.error ex.message
       logger.error ex.backtrace

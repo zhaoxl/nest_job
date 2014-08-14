@@ -1,9 +1,9 @@
 <%content_for :head_include do%>
 	<link rel="stylesheet" href="/鸟窝html/stylesheets/interview.css" />
-
 <%end%>
 <div class="mainContainer">
 	<div class="main">
+    <%= render partial: "/layouts/top_timeline"%>
 		<h2 class="h2Title"><%= I18n.t!("model.workflow.status.#{params[:status]}") rescue "我申请的面试"%></h2>
 		<div class="interview">
 			<ul class="interviewList">
@@ -33,7 +33,7 @@
 						</div>
 						<div class="interviewBtns">
 							<%= render partial: "/worker/applies/buttons", locals: {item: item}%>
-							<a href="#" class="btnR">分享职位</a>
+							<!--a href="#" class="btnR">分享职位</a-->
 						</div>
 					</div>
 				</li>

@@ -82,6 +82,7 @@ NestJob::Application.routes.draw do
     resources :resumes do
       collection do
         post :ajax_save
+        post :update_price
       end
     end
     resources :resume_experiences do

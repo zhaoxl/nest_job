@@ -33,7 +33,7 @@ class Accounts::ProfileController < ApplicationController
       logger.error ex.message
       logger.error ex.backtrace
     end
-    render json: result.to_json
+    render text: result.to_json
   end
   
   private  
