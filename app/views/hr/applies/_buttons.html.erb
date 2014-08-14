@@ -1,6 +1,8 @@
 <%case params[:status]%>
 <%when nil%>
 <%when "status_apply_normal"%>
+  <%= link_to "已查看简历", receive_hr_applies_path(id: item.id), method: :post, class: "btnR interviewPro"%>
+<%when "status_apply_hr_receive"%>
   <%= link_to "接受申请", accept_hr_applies_path(id: item.id), method: :post, class: "btnR interviewPro"%>
   <%= link_to "拒绝申请", reject_hr_applies_path(id: item.id), method: :post, class: "btnR interviewPro"%>
 <%when "status_apply_hr_reject"%>

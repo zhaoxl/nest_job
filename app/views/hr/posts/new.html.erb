@@ -6,7 +6,7 @@
 <%end%>
 <div class="mainContainer">
 	<div class="main">
-			<h2 class="h2Title">发布职位 | <a href="#">今天发布了2个职位</a></h2>
+			<h2 class="h2Title">发布职位 | <a href="#">今天发布了<%= @new_posts_for_today%>个职位</a></h2>
 			<div class="form">
 				<%= form_for @post, url: hr_posts_path, method: :post do |f|%>
         <%= render partial: "/hr/posts/form", locals: {f: f}%>

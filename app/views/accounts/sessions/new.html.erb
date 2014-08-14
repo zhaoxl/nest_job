@@ -42,7 +42,7 @@
             <div class="frm VerifCode">
               <span class="prompt tipMsg">验证码</span>
               <input type="text" id="mycaptcha" class="txt">
-              <img src="/鸟窝html/images/verfi_code.png" class="updateCaptcha" style="cursor: pointer" id="captchaImg" title="刷新验证码">
+              <%= captcha_tag(class: "updateCaptcha", style: "cursor: pointer", id: "captchaImg", title: "刷新验证码") %>
               <em class="pwd updateCaptcha">&nbsp;</em>
               <span class="error errorregister" id='captchaError' style="">请输入验证码</span>
             </div>
@@ -104,7 +104,7 @@
             <div class="frm VerifCode">
               <span class="prompt tipMsg">验证码</span>
               <input type="text" id="mycaptchal" class="txt">
-              <img src="/鸟窝html/images/verfi_code.png" class="updateCaptchal" style="cursor: pointer" id="captchaImgl" title="刷新验证码">
+              <%= captcha_tag(class: "updateCaptcha", style: "cursor: pointer", id: "captchaImgl", title: "刷新验证码") %>
               <em class="pwd updateCaptchal">&nbsp;</em>
               <span class="error errorregisterl" id='captchaErrorl' style="">请输入验证码</span>
             </div>

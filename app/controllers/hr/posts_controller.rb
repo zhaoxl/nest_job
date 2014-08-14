@@ -9,12 +9,14 @@ class Hr::PostsController < ApplicationController
   end
   
 	def new
+    flash.clear
     if current_account.company.blank?
       cookies[:goto] = request.original_url
       redirect_to new_hr_company_path and return
     end
     
 		@post = Post.new(email: current_account.email)
+    @new_posts_for_today = current_account.posts.by_date(Date.today).size
 	end
   
   def create

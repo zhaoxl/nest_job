@@ -13,11 +13,11 @@ class Post < ActiveRecord::Base
     number_of_shards: 1
   } do
     mappings dynamic: 'false' do
-      indexes :title,       analyzer: 'english', index_options: 'offsets'
-      indexes :description, analyzer: 'english', index_options: 'offsets'
-      indexes :area,        analyzer: 'english', index_options: 'offsets'
-      indexes :address,     analyzer: 'english', index_options: 'offsets'
-      indexes :sanitize_content,     analyzer: 'english', index_options: 'offsets'
+      indexes :title,       analyzer: 'mmseg', index_options: 'offsets'
+      indexes :description, analyzer: 'mmseg', index_options: 'offsets'
+      indexes :area,        analyzer: 'mmseg', index_options: 'offsets'
+      indexes :address,     analyzer: 'mmseg', index_options: 'offsets'
+      indexes :sanitize_content,     analyzer: 'mmseg', index_options: 'offsets'
     end
   end
   
@@ -56,6 +56,7 @@ class Post < ActiveRecord::Base
   scope :by_area, ->(area){where(area: area)}
   scope :by_look_num_desc, ->{order("look_num DESC")}
   scope :by_status, ->(status){where(status: status)}
+  scope :by_date, ->(date){where("TO_DAYS(created_at) = TO_DAYS(?)", date)}
   
   
   # 受保护的email地址

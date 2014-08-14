@@ -3,6 +3,7 @@
     workflow:
       status:
         status_apply_normal: 待HR处理
+        status_apply_hr_receive: HR已查看简历
         status_apply_hr_reject: HR拒绝
         status_wait_audition: 等待面试
         status_audition_passed: 面试通过
@@ -11,6 +12,7 @@
         status_probation_failed: 试用失败
       first_person_status:
         status_apply_normal: 等待我处理
+        status_apply_hr_receive: 已查看简历
         status_apply_hr_reject: 我已拒绝
         status_wait_audition: 等待面试
         status_audition_passed: 面试通过

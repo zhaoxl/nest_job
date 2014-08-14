@@ -1,5 +1,6 @@
 class Worker::ResumesController < ApplicationController
   before_action :authenticate_account!
+  include DiversityResult
   
   def index
     @account_resume = AccountResume.find_or_create_by(account_id: current_account.id)
@@ -19,11 +20,27 @@ class Worker::ResumesController < ApplicationController
       end
     rescue Exception => ex
       result = {status: "error", content: ex.message}
-      logger.error "accounts_create error log================================================"
+      logger.error "action error log================================================"
       logger.error ex.message
       logger.error ex.backtrace
     end
     render json: result.to_json
+  end
+  
+  #更新邀约金价格
+  def update_price
+    begin
+      price = params[:price].to_i
+      current_account.current_account_resume.update_attribute :price, price
+    rescue Exception => ex
+      flash[:error] = ex.message
+      logger.error "action error log================================================"
+      logger.error ex.message
+      logger.error ex.backtrace
+    end
+    dr_render do
+      redirect_to :back
+    end
   end
   
   private  

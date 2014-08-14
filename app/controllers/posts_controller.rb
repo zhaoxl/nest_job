@@ -30,29 +30,25 @@ class PostsController < ApplicationController
       end
       
       filter = {
-        "term" => {"area" => area}
+        "bool" => {"must" => {"term" => { "area" => area }}}
       } if area.present?
       
       @time = Benchmark.realtime do
-        @posts = Post.__elasticsearch__.search "query" => {"bool" => {"must" => [],"must_not" => [],
-              "should" =>  [
-                { "match" => { "title" =>  k }},
-                { "match" => { "address" => k }},
-                { "match" => { "sanitize_content" => k }}
-              ],
-              "minimum_should_match" =>  1,
-              "boost" =>  1.0
-            }
-          },
-          "filter" => filter,
-          "sort" => [],
-          "facets" => {},
-          highlight: { 
-            fields: { 
-              title: {"pre_tags" => ["<b>"], "post_tags" => ["</b>"]}, 
-              sanitize_content: {"pre_tags" => ["<b>"], "post_tags" => ["</b>"]}, 
-              address: {"pre_tags" => ["<b>"], "post_tags" => ["</b>"]} 
-            } 
+        @posts = Post.__elasticsearch__.search "query" => {
+          "multi_match" => {
+            "query" => k,
+            "fields" => [ "title", "address", "sanitize_content" ]
+          }
+        },
+        "filter" => filter,
+        "sort" => [],
+        "facets" => {},
+        highlight: { 
+          fields: { 
+            title: {"pre_tags" => ["<b>"], "post_tags" => ["</b>"]}, 
+            sanitize_content: {"pre_tags" => ["<b>"], "post_tags" => ["</b>"]}, 
+            address: {"pre_tags" => ["<b>"], "post_tags" => ["</b>"]} 
+          } 
         }
       end
       @posts = @posts.page(params[:page]).per(5)
@@ -64,3 +60,10 @@ class PostsController < ApplicationController
   end
 
 end
+
+%Q{
+  curl -X GET 'http://54.250.192.6:9200/posts/post/_search?pretty&from=0&size=5' -d '{"query":{"bool":{"must":[],"must_not":[],"should":[{"match":{"title":"前端"}},{"match":{"address":"前端"}},{"match":{"sanitize_content":"前端"}}],"minimum_should_match":1,"boost":1.0}},"filter":{},"sort":[],"facets":{},"highlight":{"fields":{"title":{"pre_tags":["\u003Cb\u003E"],"post_tags":["\u003C/b\u003E"]},"sanitize_content":{"pre_tags":["\u003Cb\u003E"],"post_tags":["\u003C/b\u003E"]},"address":{"pre_tags":["\u003Cb\u003E"],"post_tags":["\u003C/b\u003E"]}}}}'
+}
+
+
+

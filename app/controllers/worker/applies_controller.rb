@@ -5,6 +5,7 @@ class Worker::AppliesController < ApplicationController
   def index
     @items = WorkflowApply.by_worker_account_id(current_account.id).order_ct_desc
     @items = @items.by_status([:status_apply_normal]) if params[:status] == "status_apply_normal"
+    @items = @items.by_status([:status_apply_hr_receive]) if params[:status] == "status_apply_hr_receive"
     @items = @items.by_status([:status_apply_hr_reject]) if params[:status] == "status_apply_hr_reject"
     @items = @items.by_status([:status_wait_audition]) if params[:status] == "status_wait_audition"
     @items = @items.by_status([:status_audition_passed]) if params[:status] == "status_audition_passed"

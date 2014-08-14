@@ -24,6 +24,9 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <script type="text/javascript">
+  logged = <%= current_account.present? %>;
+  </script>
     <!--发起职位层 start-->
     <div class="ui-widget-overlay ui-front initiateInterviewPop"></div>
     <div class="popUpBox initiateInterviewPop" id="initiateInterviewPop">

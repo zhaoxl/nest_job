@@ -24,7 +24,7 @@ class Workflow < ActiveRecord::Base
     state :status_probation_failed              #试用失败
     
     event :set_status_to_wait_audition do
-      transitions from: :status_apply_normal, to: :status_wait_audition
+      transitions from: :status_apply_hr_receive, to: :status_wait_audition
       transitions from: :status_invite_normal, to: :status_wait_audition
     end
     event :set_status_to_audition_failed do

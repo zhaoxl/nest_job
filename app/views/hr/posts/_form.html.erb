@@ -1,8 +1,8 @@
 <%if flash[:error]%>
-<span style="color: red">错误信息:<%= flash[:error]%></span>
+<span style="color: red">错误信息:<%= flash.now[:error]%></span>
 <%end%>
 <%if flash[:notice]%>
-<span style="color: green">提示信息:<%= flash[:notice]%></span>
+<span style="color: green">提示信息:<%= flash.now[:notice]%></span>
 <%end%>
 <div class="frm">
 	<span>职位名称</span>

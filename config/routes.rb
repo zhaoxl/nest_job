@@ -56,6 +56,7 @@ NestJob::Application.routes.draw do
     resources :company_scenes
     resources :applies do
       collection do
+        post :receive
         post :accept
         post :reject
       end

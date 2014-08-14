@@ -43,8 +43,7 @@
         </div>
 			</div>
 			<div class="jobBtns">
-				<a href="#" class="btnR">发起面试</a><a href="#" class="btnR">收    藏</a>
-				<a href="#" class="btnR">分    享</a>
+        <a href="javascript:void(0)" jobid="<%= @post.id%>" class="btnR initiateInterviewBtn" resume_complete="<%= current_account && current_account.current_account_resume.complete?%>">发起面试</a>
 			</div>
 		</div>
 	</div>
