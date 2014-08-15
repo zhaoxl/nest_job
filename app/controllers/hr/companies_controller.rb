@@ -2,7 +2,7 @@ class Hr::CompaniesController < ApplicationController
   before_action :authenticate_account!
   
   def new
-    redirect_to accounts_profile_index_path if current_account.company.present?
+    redirect_to edit_account_registration_path if current_account.company.present?
   end
   
   def create
@@ -14,7 +14,7 @@ class Hr::CompaniesController < ApplicationController
     #保存所在公司
     current_account.save
     
-    redirect_to cookies[:goto]||accounts_profile_index_path
+    redirect_to cookies[:goto]||edit_account_registration_path
   end
   
   def update
@@ -25,7 +25,7 @@ class Hr::CompaniesController < ApplicationController
       redirect_to :back and return
     end
     
-    redirect_to cookies[:goto]||accounts_profile_index_path
+    redirect_to cookies[:goto]||edit_account_registration_path
   end
   
   private  

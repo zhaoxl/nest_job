@@ -32,7 +32,7 @@
   	<li><%= link_to "找工作", index_index_path, class: "current"%></li>
   	<li><a href="<%= worker_auditions_path%>">面试消息<%= worker_wait_audition_count%></a></li>
   	<li><%= link_to "完善简历", worker_resumes_path%></li>
-  	<li><%= link_to "#{ current_account.nick_name.present? ? "昵称：#{current_account.nick_name}" : "填写基本资料"}", accounts_profile_index_path%></li>
+  	<li><%= link_to "#{ current_account.nick_name.present? ? "昵称：#{current_account.nick_name}" : "填写基本资料"}", edit_account_registration_path%></li>
   	<li><%= link_to "退出", destroy_account_session_path%></li>
   </ul>
 <%else%>
@@ -40,7 +40,7 @@
   	<li><%= link_to "找人才", hr_root_path, class: "isCompanyUser"%></li>
   	<li><a href="<%= hr_applies_path(status: :status_apply_normal)%>">人才面试消息<%= hr_apply_normal_count%></a></li>
   	<li><%= link_to "发布职位", new_hr_post_path%></li>
-  	<li><%= link_to "#{ current_account.nick_name.present? ? "昵称：#{current_account.nick_name}" : "填写基本资料"}", accounts_profile_index_path%></li>
+  	<li><%= link_to "#{ current_account.nick_name.present? ? "昵称：#{current_account.nick_name}" : "填写基本资料"}", edit_account_registration_path%></li>
   	<li><%= link_to "退出", destroy_account_session_path%></li>
   </ul>
 <%end%>

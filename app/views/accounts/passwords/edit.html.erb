@@ -1,16 +1,40 @@
-<h2>Change your password</h2>
-
-<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
-  <%= devise_error_messages! %>
-  <%= f.hidden_field :reset_password_token %>
-
-  <div><%= f.label :password, "New password" %><br />
-    <%= f.password_field :password, autofocus: true, autocomplete: "off" %></div>
-
-  <div><%= f.label :password_confirmation, "Confirm new password" %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %></div>
-
-  <div><%= f.submit "Change my password" %></div>
-<% end %>
-
-<%= render "accounts/shared/links" %>
+<%content_for :head_include do%>
+	<link rel="stylesheet" href="/鸟窝html/stylesheets/release_job.css" />
+    <%= javascript_include_tag '/鸟窝html/javascripts/ajaxupload.js', 'data-turbolinks-track' => true %>
+<%end%>
+<div class="mainContainer">
+	<div class="main">
+		<!-- <div class="ml">
+		</div> -->
+		<!-- <div class="mm"> -->
+			<h2 class="h2Title">重置密码</h2>
+			<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
+        <%= devise_error_messages! %>
+        <%= f.hidden_field :reset_password_token %>
+        <%if flash[:error]%>
+        <span style="color: red">错误信息:<%= flash[:error]%></span>
+        <%end%>
+        <%if flash[:notice]%>
+        <div id='rubyinfos' style="text-align:center;color: #fff;background-color:#16a085;font-size:15px"><%= flash[:notice]%></div>
+        <%end%>
+				<div class="form">
+    			<div class="frm">
+    				<span class="">新密码：</span>
+            <%= f.password_field :password, autocomplete: "off", class: "","data-noHide" => "1","error-id" => "errorpeopleNickName","data-type" => "notnull"%>
+    				<span class="error" id="errorpeopleNickName">*请填写昵称</span>
+    			</div>
+    			<div class="frm">
+    				<span class="">确认新密码：</span>
+            <%= f.password_field :password_confirmation, autocomplete: "off", class: ""%>
+    				<span class="error" id="errorpeopleNickName">*请填写昵称</span>
+    			</div>
+				</div>
+				<div class="jobBtns">
+          <%= f.submit :保存, class: "btn"%>
+				</div>
+      <%end%>
+      
+		</div>
+	<!-- </div> -->
+	<%= render partial: "/layouts/right"%>
+</div>

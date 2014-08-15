@@ -831,7 +831,7 @@ $(function($) {
     var uploading = false;
     //上传照片
     $("#myimage").length > 0 && new AjaxUpload("#myimage", {
-        action: '/accounts/profile/ajax_update_logo',
+        action: '/accounts/registrations/ajax_update_logo',
         name:'file',
         //选择后自动开始上传
         autoSubmit:true,

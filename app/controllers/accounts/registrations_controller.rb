@@ -5,22 +5,6 @@ class Accounts::RegistrationsController < Devise::RegistrationsController
     super
   end
   
-  def create
-    #unless captcha_valid? params[:captcha]
-    #  #验证码错误
-    #  flash[:error] = "验证码错误"
-    #  redirect_to :back and return
-    #end
-    ##登陆
-    #super
-    #if resource.new_record?
-    #  #创建失败
-    #  flash[:errors] = resource.errors.messages.values.flatten.uniq
-    #  redirect_to :back and return
-    #end
-    #redirect_to root_path
-  end
-  
   def ajax_create
     result = {status: "ok"}
     begin
@@ -55,7 +39,7 @@ class Accounts::RegistrationsController < Devise::RegistrationsController
       
       #登陆
       sign_in(:account, resource)
-      register_step2_path = resource.account_type == Account::ACCOUNT_TYPE_HR ? new_hr_company_path : accounts_profile_index_path
+      register_step2_path = resource.account_type == Account::ACCOUNT_TYPE_HR ? new_hr_company_path : edit_account_registration_path
       #cookies[:goto]||after_sign_in_path_for(resource)
       result = {status: "ok", content: (register_step2_path)}
     rescue Exception => ex
@@ -66,4 +50,56 @@ class Accounts::RegistrationsController < Devise::RegistrationsController
     end
     render json: result.to_json
   end
+  
+  def update
+    begin
+      if current_account.update_attributes(account_update_params)
+        flash[:success] = "保存成功"
+      else
+        flash[:error] = current_account.errors
+      end
+    rescue Exception => ex
+      flash[:error] = ex.message
+    end
+    
+    redirect_to :back
+  end
+  
+  def ajax_update_logo
+    result = {status: "ok"}
+    begin
+      current_account.logo = params[:file]
+      unless current_account.save
+        raise AjaxException.new(current_account.errors.messages.inject({}){|hash, item| hash[item[0]] = item[1]*','; hash})
+      end
+      result[:content] = current_account.logo(:thumb)
+    rescue Exception => ex
+      result = {status: "error", content: ex.message}
+      logger.error "ajax_update_logo error log================================================"
+      logger.error ex.message
+      logger.error ex.backtrace
+    end
+    render text: result.to_json
+  end
+  
+  def update_pwd
+    begin
+      raise "现用密码不正确" unless current_account.valid_password?(params[:account][:current_password])
+      current_account.password = params[:account][:password]
+      current_account.password_confirmation = params[:account][:password_confirmation]
+      raise current_account.errors.messages.values * "," unless current_account.save
+      flash[:success] = "修改成功"
+    rescue Exception => ex
+      flash[:error] = ex.message
+      logger.error "ajax_update_logo error log================================================"
+      logger.error ex.message
+      logger.error ex.backtrace
+    end
+    redirect_to :back
+  end
+  
+  private  
+  def account_update_params  
+    params.require(:account).permit(:nick_name, :company_email, :description, :industry_id)  
+  end 
 end

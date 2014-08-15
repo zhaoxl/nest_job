@@ -245,7 +245,7 @@
     window.AjaxUpload = function (button, options) {
         this._settings = {
             // Location of the server-side upload script
-            action: '/accounts/profile/ajax_update_logo',
+            action: '/accounts/registrations/ajax_update_logo',
             // File upload name
             name: 'userfile',
             // Additional data to send

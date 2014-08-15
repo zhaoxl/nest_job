@@ -1,29 +1,85 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
-
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-  <%= devise_error_messages! %>
-
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email, autofocus: true %></div>
-
-  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-  <% end %>
-
-  <div><%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-    <%= f.password_field :password, autocomplete: "off" %></div>
-
-  <div><%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %></div>
-
-  <div><%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-    <%= f.password_field :current_password, autocomplete: "off" %></div>
-
-  <div><%= f.submit "Update" %></div>
-<% end %>
-
-<h3>Cancel my account</h3>
-
-<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
-
-<%= link_to "Back", :back %>
+<%content_for :head_include do%>
+	<link rel="stylesheet" href="/鸟窝html/stylesheets/release_job.css" />
+    <%= javascript_include_tag '/鸟窝html/javascripts/ajaxupload.js', 'data-turbolinks-track' => true %>
+<%end%>
+<div class="mainContainer">
+	<div class="main">
+		<!-- <div class="ml">
+		</div> -->
+		<!-- <div class="mm"> -->
+			<h2 class="h2Title">基本资料</h2>
+			<%= form_for current_account, url: account_registration_path, method: :patch do |f|%>
+        <%if flash[:error]%>
+        <span style="color: red">错误信息:<%= flash[:error]%></span>
+        <%end%>
+        <%if flash[:notice]%>
+        <div id='rubyinfos' style="text-align:center;color: #fff;background-color:#16a085;font-size:15px"><%= flash[:notice]%></div>
+        <%end%>
+				<div class="form">
+					<div class="frm">
+						<span class="">头       像：</span>
+						<div class="file">
+							<span class="fImg"><img id="myimg" class="myimgs" src="<%= current_account.logo(:thumb)%>" alt="" /></span>
+							<a  id="myimage" href="javascript:$('#file_upload').uploadify('upload','*')">上传照片</a>
+						</div>
+						<span class="suggestPicture"><strong>☞</strong> 建议：文件小于3M；尺寸宽、高一样，例如：100（宽）*100（高）</span>
+					</div>
+					<div class="frm">
+						<span class="">昵       称：</span>
+            <%= f.text_field :nick_name,id: "peopleNickName", class: "verification","data-noHide" => "1","error-id" => "errorpeopleNickName","data-type" => "notnull"%>
+						<span class="error" id="errorpeopleNickName">*请填写昵称</span>
+					</div>
+					<div class="frm">
+						<span class="">所在行业：</span>
+            <%= f.select :industry_id, Industry.all.collect { |p| [ p.name, p.id ] }, id: "industryId", class: "verification","data-noHide" => "1","error-id" => "errorindustryId","data-type" => "notnull"%>
+						<span class="error" id="errorindustryId">*请填写公司邮箱</span>
+					</div>
+					<div class="frm">
+						<span class="">简       介：</span>
+            <%= f.text_field :description,id: "peopleIntroduce", class: "verification","data-noHide" => "1","error-id" => "errorpeopleIntroduce","data-type" => "notnull"%>
+						<span class="error" id="errorpeopleIntroduce">*请填写相关简介</span>
+					</div>
+				</div>
+      
+				<div class="jobBtns">
+                    <a href="javascript:void(0)" id="saveInfo" class="btn">保&nbsp;存</a>
+				</div>
+      <%end%>
+			<h2 class="h2Title">修改密码</h2>
+			<%= form_for current_account, url: accounts_registrations_update_pwd_path, method: :patch do |f|%>
+        <%if flash[:error]%>
+        <span style="color: red">错误信息:<%= flash[:error]%></span>
+        <%end%>
+        <%if flash[:notice]%>
+        <div id='rubyinfos' style="text-align:center;color: #fff;background-color:#16a085;font-size:15px"><%= flash[:notice]%></div>
+        <%end%>
+				<div class="form">
+  			  <div class="frm">
+    				<span class="">现用密码：</span>
+            <%= f.password_field :current_password, autocomplete: "off", id: "currentPwd", class: "", "data-noHide" => "1","error-id" => "errorCurrentPwd","data-type" => "notnull"%>
+    				<span class="error" id="errorCurrentPwd">*请填写现用密码</span>
+    			</div>
+    			<div class="frm">
+    				<span class="">新密码：</span>
+            <%= f.password_field :password, autocomplete: "off", class: "","data-noHide" => "1","error-id" => "errorpeopleNickName","data-type" => "notnull"%>
+    				<span class="error" id="errorpeopleNickName">*请填写昵称</span>
+    			</div>
+    			<div class="frm">
+    				<span class="">确认新密码：</span>
+            <%= f.password_field :password_confirmation, autocomplete: "off", class: ""%>
+    				<span class="error" id="errorpeopleNickName">*请填写昵称</span>
+    			</div>
+				</div>
+				<div class="jobBtns">
+          <%= f.submit :保存, class: "btn"%>
+				</div>
+      <%end%>
+      
+      <%if current_account.account_type == Account::ACCOUNT_TYPE_HR%>
+        <%= render partial: "/hr/companies/form"%>
+        <%#= render partial: "/hr/companies/detial"%>
+      <%end%>
+		</div>
+	<!-- </div> -->
+	<%= render partial: "/layouts/right"%>
+</div>
