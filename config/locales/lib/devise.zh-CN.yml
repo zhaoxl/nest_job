@@ -22,7 +22,7 @@ zh-CN:
       confirmation_instructions:
         subject: "确认信息"
       reset_password_instructions:
-        subject: "重置密码信息"
+        subject: "来自鸟窝-密码重置邮件"
       unlock_instructions:
         subject: "解锁信息"
     omniauth_callbacks:
@@ -53,7 +53,7 @@ zh-CN:
     messages:
       already_confirmed: "已经确认，请重新登录。"
       confirmation_period_expired: "请在%{period}内确认注册, 请重新注册。"
-      expired: "邮件确认已过期，请重新注册。"
+      expired: "邮件确认已过期，请重新输入邮箱地址。"
       not_found: "没有找到。"
       not_locked: "未锁定。"
       not_saved:

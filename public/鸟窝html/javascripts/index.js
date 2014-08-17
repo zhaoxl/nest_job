@@ -750,7 +750,7 @@ $(function($) {
         }).dialog( "open");
     });
 
-    //找回密码弹框
+ /*   //找回密码弹框
     $("body").append('<div id="forgetPasswordPop" style="background-color: #27A695;color: #fff;text-align: left;font-size: 20px" title="Basic dialog">'+
         '<div style="position: relative;top:15%;">邮箱地址：<input type="text" id="forgetPasswordContent">'+
         '<b style="font-size: 12px"> 请输入您注册时用的邮箱</b><br /><br />'+
@@ -769,7 +769,7 @@ $(function($) {
             $(".verification").first().focus();
         },
         resizable:false
-    });
+    });*/
 
     //基本资料保存
     $("#rubyinfos").dialog({
@@ -791,7 +791,7 @@ $(function($) {
         $( "#rubyinfos").dialog( "close");
     },2000)
 
-    $("#forgetPassword").click(function(){
+  /*  $("#forgetPassword").click(function(){
         $( "#forgetPasswordPop").dialog({
             modal:true,
             close:function(){}
@@ -807,7 +807,7 @@ $(function($) {
             modal:true,
             close:function(){}
         }).dialog( "open");
-    });
+    });*/
     //发布职位 getContent
     $("#positionIssue").click(function(){
         //验证
@@ -959,9 +959,9 @@ $(function($) {
         $.ajax({
             dataType: "json",
             type: "post",
-            url: "/worker/applies",
+            url: "/worker/resumes/update_price",
             data: {
-                "mony": $("#saveMoneyNum").val() || 0,//职位
+                "price": $("#saveMoneyNum").val() || 0,
                 "authenticity_token": $("meta[name='csrf-token']").attr("content")
             },
             success: function(result) {
@@ -1094,6 +1094,7 @@ $(function($) {
             }
         });
     });
+
     //保存所有
     $(".saveAllJob").eq(0).each(function(){
         $(this).bind({
@@ -1102,6 +1103,7 @@ $(function($) {
                     modal:true,
                     close:function(){}
                 }).dialog( "open");
+                var account_resume_hope_area = $("#account_resume_hope_area").val()=="选择城市"?"":$("#account_resume_hope_area").val();
                 $.ajax({
                     dataType: "json",
                     type: "post",
@@ -1115,7 +1117,7 @@ $(function($) {
                         "account_resume[email]": $.trim($("#update_email").val()),
                         "account_resume[address]": $.trim($("#update_address").val()),
                         "account_resume[tags]": hopeTags.replace(/(^[,]+)|([,]+$)/g, ""),
-                        "account_resume[hope_area]":  $.trim($("#update_hope_area").val()),
+                        "account_resume[hope_area]":  account_resume_hope_area,
                         "account_resume[hope_salary]":  $.trim($("#update_hope_salary").val()),
                         "authenticity_token": $("meta[name='csrf-token']").attr("content")
                     },
@@ -1702,7 +1704,7 @@ $(function($) {
                                     __p.parent().parent().hide(300,function(){
                                         $(this).remove();
                                         if($(".interviewList").children("li").length ==0){
-                                            $(".interviewList").eq(0).html("<li class='noinfo'>还没有人才面试您发布的职位，赶紧-><a href='/hr'>找人才</a>吧！</li>");
+                                            $(".interviewList").eq(0).html("<li class='noinfo'>抱歉，还没有人才面试您发布的职位！</li>");
                                         }
                                     });
 
@@ -1734,6 +1736,86 @@ $(function($) {
         }
     });
     $("#loginTipT").click();
+    var gotoEmail = function ($mail) {
+        $t = $mail.split('@')[1];
+        $t = $t.toLowerCase();
+        if ($t == '163.com') {
+            return 'mail.163.com';
+        } else if ($t == 'vip.163.com') {
+            return 'vip.163.com';
+        } else if ($t == '126.com') {
+            return 'mail.126.com';
+        } else if ($t == 'qq.com' || $t == 'vip.qq.com' || $t == 'foxmail.com') {
+            return 'mail.qq.com';
+        } else if ($t == 'gmail.com') {
+            return 'mail.google.com';
+        } else if ($t == 'sohu.com') {
+            return 'mail.sohu.com';
+        } else if ($t == 'tom.com') {
+            return 'mail.tom.com';
+        } else if ($t == 'vip.sina.com') {
+            return 'vip.sina.com';
+        } else if ($t == 'sina.com.cn' || $t == 'sina.com') {
+            return 'mail.sina.com.cn';
+        } else if ($t == 'tom.com') {
+            return 'mail.tom.com';
+        } else if ($t == 'yahoo.com.cn' || $t == 'yahoo.cn') {
+            return 'mail.cn.yahoo.com';
+        } else if ($t == 'tom.com') {
+            return 'mail.tom.com';
+        } else if ($t == 'yeah.net') {
+            return 'www.yeah.net';
+        } else if ($t == '21cn.com') {
+            return 'mail.21cn.com';
+        } else if ($t == 'hotmail.com') {
+            return 'www.hotmail.com';
+        } else if ($t == 'sogou.com') {
+            return 'mail.sogou.com';
+        } else if ($t == '188.com') {
+            return 'www.188.com';
+        } else if ($t == '139.com') {
+            return 'mail.10086.cn';
+        } else if ($t == '189.cn') {
+            return 'webmail15.189.cn/webmail';
+        } else if ($t == 'wo.com.cn') {
+            return 'mail.wo.com.cn/smsmail';
+        } else if ($t == '139.com') {
+            return 'mail.10086.cn';
+        } else {
+            return '';
+        }
+    };
+    //邮箱登录
+    $("#loginMail").click(function(){
+        var _m = $(this).attr("data-mail"),
+            _url= gotoEmail(_m);
+        if (_url != "") {
+            window.open("http://"+_url)
+        } else {
+            alert("抱歉!未找到对应的邮箱登录地址，请手动登录邮箱查看邮件！");
+        }
+    });
+    //充值
+    $("#recharge").click(function(){
+        $.ajax({
+            dataType: "json",
+            type: "post",
+            url: "/worker/resumes/recharge",
+            data: {
+                "authenticity_token": $("meta[name='csrf-token']").attr("content")
+            },
+            success: function(result) {
+                if (result.status == "success") {
+                    $("#rechargecontent").html("鸟窝币：" + result.content);
+                } else {
+                    $( "#dialog").html(result.content).dialog({
+                        modal:true,
+                        close:function(){}
+                    }).dialog( "open");
+                }
+            }
+        });
+    });
 });
 
 //收藏职位

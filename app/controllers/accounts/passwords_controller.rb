@@ -1,8 +1,25 @@
 class Accounts::PasswordsController < Devise::PasswordsController  
+  layout false
+  include DiversityResult
+  
   def create
-    
-    raise "用户不存在" unless resource = Account.by_email(params[:email]).first
-    resource.send_reset_password_instructions
+    begin
+      @email = params[:email]
+      raise "用户不存在" unless resource = Account.by_email(@email).first
+      resource.send_reset_password_instructions
+    rescue Exception => ex
+      flash[:error] = ex.message
+      logger.error "action error log================================================"
+      logger.error ex.message
+      logger.error ex.backtrace
+    end
+    dr_render do
+      if flash[:error].present?
+        redirect_to :back
+      else
+        render :success
+      end
+    end
   end
   
   def edit
@@ -10,6 +27,11 @@ class Accounts::PasswordsController < Devise::PasswordsController
   end
   
   def update
-    super
+    super do
+      if resource.errors.messages[:reset_password_token].present?
+        flash[:error] = resource.errors.messages[:reset_password_token].join(",")
+        redirect_to new_account_password_path and return
+      end
+    end
   end
 end

@@ -2,7 +2,7 @@ NestJob::Application.routes.draw do
   captcha_route
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
-  devise_for :accounts, controllers: { registrations: "accounts/registrations", sessions: "accounts/sessions", passwords: "accounts/passwords" }, :sign_out_via=>[:delete, :get]
+  devise_for :accounts, controllers: { registrations: "accounts/registrations", sessions: "accounts/sessions", passwords: "accounts/passwords", mailer: "accounts/mailer" }, :sign_out_via=>[:delete, :get]
   devise_scope :account do
     post "/accounts/registrations/ajax_create" => "accounts/registrations#ajax_create"
     post "/accounts/sessions/ajax_create" => "accounts/sessions#ajax_create"
@@ -86,6 +86,7 @@ NestJob::Application.routes.draw do
       collection do
         post :ajax_save
         post :update_price
+        post :recharge
       end
     end
     resources :resume_experiences do

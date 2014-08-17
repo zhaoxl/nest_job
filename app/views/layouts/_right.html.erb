@@ -9,9 +9,9 @@
   	</div>
   	<div class="cash">
   		<ul>
-  			<li class='updateMoneyPanel'><span id='updateMoneys'>签约金：1000</span><a href="javascript:void(0)" id='updateMoney' class="btn">修   改</a></li>
+  			<li class='updateMoneyPanel'><span id='updateMoneys'>签约金：<%= current_account.current_account_resume.price.to_i%></span><a href="javascript:void(0)" id='updateMoney' class="btn">修   改</a></li>
   			<li class='saveMoneyPanel' style='display:none'><span>签约金：<input style='width:50px;border:1px solid #64ad9b;color:#444;' id='saveMoneyNum' type='text' value='1000'></span><a id='saveMoney'href="javascript:void(0)" class="btn">保   改</a></li>
-  			<li><span>鸟窝币：1000</span><a href="javascript:void(0)" class="btn">提   现</a></li>
+  			<li><span id='rechargecontent'>鸟窝币：<%= current_account.available_gold%></span><a href="javascript:void(0)" id='recharge' class="btn">充   值</a></li>
   		</ul>
   	</div>
   	<div class="help">
@@ -28,6 +28,8 @@
   	</div>
     <%if current_account.account_type == Account::ACCOUNT_TYPE_WORKER%>
     	<ul class="subNav">
+        <li><a href="<%= edit_account_registration_path%>" class="tit">基本资料</a></li>
+        <li><a href="<%= edit_account_registration_path%>#pwd" class="tit">修改密码</a></li>
     	</ul>
     <%elsif current_account.account_type == Account::ACCOUNT_TYPE_HR%>
     	<ul class="subNav">
@@ -44,7 +46,6 @@
 				<li><a href="<%= new_hr_post_path%>">发布职位</a></li>
 				<li><a href="<%= hr_posts_path%>">已发布职位</a></li>
 				<li><a href="<%= hr_posts_path(status: :status_off_shelves)%>" class="current">下架的职位</a></li>
-    		<li><a href="<%= accounts_favorites_path%>" class="tit">我的收藏</a></li>
     		<li><a href="#" class="tit">系统消息</a></li>
     	</ul>
     <%end%>
@@ -55,7 +56,6 @@
   <div class="mr">
     <div class="login_box">
       <%= form_for(resource, as: resource_name, url: accounts_registrations_ajax_create_path, html: {id: "sign_up_form"}, remote: true) do |f| %>
-        <%= devise_error_messages! %>
         <div class="form">
             <ul>
                 <li class="input_req">
@@ -93,7 +93,7 @@
                 <li>
                     <div class="frm">
                         <label class="remember"><input checked="checked" id="rememberMe" type="checkbox" class="rad">记住我</label>
-                        <a href="javascript:void(0)" id="forgetPassword" class="forget">忘记密码?</a>
+                        <a href="/accounts/password/new" class="forget">忘记密码?</a>
                     </div>
                 </li>
                 <li class="registerPanel" style="display: list-item;">

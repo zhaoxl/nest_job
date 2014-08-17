@@ -43,6 +43,22 @@ class Worker::ResumesController < ApplicationController
     end
   end
   
+  #充值
+  def recharge
+    begin
+      result = Bill.recharge(current_account, 100) 
+      flash[:success] = result
+    rescue Exception => ex
+      flash[:error] = "操作失败，请重试"
+      logger.error "action error log================================================"
+      logger.error ex.message
+      logger.error ex.backtrace
+    end
+    dr_render do
+      redirect_to :back
+    end
+  end
+  
   private  
   def resume_params  
     params.require(:account_resume).permit(:name, :tel, :email, :birthday, :gender, :education, :price, :marital_status, :address, :hope_salary, :hope_area, :tags)

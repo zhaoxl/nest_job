@@ -48,3 +48,23 @@ li .jobs em{background-position:-74px -60px;}
 #loginPanel{
     display: none;
 }
+/*密码找回*/
+#submitLogin,#loginMail{
+    width: 155px;
+    height: 46px;
+    font-size: 16px;
+    line-height: 46px;
+    clear: both;
+    float: left;
+    background: #019875;
+    color: #fff;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+}
+.psw_stepP{
+    font-size: 15px;
+}
+.psw_stepP span{
+    color: #019875;
+}

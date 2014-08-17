@@ -1,7 +1,7 @@
 class IndexController < ApplicationController
   def index
     if current_account.present? && current_account.account_type == Account::ACCOUNT_TYPE_HR
-      redirect_to hr_root_path and return 
+      redirect_to hr_posts_path and return 
     end
     if current_account.present?
       @account_hope_area = current_account.current_account_resume.hope_area

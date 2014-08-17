@@ -18,22 +18,11 @@
 		<h2>让高度匹配的靠谱求职者与靠谱招聘方自动找到对方</h2>
 		<div class="regBox loginBox" style="display: block" >
 			<div class="">
-        <img src="/鸟窝html/images/psw_step3.png" width="369" height="56" alt="找回密码第一步"><br/><br/>
-        <p class="psw_stepP">邮件地址：<span><%= params[:email]%></span></p><br/>
-    			<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put, class: "form", style: "border: 0px" }) do |f| %>
-            <%= devise_error_messages! %>
-            <%= f.hidden_field :reset_password_token %>
-            <%if flash[:error]%>
-            <span style="color: red">错误信息:<%= flash[:error]%></span>
-            <%end%>
-            <%if flash[:notice]%>
-            <div id='rubyinfos' style="text-align:center;color: #fff;background-color:#16a085;font-size:15px"><%= flash[:notice]%></div>
-            <%end%>
-            <%= f.password_field :password, autocomplete: "off", class: "txt", placeholder: "请输入新密码"%><br/><br/>
-            <%= f.password_field :password_confirmation, autocomplete: "off", class: "txt", placeholder: "再次输入"%><br/><br/>
-            <input type="submit" id="submitLogin" value="确  定">
-        <%end%>
-    </div>
+                <img src="/鸟窝html/images/psw_step2.png" width="369" height="56" alt="找回密码第一步"><br/><br/>
+                <p class="psw_stepP">密码重置邮件已发送至你的邮箱：<span><%= @email%></span><br/>
+                请在24小时内登录你的邮箱接收邮件，链接激活后可重置密码。</p><br/><br/>
+                <input type="submit" id="loginMail" data-mail='<%= @email%>' value="登录邮箱查看">
+            </div>
 		</div>
 	</div>
 </body>

@@ -49,6 +49,8 @@ class Accounts::SessionsController < Devise::SessionsController
           
           #登陆
           sign_in(:account, resource)
+          #如果是招聘方用户并且没有目标页，则跳转到我发布的职位页
+          cookies[:goto] ||= hr_posts_path
           result = {status: "ok", content: cookies[:goto]||after_sign_in_path_for(resource)}
         else
           raise AjaxException.new({password: "密码错误"})

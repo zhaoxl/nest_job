@@ -4,8 +4,10 @@
   <script type="text/javascript" src="/鸟窝html/javascripts/jquery-1.10.2.js"></script>
   <script type="text/javascript" src="/鸟窝html/javascripts/jquery-ui-1.10.4.min.js"></script>
   <script type="text/javascript" src="/鸟窝html/javascripts/cookie.js"></script>
-
 <%end%>
+<script type="text/javascript">
+  var hope_area = "<%= @account_resume.hope_area%>";
+</script>
 <div class="mainContainer">
 	<div class="main">
   	<h2 class="h2Title">完善简历</h2>
@@ -77,8 +79,7 @@
   				</div>
   				<div class="frm">
   					<span class="">期望城市：</span>
-                    <%= f.text_field :hope_area,  id: "update_hope_area", class: "verification", style: "border: 1px solid rgb(160, 160, 160);","data-noHide"=>"1", "data-em" => "notnull", "data-type" => "notnull", "error-id" => "errorupdate_hope_area"%>
-                    <!--select  id='update_hope_area' name='account_resume[hope_area]' data-placeholder="选择城市" style="width:100px;height:40px"><select-->
+            <%= f.select :hope_area, {}, id: "update_hope_area", class: "verification"%>
   					<span class="error" id="errorupdate_hope_area">*请填写城市</span>
   				</div>
   				<div class="frm">

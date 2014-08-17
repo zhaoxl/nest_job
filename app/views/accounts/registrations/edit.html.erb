@@ -45,6 +45,7 @@
                     <a href="javascript:void(0)" id="saveInfo" class="btn">保&nbsp;存</a>
 				</div>
       <%end%>
+      <a id="pwd" name="pwd" />
 			<h2 class="h2Title">修改密码</h2>
 			<%= form_for current_account, url: accounts_registrations_update_pwd_path, method: :patch do |f|%>
         <%if flash[:error]%>

@@ -8,7 +8,7 @@
 		<div class="interview">
 			<ul class="interviewList">
         <%if @items.blank?%>
-        <li class='noinfo'>还没有人才面试您发布的职位，试一下<a href='/hr'>找人才</a>吧！</li>
+        <li class='noinfo'>抱歉，还没有人才面试您发布的职位，请尝试发布一下新的<a href='/hr/posts/new'>发布职位</a>！</li>
         <%end%>
 				<%@items.each do |item|%>
         <%worker = item.worker%>
@@ -37,7 +37,6 @@
 						</div>
 						<div class="interviewBtns">
 							<%= render partial: "/hr/applies/buttons", locals: {item: item}%>
-							<a href="#" class="btnR">分享职位</a>
 						</div>
 					</div>
 				</li>

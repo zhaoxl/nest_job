@@ -1,12 +1,39 @@
-<h2>Forgot your password?</h2>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>密码找回-鸟窝-让高度匹配的靠谱求职者与靠谱招聘方自动找到对方</title>
+	<link rel="stylesheet" href="/鸟窝html/stylesheets/ui_base.css" />
+	<link rel="stylesheet" href="/鸟窝html/stylesheets/ui_common.css" />
+	<link rel="stylesheet" href="/鸟窝html/stylesheets/login.css" />
+    <link rel="stylesheet" href="/鸟窝html/javascripts/css/ui-lightness/jquery-ui-1.10.4.min.css" />
+    <script type="text/javascript" src="/鸟窝html/javascripts/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="/鸟窝html/javascripts/jquery-ui-1.10.4.min.js"></script>
+    <script type="text/javascript" src="/鸟窝html/javascripts/index.js"></script>
+</head>
+<body>
+	<div class="contentWrap" >
+		<div class="bg"><img src="/鸟窝html/images/login_bg.jpg" alt=""/></div>
+		<h1><a href="/" class="logo">鸟窝</a></h1>
+		<h2>让高度匹配的靠谱求职者与靠谱招聘方自动找到对方</h2>
+		<div class="regBox loginBox" style="display: block" >
+			<div class="">
+        <img src="/鸟窝html/images/psw_hui1.png" width="369" height="56" alt="找回密码第一步"><br/><br/>
+        <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post, class:"form input_req", style: "border: 0px" }) do |f| %>
 
-<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
-  <%= devise_error_messages! %>
+          <%if flash[:notice]%>
+            <div id='rubyinfos' style="text-align:center;color: #fff;background-color:#16a085;font-size:15px"><%= flash[:notice]%></div>
+          <%end%>
+          <%= text_field_tag :email, "", autofocus: true, class: "txt", placeholder: "请输入注册时使用的邮箱地址" %><br/>
 
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email, autofocus: true %></div>
-
-  <div><%= f.submit "Send me reset password instructions" %></div>
-<% end %>
-
-<%= render "accounts/shared/links" %>
+            <%if flash[:error]%>
+              <span  class="error" style="display: block;">错误信息:<%= flash[:error]%></span>
+            <%end%>
+            <br/>
+          <input type="submit" id="submitLogin" value="找回密码">
+        <% end %>
+      </div>
+		</div>
+	</div>
+</body>
+</html>

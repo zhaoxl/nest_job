@@ -1,6 +1,6 @@
 body{font-family:'微软雅黑';}
 /*header*/
-.headerWrap{height:81px;background:#27a695;position: fixed;z-index: 99;left: 0;top: 0;width: 100%;filter:alpha(opacity=90);-moz-opacity:0.9;opacity:0.9;}
+.headerWrap{height:81px;background:#27a695;position: fixed;z-index: 9999;left: 0;top: 0;width: 100%;filter:alpha(opacity=90);-moz-opacity:0.9;opacity:0.9;}
 .header{width:1170px;margin:0 auto;}
 .header h1{float:left;width:170px;}
 

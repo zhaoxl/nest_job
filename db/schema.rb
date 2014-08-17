@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140729122851) do
+ActiveRecord::Schema.define(version: 20140817085940) do
 
   create_table "account_post_applies", force: true do |t|
     t.integer  "account_id"
@@ -206,6 +206,7 @@ ActiveRecord::Schema.define(version: 20140729122851) do
     t.float    "money"
     t.string   "status"
     t.datetime "created_at"
+    t.integer  "action_type"
   end
 
   create_table "companies", force: true do |t|

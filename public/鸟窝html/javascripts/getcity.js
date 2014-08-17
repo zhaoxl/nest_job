@@ -432,9 +432,15 @@ $(function($) {
     }
     $('#mycity').html(CitysOptions);
     $('#cityHopes').html(CitysOptions);
+    var _hope_area = typeof hope_area;
+    if(_hope_area == "string"){
+        $('#account_resume_hope_area').html(CitysOptions);
+        $("#account_resume_hope_area option[value="+hope_area+"]").attr("selected",true)
+    }
+
    /* $('#update_hope_area').html(CitysOptions);*/
     $("#mycity").trigger("chosen:updated");
-    /*$("#cityHopes").trigger("chosen:updated");*/
+    $("#cityHopes").trigger("chosen:updated");
    // $("#update_hope_area").trigger("chosen:updated");
 });
 
