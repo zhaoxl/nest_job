@@ -4,3 +4,6 @@
       status:
         status_normal: 正常
         status_off_shelves: 下架
+      status_action_names:
+        status_normal: "下     架"
+        status_off_shelves: "上     架"

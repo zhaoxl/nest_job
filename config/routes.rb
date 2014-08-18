@@ -51,10 +51,14 @@ NestJob::Application.routes.draw do
     get ':id', to: 'index#show', constraints: {id: /\d+/}, shallow: true
     resources :posts do
       member do
-        get :set_status
+        put :set_status
       end
     end
-    resources :companies
+    resources :companies do
+      collection do
+        get :edit
+      end
+    end
     resources :company_members
     resources :company_scenes
     resources :applies do

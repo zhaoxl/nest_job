@@ -23,7 +23,18 @@ class Accounts::PasswordsController < Devise::PasswordsController
   end
   
   def edit
-    super
+    begin
+      @email = params[:email]
+      raise "用户不存在" unless resource = Account.by_email(@email).first
+      raise I18n.t("errors.messages.expired") unless resource.reset_password_period_valid?
+      super
+    rescue Exception => ex
+      flash[:error] = ex.message
+      logger.error "action error log================================================"
+      logger.error ex.message
+      logger.error ex.backtrace
+      redirect_to new_account_password_path and return
+    end
   end
   
   def update

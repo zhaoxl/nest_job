@@ -75,11 +75,6 @@
           <%= f.submit :保存, class: "btn"%>
 				</div>
       <%end%>
-      
-      <%if current_account.account_type == Account::ACCOUNT_TYPE_HR%>
-        <%= render partial: "/hr/companies/form"%>
-        <%#= render partial: "/hr/companies/detial"%>
-      <%end%>
 		</div>
 	<!-- </div> -->
 	<%= render partial: "/layouts/right"%>

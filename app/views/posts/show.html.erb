@@ -6,25 +6,7 @@
 <div class="mainContainer">
 	<div class="main">
 		<div class="ml">
-			<h2 class="h2Title">公司信息</h2>
-			<div class="companyInfo">
-				<!--div class="compImg"><%= link_to image_tag(@post.account.logo(:thumb)), "#"%></div-->
-				<div class="compInfo">
-					<p><%= @company.name%></p>
-					<p class="cmpUrl"><a href="http://www.ifeng.com" target='_black'>www.ifeng.com</a></p>
-					<p>性质：<%= @company.nature.to_s%></p>
-					<p>行业：<%= @company.industry.to_s%></p>
-					<p>融资阶段：<%= @company.financing_stage%></p>
-					<p>以下是公司周边：</p>
-					<div class="slide">
-            <ul class="bxslider">
-              <li><img width='143' height='96' src="/鸟窝html/images/placeDemo.jpg" /></li>
-              <li><img width='143' height='96' src="/鸟窝html/images/login_bg.jpg" /></li>
-            </ul>
-					</div>
-
-				</div>
-			</div>
+			<%= render partial: "/layouts/left_company_info", locals: {company: @company}%>
 		</div>
 		<div class="mm">
 			<h2 class="h2Title">职位详情</h2>

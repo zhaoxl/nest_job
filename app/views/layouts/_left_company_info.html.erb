@@ -1,0 +1,17 @@
+<h2 class="h2Title">公司信息</h2>
+<div class="companyInfo">
+  <%if @company.present?%>
+	<div class="compImg"><a href="#"><img src="images/company_demo.jpg" alt="" /></a></div>
+	<div class="compInfo">
+		<p><%= @company.name%></p>
+		<p class="cmpUrl"><%= link_to @company.home_page, @company.home_page, target: :_blank%></p>
+		<p>性质：<%= @company.nature.to_s%></p>
+		<p>行业：<%= @company.industry.to_s%></p>
+		<p>融资阶段：<%= @company.financing_stage.to_s%></p>
+	</div>
+  <%elsif current_account.company_id == @company.id%>
+  <%= link_to "公司信息不全，请添加信息", edit_account_registration_path%>
+  <%else%>
+  <p>公司信息不存在</p>
+  <%end%>
+</div>

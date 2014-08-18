@@ -5,17 +5,7 @@
 <div class="mainContainer">
 	<div class="main">
 		<div class="ml">
-			<h2 class="h2Title">公司信息</h2>
-			<div class="companyInfo">
-				<div class="compImg"><a href="#"><img src="images/company_demo.jpg" alt="" /></a></div>
-				<div class="compInfo">
-					<p><%= @company.name%></p>
-					<p class="cmpUrl"><%= link_to @company.home_page, @company.home_page, target: :_blank%></p>
-					<p>性质：<%= @company.nature.to_s%></p>
-					<p>行业：<%= @company.industry.to_s%></p>
-					<p>融资阶段：<%= @company.financing_stage.to_s%></p>
-				</div>
-			</div>
+			<%= render partial: "/layouts/left_company_info", locals: {company: @company}%>
 		</div>
 		<div class="mm">
 			<h2 class="h2Title">职位详情</h2>
