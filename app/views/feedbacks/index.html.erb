@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>用户反馈-鸟窝-让高度匹配的靠谱求职者与靠谱招聘方自动找到对方</title>
+	<link rel="stylesheet" href="/鸟窝html/stylesheets/ui_base.css" />
+	<link rel="stylesheet" href="/鸟窝html/stylesheets/ui_common.css" />
+	<link rel="stylesheet" href="/鸟窝html/stylesheets/login.css" />
+    <link rel="stylesheet" href="/鸟窝html/javascripts/css/ui-lightness/jquery-ui-1.10.4.min.css" />
+    <script type="text/javascript" src="/鸟窝html/javascripts/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="/鸟窝html/javascripts/jquery-ui-1.10.4.min.js"></script>
+    <script type="text/javascript" src="/鸟窝html/javascripts/index.js"></script>
+</head>
+<body>
+	<div class="contentWrap" >
+		<div class="bg"><img src="/鸟窝html/images/login_bg.jpg" alt=""/></div>
+		<h1><a href="/" class="logo">鸟窝</a></h1>
+		<h2>让高度匹配的靠谱求职者与靠谱招聘方自动找到对方</h2>
+		<div class="regBox loginBox" style="display: block" >
+			<div class="">
+        <p style="font-size: 18px">亲爱的用户您好:</p>
+        <p style="font-size: 13px">您对“鸟窝”有任何建议，或使用中遇到问题，请提交反馈</p>
+        <p style="font-size: 13px;line-height: 23px;"> 或 <a style="color: #199594" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=939898101&site=qq&menu=yes">点击联系客服QQ：939898101</a></p>
+        <p style="font-size: 13px;line-height: 23px;">我们会尽力一一回复。如果反馈的问题没有及时改进，那么我们肯定是在处理过程中。非常欢迎大家给我们吐槽各种问题。</p>
+        <br/>
+          <%= form_for Feedback.new, url: feedbacks_path, class: :form, style: "border: 0px" do |f|%>
+            <%if flash[:error]%>
+            <span class='feedBacksError'style="color: red;text-align:center">警告:<%= flash[:error]%></span>
+            <%end%>
+            <%if flash[:notice]%>
+            <div class='feedBacksError' style="color: gray;background-color:#fff;text-align:center"><%= flash[:notice]%></div>
+            <%end%>
+            <%if flash[:success]%>
+            <div class='feedBacksError' style="color: #199594;background-color:#fff;text-align:center"><%= flash[:success]%></div>
+            <%end%>
+            <p><b>问题描述：</b><%= f.text_area :content, size: "35x6", style: "width: 235px"%></p><br/>
+            <p><input type="submit" id="feedback" value="提交"></p>
+          <%end%>
+        </div>
+		</div>
+	</div>
+</body>
+</html>

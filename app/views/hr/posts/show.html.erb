@@ -1,6 +1,7 @@
 <%= content_for :head_include do%>
 	<link rel="stylesheet" href="/鸟窝html/stylesheets/ui_common.css" />
 	<link rel="stylesheet" href="/鸟窝html/stylesheets/job_detail.css" />
+  <%= javascript_include_tag :jquery_ujs%>
 <%end%>
 <div class="mainContainer">
 	<div class="main">
@@ -24,10 +25,9 @@
         </div>
 			</div>
 			<div class="jobBtns">
-				<a href="javascript:void(0)" class="btnR">编    辑</a><a href="#" class="btnR">分    享</a>
-				<a href="javascript:void(0)" class="btnR">下    架</a>
-				<a href="javascript:void(0)" class="btnR">上    架</a>
-                    <a href="javascript:void(0)" class="btnR">删    除</a>
+        <%= link_to "编    辑", edit_hr_post_path(@post), class: "btnR"%>
+        <%= link_to I18n.t("model.post.status_action_names.#{@post.status}"), set_status_hr_post_path(@post), method: :put, class: "btnR"%>
+        <%= link_to "删    除", hr_post_path(@post), method: :delete, class: "btnR"%>
 			</div>
 		</div>
 	</div>

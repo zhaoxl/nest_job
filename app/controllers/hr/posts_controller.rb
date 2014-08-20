@@ -4,6 +4,7 @@ class Hr::PostsController < ApplicationController
   
   def index
     @posts = current_account.posts.ct_desc
+    @posts = @posts.by_status([:status_normal]) if params[:status] == "status_normal"
     @posts = @posts.by_status([:status_off_shelves]) if params[:status] == "status_off_shelves"
     @posts = @posts.page(params[:id]).per(8)
   end

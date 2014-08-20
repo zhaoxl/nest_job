@@ -57,7 +57,10 @@
 					<p>所在部门：<%= post.department%></p>
 					<p>工作城市：<%= post.area%></p>
 					<div class="btns">
-						<a href="<%= hr_post_path(post)%>" class="btnR">查   看</a><a href="<%= edit_hr_post_path(post)%>" class="btnR">编     辑</a><%= link_to "删     除", hr_post_path(post), method: :delete, class: "btnR"%><%= link_to I18n.t("model.post.status_action_names.#{post.status}"), set_status_hr_post_path(post), method: :put, class: "btnR"%>
+            <%= link_to "查    看", hr_post_path(post), class: "btnR"%>
+            <%= link_to "编    辑", edit_hr_post_path(post), class: "btnR"%>
+            <%= link_to "删    除", hr_post_path(post), method: :delete, class: "btnR"%>
+            <%= link_to I18n.t("model.post.status_action_names.#{post.status}"), set_status_hr_post_path(post), method: :put, class: "btnR"%>
 					</div>
 				</li>
         <%end%>

@@ -4,7 +4,7 @@
   		<div class="userImg"><%= link_to image_tag(current_account.logo(:thumb), class: "myimgs"), edit_account_registration_path, class: "myimgs"%></div>
   		<div class="userInfo">
   			<p><%= current_account.nick_name || "请完善昵称" %></p>
-  			<p>会员：5级</p>
+  			<!--p>会员：5级</p-->
   		</div>
   	</div>
   	<div class="cash">
@@ -14,9 +14,9 @@
   			<li><span id='rechargecontent'>鸟窝币：<%= current_account.available_gold%></span><a href="javascript:void(0)" id='recharge' class="btn">充   值</a></li>
   		</ul>
   	</div>
-  	<div class="help">
+  	<div class="help helpslist">
   		<ul>
-  			<li><a href="/help_center#1" class="first">什么是鸟窝币？</a></li>
+  			<li><a href="/help_center#1">什么是鸟窝币？</a></li>
   			<li><a href="/help_center#2">邀请面试如何玩？</a></li>
   			<li><a href="/help_center#3">什么是签约金？</a></li>
   			<li class="more"><a href="/help_center">更多教程</a></li>
@@ -33,6 +33,9 @@
     	</ul>
     <%elsif current_account.account_type == Account::ACCOUNT_TYPE_HR%>
     	<ul class="subNav">
+        <li><a href="<%= hr_posts_path%>#pwd" class="tit">已发布职位</a></li>
+        <li><a href="<%= hr_posts_path(status: :status_normal)%>#pwd" class="tit">上架职位</a></li>
+        <li><a href="<%= hr_posts_path(status: :status_off_shelves)%>#pwd" class="tit">下架职位</a></li>
         <li><a href="<%= edit_account_registration_path%>" class="tit">基本资料</a></li>
         <li><a href="<%= edit_hr_companies_path%>#pwd" class="tit">公司信息</a></li>
         <li><a href="<%= edit_account_registration_path%>#pwd" class="tit">修改密码</a></li>

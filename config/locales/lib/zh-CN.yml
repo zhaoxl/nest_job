@@ -37,7 +37,7 @@
     logout: "退出"
     powered_by: "Powered by %{active_admin} %{version}"
     sidebars:
-      filters: "所有条件"
+      filters: "筛选条件"
     pagination:
       empty: "暂时没有%{model}"
       one: "显示 <b>1</b> %{model}"

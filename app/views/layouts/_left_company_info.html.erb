@@ -1,7 +1,6 @@
 <h2 class="h2Title">公司信息</h2>
 <div class="companyInfo">
   <%if @company.present?%>
-	<div class="compImg"><a href="#"><img src="images/company_demo.jpg" alt="" /></a></div>
 	<div class="compInfo">
 		<p><%= @company.name%></p>
 		<p class="cmpUrl"><%= link_to @company.home_page, @company.home_page, target: :_blank%></p>

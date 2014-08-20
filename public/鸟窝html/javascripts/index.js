@@ -339,6 +339,7 @@ $(function($) {
             }
         });
     });
+
     //登录=====================start
     $("#loginBtnpop").click(function(){
         $("#mycaptchal").blur();
@@ -394,7 +395,13 @@ $(function($) {
             }
         });
     });
+    $("#mycaptchal").keyup(function(){
+        var e = event || window.event || arguments.callee.caller.arguments[0];
+        if(e && e.keyCode==13){ // enter 键
+            $("#loginBtnpop").click();
+        }
 
+    });
     //如果没有登录，登录提示===========start
     $(".loginTip").each(function(){
         $(this).click(function(){
@@ -788,7 +795,26 @@ $(function($) {
     });
 
     setTimeout(function(){
-        $( "#rubyinfos").dialog( "close");
+        $("#rubyinfos") && $("#rubyinfos").dialog( "close");
+    },2000)
+       //基本资料保存
+    $(".feedBacksError").dialog({
+        autoOpen:true,
+        modal:true,
+        height:80,
+        width:120,
+        title:"提示信息",
+        show:{effect:'drop', direction:'up'},
+        hide:{effect:'drop', direction:'down'},
+        draggable:false,
+        close: function() {
+
+        },
+        resizable:false
+    });
+
+    setTimeout(function(){
+        $(".feedBacksError") && $(".feedBacksError").dialog( "close");
     },2000)
 
   /*  $("#forgetPassword").click(function(){
@@ -1815,6 +1841,22 @@ $(function($) {
                 }
             }
         });
+    });
+    // 页面浮动面板
+    $("#floatPanel > .ctrolPanel > a.arrow").eq(0).click(function(){$("html,body").animate({scrollTop :0}, 800);return false;});
+    $("#floatPanel > .ctrolPanel > a.arrow").eq(1).click(function(){$("html,body").animate({scrollTop : $(document).height()}, 800);return false;});
+
+    var objPopPanel = $("#floatPanel > .popPanel");
+    var w = objPopPanel.outerWidth();
+    $("#floatPanel > .ctrolPanel > a.qrcode").bind({
+        mouseover : function(){
+            objPopPanel.css("width","0px").show();
+            objPopPanel.animate({"width" : w + "px"},300);return false;
+        },
+        mouseout : function(){
+            objPopPanel.animate({"width" : "0px"},300);return false;
+            objPopPanel.css("width",w + "px");
+        }
     });
 });
 

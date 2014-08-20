@@ -37,6 +37,8 @@ NestJob::Application.routes.draw do
     end
   end
   
+  resources :feedbacks
+  
   
   
 
@@ -57,6 +59,7 @@ NestJob::Application.routes.draw do
     resources :companies do
       collection do
         get :edit
+        post :ajax_update_logo
       end
     end
     resources :company_members

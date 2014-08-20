@@ -1,4 +1,4 @@
-ActiveAdmin.register Company do
+ActiveAdmin.register Feedback do
 
   
   # See permitted parameters documentation:

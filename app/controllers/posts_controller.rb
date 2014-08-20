@@ -61,9 +61,5 @@ class PostsController < ApplicationController
 
 end
 
-%Q{
-  curl -X GET 'http://54.250.192.6:9200/posts/post/_search?pretty&from=0&size=5' -d '{"query":{"bool":{"must":[],"must_not":[],"should":[{"match":{"title":"前端"}},{"match":{"address":"前端"}},{"match":{"sanitize_content":"前端"}}],"minimum_should_match":1,"boost":1.0}},"filter":{},"sort":[],"facets":{},"highlight":{"fields":{"title":{"pre_tags":["\u003Cb\u003E"],"post_tags":["\u003C/b\u003E"]},"sanitize_content":{"pre_tags":["\u003Cb\u003E"],"post_tags":["\u003C/b\u003E"]},"address":{"pre_tags":["\u003Cb\u003E"],"post_tags":["\u003C/b\u003E"]}}}}'
-}
-
 
 

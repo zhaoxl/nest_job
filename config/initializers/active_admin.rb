@@ -1,5 +1,12 @@
 ActiveAdmin.setup do |config|
-
+  config.namespace :admin do |admin|
+        admin.build_menu do |menu|
+          menu.add :label => "用户管理", url: "/admin/accounts_dashboard" do |sites|
+            sites.add :label => "求职者账号", :url => "/admin/account_workers"
+            sites.add :label => "招聘方账号", :url => "/admin/account_hrs"
+          end
+        end
+      end
   # == Site Title
   #
   # Set the title that is displayed on the main layout

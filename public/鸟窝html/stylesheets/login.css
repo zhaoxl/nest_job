@@ -49,7 +49,7 @@ li .jobs em{background-position:-74px -60px;}
     display: none;
 }
 /*密码找回*/
-#submitLogin,#loginMail{
+#submitLogin,#loginMail,#feedback{
     width: 155px;
     height: 46px;
     font-size: 16px;

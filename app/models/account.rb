@@ -18,6 +18,24 @@ class Account < ActiveRecord::Base
   ACCOUNT_TYPE_WORKER = 1 #员工
   ACCOUNT_TYPE_HR    = 2 #HR
   
+  ACCOUNT_STATUS = [["正常", "status_normal"], ["已锁定", "status_locked"]]
+  
+  #状态机
+  include AASM
+  aasm column: :status, skip_validation_on_save: true do
+    state :status_normal, initial: true         #正常
+    state :status_locked                        #已锁定
+
+    event :set_status_to_locked do
+      transitions from: :status_normal, to: :status_locked
+    end
+    
+    event :set_status_to_normal do
+      transitions from: :status_locked, to: :status_normal
+    end
+  end
+  
+  
   belongs_to :company
   has_many :account_resumes
   has_many :posts
@@ -27,6 +45,7 @@ class Account < ActiveRecord::Base
   has_many :bills
   
   scope :by_email, lambda{|email| where(email: email)}
+  scope :by_account_type, lambda{|account_type| where(account_type: account_type)}
   scope :by_resume_ct_desc, ->{joins("INNER JOIN account_resumes ON accounts.id = account_resumes.account_id").order("account_resumes.created_at DESC")}
   
   

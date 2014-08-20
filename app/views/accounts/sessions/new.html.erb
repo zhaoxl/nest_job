@@ -26,7 +26,7 @@
             <div class="frm">
               <span class="prompt tipMsg" style="">邮箱</span>
               <input type="text" data-em="email" data-type="email" id="myemail" error-id="errorEmail" class="txt mail current verification" style="border: 1px solid rgb(160, 160, 160);">
-              <em class="email curemail">&nbsp;</em>
+              <em class="email">&nbsp;</em>
               <span class="error errorregister errorlogin" id="errorEmail" style="">请输入正确邮箱地址</span>
             </div>
           </li>
@@ -88,7 +88,7 @@
             <div class="frm">
               <span class="prompt tipMsg" style="">邮箱</span>
               <input type="text" data-em="email" data-type="email" id="myemaill" error-id="errorEmaill" class="txt mail current verification" style="border: 1px solid rgb(160, 160, 160);">
-              <em class="email curemail">&nbsp;</em>
+              <em class="email">&nbsp;</em>
               <span class="error errorregisterl errorloginl" id="errorEmaill" style="">请输入正确邮箱地址</span>
             </div>
           </li>
@@ -104,14 +104,14 @@
             <div class="frm VerifCode">
               <span class="prompt tipMsg">验证码</span>
               <input type="text" id="mycaptchal" class="txt">
-              <%= captcha_tag(class: "updateCaptcha", style: "cursor: pointer", id: "captchaImgl", title: "刷新验证码") %>
+              <%= captcha_tag(class: "updateCaptchal", style: "cursor: pointer", id: "captchaImgl", title: "刷新验证码") %>
               <em class="pwd updateCaptchal">&nbsp;</em>
               <span class="error errorregisterl" id='captchaErrorl' style="">请输入验证码</span>
             </div>
           </li>
           <li>
             <div class="frm">
-              <label class="remember"><input checked="checked" id="rememberMel" type="radio" class="rad">记住我</label>
+              <label class="remember"><input checked="checked" id="rememberMel" type="checkbox" class="rad">记住我</label>
               <a href="<%= new_account_password_path%>" class="forget">忘记密码?</a>
             </div>
           </li>

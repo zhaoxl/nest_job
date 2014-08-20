@@ -1,13 +1,11 @@
 class Company < ActiveRecord::Base
-  #has_attached_file :logo, :processors => [:watermark], :styles => { :medium => "300x300>", 
-  #                                            :thumb => "100x100>",
-  #                                            :original => {:geometry => '550x400>',  
-  #                                                          :watermark_path => "#{Rails.root}/public/watermark.png",#水印图片所在位置  
-  #                                                          :position => 'SouthEast'
-  #                                                        }
-  #                                            }, 
-  #                                            :default_url => "/images/:style/missing.png"
-  #validates_attachment_content_type :logo, :content_type => /\Aimage\/.*\Z/
+  has_attached_file :logo, :styles => { :medium => "300x300>", 
+                                        :thumb => "100x100>",
+                                        :original => "550x400>"}, 
+                                        :default_url => "/images/:style_missing.png",
+                                        path: ":rails_root/public/uploads/:class/:attachment/:id/:style/album_cover.:extension",
+                                        url: "/uploads/:class/:attachment/:id/:style/album_cover.:extension"
+  validates_attachment_content_type :logo, :content_type => /\Aimage\/.*\Z/
   
   belongs_to :nature
   belongs_to :industry
