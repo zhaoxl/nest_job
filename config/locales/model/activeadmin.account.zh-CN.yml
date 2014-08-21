@@ -4,6 +4,9 @@
       account:
         one: 用户
         other: 用户
+        status_action_names:
+          status_normal: "禁用"
+          status_locked: "启用"
     attributes:
       account: 
         email: 邮箱
@@ -12,5 +15,5 @@
         status: 状态
         last_sign_in_at: 最后登录时间
         last_sign_in_ip: 最后登录ip
-        
+        worker_apply_count: 发起面试次数
         

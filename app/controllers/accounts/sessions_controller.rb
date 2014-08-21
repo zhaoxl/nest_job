@@ -56,7 +56,7 @@ class Accounts::SessionsController < Devise::SessionsController
           raise AjaxException.new({password: "密码错误"})
         end
       else
-        raise AjaxException.new({email: "email错误"})
+        raise AjaxException.new({email: "账号错误"})
       end
     rescue Exception => ex
       result = {status: "error", content: ex.message}

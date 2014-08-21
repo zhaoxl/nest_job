@@ -14,7 +14,7 @@
 				<li>
 					<div class="interviewRequire">
 						<div class="hrInfo">
-							<div class="hrImg"><a href="#"><img src="../images/user_demo.jpg" alt=""></a></div>
+							<div class="hrImg"><%= link_to image_tag(hr.logo(:thumb)), "#"%></div>
 							<div class="hrIf">
 								<p><span>公司：<%= company.try(:name)%></span></p>
 								<p><span>地点：<%= post.try(:address)%></span><span>薪资：￥<%= post.try(:price_min)%>k ~ <%= post.try(:price_max)%>k</span></p>

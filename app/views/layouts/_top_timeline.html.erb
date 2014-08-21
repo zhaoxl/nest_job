@@ -1,13 +1,13 @@
 <%if current_account && current_account.account_type == Account::ACCOUNT_TYPE_WORKER%>
 <% state_timelines = ["", :status_apply_normal, :status_apply_hr_receive, :status_wait_audition, :status_audition_passed, :status_probation_passed, :status_apply_hr_reject, :status_audition_failed, :status_probation_failed]%>
-<ul class="procGuide pgd1">
+<ul class="procGuide pgd1<%= " procGuideOleft" if controller_name != "index" && controller_name != "posts"%>">
     <li><a href="<%= worker_applies_path(status: :status_apply_normal)%>" class="<%= "current" if (state_timelines||[]).index(params[:status].to_s.to_sym).to_i == 1%> first">待HR处理</a></li>
     <li><a href="<%= worker_applies_path(status: :status_apply_hr_receive)%>" class="<%= "current" if (state_timelines||[]).index(params[:status].to_s.to_sym).to_i == 2%> second">HR已查看简历</a></li>
     <li class="third"><a href="<%= worker_applies_path(status: :status_wait_audition)%>" class="<%= "current" if (state_timelines||[]).index(params[:status].to_s.to_sym).to_i == 3%>">等待面试</a></li>
     <li><a href="<%= worker_applies_path(status: :status_audition_passed)%>" class="<%= "current" if (state_timelines||[]).index(params[:status].to_s.to_sym).to_i == 4%> fourth">面试通过</a></li>
     <li><a href="<%= worker_applies_path(status: :status_probation_passed)%>" class="<%= "current" if (state_timelines||[]).index(params[:status].to_s.to_sym).to_i == 5%> fifth">试用期通过</a></li>
 </ul>
-<div class="processorBar" title='请点击文字'>
+<div class="processorBar<%= " procGuideOleft" if controller_name != "index" && controller_name != "posts"%>" title='请点击文字'>
     <div class="pb p<%= (state_timelines||[]).index(params[:status].to_s.to_sym).to_i%>"></div>
 </div>
 <div class="procGuide">
@@ -18,23 +18,4 @@
         <li class="last"></li>
     </ul>
 </div>
-<!--ul class="mSubNav">
-    <li><a href="#" class="findTit">发现</a></li>
-    <li class="loginTip" data-msgtip="请填写期望：职位与城市"><a href="javascript:void(0)" class="f_current">JS</a></li>
-    <li class="loginTip" data-msgtip="请填写期望：职位与城市"><a href="javascript:void(0)" class="f_btn">CSS</a></li>
-    <li class="loginTip" data-msgtip="请填写期望：职位与城市"><a href="javascript:void(0)" class="f_btn">UI</a></li>
-    <li class="loginTip" data-msgtip="请填写期望：职位与城市"><a href="javascript:void(0)" class="f_btn">PM</a></li>
-    <!--<li><a href="#" class="topTit">热门</a></li>
-    <%#self_hot_search_tags.each do |tag|%>
-    <li class="loginTip" data-msgtip="请填写期望：职位与城市"><a href="<%#= search_posts_path(k: tag.name)%>" class="t_current"><%#= tag.name%></a></li>
-    <%#end%>
-</ul-->
-<!--ul class="menuBar clearfix">
-    <li><span class="tips"><i>发现</i></span></li>
-    <li><a href="#" class="current">JavaScript</a></li>
-    <li><a href="#">前端CSS</a></li>
-    <li><a href="#">移动端UI</a></li>
-    <li><a href="#">前端CSS</a></li>
-    <li><a href="#">移动端UI</a></li>
-</ul-->
 <%end%>

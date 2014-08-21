@@ -52,19 +52,63 @@ ActiveAdmin.register Account, as: "account_workers" do
       end
     end
   end
+  
+  member_action :lock, :method => :put do
+    account = Account.find(params[:id])
+    if account.status_normal?
+      account.set_status_to_locked!
+    else
+      account.set_status_to_normal!
+    end
+    redirect_to :back
+  end
+  
+  member_action :update, :method => :put do
+    begin
+      account = Account.find(params[:id])
+      raise "密码不能为空！" if params[:account][:password].blank?
+      raise "两次密码输入不一致！" if params[:account][:password] != params[:account][:confirm_password]
+      account.password = params[:account][:password]
+      account.save
+      flash[:notice] = "修改成功"
+    rescue Exception => ex
+      flash[:notice] = ex.message
+      redirect_to :back and return
+    end
+    redirect_to admin_account_workers_path
+  end
     
   index title: "应聘方账号" do
     selectable_column
     id_column
-    column :email
     column :nick_name
-    column :account_type
-    column :status
-    column :last_sign_in_at
-    column :last_sign_in_ip
+    column :email
     column :created_at
-    actions
+    column :last_sign_in_at
+    column :worker_apply_count do |account| 
+      account.worker_applies.count
+    end
+    column :status do |account|
+      I18n.t("model.account.status.#{account.status}")
+    end
+    actions name: "操作", defaults: false do |account|
+      links = []
+      links << link_to("密码重置", edit_resource_path(account)).to_s
+      links << link_to("删除", resource_path(account), method: :delete)
+      links << link_to(I18n.t("activerecord.models.account.status_action_names.#{account.status}"), lock_admin_account_worker_path(account), method: :put).to_s
+      links << link_to("开启订阅", "").to_s
+      raw links * " "
+    end
   end
+  
+  form do |f|
+    f.inputs :name => "修改密码" do
+      f.input :password
+      f.input :confirm_password
+    end
+    f.actions
+  end
+  
   # See permitted parameters documentation:
   # https://github.com/gregbell/active_admin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
   #
@@ -102,12 +146,22 @@ ActiveAdmin.register Account, as: "account_hrs" do
     id_column
     column :nick_name
     column :email
-    column :account_type
-    column :status
-    column :last_sign_in_at
-    column :last_sign_in_ip
     column :created_at
-    actions
+    column :last_sign_in_at
+    column :worker_apply_count do |account| 
+      account.worker_applies.count
+    end
+    column :status do |account|
+      I18n.t("model.account.status.#{account.status}")
+    end
+    actions name: "操作", defaults: false do |account|
+      links = []
+      links << link_to("密码重置", edit_resource_path(account)).to_s
+      links << link_to("删除", resource_path(account), method: :delete)
+      links << link_to(I18n.t("activerecord.models.account.status_action_names.#{account.status}"), lock_admin_account_worker_path(account), method: :put).to_s
+      links << link_to("开启订阅", "").to_s
+      raw links * " "
+    end
   end
   # See permitted parameters documentation:
   # https://github.com/gregbell/active_admin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters

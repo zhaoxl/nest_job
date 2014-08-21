@@ -85,7 +85,7 @@ class Post < ActiveRecord::Base
   # Boolean
   def can_apply?(account_id)
     return false if account_id.blank?
-    Workflow.by_worker_account_id(account_id).by_post_id(self.id).not_status("success").blank?
+    Workflow.by_worker_account_id(account_id).by_post_id(self.id).not_status(["success", "status_apply_cancel"]).blank?
   end
   
   # 转换受保护的email地址

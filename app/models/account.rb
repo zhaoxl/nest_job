@@ -41,6 +41,7 @@ class Account < ActiveRecord::Base
   has_many :posts
   has_many :favorites
   has_many :hr_search_logs
+  has_many :worker_applies, class_name: WorkflowApply, foreign_key: :worker_account_id
   has_one  :account_radar, class_name: AccountRadar
   has_many :bills
   

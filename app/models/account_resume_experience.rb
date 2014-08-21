@@ -1,4 +1,7 @@
 class AccountResumeExperience < ActiveRecord::Base
+  validates :salary, inclusion: { in: 0..200, message: "薪资超出范围" }
+  validates :salary, numericality: {message: "薪资格式错误"}
+  
   belongs_to :account_resume
   
   scope :order_start_time_asc, ->{order("start_time ASC")}

@@ -117,7 +117,7 @@
   				</div>
           <div class="frm">
   					<span class="">薪资：</span>
-  					<%= f.text_field :salary,  id: "moneyjob", class: "verification", style: "border: 1px solid rgb(160, 160, 160);","data-noHide"=>"1", "data-em" => "notnull", "data-type" => "hopemoney", "error-id" => "errormoneyjob"%>k
+  					<%= f.text_field :salary,  id: "moneyjob", class: "verification salary", style: "border: 1px solid rgb(160, 160, 160);","data-noHide"=>"1", "data-em" => "notnull", "data-type" => "hopemoney", "error-id" => "errormoneyjob"%><span class="money">k</span>
   					<span class="error" id="errormoneyjob">*请填写薪资</span>
   				</div>
   				<div class="frm">
@@ -319,7 +319,7 @@
             </div>
       <div class="frm">
                 <span class="">薪资：</span>
-                <input class="verification" data-em="notnull" data-nohide="1" data-type="hopemoney" error-id="errormoneyjobedit" id="moneyjobedit" name="account_resume_experience[salary]" style="border: 1px solid rgb(160, 160, 160);" type="text">k
+                <input class="verification salary" data-em="notnull" data-nohide="1" data-type="hopemoney" error-id="errormoneyjobedit" id="moneyjobedit" name="account_resume_experience[salary]" style="border: 1px solid rgb(160, 160, 160);" type="text"><span class="money">k</span>
                 <span class="error" id="errormoneyjobedit">*请填写薪资</span>
             </div>
             <div class="frm">

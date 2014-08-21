@@ -1,0 +1,21 @@
+<%if current_account && current_account.account_type == Account::ACCOUNT_TYPE_HR%>
+<% state_timelines = ["", :status_apply_normal, :status_apply_hr_receive, :status_wait_audition, :status_audition_passed, :status_probation_passed, :status_apply_hr_reject, :status_audition_failed, :status_probation_failed]%>
+<ul class="procGuide pgd1 procGuideOleft">
+    <li><a href="<%= hr_applies_path(status: :status_apply_normal)%>" class="<%= "current" if (state_timelines||[]).index(params[:status].to_s.to_sym).to_i == 1%> first"><%= I18n.t("model.workflow.first_person_status.status_apply_normal")%></a></li>
+    <li><a href="<%= hr_applies_path(status: :status_apply_hr_receive)%>" class="<%= "current" if (state_timelines||[]).index(params[:status].to_s.to_sym).to_i == 2%> second"><%= I18n.t("model.workflow.first_person_status.status_apply_hr_receive")%></a></li>
+    <li class="third"><a href="<%= hr_applies_path(status: :status_wait_audition)%>" class="<%= "current" if (state_timelines||[]).index(params[:status].to_s.to_sym).to_i == 3%>"><%= I18n.t("model.workflow.first_person_status.status_wait_audition")%></a></li>
+    <li><a href="<%= hr_applies_path(status: :status_audition_passed)%>" class="<%= "current" if (state_timelines||[]).index(params[:status].to_s.to_sym).to_i == 4%> fourth"><%= I18n.t("model.workflow.first_person_status.status_audition_passed")%></a></li>
+    <li><a href="<%= hr_applies_path(status: :status_probation_passed)%>" class="<%= "current" if (state_timelines||[]).index(params[:status].to_s.to_sym).to_i == 5%> fifth"><%= I18n.t("model.workflow.first_person_status.status_probation_passed")%></a></li>
+</ul>
+<div class="processorBar procGuideOleft" title='请点击文字'>
+    <div class="pb p<%= (state_timelines||[]).index(params[:status].to_s.to_sym).to_i%>"></div>
+</div>
+<div class="procGuide">
+    <ul class="pgd2">
+        <li><a href="<%= hr_applies_path(status: :status_apply_hr_reject)%>" class="<%= "current" if (state_timelines||[]).index(params[:status].to_s.to_sym).to_i == 6%> third"><%= I18n.t("model.workflow.first_person_status.status_apply_hr_reject")%></a></li>
+        <li><a href="<%= hr_applies_path(status: :status_audition_failed)%>" class="<%= "current" if (state_timelines||[]).index(params[:status].to_s.to_sym).to_i == 7%> fourth"><%= I18n.t("model.workflow.first_person_status.status_audition_failed")%></a></li>
+        <li><a href="<%= hr_applies_path(status: :status_probation_failed)%>" class="<%= "current" if (state_timelines||[]).index(params[:status].to_s.to_sym).to_i == 8%> fifth"><%= I18n.t("model.workflow.first_person_status.status_probation_failed")%></a></li>
+        <li class="last"></li>
+    </ul>
+</div>
+<%end%>

@@ -29,7 +29,6 @@
 <%elsif current_account.account_type == Account::ACCOUNT_TYPE_WORKER%>
   <ul class="nav">
   	<li><%= link_to "找工作", index_index_path, class: "current"%></li>
-  	<li><a href="<%= worker_auditions_path%>">面试消息<%= worker_wait_audition_count%></a></li>
   	<li><%= link_to "完善简历", worker_resumes_path%></li>
   	<li><%= link_to "#{ current_account.nick_name.present? ? "昵称：#{current_account.nick_name}" : "填写基本资料"}", edit_account_registration_path%></li>
   	<li><%= link_to "退出", destroy_account_session_path%></li>

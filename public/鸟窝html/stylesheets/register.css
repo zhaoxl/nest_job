@@ -55,17 +55,17 @@
 .mSubNav li .t_current{background-position:-60px 0;color:#464c52;}
 
 .mm .postForm{width:716px;height:415px;background:url(../images/nw_index.png) no-repeat;}
-.postForm .hopePost{width:580px;margin-left:175px;padding-top:75px;}
+.postForm .hopePost{width:430px;margin-left:175px;padding-top:75px;}
 .postForm .hopePost .frm{overflow:hidden;zoom:1;}
 .postForm .hopePost span{float:left;width:90px;font:17px '微软雅黑';}
-.postForm .hopePost .posts{overflow:hidden;zoom:1;width:480px;}
+.postForm .hopePost .posts{overflow:hidden;zoom:1;float:left;width:310px;}
 .hopePost .posts a{display:inline-block;padding:5px;margin-left:10px;margin-bottom:20px;background:#1abc9c;color:#fff;font-size:14px;text-align:center;border-radius:5px;}
 .hopePost .posts a i{margin-left:5px;font-style:normal;color:#fff;font-weight:bold;vertical-align:-2px;}
 .hopePost .posts a:hover{background:#16a085;}
 .postInput{margin-left:100px;}
 .postInput input{width:180px;height:30px;margin-bottom:30px;border:1px solid #64ad9b;border-radius:5px;}
 .saveBtn{display:block;width:75px;height:31px;line-height:31px;margin-left:100px;background:#16a085;text-align:center;border-bottom:3px solid #0e8870;border-radius:5px;font-size:15px;font-family:'微软雅黑';color:#fff;}
-.addPost{margin-left:10px;vertical-align:6px;}
+.addPost{margin-left:10px;vertical-align:0px\0;vertical-align:6px;;}
 .addPost em{background-position:-106px 0px;;}
 
 

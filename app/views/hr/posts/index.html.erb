@@ -4,69 +4,25 @@
 <%end%>
 <div class="mainContainer">
 	<div class="main">
-		<!-- <div class="mm"> -->
-			<div class="searchTalent">
-				<h2 class="h2Title">搜人才：至少填写一个搜索条件</h2>
-				<div class="form">
-					<div class="frm">
-						<span class="">目标城市：</span>
-						<input type="text" /><a href="#" class="addPost"><em>&nbsp;</em></a>
-					</div>
-					<div class="frm">
-						<span class="">工作年限：</span>
-						<input type="text" /><a href="#" class="addPost"><em>&nbsp;</em></a>
-					</div>
-					<div class="frm">
-						<span class="">目标职位：</span>
-						<input type="text" /><a href="#" class="addPost"><em>&nbsp;</em></a>
-					</div>
+    <%= render partial: "/layouts/hr_top_timeline"%>
+		<h2 class="h2Title"><%= I18n.t!("model.post.status.#{params[:status]}职位") rescue "已发布职位"%></h2>
+		<ul class="soldOut">
+      <%@posts.each_with_index do |post, index|%>
+			<li<%= " style=margin-right:0px;" if (index+1)%2==0 %>>
+				<p><%= post.created_at.strftime("%Y 年 %m 月 %d 日")%></p>
+				<p>发布职位：<%= post.title%></p>
+				<p>所在部门：<%= post.department%></p>
+				<p>工作城市：<%= post.area%></p>
+				<div class="btns">
+          <%= link_to "查    看", hr_post_path(post), class: "btnR"%>
+          <%= link_to "编    辑", edit_hr_post_path(post), class: "btnR"%>
+          <%= link_to "删    除", hr_post_path(post), method: :delete, class: "btnR"%>
+          <%= link_to I18n.t("model.post.status_action_names.#{post.status}"), set_status_hr_post_path(post), method: :put, class: "btnR"%>
 				</div>
-				<div class="stBtn">
-					<a href="#" class="btnR">点击搜索</a>
-				</div>
-			</div>
-			<h2 class="h2Title">直接搜索</h2>
-			<ul class="directSearch">
-				<li class="current">
-					<p>目标职位：php</p>
-					<p>工作年限：2年</p>
-					<p>所在城市：北京</p>
-				</li>
-				<li>
-					<p>目标职位：php</p>
-					<p>工作年限：2年</p>
-					<p>所在城市：北京</p>
-				</li>
-				<li>
-					<p>目标职位：php</p>
-					<p>工作年限：2年</p>
-					<p>所在城市：北京</p>
-				</li>
-				<li class="last">
-					<p>目标职位：php</p>
-					<p>工作年限：2年</p>
-					<p>所在城市：北京</p>
-				</li>
-			</ul>
-			<h2 class="h2Title"><%= I18n.t!("model.post.status.#{params[:status]}职位") rescue "已发布职位"%></h2>
-			<ul class="soldOut">
-        <%@posts.each_with_index do |post, index|%>
-				<li<%= " style=margin-right:0px;" if (index+1)%2==0 %>>
-					<p><%= post.created_at.strftime("%Y 年 %m 月 %d 日")%></p>
-					<p>发布职位：<%= post.title%></p>
-					<p>所在部门：<%= post.department%></p>
-					<p>工作城市：<%= post.area%></p>
-					<div class="btns">
-            <%= link_to "查    看", hr_post_path(post), class: "btnR"%>
-            <%= link_to "编    辑", edit_hr_post_path(post), class: "btnR"%>
-            <%= link_to "删    除", hr_post_path(post), method: :delete, class: "btnR"%>
-            <%= link_to I18n.t("model.post.status_action_names.#{post.status}"), set_status_hr_post_path(post), method: :put, class: "btnR"%>
-					</div>
-				</li>
-        <%end%>
-			</ul>
-      <%= paginate @posts, window: 6%>
-		</div>
-	<!-- </div> -->
+			</li>
+      <%end%>
+		</ul>
+    <%= paginate @posts, window: 6%>
+	</div>
   <%= render partial: "/layouts/right"%>
 </div>

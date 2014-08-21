@@ -4,7 +4,8 @@
 <%end%>
 <div class="mainContainer">
 	<div class="main">
-		<h2 class="h2Title"><%= I18n.t!("model.workflow.status.#{params[:status]}") rescue "招聘方发起的面试"%>&nbsp;&nbsp;<%= flash.to_hash.inject([]){|msg, value| msg << value[1]} * ","%></h2>
+    <%= render partial: "/layouts/hr_top_timeline"%>
+		<h2 class="h2Title"><%= I18n.t!("model.workflow.first_person_status.#{params[:status]}") rescue "招聘方发起的面试"%>&nbsp;&nbsp;<%= flash.to_hash.inject([]){|msg, value| msg << value[1]} * ","%></h2>
 		<div class="interview">
 			<ul class="interviewList">
         <%if @items.blank?%>
@@ -20,8 +21,7 @@
 						<div class="hrInfo">
 							<div class="hrImg"><%= link_to image_tag(worker.logo(:thumb)), "#"%></div>
 							<div class="hrIf">
-								<p><span>公司：<%= company.try(:name)%></span></p>
-								<p><span>地点：<%= post.try(:address)%></span><span>薪资：￥<%= post.try(:price_min)%>k ~ <%= post.try(:price_max)%>k</span></p>
+								<p><span><b style="color: #27a695"><%= worker.nick_name%></b> 申请了您发布的 <%= link_to post.title, posts_path(post), style: "color: #27a695; font-weight: bold"%> 职位</span></p>
 							</div>
 						</div>
 						<div class="myNeed">

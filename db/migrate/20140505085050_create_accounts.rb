@@ -6,7 +6,7 @@ class CreateAccounts < ActiveRecord::Migration
       t.string      :nick_name
       t.attachment  :logo                                   #logo
       t.integer     :account_type,  default: 0
-      t.string      :status,        default: "prospective"  #默认状态是准用户
+      t.string      :status,        default: "status_normal"
       t.references  :company
       t.datetime    :deleted_at
       t.datetime    :created_at

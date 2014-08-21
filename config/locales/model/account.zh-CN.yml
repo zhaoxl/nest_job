@@ -1,0 +1,6 @@
+"zh-CN":
+  model:
+    account:
+      status:
+        status_normal: 正常
+        status_locked: 禁用

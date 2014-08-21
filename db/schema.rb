@@ -115,7 +115,7 @@ ActiveRecord::Schema.define(version: 20140820093620) do
     t.integer  "logo_file_size"
     t.datetime "logo_updated_at"
     t.integer  "account_type",           default: 0
-    t.string   "status",                 default: "prospective"
+    t.string   "status",                 default: "status_normal"
     t.integer  "company_id"
     t.datetime "deleted_at"
     t.datetime "created_at"
