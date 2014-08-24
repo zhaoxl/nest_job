@@ -169,6 +169,7 @@
       <change type="MODIFICATION" beforePath="Z:/public/鸟窝html/stylesheets/register.css" afterPath="Z:/public/鸟窝html/stylesheets/register.css" />
       <change type="MODIFICATION" beforePath="Z:/app/controllers/accounts/registrations_controller.rb" afterPath="Z:/app/controllers/accounts/registrations_controller.rb" />
       <change type="MODIFICATION" beforePath="Z:/config/routes.rb" afterPath="Z:/config/routes.rb" />
+      <change type="MODIFICATION" beforePath="Z:/public/鸟窝html/javascripts/flash/style/screen.css" afterPath="Z:/public/鸟窝html/javascripts/flash/style/screen.css" />
       <change type="MODIFICATION" beforePath="Z:/app/views/posts/search.html.erb" afterPath="Z:/app/views/posts/search.html.erb" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/config/ik/stopword.dic" afterPath="Z:/elasticsearch-rtf/config/ik/stopword.dic" />
       <change type="MODIFICATION" beforePath="Z:/elasticsearch-rtf/config/ik/suffix.dic" afterPath="Z:/elasticsearch-rtf/config/ik/suffix.dic" />
@@ -236,16 +237,7 @@
       <file leaf-file-name="register.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://Z:/public/鸟窝html/stylesheets/register.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="90" column="32" selection-start="5572" selection-end="5574" vertical-scroll-proportion="-8.8" vertical-offset="1490" max-vertical-offset="2527">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://Z:/public/鸟窝html/javascripts/flash/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="0" selection-start="263" selection-end="263" vertical-scroll-proportion="-3.392857" vertical-offset="0" max-vertical-offset="1691">
+            <state line="88" column="39" selection-start="5461" selection-end="5461" vertical-scroll-proportion="-7.28" vertical-offset="1490" max-vertical-offset="2527">
               <folding />
             </state>
           </provider>
@@ -254,7 +246,16 @@
       <file leaf-file-name="screen.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://Z:/public/鸟窝html/javascripts/flash/style/screen.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="47" selection-start="599" selection-end="599" vertical-scroll-proportion="0.35625" vertical-offset="0" max-vertical-offset="640">
+            <state line="10" column="29" selection-start="486" selection-end="486" vertical-scroll-proportion="0.2857143" vertical-offset="0" max-vertical-offset="665">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://Z:/public/鸟窝html/javascripts/flash/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="30" selection-start="509" selection-end="509" vertical-scroll-proportion="-9.5" vertical-offset="0" max-vertical-offset="1691">
               <folding />
             </state>
           </provider>
@@ -786,23 +787,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://Z:/public/鸟窝html/stylesheets/register.css">
+    <entry file="file://Z:/public/鸟窝html/javascripts/flash/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="90" column="32" selection-start="5572" selection-end="5574" vertical-scroll-proportion="-8.8" vertical-offset="1490" max-vertical-offset="2527">
+        <state line="14" column="30" selection-start="509" selection-end="509" vertical-scroll-proportion="-9.5" vertical-offset="0" max-vertical-offset="1691">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://Z:/public/鸟窝html/javascripts/flash/index.html">
+    <entry file="file://Z:/public/鸟窝html/stylesheets/register.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="263" selection-end="263" vertical-scroll-proportion="-3.392857" vertical-offset="0" max-vertical-offset="1691">
+        <state line="88" column="39" selection-start="5461" selection-end="5461" vertical-scroll-proportion="-7.28" vertical-offset="1490" max-vertical-offset="2527">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://Z:/public/鸟窝html/javascripts/flash/style/screen.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="47" selection-start="599" selection-end="599" vertical-scroll-proportion="0.35625" vertical-offset="0" max-vertical-offset="640">
+        <state line="10" column="29" selection-start="486" selection-end="486" vertical-scroll-proportion="0.2857143" vertical-offset="0" max-vertical-offset="665">
           <folding />
         </state>
       </provider>
