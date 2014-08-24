@@ -82,6 +82,10 @@ class Accounts::RegistrationsController < Devise::RegistrationsController
     render text: result.to_json
   end
   
+  def edit_pwd
+    
+  end
+  
   def update_pwd
     begin
       raise "现用密码不正确" unless current_account.valid_password?(params[:account][:current_password])

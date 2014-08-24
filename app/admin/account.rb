@@ -38,6 +38,27 @@ end
 
 ActiveAdmin.register Account, as: "account_workers" do
   menu false
+  batch_action :subscribe do |selection|
+    render text: "123"
+  end
+  batch_action :reset_pwd, confirm: "密码将会被重置为123456" do |selection|
+    ids = params[:collection_selection]
+    Account.by_ids(ids).each do |account|
+      account.update_attribute :password, "123456"
+    end
+    redirect_to :back
+  end
+  batch_action :unlock do |selection|
+    ids = params[:collection_selection]
+    Account.by_ids(ids).by_status("status_locked").update_all({status: "status_normal"})
+    redirect_to :back
+  end
+  batch_action :lock do |selection|
+    ids = params[:collection_selection]
+    Account.by_ids(ids).by_status("status_normal").update_all({status: "status_locked"})
+    redirect_to :back
+  end
+      
   filter :name
   filter :email
   filter :nick_name
@@ -126,6 +147,33 @@ end
 
 ActiveAdmin.register Account, as: "account_hrs" do
   menu false
+  
+  scope :all
+  scope :virtual_accounts do |accounts|
+    accounts.by_status("status_virtual")
+  end
+  scope :real_accounts do |accounts|
+    accounts.not_status("status_virtual")
+  end
+   
+
+  batch_action :unlock do |selection|
+    ids = params[:collection_selection]
+    Account.by_ids(ids).by_status("status_locked").update_all({status: "status_normal"})
+    redirect_to :back
+  end
+  batch_action :lock do |selection|
+    ids = params[:collection_selection]
+    Account.by_ids(ids).by_status("status_normal").update_all({status: "status_locked"})
+    redirect_to :back
+  end
+  batch_action :convert_to_virtual do |selection|
+    render text: "123"
+  end
+  batch_action :convert_to_real do |selection|
+    render text: "123"
+  end
+  
   filter :name
   filter :email
   filter :nick_name

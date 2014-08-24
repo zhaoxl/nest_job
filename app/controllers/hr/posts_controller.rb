@@ -25,7 +25,7 @@ class Hr::PostsController < ApplicationController
     post.account_id = current_account.id
     post.content = params[:editorValue]
     post.tag_list.add params[:addhopecontenthidden].split(",")
-    post.sanitize_content = Nokogiri.parse(post.content).text if post.content.present? #去掉html标记的内容取200个字
+    post.sanitize_content = Nokogiri::HTML(post.content).text if post.content.present? #去掉html标记的内容取200个字
     #TODO: 公司ID
     post.company_id = Company.last.id
     post.save

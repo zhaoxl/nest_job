@@ -29,16 +29,16 @@
     <%if current_account.account_type == Account::ACCOUNT_TYPE_WORKER%>
     	<ul class="subNav">
         <li><a href="<%= edit_account_registration_path%>" class="tit">基本资料</a></li>
-        <li><a href="<%= edit_account_registration_path%>#pwd" class="tit">修改密码</a></li>
+        <li><a href="<%= accounts_registrations_edit_pwd_path%>" class="tit">修改密码</a></li>
     	</ul>
     <%elsif current_account.account_type == Account::ACCOUNT_TYPE_HR%>
     	<ul class="subNav">
-        <li><a href="<%= hr_posts_path%>#pwd" class="tit">已发布职位</a></li>
-        <li><a href="<%= hr_posts_path(status: :status_normal)%>#pwd" class="tit">上架职位</a></li>
-        <li><a href="<%= hr_posts_path(status: :status_off_shelves)%>#pwd" class="tit">下架职位</a></li>
+        <li><a href="<%= hr_posts_path%>" class="tit">已发布职位</a></li>
+        <li><a href="<%= hr_posts_path(status: :status_normal)%>" class="tit">上架职位</a></li>
+        <li><a href="<%= hr_posts_path(status: :status_off_shelves)%>" class="tit">下架职位</a></li>
         <li><a href="<%= edit_account_registration_path%>" class="tit">基本资料</a></li>
-        <li><a href="<%= edit_hr_companies_path%>#pwd" class="tit">公司信息</a></li>
-        <li><a href="<%= edit_account_registration_path%>#pwd" class="tit">修改密码</a></li>
+        <li><a href="<%= edit_hr_companies_path%>" class="tit">公司信息</a></li>
+        <li><a href="<%= accounts_registrations_edit_pwd_path%>" class="tit">修改密码</a></li>
     	</ul>
     <%end%>
   </div>

@@ -1,0 +1,37 @@
+<%content_for :head_include do%>
+	<link rel="stylesheet" href="/鸟窝html/stylesheets/release_job.css" />
+    <%= javascript_include_tag '/鸟窝html/javascripts/ajaxupload.js', 'data-turbolinks-track' => true %>
+<%end%>
+<div class="mainContainer">
+	<div class="main">
+		<h2 class="h2Title">修改密码</h2>
+		<%= form_for current_account, url: accounts_registrations_update_pwd_path, method: :patch do |f|%>
+      <%if flash[:error]%>
+      <span style="color: red">错误信息:<%= flash[:error]%></span>
+      <%end%>
+      <%if flash[:notice]%>
+      <div id='rubyinfos' style="text-align:center;color: #fff;background-color:#16a085;font-size:15px"><%= flash[:notice]%></div>
+      <%end%>
+			<div class="form">
+			  <div class="frm">
+  				<span class="">现用密码：</span>
+          <%= f.password_field :current_password, autocomplete: "off", id: "currentPwd", class: "", "data-noHide" => "1","error-id" => "errorCurrentPwd","data-type" => "notnull"%>
+  				<span class="error" id="errorCurrentPwd">*请填写现用密码</span>
+  			</div>
+  			<div class="frm">
+  				<span class="">新密码：</span>
+          <%= f.password_field :password, autocomplete: "off", class: "","data-noHide" => "1","error-id" => "errorpeopleNickName","data-type" => "notnull"%>
+  				<span class="error" id="errorpeopleNickName">*请填写昵称</span>
+  			</div>
+  			<div class="frm">
+  				<span class="">确认新密码：</span>
+          <%= f.password_field :password_confirmation, autocomplete: "off", class: ""%>
+  				<span class="error" id="errorpeopleNickName">*请填写昵称</span>
+  			</div>
+			</div>
+			<div class="jobBtns">
+        <%= f.submit :保存, class: "btn"%>
+			</div>
+    <%end%>
+	<%= render partial: "/layouts/right"%>
+</div>

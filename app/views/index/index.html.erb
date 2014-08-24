@@ -14,8 +14,78 @@
 		<div class="mm">
         <%= render partial: "/layouts/top_timeline"%>
         <%if @account_tags.blank? || @account_hope_area.blank?%>
-        <h2 class="indexH2">找高薪工作、赚签约金？填写期望职位，才能进行下一步哦！</h2>
-                <div class="postForm">
+        <!--图片轮播start-->
+        <%= stylesheet_link_tag    '/鸟窝html/javascripts/flash/style/screen.css', media: 'all', 'data-turbolinks-track' => true %>
+        <%= javascript_include_tag '/鸟窝html/javascripts/flash/js/modernizr.min.js', 'data-turbolinks-track' => true %>
+        <div id="page">
+        	<div id="viewport-shadow" class="trans">
+        		<a href="#" id="prev" title="go to the next slide" class="trans"></a>
+        		<a href="#" id="next" title="go to the next slide" class="trans"></a>
+        		<div id="viewport">
+        			<div id="box">
+        				<figure class="slide"><a href="#" target="_blank"><img src="/鸟窝html/javascripts/flash/images/focus_1.jpg"></a></figure>
+        				<figure class="slide"><a href="#" target="_blank"><img src="/鸟窝html/javascripts/flash/images/focus_2.jpg"></a></figure>
+        				<figure class="slide"><a href="#" target="_blank"><img src="/鸟窝html/javascripts/flash/images/focus_3.jpg"></a></figure>
+        				<figure class="slide"><img src="/鸟窝html/javascripts/flash/images/focus_4.jpg"></figure>
+        				<figure class="slide"><img src="/鸟窝html/javascripts/flash/images/focus_5.jpg"></figure>
+        			</div>
+        		</div>
+        		<div id="time-indicator"></div>
+        	</div>
+        	<div class="slider-controls">
+        		<ul id="controls">
+        			<li><a class="goto-slide current" href="#" data-slideindex="0"></a></li>
+        			<li><a class="goto-slide" href="#" data-slideindex="1"></a></li>
+        			<li><a class="goto-slide" href="#" data-slideindex="2"></a></li>
+        			<li><a class="goto-slide" href="#" data-slideindex="3"></a></li>
+        			<li><a class="goto-slide" href="#" data-slideindex="4"></a></li>
+        		</ul>
+        	</div>
+        </div>
+        <script type="text/javascript" src="/鸟窝html/javascripts/flash/js/box-slider-all.jquery.min.js"></script>
+       <script type="text/javascript">
+       $(function(){
+
+       	var $box = $('#box'), $indicators = $('.goto-slide'), $timeIndicator = $('#time-indicator'), slideInterval = 5000;
+
+       	var switchIndicator = function ($c, $n, currIndex, nextIndex) {
+       		$timeIndicator.stop().css('width', 0);
+       		$indicators.removeClass('current').eq(nextIndex).addClass('current');
+       	};
+
+       	var startTimeIndicator = function () {
+       		$timeIndicator.animate({width: '716px'}, slideInterval);
+       	};
+
+       	// initialize the plugin with the desired settings
+       	$box.boxSlider({
+       		speed: 1000,
+       		autoScroll: true,
+       		timeout: slideInterval,
+       		next: '#next',
+       		prev: '#prev',
+       		pause: '#pause',
+       		effect: 'scrollVert3d', /*scrollVert3d and scrollHorz3d*/
+       		blindCount: 15,
+       		onbefore: switchIndicator,
+       		onafter: startTimeIndicator
+       	});
+
+       	startTimeIndicator();
+
+       	// pagination isn't built in simply because it's easy to
+       	// roll your own with the plugin API methods
+       	$('#controls').on('click', '.goto-slide', function (ev){
+       		$box.boxSlider('showSlide', $(this).data('slideindex'));
+       		ev.preventDefault();
+       	});
+
+       });
+
+       </script>
+        <!--图片轮播 end-->
+        <!--h2 class="indexH2">找高薪工作、赚签约金？填写期望职位，才能进行下一步哦！</h2-->
+                <div class="postForm" style='display:none'>
                     <div class="hopePost">
                         <div class="frm">
                             <span>期望职位：</span>
@@ -36,6 +106,106 @@
                         <a href="javascript:void(0)" id="saveHopes" class="saveBtn">保存印记</a>
                     </div>
                 </div>
+                <div style="color: #199594;"><span style='cursor:pointer'>热门职位</span> | <span style='cursor:pointer'>高薪职位</span>| <span style='cursor:pointer'>急招职位</span></div>
+                <!--xxl start-->
+                <ul class="employment">
+                  			<li class="selectcurrent">
+                  				<div class="employInfo">
+                  					<div class="userImg"><a href="#"><img alt="Album cover" src="/uploads/accounts/logos/79/thumb/album_cover.jpg?1408611932"></a></div>
+                  					<div class="employDetail">
+                  						<p><span class="b">王雅然   （9238**@qq.com）</span><span>发布了  <b>前端</b>&nbsp;2.4251974</span></p>
+                  						<p><span class="b">地点：北京市朝阳区</span><span class="b">  •  公司：遇上科技</span><span class="b">  •  薪资：20k ~ 30k</span></p>
+                  						<dl>
+                  						 	<dt>职位要求：</dt>
+                                2、与后台工程师配合，展示数据；3、特殊js交互效果的实现，Ajax代码实现；4、<b>前端</b>代码优化；5、配合其他部门完成专题页面或EDM等制作。&nbsp;
+                  						 </dl>
+                  					</div>
+                  				</div>
+
+                  				<div class="employBtns">
+                              <a href="/accounts/sign_in" jobid="132" class="btnR initiateInterviewBtn">发起面试</a>
+                            <a href="/posts/132" class="btnR">查    看</a>
+                            <!--a jobid="132"  onclick="addCollect(this)" href="/accounts/sign_in" class="btnR">收    藏</a-->
+                  				</div>
+                  			</li>
+                  			<li class="selectcurrent">
+                  				<div class="employInfo">
+                  					<div class="userImg"><a href="#"><img alt="Album cover" src="/uploads/accounts/logos/79/thumb/album_cover.jpg?1408611932"></a></div>
+                  					<div class="employDetail">
+                  						<p><span class="b">王雅然   （9238**@qq.com）</span><span>发布了  <b>前端</b>&nbsp;2.4251974</span></p>
+                  						<p><span class="b">地点：北京</span><span class="b">  •  公司：遇上科技</span><span class="b">  •  薪资：10k ~ 20k</span></p>
+                  						<dl>
+                  						 	<dt>职位要求：</dt>
+                                2、与后台工程师配合，展示数据；3、特殊js交互效果的实现，Ajax代码实现；4、<b>前端</b>代码优化；5、配合其他部门完成专题页面或EDM等制作。&nbsp;
+                  						 </dl>
+                  					</div>
+                  				</div>
+
+                  				<div class="employBtns">
+                              <a href="/accounts/sign_in" jobid="133" class="btnR initiateInterviewBtn">发起面试</a>
+                            <a href="/posts/133" class="btnR">查    看</a>
+                            <!--a jobid="133"  onclick="addCollect(this)" href="/accounts/sign_in" class="btnR">收    藏</a-->
+                  				</div>
+                  			</li>
+                  			<li class="selectcurrent">
+                  				<div class="employInfo">
+                  					<div class="userImg"><a href="#"><img alt="Album cover" src="/uploads/accounts/logos/52/thumb/album_cover.jpg?1406255931"></a></div>
+                  					<div class="employDetail">
+                  						<p><span class="b">云天使基金   （**@cloudangelfunds.com）</span><span>发布了  <b>前端</b>&nbsp;2.4251974</span></p>
+                  						<p><span class="b">地点：建外SOHO14号楼506</span><span class="b">  •  公司：北京科技</span><span class="b">  •  薪资：15k ~ 30k</span></p>
+                  						<dl>
+                  						 	<dt>职位要求：</dt>
+                                职位描述技术大牛们，<b>前端</b>攻城狮赶紧看过来！
+                  						 </dl>
+                  					</div>
+                  				</div>
+
+                  				<div class="employBtns">
+                              <a href="/accounts/sign_in" jobid="127" class="btnR initiateInterviewBtn">发起面试</a>
+                            <a href="/posts/127" class="btnR">查    看</a>
+                            <!--a jobid="127"  onclick="addCollect(this)" href="/accounts/sign_in" class="btnR">收    藏</a-->
+                  				</div>
+                  			</li>
+                  			<li class="selectcurrent">
+                  				<div class="employInfo">
+                  					<div class="userImg"><a href="#"><img alt="Album cover" src="/uploads/accounts/logos/10/thumb/album_cover.jpg?1402568837"></a></div>
+                  					<div class="employDetail">
+                  						<p><span class="b">死神   （3495**@qq.com）</span><span>发布了  Web<b>前端</b>开发工程师&nbsp;1.0610238</span></p>
+                  						<p><span class="b">地点：北京海淀区知春路锦秋国际大厦</span><span class="b">  •  公司：一点科技</span><span class="b">  •  薪资：20k ~ 30k</span></p>
+                  						<dl>
+                  						 	<dt>职位要求：</dt>
+                                招聘岗位： Web<b>前端</b>开发工程师工作职责：— 负责一点资讯Web/WebApp等<b>前端</b>工作任职条件：— 熟悉WEB<b>前端</b>技术，对符合WEB标准的网站重构有丰富经验，有成功作品— 理解并掌握Javascript语言核心技术DOM、BOM、Ajax、JSON等，对Javascript框架应用（如jQuery/bootstrap等）有一定的经验—	熟悉NodeJS, coffeescript优先—	对CSS/Javascript性能优化、解决多浏览器兼容性问题有一定的经验—	对用户体验、交互操作...
+                  						 </dl>
+                  					</div>
+                  				</div>
+
+                  				<div class="employBtns">
+                              <a href="/accounts/sign_in" jobid="128" class="btnR initiateInterviewBtn">发起面试</a>
+                            <a href="/posts/128" class="btnR">查    看</a>
+                            <!--a jobid="128"  onclick="addCollect(this)" href="/accounts/sign_in" class="btnR">收    藏</a-->
+                  				</div>
+                  			</li>
+                  			<li class="selectcurrent">
+                  				<div class="employInfo">
+                  					<div class="userImg"><a href="#"><img alt="Album cover" src="/uploads/accounts/logos/10/thumb/album_cover.jpg?1402568837"></a></div>
+                  					<div class="employDetail">
+                  						<p><span class="b">死神   （2**234@qq.com）</span><span>发布了  产品运营&nbsp;0.267949</span></p>
+                  						<p><span class="b">地点：北京市朝阳区朝外SOHO</span><span class="b">  •  公司：公司一</span><span class="b">  •  薪资：15k ~ 25k</span></p>
+                  						<dl>
+                  						 	<dt>职位要求：</dt>
+                                开发维护<b>前端</b>团队自有框架3.
+                  						 </dl>
+                  					</div>
+                  				</div>
+
+                  				<div class="employBtns">
+                              <a href="/accounts/sign_in" jobid="119" class="btnR initiateInterviewBtn">发起面试</a>
+                            <a href="/posts/119" class="btnR">查    看</a>
+                            <!--a jobid="119"  onclick="addCollect(this)" href="/accounts/sign_in" class="btnR">收    藏</a-->
+                  				</div>
+                  			</li>
+                  		</ul>
+                  		<!--xxl end-->
                 <%else%>
                   <%resume_is_complete = current_account && current_account.current_account_resume.complete?%>
                   <%if @hot_posts.present?%>
@@ -51,7 +221,7 @@
                 						<p><span class="b">地点：<%= post.address%></span><span class="b">公司：<%= post.company.name%></span><span class="b">薪资：<%= "#{post.price_min.to_i}k ~ #{post.price_max.to_i}k"%></span></p>
                 						<dl>
                 						 	<dt>职位要求：</dt>
-                						 	<%= post.sanitize_content.to_s[0, 200] %>
+                						 	<%= raw truncate_u(post.sanitize_content.to_s, 200) %>
                 						 </dl>
                 					</div>
                 				</div>

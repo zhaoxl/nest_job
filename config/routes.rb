@@ -7,6 +7,7 @@ NestJob::Application.routes.draw do
     post "/accounts/registrations/ajax_create" => "accounts/registrations#ajax_create"
     post "/accounts/sessions/ajax_create" => "accounts/sessions#ajax_create"
     post "/accounts/registrations/ajax_update_logo" => "accounts/registrations#ajax_update_logo"
+    get "/accounts/registrations/edit_pwd" => "accounts/registrations#edit_pwd"
     patch "/accounts/registrations/update_pwd" => "accounts/registrations#update_pwd"
     
     #get '/auth/:provider' => 'accounts/sessions#auth'

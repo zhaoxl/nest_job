@@ -29,8 +29,9 @@
   						<p><span class="b">地点：<%= raw post.highlight.address ? post.highlight.address[0] : post.address%></span><span class="b">  •  公司：<%= post_record.company.name%></span><span class="b">  •  薪资：<%= "#{post.price_min.to_i}k ~ #{post.price_max.to_i}k"%></span></p>
   						<dl>
   						 	<dt>职位要求：</dt>
-  						 	<%= sanitize(post.highlight.sanitize_content ? post.highlight.sanitize_content[0] : post.sanitize_content.to_s[0, 200])  %>
-  						 </dl> 
+                <%sanitize_content = post.highlight.sanitize_content ? post.highlight.sanitize_content[0].to_s : post.sanitize_content.to_s%>
+                <%= raw truncate_u(sanitize_content, 200)%>
+  						 </dl>
   					</div>
   				</div>
 				

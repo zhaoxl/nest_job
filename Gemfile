@@ -42,7 +42,7 @@ gem 'spring',        group: :development
 #表格
 gem "wice_grid", '3.2.1'
 #后台模板
-gem 'activeadmin', github: 'gregbell/active_admin'
+gem 'activeadmin', github: 'activeadmin'
 #gem "meta_search",    '>= 1.1.3'
 #富文本编辑器
 gem 'rails_kindeditor'

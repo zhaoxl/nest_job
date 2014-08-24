@@ -1,0 +1,8 @@
+"zh-CN":
+  active_admin:
+    batch_actions:
+      labels:
+        lock: "锁定"
+        unlock: "解锁"
+        subscribe: "订阅"
+        reset_pwd: "重置密码"

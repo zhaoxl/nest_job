@@ -25,13 +25,21 @@ class Account < ActiveRecord::Base
   aasm column: :status, skip_validation_on_save: true do
     state :status_normal, initial: true         #正常
     state :status_locked                        #已锁定
+    state :status_virtual                       #虚拟状态
 
+    
+    event :set_status_to_normal do
+      transitions from: :status_virtual, to: :status_normal
+      transitions from: :status_locked, to: :status_normal
+    end
+    
     event :set_status_to_locked do
       transitions from: :status_normal, to: :status_locked
     end
     
-    event :set_status_to_normal do
-      transitions from: :status_locked, to: :status_normal
+    event :set_status_to_virtual do
+      transitions from: :status_normal, to: :status_virtual
+      transitions from: :status_locked, to: :status_virtual
     end
   end
   
@@ -45,6 +53,9 @@ class Account < ActiveRecord::Base
   has_one  :account_radar, class_name: AccountRadar
   has_many :bills
   
+  scope :by_ids, ->(ids){where(id: ids)}
+  scope :by_status, ->(status){where(status: status)}
+  scope :not_status, ->(status){where("status != :status", {status: status})}
   scope :by_email, lambda{|email| where(email: email)}
   scope :by_account_type, lambda{|account_type| where(account_type: account_type)}
   scope :by_resume_ct_desc, ->{joins("INNER JOIN account_resumes ON accounts.id = account_resumes.account_id").order("account_resumes.created_at DESC")}
