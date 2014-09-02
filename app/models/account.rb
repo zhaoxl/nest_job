@@ -58,6 +58,8 @@ class Account < ActiveRecord::Base
   scope :not_status, ->(status){where("status != :status", {status: status})}
   scope :by_email, lambda{|email| where(email: email)}
   scope :by_account_type, lambda{|account_type| where(account_type: account_type)}
+  scope :virtual_accounts, ->{by_status("status_virtual")}
+  scope :real_accounts, ->{not_status("status_virtual")}
   scope :by_resume_ct_desc, ->{joins("INNER JOIN account_resumes ON accounts.id = account_resumes.account_id").order("account_resumes.created_at DESC")}
   
   

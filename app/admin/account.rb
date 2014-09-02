@@ -148,13 +148,9 @@ end
 ActiveAdmin.register Account, as: "account_hrs" do
   menu false
   
-  scope :all
-  scope :virtual_accounts do |accounts|
-    accounts.by_status("status_virtual")
-  end
-  scope :real_accounts do |accounts|
-    accounts.not_status("status_virtual")
-  end
+  scope "所有", :all
+  scope "虚拟用户", :virtual_accounts
+  scope "真实用户", :real_accounts
    
 
   batch_action :unlock do |selection|
@@ -207,7 +203,6 @@ ActiveAdmin.register Account, as: "account_hrs" do
       links << link_to("密码重置", edit_resource_path(account)).to_s
       links << link_to("删除", resource_path(account), method: :delete)
       links << link_to(I18n.t("activerecord.models.account.status_action_names.#{account.status}"), lock_admin_account_worker_path(account), method: :put).to_s
-      links << link_to("开启订阅", "").to_s
       raw links * " "
     end
   end
