@@ -3,7 +3,7 @@ class Post < ActiveRecord::Base
   has_soft_deletion :default_scope => true
   include Elasticsearch::Model
   development_settings = {log: true, trace: true} if Rails.env.development?
-  self.__elasticsearch__.client = Elasticsearch::Client.new({host: "54.64.55.229:9200"}.merge(development_settings||{}))
+  self.__elasticsearch__.client = Elasticsearch::Client.new({host: "115.28.176.6:9200"}.merge(development_settings||{}))
   #self.__elasticsearch__.client = ELASTICSEARCH_CLIENT
   #include Elasticsearch::Model::Callbacks
   after_save :sync_elasticsearch_index
@@ -13,11 +13,11 @@ class Post < ActiveRecord::Base
     number_of_shards: 1
   } do
     mappings dynamic: 'false' do
-      indexes :title,       analyzer: 'mmseg', index_options: 'offsets'
-      indexes :description, analyzer: 'mmseg', index_options: 'offsets'
-      indexes :area,        analyzer: 'mmseg', index_options: 'offsets'
-      indexes :address,     analyzer: 'mmseg', index_options: 'offsets'
-      indexes :sanitize_content,     analyzer: 'mmseg', index_options: 'offsets'
+      indexes :title,               analyzer: 'ik', index_options: 'offsets'
+      indexes :description,         analyzer: 'ik', index_options: 'offsets'
+      indexes :area,                analyzer: 'ik', index_options: 'offsets'
+      indexes :address,             analyzer: 'ik', index_options: 'offsets'
+      indexes :sanitize_content,    analyzer: 'ik', index_options: 'offsets'
     end
   end
   
